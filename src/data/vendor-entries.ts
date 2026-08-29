@@ -15,7 +15,7 @@ export const vendorEntries = [
     productNames: ["Claude"],
     availability: "available",
     sourceIds: ["anthropic-models"],
-    verifiedAt: "2026-08-11",
+    verifiedAt: "2026-08-24",
   }),
   defineVendorEntry({
     id: "openai-frontier-model-lineup",
@@ -27,7 +27,7 @@ export const vendorEntries = [
     productNames: ["GPT-5.6"],
     availability: "available",
     sourceIds: ["openai-models"],
-    verifiedAt: "2026-08-11",
+    verifiedAt: "2026-08-24",
   }),
   defineVendorEntry({
     id: "anthropic-context-window",
@@ -39,7 +39,7 @@ export const vendorEntries = [
     productNames: ["Claude"],
     availability: "available",
     sourceIds: ["anthropic-models"],
-    verifiedAt: "2026-08-11",
+    verifiedAt: "2026-08-24",
   }),
   defineVendorEntry({
     id: "openai-context-window",
@@ -51,7 +51,7 @@ export const vendorEntries = [
     productNames: ["GPT-5.6"],
     availability: "available",
     sourceIds: ["openai-models"],
-    verifiedAt: "2026-08-11",
+    verifiedAt: "2026-08-24",
   }),
   defineVendorEntry({
     id: "anthropic-multimodal-input",
@@ -63,7 +63,7 @@ export const vendorEntries = [
     productNames: ["Claude"],
     availability: "available",
     sourceIds: ["anthropic-models"],
-    verifiedAt: "2026-08-11",
+    verifiedAt: "2026-08-24",
   }),
   defineVendorEntry({
     id: "openai-multimodal-input",
@@ -75,7 +75,7 @@ export const vendorEntries = [
     productNames: ["GPT-5.6"],
     availability: "available",
     sourceIds: ["openai-models"],
-    verifiedAt: "2026-08-11",
+    verifiedAt: "2026-08-24",
   }),
   defineVendorEntry({
     id: "anthropic-native-image-generation",
@@ -87,7 +87,7 @@ export const vendorEntries = [
     productNames: ["Claude"],
     availability: "not-documented",
     sourceIds: ["anthropic-models", "anthropic-tool-reference"],
-    verifiedAt: "2026-08-11",
+    verifiedAt: "2026-08-24",
   }),
   defineVendorEntry({
     id: "openai-native-image-generation",
@@ -99,7 +99,7 @@ export const vendorEntries = [
     productNames: ["GPT Image 2", "Image generation"],
     availability: "available",
     sourceIds: ["openai-image-generation", "openai-models"],
-    verifiedAt: "2026-08-11",
+    verifiedAt: "2026-08-24",
   }),
   defineVendorEntry({
     id: "anthropic-conversational-chat",
@@ -590,7 +590,11 @@ export const vendorEntries = [
     details: [],
     productNames: ["Claude", "Claude Code", "Claude API"],
     availability: "available",
-    sourceIds: ["anthropic-mcp"],
+    sourceIds: [
+      "anthropic-mcp",
+      "anthropic-claude-code-mcp",
+      "anthropic-connectors-docs",
+    ],
     verifiedAt: "2026-08-11",
   }),
   defineVendorEntry({
@@ -638,7 +642,7 @@ export const vendorEntries = [
     details: [],
     productNames: ["Claude connectors", "Claude Desktop"],
     availability: "available",
-    sourceIds: ["anthropic-pricing", "anthropic-mcp"],
+    sourceIds: ["anthropic-pricing", "anthropic-claude-code-mcp"],
     verifiedAt: "2026-08-11",
   }),
   defineVendorEntry({
@@ -1311,7 +1315,7 @@ export const vendorEntries = [
     productNames: ["Claude API"],
     availability: "available",
     sourceIds: ["anthropic-tool-use", "anthropic-models"],
-    verifiedAt: "2026-08-11",
+    verifiedAt: "2026-08-24",
   }),
   defineVendorEntry({
     id: "openai-core-model-api",
@@ -1323,7 +1327,7 @@ export const vendorEntries = [
     productNames: ["Responses API"],
     availability: "available",
     sourceIds: ["openai-tools", "openai-models"],
-    verifiedAt: "2026-08-11",
+    verifiedAt: "2026-08-24",
   }),
   defineVendorEntry({
     id: "anthropic-agent-sdk",
@@ -1575,7 +1579,7 @@ export const vendorEntries = [
     productNames: ["Claude API"],
     availability: "available",
     sourceIds: ["anthropic-api-pricing", "anthropic-models"],
-    verifiedAt: "2026-08-11",
+    verifiedAt: "2026-08-24",
   }),
   defineVendorEntry({
     id: "openai-api-token-pricing",
@@ -1587,7 +1591,7 @@ export const vendorEntries = [
     productNames: ["OpenAI API"],
     availability: "available",
     sourceIds: ["openai-api-pricing", "openai-models"],
-    verifiedAt: "2026-08-11",
+    verifiedAt: "2026-08-24",
   }),
   defineVendorEntry({
     id: "zai-frontier-model-lineup",

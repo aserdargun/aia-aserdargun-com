@@ -17,7 +17,6 @@ export function CategoryRail({
 }: CategoryRailProps) {
   return (
     <nav className="category-rail" aria-label="Capability categories">
-      <p className="filter-kicker">Browse taxonomy</p>
       <button
         className="category-button"
         type="button"

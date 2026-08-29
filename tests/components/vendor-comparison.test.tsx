@@ -118,11 +118,11 @@ it("separates every factual availability state in category coverage", () => {
   const models = within(categoryCoverage)
     .getByRole("cell", { name: "Models" })
     .closest('[role="row"]')!;
-  expect(
-    within(models).getByRole("cell", {
+  const anthropicCoverage = within(models).getByRole("cell", {
       name: "Anthropic: Available 3, Limited 0, Not available 0, Not documented 1, Unknown 0",
-    }),
-  ).toBeVisible();
+    });
+  expect(anthropicCoverage).toBeVisible();
+  expect(within(anthropicCoverage).getByText("Anthropic")).toBeVisible();
   expect(
     within(models).getByRole("cell", {
       name: "OpenAI: Available 4, Limited 0, Not available 0, Not documented 0, Unknown 0",

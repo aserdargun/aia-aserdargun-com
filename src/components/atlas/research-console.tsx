@@ -344,17 +344,17 @@ export function ResearchConsole({ dataset }: { dataset: AtlasDataset }) {
           </div>
         </div>
       </div>
-      <div className="console-body">
+      <div className="taxonomy-controls">
+        <CategoryRail
+          categories={dataset.categories}
+          counts={categoryCounts}
+          selectedCategoryId={categoryId}
+          totalCount={allCategoryCount}
+          onSelect={(value) =>
+            applyFilter((current) => ({ ...current, categoryId: value }))
+          }
+        />
         <MobileFilterSheet>
-          <CategoryRail
-            categories={dataset.categories}
-            counts={categoryCounts}
-            selectedCategoryId={categoryId}
-            totalCount={allCategoryCount}
-            onSelect={(value) =>
-              applyFilter((current) => ({ ...current, categoryId: value }))
-            }
-          />
           <FilterGroups
             availability={availability}
             statuses={statuses}
@@ -379,6 +379,16 @@ export function ResearchConsole({ dataset }: { dataset: AtlasDataset }) {
             }
           />
         </MobileFilterSheet>
+      </div>
+      {constraints.length > 0 ? (
+        <div className="active-filter-summary" aria-label="Active filters">
+          <strong>Active</strong>
+          {constraints.map((constraint) => (
+            <span key={constraint}>{constraint}</span>
+          ))}
+        </div>
+      ) : null}
+      <div className="console-body">
         <div className="comparison-surface">
           {view === "all-vendors" ? (
             matrixRows.length > 0 ? (

@@ -33,6 +33,10 @@ export function AtlasIntro({ dataset }: { dataset: AtlasDataset }) {
         </p>
         <dl className="atlas-coverage" aria-label="Atlas coverage statistics">
           <div>
+            <dt>Vendors</dt>
+            <dd>{dataset.vendors.length}</dd>
+          </div>
+          <div>
             <dt>Capabilities</dt>
             <dd>{dataset.capabilities.length}</dd>
           </div>
@@ -45,17 +49,18 @@ export function AtlasIntro({ dataset }: { dataset: AtlasDataset }) {
             <dd>{dataset.sources.length}</dd>
           </div>
           <div>
-            <dt>Latest verification</dt>
-            <dd>{displayDate(latestVerification)}</dd>
+            <dt>Evidence snapshot</dt>
+            <dd>
+              <time dateTime={latestVerification}>
+                {displayDate(latestVerification)}
+              </time>
+            </dd>
           </div>
         </dl>
+        <p className="atlas-intro__note">
+          Verification dates record source checks, not release dates.
+        </p>
       </div>
-      <dl className="atlas-summary" aria-label="Atlas coverage summary">
-        <div>
-          <dt>Vendors</dt>
-          <dd>{dataset.vendors.length}</dd>
-        </div>
-      </dl>
     </section>
   );
 }

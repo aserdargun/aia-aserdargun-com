@@ -26,6 +26,17 @@ function renderConsole() {
   return render(<ResearchConsole dataset={atlasDataset} />);
 }
 
+it("keeps categories available while secondary filters start closed", () => {
+  renderConsole();
+
+  expect(
+    screen.getByRole("navigation", { name: "Capability categories" }),
+  ).toBeVisible();
+  const filters = screen.getByText("More filters").closest("details");
+  expect(filters).not.toBeNull();
+  expect(filters).not.toHaveAttribute("open");
+});
+
 it("searches the real atlas and expands official evidence", async () => {
   const user = userEvent.setup();
   renderConsole();
@@ -84,6 +95,7 @@ it("combines category and multi-select status filters with a live count", async 
 
   await user.click(screen.getByRole("button", { name: /^Coding Agents 5$/i }));
   expect(screen.getByRole("status")).toHaveTextContent("5 capabilities shown");
+  expect(screen.getByText("category Coding Agents")).toBeVisible();
   expect(replace).toHaveBeenLastCalledWith("/?category=coding-agents", {
     scroll: false,
   });

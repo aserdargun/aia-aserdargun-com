@@ -1,7 +1,8 @@
 import type { Model } from "@/data/schema";
 
-const verifiedAt = "2026-08-11";
+const verifiedAt = "2026-08-24";
 const zaiVerifiedAt = "2026-08-19";
+const minimaxVerifiedAt = "2026-08-11";
 
 export const models = [
   {
@@ -97,9 +98,9 @@ export const models = [
     maxOutputTokens: 128_000,
     knowledgeCutoff: "2026-02-16",
     pricing: {
-      inputPerMillionUsd: 5,
-      cachedInputPerMillionUsd: 0.5,
-      outputPerMillionUsd: 30,
+      inputPerMillionUsd: 4,
+      cachedInputPerMillionUsd: 0.4,
+      outputPerMillionUsd: 20,
     },
     sourceIds: ["openai-models", "openai-api-pricing"],
     verifiedAt,
@@ -251,7 +252,7 @@ export const models = [
       outputPerMillionUsd: 40,
     },
     sourceIds: ["minimax-models", "minimax-api-pricing"],
-    verifiedAt,
+    verifiedAt: minimaxVerifiedAt,
   },
   {
     id: "minimax-m2-pro",
@@ -272,7 +273,7 @@ export const models = [
       outputPerMillionUsd: 10,
     },
     sourceIds: ["minimax-models", "minimax-api-pricing"],
-    verifiedAt,
+    verifiedAt: minimaxVerifiedAt,
   },
   {
     id: "minimax-m2-air",
@@ -293,7 +294,7 @@ export const models = [
       outputPerMillionUsd: 1.2,
     },
     sourceIds: ["minimax-models", "minimax-api-pricing"],
-    verifiedAt,
+    verifiedAt: minimaxVerifiedAt,
   },
   {
     id: "deepseek-v4-pro",

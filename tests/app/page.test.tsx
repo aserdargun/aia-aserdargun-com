@@ -14,4 +14,14 @@ it("identifies the statically renderable public application", () => {
   expect(
     screen.getByRole("heading", { name: "Compare the ecosystems." }),
   ).toBeInTheDocument();
+  expect(screen.getByText("Evidence snapshot")).toBeVisible();
+  expect(screen.queryByText("Latest verification")).not.toBeInTheDocument();
+  expect(
+    screen.getByText("Verification dates record source checks, not release dates."),
+  ).toBeVisible();
+  expect(
+    screen.queryByText(
+      "Next: methodology, freshness rules, and public update provenance",
+    ),
+  ).not.toBeInTheDocument();
 });

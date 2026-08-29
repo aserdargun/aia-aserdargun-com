@@ -93,11 +93,14 @@ const expectedCapabilityIds = [
 
 const officialSourceHosts = new Set([
   "docs.anthropic.com",
+  "code.claude.com",
+  "support.claude.com",
   "support.anthropic.com",
   "www.anthropic.com",
   "claude.com",
   "platform.claude.com",
   "developers.openai.com",
+  "learn.chatgpt.com",
   "platform.openai.com",
   "help.openai.com",
   "openai.com",
@@ -123,6 +126,20 @@ const officialSourceHosts = new Set([
 ]);
 
 const expectedVendorIds = ["anthropic", "openai", "zai", "minimax", "deepseek", "qwen"] as const;
+const refreshedVendorEntryIds = [
+  "anthropic-frontier-model-lineup",
+  "openai-frontier-model-lineup",
+  "anthropic-context-window",
+  "openai-context-window",
+  "anthropic-multimodal-input",
+  "openai-multimodal-input",
+  "anthropic-native-image-generation",
+  "openai-native-image-generation",
+  "anthropic-core-model-api",
+  "openai-core-model-api",
+  "anthropic-api-token-pricing",
+  "openai-api-token-pricing",
+] as const;
 const expectedVendorPairs = [
   ["anthropic", "minimax"],
   ["anthropic", "openai"],
@@ -206,35 +223,54 @@ describe("canonical Atlas dataset", () => {
     expect(
       atlasDataset.vendorEntries.every((entry) => entry.sourceIds.length > 0),
     ).toBe(true);
+    expect(
+      atlasDataset.vendorEntries
+        .filter((entry) => entry.verifiedAt === "2026-08-24")
+        .map(({ id }) => id),
+    ).toEqual(refreshedVendorEntryIds);
     for (const vendorId of expectedVendorIds) {
+      const entries = atlasDataset.vendorEntries.filter(
+        (entry) => entry.vendorId === vendorId,
+      );
+      if (vendorId === "anthropic" || vendorId === "openai") {
+        expect(
+          entries
+            .filter(
+              (entry) =>
+                !refreshedVendorEntryIds.includes(
+                  entry.id as (typeof refreshedVendorEntryIds)[number],
+                ),
+            )
+            .every((entry) => entry.verifiedAt === "2026-08-11"),
+          `unchanged verification dates for ${vendorId} entries`,
+        ).toBe(true);
+        continue;
+      }
       const expectedVerifiedAt =
         vendorId === "zai" || vendorId === "deepseek" || vendorId === "qwen"
           ? "2026-08-19"
           : "2026-08-11";
       expect(
-        atlasDataset.vendorEntries
-          .filter((entry) => entry.vendorId === vendorId)
-          .every((entry) => entry.verifiedAt === expectedVerifiedAt),
+        entries.every((entry) => entry.verifiedAt === expectedVerifiedAt),
         `verification date for ${vendorId} entries`,
       ).toBe(true);
     }
     expect(
       atlasDataset.models
-        .filter(
-          (model) =>
-            model.vendorId !== "zai" &&
-            model.vendorId !== "deepseek" &&
-            model.vendorId !== "qwen",
-        )
+        .filter((model) => model.vendorId === "anthropic" || model.vendorId === "openai")
+        .every((model) => model.verifiedAt === "2026-08-24"),
+    ).toBe(true);
+    expect(
+      atlasDataset.models
+        .filter((model) => model.vendorId === "minimax")
         .every((model) => model.verifiedAt === "2026-08-11"),
     ).toBe(true);
     expect(
       atlasDataset.models
-        .filter(
-          (model) =>
-            model.vendorId === "zai" ||
-            model.vendorId === "deepseek" ||
-            model.vendorId === "qwen",
+        .filter((model) =>
+          model.vendorId === "zai" ||
+          model.vendorId === "deepseek" ||
+          model.vendorId === "qwen",
         )
         .every((model) => model.verifiedAt === "2026-08-19"),
     ).toBe(true);
@@ -301,17 +337,23 @@ describe("canonical Atlas dataset", () => {
         ],
         vendorEntries: [...atlasDataset.vendorEntries, googleEntry],
       },
-      new Date("2026-08-19T12:00:00Z"),
+      new Date("2026-08-24T12:00:00Z"),
     );
 
     expect(extended.vendorEntries.at(-1)).toEqual(googleEntry);
     expect(extended.vendorEntries).toHaveLength(397);
   });
 
-  it("publishes the verified GPT-5.6 Terra and Luna token rates", () => {
+  it("publishes the verified GPT-5.6 token rates", () => {
+    const sol = atlasDataset.models.find(({ id }) => id === "gpt-5-6-sol");
     const terra = atlasDataset.models.find(({ id }) => id === "gpt-5-6-terra");
     const luna = atlasDataset.models.find(({ id }) => id === "gpt-5-6-luna");
 
+    expect(sol?.pricing).toEqual({
+      inputPerMillionUsd: 4,
+      cachedInputPerMillionUsd: 0.4,
+      outputPerMillionUsd: 20,
+    });
     expect(terra?.pricing).toEqual({
       inputPerMillionUsd: 2,
       cachedInputPerMillionUsd: 0.2,

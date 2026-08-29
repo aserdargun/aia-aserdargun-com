@@ -29,42 +29,17 @@ for (const viewport of viewports) {
       clientWidth: element.clientWidth,
       scrollWidth: element.scrollWidth,
     }));
-    if (viewport.name === "desktop") {
-      expect(tableOverflow.scrollWidth).toBeGreaterThanOrEqual(
-        tableOverflow.clientWidth,
-      );
-    } else {
-      expect(tableOverflow.scrollWidth).toBeGreaterThan(tableOverflow.clientWidth);
-      const horizontalPosition = await tableScroller.evaluate((element) => {
-        element.scrollLeft = element.scrollWidth - element.clientWidth;
-        return {
-          maxScrollLeft: element.scrollWidth - element.clientWidth,
-          scrollLeft: element.scrollLeft,
-        };
-      });
-      expect(horizontalPosition.scrollLeft).toBe(horizontalPosition.maxScrollLeft);
+    expect(tableOverflow.scrollWidth).toBeLessThanOrEqual(
+      tableOverflow.clientWidth,
+    );
 
-      const verificationReachability = await page
-        .getByRole("columnheader", { name: /verification & sources/i })
-        .evaluate((header) => {
-          const scroller = header.closest<HTMLElement>(".table-scroll");
-          if (!scroller) return null;
-          const headerRect = header.getBoundingClientRect();
-          const scrollerRect = scroller.getBoundingClientRect();
-          return {
-            headerLeft: headerRect.left,
-            headerRight: headerRect.right,
-            scrollerLeft: scrollerRect.left,
-            scrollerRight: scrollerRect.right,
-          };
-        });
-      expect(verificationReachability).not.toBeNull();
-      expect(verificationReachability!.headerLeft).toBeGreaterThanOrEqual(
-        verificationReachability!.scrollerLeft - 1,
+    if (viewport.name === "mobile") {
+      const filters = page.getByText("More filters").locator("..");
+      await expect(filters).not.toHaveAttribute("open", "");
+      const firstComparison = await page.locator(".comparison-row").first().evaluate(
+        (element) => element.getBoundingClientRect(),
       );
-      expect(verificationReachability!.headerRight).toBeLessThanOrEqual(
-        verificationReachability!.scrollerRight + 1,
-      );
+      expect(firstComparison.top).toBeLessThan(viewport.height);
     }
 
     await page
@@ -126,7 +101,7 @@ for (const viewport of viewports) {
   });
 }
 
-test("desktop: preserves the accepted first-viewport table anatomy", async ({
+test("desktop: keeps the compact evidence snapshot and table in the first viewport", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
@@ -135,7 +110,13 @@ test("desktop: preserves the accepted first-viewport table anatomy", async ({
   const tableSummary = page.locator(".table-summary");
   await expect(page.getByRole("dialog")).toHaveCount(0);
   await expect(tableSummary).toContainText("66 capabilities shown");
-  await expect(tableSummary).toContainText("Evidence checked 11 Aug 2026");
+  await expect(tableSummary).toContainText("Evidence checked 24 Aug 2026");
+  await expect(page.getByText("Evidence snapshot")).toBeVisible();
+  await expect(
+    page.getByText(
+      "Next: methodology, freshness rules, and public update provenance",
+    ),
+  ).toHaveCount(0);
 });
 
 test("desktop: comparison table rules do not style unrelated semantic tables", async ({

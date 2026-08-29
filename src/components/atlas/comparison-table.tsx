@@ -83,6 +83,8 @@ export function ComparisonTable({
             <ComparisonRowView
               key={row.capability.id}
               row={row}
+              leftVendorName={leftVendor.name}
+              rightVendorName={rightVendor.name}
               expanded={expandedRowId === row.capability.id}
               onToggle={onToggleRow}
             />

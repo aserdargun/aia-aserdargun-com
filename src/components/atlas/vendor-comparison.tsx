@@ -135,6 +135,7 @@ function CoverageBreakdown({
       role="cell"
       aria-label={`${vendor.name}: ${accessibleSummary}`}
     >
+      <span className="coverage-breakdown__vendor">{vendor.name}</span>
       {availabilityValues.map((availability) => (
         <span key={availability}>
           <small>{availabilityLabels[availability]}</small>
