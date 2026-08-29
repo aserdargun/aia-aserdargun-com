@@ -151,7 +151,7 @@ separately when verifying rendered workflows or preparing a release.
 
 ## Deployment
 
-Production is published at [https://brave-stone-05e2d3603.7.azurestaticapps.net](https://brave-stone-05e2d3603.7.azurestaticapps.net) on Azure Static Web Apps Free using the Azure-provided default hostname. A custom domain and DNS mapping are intentionally not configured for this deployment.
+Production is published at [https://aia.aserdargun.com](https://aia.aserdargun.com) on Azure Static Web Apps Free. The Azure-provided default hostname remains [https://brave-stone-05e2d3603.7.azurestaticapps.net](https://brave-stone-05e2d3603.7.azurestaticapps.net).
 
 The `main` branch is the production source. [`.github/workflows/deploy-swa-aia-aserdargun-com.yml`](.github/workflows/deploy-swa-aia-aserdargun-com.yml) installs locked dependencies, validates canonical data, runs lint, strict TypeScript checks, and unit/component tests, builds the static Next.js export, verifies `out/index.html` and Next.js assets, and only then uploads the prebuilt `out/` directory to Azure.
 
@@ -165,12 +165,13 @@ The target deployment settings are:
 | Azure plan | `Free` |
 | Production branch | `main` |
 | Build output | `out/` |
-| Production URL | `https://brave-stone-05e2d3603.7.azurestaticapps.net` |
-| Custom hostname | Not configured |
+| Production URL | `https://aia.aserdargun.com` |
+| Azure default URL | `https://brave-stone-05e2d3603.7.azurestaticapps.net` |
+| Custom hostname | `aia.aserdargun.com` |
 
 The workflow reads the Azure deployment token only from the repository Actions secret `AZURE_STATIC_WEB_APPS_API_TOKEN_SWA_AIA_ASERDARGUN_COM`. The secret value must never be placed in source, documentation, issue text, build logs, or the client bundle.
 
-IHS and all `aserdargun.com` DNS records remain unchanged. Custom-domain validation, CNAME/TXT records, apex, `www`, mail, nameserver, and unrelated DNS records are outside this deployment's scope.
+The existing IHS `_dnsauth.aia` TXT and `aia` CNAME records remain unchanged during application deployments. DNS mutations, apex, `www`, mail, nameserver, and unrelated DNS records are outside this deployment's scope.
 
 After the target deployment prerequisites above are complete, publish an application or data update:
 
@@ -178,12 +179,12 @@ After the target deployment prerequisites above are complete, publish an applica
 2. Run `npm run check` and `npm run test:e2e` locally.
 3. Update `main` only after the checks pass.
 4. Confirm the `Deploy AIA to Azure Static Web Apps` workflow succeeds.
-5. Smoke-test the affected behavior at the Azure-provided production URL.
+5. Smoke-test the affected behavior at both the Azure-provided URL and the custom production URL.
 
 `npm run test:e2e` uses localhost by default. After production is live, run the same suite against it without starting a local server:
 
 ```bash
-PLAYWRIGHT_BASE_URL=https://brave-stone-05e2d3603.7.azurestaticapps.net npm run test:e2e
+PLAYWRIGHT_BASE_URL=https://aia.aserdargun.com npm run test:e2e
 ```
 
 ## Updating the atlas
