@@ -1583,7 +1583,7 @@ a {
 
   .atlas-coverage {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .atlas-coverage > div {
@@ -1618,8 +1618,13 @@ a {
   }
 
   .taxonomy-controls {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 8px;
+    margin-top: 6px;
+  }
+
+  .mobile-filter-sheet[open] {
+    grid-column: 1 / -1;
   }
 
   .mobile-filter-sheet > summary {
