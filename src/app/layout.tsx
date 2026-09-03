@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AI Ecosystem Atlas — Compare AI ecosystems",
+  title: "AIA - AI Ecosystem Atlas",
   description:
     "Evidence-backed comparisons across models, products, agents, APIs, and plans.",
 };
