@@ -68,7 +68,7 @@ it("searches the real atlas and expands official evidence", async () => {
 
 it.each([
   ["GPT-5.6 Sol", "Models"],
-  ["Claude Fable 5", "Models"],
+  ["Claude Fable 5.1", "Models"],
   ["ChatGPT Pro", "Pricing"],
 ])("shows a bounded category slice for catalog query %s", async (query, category) => {
   const user = userEvent.setup();
@@ -319,7 +319,7 @@ it("switches to the all-vendors matrix and round-trips the URL", async () => {
   expect(screen.getByRole("columnheader", { name: /Anthropic/ })).toBeVisible();
   expect(screen.getByRole("columnheader", { name: /OpenAI/ })).toBeVisible();
   expect(screen.getByRole("columnheader", { name: /Z.ai/ })).toBeVisible();
-  expect(screen.getByRole("columnheader", { name: /minimax/ })).toBeVisible();
+  expect(screen.getByRole("columnheader", { name: /MiniMax/ })).toBeVisible();
   expect(screen.getByRole("columnheader", { name: /DeepSeek/ })).toBeVisible();
   expect(screen.getByRole("columnheader", { name: /Qwen/ })).toBeVisible();
   expect(replace).toHaveBeenLastCalledWith("/?view=all-vendors", {

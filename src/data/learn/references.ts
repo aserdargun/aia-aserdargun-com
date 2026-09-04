@@ -2,7 +2,7 @@ import type { Reference } from "@/data/learn/schema";
 
 /**
  * Primary, first-party references that ground every factual claim in the
- * Learn module. All URLs are HTTPS and were last reviewed on 2026-08-19.
+ * Learn module. All URLs are HTTPS; concept records carry their own review dates.
  */
 export const references = [
   {
@@ -25,6 +25,13 @@ export const references = [
     publisher: "Anthropic",
     url: "https://modelcontextprotocol.io/introduction",
     note: "Specification for connecting models to tools and data sources.",
+  },
+  {
+    id: "mcp-transports",
+    title: "Model Context Protocol — Transports",
+    publisher: "Model Context Protocol",
+    url: "https://modelcontextprotocol.io/specification/draft/basic/transports",
+    note: "Current standard transports and HTTP+SSE compatibility guidance.",
   },
   {
     id: "openai-rag-overview",

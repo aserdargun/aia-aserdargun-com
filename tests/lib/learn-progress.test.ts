@@ -52,7 +52,7 @@ describe("learn progress store", () => {
     expect(summary.newCount).toBe(2);
     expect(summary.mastered).toBe(1);
     expect(summary.learning).toBe(1);
-    expect(summary.due).toBeGreaterThanOrEqual(0);
+    expect(summary.due).toBe(2);
   });
 
   it("computes accuracy only from answered questions", () => {

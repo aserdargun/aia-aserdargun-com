@@ -105,6 +105,7 @@ export function summarize(progress: LearnProgress, now: Date): ProgressSummary {
     const reps = entry.card.repetitions;
     if (reps === 0 && entry.card.lastReviewedAt === null) {
       newCount += 1;
+      due += 1;
     } else {
       reviewed += 1;
       if (entry.card.repetitions >= 4) {

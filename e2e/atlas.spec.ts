@@ -110,7 +110,7 @@ test("desktop: keeps the compact evidence snapshot and table in the first viewpo
   const tableSummary = page.locator(".table-summary");
   await expect(page.getByRole("dialog")).toHaveCount(0);
   await expect(tableSummary).toContainText("66 capabilities shown");
-  await expect(tableSummary).toContainText("Evidence checked 24 Aug 2026");
+  await expect(tableSummary).toContainText("Evidence checked 4 Sept 2026");
   await expect(page.getByText("Evidence snapshot")).toBeVisible();
   await expect(
     page.getByText(
@@ -151,6 +151,7 @@ test("mobile: keeps the compact masthead actions on one line", async ({ page }) 
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
 
+  await expect(page.getByRole("link", { name: "Learn", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "GitHub ↗", exact: true })).toBeVisible();
   const headerHeight = await page.locator(".site-header").evaluate(
     (element) => element.getBoundingClientRect().height,

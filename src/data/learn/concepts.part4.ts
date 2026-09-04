@@ -168,8 +168,8 @@ export const agentsAndOpsConcepts: Concept[] = [
 - **Be explicit about format.** "Return a JSON object with keys {summary, references}" beats "summarize this".
 - **Show, don't tell.** A two-line example of the desired output is more reliable than a paragraph of instructions.
 - **Order matters.** Place the most important instructions at the start or end of the prompt; the middle is weaker (lost in the middle).
-- **Chain-of-thought.** Asking the model to reason step-by-step improves accuracy on multi-step problems, at the cost of more output tokens.
-- **Self-critique.** Asking the model to verify its own answer before returning it catches a fraction of errors.
+- **Structured reasoning.** For difficult multi-step work, provide clear success criteria and either use the model's reasoning controls or split the task into verifiable stages. A long reasoning trace is not proof of correctness.
+- **Verification.** Ask the model to check the result against explicit criteria, and use external tools or tests when an answer can be measured.
 
 **Limits:** prompt engineering cannot teach the model new knowledge. For that you need RAG or fine-tuning. It is, however, the cheapest, fastest lever you have.`,
     keyTakeaways: [
@@ -217,22 +217,22 @@ export const agentsAndOpsConcepts: Concept[] = [
       },
       {
         id: "pe-q2",
-        prompt: "Why does chain-of-thought improve multi-step reasoning?",
+        prompt: "What is the strongest way to improve reliability on a multi-step task?",
         correctCount: 1,
         options: [
           {
             id: "pe-q2-a",
-            text: "It forces the model to externalize intermediate steps",
+            text: "Break the task into verifiable stages and check outputs against criteria",
             correct: true,
             explanation:
-              "The model can attend to its own scratchpad, which reduces arithmetic and logic errors.",
+              "Decomposition plus explicit checks makes intermediate failures observable and correctable.",
           },
           {
             id: "pe-q2-b",
-            text: "It reduces inference cost",
+            text: "Demand a long visible reasoning transcript",
             correct: false,
             explanation:
-              "Chain-of-thought *increases* token usage; the win is accuracy, not cost.",
+              "Verbose reasoning can increase cost and still be wrong; it is not evidence that the answer is correct.",
           },
           {
             id: "pe-q2-c",
@@ -252,7 +252,7 @@ export const agentsAndOpsConcepts: Concept[] = [
     estimatedMinutes: 5,
     tags: ["prompting", "system", "few-shot"],
     referenceIds: ["anthropic-prompt-engineering", "openai-function-calling"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: "2026-09-04",
     order: 1,
   },
   {
@@ -388,7 +388,7 @@ Frameworks (LangGraph, the OpenAI Agents SDK, the Claude Agent SDK) implement th
 - **Security boundary.** Servers run as separate processes; the host controls which tools the model can see and what arguments are allowed.
 - **Composability.** A host can mix local servers (filesystem) with remote servers (a hosted database) through the same protocol.
 
-MCP is transport-agnostic: servers can run over stdio for local tools or over HTTP+SSE for remote tools. The contract is plain JSON-RPC, which is trivial to implement in any language.`,
+MCP messages use JSON-RPC. The standard transports are **stdio** for locally spawned servers and **Streamable HTTP** for remote servers; the older HTTP+SSE transport is retained only for backward compatibility.`,
     keyTakeaways: [
       "MCP defines host ↔ client ↔ server over JSON-RPC.",
       "Servers expose tools, resources, and prompts.",
@@ -443,10 +443,10 @@ MCP is transport-agnostic: servers can run over stdio for local tools or over HT
         options: [
           {
             id: "mcp-q2-a",
-            text: "JSON-RPC over stdio or HTTP+SSE",
+            text: "JSON-RPC over stdio or Streamable HTTP",
             correct: true,
             explanation:
-              "MCP is transport-agnostic; the most common transports are stdio (local) and HTTP+SSE (remote).",
+              "The current standard transports are stdio for local servers and Streamable HTTP for remote servers.",
           },
           {
             id: "mcp-q2-b",
@@ -471,8 +471,8 @@ MCP is transport-agnostic: servers can run over stdio for local tools or over HT
     difficulty: "advanced",
     estimatedMinutes: 5,
     tags: ["mcp", "tool-use", "protocol"],
-    referenceIds: ["anthropic-mcp"],
-    verifiedAt: "2026-08-19",
+    referenceIds: ["anthropic-mcp", "mcp-transports"],
+    verifiedAt: "2026-09-04",
     order: 3,
   },
   {
@@ -588,13 +588,13 @@ These parameters change the **output distribution**, not the model's beliefs. Th
     title: "Hallucination & Grounding",
     summary:
       "Why models confidently produce false statements, and the operational patterns that reduce the failure rate.",
-    explanation: `A **hallucination** is a model output that is fluent, confident, and not grounded in the provided context or the model's real beliefs. There are three common kinds:
+    explanation: `A **hallucination** is a model output that is fluent or confident but not supported by the provided context, reliable sources, or verifiable evidence. There are three common kinds:
 
 1. **Closed-domain hallucination** — the model is given a document and asked to answer from it, but invents a fact that contradicts or goes beyond the document. The fix is **grounding**: instruct the model to answer only from the provided context, and to say "I don't know" otherwise.
 
 2. **Open-domain hallucination** — the model is asked a factual question with no source. The model may produce a plausible-but-wrong answer, especially for niche or recent topics beyond its training cutoff. The fix is **RAG** plus **citation**: provide the source, force the model to cite it.
 
-3. **Reasoning hallucination** — the model produces a chain of steps that is internally inconsistent or arithmetically wrong, but the final answer is presented as correct. The fix is **chain-of-thought** with **self-critique** or external verifiers (e.g. a calculator for math).
+3. **Reasoning hallucination** — the model produces internally inconsistent or arithmetically wrong steps, but presents the final answer as correct. Mitigate it with structured decomposition and external verifiers, such as a calculator for math or executable tests for code.
 
 **Why does it happen?** The model is a next-token predictor, not a fact database. When its training data is sparse on a topic, or when the prompt pushes it into an unfamiliar region of the input space, the most *probable* next token is not the most *true* one. Confident, fluent text is a property of the language modeling objective — it does not imply confidence in truth.
 
@@ -677,7 +677,7 @@ These parameters change the **output distribution**, not the model's beliefs. Th
     estimatedMinutes: 5,
     tags: ["hallucination", "grounding", "evaluation"],
     referenceIds: ["wikipedia-hallucination", "openai-rag-overview"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: "2026-09-04",
     order: 2,
   },
 ];

@@ -19,6 +19,18 @@ for (const viewport of viewports) {
       }),
     ).toBeVisible();
 
+    await page.goto("/learn?q=retrieval-augmented");
+    await expect(page.getByText("3 matches", { exact: true })).toBeVisible();
+    await expect(
+      page.getByRole("heading", {
+        level: 3,
+        name: /^Retrieval-Augmented Generation/,
+      }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("heading", { level: 3, name: /Large Language Model/ }),
+    ).toHaveCount(0);
+
     // Filter to a known concept by id slug to assert the grid is wired up.
     await page.goto("/learn/llm");
 
@@ -31,6 +43,11 @@ for (const viewport of viewports) {
     await expect(
       page.getByRole("heading", { name: "Key takeaways" }),
     ).toBeVisible();
+    const explanation = page.getByRole("region", { name: "Explanation" });
+    await expect(explanation.getByText("transformer blocks")).toHaveCount(1);
+    await expect(explanation.locator("strong").first()).toBeVisible();
+    await expect(explanation.locator("ol > li")).toHaveCount(2);
+    await expect(explanation).not.toContainText("**");
 
     const overflow = await page.evaluate(() => ({
       clientWidth: document.documentElement.clientWidth,
@@ -48,6 +65,7 @@ for (const viewport of viewports) {
     await expect(
       page.getByRole("heading", { level: 1, name: /Today/ }),
     ).toBeVisible();
+    await expect(page.getByText("15 cards due right now")).toBeVisible();
   });
 
   test(`${viewport.name}: /learn/stats renders the progress panel`, async ({
@@ -62,5 +80,8 @@ for (const viewport of viewports) {
     await expect(
       page.getByRole("heading", { name: /Your learning journey/ }),
     ).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Due now" }).locator(".."),
+    ).toContainText("15");
   });
 }

@@ -33,12 +33,12 @@ export const vendors = [
   },
   {
     id: "minimax",
-    name: "minimax",
-    shortName: "Mavis",
-    ecosystemName: "Mavis ecosystem",
+    name: "MiniMax",
+    shortName: "MiniMax",
+    ecosystemName: "MiniMax ecosystem",
     description:
-      "minimax's foundation models, minimax Code coding agent, Mavis agent runtime, and developer platform.",
-    homepageUrl: "https://minimax.com/",
+      "MiniMax's foundation models, MiniMax Code coding agent, multimodal products, and developer platform.",
+    homepageUrl: "https://www.minimax.io/",
     accent: "#5b5fc7",
   },
   {

@@ -10,6 +10,7 @@ import {
 import { DiagramBlock } from "@/components/learn/diagram-block";
 import { QuizRunner } from "@/components/learn/quiz-runner";
 import { ConceptReviewButton } from "@/components/learn/concept-review-button";
+import { RichText } from "@/components/learn/rich-text";
 import type { Concept } from "@/data/learn/schema";
 
 export function generateStaticParams() {
@@ -30,10 +31,6 @@ export async function generateMetadata({ params }: ConceptPageProps) {
   };
 }
 
-function explanationToParagraphs(explanation: string): string[] {
-  return explanation.split(/\n\n+/).map((p) => p.trim()).filter(Boolean);
-}
-
 const relationLabel: Record<Concept["relations"][number]["kind"], string> = {
   prerequisite: "Prerequisite",
   related: "Related",
@@ -49,8 +46,6 @@ export default async function ConceptPage({ params }: ConceptPageProps) {
   const category = getCategoryById(learnDataset, concept.categoryId);
   const related = getRelatedConcepts(learnDataset, concept.id);
   const { previous, next } = getAdjacentConcepts(learnDataset, concept.id);
-  const paragraphs = explanationToParagraphs(concept.explanation);
-
   const referenceRecords = concept.referenceIds
     .map((id) => learnDataset.references.find((r) => r.id === id))
     .filter((r): r is (typeof learnDataset.references)[number] => Boolean(r));
@@ -87,16 +82,14 @@ export default async function ConceptPage({ params }: ConceptPageProps) {
       </header>
 
       <section className="learn-concept__body" aria-label="Explanation">
-        {paragraphs.map((p, i) => (
-          <p key={i}>{p}</p>
-        ))}
+        <RichText content={concept.explanation} />
       </section>
 
       {concept.example ? (
         <aside className="learn-example" aria-label="Worked example">
           <h2>Worked example</h2>
           <h3>{concept.example.title}</h3>
-          <p>{concept.example.body}</p>
+          <RichText content={concept.example.body} />
         </aside>
       ) : null}
 

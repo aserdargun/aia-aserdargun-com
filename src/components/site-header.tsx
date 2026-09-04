@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 export function SiteHeader() {
   return (
     <header className="site-header" id="top">
       <div className="site-header__inner">
-        <a className="site-brand" href="#top" aria-label="AI Ecosystem Atlas home">
+        <Link className="site-brand" href="/" aria-label="AI Ecosystem Atlas home">
           <span className="site-brand__mark" aria-hidden="true">
             +
           </span>
@@ -10,10 +12,15 @@ export function SiteHeader() {
             <strong>AI Ecosystem Atlas</strong>
             <small>Research Console</small>
           </span>
-        </a>
+        </Link>
         <nav aria-label="Primary navigation">
+          <Link className="site-nav__atlas" href="/">
+            Atlas
+          </Link>
+          <Link href="/learn">Learn</Link>
           <a
-            href="https://github.com/aserdargun/ai-ecosystem-atlas"
+            className="site-nav__github"
+            href="https://github.com/aserdargun/aia-aserdargun-com"
             target="_blank"
             rel="noreferrer"
           >

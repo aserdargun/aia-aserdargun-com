@@ -109,9 +109,12 @@ const officialSourceHosts = new Set([
   "chat.z.ai",
   "docs.z.ai",
   "zcode.z.ai",
+  "autoclaw.z.ai",
   "minimax.com",
   "platform.minimax.com",
   "docs.minimax.com",
+  "www.minimax.io",
+  "platform.minimax.io",
   "api-docs.deepseek.com",
   "deepseek.com",
   "www.deepseek.com",
@@ -126,20 +129,35 @@ const officialSourceHosts = new Set([
 ]);
 
 const expectedVendorIds = ["anthropic", "openai", "zai", "minimax", "deepseek", "qwen"] as const;
-const refreshedVendorEntryIds = [
-  "anthropic-frontier-model-lineup",
-  "openai-frontier-model-lineup",
-  "anthropic-context-window",
-  "openai-context-window",
-  "anthropic-multimodal-input",
-  "openai-multimodal-input",
-  "anthropic-native-image-generation",
-  "openai-native-image-generation",
-  "anthropic-core-model-api",
-  "openai-core-model-api",
-  "anthropic-api-token-pricing",
-  "openai-api-token-pricing",
-] as const;
+const verificationDateByEntryId = {
+  "anthropic-frontier-model-lineup": "2026-09-04",
+  "anthropic-context-window": "2026-09-04",
+  "anthropic-multimodal-input": "2026-09-04",
+  "zai-frontier-model-lineup": "2026-09-04",
+  "zai-context-window": "2026-09-04",
+  "zai-multimodal-input": "2026-09-04",
+  "minimax-frontier-model-lineup": "2026-09-04",
+  "minimax-context-window": "2026-09-04",
+  "minimax-multimodal-input": "2026-09-04",
+  "minimax-core-model-api": "2026-09-04",
+  "minimax-consumer-plans": "2026-09-04",
+  "minimax-api-token-pricing": "2026-09-04",
+  "deepseek-frontier-model-lineup": "2026-09-04",
+  "deepseek-context-window": "2026-09-04",
+  "deepseek-multimodal-input": "2026-09-04",
+  "openai-frontier-model-lineup": "2026-08-31",
+  "openai-context-window": "2026-08-31",
+  "openai-multimodal-input": "2026-08-31",
+  "qwen-frontier-model-lineup": "2026-08-31",
+  "qwen-context-window": "2026-08-31",
+  "qwen-multimodal-input": "2026-08-31",
+  "anthropic-native-image-generation": "2026-08-24",
+  "openai-native-image-generation": "2026-08-24",
+  "anthropic-core-model-api": "2026-08-24",
+  "openai-core-model-api": "2026-08-24",
+  "anthropic-api-token-pricing": "2026-08-24",
+  "openai-api-token-pricing": "2026-08-24",
+} as const;
 const expectedVendorPairs = [
   ["anthropic", "minimax"],
   ["anthropic", "openai"],
@@ -178,6 +196,11 @@ describe("canonical Atlas dataset", () => {
     ).toBe(17);
     expect(atlasDataset.vendorEntries).toHaveLength(396);
     expect(atlasDataset.assessments).toHaveLength(990);
+    expect(
+      atlasDataset.assessments.every(
+        (assessment) => !assessment.summary.includes("undefined"),
+      ),
+    ).toBe(true);
     expect(atlasDataset.sources.length).toBeGreaterThanOrEqual(100);
 
     for (const categoryId of expectedCategoryIds) {
@@ -223,77 +246,48 @@ describe("canonical Atlas dataset", () => {
     expect(
       atlasDataset.vendorEntries.every((entry) => entry.sourceIds.length > 0),
     ).toBe(true);
-    expect(
-      atlasDataset.vendorEntries
-        .filter((entry) => entry.verifiedAt === "2026-08-24")
-        .map(({ id }) => id),
-    ).toEqual(refreshedVendorEntryIds);
-    for (const vendorId of expectedVendorIds) {
-      const entries = atlasDataset.vendorEntries.filter(
-        (entry) => entry.vendorId === vendorId,
+    const baselineEntryDateByVendor = {
+      anthropic: "2026-08-11",
+      openai: "2026-08-11",
+      zai: "2026-08-19",
+      minimax: "2026-08-11",
+      deepseek: "2026-08-19",
+      qwen: "2026-08-19",
+    } as const;
+    for (const entry of atlasDataset.vendorEntries) {
+      const refreshedDate = verificationDateByEntryId[
+        entry.id as keyof typeof verificationDateByEntryId
+      ];
+      expect(entry.verifiedAt, `verification date for ${entry.id}`).toBe(
+        refreshedDate ?? baselineEntryDateByVendor[entry.vendorId],
       );
-      if (vendorId === "anthropic" || vendorId === "openai") {
-        expect(
-          entries
-            .filter(
-              (entry) =>
-                !refreshedVendorEntryIds.includes(
-                  entry.id as (typeof refreshedVendorEntryIds)[number],
-                ),
-            )
-            .every((entry) => entry.verifiedAt === "2026-08-11"),
-          `unchanged verification dates for ${vendorId} entries`,
-        ).toBe(true);
-        continue;
-      }
-      const expectedVerifiedAt =
-        vendorId === "zai" || vendorId === "deepseek" || vendorId === "qwen"
-          ? "2026-08-19"
-          : "2026-08-11";
-      expect(
-        entries.every((entry) => entry.verifiedAt === expectedVerifiedAt),
-        `verification date for ${vendorId} entries`,
-      ).toBe(true);
     }
-    expect(
-      atlasDataset.models
-        .filter((model) => model.vendorId === "anthropic" || model.vendorId === "openai")
-        .every((model) => model.verifiedAt === "2026-08-24"),
-    ).toBe(true);
-    expect(
-      atlasDataset.models
-        .filter((model) => model.vendorId === "minimax")
-        .every((model) => model.verifiedAt === "2026-08-11"),
-    ).toBe(true);
-    expect(
-      atlasDataset.models
-        .filter((model) =>
-          model.vendorId === "zai" ||
-          model.vendorId === "deepseek" ||
-          model.vendorId === "qwen",
-        )
-        .every((model) => model.verifiedAt === "2026-08-19"),
-    ).toBe(true);
-    expect(
-      atlasDataset.plans
-        .filter(
-          (plan) =>
-            plan.vendorId !== "zai" &&
-            plan.vendorId !== "deepseek" &&
-            plan.vendorId !== "qwen",
-        )
-        .every((plan) => plan.verifiedAt === "2026-08-11"),
-    ).toBe(true);
-    expect(
-      atlasDataset.plans
-        .filter(
-          (plan) =>
-            plan.vendorId === "zai" ||
-            plan.vendorId === "deepseek" ||
-            plan.vendorId === "qwen",
-        )
-        .every((plan) => plan.verifiedAt === "2026-08-19"),
-    ).toBe(true);
+
+    for (const model of atlasDataset.models) {
+      const expectedDate =
+        model.vendorId === "openai"
+          ? "2026-08-31"
+          : model.vendorId === "qwen" && model.id !== "qwen3-8-flash"
+            ? "2026-08-19"
+            : model.id === "glm-image"
+              ? "2026-08-19"
+              : "2026-09-04";
+      expect(model.verifiedAt, `verification date for ${model.id}`).toBe(expectedDate);
+    }
+
+    const planDateByVendor = {
+      anthropic: "2026-08-11",
+      openai: "2026-08-11",
+      zai: "2026-08-19",
+      minimax: "2026-09-04",
+      deepseek: "2026-09-04",
+      qwen: "2026-08-19",
+    } as const;
+    for (const plan of atlasDataset.plans) {
+      expect(plan.verifiedAt, `verification date for ${plan.id}`).toBe(
+        planDateByVendor[plan.vendorId],
+      );
+    }
 
     for (const vendorId of expectedVendorIds) {
       expect(
@@ -337,7 +331,7 @@ describe("canonical Atlas dataset", () => {
         ],
         vendorEntries: [...atlasDataset.vendorEntries, googleEntry],
       },
-      new Date("2026-08-24T12:00:00Z"),
+      new Date("2026-09-04T12:00:00Z"),
     );
 
     expect(extended.vendorEntries.at(-1)).toEqual(googleEntry);
@@ -366,6 +360,14 @@ describe("canonical Atlas dataset", () => {
     });
   });
 
+  it("publishes the current Claude Fable release and cache-read price", () => {
+    const fable = atlasDataset.models.find(({ id }) => id === "claude-fable-5-1");
+
+    expect(fable?.name).toBe("Claude Fable 5.1");
+    expect(fable?.knowledgeCutoff).toBe("2026-06");
+    expect(fable?.pricing?.cachedInputPerMillionUsd).toBe(0.25);
+  });
+
   it("publishes the verified GLM-5.3 token rates and coding-plan quotas", () => {
     const glm53 = atlasDataset.models.find(({ id }) => id === "glm-5-3");
     const glm5 = atlasDataset.models.find(({ id }) => id === "glm-5");
@@ -382,19 +384,30 @@ describe("canonical Atlas dataset", () => {
     expect(lite?.highlights).toContain("10,000 weekly credits with 2,000 credits per 5 hours");
   });
 
-  it("publishes the verified minimax M3 and M2 Pro token rates", () => {
+  it("publishes the verified MiniMax M3 and M2.7 token rates", () => {
     const m3 = atlasDataset.models.find(({ id }) => id === "minimax-m3");
-    const pro = atlasDataset.models.find(({ id }) => id === "minimax-m2-pro");
+    const m27 = atlasDataset.models.find(({ id }) => id === "minimax-m2-7");
+    const highspeed = atlasDataset.models.find(
+      ({ id }) => id === "minimax-m2-7-highspeed",
+    );
 
     expect(m3?.pricing).toEqual({
-      inputPerMillionUsd: 8,
-      cachedInputPerMillionUsd: 0.8,
-      outputPerMillionUsd: 40,
+      inputPerMillionUsd: 0.3,
+      cachedInputPerMillionUsd: 0.06,
+      outputPerMillionUsd: 1.2,
     });
-    expect(pro?.pricing).toEqual({
-      inputPerMillionUsd: 2,
-      cachedInputPerMillionUsd: 0.2,
-      outputPerMillionUsd: 10,
+    expect(m3?.lifecycle).toBe("current");
+    expect(m27?.lifecycle).toBe("legacy");
+    expect(highspeed?.lifecycle).toBe("legacy");
+    expect(m27?.pricing).toEqual({
+      inputPerMillionUsd: 0.3,
+      cachedInputPerMillionUsd: 0.06,
+      outputPerMillionUsd: 1.2,
+    });
+    expect(highspeed?.pricing).toEqual({
+      inputPerMillionUsd: 0.6,
+      cachedInputPerMillionUsd: 0.06,
+      outputPerMillionUsd: 2.4,
     });
   });
 
@@ -440,15 +453,16 @@ describe("canonical Atlas dataset", () => {
     expect(max?.inputModalities).toEqual(["text", "image", "video"]);
   });
 
-  it("describes minimax Max with source-supported usage multiples", () => {
-    const max5x = atlasDataset.plans.find(
-      ({ id }) => id === "minimax-max-5x",
-    );
-    const max20x = atlasDataset.plans.find(
-      ({ id }) => id === "minimax-max-20x",
-    );
+  it("publishes the current MiniMax Token Plan tiers", () => {
+    const plus = atlasDataset.plans.find(({ id }) => id === "minimax-token-plus");
+    const max = atlasDataset.plans.find(({ id }) => id === "minimax-token-max");
+    const ultra = atlasDataset.plans.find(({ id }) => id === "minimax-token-ultra");
 
-    expect(max5x?.highlights).toContain("5x more usage than Pro");
-    expect(max20x?.highlights).toContain("20x more usage than Pro");
+    expect(plus?.priceDisplay).toBe("$20/month");
+    expect(max?.priceDisplay).toBe("$50/month");
+    expect(ultra?.priceDisplay).toBe("$120/month");
+    expect(plus?.highlights).toContain("About 1.7B tokens of M3 usage per month");
+    expect(max?.highlights).toContain("About 5.1B tokens of M3 usage per month");
+    expect(ultra?.highlights).toContain("About 12.5B tokens of M3 usage per month");
   });
 });

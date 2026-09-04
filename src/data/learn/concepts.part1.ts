@@ -128,14 +128,14 @@ export const foundationConcepts: Concept[] = [
     title: "Large Language Model (LLM)",
     summary:
       "A neural network trained to predict the next token in a sequence, scaled to billions of parameters.",
-    explanation: `A Large Language Model is a deep neural network — almost always built from stacked **transformer blocks** — that is trained on a single self-supervised objective: given a sequence of tokens, predict the next one. The "large" refers to the parameter count (commonly 7B–1.8T) and the training corpus (trillions of tokens).
+    explanation: `A Large Language Model is a deep neural network — usually built from stacked **transformer blocks** — that is trained on a self-supervised objective: given a sequence of tokens, predict the next one. The "large" refers to model capacity, which often spans billions to trillions of parameters, and to training corpora that can contain trillions of tokens.
 
 The same next-token objective, scaled up, surprisingly produces models that can summarize, translate, write code, follow instructions, and reason. This is the **autoregressive language modeling** objective: P(tₙ | t₁, …, tₙ₋₁).
 
-The model does not store facts as a database. Instead, knowledge is **compressed into the weights** of the network. During inference the model performs a *search over its own parameters* every time it samples a token. This has two practical consequences:
+The model does not store facts as a database. Instead, statistical associations are **distributed across its learned weights**. During inference, a forward pass applies those weights to the input and produces a probability distribution for the next token. This has two practical consequences:
 
 1. Knowledge has a **soft cutoff** baked into training data, not a hard query-time lookup.
-2. The model can produce fluent text that is factually wrong — it is not retrieving a fact, it is completing a pattern.
+2. The model can produce fluent text that is factually wrong — plausible continuation is not the same as verified retrieval.
 
 A modern LLM is wrapped in a chat template (system + user + assistant turns), but the underlying mechanism is still next-token prediction.`,
     keyTakeaways: [
@@ -224,7 +224,7 @@ A modern LLM is wrapped in a chat template (system + user + assistant turns), bu
     estimatedMinutes: 6,
     tags: ["llm", "autoregressive", "fundamentals"],
     referenceIds: ["vaswani-2017-attention-is-all-you-need", "openai-gpt-4o-system-card"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: "2026-09-04",
     order: 1,
   },
   {

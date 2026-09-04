@@ -1,14 +1,15 @@
 import type { Model } from "@/data/schema";
 
-const verifiedAt = "2026-08-24";
+const anthropicVerifiedAt = "2026-09-04";
+const openAiVerifiedAt = "2026-08-31";
 const zaiVerifiedAt = "2026-08-19";
-const minimaxVerifiedAt = "2026-08-11";
+const currentVerifiedAt = "2026-09-04";
 
 export const models = [
   {
-    id: "claude-fable-5",
+    id: "claude-fable-5-1",
     vendorId: "anthropic",
-    name: "Claude Fable 5",
+    name: "Claude Fable 5.1",
     family: "Claude 5",
     positioning: "Anthropic's highest-capability generally available model for long-running agents.",
     lifecycle: "current",
@@ -16,14 +17,14 @@ export const models = [
     outputModalities: ["text"],
     contextWindowTokens: 1_000_000,
     maxOutputTokens: 128_000,
-    knowledgeCutoff: "2026-01",
+    knowledgeCutoff: "2026-06",
     pricing: {
       inputPerMillionUsd: 10,
-      cachedInputPerMillionUsd: 1,
+      cachedInputPerMillionUsd: 0.25,
       outputPerMillionUsd: 50,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing"],
-    verifiedAt,
+    verifiedAt: anthropicVerifiedAt,
   },
   {
     id: "claude-opus-5",
@@ -43,7 +44,7 @@ export const models = [
       outputPerMillionUsd: 25,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing"],
-    verifiedAt,
+    verifiedAt: anthropicVerifiedAt,
   },
   {
     id: "claude-sonnet-5",
@@ -63,7 +64,7 @@ export const models = [
       outputPerMillionUsd: 10,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing"],
-    verifiedAt,
+    verifiedAt: anthropicVerifiedAt,
   },
   {
     id: "claude-haiku-4-5",
@@ -83,7 +84,7 @@ export const models = [
       outputPerMillionUsd: 5,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing"],
-    verifiedAt,
+    verifiedAt: anthropicVerifiedAt,
   },
   {
     id: "gpt-5-6-sol",
@@ -103,7 +104,7 @@ export const models = [
       outputPerMillionUsd: 20,
     },
     sourceIds: ["openai-models", "openai-api-pricing"],
-    verifiedAt,
+    verifiedAt: openAiVerifiedAt,
   },
   {
     id: "gpt-5-6-terra",
@@ -123,7 +124,7 @@ export const models = [
       outputPerMillionUsd: 12,
     },
     sourceIds: ["openai-models", "openai-api-pricing"],
-    verifiedAt,
+    verifiedAt: openAiVerifiedAt,
   },
   {
     id: "gpt-5-6-luna",
@@ -143,7 +144,7 @@ export const models = [
       outputPerMillionUsd: 1.2,
     },
     sourceIds: ["openai-models", "openai-api-pricing"],
-    verifiedAt,
+    verifiedAt: openAiVerifiedAt,
   },
   {
     id: "glm-5-3",
@@ -162,7 +163,21 @@ export const models = [
       outputPerMillionUsd: 4.4,
     },
     sourceIds: ["zai-glm-5-3", "zai-pricing"],
-    verifiedAt: zaiVerifiedAt,
+    verifiedAt: currentVerifiedAt,
+  },
+  {
+    id: "glm-5-3-flash",
+    vendorId: "zai",
+    name: "GLM-5.3-Flash",
+    family: "GLM-5",
+    positioning:
+      "Z.ai's efficient native-multimodal GLM-5 model for agentic workflows, visual understanding, and professional work.",
+    lifecycle: "current",
+    inputModalities: ["text", "image", "video", "file"],
+    outputModalities: ["text"],
+    contextWindowTokens: 1_000_000,
+    sourceIds: ["zai-glm-5-3-flash", "zai-zcode-changelog"],
+    verifiedAt: currentVerifiedAt,
   },
   {
     id: "glm-5",
@@ -181,7 +196,7 @@ export const models = [
       outputPerMillionUsd: 3.2,
     },
     sourceIds: ["zai-glm-5", "zai-pricing"],
-    verifiedAt: zaiVerifiedAt,
+    verifiedAt: currentVerifiedAt,
   },
   {
     id: "glm-5-turbo",
@@ -200,7 +215,7 @@ export const models = [
       outputPerMillionUsd: 4,
     },
     sourceIds: ["zai-glm-5-turbo", "zai-pricing"],
-    verifiedAt: zaiVerifiedAt,
+    verifiedAt: currentVerifiedAt,
   },
   {
     id: "glm-5v-turbo",
@@ -219,7 +234,7 @@ export const models = [
       outputPerMillionUsd: 4,
     },
     sourceIds: ["zai-glm-5v-turbo", "zai-pricing"],
-    verifiedAt: zaiVerifiedAt,
+    verifiedAt: currentVerifiedAt,
   },
   {
     id: "glm-image",
@@ -236,65 +251,59 @@ export const models = [
   {
     id: "minimax-m3",
     vendorId: "minimax",
-    name: "minimax M3",
+    name: "MiniMax M3",
     family: "M3",
     positioning:
-      "minimax's flagship frontier model for long-running agents, complex coding, and enterprise reasoning.",
+      "MiniMax's open-weight frontier model for coding, agentic work, long context, and native multimodal understanding.",
     lifecycle: "current",
-    inputModalities: ["text", "image"],
+    inputModalities: ["text", "image", "video"],
     outputModalities: ["text"],
     contextWindowTokens: 1_000_000,
-    maxOutputTokens: 128_000,
-    knowledgeCutoff: "2026-04",
     pricing: {
-      inputPerMillionUsd: 8,
-      cachedInputPerMillionUsd: 0.8,
-      outputPerMillionUsd: 40,
-    },
-    sourceIds: ["minimax-models", "minimax-api-pricing"],
-    verifiedAt: minimaxVerifiedAt,
-  },
-  {
-    id: "minimax-m2-pro",
-    vendorId: "minimax",
-    name: "minimax M2 Pro",
-    family: "M2",
-    positioning:
-      "minimax's intelligence-and-cost balanced M2 model for general coding, agentic, and enterprise workloads.",
-    lifecycle: "current",
-    inputModalities: ["text", "image"],
-    outputModalities: ["text"],
-    contextWindowTokens: 1_000_000,
-    maxOutputTokens: 128_000,
-    knowledgeCutoff: "2025-11",
-    pricing: {
-      inputPerMillionUsd: 2,
-      cachedInputPerMillionUsd: 0.2,
-      outputPerMillionUsd: 10,
-    },
-    sourceIds: ["minimax-models", "minimax-api-pricing"],
-    verifiedAt: minimaxVerifiedAt,
-  },
-  {
-    id: "minimax-m2-air",
-    vendorId: "minimax",
-    name: "minimax M2 Air",
-    family: "M2",
-    positioning:
-      "minimax's fastest M2 model for high-volume, cost-sensitive inference and agent fan-out.",
-    lifecycle: "current",
-    inputModalities: ["text", "image"],
-    outputModalities: ["text"],
-    contextWindowTokens: 256_000,
-    maxOutputTokens: 64_000,
-    knowledgeCutoff: "2025-11",
-    pricing: {
-      inputPerMillionUsd: 0.2,
-      cachedInputPerMillionUsd: 0.02,
+      inputPerMillionUsd: 0.3,
+      cachedInputPerMillionUsd: 0.06,
       outputPerMillionUsd: 1.2,
     },
     sourceIds: ["minimax-models", "minimax-api-pricing"],
-    verifiedAt: minimaxVerifiedAt,
+    verifiedAt: currentVerifiedAt,
+  },
+  {
+    id: "minimax-m2-7",
+    vendorId: "minimax",
+    name: "MiniMax M2.7",
+    family: "M2.7",
+    positioning:
+      "MiniMax's still-available historical text model for software engineering, tool use, search, and professional office work.",
+    lifecycle: "legacy",
+    inputModalities: ["text"],
+    outputModalities: ["text"],
+    contextWindowTokens: 204_800,
+    pricing: {
+      inputPerMillionUsd: 0.3,
+      cachedInputPerMillionUsd: 0.06,
+      outputPerMillionUsd: 1.2,
+    },
+    sourceIds: ["minimax-m2-7", "minimax-api-pricing"],
+    verifiedAt: currentVerifiedAt,
+  },
+  {
+    id: "minimax-m2-7-highspeed",
+    vendorId: "minimax",
+    name: "MiniMax M2.7 Highspeed",
+    family: "M2.7",
+    positioning:
+      "MiniMax's faster-serving M2.7 variant with the same model performance.",
+    lifecycle: "legacy",
+    inputModalities: ["text"],
+    outputModalities: ["text"],
+    contextWindowTokens: 204_800,
+    pricing: {
+      inputPerMillionUsd: 0.6,
+      cachedInputPerMillionUsd: 0.06,
+      outputPerMillionUsd: 2.4,
+    },
+    sourceIds: ["minimax-m2-7", "minimax-api-pricing"],
+    verifiedAt: currentVerifiedAt,
   },
   {
     id: "deepseek-v4-pro",
@@ -313,7 +322,7 @@ export const models = [
       outputPerMillionUsd: 1.98,
     },
     sourceIds: ["deepseek-models"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: currentVerifiedAt,
   },
   {
     id: "deepseek-v4-flash",
@@ -332,7 +341,27 @@ export const models = [
       outputPerMillionUsd: 0.66,
     },
     sourceIds: ["deepseek-models"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: currentVerifiedAt,
+  },
+  {
+    id: "deepseek-v4-flash-vision-exp",
+    vendorId: "deepseek",
+    name: "DeepSeek-V4-Flash-Vision-Exp",
+    family: "DeepSeek-V4",
+    positioning:
+      "DeepSeek's experimental multimodal V4 model for visual understanding and vision-enabled agent workflows.",
+    lifecycle: "preview",
+    inputModalities: ["text", "image"],
+    outputModalities: ["text"],
+    contextWindowTokens: 1_000_000,
+    maxOutputTokens: 384_000,
+    pricing: {
+      inputPerMillionUsd: 0.22,
+      cachedInputPerMillionUsd: 0.007,
+      outputPerMillionUsd: 0.66,
+    },
+    sourceIds: ["deepseek-models", "deepseek-vision", "deepseek-updates"],
+    verifiedAt: currentVerifiedAt,
   },
   {
     id: "qwen3-8-max",
@@ -352,6 +381,26 @@ export const models = [
     },
     sourceIds: ["qwen-model-card-max", "qwen-text-models"],
     verifiedAt: "2026-08-19",
+  },
+  {
+    id: "qwen3-8-flash",
+    vendorId: "qwen",
+    name: "Qwen3.8-Flash",
+    family: "Qwen3.8",
+    positioning:
+      "Qwen's fast native-multimodal model for coding, agentic workflows, and visual understanding.",
+    lifecycle: "current",
+    inputModalities: ["text", "image", "video"],
+    outputModalities: ["text"],
+    contextWindowTokens: 1_000_000,
+    maxOutputTokens: 131_000,
+    pricing: {
+      inputPerMillionUsd: 0.15,
+      cachedInputPerMillionUsd: 0.016,
+      outputPerMillionUsd: 0.47,
+    },
+    sourceIds: ["qwen-model-card-flash"],
+    verifiedAt: currentVerifiedAt,
   },
   {
     id: "qwen3-7-plus",

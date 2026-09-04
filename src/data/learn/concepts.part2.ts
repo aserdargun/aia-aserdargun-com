@@ -446,7 +446,7 @@ For each input token x:
 - **Memory cost.** All experts must be resident or at least sharded across devices, which raises serving cost.
 - **Fine-tuning fragility.** Routing can collapse to a few experts if not regularized.
 
-MoE is now standard in frontier-scale LLMs (Mixtral, GPT-4-class, Claude variants) as a way to scale capacity efficiently.`,
+MoE is widely used in modern open and proprietary frontier architectures as a way to scale capacity efficiently.`,
     keyTakeaways: [
       "MoE routes each token to top-k experts out of N total.",
       "Parameter count grows but per-token compute grows much less.",

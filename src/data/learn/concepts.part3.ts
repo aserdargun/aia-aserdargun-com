@@ -122,7 +122,7 @@ const ragPipelineDiagram = `
     <line x1="380" y1="262" x2="440" y2="182" />
     <line x1="100"  y1="102" x2="440" y2="102" />
   </g>
-  <text x="360" y="320" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#666057">Index is built offline; retrieval is online. The model never sees the corpus directly.</text>
+  <text x="360" y="320" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#666057">Indexing is offline; retrieved chunks enter the model context at query time.</text>
 </svg>
 `.trim();
 
@@ -267,7 +267,7 @@ export const trainingAndRetrievalConcepts: Concept[] = [
     title: "Reinforcement Learning from Human Feedback (RLHF)",
     summary:
       "Aligns a pretrained model to human preferences by training a reward model on comparisons, then optimizing the model against it.",
-    explanation: `Pretraining on next-token prediction produces a model that *can* continue text well, but does not necessarily follow instructions, refuse harmful requests, or be helpful and harmless. **RLHF** is the dominant alignment technique that closes that gap.
+    explanation: `Pretraining on next-token prediction produces a model that *can* continue text well, but does not necessarily follow instructions, refuse harmful requests, or behave helpfully. **RLHF** and related preference-optimization methods are widely used to close that gap.
 
 **Three stages:**
 
@@ -388,7 +388,7 @@ export const trainingAndRetrievalConcepts: Concept[] = [
 - **Freshness:** new documents become available the moment the index is rebuilt — no retraining.
 - **Attribution:** the prompt contains the source, so the model can be instructed to cite it.
 - **Cost:** far cheaper than continual pretraining or frequent fine-tuning.
-- **Privacy:** sensitive data stays in your index; the base model never sees it during training.
+- **Privacy control:** source documents can stay in your index and are not added to base-model training, but retrieved chunks still reach the inference endpoint unless the model runs inside your own security boundary.
 
 **Failure modes:**
 
@@ -396,7 +396,7 @@ export const trainingAndRetrievalConcepts: Concept[] = [
 - **Lost in the middle:** LLMs attend less faithfully to mid-context information; placing the answer near the start or end of the prompt helps.
 - **Stale or noisy chunks:** garbage in, garbage out. Quality of the corpus and the chunking strategy matter.
 
-RAG is the de-facto pattern for any "chat with your data" feature in 2024–2026.`,
+RAG remains a standard production pattern for "chat with your data" features.`,
     keyTakeaways: [
       "RAG = offline index + online retrieval + grounded generation.",
       "Attribution and freshness are the main wins over parametric knowledge.",
@@ -478,7 +478,7 @@ RAG is the de-facto pattern for any "chat with your data" feature in 2024–2026
     estimatedMinutes: 7,
     tags: ["rag", "retrieval", "grounding"],
     referenceIds: ["openai-rag-overview", "chroma-vector-db"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: "2026-09-04",
     order: 1,
   },
   {

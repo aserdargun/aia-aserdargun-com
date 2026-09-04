@@ -1569,7 +1569,7 @@ a {
     gap: 14px;
   }
 
-  .site-header nav a:not(:last-child) {
+  .site-header nav .site-nav__atlas {
     display: none;
   }
 
@@ -2192,13 +2192,30 @@ a {
   color: var(--atlas-ink-muted);
 }
 
-.learn-concept__body p {
+.learn-concept__body :is(p, ul, ol) {
   font-family: var(--atlas-content-font);
   font-size: 1.05rem;
   line-height: 1.7;
   color: var(--atlas-ink);
   margin: 0 0 18px;
   max-width: 72ch;
+}
+
+.learn-concept__body :is(ul, ol) {
+  padding-inline-start: 1.5rem;
+}
+
+.learn-concept__body li + li {
+  margin-top: 0.45rem;
+}
+
+.learn-concept__body code,
+.learn-example code {
+  padding: 0.08em 0.3em;
+  border-radius: 4px;
+  background: #ede9e1;
+  font-family: var(--atlas-ui-font);
+  font-size: 0.9em;
 }
 
 .learn-example {

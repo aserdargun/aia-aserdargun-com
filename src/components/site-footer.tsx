@@ -7,7 +7,7 @@ export function SiteFooter() {
           and a visible verification date.
         </p>
         <a
-          href="https://github.com/aserdargun/ai-ecosystem-atlas#updating-the-atlas"
+          href="https://github.com/aserdargun/aia-aserdargun-com#updating-the-atlas"
           target="_blank"
           rel="noreferrer"
         >
