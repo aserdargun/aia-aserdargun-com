@@ -57,7 +57,7 @@ describe("comparison selectors", () => {
   });
 
   it.each([
-    ["GPT-5.6 Sol", "models"],
+    ["GPT-6 Astra", "models"],
     ["Claude Fable 5.1", "models"],
     ["ChatGPT Pro", "pricing-plans"],
   ])("scopes catalog query %s to its relevant category", (query, categoryId) => {

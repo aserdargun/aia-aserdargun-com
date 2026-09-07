@@ -3,6 +3,7 @@ import type { Plan } from "@/data/schema";
 const verifiedAt = "2026-08-11";
 const zaiVerifiedAt = "2026-08-19";
 const currentVerifiedAt = "2026-09-04";
+const minimaxPlanVerifiedAt = "2026-09-07";
 
 export const plans = [
   {
@@ -208,46 +209,46 @@ export const plans = [
     id: "minimax-token-plus",
     vendorId: "minimax",
     name: "MiniMax Token Plan Plus",
-    audience: "Individual developers bringing MiniMax M3 into daily workflows",
-    priceDisplay: "$20/month",
-    billingNote: "Annual billing is available; checkout terms and regional offers can vary.",
+    audience: "Individuals using MiniMax for personal projects and prototyping",
+    priceDisplay: "$22/month",
+    billingNote: "Monthly plan with 5-hour rolling and weekly quota windows.",
     highlights: [
-      "About 1.7B tokens of M3 usage per month",
       "Three to four concurrent agents",
-      "Access to the MiniMax model family and supported coding tools",
+      "Shared quota for eligible text, image, and speech resources",
+      "Access to M3, M2.7, image, and speech models",
     ],
     sourceIds: ["minimax-token-plan"],
-    verifiedAt: currentVerifiedAt,
+    verifiedAt: minimaxPlanVerifiedAt,
   },
   {
     id: "minimax-token-max",
     vendorId: "minimax",
     name: "MiniMax Token Plan Max",
-    audience: "Developers with daily professional agent workloads",
-    priceDisplay: "$50/month",
-    billingNote: "Annual billing is available; checkout terms and regional offers can vary.",
+    audience: "Developers doing daily coding with agents and multimodal work",
+    priceDisplay: "$55/month",
+    billingNote: "Monthly plan with 5-hour rolling and weekly quota windows.",
     highlights: [
-      "About 5.1B tokens of M3 usage per month",
       "Four to five concurrent agents",
-      "Hailuo video-generation allowance",
+      "Shared quota for eligible text, image, and speech resources",
+      "Access to M3, M2.7, image, and speech models",
     ],
     sourceIds: ["minimax-token-plan"],
-    verifiedAt: currentVerifiedAt,
+    verifiedAt: minimaxPlanVerifiedAt,
   },
   {
     id: "minimax-token-ultra",
     vendorId: "minimax",
     name: "MiniMax Token Plan Ultra",
-    audience: "High-intensity developers and multi-agent workloads",
-    priceDisplay: "$120/month",
-    billingNote: "Annual billing is available; checkout terms and regional offers can vary.",
+    audience: "High-intensity agent workflows and extended sessions",
+    priceDisplay: "$132/month",
+    billingNote: "Monthly plan with 5-hour rolling and weekly quota windows.",
     highlights: [
-      "About 12.5B tokens of M3 usage per month",
       "Six to seven concurrent agents",
-      "Access to the MiniMax model family and supported coding tools",
+      "Shared quota for eligible text, image, and speech resources",
+      "Access to M3, M2.7, image, and speech models",
     ],
     sourceIds: ["minimax-token-plan"],
-    verifiedAt: currentVerifiedAt,
+    verifiedAt: minimaxPlanVerifiedAt,
   },
   {
     id: "minimax-api",

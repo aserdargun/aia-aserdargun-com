@@ -191,6 +191,13 @@ export const sources = [
     sourceType: "documentation",
   },
   {
+    id: "openai-gpt-6-astra",
+    title: "GPT-6 Astra model card",
+    publisher: "OpenAI",
+    url: "https://developers.openai.com/api/docs/models/gpt-6-astra",
+    sourceType: "documentation",
+  },
+  {
     id: "openai-api-pricing",
     title: "OpenAI API pricing",
     publisher: "OpenAI",
@@ -885,9 +892,9 @@ export const sources = [
   },
   {
     id: "minimax-token-plan",
-    title: "MiniMax Token Plan",
+    title: "MiniMax Token Plan subscription pricing",
     publisher: "MiniMax",
-    url: "https://platform.minimax.io/subscribe/token-plan",
+    url: "https://platform.minimax.io/docs/guides/pricing-token-plan",
     sourceType: "pricing",
   },
   {

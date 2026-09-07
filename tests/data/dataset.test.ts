@@ -140,23 +140,23 @@ const verificationDateByEntryId = {
   "minimax-context-window": "2026-09-04",
   "minimax-multimodal-input": "2026-09-04",
   "minimax-core-model-api": "2026-09-04",
-  "minimax-consumer-plans": "2026-09-04",
   "minimax-api-token-pricing": "2026-09-04",
+  "minimax-consumer-plans": "2026-09-07",
   "deepseek-frontier-model-lineup": "2026-09-04",
   "deepseek-context-window": "2026-09-04",
   "deepseek-multimodal-input": "2026-09-04",
-  "openai-frontier-model-lineup": "2026-08-31",
-  "openai-context-window": "2026-08-31",
-  "openai-multimodal-input": "2026-08-31",
+  "openai-frontier-model-lineup": "2026-09-07",
+  "openai-context-window": "2026-09-07",
+  "openai-multimodal-input": "2026-09-07",
   "qwen-frontier-model-lineup": "2026-08-31",
   "qwen-context-window": "2026-08-31",
   "qwen-multimodal-input": "2026-08-31",
   "anthropic-native-image-generation": "2026-08-24",
-  "openai-native-image-generation": "2026-08-24",
+  "openai-native-image-generation": "2026-09-07",
   "anthropic-core-model-api": "2026-08-24",
-  "openai-core-model-api": "2026-08-24",
+  "openai-core-model-api": "2026-09-07",
   "anthropic-api-token-pricing": "2026-08-24",
-  "openai-api-token-pricing": "2026-08-24",
+  "openai-api-token-pricing": "2026-09-07",
 } as const;
 const expectedVendorPairs = [
   ["anthropic", "minimax"],
@@ -266,7 +266,7 @@ describe("canonical Atlas dataset", () => {
     for (const model of atlasDataset.models) {
       const expectedDate =
         model.vendorId === "openai"
-          ? "2026-08-31"
+          ? "2026-09-07"
           : model.vendorId === "qwen" && model.id !== "qwen3-8-flash"
             ? "2026-08-19"
             : model.id === "glm-image"
@@ -285,7 +285,9 @@ describe("canonical Atlas dataset", () => {
     } as const;
     for (const plan of atlasDataset.plans) {
       expect(plan.verifiedAt, `verification date for ${plan.id}`).toBe(
-        planDateByVendor[plan.vendorId],
+        plan.id.startsWith("minimax-token-")
+          ? "2026-09-07"
+          : planDateByVendor[plan.vendorId],
       );
     }
 
@@ -331,18 +333,27 @@ describe("canonical Atlas dataset", () => {
         ],
         vendorEntries: [...atlasDataset.vendorEntries, googleEntry],
       },
-      new Date("2026-09-04T12:00:00Z"),
+      new Date("2026-09-07T12:00:00Z"),
     );
 
     expect(extended.vendorEntries.at(-1)).toEqual(googleEntry);
     expect(extended.vendorEntries).toHaveLength(397);
   });
 
-  it("publishes the verified GPT-5.6 token rates", () => {
+  it("publishes the verified GPT-6 and GPT-5.6 token rates", () => {
+    const astra = atlasDataset.models.find(({ id }) => id === "gpt-6-astra");
     const sol = atlasDataset.models.find(({ id }) => id === "gpt-5-6-sol");
     const terra = atlasDataset.models.find(({ id }) => id === "gpt-5-6-terra");
     const luna = atlasDataset.models.find(({ id }) => id === "gpt-5-6-luna");
 
+    expect(astra?.pricing).toEqual({
+      inputPerMillionUsd: 10,
+      cachedInputPerMillionUsd: 1,
+      outputPerMillionUsd: 50,
+    });
+    expect(astra?.contextWindowTokens).toBe(1_050_000);
+    expect(astra?.maxOutputTokens).toBe(128_000);
+    expect(astra?.knowledgeCutoff).toBe("2026-04-30");
     expect(sol?.pricing).toEqual({
       inputPerMillionUsd: 4,
       cachedInputPerMillionUsd: 0.4,
@@ -458,11 +469,11 @@ describe("canonical Atlas dataset", () => {
     const max = atlasDataset.plans.find(({ id }) => id === "minimax-token-max");
     const ultra = atlasDataset.plans.find(({ id }) => id === "minimax-token-ultra");
 
-    expect(plus?.priceDisplay).toBe("$20/month");
-    expect(max?.priceDisplay).toBe("$50/month");
-    expect(ultra?.priceDisplay).toBe("$120/month");
-    expect(plus?.highlights).toContain("About 1.7B tokens of M3 usage per month");
-    expect(max?.highlights).toContain("About 5.1B tokens of M3 usage per month");
-    expect(ultra?.highlights).toContain("About 12.5B tokens of M3 usage per month");
+    expect(plus?.priceDisplay).toBe("$22/month");
+    expect(max?.priceDisplay).toBe("$55/month");
+    expect(ultra?.priceDisplay).toBe("$132/month");
+    expect(plus?.highlights).toContain("Three to four concurrent agents");
+    expect(max?.highlights).toContain("Four to five concurrent agents");
+    expect(ultra?.highlights).toContain("Six to seven concurrent agents");
   });
 });

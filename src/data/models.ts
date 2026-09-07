@@ -1,7 +1,7 @@
 import type { Model } from "@/data/schema";
 
 const anthropicVerifiedAt = "2026-09-04";
-const openAiVerifiedAt = "2026-08-31";
+const openAiVerifiedAt = "2026-09-07";
 const zaiVerifiedAt = "2026-08-19";
 const currentVerifiedAt = "2026-09-04";
 
@@ -85,6 +85,26 @@ export const models = [
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing"],
     verifiedAt: anthropicVerifiedAt,
+  },
+  {
+    id: "gpt-6-astra",
+    vendorId: "openai",
+    name: "GPT-6 Astra",
+    family: "GPT-6",
+    positioning: "OpenAI's most capable model for complex reasoning, coding, computer use, research, and document creation.",
+    lifecycle: "current",
+    inputModalities: ["text", "image"],
+    outputModalities: ["text"],
+    contextWindowTokens: 1_050_000,
+    maxOutputTokens: 128_000,
+    knowledgeCutoff: "2026-04-30",
+    pricing: {
+      inputPerMillionUsd: 10,
+      cachedInputPerMillionUsd: 1,
+      outputPerMillionUsd: 50,
+    },
+    sourceIds: ["openai-gpt-6-astra", "openai-api-pricing"],
+    verifiedAt: openAiVerifiedAt,
   },
   {
     id: "gpt-5-6-sol",

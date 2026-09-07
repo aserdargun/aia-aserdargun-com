@@ -67,7 +67,7 @@ it("searches the real atlas and expands official evidence", async () => {
 });
 
 it.each([
-  ["GPT-5.6 Sol", "Models"],
+  ["GPT-6 Astra", "Models"],
   ["Claude Fable 5.1", "Models"],
   ["ChatGPT Pro", "Pricing"],
 ])("shows a bounded category slice for catalog query %s", async (query, category) => {

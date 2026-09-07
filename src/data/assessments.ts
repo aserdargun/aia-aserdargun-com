@@ -1565,7 +1565,7 @@ export const assessments = [
     capabilityId: "consumer-plans",
     vendorIds: ["anthropic", "minimax"],
     status: "strong-parity",
-    summary: "Both publish Free, Pro, and Max plans for individual users.",
+    summary: "Both publish tiered individual subscriptions, with different plan names and usage structures.",
   },
   {
     capabilityId: "business-plans",
@@ -1967,7 +1967,7 @@ export const assessments = [
     capabilityId: "consumer-plans",
     vendorIds: ["openai", "minimax"],
     status: "strong-parity",
-    summary: "Both publish Free, Pro, and Max plans for individual users.",
+    summary: "Both publish tiered individual subscriptions, with different plan names and usage structures.",
   },
   {
     capabilityId: "business-plans",
