@@ -36,9 +36,7 @@ const idSchema = z
   .string()
   .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "ID must be lowercase kebab-case.");
 
-const isoDateSchema = z
-  .string()
-  .regex(/^\d{4}-\d{2}-\d{2}$/, "Date must use ISO YYYY-MM-DD format.");
+const isoDateSchema = z.iso.date("Date must be a valid ISO YYYY-MM-DD calendar date.");
 
 const httpsUrlSchema = z
   .url("URL must be valid.")

@@ -11,7 +11,7 @@ export default function LearnLayout({
   return (
     <>
       <SiteHeader />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <ProgressProvider dataset={learnDataset}>{children}</ProgressProvider>
       </main>
       <SiteFooter />

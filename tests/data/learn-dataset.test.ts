@@ -1,3 +1,4 @@
+import { parseLearnDataset } from "@/data/learn/validation";
 import { describe, expect, it } from "vitest";
 import { learnDataset } from "@/data/learn";
 import {
@@ -52,4 +53,14 @@ describe("learn dataset integrity", () => {
       }
     }
   });
+});
+
+
+it("rejects impossible verification dates and duplicate quiz IDs", () => {
+  const invalidDate = structuredClone(learnDataset);
+  invalidDate.concepts[0].verifiedAt = "2026-02-30";
+  expect(() => parseLearnDataset(invalidDate, new Date("2026-09-10"))).toThrow();
+  const duplicateQuiz = structuredClone(learnDataset);
+  duplicateQuiz.concepts[0].quiz.push(duplicateQuiz.concepts[0].quiz[0]);
+  expect(() => parseLearnDataset(duplicateQuiz, new Date("2026-09-10"))).toThrow(/duplicate ID/);
 });

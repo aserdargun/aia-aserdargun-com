@@ -1,3 +1,4 @@
+import { z } from "zod";
 import {
   initialCardState,
   isDue,
@@ -29,6 +30,31 @@ export interface ConceptProgress {
 
 export type LearnProgress = Record<string, ConceptProgress>;
 
+// Treat persisted data as untrusted input; retain valid cards independently.
+const timestamp = z.string().datetime().refine((value) => Number.isFinite(Date.parse(value)));
+const counter = z.number().int().nonnegative().max(Number.MAX_SAFE_INTEGER);
+const conceptProgressSchema = z.object({
+  card: z.object({
+    repetitions: counter,
+    easinessFactor: z.number().finite().min(1.3).max(100),
+    intervalDays: counter.max(365_000),
+    lastReviewedAt: timestamp.nullable(),
+    dueAt: timestamp,
+  }),
+  quizCorrect: counter,
+  quizTotal: counter,
+}).refine((entry) => entry.quizCorrect <= entry.quizTotal);
+
+export function parseProgress(value: unknown): LearnProgress {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+  const entries = Object.entries(value).flatMap(([id, entry]) => {
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id) || id === "constructor" || id === "prototype") return [];
+    const parsed = conceptProgressSchema.safeParse(entry);
+    return parsed.success ? [[id, parsed.data] as const] : [];
+  });
+  return Object.fromEntries(entries);
+}
+
 export function createEmptyProgress(conceptIds: string[], now: Date): LearnProgress {
   const out: LearnProgress = {};
   for (const id of conceptIds) {
@@ -48,7 +74,7 @@ export function applyReview(
   now: Date,
 ): LearnProgress {
   const existing = progress[conceptId];
-  if (!existing) {
+  if (!Object.hasOwn(progress, conceptId) || !existing) {
     return progress;
   }
   const next = { ...progress };
@@ -65,7 +91,7 @@ export function recordQuizAnswer(
   correct: boolean,
 ): LearnProgress {
   const existing = progress[conceptId];
-  if (!existing) {
+  if (!Object.hasOwn(progress, conceptId) || !existing) {
     return progress;
   }
   const next = { ...progress };
@@ -148,24 +174,24 @@ export function loadProgress(): LearnProgress {
     const raw = window.localStorage.getItem(PROGRESS_STORAGE_KEY);
     if (!raw) return {};
     const parsed = JSON.parse(raw) as unknown;
-    if (!parsed || typeof parsed !== "object") return {};
-    return parsed as LearnProgress;
+    return parseProgress(parsed);
   } catch {
     return {};
   }
 }
 
-export function saveProgress(progress: LearnProgress): void {
+export function saveProgress(progress: LearnProgress): boolean {
   if (typeof window === "undefined") {
-    return;
+    return false;
   }
   try {
     window.localStorage.setItem(
       PROGRESS_STORAGE_KEY,
       JSON.stringify(progress),
     );
+    return true;
   } catch {
-    /* ignore quota / private-mode failures */
+    return false;
   }
 }
 
@@ -174,8 +200,8 @@ export function mergeProgress(
   incoming: LearnProgress,
 ): LearnProgress {
   const out: LearnProgress = { ...base };
-  for (const [id, value] of Object.entries(incoming)) {
-    out[id] = value;
+  for (const [id, value] of Object.entries(parseProgress(incoming))) {
+    if (Object.hasOwn(base, id)) out[id] = value;
   }
   return out;
 }

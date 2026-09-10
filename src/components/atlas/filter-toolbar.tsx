@@ -123,6 +123,7 @@ export function FilterToolbar({
 }
 
 type FilterGroupsProps = {
+  showStatuses?: boolean;
   availability: readonly Availability[];
   statuses: readonly ComparisonStatus[];
   freshness: readonly Freshness[];
@@ -155,6 +156,7 @@ function FilterCheckbox<Value extends string>({
 }
 
 export function FilterGroups({
+  showStatuses = true,
   availability,
   statuses,
   freshness,
@@ -176,7 +178,7 @@ export function FilterGroups({
           />
         ))}
       </fieldset>
-      <fieldset>
+      {showStatuses && <fieldset>
         <legend>Comparison status</legend>
         {comparisonStatusValues.map((value) => (
           <FilterCheckbox
@@ -187,7 +189,7 @@ export function FilterGroups({
             onChange={onStatusChange}
           />
         ))}
-      </fieldset>
+      </fieldset>}
       <fieldset>
         <legend>Freshness</legend>
         {freshnessValues.map((value) => (

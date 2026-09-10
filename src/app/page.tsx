@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <>
       <SiteHeader />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <AtlasIntro dataset={atlasDataset} />
         <ResearchConsole dataset={atlasDataset} />
       </main>

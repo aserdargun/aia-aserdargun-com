@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 import type { LearnDataset } from "@/data/learn/schema";
 import { useProgress } from "@/components/learn/progress-provider";
 import {
@@ -14,7 +13,6 @@ const reviewQualities: ReviewQuality[] = [0, 3, 4, 5];
 
 export function ReviewRunner({ dataset }: { dataset: LearnDataset }) {
   const { progress, summary, ready, review } = useProgress();
-  const [completedToday, setCompletedToday] = useState<Set<string>>(new Set());
 
   if (!ready) {
     return (
@@ -26,7 +24,6 @@ export function ReviewRunner({ dataset }: { dataset: LearnDataset }) {
 
   const now = new Date();
   const dueConcepts = dataset.concepts.filter((c) => {
-    if (completedToday.has(c.id)) return false;
     const entry = progress[c.id];
     if (!entry) return true;
     if (entry.card.repetitions === 0 && entry.card.lastReviewedAt === null) {
@@ -53,11 +50,6 @@ export function ReviewRunner({ dataset }: { dataset: LearnDataset }) {
 
   function grade(conceptId: string, quality: ReviewQuality) {
     review(conceptId, quality);
-    setCompletedToday((current) => {
-      const next = new Set(current);
-      next.add(conceptId);
-      return next;
-    });
   }
 
   return (

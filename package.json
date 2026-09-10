@@ -20,9 +20,9 @@
     "dev": "next dev",
     "dev:codex": "npm run stop:codex && next dev --hostname 127.0.0.1 --port 3000",
     "stop:codex": "node scripts/stop-dev.mjs",
-    "validate:codex": "npm run stop:codex && npm run check && npm run test:e2e && git diff --check",
+    "validate:codex": "npm run check && npm run test:e2e:static && git diff --check",
     "build": "next build",
-    "start": "next start",
+    "start": "node scripts/serve-static.mjs",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run && node --test scripts/*.test.mjs",
@@ -30,11 +30,12 @@
     "test:e2e": "playwright test",
     "validate:data": "tsx scripts/validate-data.ts",
     "verify:static": "tsx scripts/verify-static-export.ts",
-    "check": "npm run validate:data && npm run lint && npm run typecheck && npm test && npm run build && npm run verify:static"
+    "check": "npm run validate:data && npm run lint && npm run typecheck && npm test && npm run build && npm run verify:static",
+    "test:e2e:static": "PLAYWRIGHT_STATIC=1 playwright test"
   },
   "dependencies": {
     "lucide-react": "1.31.0",
-    "next": "16.3.0",
+    "next": "16.3.4",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "zod": "4.4.3"
@@ -50,12 +51,12 @@
     "@types/react-dom": "19.2.4",
     "@vitejs/plugin-react": "6.0.5",
     "eslint": "9.39.5",
-    "eslint-config-next": "16.3.0",
+    "eslint-config-next": "16.3.4",
     "jsdom": "30.0.1",
     "tailwindcss": "4.3.3",
     "tsx": "4.23.12",
     "typescript": "5.9.3",
     "vite": "8.2.1",
-    "vitest": "4.1.10"
+    "vitest": "4.1.11"
   }
 }

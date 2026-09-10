@@ -66,3 +66,18 @@ describe("learn progress store", () => {
     expect(summary.accuracy).toBeCloseTo(2 / 3, 5);
   });
 });
+
+it("recovers valid cards while rejecting corrupt storage entries", async () => {
+  const { parseProgress, mergeProgress } = await import("@/lib/learn/progress");
+  const base = createEmptyProgress(["a", "b"], now);
+  const incoming = {
+    a: { ...base.a, quizCorrect: 1, quizTotal: 2 },
+    b: { card: null, quizCorrect: -3, quizTotal: "bad" },
+    removed: base.a,
+  };
+  expect(mergeProgress(base, incoming as never)).toEqual({ a: incoming.a, b: base.b });
+  expect(parseProgress([])).toEqual({});
+  expect(parseProgress({ a: { ...base.a, quizCorrect: 2, quizTotal: 1 } })).toEqual({});
+  expect(parseProgress({ a: { ...base.a, card: { ...base.a.card, dueAt: "invalid" } } })).toEqual({});
+  expect(parseProgress(JSON.parse('{"__proto__": {"card": null}}'))).toEqual({});
+});

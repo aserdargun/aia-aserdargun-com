@@ -67,6 +67,7 @@ export type VendorMatrixRow = Readonly<{
   capability: Immutable<Capability>;
   cells: readonly VendorMatrixCell[];
   searchText: string;
+  catalogExactQueries: readonly string[];
 }>;
 
 const availabilityScore: Record<Availability, number> = {
@@ -426,6 +427,11 @@ export function buildVendorMatrix(
     dataset.sources.map((source) => [source.id, immutableSource(source)]),
   );
   const vendors = dataset.vendors.map(immutableVendor);
+  const modelText = dataset.models.flatMap((model) => [model.name, model.family, model.positioning]).join(" ");
+  const planText = dataset.plans.flatMap((plan) => [plan.name, plan.audience, plan.priceDisplay, ...plan.highlights]).join(" ");
+  const modelQueries = Object.freeze(dataset.models.map((model) => normalizeSearchText(model.name)));
+  const planQueries = Object.freeze(dataset.plans.map((plan) => normalizeSearchText(plan.name)));
+
 
   return Object.freeze(
     dataset.capabilities.map((capability) => {
@@ -461,7 +467,10 @@ export function buildVendorMatrix(
         capability.name,
         capability.description,
         ...capability.tags,
+        category.id === "models" ? modelText : category.id === "pricing-plans" ? planText : "",
         ...cells.flatMap((cell) => [
+          cell.vendor.name,
+          cell.vendor.shortName,
           cell.entry.title,
           cell.entry.summary,
           ...cell.entry.details,
@@ -474,6 +483,7 @@ export function buildVendorMatrix(
         capability: immutableCapability(capability),
         cells: Object.freeze(cells),
         searchText,
+        catalogExactQueries: category.id === "models" ? modelQueries : category.id === "pricing-plans" ? planQueries : Object.freeze([]),
       });
     }),
   );
@@ -485,6 +495,9 @@ export function filterVendorMatrix(
   now: Date = new Date(),
 ): VendorMatrixRow[] {
   const result: VendorMatrixRow[] = [];
+  const query = normalizeSearchText(state.query);
+  const catalogCategoryIds = new Set(rows.filter((row) => row.catalogExactQueries.includes(query)).map((row) => row.category.id));
+
 
   for (const row of rows) {
     if (state.categoryId !== null && row.category.id !== state.categoryId) continue;
@@ -504,7 +517,9 @@ export function filterVendorMatrix(
     ) {
       continue;
     }
-    if (state.query && !matchesSearch(row.searchText, state.query)) continue;
+    if (query && (catalogCategoryIds.size > 0
+      ? !catalogCategoryIds.has(row.category.id)
+      : !matchesSearch(row.searchText, query))) continue;
 
     result.push(row);
   }

@@ -2,9 +2,8 @@
  * SM-2 spaced repetition.
  *
  * Pure functions. No DOM, no storage, no side effects. Given a current card
- * state and a review quality, return the next state. The same algorithm
- * powers Anki and most academic flashcard apps; see Wozniak's original
- * formulation.
+ * state and a review quality, return the next state. This implementation
+ * follows the original SM-2 formulation with a four-button quality scale.
  *
  * Quality scale (we use four user-facing buttons that map to these):
  *   0 — Again  (no recall)

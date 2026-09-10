@@ -76,6 +76,7 @@ function assertQuizStructure(quiz: QuizItem[], conceptId: string): void {
   if (quiz.length === 0) {
     throw new Error(`Concept "${conceptId}" must declare at least one quiz item.`);
   }
+  assertUniqueIds(quiz, `Concept "${conceptId}" quiz item`);
   for (const item of quiz) {
     const optionIds = new Set<string>();
     let correctCount = 0;

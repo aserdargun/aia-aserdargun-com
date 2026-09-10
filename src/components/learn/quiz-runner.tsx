@@ -21,7 +21,7 @@ function pickAllCorrect(item: QuizItem): Set<string> {
 }
 
 export function QuizRunner({ conceptId, items }: QuizRunnerProps) {
-  const { answer } = useProgress();
+  const { answer, ready } = useProgress();
   const [answers, setAnswers] = useState<Record<string, AnswerState>>({});
 
   function toggle(item: QuizItem, optionId: string) {
@@ -38,18 +38,16 @@ export function QuizRunner({ conceptId, items }: QuizRunnerProps) {
   }
 
   function check(item: QuizItem) {
-    setAnswers((current) => {
-      const existing = current[item.id] ?? { selected: new Set<string>(), checked: false };
-      const correctIds = pickAllCorrect(item);
-      const correct =
-        existing.selected.size === correctIds.size &&
-        [...existing.selected].every((id) => correctIds.has(id));
-      answer(conceptId, correct);
-      return {
-        ...current,
-        [item.id]: { ...existing, checked: true },
-      };
-    });
+    const existing = answers[item.id];
+    if (!ready || !existing || existing.checked || existing.selected.size === 0) return;
+    const correctIds = pickAllCorrect(item);
+    const correct = existing.selected.size === correctIds.size &&
+      [...existing.selected].every((id) => correctIds.has(id));
+    answer(conceptId, correct);
+    setAnswers((current) => ({
+      ...current,
+      [item.id]: { ...existing, checked: true },
+    }));
   }
 
   function reset(item: QuizItem) {
@@ -97,7 +95,7 @@ export function QuizRunner({ conceptId, items }: QuizRunnerProps) {
                 })}
               </ul>
               {state.checked && (
-                <div className="learn-quiz__feedback">
+                <div className="learn-quiz__feedback" role="status">
                   <p className="learn-quiz__explanations">
                     {item.options
                       .filter((o) => (state.selected.has(o.id) || correctIds.has(o.id)))
@@ -121,7 +119,7 @@ export function QuizRunner({ conceptId, items }: QuizRunnerProps) {
                   type="button"
                   className="learn-quiz__check"
                   onClick={() => check(item)}
-                  disabled={state.selected.size === 0}
+                  disabled={!ready || state.selected.size === 0}
                 >
                   Check answer
                 </button>

@@ -1,9 +1,12 @@
 "use client";
 
+import { useState } from "react";
+
 import { useProgress } from "@/components/learn/progress-provider";
 
 export function StatsPanel() {
   const { summary, ready, reset } = useProgress();
+  const [confirmReset, setConfirmReset] = useState(false);
 
   if (!ready) {
     return <p className="learn-stats__loading">Loading your progress…</p>;
@@ -59,9 +62,21 @@ export function StatsPanel() {
         </article>
       </div>
 
-      <button type="button" className="learn-stats__reset" onClick={reset}>
-        Reset all progress
-      </button>
+      {confirmReset ? (
+        <div role="group" aria-label="Confirm progress reset">
+          <p>This clears all quiz answers and review schedules in this browser.</p>
+          <button type="button" className="learn-stats__reset" onClick={() => { reset(); setConfirmReset(false); }}>
+            Confirm reset
+          </button>{" "}
+          <button type="button" className="learn-stats__reset" onClick={() => setConfirmReset(false)} autoFocus>
+            Keep my progress
+          </button>
+        </div>
+      ) : (
+        <button type="button" className="learn-stats__reset" onClick={() => setConfirmReset(true)}>
+          Reset all progress
+        </button>
+      )}
     </div>
   );
 }

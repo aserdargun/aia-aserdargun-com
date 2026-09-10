@@ -86,7 +86,15 @@ function createAtlasStateStore(dataset: AtlasDataset): AtlasStateStore {
   return {
     subscribe(listener) {
       listeners.add(listener);
-      return () => listeners.delete(listener);
+      const handlePopState = () => {
+        state = parseUrlState(new URLSearchParams(window.location.search), dataset);
+        listener();
+      };
+      window.addEventListener("popstate", handlePopState);
+      return () => {
+        listeners.delete(listener);
+        window.removeEventListener("popstate", handlePopState);
+      };
     },
     getSnapshot() {
       return state;
@@ -150,17 +158,9 @@ export function ResearchConsole({ dataset }: { dataset: AtlasDataset }) {
     () => filterComparisonRows(allRows, filterState),
     [allRows, filterState],
   );
-  const categoryCounts = useMemo(
+  const pairCategoryCounts = useMemo(
     () => buildCategoryCounts(allRows, filterState),
     [allRows, filterState],
-  );
-  const allCategoryCount = useMemo(
-    () =>
-      Array.from(categoryCounts.values()).reduce(
-        (total, count) => total + count,
-        0,
-      ),
-    [categoryCounts],
   );
   const categoryById = useMemo(
     () => new Map(dataset.categories.map((category) => [category.id, category])),
@@ -171,6 +171,16 @@ export function ResearchConsole({ dataset }: { dataset: AtlasDataset }) {
     () => filterVendorMatrix(allMatrixRows, filterState),
     [allMatrixRows, filterState],
   );
+
+  const categoryCounts = useMemo(() => {
+    if (view !== "all-vendors") return pairCategoryCounts;
+    const counts = new Map<string, number>();
+    for (const row of filterVendorMatrix(allMatrixRows, { ...filterState, categoryId: null })) {
+      counts.set(row.category.id, (counts.get(row.category.id) ?? 0) + 1);
+    }
+    return counts;
+  }, [view, pairCategoryCounts, allMatrixRows, filterState]);
+  const allCategoryCount = Array.from(categoryCounts.values()).reduce((total, count) => total + count, 0);
 
   function writeUrl(state: AtlasState) {
     const params = serializeUrlState(state);
@@ -237,13 +247,13 @@ export function ResearchConsole({ dataset }: { dataset: AtlasDataset }) {
     leftVendorId !== defaultAtlasState.leftVendorId ||
     rightVendorId !== defaultAtlasState.rightVendorId ||
     availability.length > 0 ||
-    statuses.length > 0 ||
+    (view !== "all-vendors" && statuses.length > 0) ||
     freshness.length > 0;
   const constraints = [
     query ? `search “${query}”` : null,
     categoryId ? `category ${categoryById.get(categoryId)?.name ?? categoryId}` : null,
     availability.length ? `${availability.length} availability filter(s)` : null,
-    statuses.length ? `${statuses.length} comparison status filter(s)` : null,
+    view !== "all-vendors" && statuses.length ? `${statuses.length} comparison status filter(s)` : null,
     freshness.length ? `${freshness.length} freshness filter(s)` : null,
   ].filter((value): value is string => value !== null);
 
@@ -255,12 +265,22 @@ export function ResearchConsole({ dataset }: { dataset: AtlasDataset }) {
           headers: [
             "Category",
             "Capability",
-            ...dataset.vendors.map((vendor) => vendor.name),
+            ...dataset.vendors.flatMap((vendor) => [
+              vendor.name + " availability",
+              vendor.name + " score /10",
+              vendor.name + " verified",
+              vendor.name + " sources",
+            ]),
           ],
           rows: matrixRows.map((row) => [
             row.category.name,
             row.capability.name,
-            ...row.cells.map((cell) => cell.score + "/10"),
+            ...row.cells.flatMap((cell) => [
+              availabilityLabels[cell.entry.availability],
+              cell.score,
+              cell.entry.verifiedAt ?? "",
+              cell.sources.map((source) => source.url).join(" "),
+            ]),
           ]),
         }
       : {
@@ -272,7 +292,10 @@ export function ResearchConsole({ dataset }: { dataset: AtlasDataset }) {
             rightVendor.name + " availability",
             rightVendor.name,
             "Assessment",
-            "Verified",
+            leftVendor.name + " verified",
+            rightVendor.name + " verified",
+            leftVendor.name + " sources",
+            rightVendor.name + " sources",
           ],
           rows: visibleRows.map((row) => [
             row.category.name,
@@ -282,7 +305,10 @@ export function ResearchConsole({ dataset }: { dataset: AtlasDataset }) {
             availabilityLabels[row.rightEntry.availability],
             row.rightEntry.title,
             comparisonStatusLabels[row.assessment.status],
-            row.leftEntry.verifiedAt ?? row.rightEntry.verifiedAt ?? "",
+            row.leftEntry.verifiedAt ?? "",
+            row.rightEntry.verifiedAt ?? "",
+            row.leftSources.map((source) => source.url).join(" "),
+            row.rightSources.map((source) => source.url).join(" "),
           ]),
         };
 
@@ -356,6 +382,7 @@ export function ResearchConsole({ dataset }: { dataset: AtlasDataset }) {
         />
         <MobileFilterSheet>
           <FilterGroups
+            showStatuses={view !== "all-vendors"}
             availability={availability}
             statuses={statuses}
             freshness={freshness}

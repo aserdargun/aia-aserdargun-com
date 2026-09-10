@@ -10,7 +10,7 @@ import {
 const reviewQualities: ReviewQuality[] = [0, 3, 4, 5];
 
 export function ConceptReviewButton({ conceptId }: { conceptId: string }) {
-  const { ready, progress, review } = useProgress();
+  const { ready, storageAvailable, progress, review } = useProgress();
   const [expanded, setExpanded] = useState(false);
   const [lastGrade, setLastGrade] = useState<ReviewQuality | null>(null);
 
@@ -65,7 +65,7 @@ export function ConceptReviewButton({ conceptId }: { conceptId: string }) {
       ) : null}
       {lastGrade !== null ? (
         <p className="learn-grade__status" role="status">
-          Saved as <strong>{reviewQualityLabels[lastGrade]}</strong>. Next review scheduled.
+          {storageAvailable ? "Saved as" : "Recorded for this session as"} <strong>{reviewQualityLabels[lastGrade]}</strong>. Next review scheduled.
         </p>
       ) : null}
     </div>

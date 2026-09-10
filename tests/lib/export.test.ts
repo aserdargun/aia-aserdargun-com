@@ -31,3 +31,13 @@ describe("export", () => {
     expect(xml).toContain("&quot;");
   });
 });
+
+it("neutralizes spreadsheet formulas in text while preserving numeric values", () => {
+  const csv = toCsv({ headers: ["=header"], rows: [["=1+1"], ["  +SUM(A1)"], ["@SUM(A1)"], [-5], ["line\rbreak"]] });
+  expect(csv).toContain("'=header");
+  expect(csv).toContain("'=1+1");
+  expect(csv).toContain("'  +SUM(A1)");
+  expect(csv).toContain("'@SUM(A1)");
+  expect(csv).toContain("\r\n-5\r\n");
+  expect(csv).toContain('"line\rbreak"');
+});

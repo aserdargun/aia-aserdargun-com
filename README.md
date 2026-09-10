@@ -1,12 +1,12 @@
 # AI Ecosystem Atlas
 
-![Next.js 16.3.0](https://img.shields.io/badge/Next.js-16.3.0-111111?logo=nextdotjs&logoColor=white)
+![Next.js 16.3.4](https://img.shields.io/badge/Next.js-16.3.4-111111?logo=nextdotjs&logoColor=white)
 ![TypeScript 5.9.3](https://img.shields.io/badge/TypeScript-5.9.3-3178C6?logo=typescript&logoColor=white)
 ![Checks: npm run check](https://img.shields.io/badge/checks-npm%20run%20check-168c6b)
 
 AI Ecosystem Atlas is a public, evidence-backed research console for comparing AI product and developer ecosystems. The first release examines Anthropic/Claude, OpenAI/ChatGPT, Z.ai/GLM, MiniMax, DeepSeek, and Qwen across models, end-user products, coding agents, developer platforms, governance, and pricing.
 
-The atlas is designed for inspection, not verdicts. It keeps provider-neutral capabilities, vendor claims, pair-specific assessments, models, plans, and official sources in separate canonical records. The interface does not calculate an aggregate score, rank vendors, or declare a winner.
+The atlas is designed for inspection, not verdicts. It keeps provider-neutral capabilities, vendor claims, pair-specific assessments, models, plans, and official sources in separate canonical records. The interface does not rank vendors or declare a winner. The all-vendors matrix includes an availability indicator: available = 10, limited = 5, all other states = 0. Its overall score is the mean of visible cells, not a quality benchmark; missing evidence does not prove unavailability.
 
 ![AI Ecosystem Atlas Research Console](public/ai-ecosystem-atlas.png)
 
@@ -146,6 +146,20 @@ Run the validation, lint, type, unit/component, production-build, and static art
 npm run check
 ```
 
+Preview the built static export with `npm start`. Run `npm run test:e2e:static`
+after `npm run check` to test the actual production pages, including deep links.
+Static browser tests use port 3107, independently of the development server;
+set `PLAYWRIGHT_PORT` to select another free port.
+`npm run validate:codex` runs this complete sequence; CI also checks the static
+export in Chromium before deployment.
+
+Learning progress is stored only in this browser. Invalid saved cards are recovered
+individually, unknown concepts are discarded, and unavailable storage is reported.
+Cross-tab updates use the last saved snapshot; simultaneous edits are not merged.
+
+CSV and Excel exports include each vendor's verification date and source URLs.
+CSV text beginning with spreadsheet formula prefixes is escaped as literal text.
+
 `npm run check` intentionally excludes browser tests. Run `npm run test:e2e`
 separately when verifying rendered workflows or preparing a release.
 
@@ -272,7 +286,7 @@ Important limitations:
 3. Add an optional scheduled link-health and stale-data report.
 4. Add saved comparison presets without requiring accounts.
 5. Evaluate a public contribution form or CMS only after repository-based updates become a measurable bottleneck.
-6. Add CSV and JSON export formats.
+6. Add JSON exports alongside the existing CSV and Excel exports.
 7. Add multilingual presentation while retaining one canonical fact layer.
 
 Public visibility does not imply a software license. No license has been selected for v0.1; licensing remains an explicit project-owner decision.

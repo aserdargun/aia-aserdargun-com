@@ -4,8 +4,11 @@ export type ExportTable = {
 };
 
 function escapeCsvCell(value: string | number): string {
-  const text = String(value);
-  if (/[",\n]/.test(text)) {
+  const raw = String(value);
+  // Preserve numeric values, but prevent text from being interpreted as a formula.
+  const text = typeof value === "string" && (/^[\s]*[=+@-]/.test(raw) || /^[\t\r\n]/.test(raw))
+    ? "'" + raw : raw;
+  if (/[",\r\n]/.test(text)) {
     return '"' + text.replace(/"/g, '""') + '"';
   }
   return text;

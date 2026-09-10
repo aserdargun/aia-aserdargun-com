@@ -2871,3 +2871,36 @@ a {
     justify-content: flex-start;
   }
 }
+
+.matrix-methodology {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border, #ddd);
+  font-size: 0.8rem;
+}
+.matrix-methodology summary, .matrix-evidence summary { cursor: pointer; }
+.matrix-methodology p, .matrix-evidence p { margin: 0.6rem 0; line-height: 1.55; }
+.matrix-evidence { margin-top: 0.65rem; font-size: 0.75rem; overflow-wrap: anywhere; }
+.matrix-evidence ul { padding-left: 1rem; }
+.matrix-evidence li + li { margin-top: 0.5rem; }
+
+.skip-link {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  background: #142b24;
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: translateY(0); }
+
+@media (max-width: 360px) {
+  .site-header__inner { gap: 8px; }
+  .site-brand { min-width: 0; gap: 8px; }
+  .site-brand__mark { flex-shrink: 0; }
+  .site-brand__copy { min-width: 0; }
+  .site-brand__copy strong { white-space: normal; line-height: 1.15; }
+  .site-header nav { gap: 8px; flex-shrink: 0; }
+  .site-header nav a:last-child { padding-inline: 8px; }
+}

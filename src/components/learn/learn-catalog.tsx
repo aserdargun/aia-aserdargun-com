@@ -17,7 +17,9 @@ export function LearnCatalog() {
   )
     ? (requestedDifficulty as (typeof difficulties)[number])
     : "all";
-  const categoryId = searchParams.get("category") ?? "all";
+  const requestedCategory = searchParams.get("category");
+  const categoryId = learnDataset.categories.some((category) => category.id === requestedCategory)
+    ? requestedCategory! : "all";
 
   const filtered = searchConcepts(learnDataset, q, difficulty, categoryId);
   const grouped = listConceptsByCategory(learnDataset);
@@ -25,7 +27,7 @@ export function LearnCatalog() {
 
   return (
     <>
-      <form className="learn-filters" method="get" action="/learn">
+      <form key={`${q}:${difficulty}:${categoryId}`} className="learn-filters" method="get" action="/learn">
         <label className="learn-filters__field">
           <span>Search</span>
           <input

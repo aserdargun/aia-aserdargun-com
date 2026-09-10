@@ -36,6 +36,6 @@ test("defines the Codex setup and Run, Validate, Stop actions", () => {
   assert.equal(packageJson.scripts["stop:codex"], "node scripts/stop-dev.mjs");
   assert.equal(
     packageJson.scripts["validate:codex"],
-    "npm run stop:codex && npm run check && npm run test:e2e && git diff --check",
+    "npm run check && npm run test:e2e:static && git diff --check",
   );
 });

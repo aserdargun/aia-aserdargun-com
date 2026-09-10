@@ -339,7 +339,7 @@ it("shows per-cell scores and export controls in the all-vendors view", async ()
   expect(
     screen.queryByRole("columnheader", { name: "Coverage" }),
   ).not.toBeInTheDocument();
-  expect(screen.getByText(/overall score/i)).toBeVisible();
+  expect(screen.getByText(/vendors · Overall score/i)).toBeVisible();
   expect(screen.getByRole("button", { name: "Export CSV" })).toBeVisible();
   expect(screen.getByRole("button", { name: "Export Excel" })).toBeVisible();
 });
@@ -376,4 +376,31 @@ it("restores the vendor comparison from browser URL state", async () => {
     "aria-pressed",
     "true",
   );
+});
+
+it("restores controls and rows when browser history changes", () => {
+  renderConsole();
+  act(() => {
+    window.history.replaceState({}, "", "/?q=terminal+cli&left=openai&right=anthropic&view=vendors");
+    window.dispatchEvent(new PopStateEvent("popstate"));
+  });
+  expect(screen.getByRole("searchbox", { name: /search capabilities/i })).toHaveValue("terminal cli");
+  expect(screen.getByRole("combobox", { name: /left vendor/i })).toHaveValue("openai");
+  expect(screen.getByRole("heading", { name: /openai and anthropic vendor comparison/i })).toBeVisible();
+});
+
+it("uses all vendors for matrix catalog search and category counts", async () => {
+  const user = userEvent.setup();
+  window.history.replaceState({}, "", "/?q=Qwen3.5-Plus&status=vendor-specific&view=all-vendors");
+  renderConsole();
+  const query = atlasDataset.models.find((model) => model.vendorId === "qwen")!.name;
+  await user.clear(screen.getByRole("searchbox", { name: /search capabilities/i }));
+  await user.type(screen.getByRole("searchbox", { name: /search capabilities/i }), query);
+  expect(screen.getByRole("status")).toHaveTextContent("4 capabilities shown");
+  expect(screen.getByRole("button", { name: "All categories 4" })).toBeVisible();
+  expect(screen.getByRole("button", { name: "Models 4" })).toBeVisible();
+  expect(screen.queryByRole("checkbox", { name: "Vendor-specific" })).not.toBeInTheDocument();
+  expect(screen.queryByText(/comparison status filter/)).not.toBeInTheDocument();
+  await user.click(screen.getByRole("button", { name: "Explorer", exact: true }));
+  expect(screen.getByRole("checkbox", { name: "Vendor-specific" })).toBeChecked();
 });

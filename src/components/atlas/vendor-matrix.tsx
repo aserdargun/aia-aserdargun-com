@@ -1,8 +1,11 @@
-import type { CSSProperties } from "react";
+"use client";
+
+import { useState, type CSSProperties } from "react";
 import type { Vendor } from "@/data/schema";
 import {
   buildMatrixOverallScore,
   type VendorMatrixRow,
+  type VendorMatrixCell,
 } from "@/lib/comparison";
 import { StatusBadge } from "@/components/atlas/status-badge";
 
@@ -14,6 +17,37 @@ function scoreTier(score: number): string {
   if (score >= 10) return "high";
   if (score >= 5) return "mid";
   return "low";
+}
+
+function MatrixEvidence({ cell }: { cell: VendorMatrixCell }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <details
+      className="matrix-evidence"
+      onToggle={(event) => setOpen(event.currentTarget.open)}
+    >
+      <summary>Evidence for {cell.vendor.name}</summary>
+      {open && (
+        <>
+          <p>{cell.entry.summary}</p>
+          <p>
+            {cell.entry.verifiedAt ? (
+              <>Verified <time dateTime={cell.entry.verifiedAt}>{cell.entry.verifiedAt}</time></>
+            ) : "No verification date documented"}
+          </p>
+          {cell.sources.length ? (
+            <ul>
+              {cell.sources.map((source) => (
+                <li key={source.id}>
+                  <a href={source.url} target="_blank" rel="noreferrer">{source.title}</a>
+                </li>
+              ))}
+            </ul>
+          ) : <p>No reviewed official source documented.</p>}
+        </>
+      )}
+    </details>
+  );
 }
 
 export function VendorMatrix({
@@ -35,6 +69,12 @@ export function VendorMatrix({
           {vendors.length} vendors · Overall score {overallScore.toFixed(1)}/10
         </span>
       </div>
+      <details className="matrix-methodology">
+        <summary>How to read availability scores</summary>
+        <p>Available = 10; limited = 5; not available, not documented, or unknown = 0.
+          The overall score averages the visible cells. These are availability indicators, not quality benchmarks.
+          A zero with missing evidence does not establish that a capability is unavailable.</p>
+      </details>
       <div className="table-scroll">
         <table
           className="vendor-matrix-table"
@@ -85,6 +125,7 @@ export function VendorMatrix({
                     </span>
                     <StatusBadge kind="availability" value={cell.entry.availability} />
                     <strong>{cell.entry.title}</strong>
+                    <MatrixEvidence cell={cell} />
                   </td>
                 ))}
               </tr>

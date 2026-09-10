@@ -9,7 +9,10 @@ async function requireReadablePath(path: string): Promise<void> {
   }
 }
 
-await requireReadablePath("out/index.html");
+const { learnDataset } = await import("@/data/learn");
+const routes = ["index", "404", "learn", "learn/review", "learn/stats", ...learnDataset.concepts.map((concept) => `learn/${concept.id}`)];
+for (const route of routes) await requireReadablePath(`out/${route}.html`);
+await requireReadablePath("out/favicon.svg");
 await requireReadablePath("out/_next/static");
 
 const staticEntries = await readdir("out/_next/static");
@@ -18,5 +21,5 @@ if (staticEntries.length === 0) {
 }
 
 console.log(
-  `Static export verified: out/index.html and ${staticEntries.length} asset group(s).`,
+  `Static export verified: ${routes.length} pages, favicon, and ${staticEntries.length} asset group(s).`,
 );
