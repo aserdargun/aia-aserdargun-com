@@ -1,9 +1,11 @@
 import type { Model } from "@/data/schema";
 
-const anthropicVerifiedAt = "2026-09-04";
-const openAiVerifiedAt = "2026-09-07";
-const zaiVerifiedAt = "2026-08-19";
-const currentVerifiedAt = "2026-09-04";
+// Every model record below was rechecked against its first-party sources on this date.
+const modelVerifiedAt = "2026-09-18";
+
+// Z.ai no longer publishes GLM-5-Turbo or GLM-5V-Turbo rates, so those two pricing claims keep
+// the date on which they were last confirmed.
+const zaiTurboVerifiedAt = "2026-09-04";
 
 export const models = [
   {
@@ -24,7 +26,7 @@ export const models = [
       outputPerMillionUsd: 50,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing"],
-    verifiedAt: anthropicVerifiedAt,
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "claude-opus-5",
@@ -44,7 +46,7 @@ export const models = [
       outputPerMillionUsd: 25,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing"],
-    verifiedAt: anthropicVerifiedAt,
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "claude-sonnet-5",
@@ -64,7 +66,7 @@ export const models = [
       outputPerMillionUsd: 10,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing"],
-    verifiedAt: anthropicVerifiedAt,
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "claude-haiku-4-5",
@@ -84,7 +86,7 @@ export const models = [
       outputPerMillionUsd: 5,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing"],
-    verifiedAt: anthropicVerifiedAt,
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "gpt-6-astra",
@@ -104,7 +106,7 @@ export const models = [
       outputPerMillionUsd: 50,
     },
     sourceIds: ["openai-gpt-6-astra", "openai-api-pricing"],
-    verifiedAt: openAiVerifiedAt,
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "gpt-5-6-sol",
@@ -124,7 +126,7 @@ export const models = [
       outputPerMillionUsd: 20,
     },
     sourceIds: ["openai-models", "openai-api-pricing"],
-    verifiedAt: openAiVerifiedAt,
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "gpt-5-6-terra",
@@ -144,7 +146,7 @@ export const models = [
       outputPerMillionUsd: 12,
     },
     sourceIds: ["openai-models", "openai-api-pricing"],
-    verifiedAt: openAiVerifiedAt,
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "gpt-5-6-luna",
@@ -164,7 +166,7 @@ export const models = [
       outputPerMillionUsd: 1.2,
     },
     sourceIds: ["openai-models", "openai-api-pricing"],
-    verifiedAt: openAiVerifiedAt,
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "glm-5-3",
@@ -183,7 +185,7 @@ export const models = [
       outputPerMillionUsd: 4.4,
     },
     sourceIds: ["zai-glm-5-3", "zai-pricing"],
-    verifiedAt: currentVerifiedAt,
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "glm-5-3-flash",
@@ -197,7 +199,7 @@ export const models = [
     outputModalities: ["text"],
     contextWindowTokens: 1_000_000,
     sourceIds: ["zai-glm-5-3-flash", "zai-zcode-changelog"],
-    verifiedAt: currentVerifiedAt,
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "glm-5",
@@ -216,7 +218,7 @@ export const models = [
       outputPerMillionUsd: 3.2,
     },
     sourceIds: ["zai-glm-5", "zai-pricing"],
-    verifiedAt: currentVerifiedAt,
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "glm-5-turbo",
@@ -235,7 +237,7 @@ export const models = [
       outputPerMillionUsd: 4,
     },
     sourceIds: ["zai-glm-5-turbo", "zai-pricing"],
-    verifiedAt: currentVerifiedAt,
+    verifiedAt: zaiTurboVerifiedAt,
   },
   {
     id: "glm-5v-turbo",
@@ -254,7 +256,7 @@ export const models = [
       outputPerMillionUsd: 4,
     },
     sourceIds: ["zai-glm-5v-turbo", "zai-pricing"],
-    verifiedAt: currentVerifiedAt,
+    verifiedAt: zaiTurboVerifiedAt,
   },
   {
     id: "glm-image",
@@ -266,7 +268,7 @@ export const models = [
     inputModalities: ["text"],
     outputModalities: ["image"],
     sourceIds: ["zai-glm-image"],
-    verifiedAt: zaiVerifiedAt,
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "minimax-m3",
@@ -285,7 +287,7 @@ export const models = [
       outputPerMillionUsd: 1.2,
     },
     sourceIds: ["minimax-models", "minimax-api-pricing"],
-    verifiedAt: currentVerifiedAt,
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "minimax-m2-7",
@@ -304,7 +306,7 @@ export const models = [
       outputPerMillionUsd: 1.2,
     },
     sourceIds: ["minimax-m2-7", "minimax-api-pricing"],
-    verifiedAt: currentVerifiedAt,
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "minimax-m2-7-highspeed",
@@ -323,7 +325,7 @@ export const models = [
       outputPerMillionUsd: 2.4,
     },
     sourceIds: ["minimax-m2-7", "minimax-api-pricing"],
-    verifiedAt: currentVerifiedAt,
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "deepseek-v4-pro",
@@ -342,26 +344,47 @@ export const models = [
       outputPerMillionUsd: 1.98,
     },
     sourceIds: ["deepseek-models"],
-    verifiedAt: currentVerifiedAt,
+    verifiedAt: modelVerifiedAt,
+  },
+  {
+    id: "deepseek-v4-1-flash",
+    vendorId: "deepseek",
+    name: "DeepSeek-V4.1-Flash",
+    family: "DeepSeek-V4",
+    positioning:
+      "DeepSeek's current Flash model, with native image input alongside text and a 1M-token context window.",
+    lifecycle: "current",
+    inputModalities: ["text", "image"],
+    outputModalities: ["text"],
+    contextWindowTokens: 1_000_000,
+    maxOutputTokens: 384_000,
+    pricing: {
+      inputPerMillionUsd: 0.15,
+      cachedInputPerMillionUsd: 0.003,
+      outputPerMillionUsd: 0.6,
+    },
+    sourceIds: ["deepseek-models", "deepseek-vision", "deepseek-updates"],
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "deepseek-v4-flash",
     vendorId: "deepseek",
     name: "DeepSeek-V4-Flash",
     family: "DeepSeek-V4",
-    positioning: "DeepSeek's fast, cost-efficient model for high-volume workloads.",
-    lifecycle: "current",
+    positioning:
+      "DeepSeek's retired V4-Flash API model; the legacy model name now routes to DeepSeek-V4.1-Flash.",
+    lifecycle: "deprecated",
     inputModalities: ["text"],
     outputModalities: ["text"],
     contextWindowTokens: 1_000_000,
     maxOutputTokens: 384_000,
     pricing: {
-      inputPerMillionUsd: 0.22,
-      cachedInputPerMillionUsd: 0.007,
-      outputPerMillionUsd: 0.66,
+      inputPerMillionUsd: 0.15,
+      cachedInputPerMillionUsd: 0.003,
+      outputPerMillionUsd: 0.6,
     },
-    sourceIds: ["deepseek-models"],
-    verifiedAt: currentVerifiedAt,
+    sourceIds: ["deepseek-models", "deepseek-updates"],
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "deepseek-v4-flash-vision-exp",
@@ -369,19 +392,19 @@ export const models = [
     name: "DeepSeek-V4-Flash-Vision-Exp",
     family: "DeepSeek-V4",
     positioning:
-      "DeepSeek's experimental multimodal V4 model for visual understanding and vision-enabled agent workflows.",
-    lifecycle: "preview",
+      "DeepSeek's retired experimental V4 vision model; the legacy model name now routes to DeepSeek-V4.1-Flash.",
+    lifecycle: "deprecated",
     inputModalities: ["text", "image"],
     outputModalities: ["text"],
     contextWindowTokens: 1_000_000,
     maxOutputTokens: 384_000,
     pricing: {
-      inputPerMillionUsd: 0.22,
-      cachedInputPerMillionUsd: 0.007,
-      outputPerMillionUsd: 0.66,
+      inputPerMillionUsd: 0.15,
+      cachedInputPerMillionUsd: 0.003,
+      outputPerMillionUsd: 0.6,
     },
     sourceIds: ["deepseek-models", "deepseek-vision", "deepseek-updates"],
-    verifiedAt: currentVerifiedAt,
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "qwen3-8-max",
@@ -400,7 +423,7 @@ export const models = [
       outputPerMillionUsd: 6,
     },
     sourceIds: ["qwen-model-card-max", "qwen-text-models"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "qwen3-8-flash",
@@ -420,7 +443,7 @@ export const models = [
       outputPerMillionUsd: 0.47,
     },
     sourceIds: ["qwen-model-card-flash"],
-    verifiedAt: currentVerifiedAt,
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "qwen3-7-plus",
@@ -434,7 +457,7 @@ export const models = [
     contextWindowTokens: 1_000_000,
     maxOutputTokens: 64_000,
     sourceIds: ["qwen-text-models"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: modelVerifiedAt,
   },
   {
     id: "qwen3-7-flash",
@@ -448,6 +471,6 @@ export const models = [
     contextWindowTokens: 1_000_000,
     maxOutputTokens: 64_000,
     sourceIds: ["qwen-text-models"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: modelVerifiedAt,
   },
 ] satisfies Model[];

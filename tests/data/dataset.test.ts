@@ -142,9 +142,9 @@ const verificationDateByEntryId = {
   "minimax-core-model-api": "2026-09-04",
   "minimax-api-token-pricing": "2026-09-04",
   "minimax-consumer-plans": "2026-09-07",
-  "deepseek-frontier-model-lineup": "2026-09-04",
+  "deepseek-frontier-model-lineup": "2026-09-18",
   "deepseek-context-window": "2026-09-04",
-  "deepseek-multimodal-input": "2026-09-04",
+  "deepseek-multimodal-input": "2026-09-18",
   "openai-frontier-model-lineup": "2026-09-07",
   "openai-context-window": "2026-09-07",
   "openai-multimodal-input": "2026-09-07",
@@ -263,16 +263,13 @@ describe("canonical Atlas dataset", () => {
       );
     }
 
+    // Models were rechecked on 2026-09-18; Z.ai no longer publishes rates for the two
+    // turbo models, so those pricing claims keep the date they were last confirmed.
+    const partiallyVerifiedModelIds = new Set(["glm-5-turbo", "glm-5v-turbo"]);
     for (const model of atlasDataset.models) {
-      const expectedDate =
-        model.vendorId === "openai"
-          ? "2026-09-07"
-          : model.vendorId === "qwen" && model.id !== "qwen3-8-flash"
-            ? "2026-08-19"
-            : model.id === "glm-image"
-              ? "2026-08-19"
-              : "2026-09-04";
-      expect(model.verifiedAt, `verification date for ${model.id}`).toBe(expectedDate);
+      expect(model.verifiedAt, `verification date for ${model.id}`).toBe(
+        partiallyVerifiedModelIds.has(model.id) ? "2026-09-04" : "2026-09-18",
+      );
     }
 
     const planDateByVendor = {
@@ -333,7 +330,7 @@ describe("canonical Atlas dataset", () => {
         ],
         vendorEntries: [...atlasDataset.vendorEntries, googleEntry],
       },
-      new Date("2026-09-07T12:00:00Z"),
+      new Date("2026-09-18T12:00:00Z"),
     );
 
     expect(extended.vendorEntries.at(-1)).toEqual(googleEntry);
@@ -433,9 +430,13 @@ describe("canonical Atlas dataset", () => {
     );
   });
 
-  it("publishes the verified DeepSeek-V4 token rates", () => {
+  it("publishes the verified DeepSeek-V4 token rates and current Flash model", () => {
     const pro = atlasDataset.models.find(({ id }) => id === "deepseek-v4-pro");
-    const flash = atlasDataset.models.find(({ id }) => id === "deepseek-v4-flash");
+    const flash = atlasDataset.models.find(({ id }) => id === "deepseek-v4-1-flash");
+    const retiredFlash = atlasDataset.models.find(({ id }) => id === "deepseek-v4-flash");
+    const retiredVision = atlasDataset.models.find(
+      ({ id }) => id === "deepseek-v4-flash-vision-exp",
+    );
 
     expect(pro?.pricing).toEqual({
       inputPerMillionUsd: 0.66,
@@ -444,11 +445,19 @@ describe("canonical Atlas dataset", () => {
     });
     expect(pro?.contextWindowTokens).toBe(1_000_000);
     expect(pro?.maxOutputTokens).toBe(384_000);
+    expect(pro?.lifecycle).toBe("current");
+
+    expect(flash?.name).toBe("DeepSeek-V4.1-Flash");
     expect(flash?.pricing).toEqual({
-      inputPerMillionUsd: 0.22,
-      cachedInputPerMillionUsd: 0.007,
-      outputPerMillionUsd: 0.66,
+      inputPerMillionUsd: 0.15,
+      cachedInputPerMillionUsd: 0.003,
+      outputPerMillionUsd: 0.6,
     });
+    expect(flash?.inputModalities).toEqual(["text", "image"]);
+    expect(flash?.lifecycle).toBe("current");
+
+    expect(retiredFlash?.lifecycle).toBe("deprecated");
+    expect(retiredVision?.lifecycle).toBe("deprecated");
   });
 
   it("publishes the verified Qwen3.8-Max token rates", () => {
