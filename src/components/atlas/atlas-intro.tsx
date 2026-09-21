@@ -59,6 +59,7 @@ export function AtlasIntro({ dataset }: { dataset: AtlasDataset }) {
         </dl>
         <p className="atlas-intro__note">
           Verification dates record source checks, not release dates.
+          {" "}Snapshot: latest individual check; other records may be older.
         </p>
       </div>
     </section>

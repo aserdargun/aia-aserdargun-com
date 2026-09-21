@@ -1,5 +1,10 @@
 import { z } from "zod";
 
+export const schemaVersions = {
+  vendor: 1, category: 1, capability: 1, vendorEntry: 1,
+  assessment: 1, model: 2, plan: 1, source: 2,
+} as const;
+
 export const requiredCategoryIds = [
   "models",
   "chat-knowledge-work",
@@ -150,6 +155,7 @@ export const modelSchema = z
     contextWindowTokens: z.number().int().optional(),
     maxOutputTokens: z.number().int().optional(),
     knowledgeCutoff: z.string().optional(),
+    pricingNote: z.string().optional(),
     pricing: z
       .object({
         inputPerMillionUsd: z.number().optional(),

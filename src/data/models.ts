@@ -1,11 +1,6 @@
 import type { Model } from "@/data/schema";
 
-// Every model record below was rechecked against its first-party sources on this date.
-const modelVerifiedAt = "2026-09-18";
-
-// Z.ai no longer publishes GLM-5-Turbo or GLM-5V-Turbo rates, so those two pricing claims keep
-// the date on which they were last confirmed.
-const zaiTurboVerifiedAt = "2026-09-04";
+const currentVerifiedAt = "2026-09-04";
 
 export const models = [
   {
@@ -26,7 +21,7 @@ export const models = [
       outputPerMillionUsd: 50,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing"],
-    verifiedAt: modelVerifiedAt,
+    verifiedAt: "2026-09-21",
   },
   {
     id: "claude-opus-5",
@@ -46,7 +41,7 @@ export const models = [
       outputPerMillionUsd: 25,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing"],
-    verifiedAt: modelVerifiedAt,
+    verifiedAt: "2026-09-21",
   },
   {
     id: "claude-sonnet-5",
@@ -66,7 +61,7 @@ export const models = [
       outputPerMillionUsd: 10,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing"],
-    verifiedAt: modelVerifiedAt,
+    verifiedAt: "2026-09-21",
   },
   {
     id: "claude-haiku-4-5",
@@ -86,7 +81,7 @@ export const models = [
       outputPerMillionUsd: 5,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing"],
-    verifiedAt: modelVerifiedAt,
+    verifiedAt: "2026-09-21",
   },
   {
     id: "gpt-6-astra",
@@ -106,7 +101,7 @@ export const models = [
       outputPerMillionUsd: 50,
     },
     sourceIds: ["openai-gpt-6-astra", "openai-api-pricing"],
-    verifiedAt: modelVerifiedAt,
+    verifiedAt: "2026-09-21",
   },
   {
     id: "gpt-5-6-sol",
@@ -126,7 +121,7 @@ export const models = [
       outputPerMillionUsd: 20,
     },
     sourceIds: ["openai-models", "openai-api-pricing"],
-    verifiedAt: modelVerifiedAt,
+    verifiedAt: "2026-09-21",
   },
   {
     id: "gpt-5-6-terra",
@@ -146,7 +141,7 @@ export const models = [
       outputPerMillionUsd: 12,
     },
     sourceIds: ["openai-models", "openai-api-pricing"],
-    verifiedAt: modelVerifiedAt,
+    verifiedAt: "2026-09-21",
   },
   {
     id: "gpt-5-6-luna",
@@ -166,7 +161,7 @@ export const models = [
       outputPerMillionUsd: 1.2,
     },
     sourceIds: ["openai-models", "openai-api-pricing"],
-    verifiedAt: modelVerifiedAt,
+    verifiedAt: "2026-09-21",
   },
   {
     id: "glm-5-3",
@@ -185,21 +180,22 @@ export const models = [
       outputPerMillionUsd: 4.4,
     },
     sourceIds: ["zai-glm-5-3", "zai-pricing"],
-    verifiedAt: modelVerifiedAt,
+    verifiedAt: "2026-09-18",
   },
   {
     id: "glm-5-3-flash",
     vendorId: "zai",
     name: "GLM-5.3-Flash",
     family: "GLM-5",
-    positioning:
-      "Z.ai's efficient native-multimodal GLM-5 model for agentic workflows, visual understanding, and professional work.",
     lifecycle: "current",
     inputModalities: ["text", "image", "video", "file"],
     outputModalities: ["text"],
-    contextWindowTokens: 1_000_000,
-    sourceIds: ["zai-glm-5-3-flash", "zai-zcode-changelog"],
-    verifiedAt: modelVerifiedAt,
+    contextWindowTokens: 1000000,
+    positioning: "Native multimodal model for text, images, video, and document understanding.",
+    pricing: {"inputPerMillionUsd": 0.15, "cachedInputPerMillionUsd": 0.03, "outputPerMillionUsd": 0.5},
+    maxOutputTokens: 128000,
+    sourceIds: ["zai-flash-docs", "zai-pricing"],
+    verifiedAt: "2026-09-21",
   },
   {
     id: "glm-5",
@@ -218,7 +214,7 @@ export const models = [
       outputPerMillionUsd: 3.2,
     },
     sourceIds: ["zai-glm-5", "zai-pricing"],
-    verifiedAt: modelVerifiedAt,
+    verifiedAt: "2026-09-18",
   },
   {
     id: "glm-5-turbo",
@@ -237,7 +233,7 @@ export const models = [
       outputPerMillionUsd: 4,
     },
     sourceIds: ["zai-glm-5-turbo", "zai-pricing"],
-    verifiedAt: zaiTurboVerifiedAt,
+    verifiedAt: currentVerifiedAt,
   },
   {
     id: "glm-5v-turbo",
@@ -256,7 +252,7 @@ export const models = [
       outputPerMillionUsd: 4,
     },
     sourceIds: ["zai-glm-5v-turbo", "zai-pricing"],
-    verifiedAt: zaiTurboVerifiedAt,
+    verifiedAt: currentVerifiedAt,
   },
   {
     id: "glm-image",
@@ -268,7 +264,7 @@ export const models = [
     inputModalities: ["text"],
     outputModalities: ["image"],
     sourceIds: ["zai-glm-image"],
-    verifiedAt: modelVerifiedAt,
+    verifiedAt: "2026-09-18",
   },
   {
     id: "minimax-m3",
@@ -286,17 +282,16 @@ export const models = [
       cachedInputPerMillionUsd: 0.06,
       outputPerMillionUsd: 1.2,
     },
+    pricingNote: "Standard tier, up to 512k input tokens. Longer inputs cost $0.60 input / $0.12 cache read / $2.40 output per million; priority costs 1.5x standard.",
     sourceIds: ["minimax-models", "minimax-api-pricing"],
-    verifiedAt: modelVerifiedAt,
+    verifiedAt: "2026-09-21",
   },
   {
     id: "minimax-m2-7",
     vendorId: "minimax",
     name: "MiniMax M2.7",
     family: "M2.7",
-    positioning:
-      "MiniMax's still-available historical text model for software engineering, tool use, search, and professional office work.",
-    lifecycle: "legacy",
+    lifecycle: "current",
     inputModalities: ["text"],
     outputModalities: ["text"],
     contextWindowTokens: 204_800,
@@ -305,17 +300,16 @@ export const models = [
       cachedInputPerMillionUsd: 0.06,
       outputPerMillionUsd: 1.2,
     },
-    sourceIds: ["minimax-m2-7", "minimax-api-pricing"],
-    verifiedAt: modelVerifiedAt,
+    positioning: "A currently listed text model for coding and tool use.",
+    sourceIds: ["minimax-model-catalog", "minimax-m2-7", "minimax-api-pricing"],
+    verifiedAt: "2026-09-21",
   },
   {
     id: "minimax-m2-7-highspeed",
     vendorId: "minimax",
     name: "MiniMax M2.7 Highspeed",
     family: "M2.7",
-    positioning:
-      "MiniMax's faster-serving M2.7 variant with the same model performance.",
-    lifecycle: "legacy",
+    lifecycle: "current",
     inputModalities: ["text"],
     outputModalities: ["text"],
     contextWindowTokens: 204_800,
@@ -324,8 +318,9 @@ export const models = [
       cachedInputPerMillionUsd: 0.06,
       outputPerMillionUsd: 2.4,
     },
-    sourceIds: ["minimax-m2-7", "minimax-api-pricing"],
-    verifiedAt: modelVerifiedAt,
+    positioning: "A currently listed text model for coding and tool use with faster serving.",
+    sourceIds: ["minimax-model-catalog", "minimax-m2-7", "minimax-api-pricing"],
+    verifiedAt: "2026-09-21",
   },
   {
     id: "deepseek-v4-pro",
@@ -343,68 +338,37 @@ export const models = [
       cachedInputPerMillionUsd: 0.022,
       outputPerMillionUsd: 1.98,
     },
+    pricingNote: "Off-peak USD per million tokens. Peak input/cache/output rates are $1.32 / $0.044 / $3.96. See the source for the UTC schedule.",
     sourceIds: ["deepseek-models"],
-    verifiedAt: modelVerifiedAt,
-  },
-  {
-    id: "deepseek-v4-1-flash",
-    vendorId: "deepseek",
-    name: "DeepSeek-V4.1-Flash",
-    family: "DeepSeek-V4",
-    positioning:
-      "DeepSeek's current Flash model, with native image input alongside text and a 1M-token context window.",
-    lifecycle: "current",
-    inputModalities: ["text", "image"],
-    outputModalities: ["text"],
-    contextWindowTokens: 1_000_000,
-    maxOutputTokens: 384_000,
-    pricing: {
-      inputPerMillionUsd: 0.15,
-      cachedInputPerMillionUsd: 0.003,
-      outputPerMillionUsd: 0.6,
-    },
-    sourceIds: ["deepseek-models", "deepseek-vision", "deepseek-updates"],
-    verifiedAt: modelVerifiedAt,
+    verifiedAt: "2026-09-21",
   },
   {
     id: "deepseek-v4-flash",
     vendorId: "deepseek",
     name: "DeepSeek-V4-Flash",
     family: "DeepSeek-V4",
-    positioning:
-      "DeepSeek's retired V4-Flash API model; the legacy model name now routes to DeepSeek-V4.1-Flash.",
+    positioning: "Retired model; this legacy API name now serves V4.1-Flash at current Flash rates.",
     lifecycle: "deprecated",
     inputModalities: ["text"],
     outputModalities: ["text"],
     contextWindowTokens: 1_000_000,
     maxOutputTokens: 384_000,
-    pricing: {
-      inputPerMillionUsd: 0.15,
-      cachedInputPerMillionUsd: 0.003,
-      outputPerMillionUsd: 0.6,
-    },
-    sourceIds: ["deepseek-models", "deepseek-updates"],
-    verifiedAt: modelVerifiedAt,
+    sourceIds: ["deepseek-models"],
+    verifiedAt: "2026-09-21",
   },
   {
     id: "deepseek-v4-flash-vision-exp",
     vendorId: "deepseek",
     name: "DeepSeek-V4-Flash-Vision-Exp",
     family: "DeepSeek-V4",
-    positioning:
-      "DeepSeek's retired experimental V4 vision model; the legacy model name now routes to DeepSeek-V4.1-Flash.",
     lifecycle: "deprecated",
     inputModalities: ["text", "image"],
     outputModalities: ["text"],
     contextWindowTokens: 1_000_000,
     maxOutputTokens: 384_000,
-    pricing: {
-      inputPerMillionUsd: 0.15,
-      cachedInputPerMillionUsd: 0.003,
-      outputPerMillionUsd: 0.6,
-    },
-    sourceIds: ["deepseek-models", "deepseek-vision", "deepseek-updates"],
-    verifiedAt: modelVerifiedAt,
+    positioning: "Retired model; this legacy API name now serves V4.1-Flash at current Flash rates.",
+    sourceIds: ["deepseek-models"],
+    verifiedAt: "2026-09-21",
   },
   {
     id: "qwen3-8-max",
@@ -423,7 +387,7 @@ export const models = [
       outputPerMillionUsd: 6,
     },
     sourceIds: ["qwen-model-card-max", "qwen-text-models"],
-    verifiedAt: modelVerifiedAt,
+    verifiedAt: "2026-09-18",
   },
   {
     id: "qwen3-8-flash",
@@ -443,7 +407,7 @@ export const models = [
       outputPerMillionUsd: 0.47,
     },
     sourceIds: ["qwen-model-card-flash"],
-    verifiedAt: modelVerifiedAt,
+    verifiedAt: "2026-09-18",
   },
   {
     id: "qwen3-7-plus",
@@ -457,7 +421,7 @@ export const models = [
     contextWindowTokens: 1_000_000,
     maxOutputTokens: 64_000,
     sourceIds: ["qwen-text-models"],
-    verifiedAt: modelVerifiedAt,
+    verifiedAt: "2026-09-18",
   },
   {
     id: "qwen3-7-flash",
@@ -471,6 +435,89 @@ export const models = [
     contextWindowTokens: 1_000_000,
     maxOutputTokens: 64_000,
     sourceIds: ["qwen-text-models"],
-    verifiedAt: modelVerifiedAt,
+    verifiedAt: "2026-09-18",
+  },
+  {
+    id: "deepseek-v4-1-flash",
+    vendorId: "deepseek",
+    name: "DeepSeek-V4.1-Flash",
+    family: "DeepSeek-V4.1",
+    positioning: "Current text-and-image Flash model, accessed as deepseek-flash.",
+    lifecycle: "current",
+    inputModalities: [
+      "text",
+      "image"
+    ],
+    outputModalities: [
+      "text"
+    ],
+    contextWindowTokens: 1000000,
+    maxOutputTokens: 384000,
+    pricing: {
+      inputPerMillionUsd: 0.15,
+      cachedInputPerMillionUsd: 0.003,
+      outputPerMillionUsd: 0.6
+    },
+    pricingNote: "Off-peak USD per million tokens. Peak input/cache/output rates are $0.30 / $0.006 / $1.20. See the source for the UTC schedule.",
+    sourceIds: [
+      "deepseek-models",
+      "deepseek-vision"
+    ],
+    verifiedAt: "2026-09-21"
+  },
+  {
+    id: "glm-5-2",
+    vendorId: "zai",
+    name: "GLM-5.2",
+    family: "GLM-5",
+    positioning: "Text model for long-running coding tasks.",
+    lifecycle: "current",
+    inputModalities: [
+      "text"
+    ],
+    outputModalities: [
+      "text"
+    ],
+    contextWindowTokens: 1000000,
+    maxOutputTokens: 128000,
+    pricing: {
+      inputPerMillionUsd: 1.4,
+      cachedInputPerMillionUsd: 0.26,
+      outputPerMillionUsd: 4.4
+    },
+    sourceIds: [
+      "zai-glm-5-2",
+      "zai-pricing"
+    ],
+    verifiedAt: "2026-09-21"
+  },
+  {
+    id: "glm-5-3-flashx",
+    vendorId: "zai",
+    name: "GLM-5.3-FlashX",
+    family: "GLM-5",
+    positioning: "Faster-serving multimodal Flash variant; not yet included in the Coding Plan at review time.",
+    lifecycle: "current",
+    inputModalities: [
+      "text",
+      "image",
+      "video",
+      "file"
+    ],
+    outputModalities: [
+      "text"
+    ],
+    contextWindowTokens: 1000000,
+    maxOutputTokens: 128000,
+    pricing: {
+      inputPerMillionUsd: 0.37,
+      cachedInputPerMillionUsd: 0.075,
+      outputPerMillionUsd: 1.25
+    },
+    sourceIds: [
+      "zai-flash-docs",
+      "zai-pricing"
+    ],
+    verifiedAt: "2026-09-21"
   },
 ] satisfies Model[];

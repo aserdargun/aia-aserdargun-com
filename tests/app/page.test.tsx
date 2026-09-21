@@ -17,7 +17,7 @@ it("identifies the statically renderable public application", () => {
   expect(screen.getByText("Evidence snapshot")).toBeVisible();
   expect(screen.queryByText("Latest verification")).not.toBeInTheDocument();
   expect(
-    screen.getByText("Verification dates record source checks, not release dates."),
+    screen.getByText(/Verification dates record source checks, not release dates\./),
   ).toBeVisible();
   expect(
     screen.queryByText(

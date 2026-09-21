@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://aia.aserdargun.com"),
   title: "AIA - AI Ecosystem Atlas",
   description:
     "Evidence-backed comparisons across models, products, agents, APIs, and plans.",

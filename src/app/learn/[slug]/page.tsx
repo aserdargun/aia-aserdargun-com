@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: ConceptPageProps) {
   if (!concept) return { title: "Concept not found — Learn" };
   return {
     title: `${concept.title} — Learn · AI Ecosystem Atlas`,
+    alternates: { canonical: `/learn/${concept.id}` },
     description: concept.summary,
   };
 }

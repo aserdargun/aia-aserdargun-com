@@ -4,9 +4,9 @@
 ![TypeScript 5.9.3](https://img.shields.io/badge/TypeScript-5.9.3-3178C6?logo=typescript&logoColor=white)
 ![Checks: npm run check](https://img.shields.io/badge/checks-npm%20run%20check-168c6b)
 
-AI Ecosystem Atlas is a public, evidence-backed research console for comparing AI product and developer ecosystems. The first release examines Anthropic/Claude, OpenAI/ChatGPT, Z.ai/GLM, MiniMax, DeepSeek, and Qwen across models, end-user products, coding agents, developer platforms, governance, and pricing.
+AI Ecosystem Atlas is a public, evidence-backed research console for comparing AI product and developer ecosystems. The current catalog examines Anthropic/Claude, OpenAI/ChatGPT, Z.ai/GLM, MiniMax, DeepSeek, and Qwen across models, end-user products, coding agents, developer platforms, governance, and pricing.
 
-The atlas is designed for inspection, not verdicts. It keeps provider-neutral capabilities, vendor claims, pair-specific assessments, models, plans, and official sources in separate canonical records. The interface does not rank vendors or declare a winner. The all-vendors matrix includes an availability indicator: available = 10, limited = 5, all other states = 0. Its overall score is the mean of visible cells, not a quality benchmark; missing evidence does not prove unavailability.
+The atlas is designed for inspection, not verdicts. It keeps provider-neutral capabilities, vendor claims, pair-specific assessments, models, plans, and official sources in separate canonical records. The interface does not rank vendors or declare a winner. Unsupported claims remain explicitly unknown, and model lifecycle and billing qualifications are visible beside their records. The all-vendors matrix includes an availability indicator: available = 10, limited = 5, all other states = 0. Its overall score is the mean of visible cells, not a quality benchmark; missing evidence does not prove unavailability.
 
 ![AI Ecosystem Atlas Research Console](public/ai-ecosystem-atlas.png)
 
@@ -290,3 +290,11 @@ Important limitations:
 7. Add multilingual presentation while retaining one canonical fact layer.
 
 Public visibility does not imply a software license. No license has been selected for v0.1; licensing remains an explicit project-owner decision.
+
+## September 2026 content review
+
+The [21 September audit](docs/audits/2026-09-21-content-audit.md) records corrected citations, model and plan changes, learning-content corrections, and unresolved evidence. The header date is the latest individual source check, not a blanket refresh.
+
+Source URLs are checked against publisher-specific primary hosts. In particular, `minimax.com` is unrelated to the AI provider and is rejected; AI documentation is under `platform.minimax.io`. The allowlist verifies provenance boundaries, not whether a page supports every claim.
+
+AIA links onward to GPU, LLM, and USL in the aserdargun.com learning system. Navigation descriptions are available in Turkish and English; the existing comparison and Learn content is English. Learn progress remains local to the browser. Static exports include deterministic `sitemap.xml` and `robots.txt`.

@@ -5,9 +5,10 @@ import { LearnStatsBanner } from "@/components/learn/learn-stats-banner";
 
 export function generateMetadata() {
   return {
+    alternates: { canonical: "/learn" },
     title: "AI/ML Concept Learner — AI Ecosystem Atlas",
     description:
-      "A university-level, visual, spaced-repetition learning layer for AI/ML concepts, grounded in first-party sources.",
+      "Explore AI/ML concepts with primary references, explanatory diagrams, quizzes, and local spaced-repetition reviews.",
   };
 }
 
@@ -18,10 +19,10 @@ export default function LearnPage() {
         <p className="learn-page__eyebrow">Learn · AI/ML</p>
         <h1>Understand AI, one concept at a time.</h1>
         <p className="learn-page__lede">
-          A university-level reading list for the working concepts behind
-          modern language models. Every card is grounded in first-party
-          sources, paired with a visual diagram, and scheduled with a
-          proven spaced-repetition algorithm (SM-2).
+          Explore 15 concepts behind modern language models with primary
+          references, explanatory diagrams, and self-check quizzes. Diagrams
+          simplify the systems they describe. Reviews use an SM-2 scheduling
+          adaptation; progress stays in this browser and is not synced across devices.
         </p>
 
         <div className="learn-page__actions">

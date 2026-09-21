@@ -171,7 +171,7 @@ export const agentsAndOpsConcepts: Concept[] = [
 - **Structured reasoning.** For difficult multi-step work, provide clear success criteria and either use the model's reasoning controls or split the task into verifiable stages. A long reasoning trace is not proof of correctness.
 - **Verification.** Ask the model to check the result against explicit criteria, and use external tools or tests when an answer can be measured.
 
-**Limits:** prompt engineering cannot teach the model new knowledge. For that you need RAG or fine-tuning. It is, however, the cheapest, fastest lever you have.`,
+**Limits:** a prompt can supply new facts for the current context, but it does not persistently update model weights. Retrieval can supply external evidence; fine-tuning changes parameters. Evaluate the simplest approach that meets the task.`,
     keyTakeaways: [
       "A prompt = system + context + task + format + examples.",
       "Place key instructions at the start or end; the middle is weaker.",
@@ -384,8 +384,8 @@ Frameworks (LangGraph, the OpenAI Agents SDK, the Claude Agent SDK) implement th
 
 **Why it matters:**
 
-- **Reusability.** A community-written MCP server for GitHub works with every MCP host. No per-framework integration.
-- **Security boundary.** Servers run as separate processes; the host controls which tools the model can see and what arguments are allowed.
+- **Reusability.** A server can be reused across compatible hosts. Transport support, protocol versions, authentication, and supported features must still match.
+- **Security boundary.** Hosts enforce consent and access policy. A local server is executable software; using MCP alone does not sandbox it or make its results trustworthy.
 - **Composability.** A host can mix local servers (filesystem) with remote servers (a hosted database) through the same protocol.
 
 MCP messages use JSON-RPC. The standard transports are **stdio** for locally spawned servers and **Streamable HTTP** for remote servers; the older HTTP+SSE transport is retained only for backward compatibility.`,
@@ -485,7 +485,7 @@ MCP messages use JSON-RPC. The standard transports are **stdio** for locally spa
 
 **Temperature (T)** rescales the logits before softmax: Pᵢ ∝ exp(zᵢ / T).
 
-- **T → 0** makes the distribution peaked. The argmax is almost always chosen. Outputs become deterministic and "safe" but also flat and repetitive.
+- **T → 0** makes the distribution peaked. The argmax is almost always chosen. Greedy decoding reduces sampling variation; it does not guarantee reproducibility, factual accuracy, or safety.
 - **T = 1** is the unmodified distribution.
 - **T > 1** flattens the distribution, raising the probability of less-likely tokens. Outputs become more varied and creative, but also more error-prone.
 
@@ -495,15 +495,15 @@ MCP messages use JSON-RPC. The standard transports are **stdio** for locally spa
 
 **When to use what:**
 
-- **Code, math, structured extraction:** T ≤ 0.2, top-p ≈ 0.95. You want determinism.
-- **Chat, general Q&A:** T ≈ 0.7, top-p ≈ 0.9. Balanced.
-- **Brainstorming, creative writing:** T ≥ 1.0, top-p ≈ 0.95. You want variety.
+- Begin with the selected model's documented defaults; some models restrict sampling controls.
+- Adjust one sampling control at a time and evaluate task accuracy and variation.
+- Use schema validation and executable checks for structured output or code; sampling settings cannot replace verification.
 
 These parameters change the **output distribution**, not the model's beliefs. They are the cheapest knob you have.`,
     keyTakeaways: [
-      "Temperature rescales logits; T=0 is greedy, T>1 is creative.",
+      "Temperature rescales logits; the zero-temperature limit is greedy decoding.",
       "Top-p samples from the smallest token set whose probability mass ≥ p.",
-      "Low temperature for code, higher for creative work.",
+      "Lower temperature does not guarantee correct or reproducible results.",
     ],
     diagrams: [
       {
@@ -545,29 +545,26 @@ These parameters change the **output distribution**, not the model's beliefs. Th
       },
       {
         id: "ts-q2",
-        prompt: "Which setting is most appropriate for code generation?",
+        prompt: "What should you do when reliable code output matters?",
         correctCount: 1,
         options: [
           {
             id: "ts-q2-a",
-            text: "Low temperature and moderate top-p",
+            text: "Use supported model settings and validate the generated code",
             correct: true,
-            explanation:
-              "T ≈ 0.0–0.2 keeps code deterministic; top-p ≈ 0.95 trims the tail.",
+            explanation: "Sampling settings influence variation; tests and checks establish whether code works.",
           },
           {
             id: "ts-q2-b",
-            text: "High temperature and high top-p",
+            text: "Raise temperature until the code looks creative",
             correct: false,
-            explanation:
-              "High T/top-p adds noise, which makes code less reliable.",
+            explanation: "Greater variation is not evidence of functional correctness.",
           },
           {
             id: "ts-q2-c",
-            text: "Greedy decoding with no constraints",
+            text: "Set temperature to zero and assume the code is correct",
             correct: false,
-            explanation:
-              "Pure greedy can loop; a small amount of top-p is usually safer.",
+            explanation: "Greedy decoding does not guarantee accuracy or reproducibility.",
           },
         ],
       },
@@ -578,7 +575,7 @@ These parameters change the **output distribution**, not the model's beliefs. Th
     difficulty: "intro",
     estimatedMinutes: 5,
     tags: ["sampling", "temperature", "top-p"],
-    referenceIds: ["anthropic-claude-temperature"],
+    referenceIds: ["anthropic-claude-temperature", "holtzman-2019-nucleus"],
     verifiedAt: "2026-08-19",
     order: 1,
   },
@@ -590,9 +587,9 @@ These parameters change the **output distribution**, not the model's beliefs. Th
       "Why models confidently produce false statements, and the operational patterns that reduce the failure rate.",
     explanation: `A **hallucination** is a model output that is fluent or confident but not supported by the provided context, reliable sources, or verifiable evidence. There are three common kinds:
 
-1. **Closed-domain hallucination** — the model is given a document and asked to answer from it, but invents a fact that contradicts or goes beyond the document. The fix is **grounding**: instruct the model to answer only from the provided context, and to say "I don't know" otherwise.
+1. **Closed-domain hallucination** — the model is given a document and asked to answer from it, but invents a fact that contradicts or goes beyond the document. One mitigation is **grounding**: instruct the model to answer only from the provided context, and to say "I don't know" otherwise.
 
-2. **Open-domain hallucination** — the model is asked a factual question with no source. The model may produce a plausible-but-wrong answer, especially for niche or recent topics beyond its training cutoff. The fix is **RAG** plus **citation**: provide the source, force the model to cite it.
+2. **Open-domain hallucination** — the model is asked a factual question with no source. The model may produce a plausible-but-wrong answer, especially for niche or recent topics beyond its training cutoff. **RAG** and **citation checks** can reduce this risk: provide relevant sources and verify that they support the answer. Citations alone are not proof.
 
 3. **Reasoning hallucination** — the model produces internally inconsistent or arithmetically wrong steps, but presents the final answer as correct. Mitigate it with structured decomposition and external verifiers, such as a calculator for math or executable tests for code.
 
@@ -602,7 +599,7 @@ These parameters change the **output distribution**, not the model's beliefs. Th
 
 - **RAG with citations** for fresh or proprietary facts.
 - **Tool use** for verifiable computation (search, code execution, calculators).
-- **Self-consistency**: sample multiple answers and take the majority.
+- **Self-consistency**: compare multiple answers, then verify externally; correlated errors can win a majority vote.
 - **Refusal training**: teach the model to say "I don't know" when context is insufficient.
 - **Evaluation**: build a labeled eval set and track hallucination rate over time.`,
     keyTakeaways: [
@@ -676,7 +673,7 @@ These parameters change the **output distribution**, not the model's beliefs. Th
     difficulty: "core",
     estimatedMinutes: 5,
     tags: ["hallucination", "grounding", "evaluation"],
-    referenceIds: ["wikipedia-hallucination", "openai-rag-overview"],
+    referenceIds: ["openai-hallucination-research", "lewis-2020-rag", "openai-model-optimization"],
     verifiedAt: "2026-09-04",
     order: 2,
   },

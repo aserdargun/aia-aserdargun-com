@@ -2904,3 +2904,12 @@ a {
   .site-header nav { gap: 8px; flex-shrink: 0; }
   .site-header nav a:last-child { padding-inline: 8px; }
 }
+
+/* Shared portfolio navigation also appears on every Learn route. */
+.learning-path { max-width: 1440px; margin: 0 auto 2rem; padding: 1.5rem; }
+.learning-path h2 { font-size: 1.15rem; }
+.learning-path h2 span, .learning-path small { font-weight: normal; }
+.learning-path p { margin: .5rem 0; }
+.learning-path ul { display: flex; flex-wrap: wrap; gap: 1.5rem; list-style: none; padding: 0; margin: 1.5rem 0; }
+.learning-path li { flex: 1 1 220px; }
+.learning-path small { display: block; margin-top: .35rem; }

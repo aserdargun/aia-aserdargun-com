@@ -15,6 +15,9 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     maxWorkers: 2,
+    // Full-console DOM tests exercise hundreds of records on shared workstations.
+    // Allow them to finish before cleanup so pending interactions cannot leak.
+    testTimeout: 30_000,
     globals: true,
     setupFiles: "./vitest.setup.ts",
     include: ["tests/**/*.test.{ts,tsx}"],

@@ -37,7 +37,8 @@ function EntryEvidence({
       )}
       {entry.verifiedAt ? (
         <p className="verified-date">
-          Verified <time dateTime={entry.verifiedAt}>{displayDate(entry.verifiedAt)}</time>
+          {entry.availability === "unknown" ? "Prior record date " : "Last source check "}
+          <time dateTime={entry.verifiedAt}>{displayDate(entry.verifiedAt)}</time>
         </p>
       ) : (
         <p className="verified-date">No verification date documented</p>
@@ -55,6 +56,7 @@ function EntryEvidence({
                 <span>{source.title}</span>
                 <small>{source.publisher} · Official source</small>
               </a>
+              {source.note ? <p>{source.note}</p> : null}
             </li>
           ))}
         </ul>

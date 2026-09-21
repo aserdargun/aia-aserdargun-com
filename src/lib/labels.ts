@@ -2,6 +2,11 @@ import type { Availability, ComparisonStatus } from "@/data/schema";
 import type { Freshness } from "@/lib/freshness";
 import type { AtlasView } from "@/lib/url-state";
 
+export const learningPathLabels = {
+  en: { title: "Continue learning", description: "AIA maps the ecosystem. Explore compute, model serving, or training next.", home: "Learning system" },
+  tr: { title: "Öğrenmeye devam et", description: "AIA ekosistemi tanıtır. Hesaplama, model sunumu veya eğitimle devam et.", home: "Öğrenme sistemi" },
+} as const;
+
 export const availabilityLabels: Record<Availability, string> = {
   available: "Available",
   limited: "Limited",

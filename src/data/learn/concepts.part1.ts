@@ -36,12 +36,13 @@ const transformerBlockDiagram = `
 
     <rect x="500" y="200" width="160" height="48" rx="8" fill="#fde2d6" stroke="#a73e1b" />
     <text x="580" y="220" text-anchor="middle" font-weight="700">Output</text>
-    <text x="580" y="236" text-anchor="middle" font-size="10" fill="#666057">next-token logits</text>
+    <text x="580" y="236" text-anchor="middle" font-size="10" fill="#666057">hidden states</text>
   </g>
   <g stroke="#24211d" stroke-width="1.5" fill="none" marker-end="url(#arrow-end)">
+    <line x1="140" y1="128" x2="140" y2="160" />
     <line x1="220" y1="184" x2="280" y2="184" />
     <line x1="360" y1="208" x2="360" y2="240" />
-    <line x1="440" y1="184" x2="500" y2="216" />
+    <line x1="440" y1="264" x2="500" y2="232" />
   </g>
   <g font-family="Inter, sans-serif" font-size="10" fill="#666057">
     <text x="360" y="320" text-anchor="middle">Residual connections and layer normalization wrap each sub-layer (omitted for clarity).</text>
@@ -56,7 +57,7 @@ const tokenizationDiagram = `
   <text x="360" y="28" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#24211d" font-weight="700">Tokenization: text to IDs</text>
   <g font-family="ui-monospace, SFMono-Regular, monospace" font-size="13">
     <text x="40"  y="80" fill="#24211d">"ChatGPT öneriyor"</text>
-    <text x="40"  y="110" fill="#666057">↓ BPE merges (UTF-8 bytes → subwords)</text>
+    <text x="40"  y="110" fill="#666057">↓ Apply learned BPE merges (illustrative split)</text>
     <g font-size="13">
       <rect x="40"  y="130" width="60"  height="34" rx="4" fill="#fde2d6" stroke="#a73e1b" />
       <text x="70"  y="152" text-anchor="middle" fill="#24211d">Chat</text>
@@ -144,8 +145,8 @@ A modern LLM is wrapped in a chat template (system + user + assistant turns), bu
       "Knowledge lives in the weights, not in a queryable memory.",
     ],
     example: {
-      title: "Why 'predict the next word' is enough",
-      body: "If a model can predict the next token well, it implicitly models syntax, semantics, and even factual associations — because the most likely next token depends on all of them. This is why a single training objective, scaled up, can produce a general-purpose assistant.",
+      title: "What next-token pretraining provides",
+      body: "If a model can predict the next token well, it implicitly models syntax, semantics, and even factual associations — because the most likely next token depends on all of them. Useful assistants also typically require instruction and preference post-training; scaling this objective alone does not guarantee reliable behavior.",
     },
     diagrams: [
       {
@@ -233,15 +234,15 @@ A modern LLM is wrapped in a chat template (system + user + assistant turns), bu
     title: "Tokenization & Subword Units",
     summary:
       "How raw text becomes the integer sequence the model actually operates on, using subword algorithms like BPE.",
-    explanation: `An LLM cannot read characters. It reads a fixed **vocabulary** of integer IDs, each standing for a chunk of text called a **token**. The pipeline is: text → token strings → integer IDs → embedding lookup.
+    explanation: `A typical text LLM receives integer IDs from a fixed **vocabulary**, each standing for a chunk of text called a **token**. The pipeline is: text → token strings → integer IDs → embedding lookup.
 
-Modern LLMs use **subword tokenization** algorithms, the most common being **Byte-Pair Encoding (BPE)**. BPE works bottom-up:
+Modern LLMs use **subword tokenization** algorithms, the most common being **Byte-Pair Encoding (BPE)**. During tokenizer training, BPE works bottom-up:
 
-1. Start with the UTF-8 bytes of the text.
+1. Start with an alphabet of characters, or UTF-8 bytes for byte-level BPE.
 2. Repeatedly merge the most frequent adjacent pair into a new symbol.
-3. After a fixed number of merges, you have a vocabulary of subwords.
+3. Stop at the desired vocabulary size. At inference, reuse the learned merge order; do not retrain it on each input.
 
-The result is a vocabulary where common words are single tokens ("the", "Chat"), rare words split into pieces ("unhappiness" → "un", "happiness"), and unknown characters fall back to byte tokens. This makes the vocabulary finite, multilingual, and free of "out of vocabulary" errors.
+The result is a vocabulary where common words are single tokens ("the", "Chat"), rare words split into pieces ("unhappiness" → "un", "happiness"), and byte-level variants can represent unseen characters through bytes. This coverage guarantee does not apply to every BPE tokenizer.
 
 **Why it matters:**
 
@@ -255,14 +256,14 @@ The result is a vocabulary where common words are single tokens ("the", "Chat"),
     ],
     example: {
       title: "Counting tokens",
-      body: `"ChatGPT öneriyor" tokenizes to roughly 5 subwords in a BPE-style tokenizer. The Turkish suffix and the dotless-ı are handled because BPE operates on raw UTF-8 bytes — no language-specific rules are required.`,
+      body: `The diagram uses invented token IDs and an illustrative split of "ChatGPT öneriyor". Actual token boundaries, IDs, and counts depend on the tokenizer and its vocabulary; count them using the tokenizer for the chosen model.`,
     },
     diagrams: [
       {
         id: "tokenization-pipeline",
         title: "From text to integer IDs",
         caption:
-          "Text is split into subwords via BPE merges, then each subword is mapped to an integer ID via a fixed vocabulary.",
+          "Illustrative split and invented IDs, not output from a measured tokenizer. Actual boundaries depend on the model vocabulary.",
         svg: tokenizationDiagram,
       },
     ],
@@ -341,19 +342,19 @@ The result is a vocabulary where common words are single tokens ("the", "Chat"),
     title: "Embeddings & Vector Space",
     summary:
       "Tokens are mapped to dense vectors so that geometric relationships encode semantic similarity.",
-    explanation: `An **embedding** is a learned function E: token → ℝᵈ that maps each token in the vocabulary to a dense vector of d dimensions (typically 768–12288 in modern LLMs).
+    explanation: `An **embedding** is a learned function E: token → ℝᵈ that maps each token in the vocabulary to a dense vector of d dimensions (the dimension depends on the model).
 
 The crucial property is that **semantic similarity corresponds to geometric proximity**. After training, vectors that point in similar directions represent tokens used in similar contexts. The classic illustration is the analogy:
 
   king − man + woman ≈ queen
 
-This is not hard-coded. It emerges because the model learned to use the same axes for "gender", "royalty", "verb tense" and so on.
+Such analogies can emerge in learned vector directions. Individual dimensions need not correspond to named concepts, and the analogy is not reliable for every embedding model.
 
 **Why embeddings are central:**
 
 - They are the *input* to the transformer. The model never sees raw text — only vectors.
 - They compress a discrete, huge vocabulary into a continuous, smooth space where gradients flow.
-- They make **similarity search** possible: given a query, find the k nearest vectors in ℝᵈ. This is the basis of every vector database and of retrieval-augmented generation (RAG).
+- They make **similarity search** possible: given a query, find the k nearest vectors in ℝᵈ. Dense-vector retrieval uses this idea; RAG may also use keyword or hybrid retrieval.
 
 When an LLM generates, every intermediate layer also produces embeddings. These **contextualized embeddings** depend on the surrounding tokens, which is how attention lets each position "see" the rest of the sequence.`,
     keyTakeaways: [

@@ -19,7 +19,7 @@ it("exposes products, detail, assessment, dates, and descriptive source links", 
   expect(
     screen.getByText(/both coding agents document lifecycle hooks/i),
   ).toBeVisible();
-  expect(screen.getAllByText(/verified/i).length).toBeGreaterThan(0);
+  expect(screen.getAllByText(/last source check/i).length).toBeGreaterThan(0);
 
   const officialLinks = screen.getAllByRole("link", { name: /official source/i });
   expect(officialLinks.length).toBeGreaterThanOrEqual(2);

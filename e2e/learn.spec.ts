@@ -20,7 +20,7 @@ for (const viewport of viewports) {
     ).toBeVisible();
 
     await page.goto("/learn?q=retrieval-augmented");
-    await expect(page.getByText("3 matches", { exact: true })).toBeVisible();
+    await expect(page.getByText("2 matches", { exact: true })).toBeVisible();
     await expect(
       page.getByRole("heading", {
         level: 3,

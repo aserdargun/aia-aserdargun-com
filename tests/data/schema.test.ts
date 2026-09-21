@@ -124,14 +124,14 @@ function createValidFixture() {
         id: "anthropic-models",
         title: "Anthropic model documentation",
         publisher: "Anthropic",
-        url: "https://docs.anthropic.com/en/docs/about-claude/models",
+        url: "https://platform.claude.com/docs/en/models/overview",
         sourceType: "documentation",
       },
       {
         id: "openai-models",
         title: "OpenAI model documentation",
         publisher: "OpenAI",
-        url: "https://platform.openai.com/docs/models",
+        url: "https://developers.openai.com/api/docs/models",
         sourceType: "documentation",
       },
     ],
@@ -139,8 +139,22 @@ function createValidFixture() {
 }
 
 describe("parseAtlasDataset", () => {
+  it("rejects an unrelated or deceptive host even when the URL uses HTTPS", () => {
+    for (const url of ["https://minimax.com/code", "https://platform.claude.com.attacker.example/docs", "https://user:password@platform.claude.com/docs"]) {
+      const dataset = createValidFixture();
+      dataset.sources[0].url = url;
+      expect(() => parseAtlasDataset(dataset, today)).toThrow(/first-party host/i);
+    }
+  });
   it("accepts a complete normalized dataset with the required taxonomy", () => {
     expect(() => parseAtlasDataset(createValidFixture(), today)).not.toThrow();
+  });
+
+  it("rejects community documentation labeled as a vendor primary source", () => {
+    const dataset = createValidFixture();
+    dataset.sources[0].publisher = "DeepSeek";
+    dataset.sources[0].url = "https://deepseekdocs.com/en/docs/features/mcp";
+    expect(() => parseAtlasDataset(dataset, today)).toThrow(/first-party host/i);
   });
 
   it("rejects a duplicate vendor ID", () => {

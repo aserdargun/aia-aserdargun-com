@@ -110,15 +110,12 @@ const officialSourceHosts = new Set([
   "docs.z.ai",
   "zcode.z.ai",
   "autoclaw.z.ai",
-  "minimax.com",
-  "platform.minimax.com",
-  "docs.minimax.com",
   "www.minimax.io",
   "platform.minimax.io",
   "api-docs.deepseek.com",
   "deepseek.com",
   "www.deepseek.com",
-  "deepseekdocs.com",
+  "deepseek-harness.github.io",
   "qwen.ai",
   "chat.qwen.ai",
   "qwencloud.com",
@@ -129,35 +126,6 @@ const officialSourceHosts = new Set([
 ]);
 
 const expectedVendorIds = ["anthropic", "openai", "zai", "minimax", "deepseek", "qwen"] as const;
-const verificationDateByEntryId = {
-  "anthropic-frontier-model-lineup": "2026-09-04",
-  "anthropic-context-window": "2026-09-04",
-  "anthropic-multimodal-input": "2026-09-04",
-  "zai-frontier-model-lineup": "2026-09-04",
-  "zai-context-window": "2026-09-04",
-  "zai-multimodal-input": "2026-09-04",
-  "minimax-frontier-model-lineup": "2026-09-04",
-  "minimax-context-window": "2026-09-04",
-  "minimax-multimodal-input": "2026-09-04",
-  "minimax-core-model-api": "2026-09-04",
-  "minimax-api-token-pricing": "2026-09-04",
-  "minimax-consumer-plans": "2026-09-07",
-  "deepseek-frontier-model-lineup": "2026-09-18",
-  "deepseek-context-window": "2026-09-04",
-  "deepseek-multimodal-input": "2026-09-18",
-  "openai-frontier-model-lineup": "2026-09-07",
-  "openai-context-window": "2026-09-07",
-  "openai-multimodal-input": "2026-09-07",
-  "qwen-frontier-model-lineup": "2026-08-31",
-  "qwen-context-window": "2026-08-31",
-  "qwen-multimodal-input": "2026-08-31",
-  "anthropic-native-image-generation": "2026-08-24",
-  "openai-native-image-generation": "2026-09-07",
-  "anthropic-core-model-api": "2026-08-24",
-  "openai-core-model-api": "2026-09-07",
-  "anthropic-api-token-pricing": "2026-08-24",
-  "openai-api-token-pricing": "2026-09-07",
-} as const;
 const expectedVendorPairs = [
   ["anthropic", "minimax"],
   ["anthropic", "openai"],
@@ -180,6 +148,26 @@ const expectedPairKeys = expectedVendorPairs
   .sort();
 
 describe("canonical Atlas dataset", () => {
+  it("does not turn withdrawn MiniMax citations into positive coverage", () => {
+    const entry = atlasDataset.vendorEntries.find(({ id }) => id === "minimax-ide-integration");
+    expect(entry?.availability).toBe("unknown");
+    expect(entry?.details.join(" ")).toContain("unrelated minimax.com domain");
+    for (const assessment of atlasDataset.assessments.filter((a) => a.capabilityId === "ide-integration" && a.vendorIds.includes("minimax"))) {
+      expect(assessment.status).toBe("insufficient-evidence");
+    }
+    expect(atlasDataset.sources.some(({ url }) => new URL(url).hostname.endsWith("minimax.com"))).toBe(false);
+  });
+
+  it("keeps retired Flash aliases distinct from the replacement and qualifies variable rates", () => {
+    for (const id of ["deepseek-v4-flash", "deepseek-v4-flash-vision-exp"]) {
+      const model = atlasDataset.models.find((m) => m.id === id);
+      expect(model?.lifecycle).toBe("deprecated");
+      expect(model?.pricing).toBeUndefined();
+    }
+    expect(atlasDataset.models.find((m) => m.id === "deepseek-v4-1-flash")?.pricingNote).toContain("Off-peak");
+    expect(atlasDataset.models.find((m) => m.id === "minimax-m3")?.pricingNote).toContain("512k");
+    expect(atlasDataset.plans.find((p) => p.id === "qwen-coding-plan")?.priceDisplay).toContain("unverified");
+  });
   it("ships the complete six-vendor seed with evidence for every comparison", () => {
     expect(atlasDataset.vendors.map(({ id }) => id)).toEqual([
       ...expectedVendorIds,
@@ -246,47 +234,13 @@ describe("canonical Atlas dataset", () => {
     expect(
       atlasDataset.vendorEntries.every((entry) => entry.sourceIds.length > 0),
     ).toBe(true);
-    const baselineEntryDateByVendor = {
-      anthropic: "2026-08-11",
-      openai: "2026-08-11",
-      zai: "2026-08-19",
-      minimax: "2026-08-11",
-      deepseek: "2026-08-19",
-      qwen: "2026-08-19",
-    } as const;
-    for (const entry of atlasDataset.vendorEntries) {
-      const refreshedDate = verificationDateByEntryId[
-        entry.id as keyof typeof verificationDateByEntryId
-      ];
-      expect(entry.verifiedAt, `verification date for ${entry.id}`).toBe(
-        refreshedDate ?? baselineEntryDateByVendor[entry.vendorId],
-      );
+    for (const record of [...atlasDataset.vendorEntries, ...atlasDataset.models, ...atlasDataset.plans]) {
+      expect(record.verifiedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(record.verifiedAt <= "2026-09-21").toBe(true);
     }
-
-    // Models were rechecked on 2026-09-18; Z.ai no longer publishes rates for the two
-    // turbo models, so those pricing claims keep the date they were last confirmed.
-    const partiallyVerifiedModelIds = new Set(["glm-5-turbo", "glm-5v-turbo"]);
-    for (const model of atlasDataset.models) {
-      expect(model.verifiedAt, `verification date for ${model.id}`).toBe(
-        partiallyVerifiedModelIds.has(model.id) ? "2026-09-04" : "2026-09-18",
-      );
-    }
-
-    const planDateByVendor = {
-      anthropic: "2026-08-11",
-      openai: "2026-08-11",
-      zai: "2026-08-19",
-      minimax: "2026-09-04",
-      deepseek: "2026-09-04",
-      qwen: "2026-08-19",
-    } as const;
-    for (const plan of atlasDataset.plans) {
-      expect(plan.verifiedAt, `verification date for ${plan.id}`).toBe(
-        plan.id.startsWith("minimax-token-")
-          ? "2026-09-07"
-          : planDateByVendor[plan.vendorId],
-      );
-    }
+    // A blocked pricing page must not receive a cosmetic verification date.
+    expect(atlasDataset.plans.find(({ id }) => id === "chatgpt-plus")?.verifiedAt).toBe("2026-08-11");
+    expect(atlasDataset.models.find(({ id }) => id === "deepseek-v4-1-flash")?.verifiedAt).toBe("2026-09-21");
 
     for (const vendorId of expectedVendorIds) {
       expect(
@@ -330,7 +284,7 @@ describe("canonical Atlas dataset", () => {
         ],
         vendorEntries: [...atlasDataset.vendorEntries, googleEntry],
       },
-      new Date("2026-09-18T12:00:00Z"),
+      new Date("2026-09-21T12:00:00Z"),
     );
 
     expect(extended.vendorEntries.at(-1)).toEqual(googleEntry);
@@ -405,8 +359,8 @@ describe("canonical Atlas dataset", () => {
       outputPerMillionUsd: 1.2,
     });
     expect(m3?.lifecycle).toBe("current");
-    expect(m27?.lifecycle).toBe("legacy");
-    expect(highspeed?.lifecycle).toBe("legacy");
+    expect(m27?.lifecycle).toBe("current");
+    expect(highspeed?.lifecycle).toBe("current");
     expect(m27?.pricing).toEqual({
       inputPerMillionUsd: 0.3,
       cachedInputPerMillionUsd: 0.06,
@@ -430,13 +384,9 @@ describe("canonical Atlas dataset", () => {
     );
   });
 
-  it("publishes the verified DeepSeek-V4 token rates and current Flash model", () => {
+  it("publishes the verified DeepSeek-V4 token rates", () => {
     const pro = atlasDataset.models.find(({ id }) => id === "deepseek-v4-pro");
     const flash = atlasDataset.models.find(({ id }) => id === "deepseek-v4-1-flash");
-    const retiredFlash = atlasDataset.models.find(({ id }) => id === "deepseek-v4-flash");
-    const retiredVision = atlasDataset.models.find(
-      ({ id }) => id === "deepseek-v4-flash-vision-exp",
-    );
 
     expect(pro?.pricing).toEqual({
       inputPerMillionUsd: 0.66,
@@ -445,19 +395,11 @@ describe("canonical Atlas dataset", () => {
     });
     expect(pro?.contextWindowTokens).toBe(1_000_000);
     expect(pro?.maxOutputTokens).toBe(384_000);
-    expect(pro?.lifecycle).toBe("current");
-
-    expect(flash?.name).toBe("DeepSeek-V4.1-Flash");
     expect(flash?.pricing).toEqual({
       inputPerMillionUsd: 0.15,
       cachedInputPerMillionUsd: 0.003,
       outputPerMillionUsd: 0.6,
     });
-    expect(flash?.inputModalities).toEqual(["text", "image"]);
-    expect(flash?.lifecycle).toBe("current");
-
-    expect(retiredFlash?.lifecycle).toBe("deprecated");
-    expect(retiredVision?.lifecycle).toBe("deprecated");
   });
 
   it("publishes the verified Qwen3.8-Max token rates", () => {

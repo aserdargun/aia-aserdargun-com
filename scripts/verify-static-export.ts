@@ -13,6 +13,8 @@ const { learnDataset } = await import("@/data/learn");
 const routes = ["index", "404", "learn", "learn/review", "learn/stats", ...learnDataset.concepts.map((concept) => `learn/${concept.id}`)];
 for (const route of routes) await requireReadablePath(`out/${route}.html`);
 await requireReadablePath("out/favicon.svg");
+await requireReadablePath("out/sitemap.xml");
+await requireReadablePath("out/robots.txt");
 await requireReadablePath("out/_next/static");
 
 const staticEntries = await readdir("out/_next/static");

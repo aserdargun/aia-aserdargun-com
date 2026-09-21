@@ -76,6 +76,10 @@ function RecordList({
         <li key={record.id}>
           <strong>{record.name}</strong>
           <span>{renderMeta(record)}</span>
+          {"lifecycle" in record ? <small>Model status: {record.lifecycle}</small> : null}
+          {"pricingNote" in record && record.pricingNote ? <p>{record.pricingNote}</p> : null}
+          {"billingNote" in record && record.billingNote ? <p>{record.billingNote}</p> : null}
+          <small>Evidence checked <time dateTime={record.verifiedAt}>{record.verifiedAt}</time></small>
           <SourceLinks record={record} sourceById={sourceById} />
         </li>
       ))}
@@ -256,7 +260,7 @@ export function VendorComparison({
       <section className="vendor-section vendor-section--records" aria-labelledby="records-title">
         <div className="vendor-section__heading">
           <h2 id="records-title">Models and plans</h2>
-          <p>Current canonical records for the selected vendor pair.</p>
+          <p>Reviewed models and plans, including explicitly marked historical records. Check current terms at the source.</p>
         </div>
         <div className="vendor-record-columns">
           <section aria-labelledby="models-title">

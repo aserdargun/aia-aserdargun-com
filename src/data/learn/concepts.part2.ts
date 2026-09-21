@@ -190,7 +190,7 @@ Why it works:
 
 - **Parallelism:** unlike RNNs, every position is processed in parallel during training, which is why transformers scale to trillion-parameter models.
 - **Long context:** attention lets any token directly read any other token up to the context length, with O(1) hops.
-- **Compositionality:** stacking many blocks lets the network build hierarchical features — early layers model syntax, later layers model semantics and reasoning.`,
+- **Compositionality:** stacking many blocks lets the network build hierarchical features — layers learn combinations of features; there is no fixed syntax-to-reasoning partition.`,
     keyTakeaways: [
       "A transformer block = self-attention + position-wise MLP, with residuals and norms.",
       "Decoder-only LLMs use masked self-attention to preserve autoregressive order.",
@@ -329,7 +329,7 @@ The division by √dₖ keeps the dot products from growing too large in high di
 
 **Multi-head attention** runs h independent attention operations in parallel, each with its own Q/K/V projections, and concatenates the results. Different heads learn to attend to different kinds of relationships — syntactic agreement, coreference, position offsets.
 
-**Masked self-attention** (used in decoder-only LLMs) zeroes out the upper triangle of Q Kᵀ before the softmax, so position t can only see positions ≤ t. This is what makes autoregressive generation possible: at training time, every position's target is known, but each input must remain blind to its own future.
+**Masked self-attention** (used in decoder-only LLMs) sets disallowed future-position scores to −∞ before the softmax, giving them zero probability, so position t can only see positions ≤ t. This is what makes autoregressive generation possible: at training time, every position's target is known, but each input must remain blind to its own future.
 
 Self-attention has cost O(n²) in sequence length, which is why long-context research focuses on sparse, linear, or chunked attention variants.`,
     keyTakeaways: [
@@ -437,12 +437,12 @@ For each input token x:
 
 **Why MoE:**
 
-- **Capacity without compute.** A model with 8 experts, top-2 routing, activates only 2 experts per token. Total parameters can grow ~8× while FLOPs per token grow ~2×.
+- **More capacity per unit of compute.** A model with 8 experts, top-2 routing, activates only 2 experts per token. The expert layers have about 8× the parameters and 2× the active expert computation of one such MLP; shared layers, routing, and communication add overhead.
 - **Specialization.** Different experts tend to specialize in different topics or syntactic patterns.
 
 **Trade-offs:**
 
-- **Training instability.** Routing decisions are discrete; techniques like load-balancing losses and router-z loss are required.
+- **Training instability.** Routing decisions are discrete; load balancing and router stabilization can help; the method depends on the architecture.
 - **Memory cost.** All experts must be resident or at least sharded across devices, which raises serving cost.
 - **Fine-tuning fragility.** Routing can collapse to a few experts if not regularized.
 
@@ -450,7 +450,7 @@ MoE is widely used in modern open and proprietary frontier architectures as a wa
     keyTakeaways: [
       "MoE routes each token to top-k experts out of N total.",
       "Parameter count grows but per-token compute grows much less.",
-      "Routing needs a load-balancing loss to avoid expert collapse.",
+      "Routing needs load balancing; an auxiliary loss is one possible mechanism.",
     ],
     diagrams: [
       {
@@ -525,7 +525,7 @@ MoE is widely used in modern open and proprietary frontier architectures as a wa
     difficulty: "advanced",
     estimatedMinutes: 6,
     tags: ["moe", "sparse", "scaling"],
-    referenceIds: ["wikipedia-mixture-of-experts", "vaswani-2017-attention-is-all-you-need"],
+    referenceIds: ["shazeer-2017-moe", "vaswani-2017-attention-is-all-you-need"],
     verifiedAt: "2026-08-19",
     order: 3,
   },

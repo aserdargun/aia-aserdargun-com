@@ -10,6 +10,7 @@ import {
   type Source,
   type VendorEntry,
 } from "@/data/schema";
+import { primarySourceHosts } from "@/data/source-hosts";
 
 type IdentifiedRecord = { id: string };
 type EvidenceRecord = IdentifiedRecord & {
@@ -214,6 +215,12 @@ export function parseAtlasDataset(input: unknown, today: Date): AtlasDataset {
   assertUniqueIds(dataset.models, "Model");
   assertUniqueIds(dataset.plans, "Plan");
   const sourceIds = assertUniqueIds(dataset.sources, "Source");
+  for (const source of dataset.sources) {
+    const url = new URL(source.url);
+    if (url.username || url.password || !primarySourceHosts[source.publisher]?.includes(url.hostname)) {
+      throw new Error(`Source "${source.id}" is not on a reviewed first-party host for ${source.publisher}.`);
+    }
+  }
 
   assertUniqueOrders(dataset.categories, dataset.capabilities);
   assertRequiredTaxonomy(dataset.categories);

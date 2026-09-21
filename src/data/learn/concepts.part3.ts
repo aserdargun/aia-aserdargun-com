@@ -31,7 +31,7 @@ const ftVsRagDiagram = `
 
     <rect x="440" y="160" width="200" height="44" rx="6" fill="#ede9e1" stroke="#bdb6aa" />
     <text x="540" y="180" text-anchor="middle" font-weight="700">Knowledge stays in DB</text>
-    <text x="540" y="196" text-anchor="middle" font-size="10" fill="#666057">updatable in seconds</text>
+    <text x="540" y="196" text-anchor="middle" font-size="10" fill="#666057">ingestion + index update</text>
 
     <rect x="440" y="220" width="200" height="44" rx="6" fill="#ede9e1" stroke="#bdb6aa" />
     <text x="540" y="240" text-anchor="middle" font-weight="700">Best for fresh facts</text>
@@ -51,9 +51,9 @@ const rlhfDiagram = `
   <text x="360" y="28" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#24211d" font-weight="700">RLHF in three stages</text>
   <g font-family="Inter, sans-serif" font-size="12" fill="#24211d">
     <rect x="40"  y="80" width="180" height="64" rx="8" fill="#fde2d6" stroke="#a73e1b" />
-    <text x="130" y="106" text-anchor="middle" font-weight="700">1. Pre-train</text>
-    <text x="130" y="124" text-anchor="middle" font-size="10" fill="#666057">next-token on web text</text>
-    <text x="130" y="138" text-anchor="middle" font-size="10" fill="#666057">→ base model</text>
+    <text x="130" y="106" text-anchor="middle" font-weight="700">1. Instruction-tune</text>
+    <text x="130" y="124" text-anchor="middle" font-size="10" fill="#666057">demonstrations after pretraining</text>
+    <text x="130" y="138" text-anchor="middle" font-size="10" fill="#666057">→ starting policy</text>
 
     <rect x="270" y="80" width="180" height="64" rx="8" fill="#e7f1ec" stroke="#168c6b" />
     <text x="360" y="106" text-anchor="middle" font-weight="700">2. Reward model</text>
@@ -61,7 +61,7 @@ const rlhfDiagram = `
     <text x="360" y="138" text-anchor="middle" font-size="10" fill="#666057">→ RM scores</text>
 
     <rect x="500" y="80" width="180" height="64" rx="8" fill="#dde7f1" stroke="#1769aa" />
-    <text x="590" y="106" text-anchor="middle" font-weight="700">3. PPO / DPO</text>
+    <text x="590" y="106" text-anchor="middle" font-weight="700">3. RL (e.g. PPO)</text>
     <text x="590" y="124" text-anchor="middle" font-size="10" fill="#666057">optimize against RM</text>
     <text x="590" y="138" text-anchor="middle" font-size="10" fill="#666057">→ aligned model</text>
   </g>
@@ -75,7 +75,7 @@ const rlhfDiagram = `
     </marker>
   </defs>
   <g font-family="Inter, sans-serif" font-size="11" fill="#666057">
-    <text x="360" y="190" text-anchor="middle">Pre-training gives knowledge. Reward modeling and RL/DPO add behavior.</text>
+    <text x="360" y="190" text-anchor="middle">DPO is a separate path: no explicit reward model or RL loop.</text>
     <text x="360" y="220" text-anchor="middle">RLHF = learning from preference comparisons, not from explicit rules.</text>
     <text x="360" y="260" text-anchor="middle" font-style="italic" fill="#24211d">Constitutional AI replaces the human ranker with a principles-based critique loop.</text>
   </g>
@@ -165,7 +165,7 @@ export const trainingAndRetrievalConcepts: Concept[] = [
       "Two complementary ways to specialize a model: bake knowledge into weights, or fetch it from an external index at query time.",
     explanation: `When you need a model to know something new, you have two fundamentally different levers:
 
-**Fine-tuning** updates the model's weights using additional supervised or preference data. After fine-tuning, the new knowledge is *in the model itself*. There is no runtime cost beyond a normal forward pass.
+**Fine-tuning** updates the model's weights using additional supervised or preference data. Training can change behavior and learned associations, but it does not reliably install a factual database. Serving cost depends on the model, adapters, and provider.
 
 - ✅ Best for: **style, tone, format, tool-use patterns, reasoning style**.
 - ❌ Worst for: **fresh facts** — every update requires another training run, and old knowledge can be forgotten (catastrophic forgetting).
@@ -177,11 +177,11 @@ export const trainingAndRetrievalConcepts: Concept[] = [
 - ❌ Worst for: **teaching a new reasoning style** — the model already knows how to use the context, but RAG alone does not change *how* it reasons.
 - Cost: an index and per-query retrieval latency.
 
-**Use them together.** Fine-tune for behavior, RAG for knowledge. Most production assistants are built exactly this way.`,
+**Use them together.** Fine-tune for behavior, RAG for knowledge. Whether both are needed depends on evaluation results and the application.`,
     keyTakeaways: [
       "Fine-tuning changes weights; RAG adds context at inference time.",
       "Fine-tune for style, RAG for facts.",
-      "RAG is updatable in seconds; fine-tuning takes hours to days.",
+      "Update latency depends on ingestion, indexing, training, and deployment choices.",
     ],
     diagrams: [
       {
@@ -257,7 +257,7 @@ export const trainingAndRetrievalConcepts: Concept[] = [
     difficulty: "core",
     estimatedMinutes: 6,
     tags: ["fine-tuning", "rag", "specialization"],
-    referenceIds: ["openai-rag-overview"],
+    referenceIds: ["lewis-2020-rag", "openai-model-optimization"],
     verifiedAt: "2026-08-19",
     order: 1,
   },
@@ -269,13 +269,13 @@ export const trainingAndRetrievalConcepts: Concept[] = [
       "Aligns a pretrained model to human preferences by training a reward model on comparisons, then optimizing the model against it.",
     explanation: `Pretraining on next-token prediction produces a model that *can* continue text well, but does not necessarily follow instructions, refuse harmful requests, or behave helpfully. **RLHF** and related preference-optimization methods are widely used to close that gap.
 
-**Three stages:**
+**A common preference-training pipeline:**
 
-1. **Pretrain** the base model on a large text corpus with the language-modeling objective. This gives broad capability.
+1. **Start from a pretrained model and instruction-tune it** on demonstrations. This supervised step gives the preference-training pipeline a useful starting policy.
 
 2. **Train a reward model (RM).** Humans are shown pairs of model outputs to the same prompt and asked which is better. The RM is a separate model trained to predict, given a prompt and a response, the score a human would assign. It is a *scalar* model: a regression head over a transformer.
 
-3. **Optimize the policy against the RM.** Use reinforcement learning (PPO is traditional; DPO is a modern direct alternative) to update the model so that its outputs score higher under the RM. A KL penalty keeps the policy close to the reference model so it does not "reward hack" by producing gibberish that fools the RM.
+3. **Optimize the policy against the RM.** Use a reinforcement-learning algorithm such as PPO to increase predicted reward. DPO is a separate preference-optimization approach that does not require training an explicit reward model or running this RL loop. A KL penalty discourages excessive drift from a reference policy; it does not eliminate reward hacking.
 
 **Why it works:** the RM captures a fuzzy notion of "helpfulness" that is hard to specify with rules. By training against thousands of comparisons, the policy inherits that notion.
 
@@ -287,7 +287,7 @@ export const trainingAndRetrievalConcepts: Concept[] = [
 
 **Constitutional AI** (Anthropic) replaces the human ranker with a principles-based critique loop: the model critiques its own outputs against a written constitution. This is RLAIF (RL from AI feedback).`,
     keyTakeaways: [
-      "RLHF = pretrain + reward model + policy optimization against the RM.",
+      "A common RLHF pipeline uses supervised fine-tuning, preference reward modeling, and policy optimization.",
       "A KL penalty keeps the aligned model from drifting too far from the base.",
       "Reward hacking and sycophancy are the main failure modes.",
     ],
@@ -296,7 +296,7 @@ export const trainingAndRetrievalConcepts: Concept[] = [
         id: "rlhf-pipeline",
         title: "RLHF pipeline",
         caption:
-          "Pretraining produces a base model. A reward model is trained on human preference comparisons. A RL stage (PPO or DPO) optimizes the base model against the RM.",
+          "After pretraining, supervised demonstrations initialize the policy. Human comparisons train a reward model; an RL stage such as PPO then optimizes the policy. DPO follows a different path.",
         svg: rlhfDiagram,
       },
     ],
@@ -336,10 +336,10 @@ export const trainingAndRetrievalConcepts: Concept[] = [
         options: [
           {
             id: "rl-q2-a",
-            text: "To keep the policy close to the reference model and prevent reward hacking",
+            text: "To discourage excessive drift from the reference policy",
             correct: true,
             explanation:
-              "Without it, the policy can drift into degenerate text that the RM rates highly.",
+              "Regularization limits policy drift; it does not guarantee that reward hacking is prevented.",
           },
           {
             id: "rl-q2-b",
@@ -365,7 +365,7 @@ export const trainingAndRetrievalConcepts: Concept[] = [
     difficulty: "advanced",
     estimatedMinutes: 7,
     tags: ["rlhf", "alignment", "training"],
-    referenceIds: ["rlhf-original", "openai-rlhf-explainer", "anthropic-claude-constitutional-ai"],
+    referenceIds: ["rafailov-2023-dpo", "rlhf-original", "openai-rlhf-explainer", "anthropic-claude-constitutional-ai"],
     verifiedAt: "2026-08-19",
     order: 2,
   },
@@ -385,14 +385,14 @@ export const trainingAndRetrievalConcepts: Concept[] = [
 
 **Why RAG works:**
 
-- **Freshness:** new documents become available the moment the index is rebuilt — no retraining.
+- **Freshness:** new documents become retrievable after ingestion and indexing complete — no retraining.
 - **Attribution:** the prompt contains the source, so the model can be instructed to cite it.
 - **Cost:** far cheaper than continual pretraining or frequent fine-tuning.
 - **Privacy control:** source documents can stay in your index and are not added to base-model training, but retrieved chunks still reach the inference endpoint unless the model runs inside your own security boundary.
 
 **Failure modes:**
 
-- **Retrieval miss:** the right chunk is not in the top-k, so the model fabricates.
+- **Retrieval miss:** the right chunk is not retrieved; the model may answer incorrectly unless it can abstain.
 - **Lost in the middle:** LLMs attend less faithfully to mid-context information; placing the answer near the start or end of the prompt helps.
 - **Stale or noisy chunks:** garbage in, garbage out. Quality of the corpus and the chunking strategy matter.
 
@@ -477,7 +477,7 @@ RAG remains a standard production pattern for "chat with your data" features.`,
     difficulty: "core",
     estimatedMinutes: 7,
     tags: ["rag", "retrieval", "grounding"],
-    referenceIds: ["openai-rag-overview", "chroma-vector-db"],
+    referenceIds: ["lewis-2020-rag", "openai-model-optimization", "chroma-vector-db"],
     verifiedAt: "2026-09-04",
     order: 1,
   },
@@ -497,7 +497,7 @@ RAG remains a standard production pattern for "chat with your data" features.`,
 
 **Quality metrics:**
 
-- **Recall@k:** fraction of true top-k neighbors that the index returns. Target ≥ 0.95 in practice.
+- **Recall@k:** fraction of true top-k neighbors that the index returns. Choose a target by measuring downstream answer quality; no universal threshold fits every workload.
 - **Latency:** wall-clock time per query at a given recall target.
 - **Memory:** total RAM or disk needed for the index.
 
