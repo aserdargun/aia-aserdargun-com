@@ -1856,6 +1856,16 @@ a {
   margin: 0;
 }
 
+.learn-page__language-note {
+  max-width: 70ch;
+  margin: 12px 0 0;
+  padding: 10px 14px;
+  border-left: 3px solid var(--atlas-line-strong, currentColor);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--atlas-ink-muted);
+}
+
 .learn-page__actions {
   display: flex;
   flex-wrap: wrap;

@@ -25,6 +25,12 @@ export default function LearnPage() {
           adaptation; progress stays in this browser and is not synced across devices.
         </p>
 
+        <p className="learn-page__language-note">
+          The Learn module is written in English. The surrounding navigation is
+          bilingual; the concept content below is not translated, and the
+          Atlas comparison content is English as well.
+        </p>
+
         <div className="learn-page__actions">
           <Link href="/learn/review" className="learn-cta learn-cta--primary">
             Start today&rsquo;s review
