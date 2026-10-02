@@ -1102,4 +1102,109 @@ export const sources = [
     url: "https://docs.z.ai/guides/vlm/glm-5.3-flash",
     sourceType: "documentation"
   },
+  {
+    id: "zai-release-notes",
+    title: "New Released",
+    publisher: "Z.ai",
+    url: "https://docs.z.ai/release-notes/new-released",
+    sourceType: "announcement"
+  },
+  {
+    id: "anthropic-release-notes",
+    title: "Claude Platform release notes",
+    publisher: "Anthropic",
+    url: "https://platform.claude.com/docs/en/release-notes/overview",
+    sourceType: "announcement"
+  },
+  {
+    id: "anthropic-model-deprecations",
+    title: "Model deprecations",
+    publisher: "Anthropic",
+    url: "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+    sourceType: "documentation"
+  },
+  {
+    id: "anthropic-claude-opus-5-5",
+    title: "Claude Opus 5.5 model page",
+    publisher: "Anthropic",
+    url: "https://platform.claude.com/docs/en/models/claude-opus-5-5",
+    sourceType: "documentation"
+  },
+  {
+    id: "anthropic-claude-sonnet-5-5",
+    title: "Claude Sonnet 5.5 model page",
+    publisher: "Anthropic",
+    url: "https://platform.claude.com/docs/en/models/claude-sonnet-5-5",
+    sourceType: "documentation"
+  },
+  {
+    id: "anthropic-cowork-merge",
+    title: "Claude Cowork and chat are now one Claude",
+    publisher: "Anthropic",
+    url: "https://claude.com/blog/cowork-is-now-claude",
+    sourceType: "announcement"
+  },
+  {
+    id: "openai-changelog",
+    title: "OpenAI API changelog",
+    publisher: "OpenAI",
+    url: "https://developers.openai.com/api/docs/changelog",
+    sourceType: "announcement"
+  },
+  {
+    id: "openai-gpt-6-1-sol",
+    title: "GPT-6.1 Sol model card",
+    publisher: "OpenAI",
+    url: "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+    sourceType: "documentation"
+  },
+  {
+    id: "openai-gpt-6-sol",
+    title: "GPT-6 Sol model card",
+    publisher: "OpenAI",
+    url: "https://developers.openai.com/api/docs/models/gpt-6-sol",
+    sourceType: "documentation"
+  },
+  {
+    id: "openai-gpt-6-luna",
+    title: "GPT-6 Luna model card",
+    publisher: "OpenAI",
+    url: "https://developers.openai.com/api/docs/models/gpt-6-luna",
+    sourceType: "documentation"
+  },
+  {
+    id: "openai-gpt-5-6-sol",
+    title: "GPT-5.6 Sol model card",
+    publisher: "OpenAI",
+    url: "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+    sourceType: "documentation"
+  },
+  {
+    id: "openai-gpt-5-6-terra",
+    title: "GPT-5.6 Terra model card",
+    publisher: "OpenAI",
+    url: "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+    sourceType: "documentation"
+  },
+  {
+    id: "openai-gpt-5-6-luna",
+    title: "GPT-5.6 Luna model card",
+    publisher: "OpenAI",
+    url: "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+    sourceType: "documentation"
+  },
+  {
+    id: "minimax-m3-1-flash",
+    title: "MiniMax text generation models",
+    publisher: "MiniMax",
+    url: "https://platform.minimax.io/docs/guides/text-generation",
+    sourceType: "documentation"
+  },
+  {
+    id: "minimax-release-notes",
+    title: "MiniMax model releases",
+    publisher: "MiniMax",
+    url: "https://platform.minimax.io/docs/release-notes/models",
+    sourceType: "announcement"
+  },
 ] satisfies Source[];

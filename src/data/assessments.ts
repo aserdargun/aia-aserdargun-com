@@ -47,7 +47,7 @@ export const assessments = [
     capabilityId: "long-running-work",
     vendorIds: ["anthropic", "openai"],
     status: "different-approach",
-    summary: "Both continue substantial work beyond one response, centered on Cowork and Codex respectively.",
+    summary: "Both continue substantial work beyond one response, centered on delegated work in Claude and Codex respectively.",
   },
   {
     capabilityId: "primary-coding-agent",
@@ -287,7 +287,7 @@ export const assessments = [
     capabilityId: "scheduled-tasks",
     vendorIds: ["anthropic", "openai"],
     status: "strong-parity",
-    summary: "Both schedule recurring agent work, centered on Cowork and Codex.",
+    summary: "Both schedule recurring agent work, centered on Claude and Codex.",
   },
   {
     capabilityId: "background-continuation",
@@ -473,7 +473,7 @@ export const assessments = [
     capabilityId: "delegated-knowledge-work",
     vendorIds: ["anthropic", "zai"],
     status: "different-approach",
-    summary: "Both produce requested deliverables, through Claude Cowork versus Z.ai's hosted slide, poster, and translation agents.",
+    summary: "Both produce requested deliverables, through delegated work in Claude versus Z.ai's hosted slide, poster, and translation agents.",
   },
   {
     capabilityId: "delegated-knowledge-work",
@@ -485,7 +485,7 @@ export const assessments = [
     capabilityId: "long-running-work",
     vendorIds: ["anthropic", "zai"],
     status: "different-approach",
-    summary: "Both sustain long-running work, centered on Claude Cowork delegation versus ZCode Goals and idle-time tasks.",
+    summary: "Both sustain long-running work, centered on Claude delegation versus ZCode Goals and idle-time tasks.",
   },
   {
     capabilityId: "long-running-work",

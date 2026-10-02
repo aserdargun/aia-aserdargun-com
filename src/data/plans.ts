@@ -1,6 +1,7 @@
 import type { Plan } from "@/data/schema";
 
 const verifiedAt = "2026-08-11";
+const anthropicVerifiedAt = "2026-10-02";
 const zaiVerifiedAt = "2026-08-19";
 const currentVerifiedAt = "2026-09-04";
 const minimaxPlanVerifiedAt = "2026-09-07";
@@ -14,7 +15,7 @@ export const plans = [
     priceDisplay: "$0",
     highlights: ["Chat on supported first-party surfaces", "Web search, memory, file creation, and connectors with plan limits"],
     sourceIds: ["anthropic-pricing"],
-    verifiedAt,
+    verifiedAt: anthropicVerifiedAt,
   },
   {
     id: "claude-pro",
@@ -23,9 +24,9 @@ export const plans = [
     audience: "Individuals using Claude regularly",
     priceDisplay: "$17/month annually; $20 month-to-month",
     billingNote: "$200 is billed up front for the annual option; usage limits apply.",
-    highlights: ["More usage than Free", "Includes Claude Code and Claude Cowork", "Unlimited projects and Research access"],
+    highlights: ["More usage than Free", "Includes Claude Code and delegated work in Claude", "Projects, Claude Design, Slides, and Docs"],
     sourceIds: ["anthropic-pricing"],
-    verifiedAt,
+    verifiedAt: anthropicVerifiedAt,
   },
   {
     id: "claude-max-5x",
@@ -36,7 +37,7 @@ export const plans = [
     billingNote: "Monthly plan; usage limits apply.",
     highlights: ["5x more usage than Pro"],
     sourceIds: ["anthropic-pricing"],
-    verifiedAt,
+    verifiedAt: anthropicVerifiedAt,
   },
   {
     id: "claude-max-20x",
@@ -47,7 +48,7 @@ export const plans = [
     billingNote: "Monthly plan; usage limits apply.",
     highlights: ["20x more usage than Pro"],
     sourceIds: ["anthropic-pricing"],
-    verifiedAt,
+    verifiedAt: anthropicVerifiedAt,
   },
   {
     id: "claude-team",
@@ -58,7 +59,7 @@ export const plans = [
     billingNote: "Premium seats are separately priced; prices exclude applicable tax.",
     highlights: ["Central billing and administration", "Single sign-on", "Admin controls for connectors"],
     sourceIds: ["anthropic-pricing"],
-    verifiedAt,
+    verifiedAt: anthropicVerifiedAt,
   },
   {
     id: "claude-enterprise",
@@ -69,7 +70,7 @@ export const plans = [
     billingNote: "Annual commitment; usage scales with model and task. Sales-assisted terms may vary.",
     highlights: ["SCIM and audit logs", "Custom data-retention controls", "Role-based permissions and network controls"],
     sourceIds: ["anthropic-pricing", "anthropic-enterprise"],
-    verifiedAt,
+    verifiedAt: anthropicVerifiedAt,
   },
   {
     id: "chatgpt-free",
