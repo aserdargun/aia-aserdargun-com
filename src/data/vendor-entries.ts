@@ -15,7 +15,7 @@ export const vendorEntries = [
     productNames: ["Claude"],
     availability: "available",
     sourceIds: ["anthropic-models", "anthropic-release-notes"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "openai-frontier-model-lineup",
@@ -27,7 +27,7 @@ export const vendorEntries = [
     productNames: ["GPT-6 Astra", "GPT-6.1 Sol", "GPT-6 Luna"],
     availability: "available",
     sourceIds: ["openai-models", "openai-changelog"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "anthropic-context-window",
@@ -39,7 +39,7 @@ export const vendorEntries = [
     productNames: ["Claude"],
     availability: "available",
     sourceIds: ["anthropic-models"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "openai-context-window",
@@ -51,7 +51,7 @@ export const vendorEntries = [
     productNames: ["GPT-6 Astra", "GPT-6.1 Sol", "GPT-6"],
     availability: "available",
     sourceIds: ["openai-models", "openai-gpt-6-1-sol"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "anthropic-multimodal-input",
@@ -63,7 +63,7 @@ export const vendorEntries = [
     productNames: ["Claude"],
     availability: "available",
     sourceIds: ["anthropic-models", "anthropic-release-notes"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "openai-multimodal-input",
@@ -75,7 +75,7 @@ export const vendorEntries = [
     productNames: ["GPT-6 Astra", "GPT-6.1 Sol", "GPT-6"],
     availability: "available",
     sourceIds: ["openai-models", "openai-gpt-6-1-sol"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "anthropic-native-image-generation",
@@ -159,7 +159,7 @@ export const vendorEntries = [
     productNames: ["Claude"],
     availability: "available",
     sourceIds: ["anthropic-enterprise", "anthropic-pricing", "anthropic-cowork-merge"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "openai-delegated-knowledge-work",
@@ -183,7 +183,7 @@ export const vendorEntries = [
     productNames: ["Claude"],
     availability: "available",
     sourceIds: ["anthropic-enterprise", "anthropic-cowork-merge"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "openai-long-running-work",
@@ -955,7 +955,7 @@ export const vendorEntries = [
     productNames: ["Claude", "Claude for Chrome"],
     availability: "available",
     sourceIds: ["anthropic-pricing", "anthropic-enterprise", "anthropic-cowork-merge"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "openai-computer-use-product",
@@ -1579,7 +1579,7 @@ export const vendorEntries = [
     productNames: ["Claude API"],
     availability: "available",
     sourceIds: ["anthropic-api-pricing", "anthropic-models", "anthropic-release-notes"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "openai-api-token-pricing",
@@ -1591,7 +1591,7 @@ export const vendorEntries = [
     productNames: ["OpenAI API"],
     availability: "available",
     sourceIds: ["openai-api-pricing", "openai-models", "openai-changelog"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "zai-frontier-model-lineup",
@@ -1603,7 +1603,7 @@ export const vendorEntries = [
     productNames: ["GLM-5.3", "GLM-5.3-Flash", "GLM-5", "GLM-5-Turbo", "GLM-5V-Turbo"],
     availability: "available",
     sourceIds: ["zai-pricing", "zai-flash-docs", "zai-release-notes"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "zai-context-window",
@@ -2383,7 +2383,7 @@ export const vendorEntries = [
     productNames: ["GLM API"],
     availability: "available",
     sourceIds: ["zai-pricing", "zai-release-notes"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "minimax-frontier-model-lineup",
@@ -2395,7 +2395,7 @@ export const vendorEntries = [
     availability: "available",
     summary: "The current language-model catalog lists M3.1-Flash-Preview, M3, M2.7, and M2.7 Highspeed.",
     sourceIds: ["minimax-model-catalog", "minimax-m3-1-flash", "minimax-release-notes"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "minimax-context-window",
@@ -3181,7 +3181,7 @@ export const vendorEntries = [
     productNames: ["MiniMax API"],
     availability: "available",
     sourceIds: ["minimax-api-pricing", "minimax-models", "minimax-m2-7", "minimax-release-notes"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "deepseek-frontier-model-lineup",
@@ -3193,7 +3193,7 @@ export const vendorEntries = [
     productNames: ["DeepSeek-V4-Flash", "DeepSeek-V4-Pro", "DeepSeek-V4-Flash-Vision-Exp"],
     availability: "available",
     sourceIds: ["deepseek-models", "deepseek-updates"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "deepseek-context-window",
@@ -3973,7 +3973,7 @@ export const vendorEntries = [
     productNames: ["DeepSeek API"],
     availability: "available",
     sourceIds: ["deepseek-models", "deepseek-updates"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "qwen-frontier-model-lineup",
@@ -3985,7 +3985,7 @@ export const vendorEntries = [
     productNames: ["Qwen3.8-Max", "Qwen3.8-Flash", "Qwen3.7-Plus", "Qwen3.7-Flash"],
     availability: "available",
     sourceIds: ["qwen-models", "qwen-model-card-flash", "qwen-model-selection", "qwen-text-models"],
-    verifiedAt: "2026-10-02",
+    verifiedAt: "2026-10-03",
   }),
   defineVendorEntry({
     id: "qwen-context-window",

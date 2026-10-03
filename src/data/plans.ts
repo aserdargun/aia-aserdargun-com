@@ -1,7 +1,7 @@
 import type { Plan } from "@/data/schema";
 
 const verifiedAt = "2026-08-11";
-const anthropicVerifiedAt = "2026-10-02";
+const anthropicVerifiedAt = "2026-10-03";
 const zaiVerifiedAt = "2026-08-19";
 const currentVerifiedAt = "2026-09-04";
 const minimaxPlanVerifiedAt = "2026-09-07";
