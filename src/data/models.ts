@@ -213,7 +213,7 @@ export const models = [
     positioning:
       "Preview frontier multimodal coding model with a 1M context window and tunable thinking depth, currently limited to M Plan and MiniMax Code.",
     lifecycle: "preview",
-    inputModalities: ["text", "image"],
+    inputModalities: ["text", "image", "video"],
     outputModalities: ["text"],
     contextWindowTokens: 1_000_000,
     sourceIds: ["minimax-m3-1-flash", "minimax-model-catalog"],
