@@ -236,11 +236,11 @@ describe("canonical Atlas dataset", () => {
     ).toBe(true);
     for (const record of [...atlasDataset.vendorEntries, ...atlasDataset.models, ...atlasDataset.plans]) {
       expect(record.verifiedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
-      expect(record.verifiedAt <= "2026-10-03").toBe(true);
+      expect(record.verifiedAt <= "2026-10-04").toBe(true);
     }
     // A blocked pricing page must not receive a cosmetic verification date.
     expect(atlasDataset.plans.find(({ id }) => id === "chatgpt-plus")?.verifiedAt).toBe("2026-08-11");
-    expect(atlasDataset.models.find(({ id }) => id === "deepseek-v4-1-flash")?.verifiedAt).toBe("2026-10-03");
+    expect(atlasDataset.models.find(({ id }) => id === "deepseek-v4-1-flash")?.verifiedAt).toBe("2026-10-04");
 
     for (const vendorId of expectedVendorIds) {
       expect(
@@ -284,7 +284,7 @@ describe("canonical Atlas dataset", () => {
         ],
         vendorEntries: [...atlasDataset.vendorEntries, googleEntry],
       },
-      new Date("2026-10-03T12:00:00Z"),
+      new Date("2026-10-04T12:00:00Z"),
     );
 
     expect(extended.vendorEntries.at(-1)).toEqual(googleEntry);
