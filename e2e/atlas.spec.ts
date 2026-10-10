@@ -111,7 +111,7 @@ test("desktop: keeps the compact evidence snapshot and table in the first viewpo
   await expect(page.getByRole("dialog")).toHaveCount(0);
   await expect(tableSummary).toContainText("66 capabilities shown");
   // This date belongs to the selected capability pair, not the model catalog.
-  await expect(tableSummary).toContainText("Evidence checked 4 Oct 2026");
+  await expect(tableSummary).toContainText("Evidence checked 10 Oct 2026");
   await expect(page.getByText("Evidence snapshot")).toBeVisible();
   await expect(
     page.getByText(
