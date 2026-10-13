@@ -46,7 +46,7 @@ export const vendorEntries = [
     capabilityId: "context-window",
     vendorId: "openai",
     title: "OpenAI context limits",
-    summary: "GPT-6 Astra, GPT-6.1 Sol, GPT-6 Sol, and GPT-6 Luna document 1,050,000-token context windows with a 922,000-token maximum input.",
+    summary: "GPT-6 Astra, GPT-6.1 Sol, GPT-6 Sol, and GPT-6 Luna document a 1,050,000-token context window and a 128,000-token maximum output, leaving 922,000 tokens for input.",
     details: [],
     productNames: ["GPT-6 Astra", "GPT-6.1 Sol", "GPT-6"],
     availability: "available",
