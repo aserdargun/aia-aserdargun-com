@@ -437,9 +437,9 @@ export const models = [
       cachedInputPerMillionUsd: 0.06,
       outputPerMillionUsd: 1.2,
     },
-    positioning: "A currently listed text model for coding and tool use.",
+    positioning: "A currently listed text model for coding and tool use. MiniMax has published a dated retirement schedule for the M2.5 and M2.7 families: new-user access ends 19 October 2026 and the models are retired on 18 November 2026, after which API requests will no longer work.",
     sourceIds: ["minimax-model-catalog", "minimax-m2-7", "minimax-api-pricing"],
-    verifiedAt: "2026-10-04",
+    verifiedAt: "2026-10-17",
   },
   {
     id: "minimax-m2-7-highspeed",
@@ -455,9 +455,9 @@ export const models = [
       cachedInputPerMillionUsd: 0.06,
       outputPerMillionUsd: 2.4,
     },
-    positioning: "A currently listed text model for coding and tool use with faster serving.",
+    positioning: "A currently listed text model for coding and tool use with faster serving. It carries the same dated retirement schedule as MiniMax M2.7: new-user access ends 19 October 2026 and the models are retired on 18 November 2026.",
     sourceIds: ["minimax-model-catalog", "minimax-m2-7", "minimax-api-pricing"],
-    verifiedAt: "2026-10-04",
+    verifiedAt: "2026-10-17",
   },
   {
     id: "deepseek-v4-pro",

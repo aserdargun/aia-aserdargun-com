@@ -2,7 +2,7 @@ import type { Plan } from "@/data/schema";
 
 const verifiedAt = "2026-08-11";
 const anthropicVerifiedAt = "2026-10-04";
-const zaiVerifiedAt = "2026-08-19";
+const zaiVerifiedAt = "2026-10-17";
 const currentVerifiedAt = "2026-09-04";
 const minimaxPlanVerifiedAt = "2026-09-07";
 
@@ -146,7 +146,7 @@ export const plans = [
     billingNote: "Quarterly billing saves 20% and annual billing saves 30%; Z.ai lists promotional prices below the monthly rate.",
     highlights: [
       "10,000 weekly credits with 2,000 credits per 5 hours",
-      "Access to GLM-5.3, GLM-5-Turbo, and GLM-4.7",
+      "Access to GLM-5.3 and GLM-5.3-Flash, with GLM-5.2 and GLM-5.1 routed to GLM-5.3 and GLM-4.7 routed to GLM-5.3-Flash",
       "Works with ZCode, Claude Code, Cline, OpenCode, and other supported coding tools",
     ],
     sourceIds: ["zai-subscribe", "zai-devpack", "zai-zcode"],
