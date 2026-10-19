@@ -1201,6 +1201,13 @@ export const sources = [
     sourceType: "documentation"
   },
   {
+    id: "minimax-model-list",
+    title: "MiniMax model list and retirement status",
+    publisher: "MiniMax",
+    url: "https://platform.minimax.io/docs/faq/models",
+    sourceType: "documentation"
+  },
+  {
     id: "minimax-release-notes",
     title: "MiniMax model releases",
     publisher: "MiniMax",

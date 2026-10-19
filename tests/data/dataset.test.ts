@@ -236,7 +236,7 @@ describe("canonical Atlas dataset", () => {
     ).toBe(true);
     for (const record of [...atlasDataset.vendorEntries, ...atlasDataset.models, ...atlasDataset.plans]) {
       expect(record.verifiedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
-      expect(record.verifiedAt <= "2026-10-17").toBe(true);
+      expect(record.verifiedAt <= "2026-10-19").toBe(true);
     }
     // A blocked pricing page must not receive a cosmetic verification date.
     expect(atlasDataset.plans.find(({ id }) => id === "chatgpt-plus")?.verifiedAt).toBe("2026-08-11");
@@ -284,7 +284,7 @@ describe("canonical Atlas dataset", () => {
         ],
         vendorEntries: [...atlasDataset.vendorEntries, googleEntry],
       },
-      new Date("2026-10-17T12:00:00Z"),
+      new Date("2026-10-19T12:00:00Z"),
     );
 
     expect(extended.vendorEntries.at(-1)).toEqual(googleEntry);
@@ -359,8 +359,10 @@ describe("canonical Atlas dataset", () => {
       outputPerMillionUsd: 1.2,
     });
     expect(m3?.lifecycle).toBe("current");
-    expect(m27?.lifecycle).toBe("current");
-    expect(highspeed?.lifecycle).toBe("current");
+    // M2.7 and M2.7 Highspeed were moved into the vendor's Legacy Models section
+    // and listed in its retired-model table when new-user access ended.
+    expect(m27?.lifecycle).toBe("legacy");
+    expect(highspeed?.lifecycle).toBe("legacy");
     expect(m27?.pricing).toEqual({
       inputPerMillionUsd: 0.3,
       cachedInputPerMillionUsd: 0.06,
@@ -371,6 +373,43 @@ describe("canonical Atlas dataset", () => {
       cachedInputPerMillionUsd: 0.06,
       outputPerMillionUsd: 2.4,
     });
+  });
+
+  it("records the MiniMax M3.1-Flash graduation and the M2.7 retirement state", () => {
+    const m31 = atlasDataset.models.find(({ id }) => id === "minimax-m3-1-flash");
+    const legacyPreview = atlasDataset.models.find(
+      ({ id }) => id === "minimax-m3-1-flash-preview",
+    );
+    const m27 = atlasDataset.models.find(({ id }) => id === "minimax-m2-7");
+
+    // The preview record was replaced, not duplicated.
+    expect(legacyPreview).toBeUndefined();
+    expect(m31?.name).toBe("MiniMax M3.1-Flash");
+    expect(m31?.lifecycle).toBe("current");
+    expect(m31?.contextWindowTokens).toBe(1_000_000);
+    expect(m31?.inputModalities).toEqual(["text", "image", "video"]);
+    expect(m31?.positioning).toContain("effort");
+    expect(m31?.verifiedAt).toBe("2026-10-19");
+
+    // The retirement schedule still stands and is now sourced from the model list page.
+    expect(m27?.positioning).toContain("19 October 2026");
+    expect(m27?.positioning).toContain("18 November 2026");
+    expect(m27?.sourceIds).toContain("minimax-model-list");
+    expect(m27?.verifiedAt).toBe("2026-10-19");
+
+    // The lineup claim no longer presents the M2.7 family as current.
+    const lineup = atlasDataset.vendorEntries.find(
+      ({ id }) => id === "minimax-frontier-model-lineup",
+    );
+    expect(lineup?.productNames).toEqual(["MiniMax M3.1-Flash", "MiniMax M3"]);
+    expect(lineup?.summary).toContain("Legacy Models");
+    expect(lineup?.verifiedAt).toBe("2026-10-19");
+
+    // The retirement notice now lives on the model-list page, so the atlas cites it.
+    const modelList = atlasDataset.sources.find(
+      ({ id }) => id === "minimax-model-list",
+    );
+    expect(modelList?.url).toBe("https://platform.minimax.io/docs/faq/models");
   });
 
   it("describes Claude Max with source-supported usage multiples", () => {
