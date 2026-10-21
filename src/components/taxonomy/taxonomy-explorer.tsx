@@ -13,6 +13,7 @@ import { TaskModelPanel } from "@/components/taxonomy/task-model-panel";
 import { linkModelFamilyCards, modelFamilyHref } from "@/lib/model-families";
 import { ModelFamilyPanel } from "@/components/taxonomy/model-family-panel";
 import { MAX_SCALE, MIN_SCALE, useTaxonomyNavigation } from "@/components/taxonomy/use-taxonomy-navigation";
+import { TaxonomyMinimap } from "@/components/taxonomy/taxonomy-minimap";
 
 export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSources, families }: {
   map: TaxonomyMap; svg: string; sources: TaxonomySource[];
@@ -211,6 +212,7 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
         </div>
         {fullscreenError ? <p role="status" className="taxonomy-hint">{labels.fullscreenError}</p> : null}
         <div className={`taxonomy-workspace${selectedTask || selectedFamily ? " taxonomy-workspace--selected" : ""}`}>
+        <div className="taxonomy-map-stage">
         <div ref={viewport} className="taxonomy-viewport" tabIndex={0} role="region" aria-label={labels.region} aria-describedby="taxonomy-map-hint" {...panHandlers}>
           <div
             className="taxonomy-canvas"
@@ -226,6 +228,8 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
             }}
             dangerouslySetInnerHTML={{ __html: preparedSvg }}
           />
+        </div>
+        <TaxonomyMinimap map={map} viewport={viewport} locale={locale} />
         </div>
         {selectedTask ? <TaskModelPanel task={selectedTask} models={models} sources={modelSources} definitions={sources} locale={locale} onClose={closePanel} /> : null}
         {selectedFamily ? <ModelFamilyPanel key={selectedFamily.id} family={selectedFamily} models={models} tasks={tasks} sources={modelSources} definitions={sources} locale={locale} onClose={closePanel} /> : null}
