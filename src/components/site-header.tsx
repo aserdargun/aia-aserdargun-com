@@ -10,7 +10,10 @@ export function SiteHeader() {
             +
           </span>
           <span className="site-brand__copy">
-            <strong>AI Ecosystem Atlas</strong>
+            <strong>
+              <span className="site-brand__full">AI Ecosystem Atlas</span>
+              <span className="site-brand__compact" aria-hidden="true">AIA</span>
+            </strong>
             <small>Research Console</small>
           </span>
         </Link>
@@ -18,6 +21,7 @@ export function SiteHeader() {
           <Link className="site-nav__atlas" href="/">
             Atlas
           </Link>
+          <Link href="/models">Models</Link>
           <Link href="/learn">Learn</Link>
           <a
             className="site-nav__github"

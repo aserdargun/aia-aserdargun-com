@@ -2,9 +2,12 @@ import type { Model } from "@/data/schema";
 
 const currentVerifiedAt = "2026-09-04";
 
+// taskIds classify the focus areas in the stored, source-backed records.
+// They are editorial navigation, not exhaustive capabilities or new evidence checks.
 export const models = [
   {
     id: "claude-opus-5-5",
+    taskIds: ["coding", "agents", "documents", "visual-understanding"],
     vendorId: "anthropic",
     name: "Claude Opus 5.5",
     family: "Claude 5.5",
@@ -26,6 +29,7 @@ export const models = [
   },
   {
     id: "claude-sonnet-5-5",
+    taskIds: ["writing-chat", "coding", "agents", "visual-understanding"],
     vendorId: "anthropic",
     name: "Claude Sonnet 5.5",
     family: "Claude 5.5",
@@ -46,6 +50,7 @@ export const models = [
   },
   {
     id: "claude-opus-5",
+    taskIds: ["coding", "agents", "visual-understanding"],
     vendorId: "anthropic",
     name: "Claude Opus 5",
     family: "Claude 5",
@@ -66,6 +71,7 @@ export const models = [
   },
   {
     id: "claude-sonnet-5",
+    taskIds: ["coding", "agents", "visual-understanding"],
     vendorId: "anthropic",
     name: "Claude Sonnet 5",
     family: "Claude 5",
@@ -86,6 +92,7 @@ export const models = [
   },
   {
     id: "gpt-6-1-sol",
+    taskIds: ["reasoning", "coding", "agents", "visual-understanding"],
     vendorId: "openai",
     name: "GPT-6.1 Sol",
     family: "GPT-6.1",
@@ -107,6 +114,7 @@ export const models = [
   },
   {
     id: "gpt-6-luna",
+    taskIds: ["writing-chat", "visual-understanding"],
     vendorId: "openai",
     name: "GPT-6 Luna",
     family: "GPT-6",
@@ -127,6 +135,7 @@ export const models = [
   },
   {
     id: "gpt-6-sol",
+    taskIds: ["coding", "agents", "visual-understanding"],
     vendorId: "openai",
     name: "GPT-6 Sol",
     family: "GPT-6",
@@ -147,6 +156,7 @@ export const models = [
   },
   {
     id: "gpt-5-6-sol",
+    taskIds: ["reasoning", "coding", "visual-understanding"],
     vendorId: "openai",
     name: "GPT-5.6 Sol",
     family: "GPT-5.6",
@@ -167,6 +177,7 @@ export const models = [
   },
   {
     id: "gpt-5-6-terra",
+    taskIds: ["writing-chat", "visual-understanding"],
     vendorId: "openai",
     name: "GPT-5.6 Terra",
     family: "GPT-5.6",
@@ -187,6 +198,7 @@ export const models = [
   },
   {
     id: "gpt-5-6-luna",
+    taskIds: ["writing-chat", "visual-understanding"],
     vendorId: "openai",
     name: "GPT-5.6 Luna",
     family: "GPT-5.6",
@@ -207,6 +219,7 @@ export const models = [
   },
   {
     id: "minimax-m3-1-flash",
+    taskIds: ["reasoning", "coding", "agents", "documents", "visual-understanding"],
     vendorId: "minimax",
     name: "MiniMax M3.1-Flash",
     family: "M3.1",
@@ -221,6 +234,7 @@ export const models = [
   },
   {
     id: "claude-fable-5-1",
+    taskIds: ["reasoning", "agents", "visual-understanding"],
     vendorId: "anthropic",
     name: "Claude Fable 5.1",
     family: "Claude 5",
@@ -241,6 +255,7 @@ export const models = [
   },
   {
     id: "claude-haiku-5-5",
+    taskIds: ["writing-chat", "documents", "visual-understanding"],
     vendorId: "anthropic",
     name: "Claude Haiku 5.5",
     family: "Claude 5.5",
@@ -262,6 +277,7 @@ export const models = [
   },
   {
     id: "claude-haiku-4-5",
+    taskIds: ["writing-chat", "visual-understanding"],
     vendorId: "anthropic",
     name: "Claude Haiku 4.5",
     family: "Claude 4.5",
@@ -282,6 +298,7 @@ export const models = [
   },
   {
     id: "gpt-6-astra",
+    taskIds: ["reasoning", "coding", "agents", "documents", "visual-understanding"],
     vendorId: "openai",
     name: "GPT-6 Astra",
     family: "GPT-6",
@@ -302,6 +319,7 @@ export const models = [
   },
   {
     id: "glm-5-3",
+    taskIds: ["reasoning", "coding", "agents"],
     vendorId: "zai",
     name: "GLM-5.3",
     family: "GLM-5",
@@ -321,6 +339,7 @@ export const models = [
   },
   {
     id: "glm-5-3-flash",
+    taskIds: ["coding", "agents", "documents", "visual-understanding"],
     vendorId: "zai",
     name: "GLM-5.3-Flash",
     family: "GLM-5",
@@ -336,6 +355,7 @@ export const models = [
   },
   {
     id: "glm-5",
+    taskIds: ["coding", "agents"],
     vendorId: "zai",
     name: "GLM-5",
     family: "GLM-5",
@@ -355,6 +375,7 @@ export const models = [
   },
   {
     id: "glm-5-turbo",
+    taskIds: ["agents"],
     vendorId: "zai",
     name: "GLM-5-Turbo",
     family: "GLM-5",
@@ -374,6 +395,7 @@ export const models = [
   },
   {
     id: "glm-5v-turbo",
+    taskIds: ["coding", "agents", "documents", "visual-understanding"],
     vendorId: "zai",
     name: "GLM-5V-Turbo",
     family: "GLM-5V",
@@ -393,6 +415,7 @@ export const models = [
   },
   {
     id: "glm-image",
+    taskIds: ["image-generation"],
     vendorId: "zai",
     name: "GLM-Image",
     family: "GLM-Image",
@@ -405,6 +428,7 @@ export const models = [
   },
   {
     id: "minimax-m3",
+    taskIds: ["coding", "agents", "documents", "visual-understanding"],
     vendorId: "minimax",
     name: "MiniMax M3",
     family: "M3",
@@ -425,6 +449,7 @@ export const models = [
   },
   {
     id: "minimax-m2-7",
+    taskIds: ["coding", "agents"],
     vendorId: "minimax",
     name: "MiniMax M2.7",
     family: "M2.7",
@@ -443,6 +468,7 @@ export const models = [
   },
   {
     id: "minimax-m2-7-highspeed",
+    taskIds: ["coding", "agents"],
     vendorId: "minimax",
     name: "MiniMax M2.7 Highspeed",
     family: "M2.7",
@@ -461,6 +487,7 @@ export const models = [
   },
   {
     id: "deepseek-v4-pro",
+    taskIds: ["reasoning", "coding", "agents"],
     vendorId: "deepseek",
     name: "DeepSeek-V4-Pro",
     family: "DeepSeek-V4",
@@ -481,6 +508,7 @@ export const models = [
   },
   {
     id: "deepseek-v4-flash",
+    taskIds: ["writing-chat"],
     vendorId: "deepseek",
     name: "DeepSeek-V4-Flash",
     family: "DeepSeek-V4",
@@ -495,6 +523,7 @@ export const models = [
   },
   {
     id: "deepseek-v4-flash-vision-exp",
+    taskIds: ["visual-understanding"],
     vendorId: "deepseek",
     name: "DeepSeek-V4-Flash-Vision-Exp",
     family: "DeepSeek-V4",
@@ -509,6 +538,7 @@ export const models = [
   },
   {
     id: "qwen3-8-max",
+    taskIds: ["reasoning", "coding", "agents", "documents", "visual-understanding"],
     vendorId: "qwen",
     name: "Qwen3.8-Max",
     family: "Qwen3.8",
@@ -528,6 +558,7 @@ export const models = [
   },
   {
     id: "qwen3-8-flash",
+    taskIds: ["writing-chat", "coding", "agents", "documents", "visual-understanding"],
     vendorId: "qwen",
     name: "Qwen3.8-Flash",
     family: "Qwen3.8",
@@ -548,6 +579,7 @@ export const models = [
   },
   {
     id: "qwen3-7-plus",
+    taskIds: ["writing-chat", "coding", "agents", "documents", "visual-understanding"],
     vendorId: "qwen",
     name: "Qwen3.7-Plus",
     family: "Qwen3.7",
@@ -562,6 +594,7 @@ export const models = [
   },
   {
     id: "qwen3-7-flash",
+    taskIds: ["writing-chat"],
     vendorId: "qwen",
     name: "Qwen3.7-Flash",
     family: "Qwen3.7",
@@ -576,6 +609,7 @@ export const models = [
   },
   {
     id: "deepseek-v4-1-flash",
+    taskIds: ["writing-chat", "documents", "visual-understanding"],
     vendorId: "deepseek",
     name: "DeepSeek-V4.1-Flash",
     family: "DeepSeek-V4.1",
@@ -604,6 +638,7 @@ export const models = [
   },
   {
     id: "glm-5-2",
+    taskIds: ["coding"],
     vendorId: "zai",
     name: "GLM-5.2",
     family: "GLM-5",
@@ -627,6 +662,7 @@ export const models = [
   },
   {
     id: "glm-5-3-flashx",
+    taskIds: ["coding", "agents", "documents", "visual-understanding"],
     vendorId: "zai",
     name: "GLM-5.3-FlashX",
     family: "GLM-5",

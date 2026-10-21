@@ -102,6 +102,15 @@ function assertReferences(
   for (const model of dataset.models) {
     assertVendorReference(model, vendorIds, "Model");
     assertEvidenceReferences(model, sourceIds, "Model");
+    if (model.taskIds.includes("image-generation") && !model.outputModalities.includes("image")) {
+      throw new Error(`Model "${model.id}" needs image output for image generation.`);
+    }
+    if (model.taskIds.includes("visual-understanding") && !model.inputModalities.some((value) => value === "image" || value === "video")) {
+      throw new Error(`Model "${model.id}" needs image or video input for visual understanding.`);
+    }
+    if (model.taskIds.some((task) => task !== "image-generation") && !model.outputModalities.includes("text")) {
+      throw new Error(`Model "${model.id}" needs text output for its understanding or text tasks.`);
+    }
   }
 
   for (const plan of dataset.plans) {

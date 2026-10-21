@@ -24,9 +24,16 @@ Version 0.1 is deliberately source-first and static at the content layer. Adding
 - Validated, shareable URL state for filters, vendor order, and the active view.
 - Expandable evidence with official source titles, direct URLs, publishers, and exact verification dates.
 - Explorer and vendor-comparison views derived from the same records and active filters.
+- A bilingual `/models` browser groups the catalog by writing/chat, reasoning, coding, agents, document work, visual understanding, and image generation. Search, vendor and task filters, optional historical records, shareable URLs, and CSV/Excel exports use the same visible memberships.
 - Explicit `available`, `limited`, `not-available`, `not-documented`, and `unknown` states.
 - Runtime schema and relationship validation plus unit, component, lint, type, and production-build checks.
 - A data model intended to add vendors without introducing vendor-specific source columns.
+
+### Models by task / Göreve göre modeller
+
+Model schema version 3 requires non-empty, unique `taskIds` from the ordered `modelTaskValues` taxonomy. These are editorial focus areas based on each model's cited records, not exhaustive capabilities or quality scores. A model may belong to several groups; totals count unique models. Legacy and retired records are hidden until explicitly included. Source links and original evidence dates remain visible; grouping does not advance verification dates or refresh the catalog. `/models?lang=tr` opens the Turkish controls and explanations; the default is English.
+
+Model şeması sürüm 3, sıralı `modelTaskValues` sınıflandırmasından boş olmayan ve tekrarlanmayan `taskIds` alanını zorunlu kılar. Gruplar, her modelin kaynaklı kayıtlarına dayanan editoryal kullanım alanlarıdır; tüm yetenekleri veya kalite puanlarını temsil etmez. Bir model birden fazla gruba girebilir; toplamlar benzersiz modelleri sayar. Eski ve kullanımdan kaldırılmış kayıtlar kullanıcı dahil edene kadar gizlidir. Kaynak bağlantıları ve özgün doğrulama tarihleri görünür kalır; gruplandırma tarihleri ilerletmez veya kataloğu güncellemez. `/models?lang=tr` Türkçe kontrolleri ve açıklamaları açar; varsayılan dil İngilizcedir.
 
 ### Category taxonomy
 
@@ -77,7 +84,7 @@ The canonical dataset is assembled in [`src/data/index.ts`](src/data/index.ts) a
 | `Capability` | A provider-neutral question or comparison dimension. |
 | `VendorEntry` | One vendor's sourced statement for one capability. |
 | `ComparisonAssessment` | A pair-specific editorial summary kept separate from vendor facts. |
-| `Model` | A model's positioning, lifecycle, modalities, limits, and optional token pricing. |
+| `Model` | A model's positioning, task focus areas, lifecycle, modalities, limits, and optional token pricing. |
 | `Plan` | A consumer, business, or enterprise offer with public pricing language. |
 | `Source` | An official first-party document referenced by evidence-bearing records. |
 

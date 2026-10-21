@@ -5,7 +5,7 @@ test("every public content route renders on desktop and narrow mobile", async ({
   test.setTimeout(180_000);
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
-  const paths = ["/", "/learn", "/learn/review", "/learn/stats", ...learnDataset.concepts.map((c) => `/learn/${c.id}`)];
+  const paths = ["/", "/models", "/learn", "/learn/review", "/learn/stats", ...learnDataset.concepts.map((c) => `/learn/${c.id}`)];
   for (const width of [1440, 320]) {
     await page.setViewportSize({ width, height: 900 });
     for (const path of paths) {

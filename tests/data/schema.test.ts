@@ -99,6 +99,7 @@ function createValidFixture() {
         vendorId: "anthropic",
         name: "Claude Fixture",
         family: "Claude",
+        taskIds: ["writing-chat"],
         positioning: "A fixture model.",
         lifecycle: "current",
         inputModalities: ["text"],
@@ -139,6 +140,22 @@ function createValidFixture() {
 }
 
 describe("parseAtlasDataset", () => {
+  it("rejects missing, unknown, and duplicate model task assignments", () => {
+    for (const taskIds of [[], ["not-a-task"], ["writing-chat", "writing-chat"]]) {
+      const dataset = createValidFixture();
+      dataset.models[0].taskIds = taskIds;
+      expect(() => parseAtlasDataset(dataset, today)).toThrow();
+    }
+  });
+
+  it("keeps image understanding separate from image generation", () => {
+    const dataset = createValidFixture();
+    dataset.models[0].taskIds = ["image-generation"];
+    expect(() => parseAtlasDataset(dataset, today)).toThrow(/image output/i);
+    dataset.models[0].taskIds = ["visual-understanding"];
+    expect(() => parseAtlasDataset(dataset, today)).toThrow(/image or video input/i);
+  });
+
   it("rejects an unrelated or deceptive host even when the URL uses HTTPS", () => {
     for (const url of ["https://minimax.com/code", "https://platform.claude.com.attacker.example/docs", "https://user:password@platform.claude.com/docs"]) {
       const dataset = createValidFixture();

@@ -2,8 +2,22 @@ import { z } from "zod";
 
 export const schemaVersions = {
   vendor: 1, category: 1, capability: 1, vendorEntry: 1,
-  assessment: 1, model: 2, plan: 1, source: 2,
+  assessment: 1, model: 3, plan: 1, source: 2,
 } as const;
+
+// Ordered, editorial focus areas based on the model's cited evidence.
+// Membership is non-exclusive and does not represent a quality ranking.
+export const modelTaskValues = [
+  "writing-chat",
+  "reasoning",
+  "coding",
+  "agents",
+  "documents",
+  "visual-understanding",
+  "image-generation",
+] as const;
+
+export const modelTaskSchema = z.enum(modelTaskValues);
 
 export const requiredCategoryIds = [
   "models",
@@ -148,6 +162,10 @@ export const modelSchema = z
     vendorId: idSchema,
     name: z.string(),
     family: z.string(),
+    taskIds: z.array(modelTaskSchema).min(1).refine(
+      (ids) => new Set(ids).size === ids.length,
+      "Model task IDs must be unique.",
+    ),
     positioning: z.string(),
     lifecycle: z.enum(["current", "preview", "legacy", "deprecated"]),
     inputModalities: z.array(z.string()),
@@ -221,6 +239,7 @@ export type Capability = z.infer<typeof capabilitySchema>;
 export type VendorEntry = z.infer<typeof vendorEntrySchema>;
 export type ComparisonAssessment = z.infer<typeof comparisonAssessmentSchema>;
 export type Model = z.infer<typeof modelSchema>;
+export type ModelTask = z.infer<typeof modelTaskSchema>;
 export type Plan = z.infer<typeof planSchema>;
 export type Source = z.infer<typeof sourceSchema>;
 export type AtlasDataset = z.infer<typeof atlasDatasetSchema>;
