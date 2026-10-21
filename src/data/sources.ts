@@ -1,4 +1,4 @@
-import type { Source, TaxonomySource } from "@/data/schema";
+import type { Source, TaxonomySource, TaskModelSource } from "@/data/schema";
 
 export const sources = [
   {
@@ -1459,3 +1459,947 @@ export const taxonomySources = [
     "url": "https://aclanthology.org/2021.emnlp-main.594/"
   }
 ] satisfies TaxonomySource[];
+
+/** First-party model cards, checkpoint listings and author documentation, observed 2026-10-21. */
+export const taskModelSources = [
+  {
+    "id": "ow-qwen38",
+    "title": "Qwen3.8-27B — model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0"
+  },
+  {
+    "id": "ow-qwen38-weights",
+    "title": "Qwen3.8-27B — checkpoint files",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3.8-27B/tree/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0"
+  },
+  {
+    "id": "ow-deepseek41",
+    "title": "DeepSeek-V4.1-Flash-1017 — model card",
+    "publisher": "deepseek-ai",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "1bae0e1088993b9b82de08f59de5be5a34e42170"
+  },
+  {
+    "id": "ow-deepseek41-weights",
+    "title": "DeepSeek-V4.1-Flash-1017 — checkpoint files",
+    "publisher": "deepseek-ai",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/tree/1bae0e1088993b9b82de08f59de5be5a34e42170",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "1bae0e1088993b9b82de08f59de5be5a34e42170"
+  },
+  {
+    "id": "ow-glm53",
+    "title": "GLM-5.3 — model card",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/GLM-5.3",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "ba32f8c19c8738e2c57c71798c601d477a7bf844"
+  },
+  {
+    "id": "ow-glm53-weights",
+    "title": "GLM-5.3 — checkpoint files",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/GLM-5.3/tree/ba32f8c19c8738e2c57c71798c601d477a7bf844",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "ba32f8c19c8738e2c57c71798c601d477a7bf844"
+  },
+  {
+    "id": "ow-gliner2",
+    "title": "GLiNER2 large v1 — model card",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/gliner2-large-v1",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "d7aa8a2850d175a9227ff80358ea380723d03ad2"
+  },
+  {
+    "id": "ow-gliner2-weights",
+    "title": "GLiNER2 large v1 — checkpoint files",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/gliner2-large-v1/tree/d7aa8a2850d175a9227ff80358ea380723d03ad2",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "d7aa8a2850d175a9227ff80358ea380723d03ad2"
+  },
+  {
+    "id": "ow-nli",
+    "title": "DeBERTa v3 large NLI — model card",
+    "publisher": "cross-encoder",
+    "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-large",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "bab4bc7178836f731dcfd18c06ca9def0a137712"
+  },
+  {
+    "id": "ow-nli-weights",
+    "title": "DeBERTa v3 large NLI — checkpoint files",
+    "publisher": "cross-encoder",
+    "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-large/tree/bab4bc7178836f731dcfd18c06ca9def0a137712",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "bab4bc7178836f731dcfd18c06ca9def0a137712"
+  },
+  {
+    "id": "ow-coref",
+    "title": "F-Coref — model card",
+    "publisher": "biu-nlp",
+    "url": "https://huggingface.co/biu-nlp/f-coref",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "e91dfff12879495d882ba9460d0c5d5dd44ade59"
+  },
+  {
+    "id": "ow-coref-weights",
+    "title": "F-Coref — checkpoint files",
+    "publisher": "biu-nlp",
+    "url": "https://huggingface.co/biu-nlp/f-coref/tree/e91dfff12879495d882ba9460d0c5d5dd44ade59",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "e91dfff12879495d882ba9460d0c5d5dd44ade59"
+  },
+  {
+    "id": "ow-stanza",
+    "title": "Stanza English models — model card",
+    "publisher": "stanfordnlp",
+    "url": "https://huggingface.co/stanfordnlp/stanza-en",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "810dca30ddb25c30582c019dbaeb3a3e040fb958"
+  },
+  {
+    "id": "ow-stanza-weights",
+    "title": "Stanza English models — checkpoint files",
+    "publisher": "stanfordnlp",
+    "url": "https://huggingface.co/stanfordnlp/stanza-en/tree/810dca30ddb25c30582c019dbaeb3a3e040fb958",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "810dca30ddb25c30582c019dbaeb3a3e040fb958"
+  },
+  {
+    "id": "ow-nllb",
+    "title": "NLLB-200 distilled 600M — model card",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/nllb-200-distilled-600M",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d"
+  },
+  {
+    "id": "ow-nllb-weights",
+    "title": "NLLB-200 distilled 600M — checkpoint files",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/nllb-200-distilled-600M/tree/f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d"
+  },
+  {
+    "id": "ow-coedit",
+    "title": "CoEdIT large — model card",
+    "publisher": "grammarly",
+    "url": "https://huggingface.co/grammarly/coedit-large",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "5637bcdf9d8d4419f97c8cfea36f7d35c79232b6"
+  },
+  {
+    "id": "ow-coedit-weights",
+    "title": "CoEdIT large — checkpoint files",
+    "publisher": "grammarly",
+    "url": "https://huggingface.co/grammarly/coedit-large/tree/5637bcdf9d8d4419f97c8cfea36f7d35c79232b6",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "5637bcdf9d8d4419f97c8cfea36f7d35c79232b6"
+  },
+  {
+    "id": "ow-embedding",
+    "title": "Qwen3-Embedding-8B — model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-Embedding-8B",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "1d8ad4ca9b3dd8059ad90a75d4983776a23d44af"
+  },
+  {
+    "id": "ow-embedding-weights",
+    "title": "Qwen3-Embedding-8B — checkpoint files",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-Embedding-8B/tree/1d8ad4ca9b3dd8059ad90a75d4983776a23d44af",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "1d8ad4ca9b3dd8059ad90a75d4983776a23d44af"
+  },
+  {
+    "id": "ow-reranker",
+    "title": "Qwen3-Reranker-8B — model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-Reranker-8B",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "77d193c791ed757ca307ee72715aa132723da912"
+  },
+  {
+    "id": "ow-reranker-weights",
+    "title": "Qwen3-Reranker-8B — checkpoint files",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-Reranker-8B/tree/77d193c791ed757ca307ee72715aa132723da912",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "77d193c791ed757ca307ee72715aa132723da912"
+  },
+  {
+    "id": "ow-siglip",
+    "title": "SigLIP 2 SO400M — model card",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/siglip2-so400m-patch14-384",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "e8e487298228002f3d8a82e0cd5c8ea9c567f57f"
+  },
+  {
+    "id": "ow-siglip-weights",
+    "title": "SigLIP 2 SO400M — checkpoint files",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/siglip2-so400m-patch14-384/tree/e8e487298228002f3d8a82e0cd5c8ea9c567f57f",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "e8e487298228002f3d8a82e0cd5c8ea9c567f57f"
+  },
+  {
+    "id": "ow-dino",
+    "title": "Grounding DINO base — model card",
+    "publisher": "IDEA-Research",
+    "url": "https://huggingface.co/IDEA-Research/grounding-dino-base",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "12bdfa3120f3e7ec7b434d90674b3396eccf88eb"
+  },
+  {
+    "id": "ow-dino-weights",
+    "title": "Grounding DINO base — checkpoint files",
+    "publisher": "IDEA-Research",
+    "url": "https://huggingface.co/IDEA-Research/grounding-dino-base/tree/12bdfa3120f3e7ec7b434d90674b3396eccf88eb",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "12bdfa3120f3e7ec7b434d90674b3396eccf88eb"
+  },
+  {
+    "id": "ow-sam3",
+    "title": "SAM 3 — model card",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/sam3",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "3c879f39826c281e95690f02c7821c4de09afae7"
+  },
+  {
+    "id": "ow-sam3-weights",
+    "title": "SAM 3 — checkpoint files",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/sam3/tree/3c879f39826c281e95690f02c7821c4de09afae7",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "3c879f39826c281e95690f02c7821c4de09afae7"
+  },
+  {
+    "id": "ow-mask2former",
+    "title": "Mask2Former Swin large · ADE20K — model card",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/mask2former-swin-large-ade-semantic",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "aa25c92404a40599614215e76514c79b427c7527"
+  },
+  {
+    "id": "ow-mask2former-weights",
+    "title": "Mask2Former Swin large · ADE20K — checkpoint files",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/mask2former-swin-large-ade-semantic/tree/aa25c92404a40599614215e76514c79b427c7527",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "aa25c92404a40599614215e76514c79b427c7527"
+  },
+  {
+    "id": "ow-depth",
+    "title": "Depth Anything 3 large — model card",
+    "publisher": "depth-anything",
+    "url": "https://huggingface.co/depth-anything/DA3-LARGE",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "c54c26b16ec04d218e8d584ecf4bce082a9fcc20"
+  },
+  {
+    "id": "ow-depth-weights",
+    "title": "Depth Anything 3 large — checkpoint files",
+    "publisher": "depth-anything",
+    "url": "https://huggingface.co/depth-anything/DA3-LARGE/tree/c54c26b16ec04d218e8d584ecf4bce082a9fcc20",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "c54c26b16ec04d218e8d584ecf4bce082a9fcc20"
+  },
+  {
+    "id": "ow-pose",
+    "title": "ViTPose+ huge — model card",
+    "publisher": "usyd-community",
+    "url": "https://huggingface.co/usyd-community/vitpose-plus-huge",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "9f36d7aec1800d23e97f10c2e74393aee92aa53f"
+  },
+  {
+    "id": "ow-pose-weights",
+    "title": "ViTPose+ huge — checkpoint files",
+    "publisher": "usyd-community",
+    "url": "https://huggingface.co/usyd-community/vitpose-plus-huge/tree/9f36d7aec1800d23e97f10c2e74393aee92aa53f",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "9f36d7aec1800d23e97f10c2e74393aee92aa53f"
+  },
+  {
+    "id": "ow-videomae",
+    "title": "VideoMAE large · Kinetics-400 — model card",
+    "publisher": "MCG-NJU",
+    "url": "https://huggingface.co/MCG-NJU/videomae-large-finetuned-kinetics",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "0f6adcd5f6902900aa0281f9daacfe52bb3c4ad4"
+  },
+  {
+    "id": "ow-videomae-weights",
+    "title": "VideoMAE large · Kinetics-400 — checkpoint files",
+    "publisher": "MCG-NJU",
+    "url": "https://huggingface.co/MCG-NJU/videomae-large-finetuned-kinetics/tree/0f6adcd5f6902900aa0281f9daacfe52bb3c4ad4",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "0f6adcd5f6902900aa0281f9daacfe52bb3c4ad4"
+  },
+  {
+    "id": "ow-ocr",
+    "title": "PaddleOCR-VL-1.6 — model card",
+    "publisher": "PaddlePaddle",
+    "url": "https://huggingface.co/PaddlePaddle/PaddleOCR-VL-1.6",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "c5630abae1d940eafe0697512a0325494b02ab42"
+  },
+  {
+    "id": "ow-ocr-weights",
+    "title": "PaddleOCR-VL-1.6 — checkpoint files",
+    "publisher": "PaddlePaddle",
+    "url": "https://huggingface.co/PaddlePaddle/PaddleOCR-VL-1.6/tree/c5630abae1d940eafe0697512a0325494b02ab42",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "c5630abae1d940eafe0697512a0325494b02ab42"
+  },
+  {
+    "id": "ow-image",
+    "title": "Qwen-Image-2512 — model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen-Image-2512",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "25468b98e3276ca6700de15c6628e51b7de54a26"
+  },
+  {
+    "id": "ow-image-weights",
+    "title": "Qwen-Image-2512 — checkpoint files",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen-Image-2512/tree/25468b98e3276ca6700de15c6628e51b7de54a26",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "25468b98e3276ca6700de15c6628e51b7de54a26"
+  },
+  {
+    "id": "ow-imageedit",
+    "title": "Qwen-Image-Edit-2511 — model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen-Image-Edit-2511",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9"
+  },
+  {
+    "id": "ow-imageedit-weights",
+    "title": "Qwen-Image-Edit-2511 — checkpoint files",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen-Image-Edit-2511/tree/6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9"
+  },
+  {
+    "id": "ow-fill",
+    "title": "FLUX.1 Fill dev — model card",
+    "publisher": "black-forest-labs",
+    "url": "https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "358293da0354175698b67ec8299acf928313a78a"
+  },
+  {
+    "id": "ow-fill-weights",
+    "title": "FLUX.1 Fill dev — checkpoint files",
+    "publisher": "black-forest-labs",
+    "url": "https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/tree/358293da0354175698b67ec8299acf928313a78a",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "358293da0354175698b67ec8299acf928313a78a"
+  },
+  {
+    "id": "ow-wan",
+    "title": "Wan2.2 TI2V 5B — model card",
+    "publisher": "Wan-AI",
+    "url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "921dbaf3f1674a56f47e83fb80a34bac8a8f203e"
+  },
+  {
+    "id": "ow-wan-weights",
+    "title": "Wan2.2 TI2V 5B — checkpoint files",
+    "publisher": "Wan-AI",
+    "url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/tree/921dbaf3f1674a56f47e83fb80a34bac8a8f203e",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "921dbaf3f1674a56f47e83fb80a34bac8a8f203e"
+  },
+  {
+    "id": "ow-shape",
+    "title": "Shap-E — model card",
+    "publisher": "openai",
+    "url": "https://huggingface.co/openai/shap-e",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "7bd337afdea1c17842e1c3cc45c4e268356dba40"
+  },
+  {
+    "id": "ow-shape-weights",
+    "title": "Shap-E — checkpoint files",
+    "publisher": "openai",
+    "url": "https://huggingface.co/openai/shap-e/tree/7bd337afdea1c17842e1c3cc45c4e268356dba40",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "7bd337afdea1c17842e1c3cc45c4e268356dba40"
+  },
+  {
+    "id": "ow-asr",
+    "title": "Qwen3-ASR-1.7B — model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-ASR-1.7B",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "7278e1e70fe206f11671096ffdd38061171dd6e5"
+  },
+  {
+    "id": "ow-asr-weights",
+    "title": "Qwen3-ASR-1.7B — checkpoint files",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-ASR-1.7B/tree/7278e1e70fe206f11671096ffdd38061171dd6e5",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "7278e1e70fe206f11671096ffdd38061171dd6e5"
+  },
+  {
+    "id": "ow-seamless",
+    "title": "SeamlessM4T v2 large — model card",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/seamless-m4t-v2-large",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "5f8cc790b19fc3f67a61c105133b20b34e3dcb76"
+  },
+  {
+    "id": "ow-seamless-weights",
+    "title": "SeamlessM4T v2 large — checkpoint files",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/seamless-m4t-v2-large/tree/5f8cc790b19fc3f67a61c105133b20b34e3dcb76",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "5f8cc790b19fc3f67a61c105133b20b34e3dcb76"
+  },
+  {
+    "id": "ow-keyword",
+    "title": "wav2vec 2.0 · SUPERB KS — model card",
+    "publisher": "superb",
+    "url": "https://huggingface.co/superb/wav2vec2-base-superb-ks",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "372e0486cd83e6f0c05c20a27262e9ca09450d24"
+  },
+  {
+    "id": "ow-keyword-weights",
+    "title": "wav2vec 2.0 · SUPERB KS — checkpoint files",
+    "publisher": "superb",
+    "url": "https://huggingface.co/superb/wav2vec2-base-superb-ks/tree/372e0486cd83e6f0c05c20a27262e9ca09450d24",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "372e0486cd83e6f0c05c20a27262e9ca09450d24"
+  },
+  {
+    "id": "ow-emotion",
+    "title": "HuBERT large · SUPERB ER — model card",
+    "publisher": "superb",
+    "url": "https://huggingface.co/superb/hubert-large-superb-er",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "ef1a2ebfd7cfc424dc7f0fbcdc406e8b794d63bb"
+  },
+  {
+    "id": "ow-emotion-weights",
+    "title": "HuBERT large · SUPERB ER — checkpoint files",
+    "publisher": "superb",
+    "url": "https://huggingface.co/superb/hubert-large-superb-er/tree/ef1a2ebfd7cfc424dc7f0fbcdc406e8b794d63bb",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "ef1a2ebfd7cfc424dc7f0fbcdc406e8b794d63bb"
+  },
+  {
+    "id": "ow-ast",
+    "title": "Audio Spectrogram Transformer — model card",
+    "publisher": "MIT",
+    "url": "https://huggingface.co/MIT/ast-finetuned-audioset-10-10-0.4593",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "f826b80d28226b62986cc218e5cec390b1096902"
+  },
+  {
+    "id": "ow-ast-weights",
+    "title": "Audio Spectrogram Transformer — checkpoint files",
+    "publisher": "MIT",
+    "url": "https://huggingface.co/MIT/ast-finetuned-audioset-10-10-0.4593/tree/f826b80d28226b62986cc218e5cec390b1096902",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "f826b80d28226b62986cc218e5cec390b1096902"
+  },
+  {
+    "id": "ow-ecapa",
+    "title": "ECAPA-TDNN · VoxCeleb — model card",
+    "publisher": "speechbrain",
+    "url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "0f99f2d0ebe89ac095bcc5903c4dd8f72b367286"
+  },
+  {
+    "id": "ow-ecapa-weights",
+    "title": "ECAPA-TDNN · VoxCeleb — checkpoint files",
+    "publisher": "speechbrain",
+    "url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb/tree/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "0f99f2d0ebe89ac095bcc5903c4dd8f72b367286"
+  },
+  {
+    "id": "ow-diarization",
+    "title": "pyannote Community-1 — model card",
+    "publisher": "pyannote",
+    "url": "https://huggingface.co/pyannote/speaker-diarization-community-1",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "3533c8cf8e369892e6b79ff1bf80f7b0286a54ee"
+  },
+  {
+    "id": "ow-diarization-weights",
+    "title": "pyannote Community-1 — checkpoint files",
+    "publisher": "pyannote",
+    "url": "https://huggingface.co/pyannote/speaker-diarization-community-1/tree/3533c8cf8e369892e6b79ff1bf80f7b0286a54ee",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "3533c8cf8e369892e6b79ff1bf80f7b0286a54ee"
+  },
+  {
+    "id": "ow-tts",
+    "title": "Qwen3-TTS 1.7B CustomVoice — model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "0c0e3051f131929182e2c023b9537f8b1c68adfe"
+  },
+  {
+    "id": "ow-tts-weights",
+    "title": "Qwen3-TTS 1.7B CustomVoice — checkpoint files",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice/tree/0c0e3051f131929182e2c023b9537f8b1c68adfe",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "0c0e3051f131929182e2c023b9537f8b1c68adfe"
+  },
+  {
+    "id": "ow-separation",
+    "title": "SepFormer · WHAMR! — model card",
+    "publisher": "speechbrain",
+    "url": "https://huggingface.co/speechbrain/sepformer-whamr",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "9950fd8055b38679d2af5bef2366b5dba600ec66"
+  },
+  {
+    "id": "ow-separation-weights",
+    "title": "SepFormer · WHAMR! — checkpoint files",
+    "publisher": "speechbrain",
+    "url": "https://huggingface.co/speechbrain/sepformer-whamr/tree/9950fd8055b38679d2af5bef2366b5dba600ec66",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "9950fd8055b38679d2af5bef2366b5dba600ec66"
+  },
+  {
+    "id": "ow-enhancement",
+    "title": "MetricGAN+ · VoiceBank — model card",
+    "publisher": "speechbrain",
+    "url": "https://huggingface.co/speechbrain/metricgan-plus-voicebank",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "a196ce26b3bdace6fa1d819017584bdbcce462a8"
+  },
+  {
+    "id": "ow-enhancement-weights",
+    "title": "MetricGAN+ · VoiceBank — checkpoint files",
+    "publisher": "speechbrain",
+    "url": "https://huggingface.co/speechbrain/metricgan-plus-voicebank/tree/a196ce26b3bdace6fa1d819017584bdbcce462a8",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "a196ce26b3bdace6fa1d819017584bdbcce462a8"
+  },
+  {
+    "id": "ow-voice",
+    "title": "Seed-VC v2 — model card",
+    "publisher": "Plachta",
+    "url": "https://huggingface.co/Plachta/Seed-VC",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "257283f9f41585055e8f858fba4fd044e5caed6e"
+  },
+  {
+    "id": "ow-voice-weights",
+    "title": "Seed-VC v2 — checkpoint files",
+    "publisher": "Plachta",
+    "url": "https://huggingface.co/Plachta/Seed-VC/tree/257283f9f41585055e8f858fba4fd044e5caed6e",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "257283f9f41585055e8f858fba4fd044e5caed6e"
+  },
+  {
+    "id": "ow-audiogen",
+    "title": "AudioGen medium — model card",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/audiogen-medium",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "1277dd7dfd8fa57a205a70acc5de0ee90804502f"
+  },
+  {
+    "id": "ow-audiogen-weights",
+    "title": "AudioGen medium — checkpoint files",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/audiogen-medium/tree/1277dd7dfd8fa57a205a70acc5de0ee90804502f",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "1277dd7dfd8fa57a205a70acc5de0ee90804502f"
+  },
+  {
+    "id": "ow-musicgen",
+    "title": "MusicGen large — model card",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/musicgen-large",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "15ccdc92099879e47b6da12c350cdb71d4eab3ca"
+  },
+  {
+    "id": "ow-musicgen-weights",
+    "title": "MusicGen large — checkpoint files",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/musicgen-large/tree/15ccdc92099879e47b6da12c350cdb71d4eab3ca",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "15ccdc92099879e47b6da12c350cdb71d4eab3ca"
+  },
+  {
+    "id": "ow-ace",
+    "title": "ACE-Step 1.5 — model card",
+    "publisher": "ACE-Step",
+    "url": "https://huggingface.co/ACE-Step/Ace-Step1.5",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "19671f406d603126926c1b7e2adc169acbcade22"
+  },
+  {
+    "id": "ow-ace-weights",
+    "title": "ACE-Step 1.5 — checkpoint files",
+    "publisher": "ACE-Step",
+    "url": "https://huggingface.co/ACE-Step/Ace-Step1.5/tree/19671f406d603126926c1b7e2adc169acbcade22",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "19671f406d603126926c1b7e2adc169acbcade22"
+  },
+  {
+    "id": "ow-coder",
+    "title": "Qwen3-Coder-Next — model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-Coder-Next",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "a7fbcb5c0e12d62a448eaa0e260346bf5dcc0feb"
+  },
+  {
+    "id": "ow-coder-weights",
+    "title": "Qwen3-Coder-Next — checkpoint files",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-Coder-Next/tree/a7fbcb5c0e12d62a448eaa0e260346bf5dcc0feb",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "a7fbcb5c0e12d62a448eaa0e260346bf5dcc0feb"
+  },
+  {
+    "id": "ow-sql",
+    "title": "SQLCoder 70B alpha — model card",
+    "publisher": "defog",
+    "url": "https://huggingface.co/defog/sqlcoder-70b-alpha",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "8095a5ded3d3ed70fe27e9ed46b91f3e29a1b51a"
+  },
+  {
+    "id": "ow-sql-weights",
+    "title": "SQLCoder 70B alpha — checkpoint files",
+    "publisher": "defog",
+    "url": "https://huggingface.co/defog/sqlcoder-70b-alpha/tree/8095a5ded3d3ed70fe27e9ed46b91f3e29a1b51a",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "8095a5ded3d3ed70fe27e9ed46b91f3e29a1b51a"
+  },
+  {
+    "id": "ow-codet5",
+    "title": "CodeT5 base — model card",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5-base",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "02cd2d31bb7c6d0e4d91156167b2de044989c733"
+  },
+  {
+    "id": "ow-codet5-weights",
+    "title": "CodeT5 base — checkpoint files",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5-base/tree/02cd2d31bb7c6d0e4d91156167b2de044989c733",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "02cd2d31bb7c6d0e4d91156167b2de044989c733"
+  },
+  {
+    "id": "ow-codet5plus",
+    "title": "CodeT5+ 770M — model card",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5p-770m",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "3f7cc6e80aee6612f41253b5ee28f09f86faa35f"
+  },
+  {
+    "id": "ow-codet5plus-weights",
+    "title": "CodeT5+ 770M — checkpoint files",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5p-770m/tree/3f7cc6e80aee6612f41253b5ee28f09f86faa35f",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "3f7cc6e80aee6612f41253b5ee28f09f86faa35f"
+  },
+  {
+    "id": "ow-bart",
+    "title": "BART large · CNN/DailyMail — model card",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/bart-large-cnn",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "37f520fa929c961707657b28798b30c003dd100b"
+  },
+  {
+    "id": "ow-bart-weights",
+    "title": "BART large · CNN/DailyMail — checkpoint files",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/bart-large-cnn/tree/37f520fa929c961707657b28798b30c003dd100b",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "37f520fa929c961707657b28798b30c003dd100b"
+  },
+  {
+    "id": "ow-tabpfn",
+    "title": "TabPFN 3.5 — model card",
+    "publisher": "Prior-Labs",
+    "url": "https://huggingface.co/Prior-Labs/tabpfn_3_5",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "06bf2ba35c80a92a3b9abb436b99cf49e7a0365e"
+  },
+  {
+    "id": "ow-tabpfn-weights",
+    "title": "TabPFN 3.5 — checkpoint files",
+    "publisher": "Prior-Labs",
+    "url": "https://huggingface.co/Prior-Labs/tabpfn_3_5/tree/06bf2ba35c80a92a3b9abb436b99cf49e7a0365e",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "06bf2ba35c80a92a3b9abb436b99cf49e7a0365e"
+  },
+  {
+    "id": "ow-chronos",
+    "title": "Chronos-2 — model card",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/chronos-2",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "29ec3766d36d6f73f0696f85560a422f50e8498c"
+  },
+  {
+    "id": "ow-chronos-weights",
+    "title": "Chronos-2 — checkpoint files",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/chronos-2/tree/29ec3766d36d6f73f0696f85560a422f50e8498c",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "29ec3766d36d6f73f0696f85560a422f50e8498c"
+  },
+  {
+    "id": "ow-moment",
+    "title": "MOMENT-1 large — model card",
+    "publisher": "AutonLab",
+    "url": "https://huggingface.co/AutonLab/MOMENT-1-large",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "ca58581bc7bea2ebed4e80dc0a3e4b8b609c6ecc"
+  },
+  {
+    "id": "ow-moment-weights",
+    "title": "MOMENT-1 large — checkpoint files",
+    "publisher": "AutonLab",
+    "url": "https://huggingface.co/AutonLab/MOMENT-1-large/tree/ca58581bc7bea2ebed4e80dc0a3e4b8b609c6ecc",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "ca58581bc7bea2ebed4e80dc0a3e4b8b609c6ecc"
+  },
+  {
+    "id": "ow-boltz",
+    "title": "Boltz-2 — model card",
+    "publisher": "boltz-community",
+    "url": "https://huggingface.co/boltz-community/boltz-2",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "6fdef46d763fee7fbb83ca5501ccceff43b85607"
+  },
+  {
+    "id": "ow-boltz-weights",
+    "title": "Boltz-2 — checkpoint files",
+    "publisher": "boltz-community",
+    "url": "https://huggingface.co/boltz-community/boltz-2/tree/6fdef46d763fee7fbb83ca5501ccceff43b85607",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "6fdef46d763fee7fbb83ca5501ccceff43b85607"
+  },
+  {
+    "id": "ow-prover",
+    "title": "DeepSeek-Prover-V2 671B — model card",
+    "publisher": "deepseek-ai",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-671B",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "a51f899d0599838aa934b21b45b4c1ae7fbce2d3"
+  },
+  {
+    "id": "ow-prover-weights",
+    "title": "DeepSeek-Prover-V2 671B — checkpoint files",
+    "publisher": "deepseek-ai",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-671B/tree/a51f899d0599838aa934b21b45b4c1ae7fbce2d3",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "a51f899d0599838aa934b21b45b4c1ae7fbce2d3"
+  },
+  {
+    "id": "ow-uitars",
+    "title": "UI-TARS 1.5 7B — model card",
+    "publisher": "ByteDance-Seed",
+    "url": "https://huggingface.co/ByteDance-Seed/UI-TARS-1.5-7B",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "683d002dd99d8f95104d31e70391a39348857f4e"
+  },
+  {
+    "id": "ow-uitars-weights",
+    "title": "UI-TARS 1.5 7B — checkpoint files",
+    "publisher": "ByteDance-Seed",
+    "url": "https://huggingface.co/ByteDance-Seed/UI-TARS-1.5-7B/tree/683d002dd99d8f95104d31e70391a39348857f4e",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "683d002dd99d8f95104d31e70391a39348857f4e"
+  },
+  {
+    "id": "ow-sam-license",
+    "title": "SAM License",
+    "publisher": "Meta",
+    "url": "https://github.com/facebookresearch/sam3/blob/main/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-mask-license",
+    "title": "Mask2Former model weights license",
+    "publisher": "Meta",
+    "url": "https://github.com/facebookresearch/Mask2Former/blob/main/MODEL_ZOO.md#license",
+    "kind": "license",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-seed-docs",
+    "title": "Seed-VC official models and inference",
+    "publisher": "Plachta",
+    "url": "https://github.com/Plachtaa/seed-vc",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-boltz-docs",
+    "title": "Boltz-2 official structure and affinity documentation",
+    "publisher": "Boltz authors",
+    "url": "https://github.com/jwohlwend/boltz",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-stanza-docs",
+    "title": "Stanza processors",
+    "publisher": "Stanford NLP",
+    "url": "https://stanfordnlp.github.io/stanza/pipeline.html",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-r1",
+    "title": "DeepSeek-R1-0528 — model card",
+    "publisher": "deepseek-ai",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "4236a6af538feda4548eca9ab308586007567f52"
+  },
+  {
+    "id": "ow-r1-weights",
+    "title": "DeepSeek-R1-0528 — checkpoint files",
+    "publisher": "deepseek-ai",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528/tree/4236a6af538feda4548eca9ab308586007567f52",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "4236a6af538feda4548eca9ab308586007567f52"
+  }
+] satisfies TaskModelSource[];

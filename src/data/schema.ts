@@ -3,6 +3,7 @@ import { z } from "zod";
 export const schemaVersions = {
   vendor: 1, category: 1, capability: 1, vendorEntry: 1,
   assessment: 1, model: 3, plan: 1, source: 2, taxonomyMap: 1, taxonomySource: 1,
+  taskModelSource: 1, openWeightModel: 1, taxonomyTask: 1,
 } as const;
 
 // Ordered, editorial focus areas based on the model's cited evidence.
@@ -242,6 +243,49 @@ export const taxonomyMapSchema = z.object({
 
 export type TaxonomySource = z.infer<typeof taxonomySourceSchema>;
 export type TaxonomyMap = z.infer<typeof taxonomyMapSchema>;
+
+const bilingualTextSchema = z.object({ en: z.string().min(1), tr: z.string().min(1) }).strict();
+
+export const taskModelSourceSchema = z.object({
+  id: z.string().regex(/^ow-[a-z0-9-]+$/),
+  title: z.string().min(1),
+  publisher: z.string().min(1),
+  url: httpsUrlSchema,
+  kind: z.enum(["model-card", "weights", "documentation", "license"]),
+  observedAt: z.iso.date(),
+  revision: z.string().regex(/^[a-f0-9]{40}$/).optional(),
+}).strict();
+
+export const openWeightModelSchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  name: z.string().min(1),
+  cardSourceId: taskModelSourceSchema.shape.id,
+  weightsSourceId: taskModelSourceSchema.shape.id,
+  licenseSourceId: taskModelSourceSchema.shape.id,
+  license: z.string().min(1),
+  access: z.enum(["public", "gated"]),
+  role: z.enum(["shortlist", "reference"]),
+  context: bilingualTextSchema,
+}).strict();
+
+export const taxonomyTaskSchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  name: z.string().min(1),
+  family: z.string().min(1),
+  definition: z.string().min(1),
+  definitionSourceId: taxonomySourceSchema.shape.id,
+  note: bilingualTextSchema,
+  recommendations: z.array(z.object({
+    modelId: openWeightModelSchema.shape.id,
+    evidence: z.enum(["evaluated", "documented", "adaptation"]),
+    rationale: bilingualTextSchema,
+    sourceIds: z.array(taskModelSourceSchema.shape.id).min(1),
+  }).strict()),
+}).strict();
+
+export type TaskModelSource = z.infer<typeof taskModelSourceSchema>;
+export type OpenWeightModel = z.infer<typeof openWeightModelSchema>;
+export type TaxonomyTask = z.infer<typeof taxonomyTaskSchema>;
 
 export const atlasDatasetSchema = z
   .object({

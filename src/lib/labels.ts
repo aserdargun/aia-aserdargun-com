@@ -135,3 +135,36 @@ export const taxonomyLabels = {
     definitions: "Tanımları ve tam kaynak listesini indir (İngilizce)", loading: "Taksonomi haritası yükleniyor…",
   },
 } as const;
+
+export const taskModelLabels = {
+  en: {
+    cardAction: "view models and sources",
+    title: "Find open-weight models", select: "Select a task", placeholder: "Choose a task from the map or this list",
+    coverage: "tasks with model candidates", modelCount: "models", snapshot: "Source review",
+    method: "How the shortlist is selected",
+    methodology: "Task-specific evidence, released weights and license visibility guide this editorial shortlist. A shortlist entry is a candidate to evaluate, not a universal winner. Reference models provide reproducible specialist baselines; they are not presented as current leaders. Scores come from publishers, use different datasets and protocols, and are not normalized or independently reproduced here.",
+    evidenceHelp: "Evaluated: relevant evaluation is cited. Documented: the card demonstrates or states support. Adaptation: extra training or a pipeline is required; this is an editorial proposal, not verified out-of-the-box support.",
+    hint: "Click a task card to see models and evidence. Original task-definition citations remain available in the panel and SVG download.",
+    panel: "Models and evidence", close: "Close model panel", empty: "No verified pretrained recommendation",
+    definition: "Task definition source", why: "Why this model", context: "Scope and requirements", sources: "Supporting sources",
+    weights: "Weight files", license: "License", reviewed: "Checked", access: "Access", public: "Public weights", gated: "Acceptance or approval required",
+    shortlist: "Shortlist candidate", reference: "Specialist reference", evaluated: "Evaluation cited", documented: "Documented support", adaptation: "Adaptation required",
+    noSelection: "Select a task to inspect its models and primary evidence.", invalid: "This task identifier is not in the catalogue. Select a task from the list.",
+    count: "model candidates", notRun: "Models were not downloaded or run for this catalogue. Source review does not establish performance on your data.",
+  },
+  tr: {
+    cardAction: "modelleri ve kaynakları görüntüle",
+    title: "Açık ağırlıklı modelleri bul", select: "Görev seç", placeholder: "Haritadan veya bu listeden bir görev seç",
+    coverage: "görevde model adayı", modelCount: "model", snapshot: "Kaynak incelemesi",
+    method: "Kısa liste nasıl seçiliyor?",
+    methodology: "Bu editoryal kısa liste; göreve özel kanıt, yayımlanmış ağırlıklar ve görünür lisans bilgisine dayanır. Kısa listedeki model, değerlendirilecek bir adaydır; evrensel birincilik iddiası taşımaz. Referans modeller tekrarlanabilir uzman başlangıçlarıdır; güncel lider olarak sunulmaz. Puanlar yayıncılardan gelir, farklı veri kümeleri ve protokoller kullanır; burada normalize edilmedi veya bağımsız olarak yeniden üretilmedi.",
+    evidenceHelp: "Değerlendirme: ilgili değerlendirmeye kaynak verilir. Belgelenmiş destek: kart desteği gösterir veya belirtir. Uyarlama: ek eğitim veya işlem akışı gerekir; bu editoryal öneridir, hazır kullanım desteği doğrulanmış değildir.",
+    hint: "Modelleri ve kanıtları görmek için görev kartına tıkla. Özgün görev tanımı kaynaklarına panelden ve SVG indirmesinden ulaşabilirsin.",
+    panel: "Modeller ve kanıtlar", close: "Model panelini kapat", empty: "Doğrulanmış hazır model önerisi yok",
+    definition: "Görev tanımının kaynağı", why: "Neden bu model?", context: "Kapsam ve gereksinimler", sources: "Destekleyici kaynaklar",
+    weights: "Ağırlık dosyaları", license: "Lisans", reviewed: "Kontrol", access: "Erişim", public: "Herkese açık ağırlıklar", gated: "Koşul kabulü veya onay gerekiyor",
+    shortlist: "Kısa liste adayı", reference: "Uzman referansı", evaluated: "Değerlendirme kaynaklı", documented: "Belgelenmiş destek", adaptation: "Uyarlama gerekiyor",
+    noSelection: "Modellerini ve birincil kanıtlarını incelemek için bir görev seç.", invalid: "Bu görev kimliği katalogda yok. Listeden bir görev seç.",
+    count: "model adayı", notRun: "Bu katalog için modeller indirilmedi veya çalıştırılmadı. Kaynak incelemesi, kendi verindeki başarımı kanıtlamaz.",
+  },
+} as const;

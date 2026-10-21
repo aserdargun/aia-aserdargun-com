@@ -1,13 +1,17 @@
 import { atlasDataset } from "../src/data/index";
 import { readFile } from "node:fs/promises";
 import { taxonomyMaps } from "../src/data/taxonomy";
-import { taxonomySources } from "../src/data/sources";
+import { taxonomySources, taskModelSources } from "../src/data/sources";
+import { taxonomyTasks, openWeightModels } from "../src/data/task-models";
+import { validateTaskModels } from "../src/lib/task-models";
 import { validateTaxonomyMap } from "../src/lib/taxonomy";
 
 for (const map of taxonomyMaps) {
   validateTaxonomyMap(map, await readFile(`public${map.assetPath}`, "utf8"), taxonomySources);
 }
 console.log(`Taxonomy maps: ${taxonomyMaps.length}; scholarly references: ${taxonomySources.length}`);
+validateTaskModels(taxonomyTasks, openWeightModels, taskModelSources, taxonomySources, await readFile("public/assets/taxonomy/ai-task-taxonomy.svg", "utf8"));
+console.log(`Task catalogue: ${taxonomyTasks.length} tasks; ${openWeightModels.length} open-weight models; ${taskModelSources.length} primary observations`);
 
 const collections = [
   ["Vendors", atlasDataset.vendors.length],

@@ -45,6 +45,20 @@ Static originals and definitions live in `public/assets/taxonomy/`; map metadata
 
 Özgün SVG'ler ve tanımlar `public/assets/taxonomy/`, harita üst verileri `src/data/taxonomy.ts`, akademik kaynak kayıtları ise `src/data/sources.ts` içindeki `taxonomySources` alanındadır. Sürümlenen taksonomi şemaları sağlayıcı kaynaklarından bağımsızdır. Doğrulama, SVG atıflarını kaynak kayıtlarıyla eşleştirir; statik çıktı her iki sayfayı ve indirilebilir dosyalarını içerir.
 
+### Open-weight models by taxonomy task / Taksonomi görevlerine göre açık ağırlıklı modeller
+
+Task cards on `/taxonomy/tasks` open a model evidence panel. A grouped selector provides the same interaction without zooming. `?task=automatic-speech-recognition&lang=tr` preserves the selected task and language across reload and browser history. The original SVG remains unchanged and keeps its task-definition citations.
+
+`/taxonomy/tasks` üzerindeki görev kartları model kanıt panelini açar. Gruplanmış seçici aynı etkileşimi yakınlaştırma gerektirmeden sunar. `?task=automatic-speech-recognition&lang=tr`, seçili görevi ve dili yenileme ve tarayıcı geçmişinde korur. Özgün SVG ve görev tanımı atıfları korunur.
+
+The 2026-10-21 editorial snapshot contains 50 downloadable model entries and 86 task–model relationships across 71 of the 85 tasks. The other 14 tasks explicitly explain the lack of a verified pretrained recommendation. Model and relation data live in `src/data/task-models.ts`; 105 primary model-card, checkpoint, license and documentation observations live in `taskModelSources` in `src/data/sources.ts`. Checkpoint links pin the observed repository revision. These schemas are versioned independently of vendor models and human-authored assessment statuses.
+
+2026-10-21 tarihli editoryal kayıt, 50 indirilebilir model kaydı ve 85 görevin 71'ini kapsayan 86 görev–model ilişkisi içerir. Diğer 14 görev doğrulanmış hazır model önerisinin yokluğunu açıklar. Model ve ilişki verileri `src/data/task-models.ts`, 105 birincil model kartı, ağırlık, lisans ve belge gözlemi `src/data/sources.ts` içindeki `taskModelSources` alanındadır. Ağırlık bağlantıları gözlemlenen depo sürümünü sabitler. Bu şemalar sağlayıcı modellerinden ve insan tarafından yazılan değerlendirme durumlarından bağımsız sürümlenir.
+
+Selection distinguishes shortlist candidates from historical specialist references, and evaluated evidence from documented support and proposed adaptation. Publisher scores are not comparable without checking dataset versions, sampling budgets and agent harnesses. In particular, base CodeT5 weights need task-specific tuning; Boltz-2 affinity is a narrow molecular-property subtask; ASR language coverage does not establish TTS language coverage; GUI results include the execution environment. Gated access and non-commercial/custom weight licenses are visible. No weights are downloaded and no inference or independent model evaluation runs in this application.
+
+Seçim; kısa liste adaylarını tarihsel uzman referanslarından, değerlendirme kanıtını belgelenmiş destek ve önerilen uyarlamadan ayırır. Veri kümesi sürümleri, örnekleme bütçeleri ve ajan çatıları kontrol edilmeden yayıncı puanları karşılaştırılamaz. Özellikle temel CodeT5 ağırlıkları göreve özel ince ayar gerektirir; Boltz-2 afinitesi dar bir moleküler özellik alt görevidir; ASR dil kapsamı TTS kapsamını kanıtlamaz; GUI sonuçları yürütme ortamını içerir. Koşullu erişim ve ticari olmayan/özel ağırlık lisansları görünürdür. Uygulama ağırlık indirmez, çıkarım veya bağımsız model değerlendirmesi çalıştırmaz.
+
 ### Category taxonomy
 
 The canonical display order is enforced during validation:
