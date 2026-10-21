@@ -45,6 +45,7 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
   const viewer = useRef<HTMLElement>(null);
   const viewport = useRef<HTMLDivElement>(null);
   const sourceList = useRef<HTMLDetailsElement>(null);
+  const guide = useRef<HTMLDetailsElement>(null);
   const pendingScroll = useRef<{ x: number; y: number } | null>(null);
   const [viewportWidth, setViewportWidth] = useState(0);
   const [zoom, setZoom] = useState<number | null>(null);
@@ -56,7 +57,9 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
     if (selectedTask || selectedFamily) {
       const panel = document.getElementById(selectedTask ? "task-model-panel" : "model-family-panel");
       panel?.focus({ preventScroll: true });
-      panel?.scrollIntoView({ block: "nearest", inline: "nearest" });
+      if (window.matchMedia("(max-width: 900px)").matches) {
+        panel?.scrollIntoView({ block: "nearest", inline: "nearest" });
+      }
       if (panel) panel.scrollTop = 0;
     }
   }, [selectedTask, selectedFamily]);
@@ -84,6 +87,10 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
     observer.observe(element);
     const onFullscreen = () => setFullscreen(document.fullscreenElement === viewer.current);
     document.addEventListener("fullscreenchange", onFullscreen);
+    const closeGuide = (event: PointerEvent) => {
+      if (guide.current && !guide.current.contains(event.target as Node)) guide.current.open = false;
+    };
+    document.addEventListener("pointerdown", closeGuide);
     // A direct link to a task family can arrive before the client map hydrates.
     const hash = window.location.hash.slice(1);
     if (hash === "taxonomy-sources" && sourceList.current) {
@@ -95,6 +102,7 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
     return () => {
       observer.disconnect();
       document.removeEventListener("fullscreenchange", onFullscreen);
+      document.removeEventListener("pointerdown", closeGuide);
     };
   }, []);
 
@@ -149,12 +157,16 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
 
   return (
     <div className="taxonomy-explorer" lang={locale}>
+      <div className="taxonomy-shell">
       <header className="taxonomy-intro">
         <div>
           <p className="taxonomy-eyebrow">{map.branchCount} {content.branches} · {map.entryCount} {content.entries}</p>
           <h1>{content.title}</h1>
-          <p>{content.intro}</p>
         </div>
+        <nav className="taxonomy-tabs" aria-label={labels.navigationLabel}>
+          <Link href={taxonomyHref("models", locale)} aria-current={map.id === "models" ? "page" : undefined}>{labels.modelNav}</Link>
+          <Link href={taxonomyHref("tasks", locale)} aria-current={map.id === "tasks" ? "page" : undefined}>{labels.taskNav}</Link>
+        </nav>
         <div className="model-language" role="group" aria-label={labels.language}>
           {(["en", "tr"] as const).map((next) => (
             <button type="button" key={next} lang={next} aria-pressed={locale === next} onClick={() => changeLocale(next)}>
@@ -164,17 +176,8 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
         </div>
       </header>
 
-      <nav className="taxonomy-tabs" aria-label={labels.navigationLabel}>
-        <Link href={taxonomyHref("models", locale)} aria-current={map.id === "models" ? "page" : undefined}>{labels.modelNav}</Link>
-        <Link href={taxonomyHref("tasks", locale)} aria-current={map.id === "tasks" ? "page" : undefined}>{labels.taskNav}</Link>
-      </nav>
-      <div className="taxonomy-scope">
-        <p>{labels.scope}</p>
-        <p>{labels.englishLabels}{map.id === "tasks" ? ` ${labels.systemNote}` : ""}</p>
-      </div>
-
       <section ref={viewer} className="taxonomy-viewer" aria-label={map.title}>
-        {map.id === "tasks" ? <div className="task-model-finder">
+        {map.id === "tasks" ? <div className="task-model-finder task-model-finder--tasks">
           <div><h2>{modelLabels.title}</h2><p>{tasks.filter((task) => task.recommendations.length).length}/{tasks.length} {modelLabels.coverage} · {models.length} {modelLabels.modelCount}</p></div>
           <label htmlFor="taxonomy-task-select">{modelLabels.select}
             <select id="taxonomy-task-select" value={selectedTask?.id ?? ""} onChange={(event) => selectEntry(event.target.value || null)}>
@@ -182,17 +185,12 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
               {taskGroups.filter((family) => filteredTasks.some((task) => task.family === family)).map((family) => <optgroup key={family} label={family}>{filteredTasks.filter((task) => task.family === family).map((task) => <option value={task.id} key={task.id}>{task.name}</option>)}</optgroup>)}
             </select>
           </label>
-          <div className="benchmark-overview">
-            <p><strong>{taskBenchmarkReviews.length} {benchmarkLabels.reviewedTasks}</strong> · 2026-10-21 · {benchmarkCandidates.length} {benchmarkLabels.additional}</p>
+          <label htmlFor="taxonomy-task-search">{benchmarkLabels.search}<input id="taxonomy-task-search" type="search" value={taskQuery} onChange={(event) => setTaskQuery(event.target.value)} placeholder={benchmarkLabels.placeholder} /></label>
             <div className="benchmark-filters" role="group" aria-label={benchmarkLabels.filter}>
               {(["all", "comparison", "single", "gap"] as const).map((status) => <button type="button" key={status} aria-pressed={evidenceFilter === status} onClick={() => setEvidenceFilter(status)}>
                 {status === "all" ? benchmarkLabels.all : <>{tasks.filter((task) => benchmarkStatus(task.id, taskBenchmarks) === status).length} {status === "comparison" ? benchmarkLabels.comparisons : status === "single" ? benchmarkLabels.singles : benchmarkLabels.gaps}</>}
               </button>)}
             </div>
-            <label htmlFor="taxonomy-task-search">{benchmarkLabels.search}<input id="taxonomy-task-search" type="search" value={taskQuery} onChange={(event) => setTaskQuery(event.target.value)} placeholder={benchmarkLabels.placeholder} /></label>
-            <details className="task-model-method"><summary>{benchmarkLabels.method}</summary><p>{benchmarkLabels.methodology}</p><p>{benchmarkLabels.notRun}</p></details>
-          </div>
-          <details className="task-model-method"><summary>{modelLabels.method}</summary><p>{modelLabels.methodology}</p><p>{modelLabels.evidenceHelp}</p></details>
           {taskId && !selectedTask ? <p role="status">{modelLabels.invalid}</p> : null}
         </div> : <div className="task-model-finder">
           <div><h2>{familyLabels.title}</h2><p>{families.filter((family) => family.models.length).length}/{families.length} {familyLabels.coverage} · {models.length} {familyLabels.modelCount}</p></div>
@@ -202,7 +200,6 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
               {axes.map((axis) => <optgroup key={axis} label={familyLabels.axes[axis]}>{families.filter((family) => family.axis === axis).map((family) => <option value={family.id} key={family.id}>{family.name}</option>)}</optgroup>)}
             </select>
           </label>
-          <details className="task-model-method"><summary>{familyLabels.method}</summary><p>{familyLabels.methodology}</p><p>{familyLabels.evidenceHelp}</p></details>
           {familyId && !selectedFamily ? <p role="status">{familyLabels.invalid}</p> : null}
         </div>}
         <div className="taxonomy-toolbar" role="group" aria-label={labels.controls}>
@@ -218,9 +215,27 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
             <a href={map.assetPath} download>{labels.download}</a>
             <a href={map.assetPath} target="_blank" rel="noreferrer">{labels.original} ↗</a>
             {!fullscreen ? <a href="#taxonomy-sources" onClick={openSources}>{labels.sourcesLink}</a> : null}
+            <details ref={guide} className="taxonomy-guide" onKeyDown={(event) => {
+              if (event.key === "Escape") {
+                event.currentTarget.open = false;
+                event.currentTarget.querySelector("summary")?.focus();
+              }
+            }}>
+              <summary>{labels.guide}</summary>
+              <div className="taxonomy-guide__body">
+                <p>{content.intro}</p>
+                <p>{labels.scope}</p>
+                <p>{labels.englishLabels}{map.id === "tasks" ? ` ${labels.systemNote}` : ""}</p>
+                <p id="taxonomy-map-hint">{map.id === "tasks" ? modelLabels.hint : familyLabels.hint} {labels.hint}</p>
+                {map.id === "tasks" ? <>
+                  <p><strong>{taskBenchmarkReviews.length} {benchmarkLabels.reviewedTasks}</strong> · 2026-10-21 · {benchmarkCandidates.length} {benchmarkLabels.additional}</p>
+                  <details className="task-model-method"><summary>{benchmarkLabels.method}</summary><p>{benchmarkLabels.methodology}</p><p>{benchmarkLabels.notRun}</p></details>
+                  <details className="task-model-method"><summary>{modelLabels.method}</summary><p>{modelLabels.methodology}</p><p>{modelLabels.evidenceHelp}</p></details>
+                </> : <details className="task-model-method"><summary>{familyLabels.method}</summary><p>{familyLabels.methodology}</p><p>{familyLabels.evidenceHelp}</p></details>}
+              </div>
+            </details>
           </div>
         </div>
-        <p id="taxonomy-map-hint" className="taxonomy-hint">{map.id === "tasks" ? modelLabels.hint : familyLabels.hint}</p>
         {fullscreenError ? <p role="status" className="taxonomy-hint">{labels.fullscreenError}</p> : null}
         <div className={`taxonomy-workspace${selectedTask || selectedFamily ? " taxonomy-workspace--selected" : ""}`}>
         <div ref={viewport} className="taxonomy-viewport" tabIndex={0} role="region" aria-label={labels.region} aria-describedby="taxonomy-map-hint">
@@ -243,6 +258,7 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
         {selectedFamily ? <ModelFamilyPanel key={selectedFamily.id} family={selectedFamily} models={models} tasks={tasks} sources={modelSources} definitions={sources} locale={locale} onClose={closePanel} /> : null}
         </div>
       </section>
+      </div>
 
       <details ref={sourceList} id="taxonomy-sources" className="taxonomy-sources">
         <summary>{labels.sources} <span>{sources.length}</span></summary>
