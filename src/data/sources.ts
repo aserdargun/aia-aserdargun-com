@@ -2401,6 +2401,706 @@ export const taskModelSources = [
     "kind": "weights",
     "observedAt": "2026-10-21",
     "revision": "4236a6af538feda4548eca9ab308586007567f52"
+  },
+  {
+    "id": "ow-fasttext-lid",
+    "title": "fastText lid218e — model card",
+    "publisher": "Meta",
+    "url": "https://huggingface.co/facebook/fasttext-language-identification",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "3af127d4124fc58b75666f3594bb5143b9757e78"
+  },
+  {
+    "id": "ow-fasttext-lid-weights",
+    "title": "fastText lid218e — checkpoint files",
+    "publisher": "Meta",
+    "url": "https://huggingface.co/facebook/fasttext-language-identification/tree/3af127d4124fc58b75666f3594bb5143b9757e78",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "3af127d4124fc58b75666f3594bb5143b9757e78"
+  },
+  {
+    "id": "ow-fasttext-lid-license",
+    "title": "fastText lid218e — license declaration",
+    "publisher": "Meta",
+    "url": "https://huggingface.co/facebook/fasttext-language-identification",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "3af127d4124fc58b75666f3594bb5143b9757e78"
+  },
+  {
+    "id": "ow-fasttext-paper",
+    "title": "fastText — rank-constrained linear classifier",
+    "publisher": "Joulin et al. / FAIR",
+    "url": "https://arxiv.org/abs/1607.01759",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-mamba2",
+    "title": "Mamba2 2.7B — model card",
+    "publisher": "State Spaces",
+    "url": "https://huggingface.co/state-spaces/mamba2-2.7b",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "99b226cc377d131cccc610ed4346db564f381f1e"
+  },
+  {
+    "id": "ow-mamba2-weights",
+    "title": "Mamba2 2.7B — checkpoint files",
+    "publisher": "State Spaces",
+    "url": "https://huggingface.co/state-spaces/mamba2-2.7b/tree/99b226cc377d131cccc610ed4346db564f381f1e",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "99b226cc377d131cccc610ed4346db564f381f1e"
+  },
+  {
+    "id": "ow-mamba2-license",
+    "title": "Mamba2 2.7B — license declaration",
+    "publisher": "State Spaces",
+    "url": "https://huggingface.co/state-spaces/mamba2-2.7b",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "99b226cc377d131cccc610ed4346db564f381f1e"
+  },
+  {
+    "id": "ow-mamba2-method",
+    "title": "Mamba2 — architecture, checkpoints and generation",
+    "publisher": "Gu & Dao",
+    "url": "https://github.com/state-spaces/mamba/blob/e9594ce1c732d97440f0332fdc43170a2294dbfa/README.md",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "e9594ce1c732d97440f0332fdc43170a2294dbfa"
+  },
+  {
+    "id": "ow-olmo2-dpo",
+    "title": "OLMo 2 7B DPO · 1124 — model card",
+    "publisher": "Ai2",
+    "url": "https://huggingface.co/allenai/OLMo-2-1124-7B-DPO",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "e34ea60adff2e575f4fe7569eaffd1b28509b6fd"
+  },
+  {
+    "id": "ow-olmo2-dpo-weights",
+    "title": "OLMo 2 7B DPO · 1124 — checkpoint files",
+    "publisher": "Ai2",
+    "url": "https://huggingface.co/allenai/OLMo-2-1124-7B-DPO/tree/e34ea60adff2e575f4fe7569eaffd1b28509b6fd",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "e34ea60adff2e575f4fe7569eaffd1b28509b6fd"
+  },
+  {
+    "id": "ow-olmo2-dpo-license",
+    "title": "OLMo 2 7B DPO · 1124 — license declaration",
+    "publisher": "Ai2",
+    "url": "https://huggingface.co/allenai/OLMo-2-1124-7B-DPO",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "e34ea60adff2e575f4fe7569eaffd1b28509b6fd"
+  },
+  {
+    "id": "ow-llama31-rlhf",
+    "title": "Llama 3.1 8B Instruct — model card",
+    "publisher": "Meta",
+    "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "0e9e39f249a16976918f6564b8830bc894c89659"
+  },
+  {
+    "id": "ow-llama31-rlhf-weights",
+    "title": "Llama 3.1 8B Instruct — checkpoint files",
+    "publisher": "Meta",
+    "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/tree/0e9e39f249a16976918f6564b8830bc894c89659",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "0e9e39f249a16976918f6564b8830bc894c89659"
+  },
+  {
+    "id": "ow-llama31-rlhf-license",
+    "title": "Llama 3.1 8B Instruct — license declaration",
+    "publisher": "Meta",
+    "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "0e9e39f249a16976918f6564b8830bc894c89659"
+  },
+  {
+    "id": "ow-mlp-mixer",
+    "title": "MLP-Mixer B/16 · ImageNet — model card",
+    "publisher": "Google Research / timm",
+    "url": "https://huggingface.co/timm/mixer_b16_224.goog_in21k_ft_in1k",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "0006300d604941f96f16cb7d229137363e1b2ac6"
+  },
+  {
+    "id": "ow-mlp-mixer-weights",
+    "title": "MLP-Mixer B/16 · ImageNet — checkpoint files",
+    "publisher": "Google Research / timm",
+    "url": "https://huggingface.co/timm/mixer_b16_224.goog_in21k_ft_in1k/tree/0006300d604941f96f16cb7d229137363e1b2ac6",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "0006300d604941f96f16cb7d229137363e1b2ac6"
+  },
+  {
+    "id": "ow-mlp-mixer-license",
+    "title": "MLP-Mixer B/16 · ImageNet — license declaration",
+    "publisher": "Google Research / timm",
+    "url": "https://huggingface.co/timm/mixer_b16_224.goog_in21k_ft_in1k",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "0006300d604941f96f16cb7d229137363e1b2ac6"
+  },
+  {
+    "id": "ow-mixer-paper",
+    "title": "MLP-Mixer — an all-MLP architecture for vision",
+    "publisher": "Tolstikhin et al. / Google Research",
+    "url": "https://arxiv.org/abs/2105.01601",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-resnet50-ssl",
+    "title": "ResNet-50 SSL · YFCC100M → ImageNet — model card",
+    "publisher": "Meta / timm",
+    "url": "https://huggingface.co/timm/resnet50.fb_ssl_yfcc100m_ft_in1k",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "2bfbb0e194aa59bf9f8c88d3fd3719ed3b7420a5"
+  },
+  {
+    "id": "ow-resnet50-ssl-weights",
+    "title": "ResNet-50 SSL · YFCC100M → ImageNet — checkpoint files",
+    "publisher": "Meta / timm",
+    "url": "https://huggingface.co/timm/resnet50.fb_ssl_yfcc100m_ft_in1k/tree/2bfbb0e194aa59bf9f8c88d3fd3719ed3b7420a5",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "2bfbb0e194aa59bf9f8c88d3fd3719ed3b7420a5"
+  },
+  {
+    "id": "ow-resnet50-ssl-license",
+    "title": "ResNet-50 SSL · YFCC100M → ImageNet — license declaration",
+    "publisher": "Meta / timm",
+    "url": "https://huggingface.co/timm/resnet50.fb_ssl_yfcc100m_ft_in1k",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "2bfbb0e194aa59bf9f8c88d3fd3719ed3b7420a5"
+  },
+  {
+    "id": "ow-ssl-method",
+    "title": "ResNet SSL — teacher, unlabeled data and model license",
+    "publisher": "Meta",
+    "url": "https://github.com/facebookresearch/semi-supervised-ImageNet1K-models/blob/a189fd0ab046bc0eb13c7a24098be8367d3da2f1/README.md",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "a189fd0ab046bc0eb13c7a24098be8367d3da2f1"
+  },
+  {
+    "id": "ow-chgnet",
+    "title": "CHGNet 0.3.0 · MPtrj — release documentation",
+    "publisher": "Ceder Group / Berkeley Lab",
+    "url": "https://github.com/CederGroupHub/chgnet/blob/b9a6c15860237297a5a5169660e83b2e61a78e76/chgnet/pretrained/0.3.0/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "b9a6c15860237297a5a5169660e83b2e61a78e76"
+  },
+  {
+    "id": "ow-chgnet-weights",
+    "title": "CHGNet 0.3.0 · MPtrj — published parameters",
+    "publisher": "Ceder Group / Berkeley Lab",
+    "url": "https://github.com/CederGroupHub/chgnet/blob/b9a6c15860237297a5a5169660e83b2e61a78e76/chgnet/pretrained/0.3.0/chgnet_0.3.0_e29f68s314m37.pth.tar",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "b9a6c15860237297a5a5169660e83b2e61a78e76",
+    "artifact": {
+      "type": "git",
+      "repositoryUrl": "https://github.com/CederGroupHub/chgnet",
+      "path": "chgnet/pretrained/0.3.0/chgnet_0.3.0_e29f68s314m37.pth.tar",
+      "entry": "blob"
+    }
+  },
+  {
+    "id": "ow-chgnet-license",
+    "title": "CHGNet 0.3.0 · MPtrj — license terms",
+    "publisher": "Ceder Group / Berkeley Lab",
+    "url": "https://github.com/CederGroupHub/chgnet/blob/b9a6c15860237297a5a5169660e83b2e61a78e76/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "b9a6c15860237297a5a5169660e83b2e61a78e76"
+  },
+  {
+    "id": "ow-chgnet-usage",
+    "title": "CHGNet — crystal graphs and structure prediction",
+    "publisher": "Ceder Group / Berkeley Lab",
+    "url": "https://github.com/CederGroupHub/chgnet/blob/b9a6c15860237297a5a5169660e83b2e61a78e76/README.md",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "b9a6c15860237297a5a5169660e83b2e61a78e76"
+  },
+  {
+    "id": "ow-pocketsphinx",
+    "title": "PocketSphinx · US English HMM-GMM — release documentation",
+    "publisher": "CMUSphinx / Alpha Cephei",
+    "url": "https://github.com/cmusphinx/pocketsphinx/blob/f20ff1b7a5db64c5e892a798479e20df86e79a35/model/en-us/en-us/README",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "f20ff1b7a5db64c5e892a798479e20df86e79a35"
+  },
+  {
+    "id": "ow-pocketsphinx-weights",
+    "title": "PocketSphinx · US English HMM-GMM — published parameters",
+    "publisher": "CMUSphinx / Alpha Cephei",
+    "url": "https://github.com/cmusphinx/pocketsphinx/tree/f20ff1b7a5db64c5e892a798479e20df86e79a35/model/en-us",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "f20ff1b7a5db64c5e892a798479e20df86e79a35",
+    "artifact": {
+      "type": "git",
+      "repositoryUrl": "https://github.com/cmusphinx/pocketsphinx",
+      "path": "model/en-us",
+      "entry": "tree"
+    }
+  },
+  {
+    "id": "ow-pocketsphinx-license",
+    "title": "PocketSphinx · US English HMM-GMM — license terms",
+    "publisher": "CMUSphinx / Alpha Cephei",
+    "url": "https://github.com/cmusphinx/pocketsphinx/blob/f20ff1b7a5db64c5e892a798479e20df86e79a35/model/en-us/en-us/README",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "f20ff1b7a5db64c5e892a798479e20df86e79a35"
+  },
+  {
+    "id": "ow-pocketsphinx-usage",
+    "title": "PocketSphinx — default models and speech recognition",
+    "publisher": "CMUSphinx",
+    "url": "https://github.com/cmusphinx/pocketsphinx/blob/f20ff1b7a5db64c5e892a798479e20df86e79a35/README.md",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "f20ff1b7a5db64c5e892a798479e20df86e79a35"
+  },
+  {
+    "id": "ow-sphinx-hmm-gmm",
+    "title": "CMUSphinx — HMM states and Gaussian acoustic models",
+    "publisher": "CMUSphinx",
+    "url": "https://cmusphinx.github.io/wiki/tutorialconcepts/",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-dlib-five",
+    "title": "dlib · 5-point face landmarks — release documentation",
+    "publisher": "Davis King",
+    "url": "https://github.com/davisking/dlib-models/blob/fd81b6308a6a73d4ce08859eb2f4b628a21e27a2/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "fd81b6308a6a73d4ce08859eb2f4b628a21e27a2"
+  },
+  {
+    "id": "ow-dlib-five-weights",
+    "title": "dlib · 5-point face landmarks — published parameters",
+    "publisher": "Davis King",
+    "url": "https://github.com/davisking/dlib-models/blob/fd81b6308a6a73d4ce08859eb2f4b628a21e27a2/shape_predictor_5_face_landmarks.dat.bz2",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "fd81b6308a6a73d4ce08859eb2f4b628a21e27a2",
+    "artifact": {
+      "type": "git",
+      "repositoryUrl": "https://github.com/davisking/dlib-models",
+      "path": "shape_predictor_5_face_landmarks.dat.bz2",
+      "entry": "blob"
+    }
+  },
+  {
+    "id": "ow-dlib-five-license",
+    "title": "dlib · 5-point face landmarks — license terms",
+    "publisher": "Davis King",
+    "url": "https://github.com/davisking/dlib-models/blob/fd81b6308a6a73d4ce08859eb2f4b628a21e27a2/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "fd81b6308a6a73d4ce08859eb2f4b628a21e27a2"
+  },
+  {
+    "id": "ow-dlib-five-training",
+    "title": "dlib — exact five-point training program",
+    "publisher": "Davis King",
+    "url": "https://github.com/davisking/dlib/blob/9dfc591c950a45f7cdc399b961473927da4e892f/tools/archive/train_face_5point_model.cpp",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "9dfc591c950a45f7cdc399b961473927da4e892f"
+  },
+  {
+    "id": "ow-dlib-tree-method",
+    "title": "dlib shape predictor — ensemble of regression trees",
+    "publisher": "Davis King",
+    "url": "https://github.com/davisking/dlib/blob/9dfc591c950a45f7cdc399b961473927da4e892f/dlib/image_processing/shape_predictor_trainer_abstract.h",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "9dfc591c950a45f7cdc399b961473927da4e892f"
+  },
+  {
+    "id": "ow-brisque",
+    "title": "BRISQUE · LIVE-R2 RBF-SVR — release documentation",
+    "publisher": "OpenCV",
+    "url": "https://github.com/opencv/opencv_contrib/blob/eca97a4adb2fa32afc82478947d7f049fce57ee1/modules/quality/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "eca97a4adb2fa32afc82478947d7f049fce57ee1"
+  },
+  {
+    "id": "ow-brisque-weights",
+    "title": "BRISQUE · LIVE-R2 RBF-SVR — published parameters",
+    "publisher": "OpenCV",
+    "url": "https://github.com/opencv/opencv_contrib/tree/eca97a4adb2fa32afc82478947d7f049fce57ee1/modules/quality/samples",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "eca97a4adb2fa32afc82478947d7f049fce57ee1",
+    "artifact": {
+      "type": "git",
+      "repositoryUrl": "https://github.com/opencv/opencv_contrib",
+      "path": "modules/quality/samples",
+      "entry": "tree"
+    }
+  },
+  {
+    "id": "ow-brisque-license",
+    "title": "BRISQUE · LIVE-R2 RBF-SVR — license terms",
+    "publisher": "OpenCV",
+    "url": "https://github.com/opencv/opencv_contrib/blob/eca97a4adb2fa32afc82478947d7f049fce57ee1/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "eca97a4adb2fa32afc82478947d7f049fce57ee1"
+  },
+  {
+    "id": "ow-brisque-parameters",
+    "title": "BRISQUE — serialized RBF kernel, support vectors and coefficients",
+    "publisher": "OpenCV",
+    "url": "https://github.com/opencv/opencv_contrib/blob/eca97a4adb2fa32afc82478947d7f049fce57ee1/modules/quality/samples/brisque_model_live.yml",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "eca97a4adb2fa32afc82478947d7f049fce57ee1"
+  },
+  {
+    "id": "ow-brisque-docs",
+    "title": "BRISQUE — released LIVE-R2 model and evaluation",
+    "publisher": "OpenCV",
+    "url": "https://docs.opencv.org/4.10.0/d8/d99/classcv_1_1quality_1_1QualityBRISQUE.html",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-glove-factors",
+    "title": "GloVe 6B · 300-dimensional word factors — model card",
+    "publisher": "Stanford NLP",
+    "url": "https://huggingface.co/stanfordnlp/glove",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "1db2080b2d94def6e5b0386a523102f9d8849e9d"
+  },
+  {
+    "id": "ow-glove-factors-weights",
+    "title": "GloVe 6B · 300-dimensional word factors — checkpoint files",
+    "publisher": "Stanford NLP",
+    "url": "https://huggingface.co/stanfordnlp/glove/tree/1db2080b2d94def6e5b0386a523102f9d8849e9d",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "1db2080b2d94def6e5b0386a523102f9d8849e9d"
+  },
+  {
+    "id": "ow-glove-factors-license",
+    "title": "GloVe 6B · 300-dimensional word factors — license declaration",
+    "publisher": "Stanford NLP",
+    "url": "https://nlp.stanford.edu/projects/glove/",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "1db2080b2d94def6e5b0386a523102f9d8849e9d"
+  },
+  {
+    "id": "ow-glove-method",
+    "title": "GloVe — log-bilinear factors, pretrained vectors and PDDL license",
+    "publisher": "Stanford NLP",
+    "url": "https://nlp.stanford.edu/projects/glove/",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-glove-paper",
+    "title": "GloVe — global matrix-factorization objective",
+    "publisher": "Pennington, Socher & Manning",
+    "url": "https://nlp.stanford.edu/pubs/glove.pdf",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-asia-bn",
+    "title": "ASIA · parameterized Bayesian network — release documentation",
+    "publisher": "bnlearn / pgmpy",
+    "url": "https://github.com/pgmpy/example_models/blob/920f4e03fce2a319af0fbc8dc6fad1ac99ff4318/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "920f4e03fce2a319af0fbc8dc6fad1ac99ff4318"
+  },
+  {
+    "id": "ow-asia-bn-weights",
+    "title": "ASIA · parameterized Bayesian network — published parameters",
+    "publisher": "bnlearn / pgmpy",
+    "url": "https://github.com/pgmpy/example_models/blob/920f4e03fce2a319af0fbc8dc6fad1ac99ff4318/discrete/asia.bif.gz",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "920f4e03fce2a319af0fbc8dc6fad1ac99ff4318",
+    "artifact": {
+      "type": "git",
+      "repositoryUrl": "https://github.com/pgmpy/example_models",
+      "path": "discrete/asia.bif.gz",
+      "entry": "blob"
+    }
+  },
+  {
+    "id": "ow-asia-bn-license",
+    "title": "ASIA · parameterized Bayesian network — license terms",
+    "publisher": "bnlearn / pgmpy",
+    "url": "https://github.com/pgmpy/example_models/blob/920f4e03fce2a319af0fbc8dc6fad1ac99ff4318/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "920f4e03fce2a319af0fbc8dc6fad1ac99ff4318"
+  },
+  {
+    "id": "ow-asia-description",
+    "title": "ASIA — benchmark structure and parameters",
+    "publisher": "bnlearn / Marco Scutari",
+    "url": "https://www.bnlearn.com/bnrepository/discrete-small.html#asia",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-bn-prediction",
+    "title": "Discrete Bayesian networks — predicting missing states",
+    "publisher": "pgmpy",
+    "url": "https://pgmpy.org/api/generated/models/pgmpy.models.DiscreteBayesianNetwork.html",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-anyburl-rules",
+    "title": "AnyBURL · WN18RR learned rules — release documentation",
+    "publisher": "University of Mannheim / PyClause",
+    "url": "https://github.com/symbolic-kg/PyClause/blob/87c82ec3dd904767741a493dcbdf7605377d4535/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "87c82ec3dd904767741a493dcbdf7605377d4535"
+  },
+  {
+    "id": "ow-anyburl-rules-weights",
+    "title": "AnyBURL · WN18RR learned rules — published parameters",
+    "publisher": "University of Mannheim / PyClause",
+    "url": "https://github.com/symbolic-kg/PyClause/blob/87c82ec3dd904767741a493dcbdf7605377d4535/data/wnrr/anyburl-rules-c5-3600",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "87c82ec3dd904767741a493dcbdf7605377d4535",
+    "artifact": {
+      "type": "git",
+      "repositoryUrl": "https://github.com/symbolic-kg/PyClause",
+      "path": "data/wnrr/anyburl-rules-c5-3600",
+      "entry": "blob"
+    }
+  },
+  {
+    "id": "ow-anyburl-rules-license",
+    "title": "AnyBURL · WN18RR learned rules — license terms",
+    "publisher": "University of Mannheim / PyClause",
+    "url": "https://github.com/symbolic-kg/PyClause/blob/87c82ec3dd904767741a493dcbdf7605377d4535/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "87c82ec3dd904767741a493dcbdf7605377d4535"
+  },
+  {
+    "id": "ow-anyburl-loader",
+    "title": "PyClause — learned rule file format and confidence",
+    "publisher": "University of Mannheim",
+    "url": "https://github.com/symbolic-kg/PyClause/blob/87c82ec3dd904767741a493dcbdf7605377d4535/docs/data/loading_rules.rst",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "87c82ec3dd904767741a493dcbdf7605377d4535"
+  },
+  {
+    "id": "ow-anyburl-syntax",
+    "title": "PyClause — first-order atoms, variables and rule bodies",
+    "publisher": "University of Mannheim",
+    "url": "https://github.com/symbolic-kg/PyClause/blob/87c82ec3dd904767741a493dcbdf7605377d4535/docs/data/rule_types.rst",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "87c82ec3dd904767741a493dcbdf7605377d4535"
+  },
+  {
+    "id": "ow-anyburl-ranking",
+    "title": "PyClause — ranking example using the exact WN18RR rule artifact",
+    "publisher": "University of Mannheim",
+    "url": "https://github.com/symbolic-kg/PyClause/blob/87c82ec3dd904767741a493dcbdf7605377d4535/examples/demo-ranking.py",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "87c82ec3dd904767741a493dcbdf7605377d4535"
+  },
+  {
+    "id": "ow-glow",
+    "title": "Glow · CelebA-HQ 256 — release documentation",
+    "publisher": "OpenAI",
+    "url": "https://github.com/openai/glow/blob/91b2c577a5c110b2b38761fc56d81f7d87f077c1/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "91b2c577a5c110b2b38761fc56d81f7d87f077c1"
+  },
+  {
+    "id": "ow-glow-weights",
+    "title": "Glow · CelebA-HQ 256 — publisher checkpoint",
+    "publisher": "OpenAI",
+    "url": "https://openaipublic.azureedge.net/glow-demo/large3/graph_optimized.pb",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "artifact": {
+      "type": "publisher-file",
+      "evidenceSourceId": "ow-glow-download",
+      "fileName": "graph_optimized.pb",
+      "sizeBytes": 762496735,
+      "etag": "0x8D88C21B9ABD2E7"
+    }
+  },
+  {
+    "id": "ow-glow-license",
+    "title": "Glow · CelebA-HQ 256 — repository license",
+    "publisher": "OpenAI",
+    "url": "https://github.com/openai/glow/blob/91b2c577a5c110b2b38761fc56d81f7d87f077c1/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "91b2c577a5c110b2b38761fc56d81f7d87f077c1"
+  },
+  {
+    "id": "ow-jem",
+    "title": "JEM · CIFAR-10 — release documentation",
+    "publisher": "Grathwohl et al.",
+    "url": "https://github.com/wgrathwohl/JEM/blob/3d01161547109b464eee87304f07b2dac8519d03/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "3d01161547109b464eee87304f07b2dac8519d03"
+  },
+  {
+    "id": "ow-jem-weights",
+    "title": "JEM · CIFAR-10 — publisher checkpoint",
+    "publisher": "Grathwohl et al.",
+    "url": "https://www.cs.toronto.edu/~wgrathwohl/CIFAR10_MODEL.pt",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "artifact": {
+      "type": "publisher-file",
+      "evidenceSourceId": "ow-jem",
+      "fileName": "CIFAR10_MODEL.pt",
+      "sizeBytes": 268807111,
+      "etag": "\"1005abc7-597a61a47a635\""
+    }
+  },
+  {
+    "id": "ow-jem-license",
+    "title": "JEM · CIFAR-10 — repository license",
+    "publisher": "Grathwohl et al.",
+    "url": "https://github.com/wgrathwohl/JEM/blob/3d01161547109b464eee87304f07b2dac8519d03/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "3d01161547109b464eee87304f07b2dac8519d03"
+  },
+  {
+    "id": "ow-glow-download",
+    "title": "Glow — official demo weight and manipulation-vector URLs",
+    "publisher": "OpenAI",
+    "url": "https://github.com/openai/glow/blob/91b2c577a5c110b2b38761fc56d81f7d87f077c1/demo/script.sh",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "91b2c577a5c110b2b38761fc56d81f7d87f077c1"
+  },
+  {
+    "id": "ow-glow-inference",
+    "title": "Glow — published image manipulation interface",
+    "publisher": "OpenAI",
+    "url": "https://github.com/openai/glow/blob/91b2c577a5c110b2b38761fc56d81f7d87f077c1/demo/model.py",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "91b2c577a5c110b2b38761fc56d81f7d87f077c1"
+  },
+  {
+    "id": "ow-glow-paper",
+    "title": "Glow — invertible flow and likelihood training",
+    "publisher": "Kingma & Dhariwal",
+    "url": "https://arxiv.org/abs/1807.03039",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-jem-paper",
+    "title": "JEM — joint classifier and energy objective",
+    "publisher": "Grathwohl et al.",
+    "url": "https://arxiv.org/abs/1912.03263",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-knnvc",
+    "title": "kNN-VC · prematched HiFi-GAN — model and inference documentation",
+    "publisher": "Baas, van Niekerk & Kamper",
+    "url": "https://github.com/bshall/knn-vc/blob/c616845c4e309e24d5927f15adbdf277a3d65358/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "c616845c4e309e24d5927f15adbdf277a3d65358"
+  },
+  {
+    "id": "ow-knnvc-weights",
+    "title": "kNN-VC · prematched HiFi-GAN — v0.1 checkpoint release",
+    "publisher": "Baas, van Niekerk & Kamper",
+    "url": "https://github.com/bshall/knn-vc/releases/tag/v0.1",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "artifact": {
+      "type": "release",
+      "evidenceSourceId": "ow-knnvc-loader",
+      "repositoryUrl": "https://github.com/bshall/knn-vc",
+      "tag": "v0.1",
+      "files": [
+        {
+          "name": "prematch_g_02500000.pt",
+          "sizeBytes": 66214643
+        },
+        {
+          "name": "WavLM-Large.pt",
+          "sizeBytes": 1261965425
+        }
+      ]
+    }
+  },
+  {
+    "id": "ow-knnvc-license",
+    "title": "kNN-VC · prematched HiFi-GAN — repository terms",
+    "publisher": "Baas, van Niekerk & Kamper",
+    "url": "https://github.com/bshall/knn-vc/blob/c616845c4e309e24d5927f15adbdf277a3d65358/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "c616845c4e309e24d5927f15adbdf277a3d65358"
+  },
+  {
+    "id": "ow-knnvc-loader",
+    "title": "kNN-VC — exact encoder and vocoder release assets",
+    "publisher": "Baas, van Niekerk & Kamper",
+    "url": "https://github.com/bshall/knn-vc/blob/c616845c4e309e24d5927f15adbdf277a3d65358/hubconf.py",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "c616845c4e309e24d5927f15adbdf277a3d65358"
+  },
+  {
+    "id": "ow-knnvc-paper",
+    "title": "kNN-VC — nearest-neighbor conversion and evaluation",
+    "publisher": "Baas, van Niekerk & Kamper",
+    "url": "https://arxiv.org/abs/2305.18975",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
   }
 ] satisfies TaskModelSource[];
 

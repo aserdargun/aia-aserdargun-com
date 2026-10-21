@@ -3,7 +3,7 @@ import { z } from "zod";
 export const schemaVersions = {
   vendor: 1, category: 1, capability: 1, vendorEntry: 1,
   assessment: 1, model: 3, plan: 1, source: 2, taxonomyMap: 1, taxonomySource: 1,
-  taskModelSource: 1, openWeightModel: 1, taxonomyTask: 1, modelFamily: 1,
+  taskModelSource: 2, openWeightModel: 2, taxonomyTask: 1, modelFamily: 2,
 } as const;
 
 // Ordered, editorial focus areas based on the model's cited evidence.
@@ -254,6 +254,11 @@ export const taskModelSourceSchema = z.object({
   kind: z.enum(["model-card", "weights", "documentation", "license"]),
   observedAt: z.iso.date(),
   revision: z.string().regex(/^[a-f0-9]{40}$/).optional(),
+  artifact: z.discriminatedUnion("type", [
+    z.object({ type: z.literal("git"), repositoryUrl: httpsUrlSchema, path: z.string().min(1), entry: z.enum(["blob", "tree"]) }).strict(),
+    z.object({ type: z.literal("publisher-file"), evidenceSourceId: z.string().regex(/^ow-[a-z0-9-]+$/), fileName: z.string().min(1), sizeBytes: z.number().int().positive(), etag: z.string().min(1) }).strict(),
+    z.object({ type: z.literal("release"), evidenceSourceId: z.string().regex(/^ow-[a-z0-9-]+$/), repositoryUrl: httpsUrlSchema, tag: z.string().min(1), files: z.array(z.object({ name: z.string().min(1), sizeBytes: z.number().int().positive() }).strict()).min(1) }).strict(),
+  ]).optional(),
 }).strict();
 
 export const openWeightModelSchema = z.object({
@@ -265,6 +270,8 @@ export const openWeightModelSchema = z.object({
   license: z.string().min(1),
   access: z.enum(["public", "gated"]),
   role: z.enum(["shortlist", "reference"]),
+  parameterKind: z.enum(["weights", "statistical", "rules", "pipeline"]).optional(),
+  licenseScope: z.enum(["artifact", "repository"]).optional(),
   context: bilingualTextSchema,
 }).strict();
 
@@ -294,6 +301,11 @@ export const modelFamilySchema = z.object({
   definition: z.string().min(1),
   definitionSourceId: taxonomySourceSchema.shape.id,
   note: bilingualTextSchema,
+  review: z.object({
+    observedAt: z.iso.date(),
+    summary: bilingualTextSchema,
+    sourceIds: z.array(taskModelSourceSchema.shape.id).min(1),
+  }).strict().optional(),
   models: z.array(z.object({
     modelId: openWeightModelSchema.shape.id,
     relation: z.enum(["member", "component", "compatible"]),

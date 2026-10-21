@@ -701,6 +701,262 @@ export const openWeightModels = [
       "en": "May 2025 reasoning reference with competition-math evaluations. Large checkpoint and substantial reasoning-token budgets.",
       "tr": "Yarışma matematiği değerlendirmeleri olan Mayıs 2025 akıl yürütme referansı. Büyük ağırlıklar ve yüksek akıl yürütme token bütçeleri."
     }
+  },
+  {
+    "id": "fasttext-lid",
+    "name": "fastText lid218e",
+    "cardSourceId": "ow-fasttext-lid",
+    "weightsSourceId": "ow-fasttext-lid-weights",
+    "licenseSourceId": "ow-fasttext-lid-license",
+    "license": "CC-BY-NC-4.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "artifact",
+    "context": {
+      "en": "A fixed language-identification classifier for 217 languages. The released model.bin predicts language labels; other text categories require training. Noncommercial weight license.",
+      "tr": "217 dil için sabit bir dil tanıma sınıflandırıcısıdır. Yayımlanan model.bin dil etiketleri tahmin eder; başka metin kategorileri eğitim gerektirir. Ağırlık lisansı ticari kullanımı kapsamaz."
+    }
+  },
+  {
+    "id": "mamba2",
+    "name": "Mamba2 2.7B",
+    "cardSourceId": "ow-mamba2",
+    "weightsSourceId": "ow-mamba2-weights",
+    "licenseSourceId": "ow-mamba2-license",
+    "license": "Apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "artifact",
+    "context": {
+      "en": "Base causal language model trained on the Pile; the author repository supplies its generation and evaluation commands. It is not an instruction-tuned assistant. Requires the Mamba runtime.",
+      "tr": "Pile üzerinde eğitilmiş temel nedensel dil modelidir; yazar deposu üretim ve değerlendirme komutlarını sağlar. Talimatla ayarlanmış bir asistan değildir. Mamba çalışma ortamını gerektirir."
+    }
+  },
+  {
+    "id": "olmo2-dpo",
+    "name": "OLMo 2 7B DPO · 1124",
+    "cardSourceId": "ow-olmo2-dpo",
+    "weightsSourceId": "ow-olmo2-dpo-weights",
+    "licenseSourceId": "ow-olmo2-dpo-license",
+    "license": "Apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "artifact",
+    "context": {
+      "en": "The corrected DPO-stage checkpoint, updated in January 2025. Its card distinguishes SFT, DPO and the later RLVR final model. Results for the final Instruct model must not be assigned to this intermediate checkpoint.",
+      "tr": "Ocak 2025’te güncellenmiş, düzeltilmiş DPO aşaması ağırlıklarıdır. Kart; SFT, DPO ve sonraki RLVR son modelini ayrı tutar. Son Instruct modelinin sonuçları bu ara aşamaya atfedilemez."
+    }
+  },
+  {
+    "id": "llama31-rlhf",
+    "name": "Llama 3.1 8B Instruct",
+    "cardSourceId": "ow-llama31-rlhf",
+    "weightsSourceId": "ow-llama31-rlhf-weights",
+    "licenseSourceId": "ow-llama31-rlhf-license",
+    "license": "Llama 3.1 Community License",
+    "access": "gated",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "artifact",
+    "context": {
+      "en": "A historical reference for documented human-feedback post-training. Access requires acceptance of Meta’s conditions. The card lists eight supported languages; Turkish is not one of them.",
+      "tr": "İnsan geri bildirimli son eğitimi belgelenmiş tarihsel bir referanstır. Erişim Meta’nın koşullarının kabulünü gerektirir. Kart sekiz desteklenen dil belirtir; Türkçe bu listede değildir."
+    }
+  },
+  {
+    "id": "mlp-mixer",
+    "name": "MLP-Mixer B/16 · ImageNet",
+    "cardSourceId": "ow-mlp-mixer",
+    "weightsSourceId": "ow-mlp-mixer-weights",
+    "licenseSourceId": "ow-mlp-mixer-license",
+    "license": "Apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "artifact",
+    "context": {
+      "en": "timm-maintained distribution of the authors’ ImageNet-21k pretrained, ImageNet-1k fine-tuned weights. A vision MLP with token and channel mixing; 224-pixel input and the published normalization are required.",
+      "tr": "Yazarların ImageNet-21k ön eğitimli ve ImageNet-1k ile ince ayarlanmış ağırlıklarının timm dağıtımıdır. Token ve kanal karıştıran bir görsel MLP’dir; 224 piksel girdi ve yayımlanan normalizasyon gerekir."
+    }
+  },
+  {
+    "id": "resnet50-ssl",
+    "name": "ResNet-50 SSL · YFCC100M → ImageNet",
+    "cardSourceId": "ow-resnet50-ssl",
+    "weightsSourceId": "ow-resnet50-ssl-weights",
+    "licenseSourceId": "ow-resnet50-ssl-license",
+    "license": "CC-BY-NC-4.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "artifact",
+    "context": {
+      "en": "The semi-supervised SSL variant, not SWSL. Teacher pseudo-labels on unlabeled YFCC100M images precede ImageNet fine-tuning. The weights are noncommercial and serve as a historical method reference.",
+      "tr": "SWSL değil, yarı gözetimli SSL sürümüdür. Etiketsiz YFCC100M görüntülerindeki öğretmen sözde etiketlerini ImageNet ince ayarı izler. Ağırlıklar ticari olmayan kullanım içindir ve tarihsel yöntem referansı sunar."
+    }
+  },
+  {
+    "id": "chgnet",
+    "name": "CHGNet 0.3.0 · MPtrj",
+    "cardSourceId": "ow-chgnet",
+    "weightsSourceId": "ow-chgnet-weights",
+    "licenseSourceId": "ow-chgnet-license",
+    "license": "BSD-style CHGNet license",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "context": {
+      "en": "Crystal-graph potential for energies, forces, stresses and magnetic moments. This is the MPtrj 0.3.0 checkpoint, not the newer MatPES models. Requires a periodic crystal structure; it is not a general molecular ADMET predictor.",
+      "tr": "Enerji, kuvvet, gerilme ve manyetik momentler için kristal grafı potansiyelidir. Bu, yeni MatPES modelleri değil MPtrj 0.3.0 ağırlıklarıdır. Periyodik kristal yapı gerektirir; genel bir moleküler ADMET tahmincisi değildir."
+    }
+  },
+  {
+    "id": "pocketsphinx",
+    "name": "PocketSphinx · US English HMM-GMM",
+    "cardSourceId": "ow-pocketsphinx",
+    "weightsSourceId": "ow-pocketsphinx-weights",
+    "licenseSourceId": "ow-pocketsphinx-license",
+    "license": "BSD-2-Clause acoustic model; bundled resources retain their terms",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "statistical",
+    "licenseScope": "artifact",
+    "context": {
+      "en": "A compact classical English ASR bundle. The acoustic model contains means, variances, mixture weights and transitions; recognition also needs the bundled pronunciation dictionary, language model and decoder. Not a multilingual Whisper replacement.",
+      "tr": "Kompakt bir klasik İngilizce ASR paketidir. Akustik model ortalama, varyans, karışım ağırlığı ve geçiş parametreleri içerir; tanıma ayrıca paketteki telaffuz sözlüğü, dil modeli ve kod çözücüyü gerektirir. Çok dilli bir Whisper karşılığı değildir."
+    }
+  },
+  {
+    "id": "dlib-five",
+    "name": "dlib · 5-point face landmarks",
+    "cardSourceId": "ow-dlib-five",
+    "weightsSourceId": "ow-dlib-five-weights",
+    "licenseSourceId": "ow-dlib-five-license",
+    "license": "Public domain declaration",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "statistical",
+    "licenseScope": "artifact",
+    "context": {
+      "en": "Five facial landmarks: eye corners and the bottom of the nose. Requires a face bounding box from a compatible detector. The author’s public-domain statement covers this release; the separate 68-point iBUG model has different restrictions.",
+      "tr": "Beş yüz noktası: göz köşeleri ve burnun altı. Uyumlu bir dedektörden yüz sınırlayıcı kutusu gerekir. Yazarın kamu malı beyanı bu sürümü kapsar; ayrı 68 noktalı iBUG modelinin koşulları farklıdır."
+    }
+  },
+  {
+    "id": "brisque",
+    "name": "BRISQUE · LIVE-R2 RBF-SVR",
+    "cardSourceId": "ow-brisque",
+    "weightsSourceId": "ow-brisque-weights",
+    "licenseSourceId": "ow-brisque-license",
+    "license": "Apache-2.0 repository license",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "statistical",
+    "licenseScope": "repository",
+    "context": {
+      "en": "An RBF support-vector regressor over 36 natural-scene features for image quality. Use brisque_model_live.yml together with brisque_range_live.yml and the matching feature extraction. It is not a generic tabular regressor.",
+      "tr": "Görüntü kalitesi için 36 doğal sahne özelliği üzerinde çalışan RBF destek vektör regresörüdür. brisque_model_live.yml ile brisque_range_live.yml ve aynı özellik çıkarımı birlikte kullanılmalıdır. Genel amaçlı bir tablo regresörü değildir."
+    }
+  },
+  {
+    "id": "glove-factors",
+    "name": "GloVe 6B · 300-dimensional word factors",
+    "cardSourceId": "ow-glove-factors",
+    "weightsSourceId": "ow-glove-factors-weights",
+    "licenseSourceId": "ow-glove-factors-license",
+    "license": "PDDL 1.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "artifact",
+    "context": {
+      "en": "Use glove.6B.zip and its 300-dimensional table, trained on Wikipedia and Gigaword. A fixed vocabulary of word factors, not a sentence encoder or a PCA transform for arbitrary features. Sentence comparisons need pooling and task evaluation.",
+      "tr": "Wikipedia ve Gigaword üzerinde eğitilmiş glove.6B.zip içindeki 300 boyutlu tablo kullanılır. Sabit sözlüğe ait kelime faktörleridir; cümle kodlayıcısı veya keyfi özellikler için PCA dönüşümü değildir. Cümle karşılaştırmaları havuzlama ve görev değerlendirmesi gerektirir."
+    }
+  },
+  {
+    "id": "asia-bn",
+    "name": "ASIA · parameterized Bayesian network",
+    "cardSourceId": "ow-asia-bn",
+    "weightsSourceId": "ow-asia-bn-weights",
+    "licenseSourceId": "ow-asia-bn-license",
+    "license": "CC-BY-SA-3.0 (bnlearn collection, per distributor)",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "statistical",
+    "licenseScope": "artifact",
+    "context": {
+      "en": "Eight-node benchmark with published conditional probability tables, not learned neural weights. Its medical story is an educational example, not a clinically validated model. Inference is restricted to its named variables and states.",
+      "tr": "Yayımlanmış koşullu olasılık tabloları içeren sekiz düğümlü karşılaştırma örneğidir; öğrenilmiş sinir ağı ağırlıkları içermez. Tıbbi senaryosu eğitim amaçlıdır, klinik olarak doğrulanmış model değildir. Çıkarım kendi değişkenleri ve durumlarıyla sınırlıdır."
+    }
+  },
+  {
+    "id": "anyburl-rules",
+    "name": "AnyBURL · WN18RR learned rules",
+    "cardSourceId": "ow-anyburl-rules",
+    "weightsSourceId": "ow-anyburl-rules-weights",
+    "licenseSourceId": "ow-anyburl-rules-license",
+    "license": "PyClause BSD-style repository license",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "rules",
+    "licenseScope": "repository",
+    "context": {
+      "en": "Published first-order rules with support counts and confidence values. PyClause recomputes confidence from the counts. Requires the matching WN18RR relation vocabulary and graph facts. This is statistical rule-based link prediction, not a sound general-purpose theorem prover. Dataset terms also apply.",
+      "tr": "Destek sayıları ve güven değerleriyle yayımlanmış birinci dereceden kurallardır. PyClause güveni sayılardan yeniden hesaplar. Eşleşen WN18RR ilişki sözlüğü ve graf olguları gerekir. İstatistiksel kural tabanlı bağlantı tahminidir; genel amaçlı, doğruluğu garantili teorem ispatlayıcı değildir. Veri kümesi koşulları da geçerlidir."
+    }
+  },
+  {
+    "id": "glow",
+    "name": "Glow · CelebA-HQ 256",
+    "cardSourceId": "ow-glow",
+    "weightsSourceId": "ow-glow-weights",
+    "licenseSourceId": "ow-glow-license",
+    "license": "MIT repository license",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "context": {
+      "en": "Historical TensorFlow 1.x face-image flow. The published demo graph supports encoding, decoding and attribute manipulation; aligned 256×256 faces, manipulation vectors and legacy runtime are required. This graph is not a ready-made general density-scoring API.",
+      "tr": "Tarihsel TensorFlow 1.x yüz görüntüsü akış modelidir. Yayımlanan demo grafı kodlama, çözme ve nitelik değiştirmeyi destekler; hizalanmış 256×256 yüzler, değiştirme vektörleri ve eski çalışma ortamı gerekir. Bu graf genel amaçlı hazır yoğunluk puanlama API’si değildir."
+    }
+  },
+  {
+    "id": "jem",
+    "name": "JEM · CIFAR-10",
+    "cardSourceId": "ow-jem",
+    "weightsSourceId": "ow-jem-weights",
+    "licenseSourceId": "ow-jem-license",
+    "license": "Apache-2.0 repository license",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "context": {
+      "en": "Joint classifier and energy model on CIFAR-10. Use the author’s preprocessing and evaluation code. Energy-based OOD scores are not calibrated anomaly probabilities or normalized likelihoods. This is a historical research checkpoint.",
+      "tr": "CIFAR-10 üzerinde ortak sınıflandırıcı ve enerji modelidir. Yazarın ön işleme ve değerlendirme kodu gerekir. Enerji tabanlı dağılım dışı skorlar kalibre anomali olasılıkları veya normalize olabilirlikler değildir. Tarihsel araştırma ağırlıklarıdır."
+    }
+  },
+  {
+    "id": "knnvc",
+    "name": "kNN-VC · prematched HiFi-GAN",
+    "cardSourceId": "ow-knnvc",
+    "weightsSourceId": "ow-knnvc-weights",
+    "licenseSourceId": "ow-knnvc-license",
+    "license": "MIT-derived repository license (additional condition); WavLM terms",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "pipeline",
+    "licenseScope": "repository",
+    "context": {
+      "en": "A complete voice-conversion pipeline with released WavLM-Large and prematched HiFi-GAN checkpoints. The conversion stage is non-parametric kNN regression over target-speaker reference audio, which the user must provide. The neighbors are not learned network weights.",
+      "tr": "WavLM-Large ve önceden eşleştirilmiş HiFi-GAN ağırlıkları yayımlanmış tam ses dönüşüm hattıdır. Dönüştürme aşaması, kullanıcının sağlaması gereken hedef konuşmacı referans sesi üzerinde parametrik olmayan kNN regresyonudur. Komşular öğrenilmiş ağ ağırlıkları değildir."
+    }
   }
 ] satisfies OpenWeightModel[];
 
@@ -736,6 +992,17 @@ export const taxonomyTasks = [
         },
         "sourceIds": [
           "ow-nli"
+        ]
+      },
+      {
+        "modelId": "fasttext-lid",
+        "evidence": "documented",
+        "rationale": {
+          "en": "Predicts the language label of input text. This edge is limited to language identification, not arbitrary text categories.",
+          "tr": "Girdi metninin dil etiketini tahmin eder. Bu ilişki dil tanımayla sınırlıdır; keyfi metin kategorilerini kapsamaz."
+        },
+        "sourceIds": [
+          "ow-fasttext-lid"
         ]
       }
     ]
@@ -918,6 +1185,18 @@ export const taxonomyTasks = [
         "sourceIds": [
           "ow-deepseek41"
         ]
+      },
+      {
+        "modelId": "mamba2",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The author’s generation script explicitly supports state-spaces/mamba2-2.7b for causal continuation.",
+          "tr": "Yazarın üretim betiği nedensel devam için state-spaces/mamba2-2.7b modelini açıkça destekler."
+        },
+        "sourceIds": [
+          "ow-mamba2",
+          "ow-mamba2-method"
+        ]
       }
     ]
   },
@@ -1095,6 +1374,28 @@ export const taxonomyTasks = [
         "sourceIds": [
           "ow-deepseek41"
         ]
+      },
+      {
+        "modelId": "olmo2-dpo",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The DPO-stage card documents post-training for chat. This does not borrow the final RLVR model’s benchmark scores.",
+          "tr": "DPO aşaması kartı sohbet için son eğitimi belgeler. Bu kayıt son RLVR modelinin karşılaştırma puanlarını kullanmaz."
+        },
+        "sourceIds": [
+          "ow-olmo2-dpo"
+        ]
+      },
+      {
+        "modelId": "llama31-rlhf",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The card provides conversational inference for the instruction-tuned checkpoint and its eight supported languages.",
+          "tr": "Kart, talimatla ayarlanmış ağırlıklar ve desteklenen sekiz dil için sohbet çıkarımı örneği sağlar."
+        },
+        "sourceIds": [
+          "ow-llama31-rlhf"
+        ]
       }
     ]
   },
@@ -1118,6 +1419,19 @@ export const taxonomyTasks = [
         },
         "sourceIds": [
           "ow-embedding"
+        ]
+      },
+      {
+        "modelId": "glove-factors",
+        "evidence": "adaptation",
+        "rationale": {
+          "en": "Published word vectors support cosine comparison at word level. Sentence-level similarity needs an added pooling or trained sentence model and separate validation.",
+          "tr": "Yayımlanmış kelime vektörleri kelime düzeyinde kosinüs karşılaştırmasını destekler. Cümle benzerliği ek havuzlama veya eğitilmiş cümle modeli ve ayrı doğrulama gerektirir."
+        },
+        "sourceIds": [
+          "ow-glove-factors",
+          "ow-glove-method",
+          "ow-glove-paper"
         ]
       }
     ]
@@ -1263,6 +1577,40 @@ export const taxonomyTasks = [
         "sourceIds": [
           "ow-siglip"
         ]
+      },
+      {
+        "modelId": "mlp-mixer",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The exact checkpoint includes the ImageNet-1k classifier head and a published classification example.",
+          "tr": "Tam ağırlık sürümü ImageNet-1k sınıflandırıcı başlığını ve yayımlanmış sınıflandırma örneğini içerir."
+        },
+        "sourceIds": [
+          "ow-mlp-mixer"
+        ]
+      },
+      {
+        "modelId": "resnet50-ssl",
+        "evidence": "evaluated",
+        "rationale": {
+          "en": "The SSL ResNet-50 row reports ImageNet classification evaluation; the timm card supplies the matching inference recipe.",
+          "tr": "SSL ResNet-50 satırı ImageNet sınıflandırma değerlendirmesi verir; timm kartı eşleşen çıkarım tarifini sağlar."
+        },
+        "sourceIds": [
+          "ow-resnet50-ssl",
+          "ow-ssl-method"
+        ]
+      },
+      {
+        "modelId": "jem",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The repository identifies its pretrained CIFAR-10 classifier and provides the test_clf evaluation command for it.",
+          "tr": "Depo, ön eğitimli CIFAR-10 sınıflandırıcısını tanımlar ve ona ait test_clf değerlendirme komutunu verir."
+        },
+        "sourceIds": [
+          "ow-jem"
+        ]
       }
     ]
   },
@@ -1393,6 +1741,18 @@ export const taxonomyTasks = [
         },
         "sourceIds": [
           "ow-pose"
+        ]
+      },
+      {
+        "modelId": "dlib-five",
+        "evidence": "documented",
+        "rationale": {
+          "en": "Given an image and a detected face box, the released shape predictor returns five facial landmarks.",
+          "tr": "Görüntü ve tespit edilmiş yüz kutusu verildiğinde yayımlanmış şekil tahmincisi beş yüz noktasını döndürür."
+        },
+        "sourceIds": [
+          "ow-dlib-five",
+          "ow-dlib-five-training"
         ]
       }
     ]
@@ -1573,6 +1933,19 @@ export const taxonomyTasks = [
         "sourceIds": [
           "ow-imageedit"
         ]
+      },
+      {
+        "modelId": "glow",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The released demo encodes an aligned face and decodes it after attribute-conditioned latent edits. Requires the separately linked manipulation vectors and legacy TensorFlow setup.",
+          "tr": "Yayımlanmış demo, hizalanmış yüzü kodlar ve niteliğe koşullu gizli uzay değişiminden sonra çözer. Ayrı bağlantı verilen değiştirme vektörleri ve eski TensorFlow kurulumu gerekir."
+        },
+        "sourceIds": [
+          "ow-glow",
+          "ow-glow-download",
+          "ow-glow-inference"
+        ]
       }
     ]
   },
@@ -1692,6 +2065,18 @@ export const taxonomyTasks = [
         },
         "sourceIds": [
           "ow-asr"
+        ]
+      },
+      {
+        "modelId": "pocketsphinx",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The default English acoustic model, dictionary and language model are used by the documented decoder to transcribe mono PCM speech.",
+          "tr": "Varsayılan İngilizce akustik model, sözlük ve dil modeli; belgelenmiş kod çözücüyle mono PCM konuşmayı metne dönüştürür."
+        },
+        "sourceIds": [
+          "ow-pocketsphinx",
+          "ow-pocketsphinx-usage"
         ]
       }
     ]
@@ -1957,6 +2342,19 @@ export const taxonomyTasks = [
         "sourceIds": [
           "ow-voice",
           "ow-seed-docs"
+        ]
+      },
+      {
+        "modelId": "knnvc",
+        "evidence": "evaluated",
+        "rationale": {
+          "en": "The complete documented pipeline converts source speech to the voice in target reference recordings using nearest-neighbor matching and the prematched vocoder.",
+          "tr": "Belgelenmiş tam hat, en yakın komşu eşleştirmesi ve önceden eşleştirilmiş vokoderle kaynak konuşmayı hedef referans kayıtlardaki sese dönüştürür."
+        },
+        "sourceIds": [
+          "ow-knnvc",
+          "ow-knnvc-loader",
+          "ow-knnvc-paper"
         ]
       }
     ]
@@ -2314,6 +2712,19 @@ export const taxonomyTasks = [
         "sourceIds": [
           "ow-tabpfn"
         ]
+      },
+      {
+        "modelId": "brisque",
+        "evidence": "documented",
+        "rationale": {
+          "en": "Maps the prescribed 36 scaled image-quality features to a numerical quality score. The model and range files must be used together.",
+          "tr": "Tanımlanmış 36 ölçekli görüntü kalitesi özelliğini sayısal kalite skoruna dönüştürür. Model ve aralık dosyaları birlikte kullanılmalıdır."
+        },
+        "sourceIds": [
+          "ow-brisque",
+          "ow-brisque-parameters",
+          "ow-brisque-docs"
+        ]
       }
     ]
   },
@@ -2398,6 +2809,18 @@ export const taxonomyTasks = [
         "sourceIds": [
           "ow-moment"
         ]
+      },
+      {
+        "modelId": "jem",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The authors demonstrate out-of-distribution detection with the released CIFAR-10 model. Energy scores are not calibrated probabilities and general anomaly detection is not established.",
+          "tr": "Yazarlar yayımlanmış CIFAR-10 modeliyle dağılım dışı tespiti gösterir. Enerji skorları kalibre olasılıklar değildir ve genel anomali tespiti kanıtlanmış sayılmaz."
+        },
+        "sourceIds": [
+          "ow-jem",
+          "ow-jem-paper"
+        ]
       }
     ]
   },
@@ -2421,6 +2844,19 @@ export const taxonomyTasks = [
         },
         "sourceIds": [
           "ow-moment"
+        ]
+      },
+      {
+        "modelId": "asia-bn",
+        "evidence": "documented",
+        "rationale": {
+          "en": "A Bayesian-network inference engine can infer missing discrete states conditional on observed ASIA variables. This is a benchmark example with fixed states, not clinical imputation.",
+          "tr": "Bayes ağı çıkarım motoru, gözlenen ASIA değişkenlerine koşullu eksik ayrık durumları çıkarabilir. Sabit durumlu karşılaştırma örneğidir; klinik eksik veri tamamlama değildir."
+        },
+        "sourceIds": [
+          "ow-asia-bn",
+          "ow-asia-description",
+          "ow-bn-prediction"
         ]
       }
     ]
@@ -2456,10 +2892,23 @@ export const taxonomyTasks = [
     "definition": "Graph + node pairs → link scores",
     "definitionSourceId": "S11",
     "note": {
-      "en": "No transferable checkpoint was verified for arbitrary graphs. Node features, relation schema and labels usually require graph-specific training; see the OGB task definitions.",
-      "tr": "Keyfî çizgeler için aktarılabilir ağırlık doğrulanmadı. Düğüm özellikleri, ilişki şeması ve etiketler genellikle çizgeye özel eğitim gerektirir; OGB görev tanımlarına bak."
+      "en": "Published WN18RR symbolic rules provide one domain-specific example. A new knowledge graph needs compatible relations or newly learned rules.",
+      "tr": "Yayımlanmış WN18RR sembolik kuralları alana özel bir örnek sağlar. Yeni bir bilgi grafı uyumlu ilişkiler veya yeniden öğrenilmiş kurallar gerektirir."
     },
-    "recommendations": []
+    "recommendations": [
+      {
+        "modelId": "anyburl-rules",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The supplied ranking example loads this exact rule artifact and WN18RR graph to rank missing heads and tails. No scores from a different ruleset are transferred.",
+          "tr": "Sağlanan sıralama örneği, eksik baş ve kuyrukları sıralamak için bu tam kural dosyasını ve WN18RR grafını yükler. Başka kural kümesinin puanları aktarılmaz."
+        },
+        "sourceIds": [
+          "ow-anyburl-rules",
+          "ow-anyburl-ranking"
+        ]
+      }
+    ]
   },
   {
     "id": "graph-classification",
@@ -2480,10 +2929,23 @@ export const taxonomyTasks = [
     "definition": "Graph → graph-level numerical targets",
     "definitionSourceId": "S11",
     "note": {
-      "en": "No transferable checkpoint was verified for arbitrary graphs. Node features, relation schema and labels usually require graph-specific training; see the OGB task definitions.",
-      "tr": "Keyfî çizgeler için aktarılabilir ağırlık doğrulanmadı. Düğüm özellikleri, ilişki şeması ve etiketler genellikle çizgeye özel eğitim gerektirir; OGB görev tanımlarına bak."
+      "en": "A released crystal-graph potential provides a concrete regression example. Target units, graph construction and physical domain must match.",
+      "tr": "Yayımlanmış kristal grafı potansiyeli somut regresyon örneği sağlar. Hedef birimleri, graf kurulumu ve fiziksel alan eşleşmelidir."
     },
-    "recommendations": []
+    "recommendations": [
+      {
+        "modelId": "chgnet",
+        "evidence": "documented",
+        "rationale": {
+          "en": "Predicts energy per atom from a periodic crystal graph. The scope is crystal-property regression, not arbitrary graph labels.",
+          "tr": "Periyodik kristal grafından atom başına enerji tahmin eder. Kapsam kristal özelliği regresyonudur; keyfi graf etiketleri değildir."
+        },
+        "sourceIds": [
+          "ow-chgnet",
+          "ow-chgnet-usage"
+        ]
+      }
+    ]
   },
   {
     "id": "molecular-property-prediction",

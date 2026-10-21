@@ -43,10 +43,38 @@ export function validateTaskModels(tasks: TaxonomyTask[], models: OpenWeightMode
     const card = bySource.get(model.cardSourceId);
     const weights = bySource.get(model.weightsSourceId);
     if (!card || !weights || !bySource.has(model.licenseSourceId)) throw new Error(`Missing model source: ${model.id}`);
-    if (card.kind !== "model-card" || weights.kind !== "weights" || !weights.revision || weights.url !== `${card.url}/tree/${weights.revision}` || card.revision !== weights.revision) {
-      throw new Error(`Model weights must identify the observed checkpoint revision: ${model.id}`);
+    if (card.kind !== "model-card" || weights.kind !== "weights") throw new Error(`Invalid model source kind: ${model.id}`);
+    const artifact = weights.artifact;
+    if (!artifact) {
+      if (!weights.revision || weights.url !== `${card.url}/tree/${weights.revision}` || card.revision !== weights.revision) {
+        throw new Error(`Model weights must identify the observed checkpoint revision: ${model.id}`);
+      }
+    } else if (artifact.type === "git") {
+      const repository = new URL(artifact.repositoryUrl);
+      if (repository.hostname !== "github.com" || !/^\/[^/]+\/[^/]+$/.test(repository.pathname)
+        || artifact.path.split("/").some((part) => !part || part === "." || part === "..")
+        || !weights.revision || card.revision !== weights.revision
+        || !card.url.startsWith(`${artifact.repositoryUrl}/blob/${weights.revision}/`)
+        || weights.url !== `${artifact.repositoryUrl}/${artifact.entry}/${weights.revision}/${artifact.path}`) {
+        throw new Error(`Git artifact must identify the observed checkpoint revision: ${model.id}`);
+      }
+    } else {
+      const evidence = bySource.get(artifact.evidenceSourceId);
+      if (!evidence || !["model-card", "documentation"].includes(evidence.kind) || weights.revision) {
+        throw new Error(`Publisher artifact needs release evidence, not a fabricated revision: ${model.id}`);
+      }
+      if (artifact.type === "publisher-file" && decodeURIComponent(new URL(weights.url).pathname.split("/").at(-1)!) !== artifact.fileName) {
+        throw new Error(`Publisher artifact filename does not match: ${model.id}`);
+      }
+      if (artifact.type === "release") {
+        const repository = new URL(artifact.repositoryUrl);
+        if (repository.hostname !== "github.com" || !/^\/[^/]+\/[^/]+$/.test(repository.pathname)
+          || weights.url !== `${artifact.repositoryUrl}/releases/tag/${artifact.tag}`) throw new Error(`Invalid release artifact: ${model.id}`);
+        unique(artifact.files.map((file) => file.name), `release file in ${model.id}`);
+      }
     }
   }
+  if (sources.some((source) => source.artifact && source.kind !== "weights")) throw new Error("Only weight sources can declare artifacts.");
   for (const task of tasks) {
     if (!definitions.some((source) => source.id === task.definitionSourceId)) throw new Error(`Missing task definition: ${task.id}`);
     unique(task.recommendations.map((entry) => entry.modelId), `recommendation in ${task.id}`);

@@ -3409,6 +3409,12 @@ a {
 .model-family-tasks > li > a { display: inline-block; padding-block: 6px; font-size: 0.8125rem; line-height: 1.5; overflow-wrap: anywhere; }
 .model-family-tasks .task-model-evidence { margin-top: 8px; }
 .model-family-tasks .task-model-evidence p { margin-top: 8px; }
+.model-family-review { margin-block: 16px; padding: 14px; border: 1px solid var(--atlas-border); border-radius: var(--atlas-radius-sm); background: var(--atlas-surface); font-size: 0.8125rem; line-height: 1.65; }
+.model-family-review h3 { margin: 0 0 4px; font-size: 0.875rem; }
+.model-family-review > small { color: var(--atlas-ink-muted); }
+.model-family-review p { margin: 10px 0; }
+.model-artifact-details code { overflow-wrap: anywhere; font-size: 0.6875rem; }
+.model-artifact-details p { line-height: 1.6; }
 .taxonomy-viewer:fullscreen .taxonomy-workspace { flex: 1; overflow: hidden; }
 .taxonomy-viewer:fullscreen .task-model-panel { max-height: none; }
 @media (max-width: 1050px) {

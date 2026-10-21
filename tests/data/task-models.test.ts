@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { openWeightModels, taxonomyTasks } from "@/data/task-models";
 import { taskModelSources, taxonomySources } from "@/data/sources";
 import { linkTaskCards, taskModelHref, validateTaskModels } from "@/lib/task-models";
+import type { TaskModelSource } from "@/data/schema";
 
 const svg = readFileSync("public/assets/taxonomy/ai-task-taxonomy.svg", "utf8");
 
@@ -41,5 +42,23 @@ describe("task-level open-weight evidence", () => {
       }
     }
     expect(svg).not.toContain("data-task-id");
+  });
+
+  it("distinguishes pinned parameter artifacts from publisher-hosted checkpoints and release bundles", () => {
+    const validate = (sources: TaskModelSource[]) => validateTaskModels(taxonomyTasks, openWeightModels, sources, taxonomySources, svg);
+    const changed = (id: string, patch: Partial<TaskModelSource>) => taskModelSources.map((source) => source.id === id ? { ...source, ...patch } : source);
+    const git = taskModelSources.find((source) => source.id === "ow-anyburl-rules-weights")!;
+    expect(git.artifact?.type).toBe("git");
+    expect(() => validate(changed(git.id, { url: git.url.replace(git.revision!, "main") }))).toThrow(/revision/);
+    const glow = taskModelSources.find((source) => source.id === "ow-glow-weights")!;
+    expect(glow.artifact?.type).toBe("publisher-file");
+    expect(glow.revision).toBeUndefined();
+    expect(() => validate(changed(glow.id, { revision: "a".repeat(40) }))).toThrow(/fabricated revision/);
+    expect(() => validate(changed(glow.id, { url: "https://example.com/different.pb" }))).toThrow(/filename/);
+    expect(() => validate(taskModelSources.filter((source) => source.id !== "ow-glow-download"))).toThrow(/release evidence/);
+    const release = taskModelSources.find((source) => source.id === "ow-knnvc-weights")!;
+    expect(release.artifact?.type).toBe("release");
+    expect(() => validate(changed(release.id, { url: "https://github.com/bshall/knn-vc/releases/latest" }))).toThrow(/release artifact/);
+    expect(() => validate(changed("ow-knnvc", { artifact: release.artifact }))).toThrow(/Only weight sources/);
   });
 });

@@ -14,8 +14,9 @@ for (const width of [1440, 390]) {
     await expect(panel).toBeFocused();
     await expect(page).toHaveURL(/lang=tr&family=convolutional-networks$/);
     await expect(panel.getByRole("heading", { name: "ECAPA-TDNN · VoxCeleb" })).toBeVisible();
-    await expect(panel.getByRole("link", { name: "Ağırlık dosyaları" })).toHaveAttribute("href", /huggingface.co\/speechbrain\/spkrec-ecapa-voxceleb\/tree\/[a-f0-9]{40}$/);
-    await expect(panel.getByRole("link", { name: "Apache-2.0" })).toHaveAttribute("href", "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb");
+    const ecapa = panel.locator(".model-family-card").filter({ has: page.getByRole("heading", { name: "ECAPA-TDNN · VoxCeleb" }) });
+    await expect(ecapa.getByRole("link", { name: "Ağırlık dosyaları" })).toHaveAttribute("href", /huggingface.co\/speechbrain\/spkrec-ecapa-voxceleb\/tree\/[a-f0-9]{40}$/);
+    await expect(ecapa.getByRole("link", { name: "Apache-2.0" })).toHaveAttribute("href", "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb");
     await expect(panel.getByRole("link", { name: "Kavram tanımının kaynağı" })).toHaveAttribute("href", "https://www.deeplearningbook.org/");
     await expect(panel.getByRole("link", { name: "Speaker Verification", exact: false })).toHaveAttribute("href", "/taxonomy/tasks?lang=tr&task=speaker-verification");
     const verification = panel.locator(".model-family-tasks > li").filter({ hasText: "Speaker Verification" });
@@ -27,10 +28,11 @@ for (const width of [1440, 390]) {
     await expect(panel).toBeVisible();
     await page.getByRole("button", { name: "English", exact: true }).click();
     await expect(page).toHaveURL(/\?family=convolutional-networks$/);
-    await expect(panel.getByRole("link", { name: "Weight files" })).toBeVisible();
+    await expect(ecapa.getByRole("link", { name: "Weight files" })).toBeVisible();
     await page.getByRole("combobox", { name: "Select a model family or concept" }).selectOption("kernel-methods");
-    await expect(page.getByRole("heading", { name: "No verified model mapping in this catalogue" })).toBeVisible();
-    await expect(page.locator(".model-family-card")).toHaveCount(0);
+    await expect(page.getByRole("heading", { name: "BRISQUE · LIVE-R2 RBF-SVR" })).toBeVisible();
+    await expect(page.locator(".model-family-review")).toContainText("support vectors");
+    await expect(page.locator(".model-family-card")).toHaveCount(1);
     await page.goBack();
     await expect(panel).toBeVisible();
     await page.goForward();
@@ -89,5 +91,41 @@ test("every model concept opens its own memberships or explicit scope gap", asyn
     await expect(panel.getByRole("link", { name: "Concept definition source" })).toHaveAttribute("href", /^https:/);
     if (family.models.length) await expect(panel.locator('.model-family-tasks a[href^="/taxonomy/tasks"]')).not.toHaveCount(0);
     else await expect(panel.getByRole("heading", { name: "No verified model mapping in this catalogue" })).toBeVisible();
+    if ("review" in family) {
+      await expect(panel.getByRole("heading", { name: "Research result and scope" })).toBeVisible();
+      await panel.getByText(`Research sources (${family.review!.sourceIds.length})`, { exact: true }).click();
+      await expect(panel.locator(".model-family-review a")).toHaveCount(family.review!.sourceIds.length);
+    }
   }
 });
+
+for (const width of [1440, 390]) {
+  test(`${width}px: research separates rules, statistical parameters and nonparametric pipeline components`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("/taxonomy/models?lang=tr&family=logical-representations");
+    const panel = page.locator("#model-family-panel");
+    await expect(panel.getByText("Öğrenilmiş kurallar ve destek istatistikleri", { exact: true })).toBeVisible();
+    await expect(panel.getByRole("link", { name: "Öğrenilmiş kural dosyaları" })).toHaveAttribute("href", /anyburl-rules-c5-3600$/);
+    await panel.getByText("Model dosyasının kimliği", { exact: true }).click();
+    await expect(panel.locator(".model-artifact-details")).toContainText("anyburl-rules-c5-3600");
+    await panel.getByRole("link", { name: "Link Prediction →", exact: true }).click();
+    await expect(page).toHaveURL(/task=link-prediction$/);
+    await expect(page.getByRole("heading", { name: "AnyBURL · WN18RR learned rules" })).toBeVisible();
+    await page.goBack();
+    const selector = page.getByRole("combobox", { name: "Model ailesi veya kavram seç" });
+    await selector.selectOption("nearest-neighbor-models");
+    await expect(panel.locator('[data-relation="component"]')).toHaveCount(1);
+    await expect(panel.locator(".model-family-review")).toContainText("öğrenilmiş kNN ağırlıkları yoktur");
+    await panel.getByText("Model dosyasının kimliği", { exact: true }).click();
+    await expect(panel.locator(".model-artifact-details")).toContainText("WavLM-Large.pt");
+    await expect(panel.locator(".model-artifact-details")).toContainText("prematch_g_02500000.pt");
+    await selector.selectOption("normalizing-flows");
+    await panel.getByText("Model dosyasının kimliği", { exact: true }).click();
+    await expect(panel.locator(".model-artifact-details")).toContainText("değişmez Git ağırlık sürümü değildir");
+    await expect(panel.locator(".model-artifact-details")).toContainText("ETag");
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    await page.getByRole("button", { name: "English", exact: true }).click();
+    await expect(panel.getByRole("heading", { name: "Research result and scope" })).toBeVisible();
+    await expect(panel.getByText("Artifact identity", { exact: true })).toBeVisible();
+  });
+}

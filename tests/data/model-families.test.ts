@@ -41,9 +41,31 @@ describe("model-family evidence and task traversal", () => {
     expect(members("encoder-only").map((entry) => entry.modelId)).not.toContain("embedding");
     expect(members("decoder-only").find((entry) => entry.modelId === "embedding")?.relation).toBe("member");
     expect(members("variational-autoencoders").find((entry) => entry.modelId === "wan")?.relation).toBe("component");
-    expect(members("rl-from-human-feedback")).toEqual([]);
-    expect(members("direct-preference-optimization")).toEqual([]);
+    expect(members("rl-from-human-feedback").map((entry) => entry.modelId)).toEqual(["llama31-rlhf"]);
+    expect(members("direct-preference-optimization").map((entry) => entry.modelId)).toEqual(["olmo2-dpo"]);
+    expect(members("nearest-neighbor-models").find((entry) => entry.modelId === "knnvc")?.relation).toBe("component");
+    expect(members("gaussian-mixture-models").find((entry) => entry.modelId === "pocketsphinx")?.relation).toBe("component");
     expect(tasksForModel("codet5", taxonomyTasks).every(({ evidence }) => evidence.evidence === "adaptation")).toBe(true);
+  });
+
+  it("records source-backed research for all twenty former gaps and rejects dangling review sources", () => {
+    const reviewed = modelFamilies.filter((family) => "review" in family);
+    expect(reviewed).toHaveLength(20);
+    expect(modelFamilies.every((family) => family.models.length > 0)).toBe(true);
+    for (const family of reviewed) {
+      expect(family.review?.summary.en).toBeTruthy();
+      expect(family.review?.summary.tr).toBeTruthy();
+      expect(family.review?.sourceIds.some((id) => family.models.some((entry) => entry.sourceIds.includes(id)))).toBe(true);
+    }
+    const family = reviewed[0];
+    expect(() => validate(modelFamilies.map((item) => item.id === family.id
+      ? { ...item, review: { ...family.review!, sourceIds: ["ow-missing-research"] } } : item))).toThrow(/review evidence/);
+    const rules = openWeightModels.find((model) => model.id === "anyburl-rules")!;
+    expect(rules.parameterKind).toBe("rules");
+    expect(openWeightModels.find((model) => model.id === "asia-bn")?.parameterKind).toBe("statistical");
+    expect(tasksForModel("anyburl-rules", taxonomyTasks).map(({ task }) => task.id)).toEqual(["link-prediction"]);
+    expect(tasksForModel("chgnet", taxonomyTasks).map(({ task }) => task.id)).toEqual(["graph-regression"]);
+    expect(tasksForModel("glow", taxonomyTasks).map(({ task }) => task.id)).not.toContain("density-estimation");
   });
 
   it("makes only concept cards interactive and preserves the duplicate Speech & Audio navigation", () => {

@@ -2,6 +2,7 @@
 
 import type { OpenWeightModel, TaxonomyTask, TaxonomySource, TaskModelSource } from "@/data/schema";
 import { taskModelLabels, type ModelLocale } from "@/lib/labels";
+import { ModelArtifactDetails } from "@/components/taxonomy/model-artifact-details";
 
 export function TaskModelPanel({ task, models, sources, definitions, locale, onClose }: {
   task: TaxonomyTask; models: OpenWeightModel[]; sources: TaskModelSource[];
@@ -38,7 +39,8 @@ export function TaskModelPanel({ task, models, sources, definitions, locale, onC
               <div><dt>{labels.access}</dt><dd>{labels[model.access]}</dd></div>
               <div><dt>{labels.reviewed}</dt><dd><time dateTime={card.observedAt}>{card.observedAt}</time></dd></div>
             </dl>
-            <a className="task-model-weights" href={weights.url} target="_blank" rel="noreferrer">{labels.weights} ↗</a>
+            <a className="task-model-weights" href={weights.url} target="_blank" rel="noreferrer">{model.parameterKind === "statistical" ? labels.parameterFiles : model.parameterKind === "rules" ? labels.ruleFiles : labels.weights} ↗</a>
+            <ModelArtifactDetails model={model} weights={weights} sources={sources} locale={locale} />
             <details className="task-model-evidence" open>
               <summary>{labels.sources} ({entry.sourceIds.length})</summary>
               <ul>{entry.sourceIds.map((id) => {

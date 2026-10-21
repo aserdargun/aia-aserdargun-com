@@ -14,8 +14,9 @@ for (const width of [1440, 390]) {
     await expect(panel).toBeFocused();
     await expect(page).toHaveURL(/lang=tr&task=automatic-speech-recognition$/);
     await expect(panel.getByRole("heading", { name: "Qwen3-ASR-1.7B" })).toBeVisible();
-    await expect(panel.getByRole("link", { name: "Ağırlık dosyaları" })).toHaveAttribute("href", /huggingface.co\/Qwen\/Qwen3-ASR-1.7B\/tree\/[a-f0-9]{40}$/);
-    await expect(panel.getByRole("link", { name: "Apache-2.0" })).toHaveAttribute("href", "https://huggingface.co/Qwen/Qwen3-ASR-1.7B");
+    const qwenAsr = panel.locator(".task-model-card").filter({ has: page.getByRole("heading", { name: "Qwen3-ASR-1.7B" }) });
+    await expect(qwenAsr.getByRole("link", { name: "Ağırlık dosyaları" })).toHaveAttribute("href", /huggingface.co\/Qwen\/Qwen3-ASR-1.7B\/tree\/[a-f0-9]{40}$/);
+    await expect(qwenAsr.getByRole("link", { name: "Apache-2.0" })).toHaveAttribute("href", "https://huggingface.co/Qwen/Qwen3-ASR-1.7B");
     await expect(panel.getByRole("link", { name: "Qwen3-ASR-1.7B — model card" })).toBeVisible();
     await expect(panel.getByRole("link", { name: "Görev tanımının kaynağı" })).toHaveAttribute("href", /^https:/);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
@@ -23,7 +24,7 @@ for (const width of [1440, 390]) {
     await expect(panel).toBeVisible();
     await page.getByRole("button", { name: "English", exact: true }).click();
     await expect(page).toHaveURL(/\?task=automatic-speech-recognition$/);
-    await expect(panel.getByRole("link", { name: "Weight files" })).toBeVisible();
+    await expect(qwenAsr.getByRole("link", { name: "Weight files" })).toBeVisible();
     await page.getByRole("combobox", { name: "Select a task" }).selectOption("constraint-satisfaction");
     await expect(page.getByRole("heading", { name: "No verified pretrained recommendation" })).toBeVisible();
     await expect(page.locator(".task-model-card")).toHaveCount(0);

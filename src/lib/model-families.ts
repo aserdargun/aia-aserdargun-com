@@ -52,6 +52,10 @@ export function validateModelFamilies(families: ModelFamily[], models: OpenWeigh
     const concept = concepts.find(([, , name]) => name === escapeAttribute(family.name));
     if (!definition || definition.url !== concept?.[1]) throw new Error(`Incorrect family definition: ${family.id}`);
     unique(family.models.map((entry) => entry.modelId), `model in ${family.id}`);
+    if (family.review) {
+      unique(family.review.sourceIds, `review source in ${family.id}`);
+      if (family.review.sourceIds.some((id) => !bySource.has(id))) throw new Error(`Unresolved family review evidence: ${family.id}`);
+    }
     for (const entry of family.models) {
       const model = byModel.get(entry.modelId);
       if (!model || entry.sourceIds.some((id) => !bySource.has(id))) throw new Error(`Unresolved family evidence: ${family.id}`);

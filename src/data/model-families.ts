@@ -1,6 +1,6 @@
 import type { ModelFamily } from "@/data/schema";
 
-/** Non-exclusive memberships of the existing checkpoint catalogue; primary observations are in sources.ts. */
+/** Non-exclusive memberships of the existing SVG concepts. */
 export const modelFamilies = [
   {
     "id": "logical-representations",
@@ -9,10 +9,35 @@ export const modelFamilies = [
     "definition": "Propositional and first-order representations.",
     "definitionSourceId": "S01",
     "note": {
-      "en": "This concept commonly represents explicit knowledge or inference rules. The current checkpoint catalogue has no verified pretrained weight entry for it; a reasoning LLM is not automatically a symbolic rule model.",
-      "tr": "Bu kavram çoğunlukla açık bilgi veya çıkarım kurallarını temsil eder. Mevcut ağırlık kataloğunda doğrulanmış hazır model eşleşmesi yoktur; akıl yürüten bir dil modeli otomatik olarak sembolik kural modeli sayılmaz."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "anyburl-rules",
+        "relation": "member",
+        "rationale": {
+          "en": "The released rules explicitly encode variables, binary predicates, heads and bodies. This is a first-order rule representation with empirical confidence, not a language-model reasoning label.",
+          "tr": "Yayımlanan kurallar değişken, ikili yüklem, baş ve gövdeleri açıkça kodlar. Deneysel güven değerli birinci dereceden kural temsilidir; bir dil modelinin akıl yürütme etiketi değildir."
+        },
+        "sourceIds": [
+          "ow-anyburl-rules",
+          "ow-anyburl-syntax",
+          "ow-anyburl-loader"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "A representation is not itself a pretrained network. Here the concrete artifact is a learned first-order WN18RR rule set; it covers a restricted relational language, not all propositional or first-order reasoning.",
+        "tr": "Bir temsil kendi başına ön eğitimli ağ değildir. Buradaki somut dosya, öğrenilmiş birinci dereceden WN18RR kural kümesidir; tüm önermesel veya birinci dereceden akıl yürütmeyi değil sınırlı ilişkisel dili kapsar."
+      },
+      "sourceIds": [
+        "ow-anyburl-rules",
+        "ow-anyburl-syntax"
+      ]
+    }
   },
   {
     "id": "rule-based-models",
@@ -21,10 +46,35 @@ export const modelFamilies = [
     "definition": "Explicit rules for inference.",
     "definitionSourceId": "S01",
     "note": {
-      "en": "This concept commonly represents explicit knowledge or inference rules. The current checkpoint catalogue has no verified pretrained weight entry for it; a reasoning LLM is not automatically a symbolic rule model.",
-      "tr": "Bu kavram çoğunlukla açık bilgi veya çıkarım kurallarını temsil eder. Mevcut ağırlık kataloğunda doğrulanmış hazır model eşleşmesi yoktur; akıl yürüten bir dil modeli otomatik olarak sembolik kural modeli sayılmaz."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "anyburl-rules",
+        "relation": "member",
+        "rationale": {
+          "en": "PyClause applies this learned WN18RR rule file to rank missing graph links, using stored support statistics.",
+          "tr": "PyClause, eksik graf bağlantılarını sıralamak için bu öğrenilmiş WN18RR kural dosyasını kayıtlı destek istatistikleriyle uygular."
+        },
+        "sourceIds": [
+          "ow-anyburl-rules",
+          "ow-anyburl-ranking",
+          "ow-anyburl-loader"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "A learned rule file is available, so this concept need not remain empty. Rules and support counts are the reusable model parameters; another domain needs its own facts, vocabulary and usually new rules.",
+        "tr": "Öğrenilmiş kural dosyası bulunduğundan kavramın boş kalması gerekmez. Kurallar ve destek sayıları yeniden kullanılabilir model parametreleridir; başka alan kendi olgularını, sözlüğünü ve çoğunlukla yeni kuralları gerektirir."
+      },
+      "sourceIds": [
+        "ow-anyburl-rules",
+        "ow-anyburl-ranking"
+      ]
+    }
   },
   {
     "id": "linear-logistic-models",
@@ -33,10 +83,34 @@ export const modelFamilies = [
     "definition": "Linear predictors and linked probabilities.",
     "definitionSourceId": "S02",
     "note": {
-      "en": "The current catalogue has no verified standalone checkpoint for this family. Many examples require fitting to the target dataset; having a linear or MLP layer inside another model is not sufficient for whole-model membership.",
-      "tr": "Mevcut katalogda bu aileye ait doğrulanmış bağımsız ağırlık kaydı yoktur. Birçok örnek hedef veri kümesine eğitim gerektirir; başka bir modelin içinde doğrusal veya MLP katmanı olması tüm modelin bu aileden sayılmasına yetmez."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "fasttext-lid",
+        "relation": "member",
+        "rationale": {
+          "en": "fastText factorizes a linear text classifier over averaged word/ngram features; its classifier family is documented in the authors’ paper.",
+          "tr": "fastText, ortalanmış kelime/ngram özellikleri üzerindeki doğrusal metin sınıflandırıcısını çarpanlarına ayırır; sınıflandırıcı ailesi yazarların makalesinde belgelenir."
+        },
+        "sourceIds": [
+          "ow-fasttext-lid",
+          "ow-fasttext-paper"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "fastText provides a released linear-classifier example for language identification. The feature vocabulary and class set are fixed; its weights are not a generic classifier for arbitrary tables.",
+        "tr": "fastText, dil tanıma için yayımlanmış doğrusal sınıflandırıcı örneği sağlar. Özellik sözlüğü ve sınıflar sabittir; ağırlıkları keyfi tablolar için genel sınıflandırıcı değildir."
+      },
+      "sourceIds": [
+        "ow-fasttext-lid",
+        "ow-fasttext-paper"
+      ]
+    }
   },
   {
     "id": "kernel-methods",
@@ -45,10 +119,34 @@ export const modelFamilies = [
     "definition": "Support vector machines; Gaussian processes.",
     "definitionSourceId": "S02",
     "note": {
-      "en": "The current catalogue has no verified standalone checkpoint for this family. Many examples require fitting to the target dataset; having a linear or MLP layer inside another model is not sufficient for whole-model membership.",
-      "tr": "Mevcut katalogda bu aileye ait doğrulanmış bağımsız ağırlık kaydı yoktur. Birçok örnek hedef veri kümesine eğitim gerektirir; başka bir modelin içinde doğrusal veya MLP katmanı olması tüm modelin bu aileden sayılmasına yetmez."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "brisque",
+        "relation": "member",
+        "rationale": {
+          "en": "The published YAML explicitly declares EPS_SVR, an RBF kernel, gamma and 774 support vectors.",
+          "tr": "Yayımlanan YAML; EPS_SVR, RBF çekirdeği, gamma ve 774 destek vektörünü açıkça belirtir."
+        },
+        "sourceIds": [
+          "ow-brisque",
+          "ow-brisque-parameters"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "A ready RBF-SVR exists in OpenCV’s BRISQUE release. Its support vectors and scaling are specific to image-quality features; reuse with unrelated features would be invalid.",
+        "tr": "OpenCV’nin BRISQUE sürümünde hazır RBF-SVR vardır. Destek vektörleri ve ölçekleme görüntü kalitesi özelliklerine özgüdür; ilişkisiz özelliklerle yeniden kullanım geçersiz olur."
+      },
+      "sourceIds": [
+        "ow-brisque",
+        "ow-brisque-parameters"
+      ]
+    }
   },
   {
     "id": "decision-trees-ensembles",
@@ -57,10 +155,36 @@ export const modelFamilies = [
     "definition": "Trees; random forests; gradient boosting.",
     "definitionSourceId": "S02",
     "note": {
-      "en": "The current catalogue has no verified standalone checkpoint for this family. Many examples require fitting to the target dataset; having a linear or MLP layer inside another model is not sufficient for whole-model membership.",
-      "tr": "Mevcut katalogda bu aileye ait doğrulanmış bağımsız ağırlık kaydı yoktur. Birçok örnek hedef veri kümesine eğitim gerektirir; başka bir modelin içinde doğrusal veya MLP katmanı olması tüm modelin bu aileden sayılmasına yetmez."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "dlib-five",
+        "relation": "member",
+        "rationale": {
+          "en": "The exact five-point training program calls dlib’s shape predictor trainer, whose documented algorithm is an ensemble of regression trees.",
+          "tr": "Beş noktalı modelin tam eğitim programı, belgelenmiş algoritması regresyon ağacı topluluğu olan dlib şekil tahmincisi eğiticisini kullanır."
+        },
+        "sourceIds": [
+          "ow-dlib-five",
+          "ow-dlib-five-training",
+          "ow-dlib-tree-method"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "dlib publishes the trained five-landmark regression-tree ensemble. This fills the family with a narrow ready model; it does not make the tree ensemble transferable to arbitrary prediction targets.",
+        "tr": "dlib eğitilmiş beş noktalı regresyon ağacı topluluğunu yayımlar. Aileye dar kapsamlı hazır model sağlar; ağaç topluluğunu keyfi tahmin hedeflerine aktarılabilir yapmaz."
+      },
+      "sourceIds": [
+        "ow-dlib-five",
+        "ow-dlib-five-training",
+        "ow-dlib-tree-method"
+      ]
+    }
   },
   {
     "id": "nearest-neighbor-models",
@@ -69,10 +193,35 @@ export const modelFamilies = [
     "definition": "Predictions from nearby observations.",
     "definitionSourceId": "S02",
     "note": {
-      "en": "The current catalogue has no verified standalone checkpoint for this family. Many examples require fitting to the target dataset; having a linear or MLP layer inside another model is not sufficient for whole-model membership.",
-      "tr": "Mevcut katalogda bu aileye ait doğrulanmış bağımsız ağırlık kaydı yoktur. Birçok örnek hedef veri kümesine eğitim gerektirir; başka bir modelin içinde doğrusal veya MLP katmanı olması tüm modelin bu aileden sayılmasına yetmez."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "knnvc",
+        "relation": "component",
+        "rationale": {
+          "en": "The conversion stage performs k-nearest-neighbor regression in WavLM feature space. Released neural checkpoints supply the encoder and vocoder; the kNN stage itself has no pretrained weights.",
+          "tr": "Dönüştürme aşaması WavLM özellik uzayında k-en yakın komşu regresyonu yapar. Yayımlanmış sinir ağı ağırlıkları kodlayıcı ve vokoder içindir; kNN aşamasının kendi ön eğitimli ağırlıkları yoktur."
+        },
+        "sourceIds": [
+          "ow-knnvc",
+          "ow-knnvc-paper",
+          "ow-knnvc-loader"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "There are no learned kNN weights to download. kNN-VC is a documented complete pipeline with released encoder/vocoder weights; its neighbor set comes from the required target-speaker audio. The relation is explicitly a component.",
+        "tr": "İndirilecek öğrenilmiş kNN ağırlıkları yoktur. kNN-VC, kodlayıcı/vokoder ağırlıkları yayımlanmış belgeli tam hattır; komşu kümesi gerekli hedef konuşmacı sesinden gelir. İlişki açıkça bileşen olarak işaretlidir."
+      },
+      "sourceIds": [
+        "ow-knnvc",
+        "ow-knnvc-loader"
+      ]
+    }
   },
   {
     "id": "bayesian-networks",
@@ -81,10 +230,34 @@ export const modelFamilies = [
     "definition": "Directed probabilistic dependencies.",
     "definitionSourceId": "S01",
     "note": {
-      "en": "The current catalogue has no verified standalone checkpoint for this family. Many examples require fitting to the target dataset; having a linear or MLP layer inside another model is not sufficient for whole-model membership.",
-      "tr": "Mevcut katalogda bu aileye ait doğrulanmış bağımsız ağırlık kaydı yoktur. Birçok örnek hedef veri kümesine eğitim gerektirir; başka bir modelin içinde doğrusal veya MLP katmanı olması tüm modelin bu aileden sayılmasına yetmez."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "asia-bn",
+        "relation": "member",
+        "rationale": {
+          "en": "The BIF contains a directed network and conditional probability tables for eight variables. These published parameters instantiate a Bayesian network.",
+          "tr": "BIF, sekiz değişken için yönlü ağ ve koşullu olasılık tablolarını içerir. Yayımlanan bu parametreler somut bir Bayes ağı oluşturur."
+        },
+        "sourceIds": [
+          "ow-asia-bn",
+          "ow-asia-description"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "The downloadable ASIA network includes probability tables. These are published benchmark parameters rather than a generally pretrained or clinically validated predictor. Its named variables must match.",
+        "tr": "İndirilebilir ASIA ağı olasılık tablolarını içerir. Bunlar genel ön eğitimli veya klinik doğrulanmış tahminci değil, yayımlanmış karşılaştırma parametreleridir. Adlandırılmış değişkenleri eşleşmelidir."
+      },
+      "sourceIds": [
+        "ow-asia-bn",
+        "ow-asia-description"
+      ]
+    }
   },
   {
     "id": "hidden-markov-models",
@@ -93,10 +266,36 @@ export const modelFamilies = [
     "definition": "Latent state transitions and emissions.",
     "definitionSourceId": "S01",
     "note": {
-      "en": "The current catalogue has no verified standalone checkpoint for this family. Many examples require fitting to the target dataset; having a linear or MLP layer inside another model is not sufficient for whole-model membership.",
-      "tr": "Mevcut katalogda bu aileye ait doğrulanmış bağımsız ağırlık kaydı yoktur. Birçok örnek hedef veri kümesine eğitim gerektirir; başka bir modelin içinde doğrusal veya MLP katmanı olması tüm modelin bu aileden sayılmasına yetmez."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "pocketsphinx",
+        "relation": "component",
+        "rationale": {
+          "en": "The acoustic model and transition matrices implement the HMM state sequence described by CMUSphinx. Speech recognition belongs to the full decoder pipeline.",
+          "tr": "Akustik model ve geçiş matrisleri CMUSphinx’in tanımladığı HMM durum dizisini uygular. Konuşma tanıma tam kod çözücü hattına aittir."
+        },
+        "sourceIds": [
+          "ow-pocketsphinx",
+          "ow-sphinx-hmm-gmm",
+          "ow-pocketsphinx-usage"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "The English acoustic checkpoint provides a concrete HMM example. Standalone transcription still needs a compatible decoder, language model and pronunciation dictionary, all documented by PocketSphinx.",
+        "tr": "İngilizce akustik ağırlıkları somut HMM örneği sağlar. Metne dönüştürme ayrıca PocketSphinx’in belgelediği uyumlu kod çözücü, dil modeli ve telaffuz sözlüğünü gerektirir."
+      },
+      "sourceIds": [
+        "ow-pocketsphinx",
+        "ow-pocketsphinx-usage",
+        "ow-sphinx-hmm-gmm"
+      ]
+    }
   },
   {
     "id": "gaussian-mixture-models",
@@ -105,10 +304,34 @@ export const modelFamilies = [
     "definition": "Mixtures of component distributions.",
     "definitionSourceId": "S02",
     "note": {
-      "en": "The current catalogue has no verified standalone checkpoint for this family. Many examples require fitting to the target dataset; having a linear or MLP layer inside another model is not sufficient for whole-model membership.",
-      "tr": "Mevcut katalogda bu aileye ait doğrulanmış bağımsız ağırlık kaydı yoktur. Birçok örnek hedef veri kümesine eğitim gerektirir; başka bir modelin içinde doğrusal veya MLP katmanı olması tüm modelin bu aileden sayılmasına yetmez."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "pocketsphinx",
+        "relation": "component",
+        "rationale": {
+          "en": "Gaussian means, variances and mixture weights parameterize acoustic emissions within the HMM recognizer. This is a GMM component, not a standalone general clustering model.",
+          "tr": "Gauss ortalamaları, varyansları ve karışım ağırlıkları HMM tanıyıcısındaki akustik emisyonları parametreler. Bir GMM bileşenidir; bağımsız genel kümeleme modeli değildir."
+        },
+        "sourceIds": [
+          "ow-pocketsphinx",
+          "ow-sphinx-hmm-gmm"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "The published acoustic GMM is usable within its HMM recognizer. It is not a pretrained clustering solution for arbitrary observations; new domains require fitted distributions.",
+        "tr": "Yayımlanmış akustik GMM, kendi HMM tanıyıcısında kullanılabilir. Keyfi gözlemler için ön eğitimli kümeleme çözümü değildir; yeni alanlar uyarlanmış dağılımlar gerektirir."
+      },
+      "sourceIds": [
+        "ow-pocketsphinx",
+        "ow-sphinx-hmm-gmm"
+      ]
+    }
   },
   {
     "id": "linear-factor-models",
@@ -117,10 +340,35 @@ export const modelFamilies = [
     "definition": "PCA and related latent-factor models.",
     "definitionSourceId": "S05",
     "note": {
-      "en": "The current catalogue has no verified standalone checkpoint for this family. Many examples require fitting to the target dataset; having a linear or MLP layer inside another model is not sufficient for whole-model membership.",
-      "tr": "Mevcut katalogda bu aileye ait doğrulanmış bağımsız ağırlık kaydı yoktur. Birçok örnek hedef veri kümesine eğitim gerektirir; başka bir modelin içinde doğrusal veya MLP katmanı olması tüm modelin bu aileden sayılmasına yetmez."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "glove-factors",
+        "relation": "member",
+        "rationale": {
+          "en": "The authors derive a global log-bilinear, weighted matrix-factorization objective. The published word vectors are latent factors; this membership covers related factor models, not PCA specifically.",
+          "tr": "Yazarlar küresel log-bilineer, ağırlıklı matris çarpanlama hedefini türetir. Yayımlanmış kelime vektörleri gizli faktörlerdir; üyelik özellikle PCA’yı değil ilişkili faktör modellerini kapsar."
+        },
+        "sourceIds": [
+          "ow-glove-factors",
+          "ow-glove-paper",
+          "ow-glove-method"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "GloVe supplies released log-bilinear latent factors. This is a related factor-model example, not PCA. A ready PCA transform for arbitrary feature schemas cannot be inferred from these word vectors.",
+        "tr": "GloVe yayımlanmış log-bilineer gizli faktörler sağlar. İlişkili faktör modeli örneğidir, PCA değildir. Bu kelime vektörlerinden keyfi özellik şemaları için hazır PCA dönüşümü çıkarılamaz."
+      },
+      "sourceIds": [
+        "ow-glove-factors",
+        "ow-glove-paper"
+      ]
+    }
   },
   {
     "id": "neural-networks",
@@ -682,6 +930,96 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-r1"
         ]
+      },
+      {
+        "modelId": "mamba2",
+        "relation": "member",
+        "rationale": {
+          "en": "The cited architecture is a trained neural network.",
+          "tr": "Kaynak verilen mimari eğitilmiş sinir ağıdır."
+        },
+        "sourceIds": [
+          "ow-mamba2",
+          "ow-mamba2-method"
+        ]
+      },
+      {
+        "modelId": "olmo2-dpo",
+        "relation": "member",
+        "rationale": {
+          "en": "The cited architecture is a trained neural network.",
+          "tr": "Kaynak verilen mimari eğitilmiş sinir ağıdır."
+        },
+        "sourceIds": [
+          "ow-olmo2-dpo"
+        ]
+      },
+      {
+        "modelId": "llama31-rlhf",
+        "relation": "member",
+        "rationale": {
+          "en": "The cited architecture is a trained neural network.",
+          "tr": "Kaynak verilen mimari eğitilmiş sinir ağıdır."
+        },
+        "sourceIds": [
+          "ow-llama31-rlhf"
+        ]
+      },
+      {
+        "modelId": "mlp-mixer",
+        "relation": "member",
+        "rationale": {
+          "en": "The cited architecture is a trained neural network.",
+          "tr": "Kaynak verilen mimari eğitilmiş sinir ağıdır."
+        },
+        "sourceIds": [
+          "ow-mlp-mixer"
+        ]
+      },
+      {
+        "modelId": "resnet50-ssl",
+        "relation": "member",
+        "rationale": {
+          "en": "The cited architecture is a trained neural network.",
+          "tr": "Kaynak verilen mimari eğitilmiş sinir ağıdır."
+        },
+        "sourceIds": [
+          "ow-resnet50-ssl"
+        ]
+      },
+      {
+        "modelId": "chgnet",
+        "relation": "member",
+        "rationale": {
+          "en": "The cited architecture is a trained neural network.",
+          "tr": "Kaynak verilen mimari eğitilmiş sinir ağıdır."
+        },
+        "sourceIds": [
+          "ow-chgnet",
+          "ow-chgnet-usage"
+        ]
+      },
+      {
+        "modelId": "glow",
+        "relation": "member",
+        "rationale": {
+          "en": "The cited architecture is a trained neural network.",
+          "tr": "Kaynak verilen mimari eğitilmiş sinir ağıdır."
+        },
+        "sourceIds": [
+          "ow-glow"
+        ]
+      },
+      {
+        "modelId": "jem",
+        "relation": "member",
+        "rationale": {
+          "en": "The cited architecture is a trained neural network.",
+          "tr": "Kaynak verilen mimari eğitilmiş sinir ağıdır."
+        },
+        "sourceIds": [
+          "ow-jem"
+        ]
       }
     ]
   },
@@ -692,10 +1030,34 @@ export const modelFamilies = [
     "definition": "Feedforward, densely connected layers.",
     "definitionSourceId": "S05",
     "note": {
-      "en": "The current catalogue has no verified standalone checkpoint for this family. Many examples require fitting to the target dataset; having a linear or MLP layer inside another model is not sufficient for whole-model membership.",
-      "tr": "Mevcut katalogda bu aileye ait doğrulanmış bağımsız ağırlık kaydı yoktur. Birçok örnek hedef veri kümesine eğitim gerektirir; başka bir modelin içinde doğrusal veya MLP katmanı olması tüm modelin bu aileden sayılmasına yetmez."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "mlp-mixer",
+        "relation": "member",
+        "rationale": {
+          "en": "Mixer alternates token-mixing and channel-mixing MLPs. Its all-MLP design is explicit in the paper and the exact timm checkpoint card.",
+          "tr": "Mixer, token karıştıran ve kanal karıştıran MLP’leri dönüşümlü kullanır. Tam MLP tasarımı makalede ve tam timm ağırlık kartında açıkça belirtilir."
+        },
+        "sourceIds": [
+          "ow-mlp-mixer",
+          "ow-mixer-paper"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "MLP-Mixer is an all-MLP vision architecture with an actual released classifier checkpoint. This avoids labeling every network that merely contains a dense layer as an MLP model.",
+        "tr": "MLP-Mixer, gerçekten yayımlanmış sınıflandırıcı ağırlıkları olan tam MLP görsel mimarisidir. Yalnızca yoğun katman içeren her ağı MLP modeli sayma hatasından kaçınılır."
+      },
+      "sourceIds": [
+        "ow-mlp-mixer",
+        "ow-mixer-paper"
+      ]
+    }
   },
   {
     "id": "convolutional-networks",
@@ -717,6 +1079,28 @@ export const modelFamilies = [
         },
         "sourceIds": [
           "ow-ecapa"
+        ]
+      },
+      {
+        "modelId": "resnet50-ssl",
+        "relation": "member",
+        "rationale": {
+          "en": "The released image model uses a convolutional residual network.",
+          "tr": "Yayımlanmış görüntü modeli evrişimli artık ağ kullanır."
+        },
+        "sourceIds": [
+          "ow-resnet50-ssl"
+        ]
+      },
+      {
+        "modelId": "jem",
+        "relation": "member",
+        "rationale": {
+          "en": "The released image model uses a convolutional residual network.",
+          "tr": "Yayımlanmış görüntü modeli evrişimli artık ağ kullanır."
+        },
+        "sourceIds": [
+          "ow-jem"
         ]
       }
     ]
@@ -1197,6 +1581,28 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-ace"
         ]
+      },
+      {
+        "modelId": "olmo2-dpo",
+        "relation": "member",
+        "rationale": {
+          "en": "The model is an autoregressive transformer language model.",
+          "tr": "Model otoregresif transformer dil modelidir."
+        },
+        "sourceIds": [
+          "ow-olmo2-dpo"
+        ]
+      },
+      {
+        "modelId": "llama31-rlhf",
+        "relation": "member",
+        "rationale": {
+          "en": "The model is an autoregressive transformer language model.",
+          "tr": "Model otoregresif transformer dil modelidir."
+        },
+        "sourceIds": [
+          "ow-llama31-rlhf"
+        ]
       }
     ]
   },
@@ -1207,10 +1613,34 @@ export const modelFamilies = [
     "definition": "Computation over nodes and edges.",
     "definitionSourceId": "S32",
     "note": {
-      "en": "No source-verified example from the shared open-weight catalogue is mapped here yet. This is a catalogue coverage gap, not a claim that pretrained models do not exist.",
-      "tr": "Ortak açık ağırlık kataloğundan kaynakla doğrulanmış bir örnek henüz buraya eşlenmedi. Bu bir katalog kapsam eksikliğidir; önceden eğitilmiş modellerin bulunmadığı iddiası değildir."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "chgnet",
+        "relation": "member",
+        "rationale": {
+          "en": "CHGNet performs learned atom and bond interactions on crystal graphs to predict physical properties.",
+          "tr": "CHGNet fiziksel özellikleri tahmin etmek için kristal grafları üzerinde öğrenilmiş atom ve bağ etkileşimleri kullanır."
+        },
+        "sourceIds": [
+          "ow-chgnet",
+          "ow-chgnet-usage"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "CHGNet’s versioned crystal-potential checkpoint gives a concrete graph-network example. Node classification and unrelated graph tasks are not implied by its architecture.",
+        "tr": "CHGNet’in sürümlü kristal potansiyeli ağırlıkları somut graf ağı örneğidir. Düğüm sınıflandırma ve ilişkisiz graf görevleri mimariden çıkarılamaz."
+      },
+      "sourceIds": [
+        "ow-chgnet",
+        "ow-chgnet-usage"
+      ]
+    }
   },
   {
     "id": "state-space-networks",
@@ -1219,10 +1649,34 @@ export const modelFamilies = [
     "definition": "Structured sequence state dynamics.",
     "definitionSourceId": "S25",
     "note": {
-      "en": "No explicit state-space checkpoint is included in this catalogue. Hybrid attention or recurrent computation alone does not establish membership in the Mamba-style state-space family.",
-      "tr": "Bu katalogda açıkça durum uzayı modeli olarak belgelenmiş ağırlık yoktur. Hibrit dikkat veya tekrarlayan hesaplama tek başına Mamba türü durum uzayı ailesinin üyesi olduğunu kanıtlamaz."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "mamba2",
+        "relation": "member",
+        "rationale": {
+          "en": "The authors list this exact Mamba2 checkpoint and document its structured state-space duality blocks. It is distinct from their separately released attention hybrid.",
+          "tr": "Yazarlar tam bu Mamba2 ağırlıklarını listeler ve yapılandırılmış durum uzayı dualitesi bloklarını belgeler. Ayrı yayımladıkları dikkat hibritinden farklıdır."
+        },
+        "sourceIds": [
+          "ow-mamba2",
+          "ow-mamba2-method"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "The released Mamba2 2.7B base checkpoint is explicitly documented as an SSM architecture. Its evidence is separate from hybrid recurrent/attention models and does not establish assistant behavior.",
+        "tr": "Yayımlanmış Mamba2 2.7B temel ağırlıkları açıkça SSM mimarisi olarak belgelenir. Kanıtı hibrit yinelemeli/dikkat modellerinden ayrıdır ve asistan davranışını kanıtlamaz."
+      },
+      "sourceIds": [
+        "ow-mamba2",
+        "ow-mamba2-method"
+      ]
+    }
   },
   {
     "id": "encoder-only",
@@ -1485,6 +1939,28 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-musicgen"
         ]
+      },
+      {
+        "modelId": "olmo2-dpo",
+        "relation": "member",
+        "rationale": {
+          "en": "The checkpoint uses a causal language-model decoder.",
+          "tr": "Ağırlıklar nedensel dil modeli kod çözücüsü kullanır."
+        },
+        "sourceIds": [
+          "ow-olmo2-dpo"
+        ]
+      },
+      {
+        "modelId": "llama31-rlhf",
+        "relation": "member",
+        "rationale": {
+          "en": "The checkpoint uses a causal language-model decoder.",
+          "tr": "Ağırlıklar nedensel dil modeli kod çözücüsü kullanır."
+        },
+        "sourceIds": [
+          "ow-llama31-rlhf"
+        ]
       }
     ]
   },
@@ -1710,6 +2186,64 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-bart"
         ]
+      },
+      {
+        "modelId": "fasttext-lid",
+        "relation": "member",
+        "rationale": {
+          "en": "The cited release is fitted to labeled targets in its stated domain.",
+          "tr": "Kaynak verilen sürüm belirtilen alandaki etiketli hedeflere göre eğitilmiştir."
+        },
+        "sourceIds": [
+          "ow-fasttext-lid"
+        ]
+      },
+      {
+        "modelId": "dlib-five",
+        "relation": "member",
+        "rationale": {
+          "en": "The cited release is fitted to labeled targets in its stated domain.",
+          "tr": "Kaynak verilen sürüm belirtilen alandaki etiketli hedeflere göre eğitilmiştir."
+        },
+        "sourceIds": [
+          "ow-dlib-five",
+          "ow-dlib-five-training"
+        ]
+      },
+      {
+        "modelId": "brisque",
+        "relation": "member",
+        "rationale": {
+          "en": "The cited release is fitted to labeled targets in its stated domain.",
+          "tr": "Kaynak verilen sürüm belirtilen alandaki etiketli hedeflere göre eğitilmiştir."
+        },
+        "sourceIds": [
+          "ow-brisque",
+          "ow-brisque-parameters"
+        ]
+      },
+      {
+        "modelId": "mlp-mixer",
+        "relation": "member",
+        "rationale": {
+          "en": "The cited release is fitted to labeled targets in its stated domain.",
+          "tr": "Kaynak verilen sürüm belirtilen alandaki etiketli hedeflere göre eğitilmiştir."
+        },
+        "sourceIds": [
+          "ow-mlp-mixer"
+        ]
+      },
+      {
+        "modelId": "chgnet",
+        "relation": "member",
+        "rationale": {
+          "en": "The cited release is fitted to labeled targets in its stated domain.",
+          "tr": "Kaynak verilen sürüm belirtilen alandaki etiketli hedeflere göre eğitilmiştir."
+        },
+        "sourceIds": [
+          "ow-chgnet",
+          "ow-chgnet-usage"
+        ]
       }
     ]
   },
@@ -1720,10 +2254,34 @@ export const modelFamilies = [
     "definition": "Structure without externally supplied targets.",
     "definitionSourceId": "S02",
     "note": {
-      "en": "No separate unsupervised-learning checkpoint is mapped here. Self-supervised pretraining is listed under its more specific axis; these labels overlap in the literature.",
-      "tr": "Buraya ayrı bir gözetimsiz öğrenme ağırlığı eşlenmedi. Öz gözetimli ön eğitim daha özel başlığı altında listelenir; literatürde bu etiketler örtüşebilir."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "glow",
+        "relation": "member",
+        "rationale": {
+          "en": "Glow learns an image distribution by maximum likelihood without external class targets in its unconditional CelebA-HQ setup. Attribute manipulation is a separate demo operation.",
+          "tr": "Glow, koşulsuz CelebA-HQ düzeninde dış sınıf hedefleri olmadan maksimum olabilirlikle görüntü dağılımını öğrenir. Nitelik değiştirme ayrı bir demo işlemidir."
+        },
+        "sourceIds": [
+          "ow-glow",
+          "ow-glow-paper"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "Unconditional Glow distribution learning supplies a concrete unsupervised example. The model learns image statistics; the demo’s later attribute manipulation does not imply supervised pretraining.",
+        "tr": "Koşulsuz Glow dağılım öğrenmesi somut gözetimsiz örnek sağlar. Model görüntü istatistiklerini öğrenir; demonun sonraki nitelik değiştirme işlemi gözetimli ön eğitim anlamına gelmez."
+      },
+      "sourceIds": [
+        "ow-glow",
+        "ow-glow-paper"
+      ]
+    }
   },
   {
     "id": "semi-supervised-learning",
@@ -1732,10 +2290,34 @@ export const modelFamilies = [
     "definition": "Labeled and unlabeled examples together.",
     "definitionSourceId": "S02",
     "note": {
-      "en": "No exact checkpoint in the catalogue has a verified semi-supervised training record here. Mixing pretraining and fine-tuning alone does not establish this label.",
-      "tr": "Katalogdaki belirli ağırlıklar için burada doğrulanmış yarı gözetimli eğitim kaydı yoktur. Ön eğitim ve ince ayarı birleştirmek tek başına bu etiketi kanıtlamaz."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "resnet50-ssl",
+        "relation": "member",
+        "rationale": {
+          "en": "The SSL release uses a teacher trained on labeled data to label selected unlabeled images, followed by ImageNet fine-tuning. This is documented training history.",
+          "tr": "SSL sürümü, seçili etiketsiz görüntüleri etiketlemek için etiketli veriyle eğitilmiş öğretmen kullanır; ardından ImageNet ince ayarı gelir. Bu, belgelenmiş eğitim geçmişidir."
+        },
+        "sourceIds": [
+          "ow-resnet50-ssl",
+          "ow-ssl-method"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "Meta’s SSL release explicitly combines labeled-teacher supervision with unlabeled images. The selected timm artifact identifies this training recipe; generic pretraining plus fine-tuning alone was not used as evidence.",
+        "tr": "Meta’nın SSL sürümü, etiketli öğretmen gözetimini etiketsiz görüntülerle açıkça birleştirir. Seçilen timm dosyası bu eğitim tarifini belirtir; yalnızca genel ön eğitim ve ince ayar kanıt sayılmamıştır."
+      },
+      "sourceIds": [
+        "ow-resnet50-ssl",
+        "ow-ssl-method"
+      ]
+    }
   },
   {
     "id": "self-supervised-learning",
@@ -2039,6 +2621,40 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-tts"
         ]
+      },
+      {
+        "modelId": "mamba2",
+        "relation": "member",
+        "rationale": {
+          "en": "The documented language model generates a continuation one token at a time.",
+          "tr": "Belgelenmiş dil modeli devamı token token üretir."
+        },
+        "sourceIds": [
+          "ow-mamba2",
+          "ow-mamba2-method"
+        ]
+      },
+      {
+        "modelId": "olmo2-dpo",
+        "relation": "member",
+        "rationale": {
+          "en": "The documented language model generates a continuation one token at a time.",
+          "tr": "Belgelenmiş dil modeli devamı token token üretir."
+        },
+        "sourceIds": [
+          "ow-olmo2-dpo"
+        ]
+      },
+      {
+        "modelId": "llama31-rlhf",
+        "relation": "member",
+        "rationale": {
+          "en": "The documented language model generates a continuation one token at a time.",
+          "tr": "Belgelenmiş dil modeli devamı token token üretir."
+        },
+        "sourceIds": [
+          "ow-llama31-rlhf"
+        ]
       }
     ]
   },
@@ -2191,10 +2807,35 @@ export const modelFamilies = [
     "definition": "Invertible distribution transformations.",
     "definitionSourceId": "S28",
     "note": {
-      "en": "No source-verified example from the shared open-weight catalogue is mapped here yet. This is a catalogue coverage gap, not a claim that pretrained models do not exist.",
-      "tr": "Ortak açık ağırlık kataloğundan kaynakla doğrulanmış bir örnek henüz buraya eşlenmedi. Bu bir katalog kapsam eksikliğidir; önceden eğitilmiş modellerin bulunmadığı iddiası değildir."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "glow",
+        "relation": "member",
+        "rationale": {
+          "en": "Glow composes invertible transforms, including learned invertible 1×1 convolutions; the official demo links the released CelebA-HQ graph.",
+          "tr": "Glow, öğrenilmiş terslenebilir 1×1 evrişimler dahil terslenebilir dönüşümleri birleştirir; resmî demo yayımlanmış CelebA-HQ grafını bağlar."
+        },
+        "sourceIds": [
+          "ow-glow",
+          "ow-glow-paper",
+          "ow-glow-download"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "The original Glow demo’s hosted graph is still available. It has no immutable Git artifact revision; the catalogue records its observed file size and ETag and displays that limitation. Legacy runtime and domain constraints remain.",
+        "tr": "Özgün Glow demosunun barındırılan grafına hâlâ erişiliyor. Dosyanın değişmez Git sürümü yoktur; katalog gözlenen boyutu ve ETag’i kaydeder, bu sınırı gösterir. Eski çalışma ortamı ve alan kısıtları geçerlidir."
+      },
+      "sourceIds": [
+        "ow-glow",
+        "ow-glow-download"
+      ]
+    }
   },
   {
     "id": "energy-based-models",
@@ -2203,10 +2844,34 @@ export const modelFamilies = [
     "definition": "Compatibility encoded by an energy function.",
     "definitionSourceId": "S05",
     "note": {
-      "en": "No source-verified example from the shared open-weight catalogue is mapped here yet. This is a catalogue coverage gap, not a claim that pretrained models do not exist.",
-      "tr": "Ortak açık ağırlık kataloğundan kaynakla doğrulanmış bir örnek henüz buraya eşlenmedi. Bu bir katalog kapsam eksikliğidir; önceden eğitilmiş modellerin bulunmadığı iddiası değildir."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "jem",
+        "relation": "member",
+        "rationale": {
+          "en": "JEM jointly trains its classifier and an energy-based marginal over inputs. The repository identifies the released CIFAR-10 checkpoint and its evaluation commands.",
+          "tr": "JEM sınıflandırıcısını ve girdiler üzerindeki enerji tabanlı marjinalini birlikte eğitir. Depo, yayımlanan CIFAR-10 ağırlıklarını ve değerlendirme komutlarını belirtir."
+        },
+        "sourceIds": [
+          "ow-jem",
+          "ow-jem-paper"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "JEM releases a CIFAR-10 checkpoint trained with an explicit energy objective. The publisher-hosted file is observable but not Git-pinned; an ordinary classifier was not relabeled as an EBM.",
+        "tr": "JEM açık enerji hedefiyle eğitilmiş CIFAR-10 ağırlıkları yayımlar. Yayıncıdaki dosya gözlenebilir ancak Git sürümüne sabitli değildir; sıradan sınıflandırıcı yeniden EBM diye etiketlenmemiştir."
+      },
+      "sourceIds": [
+        "ow-jem",
+        "ow-jem-paper"
+      ]
+    }
   },
   {
     "id": "flow-matching",
@@ -2629,6 +3294,63 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-r1"
         ]
+      },
+      {
+        "modelId": "fasttext-lid",
+        "relation": "member",
+        "rationale": {
+          "en": "The released artifact operates on text or word representations.",
+          "tr": "Yayımlanmış dosya metin veya kelime temsilleri üzerinde çalışır."
+        },
+        "sourceIds": [
+          "ow-fasttext-lid"
+        ]
+      },
+      {
+        "modelId": "mamba2",
+        "relation": "member",
+        "rationale": {
+          "en": "The released artifact operates on text or word representations.",
+          "tr": "Yayımlanmış dosya metin veya kelime temsilleri üzerinde çalışır."
+        },
+        "sourceIds": [
+          "ow-mamba2",
+          "ow-mamba2-method"
+        ]
+      },
+      {
+        "modelId": "olmo2-dpo",
+        "relation": "member",
+        "rationale": {
+          "en": "The released artifact operates on text or word representations.",
+          "tr": "Yayımlanmış dosya metin veya kelime temsilleri üzerinde çalışır."
+        },
+        "sourceIds": [
+          "ow-olmo2-dpo"
+        ]
+      },
+      {
+        "modelId": "llama31-rlhf",
+        "relation": "member",
+        "rationale": {
+          "en": "The released artifact operates on text or word representations.",
+          "tr": "Yayımlanmış dosya metin veya kelime temsilleri üzerinde çalışır."
+        },
+        "sourceIds": [
+          "ow-llama31-rlhf"
+        ]
+      },
+      {
+        "modelId": "glove-factors",
+        "relation": "member",
+        "rationale": {
+          "en": "The released artifact operates on text or word representations.",
+          "tr": "Yayımlanmış dosya metin veya kelime temsilleri üzerinde çalışır."
+        },
+        "sourceIds": [
+          "ow-glove-factors",
+          "ow-glove-method"
+        ]
       }
     ]
   },
@@ -2908,6 +3630,74 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-uitars"
         ]
+      },
+      {
+        "modelId": "mlp-mixer",
+        "relation": "member",
+        "rationale": {
+          "en": "The released model and its documented inference use image inputs.",
+          "tr": "Yayımlanmış model ve belgelenmiş çıkarımı görüntü girdileri kullanır."
+        },
+        "sourceIds": [
+          "ow-mlp-mixer"
+        ]
+      },
+      {
+        "modelId": "resnet50-ssl",
+        "relation": "member",
+        "rationale": {
+          "en": "The released model and its documented inference use image inputs.",
+          "tr": "Yayımlanmış model ve belgelenmiş çıkarımı görüntü girdileri kullanır."
+        },
+        "sourceIds": [
+          "ow-resnet50-ssl"
+        ]
+      },
+      {
+        "modelId": "dlib-five",
+        "relation": "member",
+        "rationale": {
+          "en": "The released model and its documented inference use image inputs.",
+          "tr": "Yayımlanmış model ve belgelenmiş çıkarımı görüntü girdileri kullanır."
+        },
+        "sourceIds": [
+          "ow-dlib-five",
+          "ow-dlib-five-training"
+        ]
+      },
+      {
+        "modelId": "brisque",
+        "relation": "member",
+        "rationale": {
+          "en": "The released model and its documented inference use image inputs.",
+          "tr": "Yayımlanmış model ve belgelenmiş çıkarımı görüntü girdileri kullanır."
+        },
+        "sourceIds": [
+          "ow-brisque",
+          "ow-brisque-parameters"
+        ]
+      },
+      {
+        "modelId": "glow",
+        "relation": "member",
+        "rationale": {
+          "en": "The released model and its documented inference use image inputs.",
+          "tr": "Yayımlanmış model ve belgelenmiş çıkarımı görüntü girdileri kullanır."
+        },
+        "sourceIds": [
+          "ow-glow"
+        ]
+      },
+      {
+        "modelId": "jem",
+        "relation": "member",
+        "rationale": {
+          "en": "The released model and its documented inference use image inputs.",
+          "tr": "Yayımlanmış model ve belgelenmiş çıkarımı görüntü girdileri kullanır."
+        },
+        "sourceIds": [
+          "ow-jem"
+        ]
       }
     ]
   },
@@ -3132,6 +3922,29 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-ace"
         ]
+      },
+      {
+        "modelId": "pocketsphinx",
+        "relation": "member",
+        "rationale": {
+          "en": "The documented full pipeline processes speech waveforms.",
+          "tr": "Belgelenmiş tam hat konuşma dalga biçimlerini işler."
+        },
+        "sourceIds": [
+          "ow-pocketsphinx",
+          "ow-pocketsphinx-usage"
+        ]
+      },
+      {
+        "modelId": "knnvc",
+        "relation": "member",
+        "rationale": {
+          "en": "The documented full pipeline processes speech waveforms.",
+          "tr": "Belgelenmiş tam hat konuşma dalga biçimlerini işler."
+        },
+        "sourceIds": [
+          "ow-knnvc"
+        ]
       }
     ]
   },
@@ -3201,10 +4014,45 @@ export const modelFamilies = [
     "definition": "Entities connected through relations.",
     "definitionSourceId": "S11",
     "note": {
-      "en": "No source-verified example from the shared open-weight catalogue is mapped here yet. This is a catalogue coverage gap, not a claim that pretrained models do not exist.",
-      "tr": "Ortak açık ağırlık kataloğundan kaynakla doğrulanmış bir örnek henüz buraya eşlenmedi. Bu bir katalog kapsam eksikliğidir; önceden eğitilmiş modellerin bulunmadığı iddiası değildir."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "chgnet",
+        "relation": "member",
+        "rationale": {
+          "en": "Its inputs are periodic crystal graphs containing atoms and their neighborhood relations. Graph-level energy is a supported numerical output.",
+          "tr": "Girdileri atomları ve komşuluk ilişkilerini içeren periyodik kristal graflarıdır. Graf düzeyinde enerji desteklenen sayısal çıktıdır."
+        },
+        "sourceIds": [
+          "ow-chgnet",
+          "ow-chgnet-usage"
+        ]
+      },
+      {
+        "modelId": "anyburl-rules",
+        "relation": "member",
+        "rationale": {
+          "en": "The released symbolic rules operate on a relational knowledge graph.",
+          "tr": "Yayımlanmış sembolik kurallar ilişkisel bilgi grafı üzerinde çalışır."
+        },
+        "sourceIds": [
+          "ow-anyburl-rules"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "Periodic crystal graphs are supported by CHGNet. A modality label does not imply support for every graph task; the shared task edge is crystal-energy regression.",
+        "tr": "Periyodik kristal grafları CHGNet tarafından desteklenir. Veri türü etiketi tüm graf görevlerini kapsamaz; ortak görev ilişkisi kristal enerjisi regresyonudur."
+      },
+      "sourceIds": [
+        "ow-chgnet",
+        "ow-chgnet-usage"
+      ]
+    }
   },
   {
     "id": "3d-representations",
@@ -3620,6 +4468,28 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-coedit"
         ]
+      },
+      {
+        "modelId": "olmo2-dpo",
+        "relation": "member",
+        "rationale": {
+          "en": "The release explicitly includes supervised instruction post-training.",
+          "tr": "Sürüm açıkça gözetimli talimat son eğitimi içerir."
+        },
+        "sourceIds": [
+          "ow-olmo2-dpo"
+        ]
+      },
+      {
+        "modelId": "llama31-rlhf",
+        "relation": "member",
+        "rationale": {
+          "en": "The release explicitly includes supervised instruction post-training.",
+          "tr": "Sürüm açıkça gözetimli talimat son eğitimi içerir."
+        },
+        "sourceIds": [
+          "ow-llama31-rlhf"
+        ]
       }
     ]
   },
@@ -3654,10 +4524,32 @@ export const modelFamilies = [
     "definition": "Reward-based tuning from human preferences.",
     "definitionSourceId": "S35",
     "note": {
-      "en": "The catalogue does not yet verify human-preference reward training for an exact checkpoint. Reward-based reasoning and verifier feedback alone are not evidence of RLHF.",
-      "tr": "Katalog henüz belirli bir ağırlık sürümünde insan tercihlerine dayalı ödül eğitimini doğrulamıyor. Ödül tabanlı akıl yürütme ve doğrulayıcı geri bildirimi tek başına RLHF kanıtı değildir."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "llama31-rlhf",
+        "relation": "member",
+        "rationale": {
+          "en": "Meta’s model card explicitly attributes SFT and reinforcement learning with human feedback to the instruction-tuned Llama 3.1 models.",
+          "tr": "Meta’nın model kartı talimatla ayarlanmış Llama 3.1 modelleri için SFT ve insan geri bildirimiyle pekiştirmeli öğrenmeyi açıkça belirtir."
+        },
+        "sourceIds": [
+          "ow-llama31-rlhf"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "Llama 3.1 Instruct’s own card explicitly names RLHF. This mapping does not infer human preference training from generic reinforcement learning, reward models or verifier feedback.",
+        "tr": "Llama 3.1 Instruct’ın kendi kartı RLHF’yi açıkça adlandırır. Bu eşleştirme genel pekiştirmeli öğrenme, ödül modelleri veya doğrulayıcı geri bildiriminden insan tercihli eğitim çıkarmaz."
+      },
+      "sourceIds": [
+        "ow-llama31-rlhf"
+      ]
+    }
   },
   {
     "id": "direct-preference-optimization",
@@ -3666,10 +4558,32 @@ export const modelFamilies = [
     "definition": "Optimize directly from preference pairs.",
     "definitionSourceId": "S36",
     "note": {
-      "en": "No exact catalogue checkpoint is verified as DPO-trained. A DPO baseline appearing in another model’s benchmark table is not evidence about that model’s own training.",
-      "tr": "Katalogdaki belirli bir ağırlık sürümünün DPO ile eğitildiği doğrulanmadı. Başka bir modelin puan tablosunda DPO referansı bulunması, o modelin kendi eğitiminin kanıtı değildir."
+      "en": "The example below is specific to its released artifact, input domain and documented task.",
+      "tr": "Aşağıdaki örnek yayımlanmış dosyasına, girdi alanına ve belgelenmiş görevine özgüdür."
     },
-    "models": []
+    "models": [
+      {
+        "modelId": "olmo2-dpo",
+        "relation": "member",
+        "rationale": {
+          "en": "The exact stage card states that SFT is followed by DPO on the named preference mix, and separately lists later RLVR checkpoints.",
+          "tr": "Tam aşama kartı, SFT’yi adı verilen tercih karışımı üzerinde DPO’nun izlediğini belirtir ve sonraki RLVR ağırlıklarını ayrı listeler."
+        },
+        "sourceIds": [
+          "ow-olmo2-dpo"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "summary": {
+        "en": "The named OLMo DPO-stage checkpoint documents direct preference training. Its later RLVR sibling is kept separate, including the evaluation claims.",
+        "tr": "Adı verilen OLMo DPO aşaması ağırlıkları doğrudan tercih eğitimini belgeler. Sonraki RLVR kardeşi, değerlendirme iddiaları dahil ayrı tutulur."
+      },
+      "sourceIds": [
+        "ow-olmo2-dpo"
+      ]
+    }
   },
   {
     "id": "knowledge-distillation",

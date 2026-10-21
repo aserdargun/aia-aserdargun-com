@@ -6,6 +6,7 @@ import type { ModelFamily, OpenWeightModel, TaxonomyTask, TaxonomySource, TaskMo
 import { modelFamilyLabels, taskModelLabels, type ModelLocale } from "@/lib/labels";
 import { tasksForModel } from "@/lib/model-families";
 import { taskModelHref } from "@/lib/task-models";
+import { ModelArtifactDetails } from "@/components/taxonomy/model-artifact-details";
 
 export function ModelFamilyPanel({ family, models, tasks, sources, definitions, locale, onClose }: {
   family: ModelFamily; models: OpenWeightModel[]; tasks: TaxonomyTask[]; sources: TaskModelSource[];
@@ -40,6 +41,12 @@ export function ModelFamilyPanel({ family, models, tasks, sources, definitions, 
       <p className="task-model-definition" lang="en">{family.definition}</p>
       <a className="task-model-definition-link" href={definition.url} target="_blank" rel="noreferrer">{labels.definition} ↗</a>
       <p className="task-model-note">{family.note[locale]}</p>
+      {family.review ? <section className="model-family-review" aria-labelledby="family-review-title">
+        <h3 id="family-review-title">{labels.research}</h3>
+        <small>{common.reviewed} · <time dateTime={family.review.observedAt}>{family.review.observedAt}</time></small>
+        <p>{family.review.summary[locale]}</p>
+        <details className="task-model-evidence"><summary>{labels.researchSources} ({family.review.sourceIds.length})</summary>{sourceLinks(family.review.sourceIds)}</details>
+      </section> : null}
       {family.models.length > 0 ? <>
         <p className="task-model-note">{labels.taskScope}</p>
         <label className="model-family-search">{labels.search}<input type="search" value={query} placeholder={labels.searchPlaceholder} onChange={(event) => setQuery(event.target.value)} /></label>
@@ -61,7 +68,8 @@ export function ModelFamilyPanel({ family, models, tasks, sources, definitions, 
             <div><dt>{common.access}</dt><dd>{common[model.access]}</dd></div>
             <div><dt>{common.reviewed}</dt><dd><time dateTime={card.observedAt}>{card.observedAt}</time></dd></div>
           </dl>
-          <a className="task-model-weights" href={weights.url} target="_blank" rel="noreferrer">{common.weights} ↗</a>
+          <a className="task-model-weights" href={weights.url} target="_blank" rel="noreferrer">{model.parameterKind === "statistical" ? common.parameterFiles : model.parameterKind === "rules" ? common.ruleFiles : common.weights} ↗</a>
+          <ModelArtifactDetails model={model} weights={weights} sources={sources} locale={locale} />
           <h4>{labels.tasks} ({supportedTasks.length})</h4>
           <ul className="model-family-tasks">{supportedTasks.map(({ task, evidence }) => <li key={task.id}>
             <Link href={taskModelHref(task.id, locale)} lang="en">{task.name} →</Link>
