@@ -4,6 +4,7 @@ export const schemaVersions = {
   vendor: 1, category: 1, capability: 1, vendorEntry: 1,
   assessment: 1, model: 3, plan: 1, source: 2, taxonomyMap: 1, taxonomySource: 1,
   taskModelSource: 3, openWeightModel: 2, taxonomyTask: 2, modelFamily: 2,
+  benchmarkSource: 1, benchmarkCandidate: 1, taskBenchmark: 1, taskBenchmarkReview: 1,
 } as const;
 
 // Ordered, editorial focus areas based on the model's cited evidence.
@@ -329,6 +330,69 @@ export const modelFamilySchema = z.object({
 }).strict();
 
 export type ModelFamily = z.infer<typeof modelFamilySchema>;
+
+export const benchmarkSourceSchema = z.object({
+  id: idSchema,
+  title: z.string().min(1),
+  publisher: z.string().min(1),
+  url: httpsUrlSchema,
+  kind: z.enum(["benchmark", "paper", "model-card", "weights", "license", "documentation"]),
+  observedAt: isoDateSchema,
+  revision: z.string().regex(/^[a-f0-9]{40}$/).optional(),
+}).strict();
+
+// Additional comparison participants are separate from the task/family shortlist.
+// Their exact release and license must still be traceable to primary sources.
+export const benchmarkCandidateSchema = z.object({
+  id: idSchema,
+  name: z.string().min(1),
+  cardSourceId: idSchema,
+  weightsSourceId: idSchema,
+  licenseSourceId: idSchema,
+  license: z.string().min(1),
+  access: z.enum(["public", "gated"]),
+}).strict();
+
+export const taskBenchmarkSchema = z.object({
+  id: idSchema,
+  taskIds: z.array(idSchema).min(1),
+  title: z.string().min(1),
+  dataset: z.string().min(1),
+  metric: z.string().min(1),
+  unit: z.enum(["%", "score", "dB", "bits/dim"]),
+  direction: z.enum(["higher", "lower"]),
+  scope: z.enum(["direct", "proxy"]),
+  provenance: z.enum(["publisher", "independent"]),
+  // A source check is not an evaluation date. Null means the publication does not date the result.
+  resultDate: z.string().regex(/^\d{4}(?:-\d{2}(?:-\d{2})?)?$/).refine((value) => {
+    const full = value.length === 4 ? `${value}-01-01` : value.length === 7 ? `${value}-01` : value;
+    const date = new Date(`${full}T00:00:00Z`);
+    return !Number.isNaN(date.valueOf()) && date.toISOString().slice(0, 10) === full;
+  }, "Invalid publication date").nullable(),
+  sourceId: idSchema,
+  locator: z.string().min(1),
+  protocol: bilingualTextSchema,
+  limitation: bilingualTextSchema,
+  results: z.array(z.object({
+    candidateId: idSchema,
+    score: z.number().finite(),
+    configuration: bilingualTextSchema.optional(),
+  }).strict()).min(1),
+}).strict();
+
+export const taskBenchmarkReviewSchema = z.object({
+  taskId: idSchema,
+  checkedAt: isoDateSchema,
+  candidateIds: z.array(idSchema).min(1),
+  summary: bilingualTextSchema,
+  limitation: bilingualTextSchema,
+  sourceIds: z.array(idSchema).min(1),
+}).strict();
+
+export type BenchmarkSource = z.infer<typeof benchmarkSourceSchema>;
+export type BenchmarkCandidate = z.infer<typeof benchmarkCandidateSchema>;
+export type TaskBenchmark = z.infer<typeof taskBenchmarkSchema>;
+export type TaskBenchmarkReview = z.infer<typeof taskBenchmarkReviewSchema>;
 
 export const atlasDatasetSchema = z
   .object({

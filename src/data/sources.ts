@@ -1,4 +1,4 @@
-import type { Source, TaxonomySource, TaskModelSource } from "@/data/schema";
+import type { Source, TaxonomySource, TaskModelSource, BenchmarkSource } from "@/data/schema";
 
 export const sources = [
   {
@@ -3901,3 +3901,1250 @@ export const modelFamilySources = [
     "revision": "1bae0e1088993b9b82de08f59de5be5a34e42170"
   }
 ] satisfies TaskModelSource[];
+
+// BEGIN task benchmark observations
+export const benchmarkSources: BenchmarkSource[] = [
+  {
+    "id": "bm-card-qwen36",
+    "title": "Qwen/Qwen3.6-27B · model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3.6-27B/blob/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9"
+  },
+  {
+    "id": "bm-weights-qwen36",
+    "title": "Qwen3.6-27B · released files",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3.6-27B/tree/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9"
+  },
+  {
+    "id": "bm-license-qwen36",
+    "title": "Qwen3.6-27B · license",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3.6-27B/blob/6a9e13bd6fc8f0983b9b99948120bc37f49c13e9/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "6a9e13bd6fc8f0983b9b99948120bc37f49c13e9"
+  },
+  {
+    "id": "bm-card-gliner25",
+    "title": "fastino/gliner2.5-base-v1 · model card",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/gliner2.5-base-v1/blob/54785d51df8d86a0d8f2eb212fec15871aad2c4d/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "54785d51df8d86a0d8f2eb212fec15871aad2c4d"
+  },
+  {
+    "id": "bm-weights-gliner25",
+    "title": "GLiNER2.5 base v1 · released files",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/gliner2.5-base-v1/tree/54785d51df8d86a0d8f2eb212fec15871aad2c4d",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "54785d51df8d86a0d8f2eb212fec15871aad2c4d"
+  },
+  {
+    "id": "bm-license-gliner25",
+    "title": "GLiNER2.5 base v1 · license",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/gliner2.5-base-v1/blob/54785d51df8d86a0d8f2eb212fec15871aad2c4d/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "54785d51df8d86a0d8f2eb212fec15871aad2c4d"
+  },
+  {
+    "id": "bm-card-gliner25multi",
+    "title": "fastino/gliner2.5-multi-v1 · model card",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/gliner2.5-multi-v1/blob/cf5593a5d45e3bbf204b9df621b13b1c0cf25ee3/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "cf5593a5d45e3bbf204b9df621b13b1c0cf25ee3"
+  },
+  {
+    "id": "bm-weights-gliner25multi",
+    "title": "GLiNER2.5 multi v1 · released files",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/gliner2.5-multi-v1/tree/cf5593a5d45e3bbf204b9df621b13b1c0cf25ee3",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "cf5593a5d45e3bbf204b9df621b13b1c0cf25ee3"
+  },
+  {
+    "id": "bm-license-gliner25multi",
+    "title": "GLiNER2.5 multi v1 · license",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/gliner2.5-multi-v1/blob/cf5593a5d45e3bbf204b9df621b13b1c0cf25ee3/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "cf5593a5d45e3bbf204b9df621b13b1c0cf25ee3"
+  },
+  {
+    "id": "bm-card-gliner2base",
+    "title": "fastino/gliner2-base-v1 · model card",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/gliner2-base-v1/blob/f9634218e53580c56edf0de97ca1a7d3f1c2354e/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "f9634218e53580c56edf0de97ca1a7d3f1c2354e"
+  },
+  {
+    "id": "bm-weights-gliner2base",
+    "title": "GLiNER2 base v1 · released files",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/gliner2-base-v1/tree/f9634218e53580c56edf0de97ca1a7d3f1c2354e",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "f9634218e53580c56edf0de97ca1a7d3f1c2354e"
+  },
+  {
+    "id": "bm-license-gliner2base",
+    "title": "GLiNER2 base v1 · license",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/gliner2-base-v1/blob/f9634218e53580c56edf0de97ca1a7d3f1c2354e/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "f9634218e53580c56edf0de97ca1a7d3f1c2354e"
+  },
+  {
+    "id": "bm-card-gliner2multi",
+    "title": "fastino/gliner2-multi-v1 · model card",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/gliner2-multi-v1/blob/ce747d79a8e362d3dee0b0b26d1201f7f1a8615a/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "ce747d79a8e362d3dee0b0b26d1201f7f1a8615a"
+  },
+  {
+    "id": "bm-weights-gliner2multi",
+    "title": "GLiNER2 multi v1 · released files",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/gliner2-multi-v1/tree/ce747d79a8e362d3dee0b0b26d1201f7f1a8615a",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "ce747d79a8e362d3dee0b0b26d1201f7f1a8615a"
+  },
+  {
+    "id": "bm-license-gliner2multi",
+    "title": "GLiNER2 multi v1 · license",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/gliner2-multi-v1/blob/ce747d79a8e362d3dee0b0b26d1201f7f1a8615a/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "ce747d79a8e362d3dee0b0b26d1201f7f1a8615a"
+  },
+  {
+    "id": "bm-card-e2e-coref",
+    "title": "biu-nlp/lingmess-coref · model card",
+    "publisher": "biu-nlp",
+    "url": "https://huggingface.co/biu-nlp/lingmess-coref/blob/fa5d8a827a09388d03adbe9e800c7d8c509c3935/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "fa5d8a827a09388d03adbe9e800c7d8c509c3935"
+  },
+  {
+    "id": "bm-weights-e2e-coref",
+    "title": "LingMess Coref · released files",
+    "publisher": "biu-nlp",
+    "url": "https://huggingface.co/biu-nlp/lingmess-coref/tree/fa5d8a827a09388d03adbe9e800c7d8c509c3935",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "fa5d8a827a09388d03adbe9e800c7d8c509c3935"
+  },
+  {
+    "id": "bm-license-e2e-coref",
+    "title": "LingMess Coref · license",
+    "publisher": "biu-nlp",
+    "url": "https://huggingface.co/biu-nlp/lingmess-coref/blob/fa5d8a827a09388d03adbe9e800c7d8c509c3935/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "fa5d8a827a09388d03adbe9e800c7d8c509c3935"
+  },
+  {
+    "id": "bm-card-coeditxl",
+    "title": "grammarly/coedit-xl · model card",
+    "publisher": "grammarly",
+    "url": "https://huggingface.co/grammarly/coedit-xl/blob/be7d1aeebbaa0e5c6b97dcf110dd4ba22096d3cf/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "be7d1aeebbaa0e5c6b97dcf110dd4ba22096d3cf"
+  },
+  {
+    "id": "bm-weights-coeditxl",
+    "title": "CoEdIT XL · released files",
+    "publisher": "grammarly",
+    "url": "https://huggingface.co/grammarly/coedit-xl/tree/be7d1aeebbaa0e5c6b97dcf110dd4ba22096d3cf",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "be7d1aeebbaa0e5c6b97dcf110dd4ba22096d3cf"
+  },
+  {
+    "id": "bm-license-coeditxl",
+    "title": "CoEdIT XL · license",
+    "publisher": "grammarly",
+    "url": "https://huggingface.co/grammarly/coedit-xl/blob/be7d1aeebbaa0e5c6b97dcf110dd4ba22096d3cf/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "be7d1aeebbaa0e5c6b97dcf110dd4ba22096d3cf"
+  },
+  {
+    "id": "bm-card-hymt30",
+    "title": "tencent/Hy-MT2-30B-A3B · model card",
+    "publisher": "tencent",
+    "url": "https://huggingface.co/tencent/Hy-MT2-30B-A3B/blob/d3ead4dba61c09aac60a261a96ad1df3e705febb/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "d3ead4dba61c09aac60a261a96ad1df3e705febb"
+  },
+  {
+    "id": "bm-weights-hymt30",
+    "title": "Hy-MT2-30B-A3B · released files",
+    "publisher": "tencent",
+    "url": "https://huggingface.co/tencent/Hy-MT2-30B-A3B/tree/d3ead4dba61c09aac60a261a96ad1df3e705febb",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "d3ead4dba61c09aac60a261a96ad1df3e705febb"
+  },
+  {
+    "id": "bm-license-hymt30",
+    "title": "Hy-MT2-30B-A3B · license",
+    "publisher": "tencent",
+    "url": "https://huggingface.co/tencent/Hy-MT2-30B-A3B/blob/d3ead4dba61c09aac60a261a96ad1df3e705febb/LICENSE.txt",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "d3ead4dba61c09aac60a261a96ad1df3e705febb"
+  },
+  {
+    "id": "bm-card-hymt7",
+    "title": "tencent/Hy-MT2-7B · model card",
+    "publisher": "tencent",
+    "url": "https://huggingface.co/tencent/Hy-MT2-7B/blob/9b0eb4e8f001def3e5ff6469a0ac96fdb39ec223/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "9b0eb4e8f001def3e5ff6469a0ac96fdb39ec223"
+  },
+  {
+    "id": "bm-weights-hymt7",
+    "title": "Hy-MT2-7B · released files",
+    "publisher": "tencent",
+    "url": "https://huggingface.co/tencent/Hy-MT2-7B/tree/9b0eb4e8f001def3e5ff6469a0ac96fdb39ec223",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "9b0eb4e8f001def3e5ff6469a0ac96fdb39ec223"
+  },
+  {
+    "id": "bm-license-hymt7",
+    "title": "Hy-MT2-7B · license",
+    "publisher": "tencent",
+    "url": "https://huggingface.co/tencent/Hy-MT2-7B/blob/9b0eb4e8f001def3e5ff6469a0ac96fdb39ec223/LICENSE.txt",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "9b0eb4e8f001def3e5ff6469a0ac96fdb39ec223"
+  },
+  {
+    "id": "bm-card-emb4",
+    "title": "Qwen/Qwen3-Embedding-4B · model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-Embedding-4B/blob/5cf2132abc99cad020ac570b19d031efec650f2b/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "5cf2132abc99cad020ac570b19d031efec650f2b"
+  },
+  {
+    "id": "bm-weights-emb4",
+    "title": "Qwen3-Embedding-4B · released files",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-Embedding-4B/tree/5cf2132abc99cad020ac570b19d031efec650f2b",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "5cf2132abc99cad020ac570b19d031efec650f2b"
+  },
+  {
+    "id": "bm-license-emb4",
+    "title": "Qwen3-Embedding-4B · license",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-Embedding-4B/blob/5cf2132abc99cad020ac570b19d031efec650f2b/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "5cf2132abc99cad020ac570b19d031efec650f2b"
+  },
+  {
+    "id": "bm-card-rerank4",
+    "title": "Qwen/Qwen3-Reranker-4B · model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-Reranker-4B/blob/22e683669bc0f0bd69640a1354a6d0aebcfeede5/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "22e683669bc0f0bd69640a1354a6d0aebcfeede5"
+  },
+  {
+    "id": "bm-weights-rerank4",
+    "title": "Qwen3-Reranker-4B · released files",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-Reranker-4B/tree/22e683669bc0f0bd69640a1354a6d0aebcfeede5",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "22e683669bc0f0bd69640a1354a6d0aebcfeede5"
+  },
+  {
+    "id": "bm-license-rerank4",
+    "title": "Qwen3-Reranker-4B · license",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-Reranker-4B/blob/22e683669bc0f0bd69640a1354a6d0aebcfeede5/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "22e683669bc0f0bd69640a1354a6d0aebcfeede5"
+  },
+  {
+    "id": "bm-card-mask2formertiny",
+    "title": "facebook/mask2former-swin-tiny-ade-semantic · model card",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/mask2former-swin-tiny-ade-semantic/blob/c8cf1b5e823aee214d937d0d001c1850ba44ef6a/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "c8cf1b5e823aee214d937d0d001c1850ba44ef6a"
+  },
+  {
+    "id": "bm-weights-mask2formertiny",
+    "title": "Mask2Former Swin tiny · ADE20K · released files",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/mask2former-swin-tiny-ade-semantic/tree/c8cf1b5e823aee214d937d0d001c1850ba44ef6a",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "c8cf1b5e823aee214d937d0d001c1850ba44ef6a"
+  },
+  {
+    "id": "bm-license-mask2formertiny",
+    "title": "Mask2Former Swin tiny · ADE20K · license",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/mask2former-swin-tiny-ade-semantic/blob/c8cf1b5e823aee214d937d0d001c1850ba44ef6a/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "c8cf1b5e823aee214d937d0d001c1850ba44ef6a"
+  },
+  {
+    "id": "bm-card-posebase",
+    "title": "usyd-community/vitpose-plus-base · model card",
+    "publisher": "usyd-community",
+    "url": "https://huggingface.co/usyd-community/vitpose-plus-base/blob/92be54d7a29e42fad47b6e2ca01dd9e685a61e0d/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "92be54d7a29e42fad47b6e2ca01dd9e685a61e0d"
+  },
+  {
+    "id": "bm-weights-posebase",
+    "title": "ViTPose+ base · released files",
+    "publisher": "usyd-community",
+    "url": "https://huggingface.co/usyd-community/vitpose-plus-base/tree/92be54d7a29e42fad47b6e2ca01dd9e685a61e0d",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "92be54d7a29e42fad47b6e2ca01dd9e685a61e0d"
+  },
+  {
+    "id": "bm-license-posebase",
+    "title": "ViTPose+ base · license",
+    "publisher": "usyd-community",
+    "url": "https://huggingface.co/usyd-community/vitpose-plus-base/blob/92be54d7a29e42fad47b6e2ca01dd9e685a61e0d/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "92be54d7a29e42fad47b6e2ca01dd9e685a61e0d"
+  },
+  {
+    "id": "bm-card-marigold2",
+    "title": "huawei-bayerlab/marigold-v2-0 · model card",
+    "publisher": "huawei-bayerlab",
+    "url": "https://huggingface.co/huawei-bayerlab/marigold-v2-0/blob/cdf9810fb690886391a63aec012b5f501064fb0d/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "cdf9810fb690886391a63aec012b5f501064fb0d"
+  },
+  {
+    "id": "bm-weights-marigold2",
+    "title": "Marigold V2 · Log-stage2 · released files",
+    "publisher": "huawei-bayerlab",
+    "url": "https://huggingface.co/huawei-bayerlab/marigold-v2-0/tree/cdf9810fb690886391a63aec012b5f501064fb0d",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "cdf9810fb690886391a63aec012b5f501064fb0d"
+  },
+  {
+    "id": "bm-license-marigold2",
+    "title": "Marigold V2 · Log-stage2 · license",
+    "publisher": "huawei-bayerlab",
+    "url": "https://huggingface.co/huawei-bayerlab/marigold-v2-0/blob/cdf9810fb690886391a63aec012b5f501064fb0d/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "cdf9810fb690886391a63aec012b5f501064fb0d"
+  },
+  {
+    "id": "bm-card-fluxklein4",
+    "title": "black-forest-labs/FLUX.2-klein-4B · model card",
+    "publisher": "black-forest-labs",
+    "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B/blob/e7b7dc27f91deacad38e78976d1f2b499d76a294/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294"
+  },
+  {
+    "id": "bm-weights-fluxklein4",
+    "title": "FLUX.2 klein 4B · released files",
+    "publisher": "black-forest-labs",
+    "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B/tree/e7b7dc27f91deacad38e78976d1f2b499d76a294",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294"
+  },
+  {
+    "id": "bm-license-fluxklein4",
+    "title": "FLUX.2 klein 4B · license",
+    "publisher": "black-forest-labs",
+    "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B/blob/e7b7dc27f91deacad38e78976d1f2b499d76a294/LICENSE.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294"
+  },
+  {
+    "id": "bm-card-fluxklein9",
+    "title": "black-forest-labs/FLUX.2-klein-9B · model card",
+    "publisher": "black-forest-labs",
+    "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B/blob/92196c8e11f7b6cf2b7493e037d8c5345c559216/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "92196c8e11f7b6cf2b7493e037d8c5345c559216"
+  },
+  {
+    "id": "bm-weights-fluxklein9",
+    "title": "FLUX.2 klein 9B · released files",
+    "publisher": "black-forest-labs",
+    "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B/tree/92196c8e11f7b6cf2b7493e037d8c5345c559216",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "92196c8e11f7b6cf2b7493e037d8c5345c559216"
+  },
+  {
+    "id": "bm-license-fluxklein9",
+    "title": "FLUX.2 klein 9B · license",
+    "publisher": "black-forest-labs",
+    "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B/blob/92196c8e11f7b6cf2b7493e037d8c5345c559216/LICENSE.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "92196c8e11f7b6cf2b7493e037d8c5345c559216"
+  },
+  {
+    "id": "bm-card-moebius",
+    "title": "hustvl/Moebius · model card",
+    "publisher": "hustvl",
+    "url": "https://huggingface.co/hustvl/Moebius/blob/cd01f47fb648219d3fa605806c5ce00b713faa5e/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "cd01f47fb648219d3fa605806c5ce00b713faa5e"
+  },
+  {
+    "id": "bm-weights-moebius",
+    "title": "Moebius · Places2 · released files",
+    "publisher": "hustvl",
+    "url": "https://huggingface.co/hustvl/Moebius/tree/cd01f47fb648219d3fa605806c5ce00b713faa5e",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "cd01f47fb648219d3fa605806c5ce00b713faa5e"
+  },
+  {
+    "id": "bm-license-moebius",
+    "title": "Moebius · Places2 · license",
+    "publisher": "hustvl",
+    "url": "https://huggingface.co/hustvl/Moebius/blob/cd01f47fb648219d3fa605806c5ce00b713faa5e/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "cd01f47fb648219d3fa605806c5ce00b713faa5e"
+  },
+  {
+    "id": "bm-card-asrhf",
+    "title": "Qwen/Qwen3-ASR-1.7B-hf · model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-ASR-1.7B-hf/blob/bcd2b5b7f32b480ab5790554cfa8347f246a14f3/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "bcd2b5b7f32b480ab5790554cfa8347f246a14f3"
+  },
+  {
+    "id": "bm-weights-asrhf",
+    "title": "Qwen3-ASR-1.7B · Transformers · released files",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-ASR-1.7B-hf/tree/bcd2b5b7f32b480ab5790554cfa8347f246a14f3",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "bcd2b5b7f32b480ab5790554cfa8347f246a14f3"
+  },
+  {
+    "id": "bm-license-asrhf",
+    "title": "Qwen3-ASR-1.7B · Transformers · license",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-ASR-1.7B-hf/blob/bcd2b5b7f32b480ab5790554cfa8347f246a14f3/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "bcd2b5b7f32b480ab5790554cfa8347f246a14f3"
+  },
+  {
+    "id": "bm-card-asr06hf",
+    "title": "Qwen/Qwen3-ASR-0.6B-hf · model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-ASR-0.6B-hf/blob/7f1569a48a89f3e3f4dc3a5c9d28bddd903bc76c/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "7f1569a48a89f3e3f4dc3a5c9d28bddd903bc76c"
+  },
+  {
+    "id": "bm-weights-asr06hf",
+    "title": "Qwen3-ASR-0.6B · Transformers · released files",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-ASR-0.6B-hf/tree/7f1569a48a89f3e3f4dc3a5c9d28bddd903bc76c",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "7f1569a48a89f3e3f4dc3a5c9d28bddd903bc76c"
+  },
+  {
+    "id": "bm-license-asr06hf",
+    "title": "Qwen3-ASR-0.6B · Transformers · license",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-ASR-0.6B-hf/blob/7f1569a48a89f3e3f4dc3a5c9d28bddd903bc76c/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "7f1569a48a89f3e3f4dc3a5c9d28bddd903bc76c"
+  },
+  {
+    "id": "bm-card-ttscv06",
+    "title": "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice · model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice/blob/85e237c12c027371202489a0ec509ded67b5e4b5/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "85e237c12c027371202489a0ec509ded67b5e4b5"
+  },
+  {
+    "id": "bm-weights-ttscv06",
+    "title": "Qwen3-TTS 0.6B CustomVoice · released files",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice/tree/85e237c12c027371202489a0ec509ded67b5e4b5",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "85e237c12c027371202489a0ec509ded67b5e4b5"
+  },
+  {
+    "id": "bm-license-ttscv06",
+    "title": "Qwen3-TTS 0.6B CustomVoice · license",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice/blob/85e237c12c027371202489a0ec509ded67b5e4b5/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "85e237c12c027371202489a0ec509ded67b5e4b5"
+  },
+  {
+    "id": "bm-card-redimnet",
+    "title": "lab260/redimnet2-plus · model card",
+    "publisher": "lab260",
+    "url": "https://huggingface.co/lab260/redimnet2-plus/blob/fd45d1968c0ea91b62ad0d2469eee4607756bb07/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "fd45d1968c0ea91b62ad0d2469eee4607756bb07"
+  },
+  {
+    "id": "bm-weights-redimnet",
+    "title": "ReDimNet2+ · released files",
+    "publisher": "lab260",
+    "url": "https://huggingface.co/lab260/redimnet2-plus/tree/fd45d1968c0ea91b62ad0d2469eee4607756bb07",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "fd45d1968c0ea91b62ad0d2469eee4607756bb07"
+  },
+  {
+    "id": "bm-license-redimnet",
+    "title": "ReDimNet2+ · license",
+    "publisher": "lab260",
+    "url": "https://huggingface.co/lab260/redimnet2-plus/blob/fd45d1968c0ea91b62ad0d2469eee4607756bb07/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "fd45d1968c0ea91b62ad0d2469eee4607756bb07"
+  },
+  {
+    "id": "bm-card-pyannote31",
+    "title": "pyannote/speaker-diarization-3.1 · model card",
+    "publisher": "pyannote",
+    "url": "https://huggingface.co/pyannote/speaker-diarization-3.1/blob/84fd25912480287da0247647c3d2b4853cb3ee5d/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "84fd25912480287da0247647c3d2b4853cb3ee5d"
+  },
+  {
+    "id": "bm-weights-pyannote31",
+    "title": "pyannote speaker-diarization-3.1 · released files",
+    "publisher": "pyannote",
+    "url": "https://huggingface.co/pyannote/speaker-diarization-3.1/tree/84fd25912480287da0247647c3d2b4853cb3ee5d",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "84fd25912480287da0247647c3d2b4853cb3ee5d"
+  },
+  {
+    "id": "bm-license-pyannote31",
+    "title": "pyannote speaker-diarization-3.1 · license",
+    "publisher": "pyannote",
+    "url": "https://huggingface.co/pyannote/speaker-diarization-3.1/blob/84fd25912480287da0247647c3d2b4853cb3ee5d/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "84fd25912480287da0247647c3d2b4853cb3ee5d"
+  },
+  {
+    "id": "bm-card-audar",
+    "title": "audarai/Audar-Diarization-V1 · model card",
+    "publisher": "audarai",
+    "url": "https://huggingface.co/audarai/Audar-Diarization-V1/blob/230e5afed3f87637c12c8fb819dd0be9b1ddf6cb/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "230e5afed3f87637c12c8fb819dd0be9b1ddf6cb"
+  },
+  {
+    "id": "bm-weights-audar",
+    "title": "Audar-Diarization-V1 · released files",
+    "publisher": "audarai",
+    "url": "https://huggingface.co/audarai/Audar-Diarization-V1/tree/230e5afed3f87637c12c8fb819dd0be9b1ddf6cb",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "230e5afed3f87637c12c8fb819dd0be9b1ddf6cb"
+  },
+  {
+    "id": "bm-license-audar",
+    "title": "Audar-Diarization-V1 · license",
+    "publisher": "audarai",
+    "url": "https://huggingface.co/audarai/Audar-Diarization-V1/blob/230e5afed3f87637c12c8fb819dd0be9b1ddf6cb/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "230e5afed3f87637c12c8fb819dd0be9b1ddf6cb"
+  },
+  {
+    "id": "bm-card-kumo",
+    "title": "nvidia/Kumo-Tabular · model card",
+    "publisher": "nvidia",
+    "url": "https://huggingface.co/nvidia/Kumo-Tabular/blob/c5893d418e162b9f841ae179dc767afefff73831/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "c5893d418e162b9f841ae179dc767afefff73831"
+  },
+  {
+    "id": "bm-weights-kumo",
+    "title": "NVIDIA Kumo Tabular · Large · released files",
+    "publisher": "nvidia",
+    "url": "https://huggingface.co/nvidia/Kumo-Tabular/tree/c5893d418e162b9f841ae179dc767afefff73831",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "c5893d418e162b9f841ae179dc767afefff73831"
+  },
+  {
+    "id": "bm-license-kumo",
+    "title": "NVIDIA Kumo Tabular · Large · license",
+    "publisher": "nvidia",
+    "url": "https://huggingface.co/nvidia/Kumo-Tabular/blob/c5893d418e162b9f841ae179dc767afefff73831/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "c5893d418e162b9f841ae179dc767afefff73831"
+  },
+  {
+    "id": "bm-card-timestral",
+    "title": "mistralai/Timestral-209M · model card",
+    "publisher": "mistralai",
+    "url": "https://huggingface.co/mistralai/Timestral-209M/blob/9874d252ab0aae16f7f7c999f98f98d6ad7d8365/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "9874d252ab0aae16f7f7c999f98f98d6ad7d8365"
+  },
+  {
+    "id": "bm-weights-timestral",
+    "title": "Timestral-209M · released files",
+    "publisher": "mistralai",
+    "url": "https://huggingface.co/mistralai/Timestral-209M/tree/9874d252ab0aae16f7f7c999f98f98d6ad7d8365",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "9874d252ab0aae16f7f7c999f98f98d6ad7d8365"
+  },
+  {
+    "id": "bm-license-timestral",
+    "title": "Timestral-209M · license",
+    "publisher": "mistralai",
+    "url": "https://huggingface.co/mistralai/Timestral-209M/blob/9874d252ab0aae16f7f7c999f98f98d6ad7d8365/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "9874d252ab0aae16f7f7c999f98f98d6ad7d8365"
+  },
+  {
+    "id": "bm-card-timestral28",
+    "title": "mistralai/Timestral-28M · model card",
+    "publisher": "mistralai",
+    "url": "https://huggingface.co/mistralai/Timestral-28M/blob/49b26409ac87b5935539a5d8ffe7f397b720db47/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "49b26409ac87b5935539a5d8ffe7f397b720db47"
+  },
+  {
+    "id": "bm-weights-timestral28",
+    "title": "Timestral-28M · released files",
+    "publisher": "mistralai",
+    "url": "https://huggingface.co/mistralai/Timestral-28M/tree/49b26409ac87b5935539a5d8ffe7f397b720db47",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "49b26409ac87b5935539a5d8ffe7f397b720db47"
+  },
+  {
+    "id": "bm-license-timestral28",
+    "title": "Timestral-28M · license",
+    "publisher": "mistralai",
+    "url": "https://huggingface.co/mistralai/Timestral-28M/blob/49b26409ac87b5935539a5d8ffe7f397b720db47/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "49b26409ac87b5935539a5d8ffe7f397b720db47"
+  },
+  {
+    "id": "bm-card-xiyan",
+    "title": "XGenerationLab/XiYanSQL-QwenCoder-32B-2412 · model card",
+    "publisher": "XGenerationLab",
+    "url": "https://huggingface.co/XGenerationLab/XiYanSQL-QwenCoder-32B-2412/blob/b74605a579662ea82404dde034d4d4c2f032fab6/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "b74605a579662ea82404dde034d4d4c2f032fab6"
+  },
+  {
+    "id": "bm-weights-xiyan",
+    "title": "XiYanSQL-QwenCoder-32B-2412 · released files",
+    "publisher": "XGenerationLab",
+    "url": "https://huggingface.co/XGenerationLab/XiYanSQL-QwenCoder-32B-2412/tree/b74605a579662ea82404dde034d4d4c2f032fab6",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "b74605a579662ea82404dde034d4d4c2f032fab6"
+  },
+  {
+    "id": "bm-license-xiyan",
+    "title": "XiYanSQL-QwenCoder-32B-2412 · license",
+    "publisher": "XGenerationLab",
+    "url": "https://huggingface.co/XGenerationLab/XiYanSQL-QwenCoder-32B-2412/blob/b74605a579662ea82404dde034d4d4c2f032fab6/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "b74605a579662ea82404dde034d4d4c2f032fab6"
+  },
+  {
+    "id": "bm-card-xiyan7",
+    "title": "XGenerationLab/XiYanSQL-QwenCoder-7B-2502 · model card",
+    "publisher": "XGenerationLab",
+    "url": "https://huggingface.co/XGenerationLab/XiYanSQL-QwenCoder-7B-2502/blob/1009ef00833bafa68ca4251a7a2319fa58e9ab77/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "1009ef00833bafa68ca4251a7a2319fa58e9ab77"
+  },
+  {
+    "id": "bm-weights-xiyan7",
+    "title": "XiYanSQL-QwenCoder-7B-2502 · released files",
+    "publisher": "XGenerationLab",
+    "url": "https://huggingface.co/XGenerationLab/XiYanSQL-QwenCoder-7B-2502/tree/1009ef00833bafa68ca4251a7a2319fa58e9ab77",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "1009ef00833bafa68ca4251a7a2319fa58e9ab77"
+  },
+  {
+    "id": "bm-license-xiyan7",
+    "title": "XiYanSQL-QwenCoder-7B-2502 · license",
+    "publisher": "XGenerationLab",
+    "url": "https://huggingface.co/XGenerationLab/XiYanSQL-QwenCoder-7B-2502/blob/1009ef00833bafa68ca4251a7a2319fa58e9ab77/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "1009ef00833bafa68ca4251a7a2319fa58e9ab77"
+  },
+  {
+    "id": "bm-card-longcatprover",
+    "title": "meituan-longcat/LongCat-Flash-Prover · model card",
+    "publisher": "meituan-longcat",
+    "url": "https://huggingface.co/meituan-longcat/LongCat-Flash-Prover/blob/9532d650151da0f91cd14fc8d05eeee85720b93f/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "9532d650151da0f91cd14fc8d05eeee85720b93f"
+  },
+  {
+    "id": "bm-weights-longcatprover",
+    "title": "LongCat-Flash-Prover · released files",
+    "publisher": "meituan-longcat",
+    "url": "https://huggingface.co/meituan-longcat/LongCat-Flash-Prover/tree/9532d650151da0f91cd14fc8d05eeee85720b93f",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "9532d650151da0f91cd14fc8d05eeee85720b93f"
+  },
+  {
+    "id": "bm-license-longcatprover",
+    "title": "LongCat-Flash-Prover · license",
+    "publisher": "meituan-longcat",
+    "url": "https://huggingface.co/meituan-longcat/LongCat-Flash-Prover/blob/9532d650151da0f91cd14fc8d05eeee85720b93f/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "9532d650151da0f91cd14fc8d05eeee85720b93f"
+  },
+  {
+    "id": "bm-card-kimi3",
+    "title": "moonshotai/Kimi-K3 · model card",
+    "publisher": "moonshotai",
+    "url": "https://huggingface.co/moonshotai/Kimi-K3/blob/f831ab66814297da540d832a5235f8e904f29d06/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "f831ab66814297da540d832a5235f8e904f29d06"
+  },
+  {
+    "id": "bm-weights-kimi3",
+    "title": "Kimi K3 · released files",
+    "publisher": "moonshotai",
+    "url": "https://huggingface.co/moonshotai/Kimi-K3/tree/f831ab66814297da540d832a5235f8e904f29d06",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "f831ab66814297da540d832a5235f8e904f29d06"
+  },
+  {
+    "id": "bm-license-kimi3",
+    "title": "Kimi K3 · license",
+    "publisher": "moonshotai",
+    "url": "https://huggingface.co/moonshotai/Kimi-K3/blob/f831ab66814297da540d832a5235f8e904f29d06/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "f831ab66814297da540d832a5235f8e904f29d06"
+  },
+  {
+    "id": "bm-card-ultra",
+    "title": "mgalkin/ultra_50g · model card",
+    "publisher": "mgalkin",
+    "url": "https://huggingface.co/mgalkin/ultra_50g/blob/d46107d8415549e7c7386d26903ad11c9a8de4fd/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "d46107d8415549e7c7386d26903ad11c9a8de4fd"
+  },
+  {
+    "id": "bm-weights-ultra",
+    "title": "ULTRA 50g · released files",
+    "publisher": "mgalkin",
+    "url": "https://huggingface.co/mgalkin/ultra_50g/tree/d46107d8415549e7c7386d26903ad11c9a8de4fd",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "d46107d8415549e7c7386d26903ad11c9a8de4fd"
+  },
+  {
+    "id": "bm-license-ultra",
+    "title": "ULTRA 50g · license",
+    "publisher": "mgalkin",
+    "url": "https://huggingface.co/mgalkin/ultra_50g/blob/d46107d8415549e7c7386d26903ad11c9a8de4fd/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "d46107d8415549e7c7386d26903ad11c9a8de4fd"
+  },
+  {
+    "id": "bm-card-ultra3",
+    "title": "mgalkin/ultra_3g · model card",
+    "publisher": "mgalkin",
+    "url": "https://huggingface.co/mgalkin/ultra_3g/blob/bf98f89c4a47f794396fa895eb6940fdb94bfe9c/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "bf98f89c4a47f794396fa895eb6940fdb94bfe9c"
+  },
+  {
+    "id": "bm-weights-ultra3",
+    "title": "ULTRA 3g · released files",
+    "publisher": "mgalkin",
+    "url": "https://huggingface.co/mgalkin/ultra_3g/tree/bf98f89c4a47f794396fa895eb6940fdb94bfe9c",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "bf98f89c4a47f794396fa895eb6940fdb94bfe9c"
+  },
+  {
+    "id": "bm-license-ultra3",
+    "title": "ULTRA 3g · license",
+    "publisher": "mgalkin",
+    "url": "https://huggingface.co/mgalkin/ultra_3g/blob/bf98f89c4a47f794396fa895eb6940fdb94bfe9c/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "bf98f89c4a47f794396fa895eb6940fdb94bfe9c"
+  },
+  {
+    "id": "bm-card-ltx23",
+    "title": "Lightricks/LTX-2.3 · model card",
+    "publisher": "Lightricks",
+    "url": "https://huggingface.co/Lightricks/LTX-2.3/blob/3c6a4e66e5d0a684231950b9c74dd4ded7b6fadc/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "3c6a4e66e5d0a684231950b9c74dd4ded7b6fadc"
+  },
+  {
+    "id": "bm-weights-ltx23",
+    "title": "LTX-2.3 · 22B dev · released files",
+    "publisher": "Lightricks",
+    "url": "https://huggingface.co/Lightricks/LTX-2.3/tree/3c6a4e66e5d0a684231950b9c74dd4ded7b6fadc",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "3c6a4e66e5d0a684231950b9c74dd4ded7b6fadc"
+  },
+  {
+    "id": "bm-license-ltx23",
+    "title": "LTX-2.3 · 22B dev · license",
+    "publisher": "Lightricks",
+    "url": "https://huggingface.co/Lightricks/LTX-2.3/blob/3c6a4e66e5d0a684231950b9c74dd4ded7b6fadc/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "3c6a4e66e5d0a684231950b9c74dd4ded7b6fadc"
+  },
+  {
+    "id": "bm-card-audiomosaic",
+    "title": "hanxunh/AudioMosaic-vit-b16-finetune-as2m · model card",
+    "publisher": "hanxunh",
+    "url": "https://huggingface.co/hanxunh/AudioMosaic-vit-b16-finetune-as2m/blob/1a7f51c115161d2b564cdb97f6f1268c659ffe4e/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "1a7f51c115161d2b564cdb97f6f1268c659ffe4e"
+  },
+  {
+    "id": "bm-weights-audiomosaic",
+    "title": "AudioMosaic ViT-B/16 · AudioSet-2M · released files",
+    "publisher": "hanxunh",
+    "url": "https://huggingface.co/hanxunh/AudioMosaic-vit-b16-finetune-as2m/tree/1a7f51c115161d2b564cdb97f6f1268c659ffe4e",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "1a7f51c115161d2b564cdb97f6f1268c659ffe4e"
+  },
+  {
+    "id": "bm-license-audiomosaic",
+    "title": "AudioMosaic ViT-B/16 · AudioSet-2M · license",
+    "publisher": "hanxunh",
+    "url": "https://huggingface.co/hanxunh/AudioMosaic-vit-b16-finetune-as2m/blob/1a7f51c115161d2b564cdb97f6f1268c659ffe4e/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "1a7f51c115161d2b564cdb97f6f1268c659ffe4e"
+  },
+  {
+    "id": "bm-card-primeramulti",
+    "title": "allenai/PRIMERA-multinews · model card",
+    "publisher": "allenai",
+    "url": "https://huggingface.co/allenai/PRIMERA-multinews/blob/1b507148874734de104f3a5e98a69f384db616fe/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "1b507148874734de104f3a5e98a69f384db616fe"
+  },
+  {
+    "id": "bm-weights-primeramulti",
+    "title": "PRIMERA · Multi-News fine-tuned · released files",
+    "publisher": "allenai",
+    "url": "https://huggingface.co/allenai/PRIMERA-multinews/tree/1b507148874734de104f3a5e98a69f384db616fe",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "1b507148874734de104f3a5e98a69f384db616fe"
+  },
+  {
+    "id": "bm-license-primeramulti",
+    "title": "PRIMERA · Multi-News fine-tuned · license",
+    "publisher": "allenai",
+    "url": "https://huggingface.co/allenai/PRIMERA-multinews/blob/1b507148874734de104f3a5e98a69f384db616fe/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "1b507148874734de104f3a5e98a69f384db616fe"
+  },
+  {
+    "id": "bm-card-primera",
+    "title": "allenai/PRIMERA · model card",
+    "publisher": "allenai",
+    "url": "https://huggingface.co/allenai/PRIMERA/blob/931d08e790f7d2a2293f2e9901d73a6db8449f5c/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "931d08e790f7d2a2293f2e9901d73a6db8449f5c"
+  },
+  {
+    "id": "bm-weights-primera",
+    "title": "PRIMERA · zero-shot · released files",
+    "publisher": "allenai",
+    "url": "https://huggingface.co/allenai/PRIMERA/tree/931d08e790f7d2a2293f2e9901d73a6db8449f5c",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "931d08e790f7d2a2293f2e9901d73a6db8449f5c"
+  },
+  {
+    "id": "bm-license-primera",
+    "title": "PRIMERA · zero-shot · license",
+    "publisher": "allenai",
+    "url": "https://huggingface.co/allenai/PRIMERA/blob/931d08e790f7d2a2293f2e9901d73a6db8449f5c/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "931d08e790f7d2a2293f2e9901d73a6db8449f5c"
+  },
+  {
+    "id": "bm-card-qwenimage21",
+    "title": "Qwen/Qwen-Image-2.1 · model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen-Image-2.1/blob/d26bb61231c349cf6b7896fa83353113880e1ba3/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "d26bb61231c349cf6b7896fa83353113880e1ba3"
+  },
+  {
+    "id": "bm-weights-qwenimage21",
+    "title": "Qwen-Image-2.1 · released files",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen-Image-2.1/tree/d26bb61231c349cf6b7896fa83353113880e1ba3",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "d26bb61231c349cf6b7896fa83353113880e1ba3"
+  },
+  {
+    "id": "bm-license-qwenimage21",
+    "title": "Qwen-Image-2.1 · license",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen-Image-2.1/blob/d26bb61231c349cf6b7896fa83353113880e1ba3/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "d26bb61231c349cf6b7896fa83353113880e1ba3"
+  },
+  {
+    "id": "bm-card-driftse",
+    "title": "LIANGXU123/DriftSE · model card",
+    "publisher": "LIANGXU123",
+    "url": "https://huggingface.co/LIANGXU123/DriftSE/blob/c668151cbaa5d1355eca7471d336ef8825e95333/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "c668151cbaa5d1355eca7471d336ef8825e95333"
+  },
+  {
+    "id": "bm-weights-driftse",
+    "title": "DriftSE · DistilHuBERT · released files",
+    "publisher": "LIANGXU123",
+    "url": "https://huggingface.co/LIANGXU123/DriftSE/blob/c668151cbaa5d1355eca7471d336ef8825e95333/logs/distillhubert_three_layers_with_z/last.ckpt",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "c668151cbaa5d1355eca7471d336ef8825e95333"
+  },
+  {
+    "id": "bm-license-driftse",
+    "title": "DriftSE · DistilHuBERT · license",
+    "publisher": "LIANGXU123",
+    "url": "https://huggingface.co/LIANGXU123/DriftSE/blob/c668151cbaa5d1355eca7471d336ef8825e95333/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "c668151cbaa5d1355eca7471d336ef8825e95333"
+  },
+  {
+    "id": "bm-weights-driftse-aux",
+    "title": "DriftSE† · DistilHuBERT · released files",
+    "publisher": "LIANGXU123",
+    "url": "https://huggingface.co/LIANGXU123/DriftSE/blob/c668151cbaa5d1355eca7471d336ef8825e95333/logs/distillhubert_three_layers_pesq_sisdr_ccmse_with_z/last.ckpt",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "c668151cbaa5d1355eca7471d336ef8825e95333"
+  },
+  {
+    "id": "bm-license-driftse-aux",
+    "title": "DriftSE† · DistilHuBERT · license",
+    "publisher": "LIANGXU123",
+    "url": "https://huggingface.co/LIANGXU123/DriftSE/blob/c668151cbaa5d1355eca7471d336ef8825e95333/README.md",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "c668151cbaa5d1355eca7471d336ef8825e95333"
+  },
+  {
+    "id": "bm-gliner25",
+    "title": "GLiNER2.5 evaluation tables",
+    "publisher": "Fastino",
+    "url": "https://fastino.ai/blog/gliner2-5-span-free-information-extraction",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "bm-coref",
+    "title": "F-coref · Table 1",
+    "publisher": "Otmazgin et al.",
+    "url": "https://arxiv.org/html/2209.04280v4",
+    "kind": "paper",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "bm-coedit",
+    "title": "CoEdIT · Table 2",
+    "publisher": "Raheja et al.",
+    "url": "https://arxiv.org/html/2305.09857v2",
+    "kind": "paper",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "bm-hymt",
+    "title": "Hy-MT2 · Table 2",
+    "publisher": "Tencent",
+    "url": "https://arxiv.org/html/2605.22064v1",
+    "kind": "paper",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "bm-mask",
+    "title": "Mask2Former · ADE20K semantic segmentation",
+    "publisher": "Meta",
+    "url": "https://github.com/facebookresearch/Mask2Former/blob/9b0651c6c1d5b3af2e6da0589b719c514ec0d69a/MODEL_ZOO.md",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "9b0651c6c1d5b3af2e6da0589b719c514ec0d69a"
+  },
+  {
+    "id": "bm-pose",
+    "title": "ViTPose++ · COCO validation results",
+    "publisher": "ViTAE authors",
+    "url": "https://github.com/ViTAE-Transformer/ViTPose/blob/c050ed29112da7704797cc1a65af0234b525010d/README.md",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "c050ed29112da7704797cc1a65af0234b525010d"
+  },
+  {
+    "id": "bm-mage",
+    "title": "Mage-Flow · generation and editing comparisons",
+    "publisher": "Microsoft",
+    "url": "https://github.com/microsoft/Mage/blob/76bec2bb3818863f470de7e867c2dc7f1d0bfd83/mage_flow/README.md",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "76bec2bb3818863f470de7e867c2dc7f1d0bfd83"
+  },
+  {
+    "id": "bm-moebius",
+    "title": "Moebius · Table 1",
+    "publisher": "Moebius authors",
+    "url": "https://arxiv.org/html/2606.19195v1",
+    "kind": "paper",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "bm-kumo",
+    "title": "Kumo Tabular · TALENT results",
+    "publisher": "NVIDIA",
+    "url": "https://huggingface.co/blog/nvidia/kumo-tabular",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "bm-longcat",
+    "title": "LongCat-Flash-Prover technical report",
+    "publisher": "Meituan",
+    "url": "https://arxiv.org/html/2603.21065v1",
+    "kind": "paper",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "bm-marigold",
+    "title": "Marigold V2 · Table 1",
+    "publisher": "HUAWEI Bayer Lab / EPFL",
+    "url": "https://arxiv.org/html/2609.08084v1",
+    "kind": "paper",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "bm-card-mqr",
+    "title": "ForwardAILabs/MQR-A1 · model card",
+    "publisher": "ForwardAILabs",
+    "url": "https://huggingface.co/ForwardAILabs/MQR-A1/blob/6f94e962e4ee86485935648fa2626e8a4afc6b76/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "6f94e962e4ee86485935648fa2626e8a4afc6b76"
+  },
+  {
+    "id": "bm-card-qwen38",
+    "title": "Qwen/Qwen3.8-27B · model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0"
+  },
+  {
+    "id": "bm-card-deepseek41",
+    "title": "deepseek-ai/DeepSeek-V4.1-Flash-1017 · model card",
+    "publisher": "deepseek-ai",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/blob/1bae0e1088993b9b82de08f59de5be5a34e42170/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "1bae0e1088993b9b82de08f59de5be5a34e42170"
+  },
+  {
+    "id": "bm-card-glm53",
+    "title": "zai-org/GLM-5.3 · model card",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/GLM-5.3/blob/ba32f8c19c8738e2c57c71798c601d477a7bf844/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "ba32f8c19c8738e2c57c71798c601d477a7bf844"
+  },
+  {
+    "id": "bm-card-embedding",
+    "title": "Qwen/Qwen3-Embedding-8B · model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-Embedding-8B/blob/1d8ad4ca9b3dd8059ad90a75d4983776a23d44af/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "1d8ad4ca9b3dd8059ad90a75d4983776a23d44af"
+  },
+  {
+    "id": "bm-card-reranker",
+    "title": "Qwen/Qwen3-Reranker-8B · model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-Reranker-8B/blob/77d193c791ed757ca307ee72715aa132723da912/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "77d193c791ed757ca307ee72715aa132723da912"
+  },
+  {
+    "id": "bm-card-tts",
+    "title": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice · model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice/blob/0c0e3051f131929182e2c023b9537f8b1c68adfe/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "0c0e3051f131929182e2c023b9537f8b1c68adfe"
+  },
+  {
+    "id": "bm-card-diarization",
+    "title": "pyannote/speaker-diarization-community-1 · model card",
+    "publisher": "pyannote",
+    "url": "https://huggingface.co/pyannote/speaker-diarization-community-1/blob/3533c8cf8e369892e6b79ff1bf80f7b0286a54ee/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "3533c8cf8e369892e6b79ff1bf80f7b0286a54ee"
+  },
+  {
+    "id": "bm-card-keyword",
+    "title": "superb/wav2vec2-base-superb-ks · model card",
+    "publisher": "superb",
+    "url": "https://huggingface.co/superb/wav2vec2-base-superb-ks/blob/372e0486cd83e6f0c05c20a27262e9ca09450d24/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "372e0486cd83e6f0c05c20a27262e9ca09450d24"
+  },
+  {
+    "id": "bm-card-emotion",
+    "title": "superb/hubert-large-superb-er · model card",
+    "publisher": "superb",
+    "url": "https://huggingface.co/superb/hubert-large-superb-er/blob/ef1a2ebfd7cfc424dc7f0fbcdc406e8b794d63bb/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "ef1a2ebfd7cfc424dc7f0fbcdc406e8b794d63bb"
+  },
+  {
+    "id": "bm-card-separation",
+    "title": "speechbrain/sepformer-whamr · model card",
+    "publisher": "speechbrain",
+    "url": "https://huggingface.co/speechbrain/sepformer-whamr/blob/9950fd8055b38679d2af5bef2366b5dba600ec66/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "9950fd8055b38679d2af5bef2366b5dba600ec66"
+  },
+  {
+    "id": "bm-card-r1",
+    "title": "deepseek-ai/DeepSeek-R1-0528 · model card",
+    "publisher": "deepseek-ai",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528/blob/4236a6af538feda4548eca9ab308586007567f52/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "4236a6af538feda4548eca9ab308586007567f52"
+  }
+];

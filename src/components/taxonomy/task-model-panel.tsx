@@ -3,6 +3,7 @@
 import type { OpenWeightModel, TaxonomyTask, TaxonomySource, TaskModelSource } from "@/data/schema";
 import { taskModelLabels, type ModelLocale } from "@/lib/labels";
 import { ModelArtifactDetails } from "@/components/taxonomy/model-artifact-details";
+import { TaskBenchmarkPanel } from "@/components/taxonomy/task-benchmark-panel";
 
 export function TaskModelPanel({ task, models, sources, definitions, locale, onClose }: {
   task: TaxonomyTask; models: OpenWeightModel[]; sources: TaskModelSource[];
@@ -21,6 +22,7 @@ export function TaskModelPanel({ task, models, sources, definitions, locale, onC
       <p className="task-model-definition" lang="en">{task.definition}</p>
       <a className="task-model-definition-link" href={definition.url} target="_blank" rel="noreferrer">{labels.definition} ↗</a>
       <p className="task-model-note">{task.note[locale]}</p>
+      <TaskBenchmarkPanel key={task.id} taskId={task.id} models={models} sources={sources} locale={locale} />
       {task.review ? <section className="model-family-review task-research-review" aria-labelledby="task-review-title">
         <h3 id="task-review-title">{labels.research}</h3>
         <small>{labels.reviewed} · <time dateTime={task.review.observedAt}>{task.review.observedAt}</time></small>

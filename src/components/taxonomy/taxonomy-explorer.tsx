@@ -4,7 +4,9 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { TaxonomyMap, TaxonomySource, TaxonomyTask, OpenWeightModel, TaskModelSource, ModelFamily } from "@/data/schema";
-import { taxonomyLabels, taskModelLabels, modelFamilyLabels, type ModelLocale } from "@/lib/labels";
+import { taxonomyLabels, taskModelLabels, taskBenchmarkLabels, modelFamilyLabels, type ModelLocale } from "@/lib/labels";
+import { benchmarkCandidates, taskBenchmarks, taskBenchmarkReviews } from "@/data/task-benchmarks";
+import { benchmarkStatus } from "@/lib/task-benchmarks";
 import { prepareTaxonomySvg, taxonomyHref } from "@/lib/taxonomy";
 import { linkTaskCards, taskModelHref } from "@/lib/task-models";
 import { TaskModelPanel } from "@/components/taxonomy/task-model-panel";
@@ -24,6 +26,9 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
   const content = labels[map.id];
   const modelLabels = taskModelLabels[locale];
   const familyLabels = modelFamilyLabels[locale];
+  const benchmarkLabels = taskBenchmarkLabels[locale];
+  const [evidenceFilter, setEvidenceFilter] = useState<"all" | "comparison" | "single" | "gap">("all");
+  const [taskQuery, setTaskQuery] = useState("");
   const taskId = map.id === "tasks" ? params.get("task") : null;
   const familyId = map.id === "models" ? params.get("family") : null;
   const selectedTask = tasks.find((task) => task.id === taskId);
@@ -33,6 +38,9 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
     return map.id === "tasks" ? linkTaskCards(prepared, tasks, locale, taskId) : linkModelFamilyCards(prepared, families, locale, familyId);
   }, [svg, locale, map.id, tasks, taskId, families, familyId]);
   const taskGroups = [...new Set(tasks.map((task) => task.family))];
+  const filteredTasks = tasks.filter((task) => task.id === selectedTask?.id ||
+    ((evidenceFilter === "all" || benchmarkStatus(task.id, taskBenchmarks) === evidenceFilter) &&
+      task.name.toLocaleLowerCase("en").includes(taskQuery.trim().toLocaleLowerCase("en"))));
   const axes = [...new Set(families.map((family) => family.axis))];
   const viewer = useRef<HTMLElement>(null);
   const viewport = useRef<HTMLDivElement>(null);
@@ -171,9 +179,19 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
           <label htmlFor="taxonomy-task-select">{modelLabels.select}
             <select id="taxonomy-task-select" value={selectedTask?.id ?? ""} onChange={(event) => selectEntry(event.target.value || null)}>
               <option value="">{modelLabels.placeholder}</option>
-              {taskGroups.map((family) => <optgroup key={family} label={family}>{tasks.filter((task) => task.family === family).map((task) => <option value={task.id} key={task.id}>{task.name}</option>)}</optgroup>)}
+              {taskGroups.filter((family) => filteredTasks.some((task) => task.family === family)).map((family) => <optgroup key={family} label={family}>{filteredTasks.filter((task) => task.family === family).map((task) => <option value={task.id} key={task.id}>{task.name}</option>)}</optgroup>)}
             </select>
           </label>
+          <div className="benchmark-overview">
+            <p><strong>{taskBenchmarkReviews.length} {benchmarkLabels.reviewedTasks}</strong> · 2026-10-21 · {benchmarkCandidates.length} {benchmarkLabels.additional}</p>
+            <div className="benchmark-filters" role="group" aria-label={benchmarkLabels.filter}>
+              {(["all", "comparison", "single", "gap"] as const).map((status) => <button type="button" key={status} aria-pressed={evidenceFilter === status} onClick={() => setEvidenceFilter(status)}>
+                {status === "all" ? benchmarkLabels.all : <>{tasks.filter((task) => benchmarkStatus(task.id, taskBenchmarks) === status).length} {status === "comparison" ? benchmarkLabels.comparisons : status === "single" ? benchmarkLabels.singles : benchmarkLabels.gaps}</>}
+              </button>)}
+            </div>
+            <label htmlFor="taxonomy-task-search">{benchmarkLabels.search}<input id="taxonomy-task-search" type="search" value={taskQuery} onChange={(event) => setTaskQuery(event.target.value)} placeholder={benchmarkLabels.placeholder} /></label>
+            <details className="task-model-method"><summary>{benchmarkLabels.method}</summary><p>{benchmarkLabels.methodology}</p><p>{benchmarkLabels.notRun}</p></details>
+          </div>
           <details className="task-model-method"><summary>{modelLabels.method}</summary><p>{modelLabels.methodology}</p><p>{modelLabels.evidenceHelp}</p></details>
           {taskId && !selectedTask ? <p role="status">{modelLabels.invalid}</p> : null}
         </div> : <div className="task-model-finder">

@@ -173,6 +173,35 @@ export const modelFamilyLabels = {
   },
 } as const;
 
+export const taskBenchmarkLabels = {
+  en: {
+    title: "Benchmark comparison", reviewed: "Evidence checked", published: "Result published", undated: "Publication date not stated",
+    comparison: "Shared benchmark table", single: "Single verified result", gap: "No comparable result verified",
+    why: "What the evidence supports", limits: "What remains uncertain", candidates: "Reviewed models and released files", model: "Model / configuration",
+    score: "Score", leader: "Leads this table", tied: "Tied in this table", higher: "Higher is better", lower: "Lower is better",
+    publisher: "Publisher report", independent: "Other researchers’ comparison", direct: "Direct task measurement", proxy: "Related capability / pipeline proxy",
+    historical: "Prior-year reference", protocol: "Evaluation conditions", source: "Result source", references: "Review sources", weights: "Released files", license: "License",
+    gated: "Access conditions apply", public: "Public release", all: "All evidence statuses", filter: "Filter tasks by benchmark evidence", search: "Find a task", placeholder: "Task name…",
+    reviewedTasks: "tasks reviewed", comparisons: "with comparisons", singles: "with one result", gaps: "without comparable scores", additional: "additional model releases",
+    method: "How to read the comparisons",
+    methodology: "These are selected published results, checked on 2026-10-21. A highlighted row leads only its own table, not all models or every use of the task. Dataset, metric, model version, training exposure, harness and inference budget must be considered together. Different tables are never normalized into a global score; ties are retained and small gaps may be within unreported uncertainty.",
+    notRun: "Models were not run locally for this review. A recent source check does not make an old benchmark current. Missing scores mean missing verified comparable evidence, not zero performance or absence of capable models.",
+  },
+  tr: {
+    title: "Benchmark karşılaştırması", reviewed: "Kanıt kontrolü", published: "Sonucun yayımı", undated: "Yayım tarihi belirtilmemiş",
+    comparison: "Ortak benchmark tablosu", single: "Doğrulanmış tek sonuç", gap: "Karşılaştırılabilir sonuç doğrulanamadı",
+    why: "Kanıt neyi destekliyor?", limits: "Belirsiz kalan noktalar", candidates: "İncelenen modeller ve yayımlanmış dosyalar", model: "Model / ayarlar",
+    score: "Puan", leader: "Bu tabloda önde", tied: "Bu tabloda eşit", higher: "Yüksek daha iyi", lower: "Düşük daha iyi",
+    publisher: "Yayıncı raporu", independent: "Diğer araştırmacıların karşılaştırması", direct: "Doğrudan görev ölçümü", proxy: "İlgili yetenek / işlem hattı ölçümü",
+    historical: "Önceki yıl referansı", protocol: "Değerlendirme koşulları", source: "Sonucun kaynağı", references: "İnceleme kaynakları", weights: "Yayımlanmış dosyalar", license: "Lisans",
+    gated: "Erişim koşulları geçerli", public: "Herkese açık sürüm", all: "Tüm kanıt durumları", filter: "Görevleri benchmark kanıtına göre filtrele", search: "Görev ara", placeholder: "Görev adı…",
+    reviewedTasks: "görev incelendi", comparisons: "karşılaştırmalı", singles: "tek sonuçlu", gaps: "karşılaştırılabilir puan yok", additional: "ek model sürümü",
+    method: "Karşılaştırmalar nasıl okunmalı?",
+    methodology: "Bunlar 2026-10-21 tarihinde kontrol edilmiş, seçili yayımlanmış sonuçlardır. İşaretlenen satır yalnızca kendi tablosunda öndedir; tüm modellerde veya görevin her kullanımında değil. Veri kümesi, ölçüt, model sürümü, eğitimde görülme durumu, çalıştırma düzeni ve çıkarım bütçesi birlikte değerlendirilmelidir. Farklı tablolar genel bir puanda birleştirilmez; eşitlikler korunur ve küçük farklar raporlanmamış belirsizlik içinde kalabilir.",
+    notRun: "Bu incelemede modeller yerel olarak çalıştırılmadı. Kaynağın yeni kontrol edilmesi eski benchmark’ı güncel yapmaz. Eksik puan, doğrulanmış karşılaştırılabilir kanıt eksikliğidir; sıfır performans veya yetenekli model bulunmadığı anlamına gelmez.",
+  },
+} as const;
+
 export const taskModelLabels = {
   en: {
     cardAction: "view models and sources",

@@ -5,7 +5,9 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { TaxonomyExplorer } from "@/components/taxonomy/taxonomy-explorer";
 import { taxonomyMaps } from "@/data/taxonomy";
-import { taxonomySources, taskModelSources, modelFamilySources } from "@/data/sources";
+import { taxonomySources, taskModelSources, modelFamilySources, benchmarkSources } from "@/data/sources";
+import { benchmarkCandidates, taskBenchmarks, taskBenchmarkReviews } from "@/data/task-benchmarks";
+import { validateTaskBenchmarks } from "@/lib/task-benchmarks";
 import { taxonomyTasks, openWeightModels } from "@/data/task-models";
 import { modelFamilies } from "@/data/model-families";
 import type { TaxonomyMap } from "@/data/schema";
@@ -19,6 +21,7 @@ export async function TaxonomyPage({ id }: { id: TaxonomyMap["id"] }) {
   const svg = await readFile(path.join(process.cwd(), "public", map.assetPath), "utf8");
   validateTaxonomyMap(map, svg, taxonomySources);
   if (id === "tasks") validateTaskModels(taxonomyTasks, openWeightModels, taskModelSources, taxonomySources, svg);
+  if (id === "tasks") validateTaskBenchmarks(taskBenchmarkReviews, taskBenchmarks, benchmarkCandidates, benchmarkSources, taxonomyTasks, openWeightModels, taskModelSources);
   const modelSources = id === "models" ? [...taskModelSources, ...modelFamilySources] : taskModelSources;
   if (id === "models") validateModelFamilies(modelFamilies, openWeightModels, taxonomyTasks, modelSources, taxonomySources, svg);
   const sources = taxonomySources.filter((source) => map.sourceIds.includes(source.id));
