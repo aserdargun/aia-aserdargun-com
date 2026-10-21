@@ -12,9 +12,7 @@ import { linkTaskCards, taskModelHref } from "@/lib/task-models";
 import { TaskModelPanel } from "@/components/taxonomy/task-model-panel";
 import { linkModelFamilyCards, modelFamilyHref } from "@/lib/model-families";
 import { ModelFamilyPanel } from "@/components/taxonomy/model-family-panel";
-
-const MIN_SCALE = 0.05;
-const MAX_SCALE = 2;
+import { MAX_SCALE, MIN_SCALE, useTaxonomyNavigation } from "@/components/taxonomy/use-taxonomy-navigation";
 
 export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSources, families }: {
   map: TaxonomyMap; svg: string; sources: TaxonomySource[];
@@ -43,15 +41,11 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
       task.name.toLocaleLowerCase("en").includes(taskQuery.trim().toLocaleLowerCase("en"))));
   const axes = [...new Set(families.map((family) => family.axis))];
   const viewer = useRef<HTMLElement>(null);
-  const viewport = useRef<HTMLDivElement>(null);
+  const { viewport, zoom, scale, setScale, fitWidth, focusSelected, panHandlers } = useTaxonomyNavigation(map.width, selectedTask?.id ?? selectedFamily?.id ?? null);
   const sourceList = useRef<HTMLDetailsElement>(null);
   const guide = useRef<HTMLDetailsElement>(null);
-  const pendingScroll = useRef<{ x: number; y: number } | null>(null);
-  const [viewportWidth, setViewportWidth] = useState(0);
-  const [zoom, setZoom] = useState<number | null>(null);
   const [fullscreen, setFullscreen] = useState(false);
   const [fullscreenError, setFullscreenError] = useState(false);
-  const scale = zoom ?? (viewportWidth ? viewportWidth / map.width : 1);
 
   useEffect(() => {
     if (selectedTask || selectedFamily) {
@@ -83,8 +77,6 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
   useEffect(() => {
     const element = viewport.current;
     if (!element) return;
-    const observer = new ResizeObserver(() => setViewportWidth(element.clientWidth));
-    observer.observe(element);
     const onFullscreen = () => setFullscreen(document.fullscreenElement === viewer.current);
     document.addEventListener("fullscreenchange", onFullscreen);
     const closeGuide = (event: PointerEvent) => {
@@ -100,40 +92,20 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
       element.querySelector(`#${hash}`)?.scrollIntoView({ block: "start", inline: "nearest" });
     }
     return () => {
-      observer.disconnect();
       document.removeEventListener("fullscreenchange", onFullscreen);
       document.removeEventListener("pointerdown", closeGuide);
     };
-  }, []);
-
-  useEffect(() => {
-    const next = pendingScroll.current;
-    if (next && viewport.current) {
-      viewport.current.scrollTo({ left: next.x, top: next.y, behavior: "instant" });
-      pendingScroll.current = null;
-    }
-  }, [zoom]);
-
-  function setScale(value: number) {
-    const next = Math.max(MIN_SCALE, Math.min(MAX_SCALE, value));
-    const element = viewport.current;
-    if (element) {
-      pendingScroll.current = {
-        x: (element.scrollLeft + element.clientWidth / 2) * next / scale - element.clientWidth / 2,
-        y: (element.scrollTop + element.clientHeight / 2) * next / scale - element.clientHeight / 2,
-      };
-    }
-    setZoom(next);
-  }
-
-  function fitWidth() {
-    pendingScroll.current = { x: 0, y: 0 };
-    viewport.current?.scrollTo({ left: 0, top: 0, behavior: "instant" });
-    setZoom(null);
-  }
+  }, [viewport]);
 
   function changeLocale(next: ModelLocale) {
     window.history.pushState(null, "", selectionHref(taskId ?? familyId, next, window.location.hash));
+  }
+
+  function showSelectedCard() {
+    focusSelected();
+    if (window.matchMedia("(max-width: 900px)").matches) {
+      viewport.current?.scrollIntoView({ block: "center", behavior: "instant" });
+    }
   }
 
   async function openSources(event?: { preventDefault(): void }) {
@@ -209,6 +181,7 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
             <button type="button" aria-label={labels.zoomIn} title={labels.zoomIn} onClick={() => setScale(scale * 1.3)} disabled={scale >= MAX_SCALE}>+</button>
             <button type="button" onClick={fitWidth}>{labels.fit}</button>
             <button type="button" onClick={() => setScale(1)}>{labels.actual}</button>
+            <button type="button" onClick={showSelectedCard} disabled={!selectedTask && !selectedFamily}>{labels.focusSelected}</button>
           </div>
           <div className="taxonomy-actions">
             <button type="button" onClick={toggleFullscreen}>{fullscreen ? labels.exitFullscreen : labels.fullscreen}</button>
@@ -238,7 +211,7 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
         </div>
         {fullscreenError ? <p role="status" className="taxonomy-hint">{labels.fullscreenError}</p> : null}
         <div className={`taxonomy-workspace${selectedTask || selectedFamily ? " taxonomy-workspace--selected" : ""}`}>
-        <div ref={viewport} className="taxonomy-viewport" tabIndex={0} role="region" aria-label={labels.region} aria-describedby="taxonomy-map-hint">
+        <div ref={viewport} className="taxonomy-viewport" tabIndex={0} role="region" aria-label={labels.region} aria-describedby="taxonomy-map-hint" {...panHandlers}>
           <div
             className="taxonomy-canvas"
             lang="en"
