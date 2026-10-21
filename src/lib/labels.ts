@@ -136,6 +136,41 @@ export const taxonomyLabels = {
   },
 } as const;
 
+export const modelFamilyLabels = {
+  en: {
+    cardAction: "view open-weight models, tasks and sources",
+    title: "Explore models by family", select: "Select a model family or concept", placeholder: "Choose a family from the map or this list",
+    coverage: "concepts with model examples", modelCount: "shared models",
+    method: "How family membership is documented",
+    methodology: "These examples use the same open-weight catalogue as the task map. Architecture, training method and modality are separate, overlapping properties. Each membership cites its own evidence; a taxonomy definition alone does not establish that a model belongs to a family. Missing entries describe catalogue gaps, not the absence of models in the field.",
+    evidenceHelp: "Documented membership describes the model. Component identifies a part of a larger model or pipeline; the tasks belong to the complete checkpoint. Adaptation support records a documented customization path, not the checkpoint’s original training history. Task evidence retains its evaluated, documented or adaptation-required status.",
+    hint: "Click a family or concept to inspect models, task support and evidence. The task-family column still opens the companion map. Definition sources remain in the panel and original SVG.",
+    panel: "Family, models and tasks", close: "Close family panel", definition: "Concept definition source",
+    empty: "No verified model mapping in this catalogue", invalid: "This family identifier is not in the catalogue. Select a family from the list.",
+    count: "model examples", tasks: "Tasks in the shared catalogue", taskEvidence: "Task evidence and scope",
+    why: "Why it belongs here", sources: "Family membership sources", member: "Documented membership", component: "Component of the model", compatible: "Adaptation support",
+    taskScope: "Task support is checkpoint-specific. An adaptation label requires extra training or a pipeline; family membership alone does not guarantee a task.",
+    search: "Filter this family", searchPlaceholder: "Model or task name…", noMatches: "No models match this search.",
+    axes: { "model-families": "Model families", "neural-architectures": "Neural architectures", "learning-paradigms": "Learning paradigms", "generative-formulations": "Generative formulations", "modalities-data": "Modalities and data", "training-adaptation": "Training and adaptation" },
+  },
+  tr: {
+    cardAction: "açık ağırlıklı modelleri, görevleri ve kaynakları görüntüle",
+    title: "Aileye göre modelleri keşfet", select: "Model ailesi veya kavram seç", placeholder: "Haritadan veya bu listeden bir aile seç",
+    coverage: "kavramda model örneği", modelCount: "ortak model",
+    method: "Aile üyeliği nasıl belgeleniyor?",
+    methodology: "Bu örnekler görev haritasıyla aynı açık ağırlık kataloğunu kullanır. Mimari, eğitim yöntemi ve veri türü ayrı ve örtüşebilen özelliklerdir. Her üyelik kendi kanıtına dayanır; bir taksonomi tanımı tek başına modelin aileye ait olduğunu kanıtlamaz. Eksik kayıtlar, alanda model bulunmadığını değil katalog kapsamını açıklar.",
+    evidenceHelp: "Belgelenmiş üyelik modeli tanımlar. Bileşen, daha büyük modelin veya işlem hattının bir parçasını belirtir; görevler ağırlıkların tamamına aittir. Uyarlama desteği, ağırlıkların özgün eğitim geçmişini değil belgelenmiş özelleştirme yolunu gösterir. Görev kanıtları değerlendirme, belgelenmiş destek veya uyarlama gerekiyor durumlarını korur.",
+    hint: "Modelleri, görev desteğini ve kanıtları görmek için bir aileye veya kavrama tıkla. Görev ailesi sütunu eşlik eden haritayı açar. Tanım kaynakları panelde ve özgün SVG içinde bulunur.",
+    panel: "Aile, modeller ve görevler", close: "Aile panelini kapat", definition: "Kavram tanımının kaynağı",
+    empty: "Bu katalogda doğrulanmış model eşleştirmesi yok", invalid: "Bu aile kimliği katalogda bulunmuyor. Listeden bir aile seç.",
+    count: "model örneği", tasks: "Ortak katalogdaki görevler", taskEvidence: "Görev kanıtı ve kapsamı",
+    why: "Bu gruba neden dahil?", sources: "Aile üyeliğinin kaynakları", member: "Belgelenmiş üyelik", component: "Modelin bir bileşeni", compatible: "Uyarlama desteği",
+    taskScope: "Görev desteği ağırlık sürümüne özeldir. Uyarlama etiketi ek eğitim veya işlem hattı gerektirir; aile üyeliği tek başına görevi garanti etmez.",
+    search: "Bu ailede filtrele", searchPlaceholder: "Model veya görev adı…", noMatches: "Bu aramayla eşleşen model yok.",
+    axes: { "model-families": "Model aileleri", "neural-architectures": "Sinir ağı mimarileri", "learning-paradigms": "Öğrenme paradigmaları", "generative-formulations": "Üretim yaklaşımları", "modalities-data": "Veri türleri", "training-adaptation": "Eğitim ve uyarlama" },
+  },
+} as const;
+
 export const taskModelLabels = {
   en: {
     cardAction: "view models and sources",

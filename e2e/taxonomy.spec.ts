@@ -12,7 +12,8 @@ for (const width of [1440, 390]) {
       await page.goto(`/taxonomy/${map.id}`);
       await expect(page).toHaveTitle(`AI ${map.id === "models" ? "model" : "task"} taxonomy | AI Ecosystem Atlas`);
       await expect(page.locator(".taxonomy-canvas svg")).toBeVisible();
-      await expect(page.locator('.taxonomy-canvas a[href^="https://"]')).toHaveCount(map.id === "models" ? 53 : 0);
+      await expect(page.locator('.taxonomy-canvas a[href^="https://"]')).toHaveCount(map.id === "models" ? 3 : 0);
+      if (map.id === "models") await expect(page.locator('.taxonomy-canvas a[data-family-id]')).toHaveCount(50);
       if (map.id === "tasks") await expect(page.locator('.taxonomy-canvas a[data-task-id]')).toHaveCount(85);
       await page.getByRole("button", { name: "100%", exact: true }).click();
       await expect(page.getByRole("status", { name: "Zoom level" })).toHaveText("100%");

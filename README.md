@@ -59,6 +59,20 @@ Selection distinguishes shortlist candidates from historical specialist referenc
 
 Seçim; kısa liste adaylarını tarihsel uzman referanslarından, değerlendirme kanıtını belgelenmiş destek ve önerilen uyarlamadan ayırır. Veri kümesi sürümleri, örnekleme bütçeleri ve ajan çatıları kontrol edilmeden yayıncı puanları karşılaştırılamaz. Özellikle temel CodeT5 ağırlıkları göreve özel ince ayar gerektirir; Boltz-2 afinitesi dar bir moleküler özellik alt görevidir; ASR dil kapsamı TTS kapsamını kanıtlamaz; GUI sonuçları yürütme ortamını içerir. Koşullu erişim ve ticari olmayan/özel ağırlık lisansları görünürdür. Uygulama ağırlık indirmez, çıkarım veya bağımsız model değerlendirmesi çalıştırmaz.
 
+### Open-weight models by family / Aileye göre açık ağırlıklı modeller
+
+The 50 concept cards on `/taxonomy/models` open a family inspector with models, checkpoint files, licenses, membership sources and task links. The grouped selector, family search, keyboard interaction and full-screen view work on desktop and mobile. `?family=transformers&lang=tr` preserves the selection and language in reloads and browser history. The original SVG and the companion task-family links remain intact.
+
+`/taxonomy/models` üzerindeki 50 kavram kartı; modelleri, ağırlık dosyalarını, lisansları, üyelik kaynaklarını ve görev bağlantılarını içeren aile panelini açar. Gruplanmış seçici, aile içi arama, klavye etkileşimi ve tam ekran görünümü masaüstünde ve mobilde çalışır. `?family=transformers&lang=tr`, seçimi ve dili yenilemede ve tarayıcı geçmişinde korur. Özgün SVG ve eşlik eden görev ailesi bağlantıları korunur.
+
+The family catalogue reuses the same 50 models and derives task support from the canonical task relationships. `src/data/model-families.ts` records 273 non-exclusive memberships across 30 concepts; the other 20 explain their coverage gaps. `modelFamilySources` in `src/data/sources.ts` adds 35 architecture configurations and author reports to the existing evidence. Schema version 1 validates exact SVG concept coverage, definitions, memberships and source references. These examples are not an exhaustive family inventory or a performance ranking.
+
+Aile kataloğu aynı 50 modeli kullanır ve görev desteğini kanonik görev ilişkilerinden türetir. `src/data/model-families.ts`, 30 kavram altında birbirini dışlamayan 273 üyelik kaydeder; diğer 20 kavram kapsam eksikliklerini açıklar. `src/data/sources.ts` içindeki `modelFamilySources`, mevcut kanıtlara 35 mimari yapılandırması ve yazar raporu ekler. Şema sürümü 1, SVG kavramlarının eksiksiz kapsamını, tanımları, üyelikleri ve kaynak başvurularını doğrular. Örnekler eksiksiz aile envanteri veya performans sıralaması değildir.
+
+Architecture, training, modality and capability remain separate properties. Component memberships are labelled: a VAE inside a video generator does not support all of the generator's tasks on its own. Causal embedding backbones are not labelled encoder-only; dense Wan2.2 TI2V-5B is not labelled MoE; reinforcement learning does not automatically imply RLHF. Task links preserve evaluated/documented/adaptation evidence, including CodeT5's need for task-specific tuning. Models were not executed to establish these memberships.
+
+Mimari, eğitim, veri türü ve yetenek ayrı özellikler olarak korunur. Bileşen üyelikleri etiketlidir: video üreticisinin içindeki VAE, üreticinin tüm görevlerini tek başına desteklemez. Nedensel vektör omurgaları yalnız kodlayıcı olarak; yoğun Wan2.2 TI2V-5B, MoE olarak etiketlenmez; pekiştirmeli öğrenme otomatik olarak RLHF sayılmaz. Görev bağlantıları CodeT5'in göreve özel ince ayar gereksinimi dahil değerlendirme/belgelenmiş destek/uyarlama kanıtlarını korur. Bu üyelikleri belirlemek için modeller çalıştırılmadı.
+
 ### Category taxonomy
 
 The canonical display order is enforced during validation:

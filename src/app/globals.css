@@ -3368,9 +3368,9 @@ a {
 .task-model-method p { margin-top: 10px; max-width: 1000px; }
 .taxonomy-workspace { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 0; }
 .taxonomy-workspace--selected { grid-template-columns: minmax(0, 1fr) 400px; }
-.taxonomy-canvas a[data-task-id] { cursor: pointer; }
-.taxonomy-canvas a[data-task-id][aria-current="true"] .leaf { stroke: #9a441f; stroke-width: 5; fill: #fff5e7; }
-.taxonomy-canvas a[data-task-id]:focus-visible .leaf { stroke: #172b4d; stroke-width: 6; }
+.taxonomy-canvas a[data-task-id], .taxonomy-canvas a[data-family-id] { cursor: pointer; }
+.taxonomy-canvas a[aria-current="true"] .leaf { stroke: #9a441f; stroke-width: 5; fill: #fff5e7; }
+.taxonomy-canvas a:focus-visible .leaf { stroke: #172b4d; stroke-width: 6; }
 .task-model-panel { min-width: 0; max-height: clamp(360px, 68vh, 860px); overflow-y: auto; overscroll-behavior: contain; padding: 20px; border-top: 1px solid var(--atlas-border); border-left: 1px solid var(--atlas-border); background: var(--atlas-surface); scroll-margin-top: 20px; }
 .task-model-panel:focus-visible { outline-offset: -3px; }
 .task-model-panel__heading { display: flex; align-items: start; justify-content: space-between; gap: 12px; }
@@ -3401,6 +3401,14 @@ a {
 .task-model-evidence li { margin-top: 8px; overflow-wrap: anywhere; }
 .task-model-evidence small { display: block; margin-top: 4px; color: var(--atlas-ink-muted); }
 .task-model-empty { padding: 14px; border-left: 3px solid var(--atlas-border-strong); font-size: 0.875rem; font-weight: 500; }
+.task-model-badges [data-relation="component"] { color: #6c4216; background: #fff0d4; }
+.model-family-search { display: grid; gap: 6px; margin-block: 14px; font-size: 0.75rem; font-weight: 600; }
+.model-family-search input { width: 100%; min-width: 0; min-height: 44px; padding: 9px; border: 1px solid var(--atlas-border-strong); border-radius: var(--atlas-radius-sm); background: var(--atlas-surface); color: var(--atlas-ink); font: inherit; }
+.model-family-tasks { list-style: none; margin: 0; padding: 0; }
+.model-family-tasks > li { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--atlas-border); }
+.model-family-tasks > li > a { display: inline-block; padding-block: 6px; font-size: 0.8125rem; line-height: 1.5; overflow-wrap: anywhere; }
+.model-family-tasks .task-model-evidence { margin-top: 8px; }
+.model-family-tasks .task-model-evidence p { margin-top: 8px; }
 .taxonomy-viewer:fullscreen .taxonomy-workspace { flex: 1; overflow: hidden; }
 .taxonomy-viewer:fullscreen .task-model-panel { max-height: none; }
 @media (max-width: 1050px) {

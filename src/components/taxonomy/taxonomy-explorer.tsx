@@ -3,31 +3,37 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { TaxonomyMap, TaxonomySource, TaxonomyTask, OpenWeightModel, TaskModelSource } from "@/data/schema";
-import { taxonomyLabels, taskModelLabels, type ModelLocale } from "@/lib/labels";
+import type { TaxonomyMap, TaxonomySource, TaxonomyTask, OpenWeightModel, TaskModelSource, ModelFamily } from "@/data/schema";
+import { taxonomyLabels, taskModelLabels, modelFamilyLabels, type ModelLocale } from "@/lib/labels";
 import { prepareTaxonomySvg, taxonomyHref } from "@/lib/taxonomy";
 import { linkTaskCards, taskModelHref } from "@/lib/task-models";
 import { TaskModelPanel } from "@/components/taxonomy/task-model-panel";
+import { linkModelFamilyCards, modelFamilyHref } from "@/lib/model-families";
+import { ModelFamilyPanel } from "@/components/taxonomy/model-family-panel";
 
 const MIN_SCALE = 0.05;
 const MAX_SCALE = 2;
 
-export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSources }: {
+export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSources, families }: {
   map: TaxonomyMap; svg: string; sources: TaxonomySource[];
-  tasks: TaxonomyTask[]; models: OpenWeightModel[]; modelSources: TaskModelSource[];
+  tasks: TaxonomyTask[]; models: OpenWeightModel[]; modelSources: TaskModelSource[]; families: ModelFamily[];
 }) {
   const params = useSearchParams();
   const locale: ModelLocale = params.get("lang") === "tr" ? "tr" : "en";
   const labels = taxonomyLabels[locale];
   const content = labels[map.id];
   const modelLabels = taskModelLabels[locale];
+  const familyLabels = modelFamilyLabels[locale];
   const taskId = map.id === "tasks" ? params.get("task") : null;
+  const familyId = map.id === "models" ? params.get("family") : null;
   const selectedTask = tasks.find((task) => task.id === taskId);
+  const selectedFamily = families.find((family) => family.id === familyId);
   const preparedSvg = useMemo(() => {
     const prepared = prepareTaxonomySvg(svg, locale);
-    return tasks.length ? linkTaskCards(prepared, tasks, locale, taskId) : prepared;
-  }, [svg, locale, tasks, taskId]);
-  const families = [...new Set(tasks.map((task) => task.family))];
+    return map.id === "tasks" ? linkTaskCards(prepared, tasks, locale, taskId) : linkModelFamilyCards(prepared, families, locale, familyId);
+  }, [svg, locale, map.id, tasks, taskId, families, familyId]);
+  const taskGroups = [...new Set(tasks.map((task) => task.family))];
+  const axes = [...new Set(families.map((family) => family.axis))];
   const viewer = useRef<HTMLElement>(null);
   const viewport = useRef<HTMLDivElement>(null);
   const sourceList = useRef<HTMLDetailsElement>(null);
@@ -39,23 +45,27 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
   const scale = zoom ?? (viewportWidth ? viewportWidth / map.width : 1);
 
   useEffect(() => {
-    if (selectedTask) {
-      const panel = document.getElementById("task-model-panel");
+    if (selectedTask || selectedFamily) {
+      const panel = document.getElementById(selectedTask ? "task-model-panel" : "model-family-panel");
       panel?.focus({ preventScroll: true });
       panel?.scrollIntoView({ block: "nearest", inline: "nearest" });
       if (panel) panel.scrollTop = 0;
     }
-  }, [selectedTask]);
+  }, [selectedTask, selectedFamily]);
 
-  function selectTask(id: string | null) {
-    window.history.pushState(null, "", taskModelHref(id, locale));
+  function selectionHref(id: string | null, language = locale, hash = "") {
+    return map.id === "tasks" ? taskModelHref(id, language, hash) : modelFamilyHref(id, language, hash);
   }
 
-  function closeTask() {
-    const previous = selectedTask?.id;
-    selectTask(null);
+  function selectEntry(id: string | null) {
+    window.history.pushState(null, "", selectionHref(id));
+  }
+
+  function closePanel() {
+    const previous = selectedTask?.id ?? selectedFamily?.id;
+    selectEntry(null);
     requestAnimationFrame(() => {
-      viewport.current?.querySelector<SVGAElement>(`a[data-task-id="${previous}"]`)?.focus();
+      viewport.current?.querySelector<SVGAElement>(`a[data-${map.id === "tasks" ? "task" : "family"}-id="${previous}"]`)?.focus();
     });
   }
 
@@ -107,7 +117,7 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
   }
 
   function changeLocale(next: ModelLocale) {
-    window.history.pushState(null, "", map.id === "tasks" ? taskModelHref(taskId, next, window.location.hash) : `${taxonomyHref(map.id, next)}${window.location.hash}`);
+    window.history.pushState(null, "", selectionHref(taskId ?? familyId, next, window.location.hash));
   }
 
   async function openSources(event?: { preventDefault(): void }) {
@@ -115,7 +125,7 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
     if (document.fullscreenElement === viewer.current) await document.exitFullscreen();
     if (sourceList.current) sourceList.current.open = true;
     sourceList.current?.scrollIntoView({ block: "start" });
-    window.history.replaceState(null, "", map.id === "tasks" ? taskModelHref(taskId, locale, "#taxonomy-sources") : `${taxonomyHref(map.id, locale)}#taxonomy-sources`);
+    window.history.replaceState(null, "", selectionHref(taskId ?? familyId, locale, "#taxonomy-sources"));
   }
 
   async function toggleFullscreen() {
@@ -156,17 +166,27 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
       </div>
 
       <section ref={viewer} className="taxonomy-viewer" aria-label={map.title}>
-        {tasks.length ? <div className="task-model-finder">
+        {map.id === "tasks" ? <div className="task-model-finder">
           <div><h2>{modelLabels.title}</h2><p>{tasks.filter((task) => task.recommendations.length).length}/{tasks.length} {modelLabels.coverage} · {models.length} {modelLabels.modelCount}</p></div>
           <label htmlFor="taxonomy-task-select">{modelLabels.select}
-            <select id="taxonomy-task-select" value={selectedTask?.id ?? ""} onChange={(event) => selectTask(event.target.value || null)}>
+            <select id="taxonomy-task-select" value={selectedTask?.id ?? ""} onChange={(event) => selectEntry(event.target.value || null)}>
               <option value="">{modelLabels.placeholder}</option>
-              {families.map((family) => <optgroup key={family} label={family}>{tasks.filter((task) => task.family === family).map((task) => <option value={task.id} key={task.id}>{task.name}</option>)}</optgroup>)}
+              {taskGroups.map((family) => <optgroup key={family} label={family}>{tasks.filter((task) => task.family === family).map((task) => <option value={task.id} key={task.id}>{task.name}</option>)}</optgroup>)}
             </select>
           </label>
           <details className="task-model-method"><summary>{modelLabels.method}</summary><p>{modelLabels.methodology}</p><p>{modelLabels.evidenceHelp}</p></details>
           {taskId && !selectedTask ? <p role="status">{modelLabels.invalid}</p> : null}
-        </div> : null}
+        </div> : <div className="task-model-finder">
+          <div><h2>{familyLabels.title}</h2><p>{families.filter((family) => family.models.length).length}/{families.length} {familyLabels.coverage} · {models.length} {familyLabels.modelCount}</p></div>
+          <label htmlFor="taxonomy-family-select">{familyLabels.select}
+            <select id="taxonomy-family-select" value={selectedFamily?.id ?? ""} onChange={(event) => selectEntry(event.target.value || null)}>
+              <option value="">{familyLabels.placeholder}</option>
+              {axes.map((axis) => <optgroup key={axis} label={familyLabels.axes[axis]}>{families.filter((family) => family.axis === axis).map((family) => <option value={family.id} key={family.id}>{family.name}</option>)}</optgroup>)}
+            </select>
+          </label>
+          <details className="task-model-method"><summary>{familyLabels.method}</summary><p>{familyLabels.methodology}</p><p>{familyLabels.evidenceHelp}</p></details>
+          {familyId && !selectedFamily ? <p role="status">{familyLabels.invalid}</p> : null}
+        </div>}
         <div className="taxonomy-toolbar" role="group" aria-label={labels.controls}>
           <div className="taxonomy-zoom">
             <button type="button" aria-label={labels.zoomOut} title={labels.zoomOut} onClick={() => setScale(scale / 1.3)} disabled={scale <= MIN_SCALE}>−</button>
@@ -182,9 +202,9 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
             {!fullscreen ? <a href="#taxonomy-sources" onClick={openSources}>{labels.sourcesLink}</a> : null}
           </div>
         </div>
-        <p id="taxonomy-map-hint" className="taxonomy-hint">{tasks.length ? modelLabels.hint : labels.hint}</p>
+        <p id="taxonomy-map-hint" className="taxonomy-hint">{map.id === "tasks" ? modelLabels.hint : familyLabels.hint}</p>
         {fullscreenError ? <p role="status" className="taxonomy-hint">{labels.fullscreenError}</p> : null}
-        <div className={`taxonomy-workspace${selectedTask ? " taxonomy-workspace--selected" : ""}`}>
+        <div className={`taxonomy-workspace${selectedTask || selectedFamily ? " taxonomy-workspace--selected" : ""}`}>
         <div ref={viewport} className="taxonomy-viewport" tabIndex={0} role="region" aria-label={labels.region} aria-describedby="taxonomy-map-hint">
           <div
             className="taxonomy-canvas"
@@ -192,16 +212,17 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
             style={{ width: zoom === null ? "100%" : map.width * zoom }}
             onClick={(event) => {
               const link = (event.target as Element).closest("a");
-              const id = link?.getAttribute("data-task-id");
+              const id = link?.getAttribute(map.id === "tasks" ? "data-task-id" : "data-family-id");
               if (id && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) {
                 event.preventDefault();
-                selectTask(id);
+                selectEntry(id);
               } else if (link?.getAttribute("href") === "#taxonomy-sources") void openSources(event);
             }}
             dangerouslySetInnerHTML={{ __html: preparedSvg }}
           />
         </div>
-        {selectedTask ? <TaskModelPanel task={selectedTask} models={models} sources={modelSources} definitions={sources} locale={locale} onClose={closeTask} /> : null}
+        {selectedTask ? <TaskModelPanel task={selectedTask} models={models} sources={modelSources} definitions={sources} locale={locale} onClose={closePanel} /> : null}
+        {selectedFamily ? <ModelFamilyPanel key={selectedFamily.id} family={selectedFamily} models={models} tasks={tasks} sources={modelSources} definitions={sources} locale={locale} onClose={closePanel} /> : null}
         </div>
       </section>
 

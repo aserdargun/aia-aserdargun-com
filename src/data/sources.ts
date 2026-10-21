@@ -2403,3 +2403,320 @@ export const taskModelSources = [
     "revision": "4236a6af538feda4548eca9ab308586007567f52"
   }
 ] satisfies TaskModelSource[];
+
+/** Additional architecture observations for the model-family explorer. */
+export const modelFamilySources = [
+  {
+    "id": "ow-family-stanza-paper",
+    "title": "Stanza — neural pipeline architecture",
+    "publisher": "Stanford NLP",
+    "url": "https://arxiv.org/html/2003.07082v2",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-family-qwen-image-paper",
+    "title": "Qwen-Image — model architecture and training",
+    "publisher": "Qwen",
+    "url": "https://arxiv.org/html/2508.02324v1",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-family-gliner2-config",
+    "title": "GLiNER2 large v1 — architecture configuration",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/gliner2-large-v1/blob/d7aa8a2850d175a9227ff80358ea380723d03ad2/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "d7aa8a2850d175a9227ff80358ea380723d03ad2"
+  },
+  {
+    "id": "ow-family-nli-config",
+    "title": "DeBERTa v3 large NLI — architecture configuration",
+    "publisher": "cross-encoder",
+    "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-large/blob/bab4bc7178836f731dcfd18c06ca9def0a137712/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "bab4bc7178836f731dcfd18c06ca9def0a137712"
+  },
+  {
+    "id": "ow-family-coref-config",
+    "title": "F-Coref — architecture configuration",
+    "publisher": "biu-nlp",
+    "url": "https://huggingface.co/biu-nlp/f-coref/blob/e91dfff12879495d882ba9460d0c5d5dd44ade59/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "e91dfff12879495d882ba9460d0c5d5dd44ade59"
+  },
+  {
+    "id": "ow-family-nllb-config",
+    "title": "NLLB-200 distilled 600M — architecture configuration",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/nllb-200-distilled-600M/blob/f8d333a098d19b4fd9a8b18f94170487ad3f821d/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d"
+  },
+  {
+    "id": "ow-family-coedit-config",
+    "title": "CoEdIT large — architecture configuration",
+    "publisher": "grammarly",
+    "url": "https://huggingface.co/grammarly/coedit-large/blob/5637bcdf9d8d4419f97c8cfea36f7d35c79232b6/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "5637bcdf9d8d4419f97c8cfea36f7d35c79232b6"
+  },
+  {
+    "id": "ow-family-embedding-config",
+    "title": "Qwen3-Embedding-8B — architecture configuration",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-Embedding-8B/blob/1d8ad4ca9b3dd8059ad90a75d4983776a23d44af/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "1d8ad4ca9b3dd8059ad90a75d4983776a23d44af"
+  },
+  {
+    "id": "ow-family-reranker-config",
+    "title": "Qwen3-Reranker-8B — architecture configuration",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-Reranker-8B/blob/77d193c791ed757ca307ee72715aa132723da912/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "77d193c791ed757ca307ee72715aa132723da912"
+  },
+  {
+    "id": "ow-family-siglip-config",
+    "title": "SigLIP 2 SO400M — architecture configuration",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/siglip2-so400m-patch14-384/blob/e8e487298228002f3d8a82e0cd5c8ea9c567f57f/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "e8e487298228002f3d8a82e0cd5c8ea9c567f57f"
+  },
+  {
+    "id": "ow-family-dino-config",
+    "title": "Grounding DINO base — architecture configuration",
+    "publisher": "IDEA-Research",
+    "url": "https://huggingface.co/IDEA-Research/grounding-dino-base/blob/12bdfa3120f3e7ec7b434d90674b3396eccf88eb/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "12bdfa3120f3e7ec7b434d90674b3396eccf88eb"
+  },
+  {
+    "id": "ow-family-mask2former-config",
+    "title": "Mask2Former Swin large · ADE20K — architecture configuration",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/mask2former-swin-large-ade-semantic/blob/aa25c92404a40599614215e76514c79b427c7527/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "aa25c92404a40599614215e76514c79b427c7527"
+  },
+  {
+    "id": "ow-family-depth-config",
+    "title": "Depth Anything 3 large — architecture configuration",
+    "publisher": "depth-anything",
+    "url": "https://huggingface.co/depth-anything/DA3-LARGE/blob/c54c26b16ec04d218e8d584ecf4bce082a9fcc20/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "c54c26b16ec04d218e8d584ecf4bce082a9fcc20"
+  },
+  {
+    "id": "ow-family-pose-config",
+    "title": "ViTPose+ huge — architecture configuration",
+    "publisher": "usyd-community",
+    "url": "https://huggingface.co/usyd-community/vitpose-plus-huge/blob/9f36d7aec1800d23e97f10c2e74393aee92aa53f/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "9f36d7aec1800d23e97f10c2e74393aee92aa53f"
+  },
+  {
+    "id": "ow-family-videomae-config",
+    "title": "VideoMAE large · Kinetics-400 — architecture configuration",
+    "publisher": "MCG-NJU",
+    "url": "https://huggingface.co/MCG-NJU/videomae-large-finetuned-kinetics/blob/0f6adcd5f6902900aa0281f9daacfe52bb3c4ad4/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "0f6adcd5f6902900aa0281f9daacfe52bb3c4ad4"
+  },
+  {
+    "id": "ow-family-ocr-config",
+    "title": "PaddleOCR-VL-1.6 — architecture configuration",
+    "publisher": "PaddlePaddle",
+    "url": "https://huggingface.co/PaddlePaddle/PaddleOCR-VL-1.6/blob/c5630abae1d940eafe0697512a0325494b02ab42/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "c5630abae1d940eafe0697512a0325494b02ab42"
+  },
+  {
+    "id": "ow-family-seamless-config",
+    "title": "SeamlessM4T v2 large — architecture configuration",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/seamless-m4t-v2-large/blob/5f8cc790b19fc3f67a61c105133b20b34e3dcb76/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "5f8cc790b19fc3f67a61c105133b20b34e3dcb76"
+  },
+  {
+    "id": "ow-family-keyword-config",
+    "title": "wav2vec 2.0 · SUPERB KS — architecture configuration",
+    "publisher": "superb",
+    "url": "https://huggingface.co/superb/wav2vec2-base-superb-ks/blob/372e0486cd83e6f0c05c20a27262e9ca09450d24/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "372e0486cd83e6f0c05c20a27262e9ca09450d24"
+  },
+  {
+    "id": "ow-family-emotion-config",
+    "title": "HuBERT large · SUPERB ER — architecture configuration",
+    "publisher": "superb",
+    "url": "https://huggingface.co/superb/hubert-large-superb-er/blob/ef1a2ebfd7cfc424dc7f0fbcdc406e8b794d63bb/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "ef1a2ebfd7cfc424dc7f0fbcdc406e8b794d63bb"
+  },
+  {
+    "id": "ow-family-ast-config",
+    "title": "Audio Spectrogram Transformer — architecture configuration",
+    "publisher": "MIT",
+    "url": "https://huggingface.co/MIT/ast-finetuned-audioset-10-10-0.4593/blob/f826b80d28226b62986cc218e5cec390b1096902/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "f826b80d28226b62986cc218e5cec390b1096902"
+  },
+  {
+    "id": "ow-family-separation-config",
+    "title": "SepFormer · WHAMR! — architecture configuration",
+    "publisher": "speechbrain",
+    "url": "https://huggingface.co/speechbrain/sepformer-whamr/blob/9950fd8055b38679d2af5bef2366b5dba600ec66/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "9950fd8055b38679d2af5bef2366b5dba600ec66"
+  },
+  {
+    "id": "ow-family-musicgen-config",
+    "title": "MusicGen large — architecture configuration",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/musicgen-large/blob/15ccdc92099879e47b6da12c350cdb71d4eab3ca/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "15ccdc92099879e47b6da12c350cdb71d4eab3ca"
+  },
+  {
+    "id": "ow-family-sql-config",
+    "title": "SQLCoder 70B alpha — architecture configuration",
+    "publisher": "defog",
+    "url": "https://huggingface.co/defog/sqlcoder-70b-alpha/blob/8095a5ded3d3ed70fe27e9ed46b91f3e29a1b51a/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "8095a5ded3d3ed70fe27e9ed46b91f3e29a1b51a"
+  },
+  {
+    "id": "ow-family-codet5-config",
+    "title": "CodeT5 base — architecture configuration",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5-base/blob/02cd2d31bb7c6d0e4d91156167b2de044989c733/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "02cd2d31bb7c6d0e4d91156167b2de044989c733"
+  },
+  {
+    "id": "ow-family-codet5plus-config",
+    "title": "CodeT5+ 770M — architecture configuration",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5p-770m/blob/3f7cc6e80aee6612f41253b5ee28f09f86faa35f/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "3f7cc6e80aee6612f41253b5ee28f09f86faa35f"
+  },
+  {
+    "id": "ow-family-bart-config",
+    "title": "BART large · CNN/DailyMail — architecture configuration",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/bart-large-cnn/blob/37f520fa929c961707657b28798b30c003dd100b/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "37f520fa929c961707657b28798b30c003dd100b"
+  },
+  {
+    "id": "ow-family-tabpfn-config",
+    "title": "TabPFN 3.5 — architecture configuration",
+    "publisher": "Prior-Labs",
+    "url": "https://huggingface.co/Prior-Labs/tabpfn_3_5/blob/06bf2ba35c80a92a3b9abb436b99cf49e7a0365e/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "06bf2ba35c80a92a3b9abb436b99cf49e7a0365e"
+  },
+  {
+    "id": "ow-family-chronos-config",
+    "title": "Chronos-2 — architecture configuration",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/chronos-2/blob/29ec3766d36d6f73f0696f85560a422f50e8498c/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "29ec3766d36d6f73f0696f85560a422f50e8498c"
+  },
+  {
+    "id": "ow-family-prover-config",
+    "title": "DeepSeek-Prover-V2 671B — architecture configuration",
+    "publisher": "deepseek-ai",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-671B/blob/a51f899d0599838aa934b21b45b4c1ae7fbce2d3/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "a51f899d0599838aa934b21b45b4c1ae7fbce2d3"
+  },
+  {
+    "id": "ow-family-uitars-config",
+    "title": "UI-TARS 1.5 7B — architecture configuration",
+    "publisher": "ByteDance-Seed",
+    "url": "https://huggingface.co/ByteDance-Seed/UI-TARS-1.5-7B/blob/683d002dd99d8f95104d31e70391a39348857f4e/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "683d002dd99d8f95104d31e70391a39348857f4e"
+  },
+  {
+    "id": "ow-family-r1-config",
+    "title": "DeepSeek-R1-0528 — architecture configuration",
+    "publisher": "deepseek-ai",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528/blob/4236a6af538feda4548eca9ab308586007567f52/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "4236a6af538feda4548eca9ab308586007567f52"
+  },
+  {
+    "id": "ow-family-glm53-config",
+    "title": "GLM-5.3 — architecture configuration",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/GLM-5.3/blob/ba32f8c19c8738e2c57c71798c601d477a7bf844/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "ba32f8c19c8738e2c57c71798c601d477a7bf844"
+  },
+  {
+    "id": "ow-family-qwen38-config",
+    "title": "Qwen3.8-27B — architecture configuration",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0"
+  },
+  {
+    "id": "ow-family-coder-config",
+    "title": "Qwen3-Coder-Next — architecture configuration",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-Coder-Next/blob/a7fbcb5c0e12d62a448eaa0e260346bf5dcc0feb/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "a7fbcb5c0e12d62a448eaa0e260346bf5dcc0feb"
+  },
+  {
+    "id": "ow-family-deepseek41-config",
+    "title": "DeepSeek-V4.1-Flash-1017 — architecture configuration",
+    "publisher": "deepseek-ai",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/blob/1bae0e1088993b9b82de08f59de5be5a34e42170/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "1bae0e1088993b9b82de08f59de5be5a34e42170"
+  }
+] satisfies TaskModelSource[];

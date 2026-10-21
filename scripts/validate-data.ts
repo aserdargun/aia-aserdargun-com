@@ -1,7 +1,9 @@
 import { atlasDataset } from "../src/data/index";
 import { readFile } from "node:fs/promises";
 import { taxonomyMaps } from "../src/data/taxonomy";
-import { taxonomySources, taskModelSources } from "../src/data/sources";
+import { taxonomySources, taskModelSources, modelFamilySources } from "../src/data/sources";
+import { modelFamilies } from "../src/data/model-families";
+import { validateModelFamilies } from "../src/lib/model-families";
 import { taxonomyTasks, openWeightModels } from "../src/data/task-models";
 import { validateTaskModels } from "../src/lib/task-models";
 import { validateTaxonomyMap } from "../src/lib/taxonomy";
@@ -12,6 +14,8 @@ for (const map of taxonomyMaps) {
 console.log(`Taxonomy maps: ${taxonomyMaps.length}; scholarly references: ${taxonomySources.length}`);
 validateTaskModels(taxonomyTasks, openWeightModels, taskModelSources, taxonomySources, await readFile("public/assets/taxonomy/ai-task-taxonomy.svg", "utf8"));
 console.log(`Task catalogue: ${taxonomyTasks.length} tasks; ${openWeightModels.length} open-weight models; ${taskModelSources.length} primary observations`);
+validateModelFamilies(modelFamilies, openWeightModels, taxonomyTasks, [...taskModelSources, ...modelFamilySources], taxonomySources, await readFile("public/assets/taxonomy/ai-model-taxonomy.svg", "utf8"));
+console.log(`Model families: ${modelFamilies.length} concepts; ${modelFamilies.reduce((count, family) => count + family.models.length, 0)} memberships; ${modelFamilySources.length} additional primary observations`);
 
 const collections = [
   ["Vendors", atlasDataset.vendors.length],

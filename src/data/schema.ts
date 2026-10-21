@@ -3,7 +3,7 @@ import { z } from "zod";
 export const schemaVersions = {
   vendor: 1, category: 1, capability: 1, vendorEntry: 1,
   assessment: 1, model: 3, plan: 1, source: 2, taxonomyMap: 1, taxonomySource: 1,
-  taskModelSource: 1, openWeightModel: 1, taxonomyTask: 1,
+  taskModelSource: 1, openWeightModel: 1, taxonomyTask: 1, modelFamily: 1,
 } as const;
 
 // Ordered, editorial focus areas based on the model's cited evidence.
@@ -286,6 +286,23 @@ export const taxonomyTaskSchema = z.object({
 export type TaskModelSource = z.infer<typeof taskModelSourceSchema>;
 export type OpenWeightModel = z.infer<typeof openWeightModelSchema>;
 export type TaxonomyTask = z.infer<typeof taxonomyTaskSchema>;
+
+export const modelFamilySchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  name: z.string().min(1),
+  axis: z.enum(["model-families", "neural-architectures", "learning-paradigms", "generative-formulations", "modalities-data", "training-adaptation"]),
+  definition: z.string().min(1),
+  definitionSourceId: taxonomySourceSchema.shape.id,
+  note: bilingualTextSchema,
+  models: z.array(z.object({
+    modelId: openWeightModelSchema.shape.id,
+    relation: z.enum(["member", "component", "compatible"]),
+    rationale: bilingualTextSchema,
+    sourceIds: z.array(taskModelSourceSchema.shape.id).min(1),
+  }).strict()),
+}).strict();
+
+export type ModelFamily = z.infer<typeof modelFamilySchema>;
 
 export const atlasDatasetSchema = z
   .object({
