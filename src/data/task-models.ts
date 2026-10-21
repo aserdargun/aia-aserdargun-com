@@ -957,6 +957,182 @@ export const openWeightModels = [
       "en": "A complete voice-conversion pipeline with released WavLM-Large and prematched HiFi-GAN checkpoints. The conversion stage is non-parametric kNN regression over target-speaker reference audio, which the user must provide. The neighbors are not learned network weights.",
       "tr": "WavLM-Large ve önceden eşleştirilmiş HiFi-GAN ağırlıkları yayımlanmış tam ses dönüşüm hattıdır. Dönüştürme aşaması, kullanıcının sağlaması gereken hedef konuşmacı referans sesi üzerinde parametrik olmayan kNN regresyonudur. Komşular öğrenilmiş ağ ağırlıkları değildir."
     }
+  },
+  {
+    "id": "p5-beauty-small",
+    "name": "P5 Beauty Small",
+    "cardSourceId": "ow-p5-beauty-small",
+    "weightsSourceId": "ow-p5-beauty-small-weights",
+    "licenseSourceId": "ow-p5-beauty-small",
+    "license": "MIT",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "artifact",
+    "context": {
+      "en": "T5-based recommender for the Amazon Beauty user/item vocabulary. The authors link this Hugging Face distribution; custom P5 code, original prompts and ID preprocessing are required. Transfer to another catalogue needs adaptation. No bit-for-bit comparison with the original Drive file or model execution was performed.",
+      "tr": "Amazon Beauty kullanıcı/ürün sözlüğü için T5 tabanlı önerici. Yazarlar bu Hugging Face dağıtımına bağlantı verir; özel P5 kodu, özgün istemler ve kimlik ön işlemesi gerekir. Başka kataloğa aktarım uyarlama ister. Özgün Drive dosyasıyla bit düzeyinde karşılaştırma veya model çalıştırması yapılmadı."
+    }
+  },
+  {
+    "id": "scan-cifar10",
+    "name": "SCAN · CIFAR-10 (SCAN-loss)",
+    "cardSourceId": "ow-scan-cifar10",
+    "weightsSourceId": "ow-scan-cifar10-weights",
+    "licenseSourceId": "ow-scan-license",
+    "license": "CC-BY-NC-4.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "context": {
+      "en": "Published image-clustering checkpoint with ten CIFAR-10 clusters. Use the SCAN evaluation configuration and preprocessing. This is the SCAN-loss release, not the separate self-labeling checkpoint. The Drive file is publicly downloadable but its identifier is not an immutable content hash.",
+      "tr": "On CIFAR-10 kümesi için yayımlanmış görüntü kümeleme modeli. SCAN değerlendirme ayarları ve ön işlemesi gerekir. Bu, ayrı sunulan self-labeling sürümü değil, SCAN-loss sürümüdür. Drive dosyası herkese açık indirilebilir; kimliği değişmez içerik özeti değildir."
+    }
+  },
+  {
+    "id": "uva-autoencoder128",
+    "name": "UvA CIFAR-10 Autoencoder · 128D",
+    "cardSourceId": "ow-uva-saved-models",
+    "weightsSourceId": "ow-uva-autoencoder128-weights",
+    "licenseSourceId": "ow-uva-model-license",
+    "license": "MIT",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "context": {
+      "en": "Convolutional autoencoder with a 128-dimensional bottleneck for normalized 32×32 RGB CIFAR-10 images. Use the tutorial’s PyTorch architecture and encoder; the decoder reconstructs images. A teaching reference, not a generic tabular reducer or a VAE.",
+      "tr": "Normalize edilmiş 32×32 RGB CIFAR-10 görüntüleri için 128 boyutlu darboğazı olan evrişimli otoenkoder. Eğitim materyalindeki PyTorch mimarisi ve kodlayıcı kullanılır; çözücü görüntüyü yeniden kurar. Öğretici referanstır; genel tablo boyut indirgeme modeli veya VAE değildir."
+    }
+  },
+  {
+    "id": "uva-mnist-flow",
+    "name": "UvA MNISTFlow · multiscale",
+    "cardSourceId": "ow-uva-saved-models",
+    "weightsSourceId": "ow-uva-mnist-flow-weights",
+    "licenseSourceId": "ow-uva-model-license",
+    "license": "MIT",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "context": {
+      "en": "Pretrained multiscale normalizing flow for 28×28 grayscale MNIST. The tutorial exposes log likelihood and bits per dimension, with dequantization and importance sampling for discrete pixels. Its architecture and preprocessing must match the checkpoint.",
+      "tr": "28×28 gri tonlu MNIST için önceden eğitilmiş çok ölçekli normalizing flow. Eğitim materyali, ayrık pikseller için dequantization ve importance sampling kullanarak log olabilirlik ve boyut başına bit hesaplar. Mimari ve ön işleme ağırlıklarla eşleşmelidir."
+    }
+  },
+  {
+    "id": "autocpd-hasc",
+    "name": "AutoCPD · HASC Demo (0.1.5)",
+    "cardSourceId": "ow-autocpd-hasc",
+    "weightsSourceId": "ow-autocpd-hasc-weights",
+    "licenseSourceId": "ow-autocpd-license",
+    "license": "MIT",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "pipeline",
+    "licenseScope": "repository",
+    "context": {
+      "en": "The wheel contains the trained 21-residual-block TensorFlow model plus Demo/label_dict.npy. Three accelerometer axes and their squares form six channels of 700-sample windows. Min–max scaling, label decoding, smoothing and peak selection are required to turn predictions into change points.",
+      "tr": "Wheel paketi, eğitilmiş 21 residual bloklu TensorFlow modelini ve Demo/label_dict.npy dosyasını içerir. Üç ivmeölçer ekseni ve kareleri, 700 örneklik pencerelerde altı kanal oluşturur. Tahminleri değişim noktalarına çevirmek için min–max ölçekleme, etiket çözümleme, yumuşatma ve tepe seçimi gerekir."
+    }
+  },
+  {
+    "id": "graphany-arxiv",
+    "name": "GraphAny · Arxiv",
+    "cardSourceId": "ow-graphany-arxiv",
+    "weightsSourceId": "ow-graphany-arxiv-weights",
+    "licenseSourceId": "ow-graphany-license",
+    "license": "MIT",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "context": {
+      "en": "Published meta-model for node classification across graphs. Inference combines linear graph predictors using learned attention. It still needs the target graph, node features and labeled support nodes; “no finetuning” does not mean label-free inference.",
+      "tr": "Graflar arasında düğüm sınıflandırması için yayımlanmış meta-model. Çıkarım, öğrenilmiş dikkat ile doğrusal graf tahminlerini birleştirir. Hedef graf, düğüm özellikleri ve etiketli destek düğümleri yine gerekir; “ince ayarsız” ifadesi etiketsiz çıkarım anlamına gelmez."
+    }
+  },
+  {
+    "id": "dgl-gcn-tox21",
+    "name": "DGL-LifeSci · GCN canonical Tox21",
+    "cardSourceId": "ow-dgl-gcn-tox21",
+    "weightsSourceId": "ow-dgl-gcn-tox21-weights",
+    "licenseSourceId": "ow-dgl-lifesci-license",
+    "license": "Apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "context": {
+      "en": "Graph-level molecular classifier for 12 Tox21 assay labels. Requires the canonical 74-feature atom encoding and matching graph construction. The GCN readout returns logits; applying it to unrelated graphs or using it as a clinical toxicity verdict is unsupported. Separate weight-specific license terms are not stated.",
+      "tr": "12 Tox21 deney etiketi için molekül grafı sınıflandırıcısı. Kanonik 74 özellikli atom kodlaması ve eşleşen graf oluşturma gerekir. GCN okuma katmanı logit üretir; ilgisiz graflarda kullanım veya klinik toksisite kararı desteklenmez. Ağırlıklara özel ayrı lisans koşulları belirtilmez."
+    }
+  },
+  {
+    "id": "hrm-sudoku",
+    "name": "HRM · Sudoku Extreme 9×9",
+    "cardSourceId": "ow-hrm-sudoku",
+    "weightsSourceId": "ow-hrm-sudoku-weights",
+    "licenseSourceId": "ow-hrm-repository-license",
+    "license": "Apache-2.0 (code repository)",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "context": {
+      "en": "Author-released Sudoku checkpoint with a two-level recurrent reasoning architecture. It uses the author’s Sudoku representation and inference configuration. The Hugging Face release supplies weights but no separate license declaration; the linked Apache-2.0 terms are for the code repository.",
+      "tr": "İki düzeyli tekrarlayan akıl yürütme mimarisine sahip, yazar tarafından yayımlanmış Sudoku modeli. Yazarın Sudoku gösterimi ve çıkarım ayarları kullanılır. Hugging Face sürümü ağırlıkları sunar ancak ayrı lisans beyanı içermez; bağlantıdaki Apache-2.0 koşulları kod deposuna aittir."
+    }
+  },
+  {
+    "id": "goose-blocksworld",
+    "name": "GOOSE · IPC23LT Blocks World",
+    "cardSourceId": "ow-goose-blocksworld",
+    "weightsSourceId": "ow-goose-blocksworld-weights",
+    "licenseSourceId": "ow-goose-license",
+    "license": "MIT (GOOSE; planner dependencies have separate terms)",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "statistical",
+    "licenseScope": "repository",
+    "context": {
+      "en": "A published learned heuristic plus symbolic PDDL search. The checked .model archive contains 12 numerical weights, feature/domain metadata and rank-SVM options. Use matching GOOSE/WLPlan 2.0.0 formats and the Blocks World domain. These are classical learned coefficients, not neural-network weights.",
+      "tr": "Yayımlanmış öğrenilmiş sezgisel model ile sembolik PDDL aramasının birleşimi. Kontrol edilen .model arşivi 12 sayısal katsayı, özellik/alan üst verileri ve rank-SVM seçenekleri içerir. GOOSE/WLPlan 2.0.0 biçimleri ve Blocks World alanı eşleşmelidir. Bunlar klasik öğrenilmiş katsayılardır, sinir ağı ağırlıkları değildir."
+    }
+  },
+  {
+    "id": "hloc-superglue",
+    "name": "hloc · SuperPoint + SuperGlue outdoor",
+    "cardSourceId": "ow-hloc-superglue",
+    "weightsSourceId": "ow-hloc-superglue-weights",
+    "licenseSourceId": "ow-superglue-license",
+    "license": "SuperGlue noncommercial research license; hloc Apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "pipeline",
+    "licenseScope": "artifact",
+    "context": {
+      "en": "Released superpoint_v1.pth and superglue_outdoor.pth supply local features and matching. hloc combines them with reference images, a 3D SfM map, camera intrinsics, image pairs and geometric pose estimation. Robot pose additionally needs a calibrated camera-to-robot transform and a suitable map frame.",
+      "tr": "Yayımlanan superpoint_v1.pth ve superglue_outdoor.pth yerel özellik ve eşleştirme sağlar. hloc bunları referans görüntüler, 3B SfM haritası, kamera iç parametreleri, görüntü çiftleri ve geometrik poz kestirimiyle birleştirir. Robot pozu ayrıca kalibre edilmiş kamera–robot dönüşümü ve uygun harita koordinat çerçevesi gerektirir."
+    }
+  },
+  {
+    "id": "mpinets-hybrid",
+    "name": "MPiNets · Hybrid Expert",
+    "cardSourceId": "ow-mpinets-hybrid",
+    "weightsSourceId": "ow-mpinets-hybrid-weights",
+    "licenseSourceId": "ow-mpinets-zenodo",
+    "license": "CC-BY-4.0 (Zenodo artifact)",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "pipeline",
+    "licenseScope": "artifact",
+    "context": {
+      "en": "Released motion policy for the Franka arm. Its rollout uses the current joint configuration, target pose and point-cloud obstacle representation. Requires matching robot geometry and inference code; generated trajectories need collision and kinematic validation. The Zenodo artifact is CC-BY-4.0 although the code repository is MIT.",
+      "tr": "Franka kolu için yayımlanmış hareket politikası. Yörünge üretimi, mevcut eklem durumu, hedef poz ve engel nokta bulutunu kullanır. Eşleşen robot geometrisi ve çıkarım kodu gerekir; üretilen yörüngeler çarpışma ve kinematik doğrulama ister. Kod deposu MIT olsa da Zenodo dosyası CC-BY-4.0 ile sunulur."
+    }
   }
 ] satisfies OpenWeightModel[];
 
@@ -1539,10 +1715,39 @@ export const taxonomyTasks = [
     "definition": "User context + items → ranked items",
     "definitionSourceId": "S21",
     "note": {
-      "en": "A transferable pretrained recommender was not verified for this task. User/item identities and interaction data usually require dataset-specific fitting; see the task reference.",
-      "tr": "Bu görev için aktarılabilir hazır öneri modeli doğrulanmadı. Kullanıcı/öğe kimlikleri ve etkileşim verileri genellikle veri kümesine özel eğitim gerektirir; görev kaynağına bak."
+      "en": "A source-backed specialist example; its domain, required inputs and deployment conditions limit the supported scope.",
+      "tr": "Kaynaklı uzman örneği; destek kapsamı, alanı, gerekli girdileri ve kullanım koşullarıyla sınırlıdır."
     },
-    "recommendations": []
+    "recommendations": [
+      {
+        "modelId": "p5-beauty-small",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The author notebook generates 20 ranked candidate item IDs and evaluates top-5/top-10 sequential recommendation. The pinned distribution config includes the sequential task.",
+          "tr": "Yazarın not defteri sıralı 20 aday ürün kimliği üretir ve sıralı öneride top-5/top-10 değerlendirmesi yapar. Sabitlenmiş dağıtım ayarları sequential görevini içerir."
+        },
+        "sourceIds": [
+          "ow-p5-beauty-small",
+          "ow-p5-author-release",
+          "ow-p5-beauty-evaluation",
+          "ow-p5-beauty-config"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "outcome": "specialist",
+      "summary": {
+        "en": "A published recommender checkpoint is available for Amazon Beauty. It predicts identifiers from that catalogue, not arbitrary new products. Preserve the author’s user/item mapping, prompts, candidate validation and ranking protocol. New items or users outside the trained representation require adaptation; this release is a reproducible historical reference, not a current universal leader.",
+        "tr": "Amazon Beauty için yayımlanmış önerici ağırlıkları var. Bu model, eğitim kataloğundaki kimlikleri tahmin eder; herhangi bir yeni ürün kataloğunu doğrudan desteklemez. Yazarın kullanıcı/ürün eşlemesi, istemleri, aday doğrulaması ve sıralama protokolü korunmalıdır. Eğitimdeki gösterim dışında kalan ürün veya kullanıcılar uyarlama gerektirir; bu sürüm tarihsel bir referanstır, güncel evrensel lider değildir."
+      },
+      "sourceIds": [
+        "ow-p5-beauty-small",
+        "ow-p5-author-release",
+        "ow-p5-beauty-evaluation",
+        "ow-p5-beauty-config"
+      ]
+    }
   },
   {
     "id": "rating-prediction",
@@ -1551,10 +1756,39 @@ export const taxonomyTasks = [
     "definition": "User–item pair → predicted rating",
     "definitionSourceId": "S21",
     "note": {
-      "en": "A transferable pretrained recommender was not verified for this task. User/item identities and interaction data usually require dataset-specific fitting; see the task reference.",
-      "tr": "Bu görev için aktarılabilir hazır öneri modeli doğrulanmadı. Kullanıcı/öğe kimlikleri ve etkileşim verileri genellikle veri kümesine özel eğitim gerektirir; görev kaynağına bak."
+      "en": "A source-backed specialist example; its domain, required inputs and deployment conditions limit the supported scope.",
+      "tr": "Kaynaklı uzman örneği; destek kapsamı, alanı, gerekli girdileri ve kullanım koşullarıyla sınırlıdır."
     },
-    "recommendations": []
+    "recommendations": [
+      {
+        "modelId": "p5-beauty-small",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The same Beauty Small checkpoint has a rating training objective. The author notebook decodes numeric ratings and computes RMSE/MAE; task support is documented without importing its reported scores.",
+          "tr": "Aynı Beauty Small sürümü rating eğitim hedefini içerir. Yazarın not defteri sayısal puanları çözümler ve RMSE/MAE hesaplar; destek belgelenir, bildirilen puanlar buraya aktarılmaz."
+        },
+        "sourceIds": [
+          "ow-p5-beauty-small",
+          "ow-p5-author-release",
+          "ow-p5-beauty-evaluation",
+          "ow-p5-beauty-config"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "outcome": "specialist",
+      "summary": {
+        "en": "This is an explicit rating-prediction checkpoint, rather than a generic language model asked to guess a score. Ratings depend on the Amazon Beauty user/item IDs, prompt and numerical postprocessing. A different rating scale or commercial catalogue needs new data and validation; generated scores are not calibrated probabilities.",
+        "tr": "Bu, genel bir dil modelinden puan tahmini istemenin ötesinde, puan tahmini hedefiyle eğitilmiş bir sürümdür. Puanlar Amazon Beauty kullanıcı/ürün kimliklerine, isteme ve sayısal son işlemeye bağlıdır. Farklı puan ölçeği veya ürün kataloğu yeni veri ve doğrulama gerektirir; üretilen puanlar kalibre edilmiş olasılıklar değildir."
+      },
+      "sourceIds": [
+        "ow-p5-beauty-small",
+        "ow-p5-author-release",
+        "ow-p5-beauty-evaluation",
+        "ow-p5-beauty-config"
+      ]
+    }
   },
   {
     "id": "image-classification",
@@ -2759,10 +2993,37 @@ export const taxonomyTasks = [
     "definition": "Observations → groups",
     "definitionSourceId": "S02",
     "note": {
-      "en": "No general-purpose pretrained checkpoint is nominated. Select and fit a method for the data type and objective; the task reference explains the methodological family.",
-      "tr": "Genel amaçlı hazır ağırlık önerilmedi. Veri türü ve hedefe göre yöntem seçip eğit; görev kaynağı yöntem ailesini açıklar."
+      "en": "A source-backed specialist example; its domain, required inputs and deployment conditions limit the supported scope.",
+      "tr": "Kaynaklı uzman örneği; destek kapsamı, alanı, gerekli girdileri ve kullanım koşullarıyla sınırlıdır."
     },
-    "recommendations": []
+    "recommendations": [
+      {
+        "modelId": "scan-cifar10",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher releases the fitted clustering network, not just an embedding encoder. Its inference assigns images to the ten learned CIFAR-10 clusters.",
+          "tr": "Yayıncı yalnızca gömme kodlayıcısını değil, eğitilmiş kümeleme ağını yayımlar. Çıkarım, görüntüleri öğrenilen on CIFAR-10 kümesine atar."
+        },
+        "sourceIds": [
+          "ow-scan-cifar10",
+          "ow-scan-cifar10-weights",
+          "ow-scan-license"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "outcome": "specialist",
+      "summary": {
+        "en": "A real trained clustering model is available. Its cluster identities and number are fixed by the CIFAR-10 experiment; they are not reusable semantic labels for arbitrary data. For a new dataset or cluster count, fit the clustering procedure again. Generic k-means implementations alone would not constitute released trained weights.",
+        "tr": "Gerçek bir eğitilmiş kümeleme modeli mevcut. Küme kimlikleri ve sayısı CIFAR-10 deneyine bağlıdır; herhangi bir veri için yeniden kullanılabilir anlamsal etiketler değildir. Yeni veri kümesi veya küme sayısı için kümeleme süreci yeniden eğitilir. Yalnızca genel k-means uygulaması sunmak, yayımlanmış eğitilmiş ağırlık sayılmaz."
+      },
+      "sourceIds": [
+        "ow-scan-cifar10",
+        "ow-scan-cifar10-weights",
+        "ow-scan-license"
+      ]
+    }
   },
   {
     "id": "dimensionality-reduction",
@@ -2771,10 +3032,37 @@ export const taxonomyTasks = [
     "definition": "Features → lower-dimensional representation",
     "definitionSourceId": "S02",
     "note": {
-      "en": "No general-purpose pretrained checkpoint is nominated. Select and fit a method for the data type and objective; the task reference explains the methodological family.",
-      "tr": "Genel amaçlı hazır ağırlık önerilmedi. Veri türü ve hedefe göre yöntem seçip eğit; görev kaynağı yöntem ailesini açıklar."
+      "en": "A source-backed specialist example; its domain, required inputs and deployment conditions limit the supported scope.",
+      "tr": "Kaynaklı uzman örneği; destek kapsamı, alanı, gerekli girdileri ve kullanım koşullarıyla sınırlıdır."
     },
-    "recommendations": []
+    "recommendations": [
+      {
+        "modelId": "uva-autoencoder128",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The released 128D encoder maps each 3×32×32 image (3,072 values) to a learned 128-value latent vector. Reconstruction supplies the training objective.",
+          "tr": "Yayımlanan 128 boyutlu kodlayıcı, her 3×32×32 görüntüyü (3.072 değer) öğrenilmiş 128 değerli gizil vektöre dönüştürür. Eğitim hedefi yeniden oluşturmadır."
+        },
+        "sourceIds": [
+          "ow-uva-saved-models",
+          "ow-uva-autoencoder-method",
+          "ow-uva-autoencoder128-weights"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "outcome": "specialist",
+      "summary": {
+        "en": "A pretrained nonlinear dimensionality reducer is available for CIFAR-10 images. Its input layout, normalization and latent dimension are fixed; it does not reduce arbitrary spreadsheets or embeddings without retraining. PCA/UMAP implementations require fitting to the target distribution and are not themselves pretrained checkpoints.",
+        "tr": "CIFAR-10 görüntüleri için önceden eğitilmiş doğrusal olmayan boyut indirgeme modeli mevcut. Girdi düzeni, normalizasyonu ve gizil boyutu sabittir; yeniden eğitim olmadan herhangi bir tabloyu veya gömmeyi indirgeyemez. PCA/UMAP uygulamalarının hedef dağılıma uydurulması gerekir; uygulamanın kendisi hazır ağırlık değildir."
+      },
+      "sourceIds": [
+        "ow-uva-saved-models",
+        "ow-uva-autoencoder-method",
+        "ow-uva-autoencoder128-weights"
+      ]
+    }
   },
   {
     "id": "density-estimation",
@@ -2783,10 +3071,37 @@ export const taxonomyTasks = [
     "definition": "Observations → probability density",
     "definitionSourceId": "S02",
     "note": {
-      "en": "No general-purpose pretrained checkpoint is nominated. Select and fit a method for the data type and objective; the task reference explains the methodological family.",
-      "tr": "Genel amaçlı hazır ağırlık önerilmedi. Veri türü ve hedefe göre yöntem seçip eğit; görev kaynağı yöntem ailesini açıklar."
+      "en": "A source-backed specialist example; its domain, required inputs and deployment conditions limit the supported scope.",
+      "tr": "Kaynaklı uzman örneği; destek kapsamı, alanı, gerekli girdileri ve kullanım koşullarıyla sınırlıdır."
     },
-    "recommendations": []
+    "recommendations": [
+      {
+        "modelId": "uva-mnist-flow",
+        "evidence": "documented",
+        "rationale": {
+          "en": "ImageFlow._get_likelihood combines the latent density and log-determinant Jacobian. The released multiscale checkpoint therefore supports likelihood evaluation, beyond image sampling alone.",
+          "tr": "ImageFlow._get_likelihood, gizil yoğunluğu ve Jacobian log-determinantını birleştirir. Yayımlanan çok ölçekli sürüm, yalnızca görüntü örneklemenin ötesinde olabilirlik hesabı sağlar."
+        },
+        "sourceIds": [
+          "ow-uva-saved-models",
+          "ow-uva-flow-method",
+          "ow-uva-mnist-flow-weights"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "outcome": "specialist",
+      "summary": {
+        "en": "A density-estimation checkpoint is available with an explicit likelihood implementation. It models the MNIST image distribution; discrete-image likelihood is estimated using the tutorial’s dequantization and sampling procedure. This does not establish a density model for arbitrary tabular data or calibrated anomaly detection. The earlier Glow demo entry remains excluded from this task because its exported demo does not expose the full likelihood path.",
+        "tr": "Açık olabilirlik uygulamasıyla bir yoğunluk kestirim modeli mevcut. MNIST görüntü dağılımını modeller; ayrık görüntü olabilirliği, eğitim materyalindeki dequantization ve örnekleme yordamıyla tahmin edilir. Bu, herhangi bir tablo verisinin yoğunluğunu veya kalibre edilmiş anomali tespitini doğrulamaz. Önceki Glow demo kaydı, dışa aktarılan demosu tam olabilirlik yolunu sunmadığı için bu göreve eklenmedi."
+      },
+      "sourceIds": [
+        "ow-uva-saved-models",
+        "ow-uva-flow-method",
+        "ow-uva-mnist-flow-weights"
+      ]
+    }
   },
   {
     "id": "anomaly-detection",
@@ -2868,10 +3183,39 @@ export const taxonomyTasks = [
     "definition": "Time series → regime-change locations",
     "definitionSourceId": "S10",
     "note": {
-      "en": "No general-purpose pretrained checkpoint is nominated. Select and fit a method for the data type and objective; the task reference explains the methodological family.",
-      "tr": "Genel amaçlı hazır ağırlık önerilmedi. Veri türü ve hedefe göre yöntem seçip eğit; görev kaynağı yöntem ailesini açıklar."
+      "en": "A source-backed specialist example; its domain, required inputs and deployment conditions limit the supported scope.",
+      "tr": "Kaynaklı uzman örneği; destek kapsamı, alanı, gerekli girdileri ve kullanım koşullarıyla sınırlıdır."
     },
-    "recommendations": []
+    "recommendations": [
+      {
+        "modelId": "autocpd-hasc",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher’s pretrained HASC workflow classifies activity transitions and extracts change-point positions by aggregating sliding-window predictions. The 0.1.5 wheel contains both the SavedModel and its label dictionary.",
+          "tr": "Yayıncının önceden eğitilmiş HASC akışı, etkinlik geçişlerini sınıflandırır ve kayan pencere tahminlerini birleştirerek değişim noktalarının konumlarını çıkarır. 0.1.5 wheel paketi SavedModel ile etiket sözlüğünü birlikte içerir."
+        },
+        "sourceIds": [
+          "ow-autocpd-hasc",
+          "ow-autocpd-inference",
+          "ow-autocpd-package",
+          "ow-autocpd-hasc-weights"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "outcome": "pipeline",
+      "summary": {
+        "en": "Released weights exist for human-activity transitions in HASC accelerometer data. The author’s complete preprocessing and aggregation pipeline is part of the task support. The Git model directory alone lacks the label dictionary required by the demonstration; the checked 0.1.5 wheel contains it. An arbitrary industrial or financial time series needs domain-specific training and evaluation.",
+        "tr": "HASC ivmeölçer verisindeki insan etkinliği geçişleri için yayımlanmış ağırlıklar var. Yazarın tüm ön işleme ve birleştirme akışı, görev desteğinin parçasıdır. Git model klasörü tek başına demonun istediği etiket sözlüğünü içermiyor; kontrol edilen 0.1.5 wheel paketi bu dosyayı içeriyor. Farklı endüstriyel veya finansal zaman serileri alana özel eğitim ve değerlendirme gerektirir."
+      },
+      "sourceIds": [
+        "ow-autocpd-hasc",
+        "ow-autocpd-inference",
+        "ow-autocpd-package",
+        "ow-autocpd-hasc-weights"
+      ]
+    }
   },
   {
     "id": "node-classification",
@@ -2880,10 +3224,37 @@ export const taxonomyTasks = [
     "definition": "Graph + nodes → node labels",
     "definitionSourceId": "S11",
     "note": {
-      "en": "No transferable checkpoint was verified for arbitrary graphs. Node features, relation schema and labels usually require graph-specific training; see the OGB task definitions.",
-      "tr": "Keyfî çizgeler için aktarılabilir ağırlık doğrulanmadı. Düğüm özellikleri, ilişki şeması ve etiketler genellikle çizgeye özel eğitim gerektirir; OGB görev tanımlarına bak."
+      "en": "A source-backed specialist example; its domain, required inputs and deployment conditions limit the supported scope.",
+      "tr": "Kaynaklı uzman örneği; destek kapsamı, alanı, gerekli girdileri ve kullanım koşullarıyla sınırlıdır."
     },
-    "recommendations": []
+    "recommendations": [
+      {
+        "modelId": "graphany-arxiv",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The author provides graph_any_arxiv.pt and inference examples on Cora/Citeseer with zero optimization steps. The data implementation forms label-based linear predictors from target support nodes.",
+          "tr": "Yazar graph_any_arxiv.pt dosyasını ve sıfır optimizasyon adımıyla Cora/Citeseer çıkarım örneklerini sunar. Veri uygulaması, hedef destek düğümlerinin etiketleriyle doğrusal tahminciler oluşturur."
+        },
+        "sourceIds": [
+          "ow-graphany-arxiv",
+          "ow-graphany-inputs",
+          "ow-graphany-arxiv-weights"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "outcome": "specialist",
+      "summary": {
+        "en": "An inductive node classifier with released parameters is available. Target labels are inputs to the linear support predictors even when the learned meta-model is frozen. Supply the graph, compatible features and a labeled support split; do not interpret cross-graph transfer as a guarantee for every unseen graph or a completely unlabeled graph.",
+        "tr": "Yayımlanmış parametreleri olan bir indüktif düğüm sınıflandırıcısı mevcut. Öğrenilmiş meta-model sabit tutulsa bile hedef etiketler doğrusal destek tahmincilerinin girdisidir. Graf, uygun özellikler ve etiketli destek bölümü sağlanmalıdır; graflar arası aktarım her görülmemiş grafa veya tamamen etiketsiz grafa yönelik başarı garantisi değildir."
+      },
+      "sourceIds": [
+        "ow-graphany-arxiv",
+        "ow-graphany-inputs",
+        "ow-graphany-arxiv-weights"
+      ]
+    }
   },
   {
     "id": "link-prediction",
@@ -2917,10 +3288,37 @@ export const taxonomyTasks = [
     "definition": "Graph → graph-level labels",
     "definitionSourceId": "S11",
     "note": {
-      "en": "No transferable checkpoint was verified for arbitrary graphs. Node features, relation schema and labels usually require graph-specific training; see the OGB task definitions.",
-      "tr": "Keyfî çizgeler için aktarılabilir ağırlık doğrulanmadı. Düğüm özellikleri, ilişki şeması ve etiketler genellikle çizgeye özel eğitim gerektirir; OGB görev tanımlarına bak."
+      "en": "A source-backed specialist example; its domain, required inputs and deployment conditions limit the supported scope.",
+      "tr": "Kaynaklı uzman örneği; destek kapsamı, alanı, gerekli girdileri ve kullanım koşullarıyla sınırlıdır."
     },
-    "recommendations": []
+    "recommendations": [
+      {
+        "modelId": "dgl-gcn-tox21",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The registry links the exact GCN_canonical_Tox21 checkpoint. GCNPredictor pools node representations into a whole-graph representation and predicts 12 binary assay outcomes.",
+          "tr": "Kayıt, tam GCN_canonical_Tox21 ağırlık dosyasına bağlantı verir. GCNPredictor, düğüm gösterimlerini tüm grafın gösteriminde birleştirir ve 12 ikili deney sonucunu tahmin eder."
+        },
+        "sourceIds": [
+          "ow-dgl-gcn-tox21",
+          "ow-dgl-gcn-readout",
+          "ow-dgl-gcn-tox21-weights"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "outcome": "specialist",
+      "summary": {
+        "en": "A graph-classification checkpoint is available for molecular bioassays. This is a whole-graph output, unlike node classification. Its featurizer, molecular representation and 12 labels are fixed; other graph domains or label sets require a new head, training and evaluation. Repository licensing is recorded separately from unspecified checkpoint-specific terms.",
+        "tr": "Moleküler biyodeneyler için graf sınıflandırma ağırlıkları mevcut. Düğüm sınıflandırmasından farklı olarak çıktı tüm grafa aittir. Özellik çıkarıcı, moleküler gösterim ve 12 etiket sabittir; başka graf alanları veya etiket kümeleri yeni çıktı katmanı, eğitim ve değerlendirme gerektirir. Depo lisansı, belirtilmemiş ağırlığa özel koşullardan ayrı gösterilir."
+      },
+      "sourceIds": [
+        "ow-dgl-gcn-tox21",
+        "ow-dgl-gcn-readout",
+        "ow-dgl-gcn-tox21-weights"
+      ]
+    }
   },
   {
     "id": "graph-regression",
@@ -3063,10 +3461,39 @@ export const taxonomyTasks = [
     "definition": "Variables + constraints → valid assignment",
     "definitionSourceId": "S01",
     "note": {
-      "en": "This task often uses a solver, geometric estimator or planner rather than a reusable weight file. A task-specific learned model was not verified here; see the primary task reference.",
-      "tr": "Bu görev çoğu zaman yeniden kullanılabilir ağırlık yerine çözücü, geometrik kestirici veya planlayıcı kullanır. Göreve özel öğrenilmiş model burada doğrulanmadı; birincil görev kaynağına bak."
+      "en": "A source-backed specialist example; its domain, required inputs and deployment conditions limit the supported scope.",
+      "tr": "Kaynaklı uzman örneği; destek kapsamı, alanı, gerekli girdileri ve kullanım koşullarıyla sınırlıdır."
     },
-    "recommendations": []
+    "recommendations": [
+      {
+        "modelId": "hrm-sudoku",
+        "evidence": "documented",
+        "rationale": {
+          "en": "Sudoku is a finite constraint-satisfaction problem: predict a 9×9 assignment consistent with clues and row, column and box constraints. The author releases the exact Sudoku Extreme checkpoint.",
+          "tr": "Sudoku, sonlu bir kısıt sağlama problemidir: ipuçları ile satır, sütun ve kutu kısıtlarına uyan 9×9 atama tahmin edilir. Yazar, tam Sudoku Extreme ağırlıklarını yayımlar."
+        },
+        "sourceIds": [
+          "ow-hrm-sudoku",
+          "ow-hrm-author-release",
+          "ow-hrm-sudoku-weights",
+          "ow-hrm-repository-license"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "outcome": "specialist",
+      "summary": {
+        "en": "A ready checkpoint exists for a specific CSP: 9×9 Sudoku. It is not a complete solver for arbitrary constraints and does not certify unsatisfiability or guarantee a valid solution. Check each prediction against the original clues and Sudoku constraints. Public weight availability is verified; a separate artifact license was not found in the release, so the repository license must not be presented as explicit weight permission.",
+        "tr": "Belirli bir kısıt sağlama problemi olan 9×9 Sudoku için hazır ağırlıklar var. Model, herhangi bir kısıt sistemi için eksiksiz çözücü değildir; çözümsüzlük belgesi veya geçerli çözüm garantisi vermez. Her tahmin özgün ipuçları ve Sudoku kısıtlarıyla kontrol edilmelidir. Ağırlıkların herkese açık olduğu doğrulandı; sürümde ayrı dosya lisansı bulunmadığı için depo lisansı, ağırlığa açık kullanım izni olarak sunulmamalıdır."
+      },
+      "sourceIds": [
+        "ow-hrm-sudoku",
+        "ow-hrm-author-release",
+        "ow-hrm-sudoku-weights",
+        "ow-hrm-repository-license"
+      ]
+    }
   },
   {
     "id": "classical-planning",
@@ -3075,10 +3502,39 @@ export const taxonomyTasks = [
     "definition": "Initial state + actions + goal → plan",
     "definitionSourceId": "S01",
     "note": {
-      "en": "This task often uses a solver, geometric estimator or planner rather than a reusable weight file. A task-specific learned model was not verified here; see the primary task reference.",
-      "tr": "Bu görev çoğu zaman yeniden kullanılabilir ağırlık yerine çözücü, geometrik kestirici veya planlayıcı kullanır. Göreve özel öğrenilmiş model burada doğrulanmadı; birincil görev kaynağına bak."
+      "en": "A source-backed specialist example; its domain, required inputs and deployment conditions limit the supported scope.",
+      "tr": "Kaynaklı uzman örneği; destek kapsamı, alanı, gerekli girdileri ve kullanım koşullarıyla sınırlıdır."
     },
-    "recommendations": []
+    "recommendations": [
+      {
+        "modelId": "goose-blocksworld",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The author’s command loads ipc23lt-blocksworld.model into a PDDL planner to produce an action plan. Learned linear weights rank states; symbolic search and the domain model provide action semantics.",
+          "tr": "Yazarın komutu, eylem planı üretmek için ipc23lt-blocksworld.model dosyasını PDDL planlayıcısına yükler. Öğrenilmiş doğrusal katsayılar durumları sıralar; sembolik arama ve alan modeli eylem anlamını sağlar."
+        },
+        "sourceIds": [
+          "ow-goose-blocksworld",
+          "ow-goose-pretrained",
+          "ow-goose-training-config",
+          "ow-goose-blocksworld-weights"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "outcome": "pipeline",
+      "summary": {
+        "en": "A released learned model exists inside a complete classical-planning pipeline. The verified archive targets Blocks World; it does not generate valid plans for arbitrary PDDL domains by itself. New domains need corresponding parameters or training, and the planner still requires domain/problem files. This release uses classical graph features and rank-SVM coefficients; calling it a GNN checkpoint would be incorrect.",
+        "tr": "Tam klasik planlama akışı içinde yayımlanmış öğrenilmiş bir model mevcut. Doğrulanan arşiv Blocks World alanını hedefler; kendi başına herhangi bir PDDL alanı için geçerli plan üretmez. Yeni alanlar uygun parametre veya eğitim gerektirir; planlayıcı ayrıca alan/problem dosyalarına ihtiyaç duyar. Bu sürüm klasik graf özellikleri ve rank-SVM katsayıları kullanır; GNN ağırlığı olarak sunmak yanlış olur."
+      },
+      "sourceIds": [
+        "ow-goose-blocksworld",
+        "ow-goose-pretrained",
+        "ow-goose-training-config",
+        "ow-goose-blocksworld-weights"
+      ]
+    }
   },
   {
     "id": "robot-localization",
@@ -3087,10 +3543,41 @@ export const taxonomyTasks = [
     "definition": "Sensor observations + map → robot pose",
     "definitionSourceId": "S01",
     "note": {
-      "en": "This task often uses a solver, geometric estimator or planner rather than a reusable weight file. A task-specific learned model was not verified here; see the primary task reference.",
-      "tr": "Bu görev çoğu zaman yeniden kullanılabilir ağırlık yerine çözücü, geometrik kestirici veya planlayıcı kullanır. Göreve özel öğrenilmiş model burada doğrulanmadı; birincil görev kaynağına bak."
+      "en": "A source-backed specialist example; its domain, required inputs and deployment conditions limit the supported scope.",
+      "tr": "Kaynaklı uzman örneği; destek kapsamı, alanı, gerekli girdileri ve kullanım koşullarıyla sınırlıdır."
     },
-    "recommendations": []
+    "recommendations": [
+      {
+        "modelId": "hloc-superglue",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The documented visual-localization pipeline converts image correspondences into camera pose using calibrated 2D–3D estimation. The open neural checkpoints are feature/matching components, not the entire localization system.",
+          "tr": "Belgelenmiş görsel konumlama akışı, kalibre edilmiş 2B–3B kestirimle görüntü eşleşmelerini kamera pozuna dönüştürür. Açık sinir ağı ağırlıkları, tüm konumlama sistemi değil, özellik/eşleştirme bileşenleridir."
+        },
+        "sourceIds": [
+          "ow-hloc-superglue",
+          "ow-hloc-pipeline",
+          "ow-hloc-pose",
+          "ow-hloc-matcher",
+          "ow-hloc-license"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "outcome": "pipeline",
+      "summary": {
+        "en": "A source-backed visual-localization pipeline with released weights is available. A matcher alone cannot return a robot’s world pose: it also needs the reference map, calibration, image pairing and geometric solver. Metric robot localization further requires map scale/frame and camera-to-robot extrinsics. This is a camera-based route, not a pretrained solution for every LiDAR, odometry or SLAM setup.",
+        "tr": "Yayımlanmış ağırlıkları olan kaynaklı bir görsel konumlama akışı mevcut. Eşleştirici tek başına robotun dünya pozunu veremez; referans harita, kalibrasyon, görüntü eşlemesi ve geometrik çözücü gerekir. Metrik robot konumlaması ayrıca harita ölçeği/çerçevesi ve kamera–robot dış kalibrasyonu ister. Bu, kamera tabanlı bir yaklaşımdır; her LiDAR, odometri veya SLAM düzeni için hazır çözüm değildir."
+      },
+      "sourceIds": [
+        "ow-hloc-superglue",
+        "ow-hloc-pipeline",
+        "ow-hloc-pose",
+        "ow-hloc-matcher",
+        "ow-hloc-license"
+      ]
+    }
   },
   {
     "id": "robot-motion-planning",
@@ -3099,10 +3586,39 @@ export const taxonomyTasks = [
     "definition": "Start + goal + obstacles → feasible path",
     "definitionSourceId": "S01",
     "note": {
-      "en": "This task often uses a solver, geometric estimator or planner rather than a reusable weight file. A task-specific learned model was not verified here; see the primary task reference.",
-      "tr": "Bu görev çoğu zaman yeniden kullanılabilir ağırlık yerine çözücü, geometrik kestirici veya planlayıcı kullanır. Göreve özel öğrenilmiş model burada doğrulanmadı; birincil görev kaynağına bak."
+      "en": "A source-backed specialist example; its domain, required inputs and deployment conditions limit the supported scope.",
+      "tr": "Kaynaklı uzman örneği; destek kapsamı, alanı, gerekli girdileri ve kullanım koşullarıyla sınırlıdır."
     },
-    "recommendations": []
+    "recommendations": [
+      {
+        "modelId": "mpinets-hybrid",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The published hybrid-expert checkpoint is loaded by the author’s inference script and repeatedly predicts joint updates to form a trajectory toward a gripper goal through a point-cloud scene.",
+          "tr": "Yayımlanan hybrid-expert ağırlıkları, yazarın çıkarım betiğiyle yüklenir; nokta bulutu sahnesindeki kavrayıcı hedefine doğru yörünge oluşturmak için eklem güncellemeleri tekrar tekrar tahmin edilir."
+        },
+        "sourceIds": [
+          "ow-mpinets-hybrid",
+          "ow-mpinets-rollout",
+          "ow-mpinets-zenodo",
+          "ow-mpinets-hybrid-weights"
+        ]
+      }
+    ],
+    "review": {
+      "observedAt": "2026-10-21",
+      "outcome": "pipeline",
+      "summary": {
+        "en": "A trained motion-planning policy is available for the documented Franka setup. It is neither a generic planner for any robot morphology nor a guarantee of collision-free motion. Match robot geometry, input coordinates and rollout settings, then independently validate the trajectory. Public checkpoint availability and publisher metadata were checked; no robot execution or model performance test was performed.",
+        "tr": "Belgelenmiş Franka düzeni için eğitilmiş hareket planlama politikası mevcut. Her robot geometrisine uygun genel planlayıcı veya çarpışmasız hareket garantisi değildir. Robot geometrisi, girdi koordinatları ve yörünge üretme ayarları eşleştirilmeli, ardından yörünge bağımsız doğrulanmalıdır. Ağırlık erişimi ve yayıncı üst verileri kontrol edildi; robot yürütmesi veya model başarım testi yapılmadı."
+      },
+      "sourceIds": [
+        "ow-mpinets-hybrid",
+        "ow-mpinets-rollout",
+        "ow-mpinets-zenodo",
+        "ow-mpinets-hybrid-weights"
+      ]
+    }
   },
   {
     "id": "function-calling",

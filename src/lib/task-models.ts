@@ -66,6 +66,9 @@ export function validateTaskModels(tasks: TaxonomyTask[], models: OpenWeightMode
       if (artifact.type === "publisher-file" && decodeURIComponent(new URL(weights.url).pathname.split("/").at(-1)!) !== artifact.fileName) {
         throw new Error(`Publisher artifact filename does not match: ${model.id}`);
       }
+      if (artifact.type === "google-drive" && weights.url !== `https://drive.google.com/file/d/${artifact.fileId}/view`) {
+        throw new Error(`Google Drive artifact must match the observed file ID: ${model.id}`);
+      }
       if (artifact.type === "release") {
         const repository = new URL(artifact.repositoryUrl);
         if (repository.hostname !== "github.com" || !/^\/[^/]+\/[^/]+$/.test(repository.pathname)
@@ -78,9 +81,16 @@ export function validateTaskModels(tasks: TaxonomyTask[], models: OpenWeightMode
   for (const task of tasks) {
     if (!definitions.some((source) => source.id === task.definitionSourceId)) throw new Error(`Missing task definition: ${task.id}`);
     unique(task.recommendations.map((entry) => entry.modelId), `recommendation in ${task.id}`);
+    if (task.review) {
+      unique(task.review.sourceIds, `review source in ${task.id}`);
+      if (task.review.sourceIds.some((id) => !bySource.has(id))) throw new Error(`Unresolved task review evidence: ${task.id}`);
+      const hasDocumentedModel = task.recommendations.some((entry) => entry.evidence !== "adaptation");
+      if ((task.review.outcome === "no-verified-model") === hasDocumentedModel) throw new Error(`Task review outcome contradicts model evidence: ${task.id}`);
+    }
     for (const entry of task.recommendations) {
       const model = byModel.get(entry.modelId);
       if (!model || entry.sourceIds.some((id) => !bySource.has(id))) throw new Error(`Unresolved task evidence: ${task.id}`);
+      unique(entry.sourceIds, `source in ${task.id}/${entry.modelId}`);
       if (!entry.sourceIds.includes(model.cardSourceId)) throw new Error(`Task evidence must cite the exact model: ${task.id}`);
     }
   }

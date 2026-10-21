@@ -106,11 +106,16 @@ for (const width of [1440, 390]) {
     const panel = page.locator("#model-family-panel");
     await expect(panel.getByText("Öğrenilmiş kurallar ve destek istatistikleri", { exact: true })).toBeVisible();
     await expect(panel.getByRole("link", { name: "Öğrenilmiş kural dosyaları" })).toHaveAttribute("href", /anyburl-rules-c5-3600$/);
-    await panel.getByText("Model dosyasının kimliği", { exact: true }).click();
-    await expect(panel.locator(".model-artifact-details")).toContainText("anyburl-rules-c5-3600");
+    const anyburl = panel.locator(".model-family-card").filter({ has: page.locator("#family-model-anyburl-rules") });
+    await anyburl.getByText("Model dosyasının kimliği", { exact: true }).click();
+    await expect(anyburl.locator(".model-artifact-details")).toContainText("anyburl-rules-c5-3600");
     await panel.getByRole("link", { name: "Link Prediction →", exact: true }).click();
     await expect(page).toHaveURL(/task=link-prediction$/);
     await expect(page.getByRole("heading", { name: "AnyBURL · WN18RR learned rules" })).toBeVisible();
+    await page.goBack();
+    await panel.getByRole("link", { name: "Classical Planning →", exact: true }).click();
+    await expect(page.getByRole("heading", { name: "GOOSE · IPC23LT Blocks World" })).toBeVisible();
+    await expect(page.locator('[data-research-outcome="pipeline"]')).toBeVisible();
     await page.goBack();
     const selector = page.getByRole("combobox", { name: "Model ailesi veya kavram seç" });
     await selector.selectOption("nearest-neighbor-models");
@@ -120,12 +125,13 @@ for (const width of [1440, 390]) {
     await expect(panel.locator(".model-artifact-details")).toContainText("WavLM-Large.pt");
     await expect(panel.locator(".model-artifact-details")).toContainText("prematch_g_02500000.pt");
     await selector.selectOption("normalizing-flows");
-    await panel.getByText("Model dosyasının kimliği", { exact: true }).click();
-    await expect(panel.locator(".model-artifact-details")).toContainText("değişmez Git ağırlık sürümü değildir");
-    await expect(panel.locator(".model-artifact-details")).toContainText("ETag");
+    const glow = panel.locator(".model-family-card").filter({ has: page.locator("#family-model-glow") });
+    await glow.getByText("Model dosyasının kimliği", { exact: true }).click();
+    await expect(glow.locator(".model-artifact-details")).toContainText("değişmez Git ağırlık sürümü değildir");
+    await expect(glow.locator(".model-artifact-details")).toContainText("ETag");
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     await page.getByRole("button", { name: "English", exact: true }).click();
     await expect(panel.getByRole("heading", { name: "Research result and scope" })).toBeVisible();
-    await expect(panel.getByText("Artifact identity", { exact: true })).toBeVisible();
+    await expect(glow.getByText("Artifact identity", { exact: true })).toBeVisible();
   });
 }

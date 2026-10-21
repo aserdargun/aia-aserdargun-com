@@ -3101,6 +3101,487 @@ export const taskModelSources = [
     "url": "https://arxiv.org/abs/2305.18975",
     "kind": "documentation",
     "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-p5-beauty-small",
+    "title": "P5 Beauty Small — author-linked model distribution",
+    "publisher": "makitanikaze / linked by P5 authors",
+    "url": "https://huggingface.co/makitanikaze/P5_beauty_small",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "8d67aef9aea18955cfb038bbbf48f764104ca09a"
+  },
+  {
+    "id": "ow-p5-beauty-small-weights",
+    "title": "P5 Beauty Small — pinned weight files",
+    "publisher": "makitanikaze",
+    "url": "https://huggingface.co/makitanikaze/P5_beauty_small/tree/8d67aef9aea18955cfb038bbbf48f764104ca09a",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "8d67aef9aea18955cfb038bbbf48f764104ca09a"
+  },
+  {
+    "id": "ow-p5-author-release",
+    "title": "P5 — author release and Hugging Face distribution link",
+    "publisher": "P5 authors",
+    "url": "https://github.com/jeykigung/P5/blob/1fa28ba7bb3946da94677013cc88e392cfc760ca/README.md",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "1fa28ba7bb3946da94677013cc88e392cfc760ca"
+  },
+  {
+    "id": "ow-p5-beauty-evaluation",
+    "title": "P5 Beauty Small — rating and top-k evaluation notebook",
+    "publisher": "P5 authors",
+    "url": "https://github.com/jeykigung/P5/blob/1fa28ba7bb3946da94677013cc88e392cfc760ca/notebooks/test_beauty_small.ipynb",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "1fa28ba7bb3946da94677013cc88e392cfc760ca"
+  },
+  {
+    "id": "ow-p5-beauty-config",
+    "title": "P5 Beauty Small — T5 architecture and training tasks",
+    "publisher": "makitanikaze",
+    "url": "https://huggingface.co/makitanikaze/P5_beauty_small/blob/8d67aef9aea18955cfb038bbbf48f764104ca09a/config.json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-scan-cifar10",
+    "title": "SCAN CIFAR-10 — clustering model zoo and inference",
+    "publisher": "SCAN authors",
+    "url": "https://github.com/wvangansbeke/Unsupervised-Classification/blob/952ec31eee2c38e7233d8ad3ac0de39bb031877a/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "952ec31eee2c38e7233d8ad3ac0de39bb031877a"
+  },
+  {
+    "id": "ow-scan-license",
+    "title": "SCAN — noncommercial license",
+    "publisher": "SCAN authors",
+    "url": "https://github.com/wvangansbeke/Unsupervised-Classification/blob/952ec31eee2c38e7233d8ad3ac0de39bb031877a/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "952ec31eee2c38e7233d8ad3ac0de39bb031877a"
+  },
+  {
+    "id": "ow-scan-cifar10-weights",
+    "title": "SCAN-loss CIFAR-10 — scan_cifar-10.pth.tar",
+    "publisher": "SCAN authors",
+    "url": "https://drive.google.com/file/d/1v6b6jJY5M4-duSqWpGFmdf9e9T3dPrx0/view",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "artifact": {
+      "type": "google-drive",
+      "evidenceSourceId": "ow-scan-cifar10",
+      "fileId": "1v6b6jJY5M4-duSqWpGFmdf9e9T3dPrx0",
+      "fileName": "scan_cifar-10.pth.tar",
+      "sizeBytes": 44757714
+    }
+  },
+  {
+    "id": "ow-uva-saved-models",
+    "title": "UvA deep-learning tutorials — released PyTorch models",
+    "publisher": "Phillip Lippe / UvA",
+    "url": "https://github.com/phlippe/saved_models/blob/e38faed1ab83a593d2c90098ea563d32287fc80f/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "e38faed1ab83a593d2c90098ea563d32287fc80f"
+  },
+  {
+    "id": "ow-uva-model-license",
+    "title": "UvA saved models — MIT license",
+    "publisher": "Phillip Lippe",
+    "url": "https://github.com/phlippe/saved_models/blob/e38faed1ab83a593d2c90098ea563d32287fc80f/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "e38faed1ab83a593d2c90098ea563d32287fc80f"
+  },
+  {
+    "id": "ow-uva-autoencoder-method",
+    "title": "UvA Tutorial 9 — CIFAR-10 encoder and pretrained checkpoints",
+    "publisher": "Phillip Lippe / UvA",
+    "url": "https://github.com/phlippe/uvadlc_notebooks/blob/c7d9e18f42fee53bc8925f08ec2358371b1e9200/docs/tutorial_notebooks/tutorial9/AE_CIFAR10.ipynb",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "c7d9e18f42fee53bc8925f08ec2358371b1e9200"
+  },
+  {
+    "id": "ow-uva-autoencoder128-weights",
+    "title": "tutorial9/cifar10_128.ckpt — released artifact",
+    "publisher": "phlippe/saved_models",
+    "url": "https://github.com/phlippe/saved_models/blob/e38faed1ab83a593d2c90098ea563d32287fc80f/tutorial9/cifar10_128.ckpt",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "e38faed1ab83a593d2c90098ea563d32287fc80f",
+    "artifact": {
+      "type": "git",
+      "repositoryUrl": "https://github.com/phlippe/saved_models",
+      "path": "tutorial9/cifar10_128.ckpt",
+      "entry": "blob"
+    }
+  },
+  {
+    "id": "ow-uva-flow-method",
+    "title": "UvA Tutorial 11 — MNIST normalizing-flow likelihood",
+    "publisher": "Phillip Lippe / UvA",
+    "url": "https://github.com/phlippe/uvadlc_notebooks/blob/c7d9e18f42fee53bc8925f08ec2358371b1e9200/docs/tutorial_notebooks/tutorial11/NF_image_modeling.ipynb",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "c7d9e18f42fee53bc8925f08ec2358371b1e9200"
+  },
+  {
+    "id": "ow-uva-mnist-flow-weights",
+    "title": "tutorial11/MNISTFlow_multiscale.ckpt — released artifact",
+    "publisher": "phlippe/saved_models",
+    "url": "https://github.com/phlippe/saved_models/blob/e38faed1ab83a593d2c90098ea563d32287fc80f/tutorial11/MNISTFlow_multiscale.ckpt",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "e38faed1ab83a593d2c90098ea563d32287fc80f",
+    "artifact": {
+      "type": "git",
+      "repositoryUrl": "https://github.com/phlippe/saved_models",
+      "path": "tutorial11/MNISTFlow_multiscale.ckpt",
+      "entry": "blob"
+    }
+  },
+  {
+    "id": "ow-autocpd-hasc",
+    "title": "AutoCPD — pretrained HASC demonstration",
+    "publisher": "AutoCPD authors",
+    "url": "https://github.com/Jieli12/AutoCPD/blob/a4c244776775e4295ddee241410a85708f6d9a64/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "a4c244776775e4295ddee241410a85708f6d9a64"
+  },
+  {
+    "id": "ow-autocpd-inference",
+    "title": "AutoCPD — HASC preprocessing and change-point extraction",
+    "publisher": "AutoCPD authors",
+    "url": "https://github.com/Jieli12/AutoCPD/blob/a4c244776775e4295ddee241410a85708f6d9a64/test/test_load_pretrained_model.py",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "a4c244776775e4295ddee241410a85708f6d9a64"
+  },
+  {
+    "id": "ow-autocpd-license",
+    "title": "AutoCPD — MIT repository license",
+    "publisher": "AutoCPD authors",
+    "url": "https://github.com/Jieli12/AutoCPD/blob/a4c244776775e4295ddee241410a85708f6d9a64/LICENSE.txt",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "a4c244776775e4295ddee241410a85708f6d9a64"
+  },
+  {
+    "id": "ow-autocpd-package",
+    "title": "AutoCPD 0.1.5 — distribution metadata and published digests",
+    "publisher": "AutoCPD authors / PyPI",
+    "url": "https://pypi.org/pypi/autocpd/0.1.5/json",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-autocpd-hasc-weights",
+    "title": "AutoCPD 0.1.5 — wheel containing HASC model and label dictionary",
+    "publisher": "AutoCPD authors / PyPI",
+    "url": "https://files.pythonhosted.org/packages/1a/85/c3c2af34062ede635d9dd8cc2d45fb6b0835a763ea3a029d77cac27c42ac/autocpd-0.1.5-py3-none-any.whl",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "artifact": {
+      "type": "publisher-file",
+      "evidenceSourceId": "ow-autocpd-package",
+      "fileName": "autocpd-0.1.5-py3-none-any.whl",
+      "sizeBytes": 11651829,
+      "etag": "\"d77883506012b86f5e572ca51baf9ea6\"",
+      "publisherChecksum": {
+        "algorithm": "sha256",
+        "value": "c27c2c7ba35cc260dbd836da6b20e47a50bbe392e5515c572a7568945255542f"
+      }
+    }
+  },
+  {
+    "id": "ow-graphany-arxiv",
+    "title": "GraphAny Arxiv — released inductive node-classification model",
+    "publisher": "GraphAny authors",
+    "url": "https://github.com/DeepGraphLearning/GraphAny/blob/02c810e9977e89bda66f43ad4e206937af37cf26/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "02c810e9977e89bda66f43ad4e206937af37cf26"
+  },
+  {
+    "id": "ow-graphany-arxiv-weights",
+    "title": "checkpoints/graph_any_arxiv.pt — released artifact",
+    "publisher": "DeepGraphLearning/GraphAny",
+    "url": "https://github.com/DeepGraphLearning/GraphAny/blob/02c810e9977e89bda66f43ad4e206937af37cf26/checkpoints/graph_any_arxiv.pt",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "02c810e9977e89bda66f43ad4e206937af37cf26",
+    "artifact": {
+      "type": "git",
+      "repositoryUrl": "https://github.com/DeepGraphLearning/GraphAny",
+      "path": "checkpoints/graph_any_arxiv.pt",
+      "entry": "blob"
+    }
+  },
+  {
+    "id": "ow-graphany-license",
+    "title": "GraphAny — MIT license",
+    "publisher": "GraphAny authors",
+    "url": "https://github.com/DeepGraphLearning/GraphAny/blob/02c810e9977e89bda66f43ad4e206937af37cf26/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "02c810e9977e89bda66f43ad4e206937af37cf26"
+  },
+  {
+    "id": "ow-graphany-inputs",
+    "title": "GraphAny — graph features and labeled support-node inputs",
+    "publisher": "GraphAny authors",
+    "url": "https://github.com/DeepGraphLearning/GraphAny/blob/02c810e9977e89bda66f43ad4e206937af37cf26/graphany/data.py",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "02c810e9977e89bda66f43ad4e206937af37cf26"
+  },
+  {
+    "id": "ow-dgl-gcn-tox21",
+    "title": "DGL-LifeSci GCN canonical Tox21 — pretrained model registry",
+    "publisher": "DGL-LifeSci / AWS",
+    "url": "https://github.com/awslabs/dgl-lifesci/blob/be8bc71d29ecf34a9dab7c7bd47c08f3383d9be0/python/dgllife/model/pretrain/moleculenet/tox21.py",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "be8bc71d29ecf34a9dab7c7bd47c08f3383d9be0"
+  },
+  {
+    "id": "ow-dgl-gcn-readout",
+    "title": "DGL-LifeSci — graph pooling and classification logits",
+    "publisher": "DGL-LifeSci / AWS",
+    "url": "https://github.com/awslabs/dgl-lifesci/blob/be8bc71d29ecf34a9dab7c7bd47c08f3383d9be0/python/dgllife/model/model_zoo/gcn_predictor.py",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "be8bc71d29ecf34a9dab7c7bd47c08f3383d9be0"
+  },
+  {
+    "id": "ow-dgl-lifesci-license",
+    "title": "DGL-LifeSci — Apache-2.0 repository license",
+    "publisher": "DGL-LifeSci / AWS",
+    "url": "https://github.com/awslabs/dgl-lifesci/blob/be8bc71d29ecf34a9dab7c7bd47c08f3383d9be0/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "be8bc71d29ecf34a9dab7c7bd47c08f3383d9be0"
+  },
+  {
+    "id": "ow-dgl-gcn-tox21-weights",
+    "title": "GCN canonical Tox21 — published checkpoint",
+    "publisher": "DGL-LifeSci / AWS",
+    "url": "https://data.dgl.ai/dgllife/pre_trained/gcn_canonical_tox21.pth",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "artifact": {
+      "type": "publisher-file",
+      "evidenceSourceId": "ow-dgl-gcn-tox21",
+      "fileName": "gcn_canonical_tox21.pth",
+      "sizeBytes": 68744,
+      "etag": "\"b71a98b00ace63e4b22f92dac7e77ad1\""
+    }
+  },
+  {
+    "id": "ow-hrm-sudoku",
+    "title": "HRM Sudoku Extreme — author checkpoint",
+    "publisher": "Sapient Intelligence",
+    "url": "https://huggingface.co/sapientinc/HRM-checkpoint-sudoku-extreme",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "fbb4eb883766c31c8e863426460ebaa0ceb1a5f2"
+  },
+  {
+    "id": "ow-hrm-sudoku-weights",
+    "title": "HRM Sudoku Extreme — pinned checkpoint and configuration",
+    "publisher": "Sapient Intelligence",
+    "url": "https://huggingface.co/sapientinc/HRM-checkpoint-sudoku-extreme/tree/fbb4eb883766c31c8e863426460ebaa0ceb1a5f2",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "fbb4eb883766c31c8e863426460ebaa0ceb1a5f2"
+  },
+  {
+    "id": "ow-hrm-author-release",
+    "title": "HRM — architecture, Sudoku checkpoint and evaluation",
+    "publisher": "Sapient Intelligence",
+    "url": "https://github.com/sapientinc/HRM/blob/ac15626f8db096a63c775b84c9dc868776a6feda/README.md",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "ac15626f8db096a63c775b84c9dc868776a6feda"
+  },
+  {
+    "id": "ow-hrm-repository-license",
+    "title": "HRM — Apache-2.0 repository license",
+    "publisher": "Sapient Intelligence",
+    "url": "https://github.com/sapientinc/HRM/blob/ac15626f8db096a63c775b84c9dc868776a6feda/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "ac15626f8db096a63c775b84c9dc868776a6feda"
+  },
+  {
+    "id": "ow-goose-blocksworld",
+    "title": "GOOSE — PDDL planning with released learned heuristics",
+    "publisher": "Dillon Z. Chen and collaborators",
+    "url": "https://github.com/DillonZChen/goose/blob/04dbe8f27a8ec027626e6c6b5d6e7610b81f9d57/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "04dbe8f27a8ec027626e6c6b5d6e7610b81f9d57"
+  },
+  {
+    "id": "ow-goose-pretrained",
+    "title": "GOOSE — pretrained model versions and benchmark scope",
+    "publisher": "GOOSE authors",
+    "url": "https://github.com/DillonZChen/goose/blob/04dbe8f27a8ec027626e6c6b5d6e7610b81f9d57/pretrained_models/README.md",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "04dbe8f27a8ec027626e6c6b5d6e7610b81f9d57"
+  },
+  {
+    "id": "ow-goose-training-config",
+    "title": "GOOSE — Weisfeiler–Leman features and rank-SVM training",
+    "publisher": "GOOSE authors",
+    "url": "https://github.com/DillonZChen/goose/blob/04dbe8f27a8ec027626e6c6b5d6e7610b81f9d57/configurations/classic.toml",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "04dbe8f27a8ec027626e6c6b5d6e7610b81f9d57"
+  },
+  {
+    "id": "ow-goose-blocksworld-weights",
+    "title": "pretrained_models/ipc23lt-blocksworld.model — released artifact",
+    "publisher": "DillonZChen/goose",
+    "url": "https://github.com/DillonZChen/goose/blob/04dbe8f27a8ec027626e6c6b5d6e7610b81f9d57/pretrained_models/ipc23lt-blocksworld.model",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "04dbe8f27a8ec027626e6c6b5d6e7610b81f9d57",
+    "artifact": {
+      "type": "git",
+      "repositoryUrl": "https://github.com/DillonZChen/goose",
+      "path": "pretrained_models/ipc23lt-blocksworld.model",
+      "entry": "blob"
+    }
+  },
+  {
+    "id": "ow-goose-license",
+    "title": "GOOSE — MIT repository license",
+    "publisher": "Dillon Z. Chen",
+    "url": "https://github.com/DillonZChen/goose/blob/04dbe8f27a8ec027626e6c6b5d6e7610b81f9d57/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "04dbe8f27a8ec027626e6c6b5d6e7610b81f9d57"
+  },
+  {
+    "id": "ow-hloc-superglue",
+    "title": "SuperPoint + SuperGlue outdoor — released visual matching models",
+    "publisher": "Magic Leap / SuperGlue authors",
+    "url": "https://github.com/magicleap/SuperGluePretrainedNetwork/blob/ddcf11f42e7e0732a0c4607648f9448ea8d73590/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "ddcf11f42e7e0732a0c4607648f9448ea8d73590"
+  },
+  {
+    "id": "ow-hloc-superglue-weights",
+    "title": "models/weights — released artifact",
+    "publisher": "magicleap/SuperGluePretrainedNetwork",
+    "url": "https://github.com/magicleap/SuperGluePretrainedNetwork/tree/ddcf11f42e7e0732a0c4607648f9448ea8d73590/models/weights",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "ddcf11f42e7e0732a0c4607648f9448ea8d73590",
+    "artifact": {
+      "type": "git",
+      "repositoryUrl": "https://github.com/magicleap/SuperGluePretrainedNetwork",
+      "path": "models/weights",
+      "entry": "tree"
+    }
+  },
+  {
+    "id": "ow-superglue-license",
+    "title": "SuperGlue — noncommercial academic/research license",
+    "publisher": "Magic Leap",
+    "url": "https://github.com/magicleap/SuperGluePretrainedNetwork/blob/ddcf11f42e7e0732a0c4607648f9448ea8d73590/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "ddcf11f42e7e0732a0c4607648f9448ea8d73590"
+  },
+  {
+    "id": "ow-hloc-pipeline",
+    "title": "hloc — image-to-map visual localization pipeline",
+    "publisher": "hloc authors",
+    "url": "https://github.com/cvg/Hierarchical-Localization/blob/c13273bd0ecc2917a35910fd843712a1c6243193/README.md",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "c13273bd0ecc2917a35910fd843712a1c6243193"
+  },
+  {
+    "id": "ow-hloc-pose",
+    "title": "hloc — calibrated 2D–3D absolute pose estimation",
+    "publisher": "hloc authors",
+    "url": "https://github.com/cvg/Hierarchical-Localization/blob/c13273bd0ecc2917a35910fd843712a1c6243193/hloc/localize_sfm.py",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "c13273bd0ecc2917a35910fd843712a1c6243193"
+  },
+  {
+    "id": "ow-hloc-matcher",
+    "title": "hloc — SuperGlue outdoor matcher configuration",
+    "publisher": "hloc authors",
+    "url": "https://github.com/cvg/Hierarchical-Localization/blob/c13273bd0ecc2917a35910fd843712a1c6243193/hloc/match_features.py",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "c13273bd0ecc2917a35910fd843712a1c6243193"
+  },
+  {
+    "id": "ow-hloc-license",
+    "title": "hloc — Apache-2.0 code license",
+    "publisher": "hloc authors",
+    "url": "https://github.com/cvg/Hierarchical-Localization/blob/c13273bd0ecc2917a35910fd843712a1c6243193/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "c13273bd0ecc2917a35910fd843712a1c6243193"
+  },
+  {
+    "id": "ow-mpinets-hybrid",
+    "title": "Motion Policy Networks — released checkpoint and inference",
+    "publisher": "MPiNets authors / NVIDIA",
+    "url": "https://github.com/NVlabs/motion-policy-networks/blob/42ff07bb95bd75f7c7752bf4300eb53698ae099d/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "42ff07bb95bd75f7c7752bf4300eb53698ae099d"
+  },
+  {
+    "id": "ow-mpinets-rollout",
+    "title": "MPiNets — Franka rollout, goals and point-cloud inputs",
+    "publisher": "MPiNets authors / NVIDIA",
+    "url": "https://github.com/NVlabs/motion-policy-networks/blob/42ff07bb95bd75f7c7752bf4300eb53698ae099d/mpinets/run_inference.py",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "42ff07bb95bd75f7c7752bf4300eb53698ae099d"
+  },
+  {
+    "id": "ow-mpinets-zenodo",
+    "title": "MPiNets — publisher archive, file checksum and CC-BY-4.0 license",
+    "publisher": "MPiNets authors / Zenodo",
+    "url": "https://zenodo.org/records/8319949",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "ow-mpinets-hybrid-weights",
+    "title": "MPiNets hybrid expert — pretrained checkpoint",
+    "publisher": "MPiNets authors / Zenodo",
+    "url": "https://zenodo.org/records/8319949/files/mpinets_hybrid_expert.ckpt?download=1",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "artifact": {
+      "type": "publisher-file",
+      "evidenceSourceId": "ow-mpinets-zenodo",
+      "fileName": "mpinets_hybrid_expert.ckpt",
+      "sizeBytes": 228862379,
+      "publisherChecksum": {
+        "algorithm": "md5",
+        "value": "d2eb2da582f1934dea75ce9f4e5efbc9"
+      }
+    }
   }
 ] satisfies TaskModelSource[];
 

@@ -26,12 +26,14 @@ for (const width of [1440, 390]) {
     await expect(page).toHaveURL(/\?task=automatic-speech-recognition$/);
     await expect(qwenAsr.getByRole("link", { name: "Weight files" })).toBeVisible();
     await page.getByRole("combobox", { name: "Select a task" }).selectOption("constraint-satisfaction");
-    await expect(page.getByRole("heading", { name: "No verified pretrained recommendation" })).toBeVisible();
-    await expect(page.locator(".task-model-card")).toHaveCount(0);
+    await expect(page.getByRole("heading", { name: "HRM · Sudoku Extreme 9×9" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Research result and scope" })).toBeVisible();
+    await expect(page.locator(".task-research-review")).toContainText("not a complete solver");
+    await expect(page.locator(".task-model-card")).toHaveCount(1);
     await page.goBack();
     await expect(panel).toBeVisible();
     await page.goForward();
-    await expect(page.getByRole("heading", { name: "No verified pretrained recommendation" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "HRM · Sudoku Extreme 9×9" })).toBeVisible();
     await page.getByRole("button", { name: "Close model panel" }).click();
     await expect(page.locator("#task-model-panel")).toHaveCount(0);
     await expect(page.locator('a[data-task-id="constraint-satisfaction"]')).toBeFocused();
@@ -68,3 +70,36 @@ test("every task selects its own evidence or explicit coverage gap", async ({ pa
     await expect(panel.locator('a[href^="https://"]')).not.toHaveCount(0);
   }
 });
+
+for (const locale of ["en", "tr"] as const) {
+  test(`${locale}: researched tasks disclose scope, non-neural parameters and publisher artifact identities`, async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 900 });
+    await page.goto(`/taxonomy/tasks?lang=${locale}&task=classical-planning`);
+    const panel = page.locator("#task-model-panel");
+    await expect(panel.getByRole("heading", { name: "GOOSE · IPC23LT Blocks World" })).toBeVisible();
+    await expect(panel.locator('[data-research-outcome="pipeline"]')).toBeVisible();
+    await expect(panel.locator('[data-parameter-kind="statistical"]')).toBeVisible();
+    await panel.locator(".task-research-review summary").click();
+    await expect(panel.locator('.task-research-review a[href*="DillonZChen/goose"]')).toHaveCount(4);
+
+    const select = page.getByRole("combobox", { name: locale === "tr" ? "Görev seç" : "Select a task" });
+    await select.selectOption("clustering");
+    await panel.locator(".model-artifact-details summary").click();
+    await expect(panel.locator(".model-artifact-details")).toContainText("scan_cifar-10.pth.tar");
+    await expect(panel.locator(".model-artifact-details")).toContainText("1v6b6jJY5M4-duSqWpGFmdf9e9T3dPrx0");
+
+    await select.selectOption("robot-motion-planning");
+    await panel.locator(".model-artifact-details summary").click();
+    await expect(panel.locator(".model-artifact-details")).toContainText("d2eb2da582f1934dea75ce9f4e5efbc9");
+    await expect(panel.locator(".model-artifact-details")).toContainText(locale === "tr" ? "yeniden hesaplanmadı" : "not been recomputed");
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+
+    const researched = taxonomyTasks.filter((task) => "review" in task);
+    expect(researched).toHaveLength(12);
+    for (const task of researched) {
+      await select.selectOption(task.id);
+      await expect(panel.locator(".task-research-review")).toBeVisible();
+      await expect(panel.locator(".task-model-card")).toHaveCount(task.recommendations.length);
+    }
+  });
+}

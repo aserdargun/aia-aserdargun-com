@@ -3,7 +3,7 @@ import { z } from "zod";
 export const schemaVersions = {
   vendor: 1, category: 1, capability: 1, vendorEntry: 1,
   assessment: 1, model: 3, plan: 1, source: 2, taxonomyMap: 1, taxonomySource: 1,
-  taskModelSource: 2, openWeightModel: 2, taxonomyTask: 1, modelFamily: 2,
+  taskModelSource: 3, openWeightModel: 2, taxonomyTask: 2, modelFamily: 2,
 } as const;
 
 // Ordered, editorial focus areas based on the model's cited evidence.
@@ -256,7 +256,15 @@ export const taskModelSourceSchema = z.object({
   revision: z.string().regex(/^[a-f0-9]{40}$/).optional(),
   artifact: z.discriminatedUnion("type", [
     z.object({ type: z.literal("git"), repositoryUrl: httpsUrlSchema, path: z.string().min(1), entry: z.enum(["blob", "tree"]) }).strict(),
-    z.object({ type: z.literal("publisher-file"), evidenceSourceId: z.string().regex(/^ow-[a-z0-9-]+$/), fileName: z.string().min(1), sizeBytes: z.number().int().positive(), etag: z.string().min(1) }).strict(),
+    z.object({
+      type: z.literal("publisher-file"), evidenceSourceId: z.string().regex(/^ow-[a-z0-9-]+$/),
+      fileName: z.string().min(1), sizeBytes: z.number().int().positive(), etag: z.string().min(1).optional(),
+      publisherChecksum: z.discriminatedUnion("algorithm", [
+        z.object({ algorithm: z.literal("sha256"), value: z.string().regex(/^[a-f0-9]{64}$/) }).strict(),
+        z.object({ algorithm: z.literal("md5"), value: z.string().regex(/^[a-f0-9]{32}$/) }).strict(),
+      ]).optional(),
+    }).strict().refine((artifact) => Boolean(artifact.etag || artifact.publisherChecksum), "Publisher file needs an ETag or publisher checksum."),
+    z.object({ type: z.literal("google-drive"), evidenceSourceId: z.string().regex(/^ow-[a-z0-9-]+$/), fileId: z.string().regex(/^[a-zA-Z0-9_-]+$/), fileName: z.string().min(1), sizeBytes: z.number().int().positive() }).strict(),
     z.object({ type: z.literal("release"), evidenceSourceId: z.string().regex(/^ow-[a-z0-9-]+$/), repositoryUrl: httpsUrlSchema, tag: z.string().min(1), files: z.array(z.object({ name: z.string().min(1), sizeBytes: z.number().int().positive() }).strict()).min(1) }).strict(),
   ]).optional(),
 }).strict();
@@ -282,6 +290,12 @@ export const taxonomyTaskSchema = z.object({
   definition: z.string().min(1),
   definitionSourceId: taxonomySourceSchema.shape.id,
   note: bilingualTextSchema,
+  review: z.object({
+    observedAt: z.iso.date(),
+    outcome: z.enum(["specialist", "pipeline", "no-verified-model"]),
+    summary: bilingualTextSchema,
+    sourceIds: z.array(taskModelSourceSchema.shape.id).min(1),
+  }).strict().optional(),
   recommendations: z.array(z.object({
     modelId: openWeightModelSchema.shape.id,
     evidence: z.enum(["evaluated", "documented", "adaptation"]),

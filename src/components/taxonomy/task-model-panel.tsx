@@ -21,6 +21,18 @@ export function TaskModelPanel({ task, models, sources, definitions, locale, onC
       <p className="task-model-definition" lang="en">{task.definition}</p>
       <a className="task-model-definition-link" href={definition.url} target="_blank" rel="noreferrer">{labels.definition} ↗</a>
       <p className="task-model-note">{task.note[locale]}</p>
+      {task.review ? <section className="model-family-review task-research-review" aria-labelledby="task-review-title">
+        <h3 id="task-review-title">{labels.research}</h3>
+        <small>{labels.reviewed} · <time dateTime={task.review.observedAt}>{task.review.observedAt}</time></small>
+        <p className="task-model-badges"><span data-research-outcome={task.review.outcome}>{labels.researchOutcomes[task.review.outcome]}</span></p>
+        <p>{task.review.summary[locale]}</p>
+        <details className="task-model-evidence"><summary>{labels.researchSources} ({task.review.sourceIds.length})</summary>
+          <ul>{task.review.sourceIds.map((id) => {
+            const source = bySource.get(id)!;
+            return <li key={id}><a href={source.url} target="_blank" rel="noreferrer" lang="en">{source.title} ↗</a><small>{source.publisher} · {source.observedAt}</small></li>;
+          })}</ul>
+        </details>
+      </section> : null}
       <p className="task-model-count" role="status">{task.recommendations.length} {labels.count}</p>
       {task.recommendations.length === 0 ? <h3 className="task-model-empty">{labels.empty}</h3> : null}
       {task.recommendations.map((entry) => {

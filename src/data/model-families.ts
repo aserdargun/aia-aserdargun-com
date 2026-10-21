@@ -25,6 +25,18 @@ export const modelFamilies = [
           "ow-anyburl-syntax",
           "ow-anyburl-loader"
         ]
+      },
+      {
+        "modelId": "goose-blocksworld",
+        "relation": "component",
+        "rationale": {
+          "en": "PDDL predicates, action schemas and a symbolic search engine are components of the pipeline around the learned heuristic.",
+          "tr": "PDDL yüklemleri, eylem şemaları ve sembolik arama motoru, öğrenilmiş sezgisel modelin çevresindeki işlem hattının bileşenleridir."
+        },
+        "sourceIds": [
+          "ow-goose-blocksworld",
+          "ow-goose-blocksworld-weights"
+        ]
       }
     ],
     "review": {
@@ -97,6 +109,19 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-fasttext-lid",
           "ow-fasttext-paper"
+        ]
+      },
+      {
+        "modelId": "goose-blocksworld",
+        "relation": "member",
+        "rationale": {
+          "en": "GOOSE’s published heuristic is a linear scorer over graph features; the archive contains its numerical coefficients. It is not a logistic classifier.",
+          "tr": "GOOSE’un yayımlanan sezgisel modeli graf özellikleri üzerinde doğrusal puanlayıcıdır; arşiv sayısal katsayılarını içerir. Lojistik sınıflandırıcı değildir."
+        },
+        "sourceIds": [
+          "ow-goose-blocksworld",
+          "ow-goose-training-config",
+          "ow-goose-blocksworld-weights"
         ]
       }
     ],
@@ -1020,6 +1045,125 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-jem"
         ]
+      },
+      {
+        "modelId": "p5-beauty-small",
+        "relation": "member",
+        "rationale": {
+          "en": "The released configuration declares a T5 encoder–decoder with a P5 recommendation head and task objectives.",
+          "tr": "Yayımlanan yapılandırma, P5 öneri hedefleriyle kullanılan T5 kodlayıcı–çözücü mimarisini belirtir."
+        },
+        "sourceIds": [
+          "ow-p5-beauty-small",
+          "ow-p5-beauty-config"
+        ]
+      },
+      {
+        "modelId": "scan-cifar10",
+        "relation": "member",
+        "rationale": {
+          "en": "SCAN learns image clusters with a convolutional backbone and unlabeled-image training; this entry is the fitted CIFAR-10 SCAN-loss checkpoint.",
+          "tr": "SCAN, evrişimli omurga ve etiketsiz görüntü eğitimiyle kümeler öğrenir; bu kayıt eğitilmiş CIFAR-10 SCAN-loss sürümüdür."
+        },
+        "sourceIds": [
+          "ow-scan-cifar10"
+        ]
+      },
+      {
+        "modelId": "uva-autoencoder128",
+        "relation": "member",
+        "rationale": {
+          "en": "The tutorial’s convolutional encoder/decoder learns a compact image representation through reconstruction without class targets.",
+          "tr": "Eğitim materyalindeki evrişimli kodlayıcı/çözücü, sınıf hedefleri olmadan yeniden oluşturma yoluyla sıkıştırılmış görüntü gösterimi öğrenir."
+        },
+        "sourceIds": [
+          "ow-uva-saved-models",
+          "ow-uva-autoencoder-method"
+        ]
+      },
+      {
+        "modelId": "uva-mnist-flow",
+        "relation": "member",
+        "rationale": {
+          "en": "The trained multiscale image flow uses invertible coupling transformations and a likelihood objective; it has no supervised class target.",
+          "tr": "Eğitilmiş çok ölçekli görüntü akışı tersinir coupling dönüşümleri ve olabilirlik hedefi kullanır; denetimli sınıf hedefi yoktur."
+        },
+        "sourceIds": [
+          "ow-uva-saved-models",
+          "ow-uva-flow-method"
+        ]
+      },
+      {
+        "modelId": "autocpd-hasc",
+        "relation": "member",
+        "rationale": {
+          "en": "The HASC residual neural classifier is trained on labeled activity/transition windows; the documented pipeline extracts temporal change points.",
+          "tr": "HASC residual sinir ağı sınıflandırıcısı etiketli etkinlik/geçiş pencereleriyle eğitilir; belgelenmiş akış zamansal değişim noktalarını çıkarır."
+        },
+        "sourceIds": [
+          "ow-autocpd-hasc",
+          "ow-autocpd-inference"
+        ]
+      },
+      {
+        "modelId": "graphany-arxiv",
+        "relation": "member",
+        "rationale": {
+          "en": "GraphAny applies learned attention to graph predictors constructed from node features and a labeled subset of the target graph.",
+          "tr": "GraphAny, düğüm özellikleri ve hedef grafın etiketli alt kümesinden oluşturulan tahmincilere öğrenilmiş dikkat uygular."
+        },
+        "sourceIds": [
+          "ow-graphany-arxiv",
+          "ow-graphany-inputs"
+        ]
+      },
+      {
+        "modelId": "dgl-gcn-tox21",
+        "relation": "member",
+        "rationale": {
+          "en": "The Tox21 checkpoint uses graph convolutions, graph pooling and a supervised 12-output molecular classifier.",
+          "tr": "Tox21 sürümü graf evrişimleri, graf havuzlama ve denetimli 12 çıktılı molekül sınıflandırıcısı kullanır."
+        },
+        "sourceIds": [
+          "ow-dgl-gcn-tox21",
+          "ow-dgl-gcn-readout"
+        ]
+      },
+      {
+        "modelId": "hrm-sudoku",
+        "relation": "member",
+        "rationale": {
+          "en": "The author describes two interacting recurrent neural modules trained on Sudoku input/output examples; this membership does not imply a general constraint solver.",
+          "tr": "Yazar, Sudoku girdi/çıktı örnekleriyle eğitilen iki etkileşimli tekrarlayan sinir modülü tanımlar; üyelik genel kısıt çözücü desteği anlamına gelmez."
+        },
+        "sourceIds": [
+          "ow-hrm-sudoku",
+          "ow-hrm-author-release"
+        ]
+      },
+      {
+        "modelId": "hloc-superglue",
+        "relation": "component",
+        "rationale": {
+          "en": "The pipeline includes the released SuperPoint and SuperGlue neural checkpoints alongside geometric localization.",
+          "tr": "İşlem hattı, geometrik konumlamanın yanında yayımlanmış SuperPoint ve SuperGlue sinir ağı ağırlıklarını içerir."
+        },
+        "sourceIds": [
+          "ow-hloc-superglue",
+          "ow-hloc-pipeline"
+        ]
+      },
+      {
+        "modelId": "mpinets-hybrid",
+        "relation": "member",
+        "rationale": {
+          "en": "A neural motion policy learns from hybrid-expert trajectories and consumes robot/scene point clouds and joint-state inputs.",
+          "tr": "Sinir ağı hareket politikası hybrid-expert yörüngelerinden öğrenir; robot/sahne nokta bulutları ve eklem durumu girdilerini kullanır."
+        },
+        "sourceIds": [
+          "ow-mpinets-hybrid",
+          "ow-mpinets-rollout"
+        ]
       }
     ]
   },
@@ -1102,6 +1246,41 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-jem"
         ]
+      },
+      {
+        "modelId": "scan-cifar10",
+        "relation": "member",
+        "rationale": {
+          "en": "SCAN learns image clusters with a convolutional backbone and unlabeled-image training; this entry is the fitted CIFAR-10 SCAN-loss checkpoint.",
+          "tr": "SCAN, evrişimli omurga ve etiketsiz görüntü eğitimiyle kümeler öğrenir; bu kayıt eğitilmiş CIFAR-10 SCAN-loss sürümüdür."
+        },
+        "sourceIds": [
+          "ow-scan-cifar10"
+        ]
+      },
+      {
+        "modelId": "uva-autoencoder128",
+        "relation": "member",
+        "rationale": {
+          "en": "The tutorial’s convolutional encoder/decoder learns a compact image representation through reconstruction without class targets.",
+          "tr": "Eğitim materyalindeki evrişimli kodlayıcı/çözücü, sınıf hedefleri olmadan yeniden oluşturma yoluyla sıkıştırılmış görüntü gösterimi öğrenir."
+        },
+        "sourceIds": [
+          "ow-uva-saved-models",
+          "ow-uva-autoencoder-method"
+        ]
+      },
+      {
+        "modelId": "autocpd-hasc",
+        "relation": "member",
+        "rationale": {
+          "en": "The HASC residual neural classifier is trained on labeled activity/transition windows; the documented pipeline extracts temporal change points.",
+          "tr": "HASC residual sinir ağı sınıflandırıcısı etiketli etkinlik/geçiş pencereleriyle eğitilir; belgelenmiş akış zamansal değişim noktalarını çıkarır."
+        },
+        "sourceIds": [
+          "ow-autocpd-hasc",
+          "ow-autocpd-inference"
+        ]
       }
     ]
   },
@@ -1126,6 +1305,18 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-stanza",
           "ow-family-stanza-paper"
+        ]
+      },
+      {
+        "modelId": "hrm-sudoku",
+        "relation": "member",
+        "rationale": {
+          "en": "The author describes two interacting recurrent neural modules trained on Sudoku input/output examples; this membership does not imply a general constraint solver.",
+          "tr": "Yazar, Sudoku girdi/çıktı örnekleriyle eğitilen iki etkileşimli tekrarlayan sinir modülü tanımlar; üyelik genel kısıt çözücü desteği anlamına gelmez."
+        },
+        "sourceIds": [
+          "ow-hrm-sudoku",
+          "ow-hrm-author-release"
         ]
       }
     ]
@@ -1603,6 +1794,18 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-llama31-rlhf"
         ]
+      },
+      {
+        "modelId": "p5-beauty-small",
+        "relation": "member",
+        "rationale": {
+          "en": "The released configuration declares a T5 encoder–decoder with a P5 recommendation head and task objectives.",
+          "tr": "Yayımlanan yapılandırma, P5 öneri hedefleriyle kullanılan T5 kodlayıcı–çözücü mimarisini belirtir."
+        },
+        "sourceIds": [
+          "ow-p5-beauty-small",
+          "ow-p5-beauty-config"
+        ]
       }
     ]
   },
@@ -1627,6 +1830,30 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-chgnet",
           "ow-chgnet-usage"
+        ]
+      },
+      {
+        "modelId": "dgl-gcn-tox21",
+        "relation": "member",
+        "rationale": {
+          "en": "The Tox21 checkpoint uses graph convolutions, graph pooling and a supervised 12-output molecular classifier.",
+          "tr": "Tox21 sürümü graf evrişimleri, graf havuzlama ve denetimli 12 çıktılı molekül sınıflandırıcısı kullanır."
+        },
+        "sourceIds": [
+          "ow-dgl-gcn-tox21",
+          "ow-dgl-gcn-readout"
+        ]
+      },
+      {
+        "modelId": "hloc-superglue",
+        "relation": "component",
+        "rationale": {
+          "en": "SuperGlue uses an attentional graph neural network for matching; the full hloc pipeline also includes a geometric solver.",
+          "tr": "SuperGlue eşleştirmede dikkat tabanlı graf sinir ağı kullanır; tam hloc akışı ayrıca geometrik çözücü içerir."
+        },
+        "sourceIds": [
+          "ow-hloc-superglue",
+          "ow-hloc-pipeline"
         ]
       }
     ],
@@ -2046,6 +2273,18 @@ export const modelFamilies = [
           "ow-seamless",
           "ow-family-seamless-config"
         ]
+      },
+      {
+        "modelId": "p5-beauty-small",
+        "relation": "member",
+        "rationale": {
+          "en": "The released configuration declares a T5 encoder–decoder with a P5 recommendation head and task objectives.",
+          "tr": "Yayımlanan yapılandırma, P5 öneri hedefleriyle kullanılan T5 kodlayıcı–çözücü mimarisini belirtir."
+        },
+        "sourceIds": [
+          "ow-p5-beauty-small",
+          "ow-p5-beauty-config"
+        ]
       }
     ]
   },
@@ -2244,6 +2483,66 @@ export const modelFamilies = [
           "ow-chgnet",
           "ow-chgnet-usage"
         ]
+      },
+      {
+        "modelId": "p5-beauty-small",
+        "relation": "member",
+        "rationale": {
+          "en": "Observed ratings and item sequences supervise the recommendation tasks in the author evaluation setup.",
+          "tr": "Yazarın değerlendirme düzeninde gözlenen puanlar ve ürün dizileri öneri görevlerinin hedefleridir."
+        },
+        "sourceIds": [
+          "ow-p5-beauty-small",
+          "ow-p5-beauty-evaluation"
+        ]
+      },
+      {
+        "modelId": "autocpd-hasc",
+        "relation": "member",
+        "rationale": {
+          "en": "The HASC residual neural classifier is trained on labeled activity/transition windows; the documented pipeline extracts temporal change points.",
+          "tr": "HASC residual sinir ağı sınıflandırıcısı etiketli etkinlik/geçiş pencereleriyle eğitilir; belgelenmiş akış zamansal değişim noktalarını çıkarır."
+        },
+        "sourceIds": [
+          "ow-autocpd-hasc",
+          "ow-autocpd-inference"
+        ]
+      },
+      {
+        "modelId": "dgl-gcn-tox21",
+        "relation": "member",
+        "rationale": {
+          "en": "The Tox21 checkpoint uses graph convolutions, graph pooling and a supervised 12-output molecular classifier.",
+          "tr": "Tox21 sürümü graf evrişimleri, graf havuzlama ve denetimli 12 çıktılı molekül sınıflandırıcısı kullanır."
+        },
+        "sourceIds": [
+          "ow-dgl-gcn-tox21",
+          "ow-dgl-gcn-readout"
+        ]
+      },
+      {
+        "modelId": "hrm-sudoku",
+        "relation": "member",
+        "rationale": {
+          "en": "The author describes two interacting recurrent neural modules trained on Sudoku input/output examples; this membership does not imply a general constraint solver.",
+          "tr": "Yazar, Sudoku girdi/çıktı örnekleriyle eğitilen iki etkileşimli tekrarlayan sinir modülü tanımlar; üyelik genel kısıt çözücü desteği anlamına gelmez."
+        },
+        "sourceIds": [
+          "ow-hrm-sudoku",
+          "ow-hrm-author-release"
+        ]
+      },
+      {
+        "modelId": "mpinets-hybrid",
+        "relation": "member",
+        "rationale": {
+          "en": "A neural motion policy learns from hybrid-expert trajectories and consumes robot/scene point clouds and joint-state inputs.",
+          "tr": "Sinir ağı hareket politikası hybrid-expert yörüngelerinden öğrenir; robot/sahne nokta bulutları ve eklem durumu girdilerini kullanır."
+        },
+        "sourceIds": [
+          "ow-mpinets-hybrid",
+          "ow-mpinets-rollout"
+        ]
       }
     ]
   },
@@ -2268,6 +2567,41 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-glow",
           "ow-glow-paper"
+        ]
+      },
+      {
+        "modelId": "scan-cifar10",
+        "relation": "member",
+        "rationale": {
+          "en": "SCAN learns image clusters with a convolutional backbone and unlabeled-image training; this entry is the fitted CIFAR-10 SCAN-loss checkpoint.",
+          "tr": "SCAN, evrişimli omurga ve etiketsiz görüntü eğitimiyle kümeler öğrenir; bu kayıt eğitilmiş CIFAR-10 SCAN-loss sürümüdür."
+        },
+        "sourceIds": [
+          "ow-scan-cifar10"
+        ]
+      },
+      {
+        "modelId": "uva-autoencoder128",
+        "relation": "member",
+        "rationale": {
+          "en": "The tutorial’s convolutional encoder/decoder learns a compact image representation through reconstruction without class targets.",
+          "tr": "Eğitim materyalindeki evrişimli kodlayıcı/çözücü, sınıf hedefleri olmadan yeniden oluşturma yoluyla sıkıştırılmış görüntü gösterimi öğrenir."
+        },
+        "sourceIds": [
+          "ow-uva-saved-models",
+          "ow-uva-autoencoder-method"
+        ]
+      },
+      {
+        "modelId": "uva-mnist-flow",
+        "relation": "member",
+        "rationale": {
+          "en": "The trained multiscale image flow uses invertible coupling transformations and a likelihood objective; it has no supervised class target.",
+          "tr": "Eğitilmiş çok ölçekli görüntü akışı tersinir coupling dönüşümleri ve olabilirlik hedefi kullanır; denetimli sınıf hedefi yoktur."
+        },
+        "sourceIds": [
+          "ow-uva-saved-models",
+          "ow-uva-flow-method"
         ]
       }
     ],
@@ -2304,6 +2638,18 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-resnet50-ssl",
           "ow-ssl-method"
+        ]
+      },
+      {
+        "modelId": "graphany-arxiv",
+        "relation": "member",
+        "rationale": {
+          "en": "GraphAny applies learned attention to graph predictors constructed from node features and a labeled subset of the target graph.",
+          "tr": "GraphAny, düğüm özellikleri ve hedef grafın etiketli alt kümesinden oluşturulan tahmincilere öğrenilmiş dikkat uygular."
+        },
+        "sourceIds": [
+          "ow-graphany-arxiv",
+          "ow-graphany-inputs"
         ]
       }
     ],
@@ -2822,6 +3168,18 @@ export const modelFamilies = [
           "ow-glow",
           "ow-glow-paper",
           "ow-glow-download"
+        ]
+      },
+      {
+        "modelId": "uva-mnist-flow",
+        "relation": "member",
+        "rationale": {
+          "en": "The trained multiscale image flow uses invertible coupling transformations and a likelihood objective; it has no supervised class target.",
+          "tr": "Eğitilmiş çok ölçekli görüntü akışı tersinir coupling dönüşümleri ve olabilirlik hedefi kullanır; denetimli sınıf hedefi yoktur."
+        },
+        "sourceIds": [
+          "ow-uva-saved-models",
+          "ow-uva-flow-method"
         ]
       }
     ],
@@ -3698,6 +4056,53 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-jem"
         ]
+      },
+      {
+        "modelId": "scan-cifar10",
+        "relation": "member",
+        "rationale": {
+          "en": "SCAN learns image clusters with a convolutional backbone and unlabeled-image training; this entry is the fitted CIFAR-10 SCAN-loss checkpoint.",
+          "tr": "SCAN, evrişimli omurga ve etiketsiz görüntü eğitimiyle kümeler öğrenir; bu kayıt eğitilmiş CIFAR-10 SCAN-loss sürümüdür."
+        },
+        "sourceIds": [
+          "ow-scan-cifar10"
+        ]
+      },
+      {
+        "modelId": "uva-autoencoder128",
+        "relation": "member",
+        "rationale": {
+          "en": "The tutorial’s convolutional encoder/decoder learns a compact image representation through reconstruction without class targets.",
+          "tr": "Eğitim materyalindeki evrişimli kodlayıcı/çözücü, sınıf hedefleri olmadan yeniden oluşturma yoluyla sıkıştırılmış görüntü gösterimi öğrenir."
+        },
+        "sourceIds": [
+          "ow-uva-saved-models",
+          "ow-uva-autoencoder-method"
+        ]
+      },
+      {
+        "modelId": "uva-mnist-flow",
+        "relation": "member",
+        "rationale": {
+          "en": "The trained multiscale image flow uses invertible coupling transformations and a likelihood objective; it has no supervised class target.",
+          "tr": "Eğitilmiş çok ölçekli görüntü akışı tersinir coupling dönüşümleri ve olabilirlik hedefi kullanır; denetimli sınıf hedefi yoktur."
+        },
+        "sourceIds": [
+          "ow-uva-saved-models",
+          "ow-uva-flow-method"
+        ]
+      },
+      {
+        "modelId": "hloc-superglue",
+        "relation": "member",
+        "rationale": {
+          "en": "Camera images supply features and matches for localization against a reference map.",
+          "tr": "Kamera görüntüleri, referans haritada konumlama için özellik ve eşleşmeleri sağlar."
+        },
+        "sourceIds": [
+          "ow-hloc-superglue",
+          "ow-hloc-pipeline"
+        ]
       }
     ]
   },
@@ -4004,6 +4409,18 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-moment"
         ]
+      },
+      {
+        "modelId": "autocpd-hasc",
+        "relation": "member",
+        "rationale": {
+          "en": "The HASC residual neural classifier is trained on labeled activity/transition windows; the documented pipeline extracts temporal change points.",
+          "tr": "HASC residual sinir ağı sınıflandırıcısı etiketli etkinlik/geçiş pencereleriyle eğitilir; belgelenmiş akış zamansal değişim noktalarını çıkarır."
+        },
+        "sourceIds": [
+          "ow-autocpd-hasc",
+          "ow-autocpd-inference"
+        ]
       }
     ]
   },
@@ -4039,6 +4456,42 @@ export const modelFamilies = [
         },
         "sourceIds": [
           "ow-anyburl-rules"
+        ]
+      },
+      {
+        "modelId": "graphany-arxiv",
+        "relation": "member",
+        "rationale": {
+          "en": "GraphAny applies learned attention to graph predictors constructed from node features and a labeled subset of the target graph.",
+          "tr": "GraphAny, düğüm özellikleri ve hedef grafın etiketli alt kümesinden oluşturulan tahmincilere öğrenilmiş dikkat uygular."
+        },
+        "sourceIds": [
+          "ow-graphany-arxiv",
+          "ow-graphany-inputs"
+        ]
+      },
+      {
+        "modelId": "dgl-gcn-tox21",
+        "relation": "member",
+        "rationale": {
+          "en": "The Tox21 checkpoint uses graph convolutions, graph pooling and a supervised 12-output molecular classifier.",
+          "tr": "Tox21 sürümü graf evrişimleri, graf havuzlama ve denetimli 12 çıktılı molekül sınıflandırıcısı kullanır."
+        },
+        "sourceIds": [
+          "ow-dgl-gcn-tox21",
+          "ow-dgl-gcn-readout"
+        ]
+      },
+      {
+        "modelId": "goose-blocksworld",
+        "relation": "member",
+        "rationale": {
+          "en": "The pipeline represents PDDL states as graphs and applies Weisfeiler–Leman features before its learned scorer.",
+          "tr": "İşlem hattı, PDDL durumlarını graf olarak temsil eder ve öğrenilmiş puanlayıcıdan önce Weisfeiler–Leman özellikleri uygular."
+        },
+        "sourceIds": [
+          "ow-goose-blocksworld",
+          "ow-goose-training-config"
         ]
       }
     ],
@@ -4096,6 +4549,30 @@ export const modelFamilies = [
         },
         "sourceIds": [
           "ow-boltz"
+        ]
+      },
+      {
+        "modelId": "hloc-superglue",
+        "relation": "component",
+        "rationale": {
+          "en": "A 3D SfM map and 2D–3D correspondences are geometric components required for pose estimation.",
+          "tr": "3B SfM haritası ve 2B–3B eşleşmeler, poz kestirimi için gerekli geometrik bileşenlerdir."
+        },
+        "sourceIds": [
+          "ow-hloc-superglue",
+          "ow-hloc-pose"
+        ]
+      },
+      {
+        "modelId": "mpinets-hybrid",
+        "relation": "member",
+        "rationale": {
+          "en": "A neural motion policy learns from hybrid-expert trajectories and consumes robot/scene point clouds and joint-state inputs.",
+          "tr": "Sinir ağı hareket politikası hybrid-expert yörüngelerinden öğrenir; robot/sahne nokta bulutları ve eklem durumu girdilerini kullanır."
+        },
+        "sourceIds": [
+          "ow-mpinets-hybrid",
+          "ow-mpinets-rollout"
         ]
       }
     ]

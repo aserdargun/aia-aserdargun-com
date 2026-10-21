@@ -2,11 +2,53 @@ import { readFileSync } from "node:fs";
 import { openWeightModels, taxonomyTasks } from "@/data/task-models";
 import { taskModelSources, taxonomySources } from "@/data/sources";
 import { linkTaskCards, taskModelHref, validateTaskModels } from "@/lib/task-models";
-import type { TaskModelSource } from "@/data/schema";
+import type { TaxonomyTask, TaskModelSource } from "@/data/schema";
 
 const svg = readFileSync("public/assets/taxonomy/ai-task-taxonomy.svg", "utf8");
 
 describe("task-level open-weight evidence", () => {
+  it("records bounded research for all twelve former gaps and rejects unsupported outcomes", () => {
+    const reviewed = (taxonomyTasks as TaxonomyTask[]).filter((task) => task.review);
+    expect(reviewed.map((task) => task.id).sort()).toEqual([
+      "top-k-recommendation", "rating-prediction", "clustering", "dimensionality-reduction",
+      "density-estimation", "change-point-detection", "node-classification", "graph-classification",
+      "constraint-satisfaction", "classical-planning", "robot-localization", "robot-motion-planning",
+    ].sort());
+    expect(reviewed.filter((task) => task.review!.outcome === "pipeline")).toHaveLength(4);
+    expect(taxonomyTasks.every((task) => task.recommendations.length > 0)).toBe(true);
+    for (const task of reviewed) {
+      expect(task.review!.summary.en).toBeTruthy();
+      expect(task.review!.summary.tr).toBeTruthy();
+      expect(task.review!.sourceIds.some((id) => task.recommendations.some((entry) => entry.sourceIds.includes(id)))).toBe(true);
+    }
+    const task = reviewed[0];
+    const replace = (value: TaxonomyTask) => taxonomyTasks.map((entry) => entry.id === task.id ? value : entry);
+    const validate = (tasks: TaxonomyTask[]) => validateTaskModels(tasks, openWeightModels, taskModelSources, taxonomySources, svg);
+    expect(() => validate(replace({ ...task, review: { ...task.review!, sourceIds: ["ow-unknown"] } }))).toThrow(/task review evidence/);
+    expect(() => validate(replace({ ...task, review: { ...task.review!, sourceIds: [task.review!.sourceIds[0], task.review!.sourceIds[0]] } }))).toThrow(/Duplicate review source/);
+    expect(() => validate(replace({ ...task, review: { ...task.review!, outcome: "no-verified-model" } }))).toThrow(/contradicts/);
+    expect(() => validate(replace({ ...task, recommendations: [] }))).toThrow(/contradicts/);
+    expect(() => validate(replace({ ...task, recommendations: [], review: { ...task.review!, outcome: "no-verified-model" } }))).not.toThrow();
+    expect(openWeightModels.find((model) => model.id === "goose-blocksworld")?.parameterKind).toBe("statistical");
+    expect(openWeightModels.find((model) => model.id === "hrm-sudoku")?.licenseScope).toBe("repository");
+  });
+
+  it("requires matching Drive IDs and well-formed publisher checksums without inventing revisions", () => {
+    const validate = (sources: TaskModelSource[]) => validateTaskModels(taxonomyTasks, openWeightModels, sources, taxonomySources, svg);
+    const changed = (id: string, patch: Partial<TaskModelSource>) => taskModelSources.map((source) => source.id === id ? { ...source, ...patch } : source);
+    const scan = taskModelSources.find((source) => source.id === "ow-scan-cifar10-weights")!;
+    expect(scan.artifact?.type).toBe("google-drive");
+    expect(() => validate(changed(scan.id, { url: scan.url.replace("1v6b6jJY5M4-duSqWpGFmdf9e9T3dPrx0", "different-file") }))).toThrow(/file ID/);
+    expect(() => validate(changed(scan.id, { revision: "a".repeat(40) }))).toThrow(/fabricated revision/);
+    const mpi = taskModelSources.find((source) => source.id === "ow-mpinets-hybrid-weights")!;
+    const artifact = mpi.artifact;
+    if (artifact?.type !== "publisher-file") throw new Error("Expected the publisher archive fixture");
+    expect(artifact.etag).toBeUndefined();
+    expect(() => validate(changed(mpi.id, { artifact: { ...artifact, publisherChecksum: undefined } }))).toThrow(/ETag or publisher checksum/);
+    expect(() => validate(changed(mpi.id, { artifact: { ...artifact, publisherChecksum: { algorithm: "md5", value: "invalid" } } }))).toThrow();
+    expect(() => validate(taskModelSources.filter((source) => source.id !== artifact.evidenceSourceId))).toThrow(/Missing model source|release evidence/);
+  });
+
   it("covers every original task exactly and resolves model, license, revision and evidence references", () => {
     expect(() => validateTaskModels(taxonomyTasks, openWeightModels, taskModelSources, taxonomySources, svg)).not.toThrow();
     expect(taxonomyTasks).toHaveLength(85);
