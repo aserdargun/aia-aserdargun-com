@@ -104,3 +104,34 @@ export const modelModalityLabels: Record<ModelLocale, Record<string, string>> = 
   en: { text: "Text", image: "Image", video: "Video", file: "File", audio: "Audio" },
   tr: { text: "Metin", image: "Görüntü", video: "Video", file: "Dosya", audio: "Ses" },
 };
+
+export const taxonomyLabels = {
+  en: {
+    navigation: "Maps", navigationLabel: "Taxonomy maps", modelNav: "Model taxonomy", taskNav: "Task taxonomy",
+    models: { title: "AI model taxonomy", intro: "Explore model families, architectures, learning paradigms, generative formulations, modalities, training and tasks.", branches: "classification axes", entries: "selected concepts" },
+    tasks: { title: "AI task taxonomy", intro: "Explore 85 technical tasks through their inputs and intended outputs, from language and vision to planning and action.", branches: "task families", entries: "task entries" },
+    language: "Language / Dil", scope: "An editorial synthesis of established concepts, not a universal or exhaustive standard. Branches overlap; a model can belong to several groups.",
+    englishLabels: "The diagrams retain their English terminology. Page controls and explanations are available in both languages.",
+    systemNote: "Amber cards identify browser and desktop tasks evaluated at the system level, including tools and the environment.",
+    zoomIn: "Zoom in", zoomOut: "Zoom out", fit: "Fit width", actual: "100%", zoom: "Zoom level",
+    fullscreen: "Full screen", exitFullscreen: "Exit full screen", fullscreenError: "Full screen is unavailable. You can still zoom and scroll within the map.",
+    download: "Download SVG", original: "Open SVG", sourcesLink: "View sources", controls: "Map controls",
+    hint: "Zoom to read details. Scroll in both directions or use the arrow keys when the map is focused. Click a source marker to open its reference.",
+    region: "Scrollable taxonomy map", sources: "Sources for this map", sourceScope: "Author textbooks, original papers and official documentation support individual concepts. The branch layout is an editorial choice.",
+    definitions: "Download definitions and full source catalogue (English)", loading: "Loading taxonomy map…",
+  },
+  tr: {
+    navigation: "Haritalar", navigationLabel: "Taksonomi haritaları", modelNav: "Model taksonomisi", taskNav: "Görev taksonomisi",
+    models: { title: "Yapay zekâ model taksonomisi", intro: "Model ailelerini, mimarileri, öğrenme paradigmalarını, üretim yaklaşımlarını, veri türlerini, eğitimi ve görevleri keşfet.", branches: "sınıflandırma ekseni", entries: "seçili kavram" },
+    tasks: { title: "Yapay zekâ görev taksonomisi", intro: "Dil ve görmeden planlama ve eyleme uzanan 85 teknik görevi, girdileri ve hedeflenen çıktıları üzerinden keşfet.", branches: "görev ailesi", entries: "görev" },
+    language: "Language / Dil", scope: "Yerleşik kavramların editoryal bir derlemesidir; evrensel veya eksiksiz bir standart değildir. Dallar örtüşebilir; bir model birden fazla grupta yer alabilir.",
+    englishLabels: "Grafiklerde İngilizce terimler korunur. Sayfa kontrolleri ve açıklamalar iki dilde sunulur.",
+    systemNote: "Sarı kartlar, araçlar ve çalışma ortamıyla birlikte sistem düzeyinde değerlendirilen tarayıcı ve masaüstü görevlerini belirtir.",
+    zoomIn: "Yakınlaştır", zoomOut: "Uzaklaştır", fit: "Genişliğe sığdır", actual: "%100", zoom: "Yakınlaştırma düzeyi",
+    fullscreen: "Tam ekran", exitFullscreen: "Tam ekrandan çık", fullscreenError: "Tam ekran kullanılamıyor. Haritanın içinde yakınlaştırıp kaydırmaya devam edebilirsin.",
+    download: "SVG indir", original: "SVG aç", sourcesLink: "Kaynakları görüntüle", controls: "Harita kontrolleri",
+    hint: "Ayrıntıları okumak için yakınlaştır. İki yönde kaydırabilir veya harita odaktayken ok tuşlarını kullanabilirsin. Kaynak işaretine tıklayarak ilgili yayını aç.",
+    region: "Kaydırılabilir taksonomi haritası", sources: "Bu haritanın kaynakları", sourceScope: "Yazarların ders kitapları, özgün makaleler ve resmî belgeler tek tek kavramları destekler. Dalların düzeni editoryal bir tercihtir.",
+    definitions: "Tanımları ve tam kaynak listesini indir (İngilizce)", loading: "Taksonomi haritası yükleniyor…",
+  },
+} as const;

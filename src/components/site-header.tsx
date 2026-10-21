@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TaxonomyNavigation } from "@/components/taxonomy/taxonomy-navigation";
 
 export function SiteHeader() {
   return (
@@ -22,6 +23,7 @@ export function SiteHeader() {
             Atlas
           </Link>
           <Link href="/models">Models</Link>
+          <TaxonomyNavigation />
           <Link href="/learn">Learn</Link>
           <a
             className="site-nav__github"

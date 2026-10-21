@@ -35,6 +35,16 @@ Model schema version 3 requires non-empty, unique `taskIds` from the ordered `mo
 
 Model şeması sürüm 3, sıralı `modelTaskValues` sınıflandırmasından boş olmayan ve tekrarlanmayan `taskIds` alanını zorunlu kılar. Gruplar, her modelin kaynaklı kayıtlarına dayanan editoryal kullanım alanlarıdır; tüm yetenekleri veya kalite puanlarını temsil etmez. Bir model birden fazla gruba girebilir; toplamlar benzersiz modelleri sayar. Eski ve kullanımdan kaldırılmış kayıtlar kullanıcı dahil edene kadar gizlidir. Kaynak bağlantıları ve özgün doğrulama tarihleri görünür kalır; gruplandırma tarihleri ilerletmez veya kataloğu güncellemez. `/models?lang=tr` Türkçe kontrolleri ve açıklamaları açar; varsayılan dil İngilizcedir.
 
+### Taxonomy maps / Taksonomi haritaları
+
+The **Maps** menu opens two separate pages: `/taxonomy/models` shows seven classification axes and 50 selected concepts; `/taxonomy/tasks` shows 85 tasks in eight families. Both provide zoom, keyboard scrolling, full screen, SVG downloads and clickable primary references. Add `?lang=tr` for Turkish controls and explanations. Diagram terminology remains English. These maps are editorial, non-exclusive syntheses rather than a universal or exhaustive standard; browser and desktop tasks are explicitly marked as system-level evaluations.
+
+**Maps** menüsü iki ayrı sayfa açar: `/taxonomy/models`, yedi sınıflandırma eksenini ve 50 seçili kavramı; `/taxonomy/tasks`, sekiz ailede 85 görevi gösterir. Her iki sayfada yakınlaştırma, klavyeyle kaydırma, tam ekran, SVG indirme ve tıklanabilir birincil kaynaklar bulunur. Türkçe kontroller ve açıklamalar için `?lang=tr` kullanılır; grafik terimleri İngilizce kalır. Haritalar evrensel veya eksiksiz bir standart değil, örtüşebilen editoryal derlemelerdir; tarayıcı ve masaüstü görevleri sistem düzeyindeki değerlendirmeler olarak işaretlenir.
+
+Static originals and definitions live in `public/assets/taxonomy/`; map metadata lives in `src/data/taxonomy.ts`, and the scholarly reference registry is the `taxonomySources` export in `src/data/sources.ts`. The versioned taxonomy schemas are independent of vendor evidence. Validation checks SVG citations against the registry, and the static export includes both pages and their downloads.
+
+Özgün SVG'ler ve tanımlar `public/assets/taxonomy/`, harita üst verileri `src/data/taxonomy.ts`, akademik kaynak kayıtları ise `src/data/sources.ts` içindeki `taxonomySources` alanındadır. Sürümlenen taksonomi şemaları sağlayıcı kaynaklarından bağımsızdır. Doğrulama, SVG atıflarını kaynak kayıtlarıyla eşleştirir; statik çıktı her iki sayfayı ve indirilebilir dosyalarını içerir.
+
 ### Category taxonomy
 
 The canonical display order is enforced during validation:

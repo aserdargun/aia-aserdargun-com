@@ -1,4 +1,13 @@
 import { atlasDataset } from "../src/data/index";
+import { readFile } from "node:fs/promises";
+import { taxonomyMaps } from "../src/data/taxonomy";
+import { taxonomySources } from "../src/data/sources";
+import { validateTaxonomyMap } from "../src/lib/taxonomy";
+
+for (const map of taxonomyMaps) {
+  validateTaxonomyMap(map, await readFile(`public${map.assetPath}`, "utf8"), taxonomySources);
+}
+console.log(`Taxonomy maps: ${taxonomyMaps.length}; scholarly references: ${taxonomySources.length}`);
 
 const collections = [
   ["Vendors", atlasDataset.vendors.length],

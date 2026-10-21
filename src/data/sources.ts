@@ -1,4 +1,4 @@
-import type { Source } from "@/data/schema";
+import type { Source, TaxonomySource } from "@/data/schema";
 
 export const sources = [
   {
@@ -1215,3 +1215,247 @@ export const sources = [
     sourceType: "announcement"
   },
 ] satisfies Source[];
+
+// Source registry for the curated taxonomy maps; independent of vendor claims.
+export const taxonomySources = [
+  {
+    "id": "S01",
+    "title": "AI: A Modern Approach, 4th ed.",
+    "url": "https://aima.cs.berkeley.edu/contents.html"
+  },
+  {
+    "id": "S02",
+    "title": "scikit-learn User Guide",
+    "url": "https://scikit-learn.org/stable/user_guide.html"
+  },
+  {
+    "id": "S03",
+    "title": "Speech and Language Processing",
+    "url": "https://web.stanford.edu/~jurafsky/slp3/"
+  },
+  {
+    "id": "S04",
+    "title": "Hugging Face Tasks",
+    "url": "https://huggingface.co/tasks"
+  },
+  {
+    "id": "S05",
+    "title": "Deep Learning",
+    "url": "https://www.deeplearningbook.org/"
+  },
+  {
+    "id": "S06",
+    "title": "Introduction to Information Retrieval",
+    "url": "https://nlp.stanford.edu/IR-book/html/htmledition/irbook.html"
+  },
+  {
+    "id": "S07",
+    "title": "CodeXGLUE",
+    "url": "https://github.com/microsoft/CodeXGLUE#tasks-and-datasets"
+  },
+  {
+    "id": "S08",
+    "title": "SUPERB",
+    "url": "https://www.isca-archive.org/interspeech_2021/yang21c_interspeech.pdf"
+  },
+  {
+    "id": "S09",
+    "title": "SUPERB-SG",
+    "url": "https://arxiv.org/html/2203.06849"
+  },
+  {
+    "id": "S10",
+    "title": "sktime API Reference",
+    "url": "https://www.sktime.net/docs/api-reference/"
+  },
+  {
+    "id": "S11",
+    "title": "Open Graph Benchmark",
+    "url": "https://ogb.stanford.edu/docs/home/"
+  },
+  {
+    "id": "S12",
+    "title": "BEIR",
+    "url": "https://openreview.net/pdf?id=wCu6T5xFjeJ"
+  },
+  {
+    "id": "S13",
+    "title": "GLUE",
+    "url": "https://arxiv.org/abs/1804.07461"
+  },
+  {
+    "id": "S14",
+    "title": "CoNLL-2014 Grammatical Error Correction",
+    "url": "https://aclanthology.org/W14-1701/"
+  },
+  {
+    "id": "S15",
+    "title": "Spider",
+    "url": "https://aclanthology.org/D18-1425/"
+  },
+  {
+    "id": "S16",
+    "title": "GSM8K: Training Verifiers",
+    "url": "https://arxiv.org/abs/2110.14168"
+  },
+  {
+    "id": "S17",
+    "title": "miniF2F",
+    "url": "https://arxiv.org/abs/2109.00110"
+  },
+  {
+    "id": "S18",
+    "title": "WebArena",
+    "url": "https://arxiv.org/abs/2307.13854"
+  },
+  {
+    "id": "S19",
+    "title": "OSWorld",
+    "url": "https://arxiv.org/abs/2404.07972"
+  },
+  {
+    "id": "S20",
+    "title": "Berkeley Function Calling Leaderboard",
+    "url": "https://gorilla.cs.berkeley.edu/leaderboard"
+  },
+  {
+    "id": "S21",
+    "title": "RecBole Evaluation Support",
+    "url": "https://recbole.io/docs/v0.2.0/user_guide/evaluation_support.html"
+  },
+  {
+    "id": "S22",
+    "title": "AlphaFold",
+    "url": "https://www.nature.com/articles/s41586-021-03819-2"
+  },
+  {
+    "id": "S23",
+    "title": "MoleculeNet",
+    "url": "https://arxiv.org/abs/1703.00564"
+  },
+  {
+    "id": "S24",
+    "title": "Attention Is All You Need",
+    "url": "https://arxiv.org/abs/1706.03762"
+  },
+  {
+    "id": "S25",
+    "title": "Mamba",
+    "url": "https://arxiv.org/abs/2312.00752"
+  },
+  {
+    "id": "S26",
+    "title": "Sparsely-Gated Mixture-of-Experts",
+    "url": "https://arxiv.org/abs/1701.06538"
+  },
+  {
+    "id": "S27",
+    "title": "Denoising Diffusion Probabilistic Models",
+    "url": "https://arxiv.org/abs/2006.11239"
+  },
+  {
+    "id": "S28",
+    "title": "Variational Inference with Normalizing Flows",
+    "url": "https://arxiv.org/abs/1505.05770"
+  },
+  {
+    "id": "S29",
+    "title": "Auto-Encoding Variational Bayes",
+    "url": "https://arxiv.org/abs/1312.6114"
+  },
+  {
+    "id": "S30",
+    "title": "Generative Adversarial Networks",
+    "url": "https://arxiv.org/abs/1406.2661"
+  },
+  {
+    "id": "S31",
+    "title": "SimCLR",
+    "url": "https://arxiv.org/abs/2002.05709"
+  },
+  {
+    "id": "S32",
+    "title": "Graph Convolutional Networks",
+    "url": "https://arxiv.org/abs/1609.02907"
+  },
+  {
+    "id": "S33",
+    "title": "Transformer Architectures",
+    "url": "https://huggingface.co/learn/llm-course/en/chapter1/4"
+  },
+  {
+    "id": "S34",
+    "title": "LoRA",
+    "url": "https://arxiv.org/abs/2106.09685"
+  },
+  {
+    "id": "S35",
+    "title": "InstructGPT",
+    "url": "https://arxiv.org/abs/2203.02155"
+  },
+  {
+    "id": "S36",
+    "title": "Direct Preference Optimization",
+    "url": "https://arxiv.org/abs/2305.18290"
+  },
+  {
+    "id": "S37",
+    "title": "Foundation Models",
+    "url": "https://arxiv.org/abs/2108.07258"
+  },
+  {
+    "id": "S38",
+    "title": "Knowledge Distillation",
+    "url": "https://arxiv.org/abs/1503.02531"
+  },
+  {
+    "id": "S39",
+    "title": "Image Segmentation",
+    "url": "https://huggingface.co/tasks/image-segmentation"
+  },
+  {
+    "id": "S40",
+    "title": "Image-to-Text",
+    "url": "https://huggingface.co/tasks/image-to-text"
+  },
+  {
+    "id": "S41",
+    "title": "Visual Question Answering",
+    "url": "https://huggingface.co/tasks/visual-question-answering"
+  },
+  {
+    "id": "S42",
+    "title": "Document Question Answering",
+    "url": "https://huggingface.co/tasks/document-question-answering"
+  },
+  {
+    "id": "S43",
+    "title": "Image Inpainting",
+    "url": "https://huggingface.co/docs/diffusers/using-diffusers/inpaint"
+  },
+  {
+    "id": "S44",
+    "title": "Flow Matching",
+    "url": "https://arxiv.org/abs/2210.02747"
+  },
+  {
+    "id": "S45",
+    "title": "MusicGen",
+    "url": "https://arxiv.org/abs/2306.05284"
+  },
+  {
+    "id": "S46",
+    "title": "AudioGen",
+    "url": "https://arxiv.org/abs/2209.15352"
+  },
+  {
+    "id": "S47",
+    "title": "Shap-E",
+    "url": "https://arxiv.org/abs/2305.02463"
+  },
+  {
+    "id": "S48",
+    "title": "MS2: Multi-Document Summarization",
+    "url": "https://aclanthology.org/2021.emnlp-main.594/"
+  }
+] satisfies TaxonomySource[];

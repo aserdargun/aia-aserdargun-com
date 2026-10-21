@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const schemaVersions = {
   vendor: 1, category: 1, capability: 1, vendorEntry: 1,
-  assessment: 1, model: 3, plan: 1, source: 2,
+  assessment: 1, model: 3, plan: 1, source: 2, taxonomyMap: 1, taxonomySource: 1,
 } as const;
 
 // Ordered, editorial focus areas based on the model's cited evidence.
@@ -217,6 +217,31 @@ export const sourceSchema = z
     note: z.string().optional(),
   })
   .strict();
+
+// Scholarly references belong to the taxonomy maps, not the vendor evidence
+// dataset. Keep the vendor publisher/host contract unchanged.
+export const taxonomySourceSchema = z.object({
+  id: z.string().regex(/^S\d{2}$/),
+  title: z.string().min(1),
+  url: httpsUrlSchema,
+}).strict();
+
+export const taxonomyMapSchema = z.object({
+  id: z.enum(["models", "tasks"]),
+  title: z.string().min(1),
+  assetPath: z.string().regex(/^\/assets\/taxonomy\/ai-(model|task)-taxonomy\.svg$/),
+  width: z.number().int().positive(),
+  height: z.number().int().positive(),
+  branchCount: z.number().int().positive(),
+  entryCount: z.number().int().positive(),
+  sourceIds: z.array(taxonomySourceSchema.shape.id).min(1).refine(
+    (ids) => new Set(ids).size === ids.length,
+    "Taxonomy source IDs must be unique.",
+  ),
+}).strict();
+
+export type TaxonomySource = z.infer<typeof taxonomySourceSchema>;
+export type TaxonomyMap = z.infer<typeof taxonomyMapSchema>;
 
 export const atlasDatasetSchema = z
   .object({

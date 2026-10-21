@@ -426,7 +426,7 @@ a {
   text-decoration: none;
 }
 
-.site-header nav a:last-child {
+.site-header nav > a:last-child {
   min-height: 38px;
   display: inline-flex;
   align-items: center;
@@ -1836,7 +1836,7 @@ a {
     white-space: nowrap;
   }
 
-  .site-header nav a:last-child {
+  .site-header nav > a:last-child {
     min-height: 34px;
     padding-inline: 12px;
   }
@@ -3193,7 +3193,159 @@ a {
   .site-brand__copy { min-width: 0; }
   .site-brand__copy strong { white-space: normal; line-height: 1.15; }
   .site-header nav { gap: 8px; flex-shrink: 0; }
-  .site-header nav a:last-child { padding-inline: 8px; }
+  .site-header nav > a:last-child { padding-inline: 8px; }
+}
+
+/* Source-linked taxonomy maps */
+.site-nav__maps { position: relative; }
+.site-nav__maps > summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  color: #c9c4bb;
+  font-size: 0.75rem;
+  list-style: none;
+}
+.site-nav__maps > summary::-webkit-details-marker { display: none; }
+.site-nav__maps > summary::after { content: "⌄"; }
+.site-nav__maps[open] > summary { color: #fffaf2; }
+.site-nav__maps-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  width: 190px;
+  padding: 6px;
+  border: 1px solid var(--atlas-border-strong);
+  border-radius: var(--atlas-radius-md);
+  background: var(--atlas-surface);
+  box-shadow: var(--atlas-shadow);
+}
+.site-header nav .site-nav__maps-menu a {
+  display: block;
+  padding: 12px;
+  border-radius: var(--atlas-radius-sm);
+  color: var(--atlas-ink);
+}
+.site-header nav .site-nav__maps-menu a:hover { background: var(--atlas-surface-muted); }
+.taxonomy-page {
+  width: min(100% - 104px, 1536px);
+  margin-inline: auto;
+  padding-block: 32px 64px;
+}
+.taxonomy-intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+.taxonomy-intro h1 {
+  margin: 6px 0 10px;
+  font: 600 clamp(2rem, 4vw, 3rem)/1.1 var(--atlas-content-font);
+  letter-spacing: -0.04em;
+}
+.taxonomy-intro p { max-width: 850px; margin: 0; color: var(--atlas-ink-muted); }
+.taxonomy-intro .taxonomy-eyebrow {
+  color: var(--atlas-accent-dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.taxonomy-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.taxonomy-tabs a {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 16px;
+  border: 1px solid var(--atlas-border-strong);
+  border-radius: var(--atlas-radius-sm);
+  background: var(--atlas-surface);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+.taxonomy-tabs a[aria-current="page"] {
+  border-color: var(--atlas-accent-dark);
+  background: #ffe5d9;
+  color: #71301a;
+}
+.taxonomy-scope { margin: 16px 0 22px; max-width: 1100px; }
+.taxonomy-scope p { margin: 5px 0; color: var(--atlas-ink-muted); font-size: 0.8125rem; line-height: 1.6; }
+.taxonomy-viewer {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--atlas-border-strong);
+  border-radius: var(--atlas-radius-md);
+  background: var(--atlas-surface);
+  box-shadow: 0 4px 20px rgb(36 33 29 / 4%);
+}
+.taxonomy-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 18px; padding: 12px; }
+.taxonomy-zoom, .taxonomy-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.taxonomy-toolbar button, .taxonomy-toolbar a {
+  min-height: 40px;
+  min-width: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 11px;
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius-sm);
+  background: var(--atlas-surface);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.taxonomy-toolbar button:hover, .taxonomy-toolbar a:hover { background: var(--atlas-surface-muted); }
+.taxonomy-toolbar button:disabled { opacity: 0.45; cursor: default; }
+.taxonomy-zoom output { min-width: 48px; text-align: center; font-size: 0.75rem; font-variant-numeric: tabular-nums; }
+.taxonomy-zoom button[aria-label] { font-size: 1.15rem; }
+.taxonomy-hint { margin: 0; padding: 0 14px 12px; color: var(--atlas-ink-muted); font-size: 0.75rem; }
+.taxonomy-viewport {
+  height: auto;
+  min-height: 280px;
+  max-height: clamp(360px, 68vh, 860px);
+  overflow: auto;
+  position: relative;
+  border-top: 1px solid var(--atlas-border);
+  background: #fafaf7;
+  overscroll-behavior: contain;
+}
+.taxonomy-viewport:focus-visible { outline-offset: -4px; }
+.taxonomy-canvas { min-width: 0; }
+.taxonomy-canvas > svg { display: block; width: 100%; height: auto; max-width: none; }
+.taxonomy-canvas text { font-family: Arial, Helvetica, sans-serif; }
+.taxonomy-canvas a { text-decoration: none; }
+.taxonomy-canvas a:hover .leaf { stroke-width: 2.5; }
+.taxonomy-canvas a:focus .leaf { stroke: #172b4d; stroke-width: 3; }
+.taxonomy-viewer:fullscreen {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border: 0;
+  border-radius: 0;
+}
+.taxonomy-viewer:fullscreen .taxonomy-viewport { flex: 1; height: auto; min-height: 0; max-height: none; }
+.taxonomy-sources { margin-top: 24px; scroll-margin-top: 24px; border: 1px solid var(--atlas-border); border-radius: var(--atlas-radius-md); background: var(--atlas-surface); }
+.taxonomy-sources > summary { padding: 18px 20px; font-size: 0.9375rem; }
+.taxonomy-sources > summary span { margin-left: 8px; color: var(--atlas-ink-muted); font-weight: 400; }
+.taxonomy-sources > p { margin: 0; padding: 0 20px; color: var(--atlas-ink-muted); font-size: 0.8125rem; }
+.taxonomy-sources ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; list-style: none; margin: 18px 0; padding: 0 20px; }
+.taxonomy-sources li { display: flex; align-items: baseline; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--atlas-border); font-size: 0.8125rem; }
+.taxonomy-sources li a { overflow-wrap: anywhere; text-underline-offset: 3px; }
+.taxonomy-source-id { flex-shrink: 0; color: var(--atlas-accent-dark); font: 600 0.75rem var(--atlas-ui-font); }
+.taxonomy-definitions { display: inline-block; margin: 0 20px 20px; font-size: 0.8125rem; }
+@media (max-width: 767px) {
+  .taxonomy-page { width: calc(100% - 28px); padding-block: 24px 40px; }
+  .taxonomy-intro { flex-direction: column; gap: 16px; }
+  .taxonomy-intro > div { min-width: 0; }
+  .taxonomy-intro p { font-size: 0.875rem; }
+  .taxonomy-scope { margin-bottom: 16px; }
+  .taxonomy-toolbar { gap: 8px; padding: 10px; }
+  .taxonomy-actions { gap: 5px; }
+  .taxonomy-toolbar button, .taxonomy-toolbar a { min-height: 42px; padding-inline: 9px; }
+  .taxonomy-viewport { max-height: 64vh; }
+  .taxonomy-sources ol { grid-template-columns: minmax(0, 1fr); }
+  .taxonomy-viewer:fullscreen { padding: 6px; }
 }
 
 /* Shared portfolio navigation also appears on every Learn route. */

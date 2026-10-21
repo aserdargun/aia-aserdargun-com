@@ -1,0 +1,813 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3544" height="2258" viewBox="0 0 3544 2258" role="img" aria-labelledby="models-map-title models-map-desc" xml:lang="en">
+<title id="models-map-title">Artificial Intelligence Models: source-backed reference mind map</title>
+<desc id="models-map-desc">A top-down mind map. The grouping is an editorial synthesis, not an official or exhaustive standard. Concepts overlap. Each source marker opens a primary publication, author textbook or official documentation.</desc>
+<metadata>{&quot;title&quot;: &quot;Artificial Intelligence Models&quot;, &quot;date&quot;: &quot;2026-10-21&quot;, &quot;grouping&quot;: &quot;editorial, non-exclusive&quot;, &quot;sources&quot;: {&quot;01&quot;: [&quot;AI: A Modern Approach, 4th ed.&quot;, &quot;https://aima.cs.berkeley.edu/contents.html&quot;, &quot;Author textbook; logic, probabilistic models, learning, planning and robotics.&quot;], &quot;02&quot;: [&quot;scikit-learn User Guide&quot;, &quot;https://scikit-learn.org/stable/user_guide.html&quot;, &quot;Official documentation; statistical model families and general learning tasks.&quot;], &quot;03&quot;: [&quot;Speech and Language Processing&quot;, &quot;https://web.stanford.edu/~jurafsky/slp3/&quot;, &quot;Author textbook; language, speech and linguistic structure.&quot;], &quot;04&quot;: [&quot;Hugging Face Tasks&quot;, &quot;https://huggingface.co/tasks&quot;, &quot;Official task catalogue; selected task labels and modalities, not a universal taxonomy.&quot;], &quot;05&quot;: [&quot;Deep Learning&quot;, &quot;https://www.deeplearningbook.org/&quot;, &quot;Author textbook; neural networks, latent representations and generative modeling.&quot;], &quot;06&quot;: [&quot;Introduction to Information Retrieval&quot;, &quot;https://nlp.stanford.edu/IR-book/html/htmledition/irbook.html&quot;, &quot;Author textbook; retrieval, ranking and query expansion.&quot;], &quot;07&quot;: [&quot;CodeXGLUE&quot;, &quot;https://github.com/microsoft/CodeXGLUE#tasks-and-datasets&quot;, &quot;Original benchmark repository; code task definitions.&quot;], &quot;08&quot;: [&quot;SUPERB&quot;, &quot;https://www.isca-archive.org/interspeech_2021/yang21c_interspeech.pdf&quot;, &quot;Original benchmark paper; speech recognition, speakers and paralinguistics.&quot;], &quot;09&quot;: [&quot;SUPERB-SG&quot;, &quot;https://arxiv.org/html/2203.06849&quot;, &quot;Original benchmark paper; speech translation, conversion, separation and enhancement.&quot;], &quot;10&quot;: [&quot;sktime API Reference&quot;, &quot;https://www.sktime.net/docs/api-reference/&quot;, &quot;Official documentation; time-series tasks.&quot;], &quot;11&quot;: [&quot;Open Graph Benchmark&quot;, &quot;https://ogb.stanford.edu/docs/home/&quot;, &quot;Original benchmark documentation; node, link and graph prediction.&quot;], &quot;12&quot;: [&quot;BEIR&quot;, &quot;https://openreview.net/pdf?id=wCu6T5xFjeJ&quot;, &quot;Original benchmark paper; retrieval and re-ranking.&quot;], &quot;13&quot;: [&quot;GLUE&quot;, &quot;https://arxiv.org/abs/1804.07461&quot;, &quot;Original benchmark paper; classification, inference and textual similarity.&quot;], &quot;14&quot;: [&quot;CoNLL-2014 Grammatical Error Correction&quot;, &quot;https://aclanthology.org/W14-1701/&quot;, &quot;Original shared-task paper; grammatical error correction.&quot;], &quot;15&quot;: [&quot;Spider&quot;, &quot;https://aclanthology.org/D18-1425/&quot;, &quot;Original benchmark paper; text-to-SQL semantic parsing.&quot;], &quot;16&quot;: [&quot;GSM8K: Training Verifiers&quot;, &quot;https://arxiv.org/abs/2110.14168&quot;, &quot;Original benchmark paper; mathematical word-problem solving.&quot;], &quot;17&quot;: [&quot;miniF2F&quot;, &quot;https://arxiv.org/abs/2109.00110&quot;, &quot;Original benchmark paper; formal theorem proving.&quot;], &quot;18&quot;: [&quot;WebArena&quot;, &quot;https://arxiv.org/abs/2307.13854&quot;, &quot;Original benchmark paper; browser tasks evaluated at the system level.&quot;], &quot;19&quot;: [&quot;OSWorld&quot;, &quot;https://arxiv.org/abs/2404.07972&quot;, &quot;Original benchmark paper; desktop tasks evaluated at the system level.&quot;], &quot;20&quot;: [&quot;Berkeley Function Calling Leaderboard&quot;, &quot;https://gorilla.cs.berkeley.edu/leaderboard&quot;, &quot;Original benchmark; function selection and argument generation.&quot;], &quot;21&quot;: [&quot;RecBole Evaluation Support&quot;, &quot;https://recbole.io/docs/v0.2.0/user_guide/evaluation_support.html&quot;, &quot;Official versioned documentation; rating prediction and top-k recommendation.&quot;], &quot;22&quot;: [&quot;AlphaFold&quot;, &quot;https://www.nature.com/articles/s41586-021-03819-2&quot;, &quot;Original research paper; protein structure prediction.&quot;], &quot;23&quot;: [&quot;MoleculeNet&quot;, &quot;https://arxiv.org/abs/1703.00564&quot;, &quot;Original benchmark paper; molecular property prediction.&quot;], &quot;24&quot;: [&quot;Attention Is All You Need&quot;, &quot;https://arxiv.org/abs/1706.03762&quot;, &quot;Original Transformer paper.&quot;], &quot;25&quot;: [&quot;Mamba&quot;, &quot;https://arxiv.org/abs/2312.00752&quot;, &quot;Original selective state-space model paper.&quot;], &quot;26&quot;: [&quot;Sparsely-Gated Mixture-of-Experts&quot;, &quot;https://arxiv.org/abs/1701.06538&quot;, &quot;Original sparse expert-routing layer paper.&quot;], &quot;27&quot;: [&quot;Denoising Diffusion Probabilistic Models&quot;, &quot;https://arxiv.org/abs/2006.11239&quot;, &quot;Original diffusion model paper.&quot;], &quot;28&quot;: [&quot;Variational Inference with Normalizing Flows&quot;, &quot;https://arxiv.org/abs/1505.05770&quot;, &quot;Original normalizing-flow research paper.&quot;], &quot;29&quot;: [&quot;Auto-Encoding Variational Bayes&quot;, &quot;https://arxiv.org/abs/1312.6114&quot;, &quot;Original variational autoencoder paper.&quot;], &quot;30&quot;: [&quot;Generative Adversarial Networks&quot;, &quot;https://arxiv.org/abs/1406.2661&quot;, &quot;Original GAN paper.&quot;], &quot;31&quot;: [&quot;SimCLR&quot;, &quot;https://arxiv.org/abs/2002.05709&quot;, &quot;Original contrastive self-supervised learning paper.&quot;], &quot;32&quot;: [&quot;Graph Convolutional Networks&quot;, &quot;https://arxiv.org/abs/1609.02907&quot;, &quot;Original graph convolutional network paper.&quot;], &quot;33&quot;: [&quot;Transformer Architectures&quot;, &quot;https://huggingface.co/learn/llm-course/en/chapter1/4&quot;, &quot;Official teaching material; encoder, decoder and encoder-decoder configurations.&quot;], &quot;34&quot;: [&quot;LoRA&quot;, &quot;https://arxiv.org/abs/2106.09685&quot;, &quot;Original parameter-efficient adaptation paper.&quot;], &quot;35&quot;: [&quot;InstructGPT&quot;, &quot;https://arxiv.org/abs/2203.02155&quot;, &quot;Original instruction tuning and human-feedback learning paper.&quot;], &quot;36&quot;: [&quot;Direct Preference Optimization&quot;, &quot;https://arxiv.org/abs/2305.18290&quot;, &quot;Original preference-optimization paper.&quot;], &quot;37&quot;: [&quot;Foundation Models&quot;, &quot;https://arxiv.org/abs/2108.07258&quot;, &quot;Original formulation of the foundation-model concept.&quot;], &quot;38&quot;: [&quot;Knowledge Distillation&quot;, &quot;https://arxiv.org/abs/1503.02531&quot;, &quot;Original neural knowledge-distillation paper.&quot;], &quot;39&quot;: [&quot;Image Segmentation&quot;, &quot;https://huggingface.co/tasks/image-segmentation&quot;, &quot;Official task documentation; semantic, instance and panoptic segmentation.&quot;], &quot;40&quot;: [&quot;Image-to-Text&quot;, &quot;https://huggingface.co/tasks/image-to-text&quot;, &quot;Official task documentation; captioning and optical character recognition.&quot;], &quot;41&quot;: [&quot;Visual Question Answering&quot;, &quot;https://huggingface.co/tasks/visual-question-answering&quot;, &quot;Official task documentation; visual question answering.&quot;], &quot;42&quot;: [&quot;Document Question Answering&quot;, &quot;https://huggingface.co/tasks/document-question-answering&quot;, &quot;Official task documentation; questions over document images.&quot;], &quot;43&quot;: [&quot;Image Inpainting&quot;, &quot;https://huggingface.co/docs/diffusers/using-diffusers/inpaint&quot;, &quot;Official library documentation; mask-conditioned image completion.&quot;], &quot;44&quot;: [&quot;Flow Matching&quot;, &quot;https://arxiv.org/abs/2210.02747&quot;, &quot;Original training method for continuous normalizing flows; not a downstream task.&quot;], &quot;45&quot;: [&quot;MusicGen&quot;, &quot;https://arxiv.org/abs/2306.05284&quot;, &quot;Original research paper; conditional music generation.&quot;], &quot;46&quot;: [&quot;AudioGen&quot;, &quot;https://arxiv.org/abs/2209.15352&quot;, &quot;Original research paper; text-conditioned sound generation.&quot;], &quot;47&quot;: [&quot;Shap-E&quot;, &quot;https://arxiv.org/abs/2305.02463&quot;, &quot;Original research paper; conditional 3D generation.&quot;], &quot;48&quot;: [&quot;MS2: Multi-Document Summarization&quot;, &quot;https://aclanthology.org/2021.emnlp-main.594/&quot;, &quot;Original benchmark paper; multi-document summarization of medical studies.&quot;]}}</metadata>
+<style>text{font-family:Arial,Helvetica,sans-serif}a{text-decoration:none}a:hover .leaf{stroke-width:2.5}a:focus .leaf{stroke:#172B4D;stroke-width:3}</style>
+<rect x="0" y="0" width="3544" height="2258" rx="0" fill="#FAFAF7" stroke="none" />
+<text x="64" y="57" font-size="17" fill="#546478" font-weight="700" text-anchor="start" ><tspan x="64" y="57.0">A I  /  R E F E R E N C E   M A P</tspan></text>
+<text x="3480" y="57" font-size="17" fill="#546478" font-weight="700" text-anchor="end" ><tspan x="3480" y="57.0">01 / 02</tspan></text>
+<rect x="1272.0" y="102" width="1000" height="132" rx="22" fill="#172B4D" stroke="none" />
+<text x="1772.0" y="159" font-size="42" fill="#FFFFFF" font-weight="700" text-anchor="middle" ><tspan x="1772.0" y="159.0">Artificial Intelligence Models</tspan></text>
+<text x="1772.0" y="200" font-size="21" fill="#D5DFEE" font-weight="400" text-anchor="middle" ><tspan x="1772.0" y="200.0">Seven complementary classification axes</tspan></text>
+<text x="64" y="86" font-size="18" fill="#506174" font-weight="400" text-anchor="start" ><tspan x="64" y="86.0">A model can occupy several branches at once; axes are not mutually exclusive.</tspan></text>
+<path d="M 1772.0 234 V 319" fill="none" stroke="#8190A4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 296.0 319 H 3248.0" fill="none" stroke="#A5B0BC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<g id="model-families" aria-label="Model Families">
+<path d="M 296.0 319 V 354" fill="none" stroke="#3359A7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="296.0" cy="319" r="4" fill="#3359A7"/>
+<rect x="64" y="354" width="464" height="112" rx="16" fill="#EDF2FC" stroke="#3359A7" />
+<rect x="82" y="371" width="30" height="25" rx="7" fill="#3359A7" stroke="none" />
+<text x="97" y="389" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle" ><tspan x="97" y="389.0">01</tspan></text>
+<text x="127" y="391" font-size="25" fill="#3359A7" font-weight="700" text-anchor="start" ><tspan x="127" y="391" data-max-width="382">Model Families</tspan></text>
+<text x="84" y="435" font-size="17" fill="#46586B" font-weight="400" text-anchor="start" ><tspan x="84" y="435" data-max-width="424">What form represents knowledge?</tspan></text>
+<path d="M 296.0 466 V 479 H 76 V 1822.0" fill="none" stroke="#3359A7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.52"/>
+<path d="M 76 514.0 H 92" fill="none" stroke="#3359A7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="92" y="492" width="436" height="44" rx="8" fill="#EDF2FC" stroke="none" />
+<text x="106" y="519" font-size="17" fill="#3359A7" font-weight="700" text-anchor="start" ><tspan x="106" y="519" data-max-width="398">Symbolic representations</tspan></text>
+<path d="M 104 536 V 719.5" fill="none" stroke="#3359A7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 104 605.5 H 122" fill="none" stroke="#3359A7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://aima.cs.berkeley.edu/contents.html" target="_blank" rel="noopener noreferrer" aria-label="Logical Representations: open source 01">
+<g data-card="Logical Representations" data-card-x="122" data-card-y="548" data-card-width="406" data-card-height="115">
+<title>Logical Representations: Propositional and first-order representations. Source: AI: A Modern Approach, 4th ed.</title>
+<rect x="122" y="548" width="406" height="115" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="138" y="579" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="138" y="579" data-max-width="326">Logical Representations</tspan></text>
+<text x="138" y="610" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="138" y="610" data-max-width="374">Propositional and first-order</tspan><tspan x="138" y="632" data-max-width="374">representations</tspan></text>
+<text x="516" y="579" font-size="12" fill="#3359A7" font-weight="700" text-anchor="end" ><tspan x="516" y="579.0">S01</tspan></text>
+</g>
+</a>
+<path d="M 104 719.5 H 122" fill="none" stroke="#3359A7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://aima.cs.berkeley.edu/contents.html" target="_blank" rel="noopener noreferrer" aria-label="Rule-Based Models: open source 01">
+<g data-card="Rule-Based Models" data-card-x="122" data-card-y="673" data-card-width="406" data-card-height="93">
+<title>Rule-Based Models: Explicit rules for inference. Source: AI: A Modern Approach, 4th ed.</title>
+<rect x="122" y="673" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="138" y="704" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="138" y="704" data-max-width="326">Rule-Based Models</tspan></text>
+<text x="138" y="735" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="138" y="735" data-max-width="374">Explicit rules for inference</tspan></text>
+<text x="516" y="704" font-size="12" fill="#3359A7" font-weight="700" text-anchor="end" ><tspan x="516" y="704.0">S01</tspan></text>
+</g>
+</a>
+<path d="M 76 820.0 H 92" fill="none" stroke="#3359A7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="92" y="798" width="436" height="44" rx="8" fill="#EDF2FC" stroke="none" />
+<text x="106" y="825" font-size="17" fill="#3359A7" font-weight="700" text-anchor="start" ><tspan x="106" y="825" data-max-width="398">Statistical predictors</tspan></text>
+<path d="M 104 842 V 1231.5" fill="none" stroke="#3359A7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 104 900.5 H 122" fill="none" stroke="#3359A7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://scikit-learn.org/stable/user_guide.html" target="_blank" rel="noopener noreferrer" aria-label="Linear &amp; Logistic Models: open source 02">
+<g data-card="Linear &amp; Logistic Models" data-card-x="122" data-card-y="854" data-card-width="406" data-card-height="93">
+<title>Linear &amp; Logistic Models: Linear predictors and linked probabilities. Source: scikit-learn User Guide</title>
+<rect x="122" y="854" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="138" y="885" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="138" y="885" data-max-width="326">Linear &amp; Logistic Models</tspan></text>
+<text x="138" y="916" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="138" y="916" data-max-width="374">Linear predictors and linked probabilities</tspan></text>
+<text x="516" y="885" font-size="12" fill="#3359A7" font-weight="700" text-anchor="end" ><tspan x="516" y="885.0">S02</tspan></text>
+</g>
+</a>
+<path d="M 104 1014.5 H 122" fill="none" stroke="#3359A7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://scikit-learn.org/stable/user_guide.html" target="_blank" rel="noopener noreferrer" aria-label="Kernel Methods: open source 02">
+<g data-card="Kernel Methods" data-card-x="122" data-card-y="957" data-card-width="406" data-card-height="115">
+<title>Kernel Methods: Support vector machines; Gaussian processes. Source: scikit-learn User Guide</title>
+<rect x="122" y="957" width="406" height="115" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="138" y="988" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="138" y="988" data-max-width="326">Kernel Methods</tspan></text>
+<text x="138" y="1019" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="138" y="1019" data-max-width="374">Support vector machines; Gaussian</tspan><tspan x="138" y="1041" data-max-width="374">processes</tspan></text>
+<text x="516" y="988" font-size="12" fill="#3359A7" font-weight="700" text-anchor="end" ><tspan x="516" y="988.0">S02</tspan></text>
+</g>
+</a>
+<path d="M 104 1128.5 H 122" fill="none" stroke="#3359A7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://scikit-learn.org/stable/user_guide.html" target="_blank" rel="noopener noreferrer" aria-label="Decision Trees &amp; Ensembles: open source 02">
+<g data-card="Decision Trees &amp; Ensembles" data-card-x="122" data-card-y="1082" data-card-width="406" data-card-height="93">
+<title>Decision Trees &amp; Ensembles: Trees; random forests; gradient boosting. Source: scikit-learn User Guide</title>
+<rect x="122" y="1082" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="138" y="1113" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="138" y="1113" data-max-width="326">Decision Trees &amp; Ensembles</tspan></text>
+<text x="138" y="1144" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="138" y="1144" data-max-width="374">Trees; random forests; gradient boosting</tspan></text>
+<text x="516" y="1113" font-size="12" fill="#3359A7" font-weight="700" text-anchor="end" ><tspan x="516" y="1113.0">S02</tspan></text>
+</g>
+</a>
+<path d="M 104 1231.5 H 122" fill="none" stroke="#3359A7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://scikit-learn.org/stable/user_guide.html" target="_blank" rel="noopener noreferrer" aria-label="Nearest-Neighbor Models: open source 02">
+<g data-card="Nearest-Neighbor Models" data-card-x="122" data-card-y="1185" data-card-width="406" data-card-height="93">
+<title>Nearest-Neighbor Models: Predictions from nearby observations. Source: scikit-learn User Guide</title>
+<rect x="122" y="1185" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="138" y="1216" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="138" y="1216" data-max-width="326">Nearest-Neighbor Models</tspan></text>
+<text x="138" y="1247" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="138" y="1247" data-max-width="374">Predictions from nearby observations</tspan></text>
+<text x="516" y="1216" font-size="12" fill="#3359A7" font-weight="700" text-anchor="end" ><tspan x="516" y="1216.0">S02</tspan></text>
+</g>
+</a>
+<path d="M 76 1332.0 H 92" fill="none" stroke="#3359A7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="92" y="1310" width="436" height="44" rx="8" fill="#EDF2FC" stroke="none" />
+<text x="106" y="1337" font-size="17" fill="#3359A7" font-weight="700" text-anchor="start" ><tspan x="106" y="1337" data-max-width="398">Probabilistic &amp; latent-variable models</tspan></text>
+<path d="M 104 1354 V 1721.5" fill="none" stroke="#3359A7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 104 1412.5 H 122" fill="none" stroke="#3359A7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://aima.cs.berkeley.edu/contents.html" target="_blank" rel="noopener noreferrer" aria-label="Bayesian Networks: open source 01">
+<g data-card="Bayesian Networks" data-card-x="122" data-card-y="1366" data-card-width="406" data-card-height="93">
+<title>Bayesian Networks: Directed probabilistic dependencies. Source: AI: A Modern Approach, 4th ed.</title>
+<rect x="122" y="1366" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="138" y="1397" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="138" y="1397" data-max-width="326">Bayesian Networks</tspan></text>
+<text x="138" y="1428" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="138" y="1428" data-max-width="374">Directed probabilistic dependencies</tspan></text>
+<text x="516" y="1397" font-size="12" fill="#3359A7" font-weight="700" text-anchor="end" ><tspan x="516" y="1397.0">S01</tspan></text>
+</g>
+</a>
+<path d="M 104 1515.5 H 122" fill="none" stroke="#3359A7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://aima.cs.berkeley.edu/contents.html" target="_blank" rel="noopener noreferrer" aria-label="Hidden Markov Models: open source 01">
+<g data-card="Hidden Markov Models" data-card-x="122" data-card-y="1469" data-card-width="406" data-card-height="93">
+<title>Hidden Markov Models: Latent state transitions and emissions. Source: AI: A Modern Approach, 4th ed.</title>
+<rect x="122" y="1469" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="138" y="1500" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="138" y="1500" data-max-width="326">Hidden Markov Models</tspan></text>
+<text x="138" y="1531" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="138" y="1531" data-max-width="374">Latent state transitions and emissions</tspan></text>
+<text x="516" y="1500" font-size="12" fill="#3359A7" font-weight="700" text-anchor="end" ><tspan x="516" y="1500.0">S01</tspan></text>
+</g>
+</a>
+<path d="M 104 1618.5 H 122" fill="none" stroke="#3359A7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://scikit-learn.org/stable/user_guide.html" target="_blank" rel="noopener noreferrer" aria-label="Gaussian Mixture Models: open source 02">
+<g data-card="Gaussian Mixture Models" data-card-x="122" data-card-y="1572" data-card-width="406" data-card-height="93">
+<title>Gaussian Mixture Models: Mixtures of component distributions. Source: scikit-learn User Guide</title>
+<rect x="122" y="1572" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="138" y="1603" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="138" y="1603" data-max-width="326">Gaussian Mixture Models</tspan></text>
+<text x="138" y="1634" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="138" y="1634" data-max-width="374">Mixtures of component distributions</tspan></text>
+<text x="516" y="1603" font-size="12" fill="#3359A7" font-weight="700" text-anchor="end" ><tspan x="516" y="1603.0">S02</tspan></text>
+</g>
+</a>
+<path d="M 104 1721.5 H 122" fill="none" stroke="#3359A7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://www.deeplearningbook.org/" target="_blank" rel="noopener noreferrer" aria-label="Linear Factor Models: open source 05">
+<g data-card="Linear Factor Models" data-card-x="122" data-card-y="1675" data-card-width="406" data-card-height="93">
+<title>Linear Factor Models: PCA and related latent-factor models. Source: Deep Learning</title>
+<rect x="122" y="1675" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="138" y="1706" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="138" y="1706" data-max-width="326">Linear Factor Models</tspan></text>
+<text x="138" y="1737" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="138" y="1737" data-max-width="374">PCA and related latent-factor models</tspan></text>
+<text x="516" y="1706" font-size="12" fill="#3359A7" font-weight="700" text-anchor="end" ><tspan x="516" y="1706.0">S05</tspan></text>
+</g>
+</a>
+<path d="M 76 1822.0 H 92" fill="none" stroke="#3359A7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="92" y="1800" width="436" height="44" rx="8" fill="#EDF2FC" stroke="none" />
+<text x="106" y="1827" font-size="17" fill="#3359A7" font-weight="700" text-anchor="start" ><tspan x="106" y="1827" data-max-width="398">Neural models</tspan></text>
+<path d="M 104 1844 V 1902.5" fill="none" stroke="#3359A7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 104 1902.5 H 122" fill="none" stroke="#3359A7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://www.deeplearningbook.org/" target="_blank" rel="noopener noreferrer" aria-label="Neural Networks: open source 05">
+<g data-card="Neural Networks" data-card-x="122" data-card-y="1856" data-card-width="406" data-card-height="93">
+<title>Neural Networks: Architectures expanded in the next branch. Source: Deep Learning</title>
+<rect x="122" y="1856" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="138" y="1887" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="138" y="1887" data-max-width="326">Neural Networks</tspan></text>
+<text x="138" y="1918" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="138" y="1918" data-max-width="374">Architectures expanded in the next branch</tspan></text>
+<text x="516" y="1887" font-size="12" fill="#3359A7" font-weight="700" text-anchor="end" ><tspan x="516" y="1887.0">S05</tspan></text>
+</g>
+</a>
+</g>
+<g id="neural-architectures" aria-label="Neural Architectures">
+<path d="M 788.0 319 V 354" fill="none" stroke="#08776D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="788.0" cy="319" r="4" fill="#08776D"/>
+<rect x="556" y="354" width="464" height="112" rx="16" fill="#EAF6F2" stroke="#08776D" />
+<rect x="574" y="371" width="30" height="25" rx="7" fill="#08776D" stroke="none" />
+<text x="589" y="389" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle" ><tspan x="589" y="389.0">02</tspan></text>
+<text x="619" y="391" font-size="25" fill="#08776D" font-weight="700" text-anchor="start" ><tspan x="619" y="391" data-max-width="382">Neural Architectures</tspan></text>
+<text x="576" y="435" font-size="17" fill="#46586B" font-weight="400" text-anchor="start" ><tspan x="576" y="435" data-max-width="424">How is computation organized?</tspan></text>
+<path d="M 788.0 466 V 479 H 568 V 1597.0" fill="none" stroke="#08776D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.52"/>
+<path d="M 568 514.0 H 584" fill="none" stroke="#08776D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="584" y="492" width="436" height="44" rx="8" fill="#EAF6F2" stroke="none" />
+<text x="598" y="519" font-size="17" fill="#08776D" font-weight="700" text-anchor="start" ><tspan x="598" y="519" data-max-width="398">Network structures</tspan></text>
+<path d="M 596 536 V 1109.5" fill="none" stroke="#08776D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 596 594.5 H 614" fill="none" stroke="#08776D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://www.deeplearningbook.org/" target="_blank" rel="noopener noreferrer" aria-label="Multilayer Perceptrons: open source 05">
+<g data-card="Multilayer Perceptrons" data-card-x="614" data-card-y="548" data-card-width="406" data-card-height="93">
+<title>Multilayer Perceptrons: Feedforward, densely connected layers. Source: Deep Learning</title>
+<rect x="614" y="548" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="630" y="579" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="630" y="579" data-max-width="326">Multilayer Perceptrons</tspan></text>
+<text x="630" y="610" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="630" y="610" data-max-width="374">Feedforward, densely connected layers</tspan></text>
+<text x="1008" y="579" font-size="12" fill="#08776D" font-weight="700" text-anchor="end" ><tspan x="1008" y="579.0">S05</tspan></text>
+</g>
+</a>
+<path d="M 596 697.5 H 614" fill="none" stroke="#08776D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://www.deeplearningbook.org/" target="_blank" rel="noopener noreferrer" aria-label="Convolutional Networks: open source 05">
+<g data-card="Convolutional Networks" data-card-x="614" data-card-y="651" data-card-width="406" data-card-height="93">
+<title>Convolutional Networks: Shared filters over structured inputs. Source: Deep Learning</title>
+<rect x="614" y="651" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="630" y="682" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="630" y="682" data-max-width="326">Convolutional Networks</tspan></text>
+<text x="630" y="713" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="630" y="713" data-max-width="374">Shared filters over structured inputs</tspan></text>
+<text x="1008" y="682" font-size="12" fill="#08776D" font-weight="700" text-anchor="end" ><tspan x="1008" y="682.0">S05</tspan></text>
+</g>
+</a>
+<path d="M 596 800.5 H 614" fill="none" stroke="#08776D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://web.stanford.edu/~jurafsky/slp3/" target="_blank" rel="noopener noreferrer" aria-label="Recurrent Networks: open source 03">
+<g data-card="Recurrent Networks" data-card-x="614" data-card-y="754" data-card-width="406" data-card-height="93">
+<title>Recurrent Networks: Recurrent state; LSTM and GRU variants. Source: Speech and Language Processing</title>
+<rect x="614" y="754" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="630" y="785" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="630" y="785" data-max-width="326">Recurrent Networks</tspan></text>
+<text x="630" y="816" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="630" y="816" data-max-width="374">Recurrent state; LSTM and GRU variants</tspan></text>
+<text x="1008" y="785" font-size="12" fill="#08776D" font-weight="700" text-anchor="end" ><tspan x="1008" y="785.0">S03</tspan></text>
+</g>
+</a>
+<path d="M 596 903.5 H 614" fill="none" stroke="#08776D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener noreferrer" aria-label="Transformers: open source 24">
+<g data-card="Transformers" data-card-x="614" data-card-y="857" data-card-width="406" data-card-height="93">
+<title>Transformers: Attention-based representation processing. Source: Attention Is All You Need</title>
+<rect x="614" y="857" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="630" y="888" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="630" y="888" data-max-width="326">Transformers</tspan></text>
+<text x="630" y="919" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="630" y="919" data-max-width="374">Attention-based representation processing</tspan></text>
+<text x="1008" y="888" font-size="12" fill="#08776D" font-weight="700" text-anchor="end" ><tspan x="1008" y="888.0">S24</tspan></text>
+</g>
+</a>
+<path d="M 596 1006.5 H 614" fill="none" stroke="#08776D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/1609.02907" target="_blank" rel="noopener noreferrer" aria-label="Graph Neural Networks: open source 32">
+<g data-card="Graph Neural Networks" data-card-x="614" data-card-y="960" data-card-width="406" data-card-height="93">
+<title>Graph Neural Networks: Computation over nodes and edges. Source: Graph Convolutional Networks</title>
+<rect x="614" y="960" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="630" y="991" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="630" y="991" data-max-width="326">Graph Neural Networks</tspan></text>
+<text x="630" y="1022" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="630" y="1022" data-max-width="374">Computation over nodes and edges</tspan></text>
+<text x="1008" y="991" font-size="12" fill="#08776D" font-weight="700" text-anchor="end" ><tspan x="1008" y="991.0">S32</tspan></text>
+</g>
+</a>
+<path d="M 596 1109.5 H 614" fill="none" stroke="#08776D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/2312.00752" target="_blank" rel="noopener noreferrer" aria-label="State-Space Networks: open source 25">
+<g data-card="State-Space Networks" data-card-x="614" data-card-y="1063" data-card-width="406" data-card-height="93">
+<title>State-Space Networks: Structured sequence state dynamics. Source: Mamba</title>
+<rect x="614" y="1063" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="630" y="1094" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="630" y="1094" data-max-width="326">State-Space Networks</tspan></text>
+<text x="630" y="1125" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="630" y="1125" data-max-width="374">Structured sequence state dynamics</tspan></text>
+<text x="1008" y="1094" font-size="12" fill="#08776D" font-weight="700" text-anchor="end" ><tspan x="1008" y="1094.0">S25</tspan></text>
+</g>
+</a>
+<path d="M 568 1210.0 H 584" fill="none" stroke="#08776D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="584" y="1188" width="436" height="44" rx="8" fill="#EAF6F2" stroke="none" />
+<text x="598" y="1215" font-size="17" fill="#08776D" font-weight="700" text-anchor="start" ><tspan x="598" y="1215" data-max-width="398">Transformer configurations</tspan></text>
+<path d="M 596 1232 V 1496.5" fill="none" stroke="#08776D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 596 1290.5 H 614" fill="none" stroke="#08776D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://huggingface.co/learn/llm-course/en/chapter1/4" target="_blank" rel="noopener noreferrer" aria-label="Encoder-Only: open source 33">
+<g data-card="Encoder-Only" data-card-x="614" data-card-y="1244" data-card-width="406" data-card-height="93">
+<title>Encoder-Only: Contextual representations of inputs. Source: Transformer Architectures</title>
+<rect x="614" y="1244" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="630" y="1275" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="630" y="1275" data-max-width="326">Encoder-Only</tspan></text>
+<text x="630" y="1306" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="630" y="1306" data-max-width="374">Contextual representations of inputs</tspan></text>
+<text x="1008" y="1275" font-size="12" fill="#08776D" font-weight="700" text-anchor="end" ><tspan x="1008" y="1275.0">S33</tspan></text>
+</g>
+</a>
+<path d="M 596 1393.5 H 614" fill="none" stroke="#08776D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://huggingface.co/learn/llm-course/en/chapter1/4" target="_blank" rel="noopener noreferrer" aria-label="Decoder-Only: open source 33">
+<g data-card="Decoder-Only" data-card-x="614" data-card-y="1347" data-card-width="406" data-card-height="93">
+<title>Decoder-Only: Causal sequence generation. Source: Transformer Architectures</title>
+<rect x="614" y="1347" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="630" y="1378" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="630" y="1378" data-max-width="326">Decoder-Only</tspan></text>
+<text x="630" y="1409" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="630" y="1409" data-max-width="374">Causal sequence generation</tspan></text>
+<text x="1008" y="1378" font-size="12" fill="#08776D" font-weight="700" text-anchor="end" ><tspan x="1008" y="1378.0">S33</tspan></text>
+</g>
+</a>
+<path d="M 596 1496.5 H 614" fill="none" stroke="#08776D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://huggingface.co/learn/llm-course/en/chapter1/4" target="_blank" rel="noopener noreferrer" aria-label="Encoder–Decoder: open source 33">
+<g data-card="Encoder–Decoder" data-card-x="614" data-card-y="1450" data-card-width="406" data-card-height="93">
+<title>Encoder–Decoder: Input encoding with output generation. Source: Transformer Architectures</title>
+<rect x="614" y="1450" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="630" y="1481" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="630" y="1481" data-max-width="326">Encoder–Decoder</tspan></text>
+<text x="630" y="1512" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="630" y="1512" data-max-width="374">Input encoding with output generation</tspan></text>
+<text x="1008" y="1481" font-size="12" fill="#08776D" font-weight="700" text-anchor="end" ><tspan x="1008" y="1481.0">S33</tspan></text>
+</g>
+</a>
+<path d="M 568 1597.0 H 584" fill="none" stroke="#08776D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="584" y="1575" width="436" height="44" rx="8" fill="#EAF6F2" stroke="none" />
+<text x="598" y="1602" font-size="17" fill="#08776D" font-weight="700" text-anchor="start" ><tspan x="598" y="1602" data-max-width="398">Cross-cutting computation pattern</tspan></text>
+<path d="M 596 1619 V 1677.5" fill="none" stroke="#08776D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 596 1677.5 H 614" fill="none" stroke="#08776D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/1701.06538" target="_blank" rel="noopener noreferrer" aria-label="Mixture of Experts: open source 26">
+<g data-card="Mixture of Experts" data-card-x="614" data-card-y="1631" data-card-width="406" data-card-height="93">
+<title>Mixture of Experts: Routing to specialized subnetworks. Source: Sparsely-Gated Mixture-of-Experts</title>
+<rect x="614" y="1631" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="630" y="1662" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="630" y="1662" data-max-width="326">Mixture of Experts</tspan></text>
+<text x="630" y="1693" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="630" y="1693" data-max-width="374">Routing to specialized subnetworks</tspan></text>
+<text x="1008" y="1662" font-size="12" fill="#08776D" font-weight="700" text-anchor="end" ><tspan x="1008" y="1662.0">S26</tspan></text>
+</g>
+</a>
+</g>
+<g id="learning-paradigms" aria-label="Learning Paradigms">
+<path d="M 1280.0 319 V 354" fill="none" stroke="#7650A6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="1280.0" cy="319" r="4" fill="#7650A6"/>
+<rect x="1048" y="354" width="464" height="112" rx="16" fill="#F3EEFA" stroke="#7650A6" />
+<rect x="1066" y="371" width="30" height="25" rx="7" fill="#7650A6" stroke="none" />
+<text x="1081" y="389" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle" ><tspan x="1081" y="389.0">03</tspan></text>
+<text x="1111" y="391" font-size="25" fill="#7650A6" font-weight="700" text-anchor="start" ><tspan x="1111" y="391" data-max-width="382">Learning Paradigms</tspan></text>
+<text x="1068" y="435" font-size="17" fill="#46586B" font-weight="400" text-anchor="start" ><tspan x="1068" y="435" data-max-width="424">Where does the learning signal come from?</tspan></text>
+<path d="M 1280.0 466 V 479 H 1060 V 1207.0" fill="none" stroke="#7650A6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.52"/>
+<path d="M 1060 514.0 H 1076" fill="none" stroke="#7650A6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="1076" y="492" width="436" height="44" rx="8" fill="#F3EEFA" stroke="none" />
+<text x="1090" y="519" font-size="17" fill="#7650A6" font-weight="700" text-anchor="start" ><tspan x="1090" y="519" data-max-width="398">Learning from data</tspan></text>
+<path d="M 1088 536 V 925.5" fill="none" stroke="#7650A6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 1088 594.5 H 1106" fill="none" stroke="#7650A6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://scikit-learn.org/stable/user_guide.html" target="_blank" rel="noopener noreferrer" aria-label="Supervised Learning: open source 02">
+<g data-card="Supervised Learning" data-card-x="1106" data-card-y="548" data-card-width="406" data-card-height="93">
+<title>Supervised Learning: Labeled input–target examples. Source: scikit-learn User Guide</title>
+<rect x="1106" y="548" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="1122" y="579" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="1122" y="579" data-max-width="326">Supervised Learning</tspan></text>
+<text x="1122" y="610" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="1122" y="610" data-max-width="374">Labeled input–target examples</tspan></text>
+<text x="1500" y="579" font-size="12" fill="#7650A6" font-weight="700" text-anchor="end" ><tspan x="1500" y="579.0">S02</tspan></text>
+</g>
+</a>
+<path d="M 1088 708.5 H 1106" fill="none" stroke="#7650A6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://scikit-learn.org/stable/user_guide.html" target="_blank" rel="noopener noreferrer" aria-label="Unsupervised Learning: open source 02">
+<g data-card="Unsupervised Learning" data-card-x="1106" data-card-y="651" data-card-width="406" data-card-height="115">
+<title>Unsupervised Learning: Structure without externally supplied targets. Source: scikit-learn User Guide</title>
+<rect x="1106" y="651" width="406" height="115" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="1122" y="682" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="1122" y="682" data-max-width="326">Unsupervised Learning</tspan></text>
+<text x="1122" y="713" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="1122" y="713" data-max-width="374">Structure without externally supplied</tspan><tspan x="1122" y="735" data-max-width="374">targets</tspan></text>
+<text x="1500" y="682" font-size="12" fill="#7650A6" font-weight="700" text-anchor="end" ><tspan x="1500" y="682.0">S02</tspan></text>
+</g>
+</a>
+<path d="M 1088 822.5 H 1106" fill="none" stroke="#7650A6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://scikit-learn.org/stable/user_guide.html" target="_blank" rel="noopener noreferrer" aria-label="Semi-Supervised Learning: open source 02">
+<g data-card="Semi-Supervised Learning" data-card-x="1106" data-card-y="776" data-card-width="406" data-card-height="93">
+<title>Semi-Supervised Learning: Labeled and unlabeled examples together. Source: scikit-learn User Guide</title>
+<rect x="1106" y="776" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="1122" y="807" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="1122" y="807" data-max-width="326">Semi-Supervised Learning</tspan></text>
+<text x="1122" y="838" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="1122" y="838" data-max-width="374">Labeled and unlabeled examples together</tspan></text>
+<text x="1500" y="807" font-size="12" fill="#7650A6" font-weight="700" text-anchor="end" ><tspan x="1500" y="807.0">S02</tspan></text>
+</g>
+</a>
+<path d="M 1088 925.5 H 1106" fill="none" stroke="#7650A6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/2002.05709" target="_blank" rel="noopener noreferrer" aria-label="Self-Supervised Learning: open source 31">
+<g data-card="Self-Supervised Learning" data-card-x="1106" data-card-y="879" data-card-width="406" data-card-height="93">
+<title>Self-Supervised Learning: Targets derived from the observations. Source: SimCLR</title>
+<rect x="1106" y="879" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="1122" y="910" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="1122" y="910" data-max-width="326">Self-Supervised Learning</tspan></text>
+<text x="1122" y="941" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="1122" y="941" data-max-width="374">Targets derived from the observations</tspan></text>
+<text x="1500" y="910" font-size="12" fill="#7650A6" font-weight="700" text-anchor="end" ><tspan x="1500" y="910.0">S31</tspan></text>
+</g>
+</a>
+<path d="M 1060 1026.0 H 1076" fill="none" stroke="#7650A6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="1076" y="1004" width="436" height="44" rx="8" fill="#F3EEFA" stroke="none" />
+<text x="1090" y="1031" font-size="17" fill="#7650A6" font-weight="700" text-anchor="start" ><tspan x="1090" y="1031" data-max-width="398">Learning through decisions</tspan></text>
+<path d="M 1088 1048 V 1106.5" fill="none" stroke="#7650A6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 1088 1106.5 H 1106" fill="none" stroke="#7650A6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://aima.cs.berkeley.edu/contents.html" target="_blank" rel="noopener noreferrer" aria-label="Reinforcement Learning: open source 01">
+<g data-card="Reinforcement Learning" data-card-x="1106" data-card-y="1060" data-card-width="406" data-card-height="93">
+<title>Reinforcement Learning: Actions evaluated through reward signals. Source: AI: A Modern Approach, 4th ed.</title>
+<rect x="1106" y="1060" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="1122" y="1091" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="1122" y="1091" data-max-width="326">Reinforcement Learning</tspan></text>
+<text x="1122" y="1122" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="1122" y="1122" data-max-width="374">Actions evaluated through reward signals</tspan></text>
+<text x="1500" y="1091" font-size="12" fill="#7650A6" font-weight="700" text-anchor="end" ><tspan x="1500" y="1091.0">S01</tspan></text>
+</g>
+</a>
+<path d="M 1060 1207.0 H 1076" fill="none" stroke="#7650A6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="1076" y="1185" width="436" height="44" rx="8" fill="#F3EEFA" stroke="none" />
+<text x="1090" y="1212" font-size="17" fill="#7650A6" font-weight="700" text-anchor="start" ><tspan x="1090" y="1212" data-max-width="398">Relation between labels</tspan></text>
+<path d="M 1088 1229 V 1417.5" fill="none" stroke="#7650A6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 1088 1296.5 H 1106" fill="none" stroke="#7650A6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/2203.02155" target="_blank" rel="noopener noreferrer" aria-label="Paradigms Can Be Combined: open source 35">
+<g data-card="Paradigms Can Be Combined" data-card-x="1106" data-card-y="1241" data-card-width="406" data-card-height="111">
+<title>Paradigms Can Be Combined: A single model can use several stages. Source: InstructGPT</title>
+<rect x="1106" y="1241" width="406" height="111" rx="10" fill="#F4F5F4" stroke="#DCE2E6" class="leaf"/>
+<text x="1122" y="1261" font-size="11" fill="#677586" font-weight="700" text-anchor="start" ><tspan x="1122" y="1261.0" data-max-width="374">READING NOTE</tspan></text>
+<text x="1122" y="1290" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="1122" y="1290" data-max-width="326">Paradigms Can Be Combined</tspan></text>
+<text x="1122" y="1321" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="1122" y="1321" data-max-width="374">A single model can use several stages</tspan></text>
+<text x="1500" y="1290" font-size="12" fill="#7650A6" font-weight="700" text-anchor="end" ><tspan x="1500" y="1290.0">S35</tspan></text>
+</g>
+</a>
+<path d="M 1088 1417.5 H 1106" fill="none" stroke="#7650A6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<g data-card="Learning Signals Can Overlap" data-card-x="1106" data-card-y="1362" data-card-width="406" data-card-height="111">
+<title>Learning Signals Can Overlap: These labels are not mutually exclusive</title>
+<rect x="1106" y="1362" width="406" height="111" rx="10" fill="#F4F5F4" stroke="#DCE2E6" class="leaf"/>
+<text x="1122" y="1382" font-size="11" fill="#677586" font-weight="700" text-anchor="start" ><tspan x="1122" y="1382.0" data-max-width="374">READING NOTE</tspan></text>
+<text x="1122" y="1411" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="1122" y="1411" data-max-width="326">Learning Signals Can Overlap</tspan></text>
+<text x="1122" y="1442" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="1122" y="1442" data-max-width="374">These labels are not mutually exclusive</tspan></text>
+</g>
+</g>
+<g id="generative-formulations" aria-label="Generative Formulations">
+<path d="M 1772.0 319 V 354" fill="none" stroke="#A15B27" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="1772.0" cy="319" r="4" fill="#A15B27"/>
+<rect x="1540" y="354" width="464" height="112" rx="16" fill="#FBF2E8" stroke="#A15B27" />
+<rect x="1558" y="371" width="30" height="25" rx="7" fill="#A15B27" stroke="none" />
+<text x="1573" y="389" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle" ><tspan x="1573" y="389.0">04</tspan></text>
+<text x="1603" y="391" font-size="25" fill="#A15B27" font-weight="700" text-anchor="start" ><tspan x="1603" y="391" data-max-width="382">Generative Formulations</tspan></text>
+<text x="1560" y="435" font-size="17" fill="#46586B" font-weight="400" text-anchor="start" ><tspan x="1560" y="435" data-max-width="424">How is a data distribution represented?</tspan></text>
+<path d="M 1772.0 466 V 479 H 1552 V 1418.0" fill="none" stroke="#A15B27" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.52"/>
+<path d="M 1552 514.0 H 1568" fill="none" stroke="#A15B27" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="1568" y="492" width="436" height="44" rx="8" fill="#FBF2E8" stroke="none" />
+<text x="1582" y="519" font-size="17" fill="#A15B27" font-weight="700" text-anchor="start" ><tspan x="1582" y="519" data-max-width="398">Selected generative model families</tspan></text>
+<path d="M 1580 536 V 1136.5" fill="none" stroke="#A15B27" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 1580 594.5 H 1598" fill="none" stroke="#A15B27" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://www.deeplearningbook.org/" target="_blank" rel="noopener noreferrer" aria-label="Autoregressive Models: open source 05">
+<g data-card="Autoregressive Models" data-card-x="1598" data-card-y="548" data-card-width="406" data-card-height="93">
+<title>Autoregressive Models: Factorization into conditional predictions. Source: Deep Learning</title>
+<rect x="1598" y="548" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="1614" y="579" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="1614" y="579" data-max-width="326">Autoregressive Models</tspan></text>
+<text x="1614" y="610" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="1614" y="610" data-max-width="374">Factorization into conditional predictions</tspan></text>
+<text x="1992" y="579" font-size="12" fill="#A15B27" font-weight="700" text-anchor="end" ><tspan x="1992" y="579.0">S05</tspan></text>
+</g>
+</a>
+<path d="M 1580 697.5 H 1598" fill="none" stroke="#A15B27" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/1312.6114" target="_blank" rel="noopener noreferrer" aria-label="Variational Autoencoders: open source 29">
+<g data-card="Variational Autoencoders" data-card-x="1598" data-card-y="651" data-card-width="406" data-card-height="93">
+<title>Variational Autoencoders: Latent variables with variational inference. Source: Auto-Encoding Variational Bayes</title>
+<rect x="1598" y="651" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="1614" y="682" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="1614" y="682" data-max-width="326">Variational Autoencoders</tspan></text>
+<text x="1614" y="713" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="1614" y="713" data-max-width="374">Latent variables with variational inference</tspan></text>
+<text x="1992" y="682" font-size="12" fill="#A15B27" font-weight="700" text-anchor="end" ><tspan x="1992" y="682.0">S29</tspan></text>
+</g>
+</a>
+<path d="M 1580 814.0 H 1598" fill="none" stroke="#A15B27" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/1406.2661" target="_blank" rel="noopener noreferrer" aria-label="Generative Adversarial Networks: open source 30">
+<g data-card="Generative Adversarial Networks" data-card-x="1598" data-card-y="754" data-card-width="406" data-card-height="120">
+<title>Generative Adversarial Networks: Generator trained against a discriminator. Source: Generative Adversarial Networks</title>
+<rect x="1598" y="754" width="406" height="120" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="1614" y="785" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="1614" y="785" data-max-width="326">Generative Adversarial</tspan><tspan x="1614" y="812" data-max-width="326">Networks</tspan></text>
+<text x="1614" y="843" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="1614" y="843" data-max-width="374">Generator trained against a discriminator</tspan></text>
+<text x="1992" y="785" font-size="12" fill="#A15B27" font-weight="700" text-anchor="end" ><tspan x="1992" y="785.0">S30</tspan></text>
+</g>
+</a>
+<path d="M 1580 930.5 H 1598" fill="none" stroke="#A15B27" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/2006.11239" target="_blank" rel="noopener noreferrer" aria-label="Diffusion Models: open source 27">
+<g data-card="Diffusion Models" data-card-x="1598" data-card-y="884" data-card-width="406" data-card-height="93">
+<title>Diffusion Models: Generation through learned denoising. Source: Denoising Diffusion Probabilistic Models</title>
+<rect x="1598" y="884" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="1614" y="915" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="1614" y="915" data-max-width="326">Diffusion Models</tspan></text>
+<text x="1614" y="946" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="1614" y="946" data-max-width="374">Generation through learned denoising</tspan></text>
+<text x="1992" y="915" font-size="12" fill="#A15B27" font-weight="700" text-anchor="end" ><tspan x="1992" y="915.0">S27</tspan></text>
+</g>
+</a>
+<path d="M 1580 1033.5 H 1598" fill="none" stroke="#A15B27" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/1505.05770" target="_blank" rel="noopener noreferrer" aria-label="Normalizing Flows: open source 28">
+<g data-card="Normalizing Flows" data-card-x="1598" data-card-y="987" data-card-width="406" data-card-height="93">
+<title>Normalizing Flows: Invertible distribution transformations. Source: Variational Inference with Normalizing Flows</title>
+<rect x="1598" y="987" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="1614" y="1018" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="1614" y="1018" data-max-width="326">Normalizing Flows</tspan></text>
+<text x="1614" y="1049" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="1614" y="1049" data-max-width="374">Invertible distribution transformations</tspan></text>
+<text x="1992" y="1018" font-size="12" fill="#A15B27" font-weight="700" text-anchor="end" ><tspan x="1992" y="1018.0">S28</tspan></text>
+</g>
+</a>
+<path d="M 1580 1136.5 H 1598" fill="none" stroke="#A15B27" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://www.deeplearningbook.org/" target="_blank" rel="noopener noreferrer" aria-label="Energy-Based Models: open source 05">
+<g data-card="Energy-Based Models" data-card-x="1598" data-card-y="1090" data-card-width="406" data-card-height="93">
+<title>Energy-Based Models: Compatibility encoded by an energy function. Source: Deep Learning</title>
+<rect x="1598" y="1090" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="1614" y="1121" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="1614" y="1121" data-max-width="326">Energy-Based Models</tspan></text>
+<text x="1614" y="1152" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="1614" y="1152" data-max-width="374">Compatibility encoded by an energy function</tspan></text>
+<text x="1992" y="1121" font-size="12" fill="#A15B27" font-weight="700" text-anchor="end" ><tspan x="1992" y="1121.0">S05</tspan></text>
+</g>
+</a>
+<path d="M 1552 1237.0 H 1568" fill="none" stroke="#A15B27" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="1568" y="1215" width="436" height="44" rx="8" fill="#FBF2E8" stroke="none" />
+<text x="1582" y="1242" font-size="17" fill="#A15B27" font-weight="700" text-anchor="start" ><tspan x="1582" y="1242" data-max-width="398">A related training method</tspan></text>
+<path d="M 1580 1259 V 1317.5" fill="none" stroke="#A15B27" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 1580 1317.5 H 1598" fill="none" stroke="#A15B27" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/2210.02747" target="_blank" rel="noopener noreferrer" aria-label="Flow Matching: open source 44">
+<g data-card="Flow Matching" data-card-x="1598" data-card-y="1271" data-card-width="406" data-card-height="93">
+<title>Flow Matching: Vector-field training for continuous flows. Source: Flow Matching</title>
+<rect x="1598" y="1271" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="1614" y="1302" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="1614" y="1302" data-max-width="326">Flow Matching</tspan></text>
+<text x="1614" y="1333" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="1614" y="1333" data-max-width="374">Vector-field training for continuous flows</tspan></text>
+<text x="1992" y="1302" font-size="12" fill="#A15B27" font-weight="700" text-anchor="end" ><tspan x="1992" y="1302.0">S44</tspan></text>
+</g>
+</a>
+<path d="M 1552 1418.0 H 1568" fill="none" stroke="#A15B27" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="1568" y="1396" width="436" height="44" rx="8" fill="#FBF2E8" stroke="none" />
+<text x="1582" y="1423" font-size="17" fill="#A15B27" font-weight="700" text-anchor="start" ><tspan x="1582" y="1423" data-max-width="398">How to interpret this branch</tspan></text>
+<path d="M 1580 1440 V 1521.0" fill="none" stroke="#A15B27" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 1580 1521.0 H 1598" fill="none" stroke="#A15B27" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<g data-card="Formulation and Architecture" data-card-x="1598" data-card-y="1452" data-card-width="406" data-card-height="138">
+<title>Formulation and Architecture: Separate, potentially overlapping axes</title>
+<rect x="1598" y="1452" width="406" height="138" rx="10" fill="#F4F5F4" stroke="#DCE2E6" class="leaf"/>
+<text x="1614" y="1472" font-size="11" fill="#677586" font-weight="700" text-anchor="start" ><tspan x="1614" y="1472.0" data-max-width="374">READING NOTE</tspan></text>
+<text x="1614" y="1501" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="1614" y="1501" data-max-width="326">Formulation and</tspan><tspan x="1614" y="1528" data-max-width="326">Architecture</tspan></text>
+<text x="1614" y="1559" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="1614" y="1559" data-max-width="374">Separate, potentially overlapping axes</tspan></text>
+</g>
+</g>
+<g id="modalities-data" aria-label="Modalities &amp; Data">
+<path d="M 2264.0 319 V 354" fill="none" stroke="#AC4865" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="2264.0" cy="319" r="4" fill="#AC4865"/>
+<rect x="2032" y="354" width="464" height="112" rx="16" fill="#FBEFF3" stroke="#AC4865" />
+<rect x="2050" y="371" width="30" height="25" rx="7" fill="#AC4865" stroke="none" />
+<text x="2065" y="389" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle" ><tspan x="2065" y="389.0">05</tspan></text>
+<text x="2095" y="391" font-size="25" fill="#AC4865" font-weight="700" text-anchor="start" ><tspan x="2095" y="391" data-max-width="382">Modalities &amp; Data</tspan></text>
+<text x="2052" y="435" font-size="17" fill="#46586B" font-weight="400" text-anchor="start" ><tspan x="2052" y="435" data-max-width="424">What can the model receive or produce?</tspan></text>
+<path d="M 2264.0 466 V 479 H 2044 V 1675.0" fill="none" stroke="#AC4865" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.52"/>
+<path d="M 2044 514.0 H 2060" fill="none" stroke="#AC4865" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="2060" y="492" width="436" height="44" rx="8" fill="#FBEFF3" stroke="none" />
+<text x="2074" y="519" font-size="17" fill="#AC4865" font-weight="700" text-anchor="start" ><tspan x="2074" y="519" data-max-width="398">Language and symbols</tspan></text>
+<path d="M 2072 536 V 697.5" fill="none" stroke="#AC4865" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 2072 594.5 H 2090" fill="none" stroke="#AC4865" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://huggingface.co/tasks" target="_blank" rel="noopener noreferrer" aria-label="Text: open source 04">
+<g data-card="Text" data-card-x="2090" data-card-y="548" data-card-width="406" data-card-height="93">
+<title>Text: Natural-language sequences. Source: Hugging Face Tasks</title>
+<rect x="2090" y="548" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="2106" y="579" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="2106" y="579" data-max-width="326">Text</tspan></text>
+<text x="2106" y="610" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="2106" y="610" data-max-width="374">Natural-language sequences</tspan></text>
+<text x="2484" y="579" font-size="12" fill="#AC4865" font-weight="700" text-anchor="end" ><tspan x="2484" y="579.0">S04</tspan></text>
+</g>
+</a>
+<path d="M 2072 697.5 H 2090" fill="none" stroke="#AC4865" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://github.com/microsoft/CodeXGLUE#tasks-and-datasets" target="_blank" rel="noopener noreferrer" aria-label="Code: open source 07">
+<g data-card="Code" data-card-x="2090" data-card-y="651" data-card-width="406" data-card-height="93">
+<title>Code: Programming-language sequences. Source: CodeXGLUE</title>
+<rect x="2090" y="651" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="2106" y="682" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="2106" y="682" data-max-width="326">Code</tspan></text>
+<text x="2106" y="713" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="2106" y="713" data-max-width="374">Programming-language sequences</tspan></text>
+<text x="2484" y="682" font-size="12" fill="#AC4865" font-weight="700" text-anchor="end" ><tspan x="2484" y="682.0">S07</tspan></text>
+</g>
+</a>
+<path d="M 2044 798.0 H 2060" fill="none" stroke="#AC4865" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="2060" y="776" width="436" height="44" rx="8" fill="#FBEFF3" stroke="none" />
+<text x="2074" y="803" font-size="17" fill="#AC4865" font-weight="700" text-anchor="start" ><tspan x="2074" y="803" data-max-width="398">Perceptual inputs and outputs</tspan></text>
+<path d="M 2072 820 V 1084.5" fill="none" stroke="#AC4865" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 2072 878.5 H 2090" fill="none" stroke="#AC4865" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://huggingface.co/tasks" target="_blank" rel="noopener noreferrer" aria-label="Images: open source 04">
+<g data-card="Images" data-card-x="2090" data-card-y="832" data-card-width="406" data-card-height="93">
+<title>Images: Still visual observations. Source: Hugging Face Tasks</title>
+<rect x="2090" y="832" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="2106" y="863" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="2106" y="863" data-max-width="326">Images</tspan></text>
+<text x="2106" y="894" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="2106" y="894" data-max-width="374">Still visual observations</tspan></text>
+<text x="2484" y="863" font-size="12" fill="#AC4865" font-weight="700" text-anchor="end" ><tspan x="2484" y="863.0">S04</tspan></text>
+</g>
+</a>
+<path d="M 2072 981.5 H 2090" fill="none" stroke="#AC4865" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://huggingface.co/tasks" target="_blank" rel="noopener noreferrer" aria-label="Video: open source 04">
+<g data-card="Video" data-card-x="2090" data-card-y="935" data-card-width="406" data-card-height="93">
+<title>Video: Sequences of visual frames. Source: Hugging Face Tasks</title>
+<rect x="2090" y="935" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="2106" y="966" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="2106" y="966" data-max-width="326">Video</tspan></text>
+<text x="2106" y="997" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="2106" y="997" data-max-width="374">Sequences of visual frames</tspan></text>
+<text x="2484" y="966" font-size="12" fill="#AC4865" font-weight="700" text-anchor="end" ><tspan x="2484" y="966.0">S04</tspan></text>
+</g>
+</a>
+<path d="M 2072 1084.5 H 2090" fill="none" stroke="#AC4865" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://www.isca-archive.org/interspeech_2021/yang21c_interspeech.pdf" target="_blank" rel="noopener noreferrer" aria-label="Speech &amp; Audio: open source 08">
+<g data-card="Speech &amp; Audio" data-card-x="2090" data-card-y="1038" data-card-width="406" data-card-height="93">
+<title>Speech &amp; Audio: Spoken language and other sounds. Source: SUPERB</title>
+<rect x="2090" y="1038" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="2106" y="1069" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="2106" y="1069" data-max-width="326">Speech &amp; Audio</tspan></text>
+<text x="2106" y="1100" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="2106" y="1100" data-max-width="374">Spoken language and other sounds</tspan></text>
+<text x="2484" y="1069" font-size="12" fill="#AC4865" font-weight="700" text-anchor="end" ><tspan x="2484" y="1069.0">S08</tspan></text>
+</g>
+</a>
+<path d="M 2044 1185.0 H 2060" fill="none" stroke="#AC4865" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="2060" y="1163" width="436" height="44" rx="8" fill="#FBEFF3" stroke="none" />
+<text x="2074" y="1190" font-size="17" fill="#AC4865" font-weight="700" text-anchor="start" ><tspan x="2074" y="1190" data-max-width="398">Structured observations</tspan></text>
+<path d="M 2072 1207 V 1574.5" fill="none" stroke="#AC4865" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 2072 1265.5 H 2090" fill="none" stroke="#AC4865" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://scikit-learn.org/stable/user_guide.html" target="_blank" rel="noopener noreferrer" aria-label="Tabular Data: open source 02">
+<g data-card="Tabular Data" data-card-x="2090" data-card-y="1219" data-card-width="406" data-card-height="93">
+<title>Tabular Data: Records with defined feature columns. Source: scikit-learn User Guide</title>
+<rect x="2090" y="1219" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="2106" y="1250" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="2106" y="1250" data-max-width="326">Tabular Data</tspan></text>
+<text x="2106" y="1281" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="2106" y="1281" data-max-width="374">Records with defined feature columns</tspan></text>
+<text x="2484" y="1250" font-size="12" fill="#AC4865" font-weight="700" text-anchor="end" ><tspan x="2484" y="1250.0">S02</tspan></text>
+</g>
+</a>
+<path d="M 2072 1368.5 H 2090" fill="none" stroke="#AC4865" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://www.sktime.net/docs/api-reference/" target="_blank" rel="noopener noreferrer" aria-label="Time Series: open source 10">
+<g data-card="Time Series" data-card-x="2090" data-card-y="1322" data-card-width="406" data-card-height="93">
+<title>Time Series: Time-indexed measurements. Source: sktime API Reference</title>
+<rect x="2090" y="1322" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="2106" y="1353" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="2106" y="1353" data-max-width="326">Time Series</tspan></text>
+<text x="2106" y="1384" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="2106" y="1384" data-max-width="374">Time-indexed measurements</tspan></text>
+<text x="2484" y="1353" font-size="12" fill="#AC4865" font-weight="700" text-anchor="end" ><tspan x="2484" y="1353.0">S10</tspan></text>
+</g>
+</a>
+<path d="M 2072 1471.5 H 2090" fill="none" stroke="#AC4865" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://ogb.stanford.edu/docs/home/" target="_blank" rel="noopener noreferrer" aria-label="Graphs: open source 11">
+<g data-card="Graphs" data-card-x="2090" data-card-y="1425" data-card-width="406" data-card-height="93">
+<title>Graphs: Entities connected through relations. Source: Open Graph Benchmark</title>
+<rect x="2090" y="1425" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="2106" y="1456" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="2106" y="1456" data-max-width="326">Graphs</tspan></text>
+<text x="2106" y="1487" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="2106" y="1487" data-max-width="374">Entities connected through relations</tspan></text>
+<text x="2484" y="1456" font-size="12" fill="#AC4865" font-weight="700" text-anchor="end" ><tspan x="2484" y="1456.0">S11</tspan></text>
+</g>
+</a>
+<path d="M 2072 1574.5 H 2090" fill="none" stroke="#AC4865" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/2305.02463" target="_blank" rel="noopener noreferrer" aria-label="3D Representations: open source 47">
+<g data-card="3D Representations" data-card-x="2090" data-card-y="1528" data-card-width="406" data-card-height="93">
+<title>3D Representations: Shapes, meshes and spatial fields. Source: Shap-E</title>
+<rect x="2090" y="1528" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="2106" y="1559" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="2106" y="1559" data-max-width="326">3D Representations</tspan></text>
+<text x="2106" y="1590" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="2106" y="1590" data-max-width="374">Shapes, meshes and spatial fields</tspan></text>
+<text x="2484" y="1559" font-size="12" fill="#AC4865" font-weight="700" text-anchor="end" ><tspan x="2484" y="1559.0">S47</tspan></text>
+</g>
+</a>
+<path d="M 2044 1675.0 H 2060" fill="none" stroke="#AC4865" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="2060" y="1653" width="436" height="44" rx="8" fill="#FBEFF3" stroke="none" />
+<text x="2074" y="1680" font-size="17" fill="#AC4865" font-weight="700" text-anchor="start" ><tspan x="2074" y="1680" data-max-width="398">Combined modalities</tspan></text>
+<path d="M 2072 1697 V 1755.5" fill="none" stroke="#AC4865" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 2072 1755.5 H 2090" fill="none" stroke="#AC4865" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/2108.07258" target="_blank" rel="noopener noreferrer" aria-label="Multimodal Models: open source 37">
+<g data-card="Multimodal Models" data-card-x="2090" data-card-y="1709" data-card-width="406" data-card-height="93">
+<title>Multimodal Models: Several modalities within one model. Source: Foundation Models</title>
+<rect x="2090" y="1709" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="2106" y="1740" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="2106" y="1740" data-max-width="326">Multimodal Models</tspan></text>
+<text x="2106" y="1771" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="2106" y="1771" data-max-width="374">Several modalities within one model</tspan></text>
+<text x="2484" y="1740" font-size="12" fill="#AC4865" font-weight="700" text-anchor="end" ><tspan x="2484" y="1740.0">S37</tspan></text>
+</g>
+</a>
+</g>
+<g id="training-adaptation" aria-label="Training &amp; Adaptation">
+<path d="M 2756.0 319 V 354" fill="none" stroke="#37748E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="2756.0" cy="319" r="4" fill="#37748E"/>
+<rect x="2524" y="354" width="464" height="112" rx="16" fill="#EDF5F9" stroke="#37748E" />
+<rect x="2542" y="371" width="30" height="25" rx="7" fill="#37748E" stroke="none" />
+<text x="2557" y="389" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle" ><tspan x="2557" y="389.0">06</tspan></text>
+<text x="2587" y="391" font-size="25" fill="#37748E" font-weight="700" text-anchor="start" ><tspan x="2587" y="391" data-max-width="382">Training &amp; Adaptation</tspan></text>
+<text x="2544" y="435" font-size="17" fill="#46586B" font-weight="400" text-anchor="start" ><tspan x="2544" y="435" data-max-width="424">How is the model prepared and specialized?</tspan></text>
+<path d="M 2756.0 466 V 479 H 2536 V 1469.0" fill="none" stroke="#37748E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.52"/>
+<path d="M 2536 514.0 H 2552" fill="none" stroke="#37748E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="2552" y="492" width="436" height="44" rx="8" fill="#EDF5F9" stroke="none" />
+<text x="2566" y="519" font-size="17" fill="#37748E" font-weight="700" text-anchor="start" ><tspan x="2566" y="519" data-max-width="398">Training scope and stages</tspan></text>
+<path d="M 2564 536 V 827.5" fill="none" stroke="#37748E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 2564 608.0 H 2582" fill="none" stroke="#37748E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/2108.07258" target="_blank" rel="noopener noreferrer" aria-label="Foundation-Model Pretraining: open source 37">
+<g data-card="Foundation-Model Pretraining" data-card-x="2582" data-card-y="548" data-card-width="406" data-card-height="120">
+<title>Foundation-Model Pretraining: Broad training for downstream adaptation. Source: Foundation Models</title>
+<rect x="2582" y="548" width="406" height="120" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="2598" y="579" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="2598" y="579" data-max-width="326">Foundation-Model</tspan><tspan x="2598" y="606" data-max-width="326">Pretraining</tspan></text>
+<text x="2598" y="637" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="2598" y="637" data-max-width="374">Broad training for downstream adaptation</tspan></text>
+<text x="2976" y="579" font-size="12" fill="#37748E" font-weight="700" text-anchor="end" ><tspan x="2976" y="579.0">S37</tspan></text>
+</g>
+</a>
+<path d="M 2564 724.5 H 2582" fill="none" stroke="#37748E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://huggingface.co/learn/llm-course/en/chapter1/4" target="_blank" rel="noopener noreferrer" aria-label="Task-Specific Fine-Tuning: open source 33">
+<g data-card="Task-Specific Fine-Tuning" data-card-x="2582" data-card-y="678" data-card-width="406" data-card-height="93">
+<title>Task-Specific Fine-Tuning: Update parameters for a target task. Source: Transformer Architectures</title>
+<rect x="2582" y="678" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="2598" y="709" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="2598" y="709" data-max-width="326">Task-Specific Fine-Tuning</tspan></text>
+<text x="2598" y="740" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="2598" y="740" data-max-width="374">Update parameters for a target task</tspan></text>
+<text x="2976" y="709" font-size="12" fill="#37748E" font-weight="700" text-anchor="end" ><tspan x="2976" y="709.0">S33</tspan></text>
+</g>
+</a>
+<path d="M 2564 827.5 H 2582" fill="none" stroke="#37748E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/2203.02155" target="_blank" rel="noopener noreferrer" aria-label="Instruction Tuning: open source 35">
+<g data-card="Instruction Tuning" data-card-x="2582" data-card-y="781" data-card-width="406" data-card-height="93">
+<title>Instruction Tuning: Supervised learning from instructions. Source: InstructGPT</title>
+<rect x="2582" y="781" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="2598" y="812" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="2598" y="812" data-max-width="326">Instruction Tuning</tspan></text>
+<text x="2598" y="843" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="2598" y="843" data-max-width="374">Supervised learning from instructions</tspan></text>
+<text x="2976" y="812" font-size="12" fill="#37748E" font-weight="700" text-anchor="end" ><tspan x="2976" y="812.0">S35</tspan></text>
+</g>
+</a>
+<path d="M 2536 928.0 H 2552" fill="none" stroke="#37748E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="2552" y="906" width="436" height="44" rx="8" fill="#EDF5F9" stroke="none" />
+<text x="2566" y="933" font-size="17" fill="#37748E" font-weight="700" text-anchor="start" ><tspan x="2566" y="933" data-max-width="398">Parameter-efficient updates</tspan></text>
+<path d="M 2564 950 V 1022.0" fill="none" stroke="#37748E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 2564 1022.0 H 2582" fill="none" stroke="#37748E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/2106.09685" target="_blank" rel="noopener noreferrer" aria-label="Low-Rank Adaptation (LoRA): open source 34">
+<g data-card="Low-Rank Adaptation (LoRA)" data-card-x="2582" data-card-y="962" data-card-width="406" data-card-height="120">
+<title>Low-Rank Adaptation (LoRA): Train small low-rank parameter updates. Source: LoRA</title>
+<rect x="2582" y="962" width="406" height="120" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="2598" y="993" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="2598" y="993" data-max-width="326">Low-Rank Adaptation</tspan><tspan x="2598" y="1020" data-max-width="326">(LoRA)</tspan></text>
+<text x="2598" y="1051" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="2598" y="1051" data-max-width="374">Train small low-rank parameter updates</tspan></text>
+<text x="2976" y="993" font-size="12" fill="#37748E" font-weight="700" text-anchor="end" ><tspan x="2976" y="993.0">S34</tspan></text>
+</g>
+</a>
+<path d="M 2536 1136.0 H 2552" fill="none" stroke="#37748E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="2552" y="1114" width="436" height="44" rx="8" fill="#EDF5F9" stroke="none" />
+<text x="2566" y="1141" font-size="17" fill="#37748E" font-weight="700" text-anchor="start" ><tspan x="2566" y="1141" data-max-width="398">Preferences and behavior</tspan></text>
+<path d="M 2564 1158 V 1355.0" fill="none" stroke="#37748E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 2564 1227.5 H 2582" fill="none" stroke="#37748E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/2203.02155" target="_blank" rel="noopener noreferrer" aria-label="RL from Human Feedback: open source 35">
+<g data-card="RL from Human Feedback" data-card-x="2582" data-card-y="1170" data-card-width="406" data-card-height="115">
+<title>RL from Human Feedback: Reward-based tuning from human preferences. Source: InstructGPT</title>
+<rect x="2582" y="1170" width="406" height="115" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="2598" y="1201" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="2598" y="1201" data-max-width="326">RL from Human Feedback</tspan></text>
+<text x="2598" y="1232" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="2598" y="1232" data-max-width="374">Reward-based tuning from human</tspan><tspan x="2598" y="1254" data-max-width="374">preferences</tspan></text>
+<text x="2976" y="1201" font-size="12" fill="#37748E" font-weight="700" text-anchor="end" ><tspan x="2976" y="1201.0">S35</tspan></text>
+</g>
+</a>
+<path d="M 2564 1355.0 H 2582" fill="none" stroke="#37748E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/2305.18290" target="_blank" rel="noopener noreferrer" aria-label="Direct Preference Optimization: open source 36">
+<g data-card="Direct Preference Optimization" data-card-x="2582" data-card-y="1295" data-card-width="406" data-card-height="120">
+<title>Direct Preference Optimization: Optimize directly from preference pairs. Source: Direct Preference Optimization</title>
+<rect x="2582" y="1295" width="406" height="120" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="2598" y="1326" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="2598" y="1326" data-max-width="326">Direct Preference</tspan><tspan x="2598" y="1353" data-max-width="326">Optimization</tspan></text>
+<text x="2598" y="1384" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="2598" y="1384" data-max-width="374">Optimize directly from preference pairs</tspan></text>
+<text x="2976" y="1326" font-size="12" fill="#37748E" font-weight="700" text-anchor="end" ><tspan x="2976" y="1326.0">S36</tspan></text>
+</g>
+</a>
+<path d="M 2536 1469.0 H 2552" fill="none" stroke="#37748E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="2552" y="1447" width="436" height="44" rx="8" fill="#EDF5F9" stroke="none" />
+<text x="2566" y="1474" font-size="17" fill="#37748E" font-weight="700" text-anchor="start" ><tspan x="2566" y="1474" data-max-width="398">Knowledge transfer</tspan></text>
+<path d="M 2564 1491 V 1549.5" fill="none" stroke="#37748E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 2564 1549.5 H 2582" fill="none" stroke="#37748E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/1503.02531" target="_blank" rel="noopener noreferrer" aria-label="Knowledge Distillation: open source 38">
+<g data-card="Knowledge Distillation" data-card-x="2582" data-card-y="1503" data-card-width="406" data-card-height="93">
+<title>Knowledge Distillation: Transfer behavior from teacher to student. Source: Knowledge Distillation</title>
+<rect x="2582" y="1503" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="2598" y="1534" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="2598" y="1534" data-max-width="326">Knowledge Distillation</tspan></text>
+<text x="2598" y="1565" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="2598" y="1565" data-max-width="374">Transfer behavior from teacher to student</tspan></text>
+<text x="2976" y="1534" font-size="12" fill="#37748E" font-weight="700" text-anchor="end" ><tspan x="2976" y="1534.0">S38</tspan></text>
+</g>
+</a>
+</g>
+<g id="task-families" aria-label="Task Families">
+<path d="M 3248.0 319 V 354" fill="none" stroke="#687D35" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="3248.0" cy="319" r="4" fill="#687D35"/>
+<rect x="3016" y="354" width="464" height="112" rx="16" fill="#F2F5E9" stroke="#687D35" />
+<rect x="3034" y="371" width="30" height="25" rx="7" fill="#687D35" stroke="none" />
+<text x="3049" y="389" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle" ><tspan x="3049" y="389.0">07</tspan></text>
+<text x="3079" y="391" font-size="25" fill="#687D35" font-weight="700" text-anchor="start" ><tspan x="3079" y="391" data-max-width="382">Task Families</tspan></text>
+<text x="3036" y="435" font-size="17" fill="#46586B" font-weight="400" text-anchor="start" ><tspan x="3036" y="435" data-max-width="424">What output or outcome is evaluated?</tspan></text>
+<path d="M 3248.0 466 V 479 H 3028 V 1443.0" fill="none" stroke="#687D35" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.52"/>
+<path d="M 3028 514.0 H 3044" fill="none" stroke="#687D35" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="3044" y="492" width="436" height="44" rx="8" fill="#F2F5E9" stroke="none" />
+<text x="3058" y="519" font-size="17" fill="#687D35" font-weight="700" text-anchor="start" ><tspan x="3058" y="519" data-max-width="398">Detailed in the companion task map</tspan></text>
+<path d="M 3056 536 V 1342.5" fill="none" stroke="#687D35" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 3056 594.5 H 3074" fill="none" stroke="#687D35" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="ai-task-taxonomy.svg#language-text" target="_blank" rel="noopener noreferrer" aria-label="Language &amp; Text: open detailed task family">
+<g data-card="Language &amp; Text" data-card-x="3074" data-card-y="548" data-card-width="406" data-card-height="93">
+<title>Language &amp; Text: Meaning, structure and generation</title>
+<rect x="3074" y="548" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="3090" y="579" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="3090" y="579" data-max-width="326">Language &amp; Text</tspan></text>
+<text x="3090" y="610" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="3090" y="610" data-max-width="374">Meaning, structure and generation</tspan></text>
+<text x="3465" y="579" font-size="20" fill="#687D35" font-weight="700" text-anchor="end" ><tspan x="3465" y="579.0">↗</tspan></text>
+</g>
+</a>
+<path d="M 3056 697.5 H 3074" fill="none" stroke="#687D35" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="ai-task-taxonomy.svg#retrieval-recommendation" target="_blank" rel="noopener noreferrer" aria-label="Retrieval &amp; Recommendation: open detailed task family">
+<g data-card="Retrieval &amp; Recommendation" data-card-x="3074" data-card-y="651" data-card-width="406" data-card-height="93">
+<title>Retrieval &amp; Recommendation: Finding and ordering relevant items</title>
+<rect x="3074" y="651" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="3090" y="682" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="3090" y="682" data-max-width="326">Retrieval &amp; Recommendation</tspan></text>
+<text x="3090" y="713" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="3090" y="713" data-max-width="374">Finding and ordering relevant items</tspan></text>
+<text x="3465" y="682" font-size="20" fill="#687D35" font-weight="700" text-anchor="end" ><tspan x="3465" y="682.0">↗</tspan></text>
+</g>
+</a>
+<path d="M 3056 800.5 H 3074" fill="none" stroke="#687D35" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="ai-task-taxonomy.svg#vision-video-3d" target="_blank" rel="noopener noreferrer" aria-label="Vision, Video &amp; 3D: open detailed task family">
+<g data-card="Vision, Video &amp; 3D" data-card-x="3074" data-card-y="754" data-card-width="406" data-card-height="93">
+<title>Vision, Video &amp; 3D: Visual perception and synthesis</title>
+<rect x="3074" y="754" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="3090" y="785" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="3090" y="785" data-max-width="326">Vision, Video &amp; 3D</tspan></text>
+<text x="3090" y="816" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="3090" y="816" data-max-width="374">Visual perception and synthesis</tspan></text>
+<text x="3465" y="785" font-size="20" fill="#687D35" font-weight="700" text-anchor="end" ><tspan x="3465" y="785.0">↗</tspan></text>
+</g>
+</a>
+<path d="M 3056 903.5 H 3074" fill="none" stroke="#687D35" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="ai-task-taxonomy.svg#speech-audio" target="_blank" rel="noopener noreferrer" aria-label="Speech &amp; Audio: open detailed task family">
+<g data-card="Speech &amp; Audio" data-card-x="3074" data-card-y="857" data-card-width="406" data-card-height="93">
+<title>Speech &amp; Audio: Speech, speakers and sound</title>
+<rect x="3074" y="857" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="3090" y="888" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="3090" y="888" data-max-width="326">Speech &amp; Audio</tspan></text>
+<text x="3090" y="919" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="3090" y="919" data-max-width="374">Speech, speakers and sound</tspan></text>
+<text x="3465" y="888" font-size="20" fill="#687D35" font-weight="700" text-anchor="end" ><tspan x="3465" y="888.0">↗</tspan></text>
+</g>
+</a>
+<path d="M 3056 1006.5 H 3074" fill="none" stroke="#687D35" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="ai-task-taxonomy.svg#code-programs" target="_blank" rel="noopener noreferrer" aria-label="Code &amp; Programs: open detailed task family">
+<g data-card="Code &amp; Programs" data-card-x="3074" data-card-y="960" data-card-width="406" data-card-height="93">
+<title>Code &amp; Programs: Program understanding and synthesis</title>
+<rect x="3074" y="960" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="3090" y="991" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="3090" y="991" data-max-width="326">Code &amp; Programs</tspan></text>
+<text x="3090" y="1022" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="3090" y="1022" data-max-width="374">Program understanding and synthesis</tspan></text>
+<text x="3465" y="991" font-size="20" fill="#687D35" font-weight="700" text-anchor="end" ><tspan x="3465" y="991.0">↗</tspan></text>
+</g>
+</a>
+<path d="M 3056 1109.5 H 3074" fill="none" stroke="#687D35" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="ai-task-taxonomy.svg#data-time-series" target="_blank" rel="noopener noreferrer" aria-label="Data &amp; Time Series: open detailed task family">
+<g data-card="Data &amp; Time Series" data-card-x="3074" data-card-y="1063" data-card-width="406" data-card-height="93">
+<title>Data &amp; Time Series: General statistical prediction tasks</title>
+<rect x="3074" y="1063" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="3090" y="1094" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="3090" y="1094" data-max-width="326">Data &amp; Time Series</tspan></text>
+<text x="3090" y="1125" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="3090" y="1125" data-max-width="374">General statistical prediction tasks</tspan></text>
+<text x="3465" y="1094" font-size="20" fill="#687D35" font-weight="700" text-anchor="end" ><tspan x="3465" y="1094.0">↗</tspan></text>
+</g>
+</a>
+<path d="M 3056 1226.0 H 3074" fill="none" stroke="#687D35" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="ai-task-taxonomy.svg#graphs-scientific-prediction" target="_blank" rel="noopener noreferrer" aria-label="Graphs &amp; Scientific Prediction: open detailed task family">
+<g data-card="Graphs &amp; Scientific Prediction" data-card-x="3074" data-card-y="1166" data-card-width="406" data-card-height="120">
+<title>Graphs &amp; Scientific Prediction: Graph tasks and selected scientific tasks</title>
+<rect x="3074" y="1166" width="406" height="120" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="3090" y="1197" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="3090" y="1197" data-max-width="326">Graphs &amp; Scientific</tspan><tspan x="3090" y="1224" data-max-width="326">Prediction</tspan></text>
+<text x="3090" y="1255" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="3090" y="1255" data-max-width="374">Graph tasks and selected scientific tasks</tspan></text>
+<text x="3465" y="1197" font-size="20" fill="#687D35" font-weight="700" text-anchor="end" ><tspan x="3465" y="1197.0">↗</tspan></text>
+</g>
+</a>
+<path d="M 3056 1342.5 H 3074" fill="none" stroke="#687D35" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="ai-task-taxonomy.svg#reasoning-planning-action" target="_blank" rel="noopener noreferrer" aria-label="Reasoning, Planning &amp; Action: open detailed task family">
+<g data-card="Reasoning, Planning &amp; Action" data-card-x="3074" data-card-y="1296" data-card-width="406" data-card-height="93">
+<title>Reasoning, Planning &amp; Action: Formal problems and evaluated actions</title>
+<rect x="3074" y="1296" width="406" height="93" rx="10" fill="#FFFFFF" stroke="#DCE2E6" class="leaf"/>
+<text x="3090" y="1327" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="3090" y="1327" data-max-width="326">Reasoning, Planning &amp; Action</tspan></text>
+<text x="3090" y="1358" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="3090" y="1358" data-max-width="374">Formal problems and evaluated actions</tspan></text>
+<text x="3465" y="1327" font-size="20" fill="#687D35" font-weight="700" text-anchor="end" ><tspan x="3465" y="1327.0">↗</tspan></text>
+</g>
+</a>
+<path d="M 3028 1443.0 H 3044" fill="none" stroke="#687D35" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<rect x="3044" y="1421" width="436" height="44" rx="8" fill="#F2F5E9" stroke="none" />
+<text x="3058" y="1448" font-size="17" fill="#687D35" font-weight="700" text-anchor="start" ><tspan x="3058" y="1448" data-max-width="398">Evaluation boundary</tspan></text>
+<path d="M 3056 1465 V 1653.5" fill="none" stroke="#687D35" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M 3056 1532.5 H 3074" fill="none" stroke="#687D35" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://huggingface.co/tasks" target="_blank" rel="noopener noreferrer" aria-label="Model / Algorithm Tasks: open source 04">
+<g data-card="Model / Algorithm Tasks" data-card-x="3074" data-card-y="1477" data-card-width="406" data-card-height="111">
+<title>Model / Algorithm Tasks: Evaluate a defined input–output mapping. Source: Hugging Face Tasks</title>
+<rect x="3074" y="1477" width="406" height="111" rx="10" fill="#F4F5F4" stroke="#DCE2E6" class="leaf"/>
+<text x="3090" y="1497" font-size="11" fill="#677586" font-weight="700" text-anchor="start" ><tspan x="3090" y="1497.0" data-max-width="374">READING NOTE</tspan></text>
+<text x="3090" y="1526" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="3090" y="1526" data-max-width="326">Model / Algorithm Tasks</tspan></text>
+<text x="3090" y="1557" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="3090" y="1557" data-max-width="374">Evaluate a defined input–output mapping</tspan></text>
+<text x="3468" y="1526" font-size="12" fill="#687D35" font-weight="700" text-anchor="end" ><tspan x="3468" y="1526.0">S04</tspan></text>
+</g>
+</a>
+<path d="M 3056 1653.5 H 3074" fill="none" stroke="#687D35" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<a href="https://arxiv.org/abs/2404.07972" target="_blank" rel="noopener noreferrer" aria-label="System-Level Tasks: open source 19">
+<g data-card="System-Level Tasks" data-card-x="3074" data-card-y="1598" data-card-width="406" data-card-height="111">
+<title>System-Level Tasks: Evaluate end-to-end task completion. Source: OSWorld</title>
+<rect x="3074" y="1598" width="406" height="111" rx="10" fill="#F4F5F4" stroke="#DCE2E6" class="leaf"/>
+<text x="3090" y="1618" font-size="11" fill="#677586" font-weight="700" text-anchor="start" ><tspan x="3090" y="1618.0" data-max-width="374">READING NOTE</tspan></text>
+<text x="3090" y="1647" font-size="22" fill="#1D2939" font-weight="600" text-anchor="start" ><tspan x="3090" y="1647" data-max-width="326">System-Level Tasks</tspan></text>
+<text x="3090" y="1678" font-size="17" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="3090" y="1678" data-max-width="374">Evaluate end-to-end task completion</tspan></text>
+<text x="3468" y="1647" font-size="12" fill="#687D35" font-weight="700" text-anchor="end" ><tspan x="3468" y="1647.0">S19</tspan></text>
+</g>
+</a>
+</g>
+<path d="M 64 2023 H 3480" fill="none" stroke="#CDD5DC" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<text x="64" y="2065" font-size="21" fill="#233A52" font-weight="600" text-anchor="start" ><tspan x="64" y="2065.0">HOW TO READ  •  A model family, architecture, learning signal, data modality and task describe different properties.</tspan></text>
+<text x="64" y="2101" font-size="20" fill="#58697A" font-weight="400" text-anchor="start" ><tspan x="64" y="2101.0">For example: a model may be a Transformer, self-supervised during pretraining, multimodal, and adapted for question answering.</tspan></text>
+<text x="64" y="2146" font-size="19" fill="#233A52" font-weight="600" text-anchor="start" ><tspan x="64" y="2146.0">7 classification axes  /  50 selected concepts  /  companion map: 85 task entries</tspan></text>
+<text x="64" y="2188" font-size="18" fill="#667788" font-weight="400" text-anchor="start" ><tspan x="64" y="2188.0">S01–S48 are clickable source references. Sources: author textbooks, original papers and official documentation. Curated 21 October 2026.</tspan></text>
+<a href="sources-and-definitions.md"><title>Evidence catalogue, definitions and scope notes</title><text x="3480" y="2228" font-size="18" fill="#3359A7" font-weight="700" text-anchor="end" ><tspan x="3480" y="2228.0">Sources &amp; definitions ↗</tspan></text></a>
+<text x="64" y="2228" font-size="17" fill="#778595" font-weight="400" text-anchor="start" ><tspan x="64" y="2228.0">Source-backed synthesis • Selected coverage • Editable vector text • No external fonts or raster assets</tspan></text>
+</svg>

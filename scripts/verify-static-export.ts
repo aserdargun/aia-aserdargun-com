@@ -11,8 +11,11 @@ async function requireReadablePath(path: string): Promise<void> {
 }
 
 const { learnDataset } = await import("@/data/learn");
-const routes = ["index", "404", "models", "learn", "learn/review", "learn/stats", ...learnDataset.concepts.map((concept) => `learn/${concept.id}`)];
+const { taxonomyMaps } = await import("@/data/taxonomy");
+const routes = ["index", "404", "models", ...taxonomyMaps.map((map) => `taxonomy/${map.id}`), "learn", "learn/review", "learn/stats", ...learnDataset.concepts.map((concept) => `learn/${concept.id}`)];
 for (const route of routes) await requireReadablePath(`out/${route}.html`);
+for (const map of taxonomyMaps) await requireReadablePath(`out${map.assetPath}`);
+await requireReadablePath("out/assets/taxonomy/sources-and-definitions.md");
 await requireReadablePath("out/favicon.svg");
 await requireReadablePath("out/sitemap.xml");
 await requireReadablePath("out/robots.txt");
