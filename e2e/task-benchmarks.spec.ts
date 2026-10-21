@@ -26,6 +26,16 @@ for (const locale of ["en", "tr"] as const) {
     await expect(panel).toHaveAttribute("data-benchmark-status", "single");
     await expect(panel.locator('tr[data-leader="true"]')).toHaveCount(0);
     await expect(panel).toContainText("Pass@72");
+    await select.selectOption("missing-value-imputation");
+    await expect(panel).toHaveAttribute("data-benchmark-status", "comparison");
+    await expect(panel.locator('tr[data-leader="true"]')).toContainText("MatrixFormer+");
+    await expect(panel.locator('tr[data-leader="true"]')).toContainText(locale === "tr" ? "1,579644" : "1.579644");
+    await select.selectOption("rating-prediction");
+    await expect(panel.locator('tr[data-leader="true"]')).toHaveCount(2);
+    await select.selectOption("part-of-speech-tagging");
+    await expect(panel).toHaveAttribute("data-benchmark-status", "single");
+    await panel.locator(".benchmark-candidates summary").click();
+    await expect(panel.locator('.benchmark-candidates a[href="https://hdl.handle.net/11234/1-6046"]')).toHaveCount(1);
     await select.selectOption("classical-planning");
     await expect(panel).toHaveAttribute("data-benchmark-status", "gap");
     await expect(panel.locator("table")).toHaveCount(0);
@@ -38,7 +48,7 @@ for (const locale of ["en", "tr"] as const) {
 
 test("evidence filters and task search preserve a selected deep link and language navigation", async ({ page }) => {
   await page.goto("/taxonomy/tasks?task=classical-planning");
-  await page.getByRole("button", { name: /34 with comparisons/ }).click();
+  await page.getByRole("button", { name: /55 with comparisons/ }).click();
   await expect(page.locator('#taxonomy-task-select option[value="time-series-forecasting"]')).toHaveCount(1);
   await expect(page.locator('#taxonomy-task-select option[value="code-translation"]')).toHaveCount(0);
   await expect(page.getByRole("combobox", { name: "Select a task" })).toHaveValue("classical-planning");

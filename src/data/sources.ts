@@ -5146,5 +5146,1128 @@ export const benchmarkSources: BenchmarkSource[] = [
     "kind": "model-card",
     "observedAt": "2026-10-21",
     "revision": "4236a6af538feda4548eca9ab308586007567f52"
+  },
+  {
+    "id": "br2-siglip",
+    "title": "SigLIP 2 official model zoo",
+    "publisher": "Google Research",
+    "url": "https://github.com/google-research/big_vision/blob/0127fb6b337ee2a27bf4e54dea79cff176527356/big_vision/configs/proj/image_text/README_siglip2.md",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "0127fb6b337ee2a27bf4e54dea79cff176527356"
+  },
+  {
+    "id": "br2-siglip2-giant-card",
+    "title": "SigLIP 2 g-opt/16 · 384 · model card",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/siglip2-giant-opt-patch16-384/blob/a713301b217d38485fb2204c808367d10bc3cc40/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "a713301b217d38485fb2204c808367d10bc3cc40"
+  },
+  {
+    "id": "br2-siglip2-giant-weights",
+    "title": "SigLIP 2 g-opt/16 · 384 · released weights",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/siglip2-giant-opt-patch16-384/tree/a713301b217d38485fb2204c808367d10bc3cc40",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "a713301b217d38485fb2204c808367d10bc3cc40"
+  },
+  {
+    "id": "br2-rfdetr",
+    "title": "RF-DETR official COCO detection and segmentation tables",
+    "publisher": "Roboflow",
+    "url": "https://github.com/roboflow/rf-detr/blob/5b22dfc0940697ce1abdfa681a5f7392b3eddbfb/README.md",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "5b22dfc0940697ce1abdfa681a5f7392b3eddbfb"
+  },
+  {
+    "id": "br2-rfdetr-m-card",
+    "title": "RF-DETR Medium · model card",
+    "publisher": "Roboflow",
+    "url": "https://huggingface.co/Roboflow/rf-detr-medium/blob/1b5b672408f86dd38e05dd3cf3f2e0834e545a59/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "1b5b672408f86dd38e05dd3cf3f2e0834e545a59"
+  },
+  {
+    "id": "br2-rfdetr-m-weights",
+    "title": "RF-DETR Medium · released weights",
+    "publisher": "Roboflow",
+    "url": "https://huggingface.co/Roboflow/rf-detr-medium/tree/1b5b672408f86dd38e05dd3cf3f2e0834e545a59",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "1b5b672408f86dd38e05dd3cf3f2e0834e545a59"
+  },
+  {
+    "id": "br2-rfdetr-l-card",
+    "title": "RF-DETR Large · model card",
+    "publisher": "Roboflow",
+    "url": "https://huggingface.co/Roboflow/rf-detr-large/blob/f62f7dd5252b61097cbace33886045816dadbde9/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "f62f7dd5252b61097cbace33886045816dadbde9"
+  },
+  {
+    "id": "br2-rfdetr-l-weights",
+    "title": "RF-DETR Large · released weights",
+    "publisher": "Roboflow",
+    "url": "https://huggingface.co/Roboflow/rf-detr-large/tree/f62f7dd5252b61097cbace33886045816dadbde9",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "f62f7dd5252b61097cbace33886045816dadbde9"
+  },
+  {
+    "id": "br2-rfdetr-seg-l-card",
+    "title": "RF-DETR Seg Large · model card",
+    "publisher": "Roboflow",
+    "url": "https://huggingface.co/Roboflow/rf-detr-seg-large/blob/ae012d516cf1fedb21df93fb384debe15df68f29/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "ae012d516cf1fedb21df93fb384debe15df68f29"
+  },
+  {
+    "id": "br2-rfdetr-seg-l-weights",
+    "title": "RF-DETR Seg Large · released weights",
+    "publisher": "Roboflow",
+    "url": "https://huggingface.co/Roboflow/rf-detr-seg-large/tree/ae012d516cf1fedb21df93fb384debe15df68f29",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "ae012d516cf1fedb21df93fb384debe15df68f29"
+  },
+  {
+    "id": "br2-rfdetr-seg-2xl-card",
+    "title": "RF-DETR Seg 2XL · model card",
+    "publisher": "Roboflow",
+    "url": "https://huggingface.co/Roboflow/rf-detr-seg-xxlarge/blob/4a183fe0213deba48a862e16d9e8a69b176cf3df/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "4a183fe0213deba48a862e16d9e8a69b176cf3df"
+  },
+  {
+    "id": "br2-rfdetr-seg-2xl-weights",
+    "title": "RF-DETR Seg 2XL · released weights",
+    "publisher": "Roboflow",
+    "url": "https://huggingface.co/Roboflow/rf-detr-seg-xxlarge/tree/4a183fe0213deba48a862e16d9e8a69b176cf3df",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "4a183fe0213deba48a862e16d9e8a69b176cf3df"
+  },
+  {
+    "id": "br2-florence-base-ft-card",
+    "title": "Florence-2 base-ft · model card",
+    "publisher": "microsoft",
+    "url": "https://huggingface.co/microsoft/Florence-2-base-ft/blob/f6c1a25888ffc1d945ee8a1a77ac833c7303d46e/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e"
+  },
+  {
+    "id": "br2-florence-base-ft-weights",
+    "title": "Florence-2 base-ft · released weights",
+    "publisher": "microsoft",
+    "url": "https://huggingface.co/microsoft/Florence-2-base-ft/tree/f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e"
+  },
+  {
+    "id": "br2-florence-large-ft-card",
+    "title": "Florence-2 large-ft · model card",
+    "publisher": "microsoft",
+    "url": "https://huggingface.co/microsoft/Florence-2-large-ft/blob/4a12a2b54b7016a48a22037fbd62da90cd566f2a/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "4a12a2b54b7016a48a22037fbd62da90cd566f2a"
+  },
+  {
+    "id": "br2-florence-large-ft-weights",
+    "title": "Florence-2 large-ft · released weights",
+    "publisher": "microsoft",
+    "url": "https://huggingface.co/microsoft/Florence-2-large-ft/tree/4a12a2b54b7016a48a22037fbd62da90cd566f2a",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "4a12a2b54b7016a48a22037fbd62da90cd566f2a"
+  },
+  {
+    "id": "br2-qwen25vl72-card",
+    "title": "Qwen2.5-VL-72B-Instruct · model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct/blob/89c86200743eec961a297729e7990e8f2ddbc4c5/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "89c86200743eec961a297729e7990e8f2ddbc4c5"
+  },
+  {
+    "id": "br2-qwen25vl72-weights",
+    "title": "Qwen2.5-VL-72B-Instruct · released weights",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct/tree/89c86200743eec961a297729e7990e8f2ddbc4c5",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "89c86200743eec961a297729e7990e8f2ddbc4c5"
+  },
+  {
+    "id": "br2-qwen2vl72-card",
+    "title": "Qwen2-VL-72B-Instruct · model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen2-VL-72B-Instruct/blob/2ac26c967836fbb5729c709ad8f8b5548e1f88aa/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "2ac26c967836fbb5729c709ad8f8b5548e1f88aa"
+  },
+  {
+    "id": "br2-qwen2vl72-weights",
+    "title": "Qwen2-VL-72B-Instruct · released weights",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen2-VL-72B-Instruct/tree/2ac26c967836fbb5729c709ad8f8b5548e1f88aa",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "2ac26c967836fbb5729c709ad8f8b5548e1f88aa"
+  },
+  {
+    "id": "br2-codet5-paper",
+    "title": "CodeT5 · EMNLP 2021 results",
+    "publisher": "Salesforce Research",
+    "url": "https://aclanthology.org/2021.emnlp-main.685/",
+    "kind": "paper",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-codet5-release",
+    "title": "CodeT5 task-specific release and replication guide",
+    "publisher": "Salesforce Research",
+    "url": "https://github.com/salesforce/CodeT5/blob/7de7f696c7fb1c7551406f3079e8fed500673199/CodeT5/README.md",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "7de7f696c7fb1c7551406f3079e8fed500673199"
+  },
+  {
+    "id": "br2-ct-clone-card",
+    "title": "CodeT5-base · clone detection · model card",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5-base-codexglue-clone/blob/b0ee6b1fd48012f6074964bc772342cfa3f42128/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "b0ee6b1fd48012f6074964bc772342cfa3f42128"
+  },
+  {
+    "id": "br2-ct-clone-weights",
+    "title": "CodeT5-base · clone detection · released weights",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5-base-codexglue-clone/tree/b0ee6b1fd48012f6074964bc772342cfa3f42128",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "b0ee6b1fd48012f6074964bc772342cfa3f42128"
+  },
+  {
+    "id": "br2-ct-defect-card",
+    "title": "CodeT5-base · defect detection · model card",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5-base-codexglue-defect/blob/8fc5f350c69bab8d30b144d5fda12e6d60915c8a/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "8fc5f350c69bab8d30b144d5fda12e6d60915c8a"
+  },
+  {
+    "id": "br2-ct-defect-weights",
+    "title": "CodeT5-base · defect detection · released weights",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5-base-codexglue-defect/tree/8fc5f350c69bab8d30b144d5fda12e6d60915c8a",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "8fc5f350c69bab8d30b144d5fda12e6d60915c8a"
+  },
+  {
+    "id": "br2-ct-cs-java-card",
+    "title": "CodeT5-base · C# to Java · model card",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5-base-codexglue-translate-cs-java/blob/c2017eaf9cf78fd7145629b1674d2a4e67cfecd1/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "c2017eaf9cf78fd7145629b1674d2a4e67cfecd1"
+  },
+  {
+    "id": "br2-ct-cs-java-weights",
+    "title": "CodeT5-base · C# to Java · released weights",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5-base-codexglue-translate-cs-java/tree/c2017eaf9cf78fd7145629b1674d2a4e67cfecd1",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "c2017eaf9cf78fd7145629b1674d2a4e67cfecd1"
+  },
+  {
+    "id": "br2-ct-java-cs-card",
+    "title": "CodeT5-base · Java to C# · model card",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5-base-codexglue-translate-java-cs/blob/7d9b9acfa961a27b45e9d4b5e301b2f378fc245d/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "7d9b9acfa961a27b45e9d4b5e301b2f378fc245d"
+  },
+  {
+    "id": "br2-ct-java-cs-weights",
+    "title": "CodeT5-base · Java to C# · released weights",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5-base-codexglue-translate-java-cs/tree/7d9b9acfa961a27b45e9d4b5e301b2f378fc245d",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "7d9b9acfa961a27b45e9d4b5e301b2f378fc245d"
+  },
+  {
+    "id": "br2-ct-sum-py-card",
+    "title": "CodeT5-base · Python summarization · model card",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5-base-codexglue-sum-python/blob/a24de036787ca6acb85b82fb14c2bc6d70118b72/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "a24de036787ca6acb85b82fb14c2bc6d70118b72"
+  },
+  {
+    "id": "br2-ct-sum-py-weights",
+    "title": "CodeT5-base · Python summarization · released weights",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5-base-codexglue-sum-python/tree/a24de036787ca6acb85b82fb14c2bc6d70118b72",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "a24de036787ca6acb85b82fb14c2bc6d70118b72"
+  },
+  {
+    "id": "br2-ct-multi-sum-card",
+    "title": "CodeT5-base · multi-language summarization · model card",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5-base-multi-sum/blob/37cf4c014106a34663da1008855a6d07affae042/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "37cf4c014106a34663da1008855a6d07affae042"
+  },
+  {
+    "id": "br2-ct-multi-sum-weights",
+    "title": "CodeT5-base · multi-language summarization · released weights",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/codet5-base-multi-sum/tree/37cf4c014106a34663da1008855a6d07affae042",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "37cf4c014106a34663da1008855a6d07affae042"
+  },
+  {
+    "id": "br2-vbench-live",
+    "title": "VBench live leaderboard · T2V and I2V",
+    "publisher": "VBench Team",
+    "url": "https://huggingface.co/spaces/Vchitect/VBench_Leaderboard",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-wan22-t2v-card",
+    "title": "Wan2.2-T2V-A14B · model card",
+    "publisher": "Wan-AI",
+    "url": "https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B/blob/c8c270b13ee05bfa474194ac9fb07a5868a97cea/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "c8c270b13ee05bfa474194ac9fb07a5868a97cea"
+  },
+  {
+    "id": "br2-wan22-t2v-weights",
+    "title": "Wan2.2-T2V-A14B · released weights",
+    "publisher": "Wan-AI",
+    "url": "https://huggingface.co/Wan-AI/Wan2.2-T2V-A14B/tree/c8c270b13ee05bfa474194ac9fb07a5868a97cea",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "c8c270b13ee05bfa474194ac9fb07a5868a97cea"
+  },
+  {
+    "id": "br2-wan21-t2v14-card",
+    "title": "Wan2.1-T2V-14B · model card",
+    "publisher": "Wan-AI",
+    "url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-14B/blob/a064a6c71f5be440641209c07bf2a5ce7a2ff5e4/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "a064a6c71f5be440641209c07bf2a5ce7a2ff5e4"
+  },
+  {
+    "id": "br2-wan21-t2v14-weights",
+    "title": "Wan2.1-T2V-14B · released weights",
+    "publisher": "Wan-AI",
+    "url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-14B/tree/a064a6c71f5be440641209c07bf2a5ce7a2ff5e4",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "a064a6c71f5be440641209c07bf2a5ce7a2ff5e4"
+  },
+  {
+    "id": "br2-wan22-i2v-card",
+    "title": "Wan2.2-I2V-A14B · model card",
+    "publisher": "Wan-AI",
+    "url": "https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B/blob/206a9ee1b7bfaaf8f7e4d81335650533490646a3/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "206a9ee1b7bfaaf8f7e4d81335650533490646a3"
+  },
+  {
+    "id": "br2-wan22-i2v-weights",
+    "title": "Wan2.2-I2V-A14B · released weights",
+    "publisher": "Wan-AI",
+    "url": "https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B/tree/206a9ee1b7bfaaf8f7e4d81335650533490646a3",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "206a9ee1b7bfaaf8f7e4d81335650533490646a3"
+  },
+  {
+    "id": "br2-videomaev2",
+    "title": "MMAction2 · VideoMAE V2 tested checkpoints",
+    "publisher": "OpenMMLab",
+    "url": "https://github.com/open-mmlab/mmaction2/blob/a5a167dff2399e2d182a60332325f9c0d4663517/configs/recognition/videomaev2/README.md",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "a5a167dff2399e2d182a60332325f9c0d4663517"
+  },
+  {
+    "id": "br2-videomaev2-s-weights",
+    "title": "VideoMAE V2 Small · MMAction2 · released artifact",
+    "publisher": "VideoMAE V2 Small",
+    "url": "https://github.com/open-mmlab/mmaction2/blob/a5a167dff2399e2d182a60332325f9c0d4663517/configs/recognition/videomaev2/README.md",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "a5a167dff2399e2d182a60332325f9c0d4663517"
+  },
+  {
+    "id": "br2-videomaev2-b-weights",
+    "title": "VideoMAE V2 Base · MMAction2 · released artifact",
+    "publisher": "VideoMAE V2 Base",
+    "url": "https://github.com/open-mmlab/mmaction2/blob/a5a167dff2399e2d182a60332325f9c0d4663517/configs/recognition/videomaev2/README.md",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "a5a167dff2399e2d182a60332325f9c0d4663517"
+  },
+  {
+    "id": "br2-shape-paper",
+    "title": "Shap-E · text-conditional COCO evaluation",
+    "publisher": "OpenAI",
+    "url": "https://arxiv.org/abs/2305.02463",
+    "kind": "paper",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-hy3d-bench",
+    "title": "HY3D-Bench evaluation scope",
+    "publisher": "Tencent Hunyuan",
+    "url": "https://github.com/Tencent-Hunyuan/HY3D-Bench",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-udpipe",
+    "title": "UDPipe 2 · UD 2.17 official performance",
+    "publisher": "Charles University UFAL",
+    "url": "https://ufal.mff.cuni.cz/udpipe/2/models#universal_dependencies_217_models",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-udpipe-ewt-weights",
+    "title": "UDPipe 2 · English EWT 2.17-251125 · released artifact",
+    "publisher": "UDPipe 2",
+    "url": "https://hdl.handle.net/11234/1-6046",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "releaseId": "11234/1-6046"
+  },
+  {
+    "id": "br2-stanza-performance",
+    "title": "Stanza performance by treebank version",
+    "publisher": "Stanford NLP",
+    "url": "https://stanfordnlp.github.io/stanza/performance.html",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-compact-re",
+    "title": "Compact relation extraction · released artifact and evaluation",
+    "publisher": "Christou and Tsoumakas",
+    "url": "https://github.com/DespinaChristou/compact-relex/blob/00b9d2c24632b5c183d7d64e7648de4497074e92/README.md",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "00b9d2c24632b5c183d7d64e7648de4497074e92"
+  },
+  {
+    "id": "br2-compact-re05-card",
+    "title": "Qwen2.5-0.5B · RE GenTune 2-shot adapter · model card",
+    "publisher": "Despina",
+    "url": "https://huggingface.co/Despina/Qwen2.5-0.5B-Instruct-re_gentune-2-shot/blob/5b9c14e6730ac4e65547fa6025c452670d9e53a5/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "5b9c14e6730ac4e65547fa6025c452670d9e53a5"
+  },
+  {
+    "id": "br2-compact-re05-weights",
+    "title": "Qwen2.5-0.5B · RE GenTune 2-shot adapter · released weights",
+    "publisher": "Despina",
+    "url": "https://huggingface.co/Despina/Qwen2.5-0.5B-Instruct-re_gentune-2-shot/tree/5b9c14e6730ac4e65547fa6025c452670d9e53a5",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "5b9c14e6730ac4e65547fa6025c452670d9e53a5"
+  },
+  {
+    "id": "br2-compact-paper",
+    "title": "Compact RE · full evaluation and limits",
+    "publisher": "Christou and Tsoumakas",
+    "url": "https://arxiv.org/abs/2606.22606",
+    "kind": "paper",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-thinkqe",
+    "title": "ThinkQE · published BRIGHT evaluation",
+    "publisher": "Lei, Shen and Yates",
+    "url": "https://arxiv.org/html/2506.09260v1",
+    "kind": "paper",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-r1-qwen14-card",
+    "title": "DeepSeek-R1-Distill-Qwen-14B · ThinkQE · model card",
+    "publisher": "deepseek-ai",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B/blob/1df8507178afcc1bef68cd8c393f61a886323761/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "1df8507178afcc1bef68cd8c393f61a886323761"
+  },
+  {
+    "id": "br2-r1-qwen14-weights",
+    "title": "DeepSeek-R1-Distill-Qwen-14B · ThinkQE · released weights",
+    "publisher": "deepseek-ai",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B/tree/1df8507178afcc1bef68cd8c393f61a886323761",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "1df8507178afcc1bef68cd8c393f61a886323761"
+  },
+  {
+    "id": "br2-thinkqe-code",
+    "title": "ThinkQE retrieval and expansion implementation",
+    "publisher": "Lei, Shen and Yates",
+    "url": "https://github.com/Yibin-Lei/Think_QE",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-sri-paper",
+    "title": "SRI code infilling · 2026 evaluation",
+    "publisher": "SRI-Coder authors",
+    "url": "https://arxiv.org/html/2601.13384v1",
+    "kind": "paper",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-qwen25coder32base-card",
+    "title": "Qwen2.5-Coder-32B Base · model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-32B/blob/2e12b5f7bc878d424d222e224ed40aee564ec45f/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "2e12b5f7bc878d424d222e224ed40aee564ec45f"
+  },
+  {
+    "id": "br2-qwen25coder32base-weights",
+    "title": "Qwen2.5-Coder-32B Base · released weights",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-32B/tree/2e12b5f7bc878d424d222e224ed40aee564ec45f",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "2e12b5f7bc878d424d222e224ed40aee564ec45f"
+  },
+  {
+    "id": "br2-deepseekv3base-card",
+    "title": "DeepSeek-V3 Base · model card",
+    "publisher": "deepseek-ai",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3-Base/blob/afb92e1fa402c2be2a9eb085312bb02e0384d6c7/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "afb92e1fa402c2be2a9eb085312bb02e0384d6c7"
+  },
+  {
+    "id": "br2-deepseekv3base-weights",
+    "title": "DeepSeek-V3 Base · released weights",
+    "publisher": "deepseek-ai",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3-Base/tree/afb92e1fa402c2be2a9eb085312bb02e0384d6c7",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "afb92e1fa402c2be2a9eb085312bb02e0384d6c7"
+  },
+  {
+    "id": "br2-qmsum",
+    "title": "QMSum · frozen scorer and released checkpoints",
+    "publisher": "Ertas AI",
+    "url": "https://github.com/ErtasAI/qmsum-retrieved-span-training/blob/3c3dcdb77cd9c2a55d1962adfc770f4b465ad2f7/README.md",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "3c3dcdb77cd9c2a55d1962adfc770f4b465ad2f7"
+  },
+  {
+    "id": "br2-segenc-spans-card",
+    "title": "SegEnc 406M · span-trained · model card",
+    "publisher": "ErtasAI",
+    "url": "https://huggingface.co/ErtasAI/qmsum-summarizer-segenc-406m-spans/blob/26abdfc1b0373c21b54dfd5584eb432e9e9d0a40/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "26abdfc1b0373c21b54dfd5584eb432e9e9d0a40"
+  },
+  {
+    "id": "br2-segenc-spans-weights",
+    "title": "SegEnc 406M · span-trained · released weights",
+    "publisher": "ErtasAI",
+    "url": "https://huggingface.co/ErtasAI/qmsum-summarizer-segenc-406m-spans/tree/26abdfc1b0373c21b54dfd5584eb432e9e9d0a40",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "26abdfc1b0373c21b54dfd5584eb432e9e9d0a40"
+  },
+  {
+    "id": "br2-segenc-stock-card",
+    "title": "Socratic SegEnc 406M · ported inference · model card",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/socratic-pretraining-qmsum/blob/d127cbc54b974a58e8bd75935f2863d136e0bc3d/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "d127cbc54b974a58e8bd75935f2863d136e0bc3d"
+  },
+  {
+    "id": "br2-segenc-stock-weights",
+    "title": "Socratic SegEnc 406M · ported inference · released weights",
+    "publisher": "Salesforce",
+    "url": "https://huggingface.co/Salesforce/socratic-pretraining-qmsum/tree/d127cbc54b974a58e8bd75935f2863d136e0bc3d",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "d127cbc54b974a58e8bd75935f2863d136e0bc3d"
+  },
+  {
+    "id": "br2-sid-hubert-card",
+    "title": "HuBERT Base · SUPERB speaker ID · model card",
+    "publisher": "superb",
+    "url": "https://huggingface.co/superb/hubert-base-superb-sid/blob/fd0c9962f8a01e274b9a7996e007775293d1d77e/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "fd0c9962f8a01e274b9a7996e007775293d1d77e"
+  },
+  {
+    "id": "br2-sid-hubert-weights",
+    "title": "HuBERT Base · SUPERB speaker ID · released weights",
+    "publisher": "superb",
+    "url": "https://huggingface.co/superb/hubert-base-superb-sid/tree/fd0c9962f8a01e274b9a7996e007775293d1d77e",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "fd0c9962f8a01e274b9a7996e007775293d1d77e"
+  },
+  {
+    "id": "br2-sid-wav2vec-card",
+    "title": "wav2vec 2.0 Base · SUPERB speaker ID · model card",
+    "publisher": "superb",
+    "url": "https://huggingface.co/superb/wav2vec2-base-superb-sid/blob/73365f1ed139a3d88fb8a72b98ecac3a38a1fa0e/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "73365f1ed139a3d88fb8a72b98ecac3a38a1fa0e"
+  },
+  {
+    "id": "br2-sid-wav2vec-weights",
+    "title": "wav2vec 2.0 Base · SUPERB speaker ID · released weights",
+    "publisher": "superb",
+    "url": "https://huggingface.co/superb/wav2vec2-base-superb-sid/tree/73365f1ed139a3d88fb8a72b98ecac3a38a1fa0e",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "73365f1ed139a3d88fb8a72b98ecac3a38a1fa0e"
+  },
+  {
+    "id": "br2-seamless-v1-card",
+    "title": "SeamlessM4T Large v1 · model card",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/seamless-m4t-large/blob/be77b87c4966c795d4793c1806f6c6dcdca30b49/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "be77b87c4966c795d4793c1806f6c6dcdca30b49"
+  },
+  {
+    "id": "br2-seamless-v1-weights",
+    "title": "SeamlessM4T Large v1 · released weights",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/seamless-m4t-large/tree/be77b87c4966c795d4793c1806f6c6dcdca30b49",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "be77b87c4966c795d4793c1806f6c6dcdca30b49"
+  },
+  {
+    "id": "br2-seamless-v2-metrics",
+    "title": "SeamlessM4T v2 · official evaluation CSV bundle",
+    "publisher": "Meta AI",
+    "url": "https://dl.fbaipublicfiles.com/seamless/metrics/seamlessM4T_large_v2.zip",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-seamless-v1-metrics",
+    "title": "SeamlessM4T v1 · official evaluation CSV bundle",
+    "publisher": "Meta AI",
+    "url": "https://dl.fbaipublicfiles.com/seamless/metrics/seamlessM4T_large.zip",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-seed-eval",
+    "title": "Seed-VC · objective evaluation",
+    "publisher": "Seed-VC authors",
+    "url": "https://github.com/Plachtaa/seed-vc/blob/51383efd921027683c89e5348211d93ff12ac2a8/EVAL.md",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "51383efd921027683c89e5348211d93ff12ac2a8"
+  },
+  {
+    "id": "br2-seed-eval-code",
+    "title": "Seed-VC evaluation code at result publication",
+    "publisher": "Seed-VC authors",
+    "url": "https://github.com/Plachtaa/seed-vc/blob/904a65b673146f6b1d8343c2674493b084cd4de0/eval.py",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "904a65b673146f6b1d8343c2674493b084cd4de0"
+  },
+  {
+    "id": "br2-seedvc-2024-weights",
+    "title": "Seed-VC · 2024 Whisper-small checkpoint · released weights",
+    "publisher": "Plachta",
+    "url": "https://huggingface.co/Plachta/Seed-VC/blob/257283f9f41585055e8f858fba4fd044e5caed6e/DiT_seed_v2_uvit_whisper_small_wavenet_bigvgan_pruned.pth",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "257283f9f41585055e8f858fba4fd044e5caed6e"
+  },
+  {
+    "id": "br2-tangoflux",
+    "title": "TangoFlux · objective audio generation evaluation",
+    "publisher": "Declare Lab",
+    "url": "https://github.com/declare-lab/TangoFlux/blob/164420faa2b3f8a28bb013ccde7006422a616fc7/README.md",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "164420faa2b3f8a28bb013ccde7006422a616fc7"
+  },
+  {
+    "id": "br2-tangoflux-card",
+    "title": "TangoFlux · CRPO · model card",
+    "publisher": "declare-lab",
+    "url": "https://huggingface.co/declare-lab/TangoFlux/blob/367005e963cb3a9fb2e03a46104d7de23e34ceea/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "367005e963cb3a9fb2e03a46104d7de23e34ceea"
+  },
+  {
+    "id": "br2-tangoflux-weights",
+    "title": "TangoFlux · CRPO · released weights",
+    "publisher": "declare-lab",
+    "url": "https://huggingface.co/declare-lab/TangoFlux/tree/367005e963cb3a9fb2e03a46104d7de23e34ceea",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "367005e963cb3a9fb2e03a46104d7de23e34ceea"
+  },
+  {
+    "id": "br2-tango2-card",
+    "title": "Tango 2 · model card",
+    "publisher": "declare-lab",
+    "url": "https://huggingface.co/declare-lab/tango2/blob/86d7260a578b8a51218d26f1ba4e8398eaac9761/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "86d7260a578b8a51218d26f1ba4e8398eaac9761"
+  },
+  {
+    "id": "br2-tango2-weights",
+    "title": "Tango 2 · released weights",
+    "publisher": "declare-lab",
+    "url": "https://huggingface.co/declare-lab/tango2/tree/86d7260a578b8a51218d26f1ba4e8398eaac9761",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "86d7260a578b8a51218d26f1ba4e8398eaac9761"
+  },
+  {
+    "id": "br2-audioldm2-l-card",
+    "title": "AudioLDM 2 Large · model card",
+    "publisher": "cvssp",
+    "url": "https://huggingface.co/cvssp/audioldm2-large/blob/4b0b875a9e0c5305dfc917da808584e50e1c7ed4/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "4b0b875a9e0c5305dfc917da808584e50e1c7ed4"
+  },
+  {
+    "id": "br2-audioldm2-l-weights",
+    "title": "AudioLDM 2 Large · released weights",
+    "publisher": "cvssp",
+    "url": "https://huggingface.co/cvssp/audioldm2-large/tree/4b0b875a9e0c5305dfc917da808584e50e1c7ed4",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "4b0b875a9e0c5305dfc917da808584e50e1c7ed4"
+  },
+  {
+    "id": "br2-tangoflux-paper",
+    "title": "TangoFlux · evaluation data and protocol",
+    "publisher": "Declare Lab",
+    "url": "https://arxiv.org/html/2412.21037v1",
+    "kind": "paper",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-ace15-paper",
+    "title": "ACE-Step 1.5 · objective music evaluation",
+    "publisher": "ACE-Step authors",
+    "url": "https://arxiv.org/html/2602.00744v1",
+    "kind": "paper",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-p5-eval",
+    "title": "P5 · recorded Beauty evaluation outputs",
+    "publisher": "P5 authors",
+    "url": "https://github.com/jeykigung/P5/blob/1fa28ba7bb3946da94677013cc88e392cfc760ca/notebooks/test_beauty_small.ipynb",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "1fa28ba7bb3946da94677013cc88e392cfc760ca"
+  },
+  {
+    "id": "br2-matrixformer",
+    "title": "MatrixFormer+ · frozen October 2026 results",
+    "publisher": "TabImpute authors",
+    "url": "https://github.com/jacobf18/tabular/blob/2cf54ac47dbcc1154b35e875b527ed0c42a9f416/mcpfn/MATRIXFORMER_PLUS_RESULTS.md",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "2cf54ac47dbcc1154b35e875b527ed0c42a9f416"
+  },
+  {
+    "id": "br2-matrixformer-card",
+    "title": "MatrixFormer · general expert · model card",
+    "publisher": "Tabimpute",
+    "url": "https://huggingface.co/Tabimpute/TabImpute/blob/6fabde6aa21ded04f818b63631f1c2155260ebdc/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "6fabde6aa21ded04f818b63631f1c2155260ebdc"
+  },
+  {
+    "id": "br2-matrixformer-weights",
+    "title": "MatrixFormer · general expert · released weights",
+    "publisher": "Tabimpute",
+    "url": "https://huggingface.co/Tabimpute/TabImpute/blob/6fabde6aa21ded04f818b63631f1c2155260ebdc/matrixformer/impute/model.safetensors",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "6fabde6aa21ded04f818b63631f1c2155260ebdc"
+  },
+  {
+    "id": "br2-matrixformer-recsys-card",
+    "title": "MatrixFormer · recommender specialist · model card",
+    "publisher": "Tabimpute",
+    "url": "https://huggingface.co/Tabimpute/TabImpute/blob/6fabde6aa21ded04f818b63631f1c2155260ebdc/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "6fabde6aa21ded04f818b63631f1c2155260ebdc"
+  },
+  {
+    "id": "br2-matrixformer-recsys-weights",
+    "title": "MatrixFormer · recommender specialist · released weights",
+    "publisher": "Tabimpute",
+    "url": "https://huggingface.co/Tabimpute/TabImpute/blob/6fabde6aa21ded04f818b63631f1c2155260ebdc/matrixformer/recsys/model.safetensors",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "6fabde6aa21ded04f818b63631f1c2155260ebdc"
+  },
+  {
+    "id": "br2-matrixformer-plus-card",
+    "title": "MatrixFormer+ · two-expert blend · model card",
+    "publisher": "Tabimpute",
+    "url": "https://huggingface.co/Tabimpute/TabImpute/blob/6fabde6aa21ded04f818b63631f1c2155260ebdc/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "6fabde6aa21ded04f818b63631f1c2155260ebdc"
+  },
+  {
+    "id": "br2-matrixformer-plus-weights",
+    "title": "MatrixFormer+ · two-expert blend · released weights",
+    "publisher": "Tabimpute",
+    "url": "https://huggingface.co/Tabimpute/TabImpute/blob/6fabde6aa21ded04f818b63631f1c2155260ebdc/matrixformer",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "6fabde6aa21ded04f818b63631f1c2155260ebdc"
+  },
+  {
+    "id": "br2-graphany",
+    "title": "GraphAny · released seed-0 checkpoints",
+    "publisher": "GraphAny authors",
+    "url": "https://github.com/DeepGraphLearning/GraphAny/blob/02c810e9977e89bda66f43ad4e206937af37cf26/README.md",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "02c810e9977e89bda66f43ad4e206937af37cf26"
+  },
+  {
+    "id": "br2-graphany-cora-weights",
+    "title": "GraphAny · Cora · released artifact",
+    "publisher": "GraphAny",
+    "url": "https://github.com/DeepGraphLearning/GraphAny/blob/02c810e9977e89bda66f43ad4e206937af37cf26/checkpoints/graph_any_cora.pt",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "02c810e9977e89bda66f43ad4e206937af37cf26"
+  },
+  {
+    "id": "br2-graphany-product-weights",
+    "title": "GraphAny · Product · released artifact",
+    "publisher": "GraphAny",
+    "url": "https://github.com/DeepGraphLearning/GraphAny/blob/02c810e9977e89bda66f43ad4e206937af37cf26/checkpoints/graph_any_product.pt",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "02c810e9977e89bda66f43ad4e206937af37cf26"
+  },
+  {
+    "id": "br2-dgl-molecule",
+    "title": "DGL-LifeSci · pretrained MoleculeNet performance",
+    "publisher": "DGL-LifeSci",
+    "url": "https://github.com/awslabs/dgl-lifesci/blob/be8bc71d29ecf34a9dab7c7bd47c08f3383d9be0/examples/property_prediction/moleculenet/README.md",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "be8bc71d29ecf34a9dab7c7bd47c08f3383d9be0"
+  },
+  {
+    "id": "br2-dgl-tox21-registry",
+    "title": "DGL-LifeSci Tox21 checkpoint registry",
+    "publisher": "DGL-LifeSci",
+    "url": "https://github.com/awslabs/dgl-lifesci/blob/be8bc71d29ecf34a9dab7c7bd47c08f3383d9be0/python/dgllife/model/pretrain/moleculenet/tox21.py",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "be8bc71d29ecf34a9dab7c7bd47c08f3383d9be0"
+  },
+  {
+    "id": "br2-chgnet",
+    "title": "CHGNet 0.3.0 · MPtrj test performance",
+    "publisher": "Ceder Group",
+    "url": "https://github.com/CederGroupHub/chgnet/blob/b9a6c15860237297a5a5169660e83b2e61a78e76/chgnet/pretrained/0.3.0/README.md",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "b9a6c15860237297a5a5169660e83b2e61a78e76"
+  },
+  {
+    "id": "br2-scan",
+    "title": "SCAN · released CIFAR-10 model zoo",
+    "publisher": "SCAN authors",
+    "url": "https://github.com/wvangansbeke/Unsupervised-Classification/blob/952ec31eee2c38e7233d8ad3ac0de39bb031877a/README.md",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "952ec31eee2c38e7233d8ad3ac0de39bb031877a"
+  },
+  {
+    "id": "br2-uva-flow",
+    "title": "UvA · saved MNIST normalizing-flow evaluation",
+    "publisher": "University of Amsterdam",
+    "url": "https://github.com/phlippe/uvadlc_notebooks/blob/c7d9e18f42fee53bc8925f08ec2358371b1e9200/docs/tutorial_notebooks/tutorial11/NF_image_modeling.ipynb",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "c7d9e18f42fee53bc8925f08ec2358371b1e9200"
+  },
+  {
+    "id": "br2-uva-flow-simple-weights",
+    "title": "UvA MNISTFlow · simple · released artifact",
+    "publisher": "UvA MNISTFlow",
+    "url": "https://github.com/phlippe/saved_models/blob/e38faed1ab83a593d2c90098ea563d32287fc80f/tutorial11/MNISTFlow_simple.ckpt",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "e38faed1ab83a593d2c90098ea563d32287fc80f"
+  },
+  {
+    "id": "br2-uva-flow-vardeq-weights",
+    "title": "UvA MNISTFlow · vardeq · released artifact",
+    "publisher": "UvA MNISTFlow",
+    "url": "https://github.com/phlippe/saved_models/blob/e38faed1ab83a593d2c90098ea563d32287fc80f/tutorial11/MNISTFlow_vardeq.ckpt",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "e38faed1ab83a593d2c90098ea563d32287fc80f"
+  },
+  {
+    "id": "br2-timeradar",
+    "title": "TimeRadar · released pretrained anomaly model",
+    "publisher": "TimeRadar authors",
+    "url": "https://github.com/mala-lab/TimeRadar/blob/4e06d0ad2bbe4c7e349c5a230fa5787d186e1eb2/README.md",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "4e06d0ad2bbe4c7e349c5a230fa5787d186e1eb2"
+  },
+  {
+    "id": "br2-timeradar-paper",
+    "title": "TimeRadar · zero-shot anomaly evaluation",
+    "publisher": "TimeRadar authors",
+    "url": "https://arxiv.org/html/2602.19068v1",
+    "kind": "paper",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-timeradar-weights",
+    "title": "TimeRadar · pretrained 100-step model · released artifact",
+    "publisher": "TimeRadar",
+    "url": "https://github.com/mala-lab/TimeRadar/blob/4e06d0ad2bbe4c7e349c5a230fa5787d186e1eb2/TimeRadar/model.safetensors",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "4e06d0ad2bbe4c7e349c5a230fa5787d186e1eb2"
+  },
+  {
+    "id": "br2-autocpd-paper",
+    "title": "AutoCPD · HASC residual classifier evaluation",
+    "publisher": "Li, Fearnhead, Fryzlewicz and Wang",
+    "url": "https://arxiv.org/abs/2211.03860",
+    "kind": "paper",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-blitz-boltz-k8-card",
+    "title": "Blitz-Boltz2 · K8 · model card",
+    "publisher": "vinaymatt",
+    "url": "https://huggingface.co/vinaymatt/Blitz-Boltz2/blob/56af33e632523a3a3729811dceaa798782bf03d9/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "56af33e632523a3a3729811dceaa798782bf03d9"
+  },
+  {
+    "id": "br2-blitz-boltz-k8-weights",
+    "title": "Blitz-Boltz2 · K8 · released weights",
+    "publisher": "vinaymatt",
+    "url": "https://huggingface.co/vinaymatt/Blitz-Boltz2/blob/56af33e632523a3a3729811dceaa798782bf03d9/blitz-boltz2-k8.ckpt",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "56af33e632523a3a3729811dceaa798782bf03d9"
+  },
+  {
+    "id": "br2-blitz-boltz-k16-card",
+    "title": "Blitz-Boltz2 · K16 · model card",
+    "publisher": "vinaymatt",
+    "url": "https://huggingface.co/vinaymatt/Blitz-Boltz2/blob/56af33e632523a3a3729811dceaa798782bf03d9/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "56af33e632523a3a3729811dceaa798782bf03d9"
+  },
+  {
+    "id": "br2-blitz-boltz-k16-weights",
+    "title": "Blitz-Boltz2 · K16 · released weights",
+    "publisher": "vinaymatt",
+    "url": "https://huggingface.co/vinaymatt/Blitz-Boltz2/blob/56af33e632523a3a3729811dceaa798782bf03d9/blitz-boltz2-k16.ckpt",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "56af33e632523a3a3729811dceaa798782bf03d9"
+  },
+  {
+    "id": "br2-blitz-paper",
+    "title": "Blitz · common evaluation protocol",
+    "publisher": "Mathew et al.",
+    "url": "https://arxiv.org/abs/2610.23703",
+    "kind": "paper",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-eqr",
+    "title": "Equilibrium Reasoners · released Sudoku full evaluation",
+    "publisher": "CMU / locuslab",
+    "url": "https://github.com/locuslab/EqR/blob/134c7541711125860954c78463023c583b2ef21b/README.md",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "134c7541711125860954c78463023c583b2ef21b"
+  },
+  {
+    "id": "br2-eqr-sudoku-weights",
+    "title": "EqR · Sudoku-Extreme · released weights",
+    "publisher": "locuslab",
+    "url": "https://huggingface.co/locuslab/EqR-model/blob/89069c8c9c1e8a24c0c7e6404bc0a1a7507ab377/sudoku-extreme/eqr.pth",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "89069c8c9c1e8a24c0c7e6404bc0a1a7507ab377"
+  },
+  {
+    "id": "br2-hloc-aachen",
+    "title": "Aachen benchmark · SuperPoint + SuperGlue submission",
+    "publisher": "Visual Localization benchmark",
+    "url": "https://www.visuallocalization.net/details/10931/",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-hloc-history",
+    "title": "hloc historical result and configuration table",
+    "publisher": "hloc authors",
+    "url": "https://github.com/cvg/Hierarchical-Localization/blob/9895a77ea0fc4bc323e421fe36a4a84952881a48/README.md",
+    "kind": "benchmark",
+    "observedAt": "2026-10-21",
+    "revision": "9895a77ea0fc4bc323e421fe36a4a84952881a48"
+  },
+  {
+    "id": "br2-neuralmp",
+    "title": "Neural Motion Planner · released inference system",
+    "publisher": "Neural Motion Planner authors",
+    "url": "https://github.com/mihdalal/neuralmotionplanner/blob/5b1e7095c8031b4f011806ac2a58bbe80a2292e6/README.md",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "5b1e7095c8031b4f011806ac2a58bbe80a2292e6"
+  },
+  {
+    "id": "br2-neuralmp-paper",
+    "title": "Neural Motion Planner · real-world test results",
+    "publisher": "Dalal et al.",
+    "url": "https://mihdalal.github.io/neuralmotionplanner/resources/paper.pdf",
+    "kind": "paper",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-neuralmp-card",
+    "title": "Neural Motion Planner · released policy · model card",
+    "publisher": "mihdalal",
+    "url": "https://huggingface.co/mihdalal/NeuralMP/blob/494c25ee32469374f2d6ac68a1d04e71d627a1fa/README.md",
+    "kind": "model-card",
+    "observedAt": "2026-10-21",
+    "revision": "494c25ee32469374f2d6ac68a1d04e71d627a1fa"
+  },
+  {
+    "id": "br2-neuralmp-weights",
+    "title": "Neural Motion Planner · released policy · released weights",
+    "publisher": "mihdalal",
+    "url": "https://huggingface.co/mihdalal/NeuralMP/tree/494c25ee32469374f2d6ac68a1d04e71d627a1fa",
+    "kind": "weights",
+    "observedAt": "2026-10-21",
+    "revision": "494c25ee32469374f2d6ac68a1d04e71d627a1fa"
+  },
+  {
+    "id": "br2-uva-ae",
+    "title": "UvA · autoencoder dimensionality/reconstruction evaluation",
+    "publisher": "University of Amsterdam",
+    "url": "https://github.com/phlippe/uvadlc_notebooks/blob/c7d9e18f42fee53bc8925f08ec2358371b1e9200/docs/tutorial_notebooks/tutorial9/AE_CIFAR10.ipynb",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "c7d9e18f42fee53bc8925f08ec2358371b1e9200"
+  },
+  {
+    "id": "br2-goose-release",
+    "title": "GOOSE · pretrained model provenance",
+    "publisher": "GOOSE authors",
+    "url": "https://github.com/DillonZChen/goose/blob/04dbe8f27a8ec027626e6c6b5d6e7610b81f9d57/pretrained_models/README.md",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "04dbe8f27a8ec027626e6c6b5d6e7610b81f9d57"
+  },
+  {
+    "id": "br2-goose-main",
+    "title": "GOOSE · versioned training and planning configuration",
+    "publisher": "GOOSE authors",
+    "url": "https://github.com/DillonZChen/goose/blob/04dbe8f27a8ec027626e6c6b5d6e7610b81f9d57/README.md",
+    "kind": "documentation",
+    "observedAt": "2026-10-21",
+    "revision": "04dbe8f27a8ec027626e6c6b5d6e7610b81f9d57"
+  },
+  {
+    "id": "br2-ipc23",
+    "title": "IPC 2023 Learning Track official results presentation",
+    "publisher": "IPC 2023 organizers",
+    "url": "https://ipc2023-learning.github.io/talk.pdf",
+    "kind": "documentation",
+    "observedAt": "2026-10-21"
+  },
+  {
+    "id": "br2-mmaction-license",
+    "title": "MMAction2 repository license",
+    "publisher": "OpenMMLab",
+    "url": "https://github.com/open-mmlab/mmaction2/blob/a5a167dff2399e2d182a60332325f9c0d4663517/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-21",
+    "revision": "a5a167dff2399e2d182a60332325f9c0d4663517"
   }
 ];

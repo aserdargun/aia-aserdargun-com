@@ -13,7 +13,7 @@ export function TaskBenchmarkPanel({ taskId, models, sources, locale }: {
   const status = benchmarkStatus(taskId, taskBenchmarks);
   const byModel = new Map([...models, ...benchmarkCandidates].map((model) => [model.id, model]));
   const bySource = new Map([...sources, ...benchmarkSources].map((source) => [source.id, source]));
-  const number = new Intl.NumberFormat(locale, { maximumFractionDigits: 3 });
+  const number = new Intl.NumberFormat(locale, { maximumFractionDigits: 6 });
 
   return <section className="task-benchmarks" aria-labelledby="task-benchmark-title" data-benchmark-status={status}>
     <header>

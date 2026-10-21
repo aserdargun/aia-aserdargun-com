@@ -41,7 +41,12 @@ export function validateTaskBenchmarks(
     checkSources([...new Set([candidate.cardSourceId, candidate.weightsSourceId, candidate.licenseSourceId])], candidate.id);
     const weights = bySource.get(candidate.weightsSourceId)!;
     if (weights.kind !== "weights") fail(`${candidate.id}: weight evidence required`);
-    if (!weights.revision || !weights.url.includes(weights.revision)) fail(`${candidate.id}: pin the weight release`);
+    const gitPinned = weights.revision && weights.url.includes(weights.revision);
+    const weightUrl = new URL(weights.url);
+    const releasePinned = "releaseId" in weights && weights.releaseId
+      && weightUrl.hostname === "hdl.handle.net"
+      && decodeURIComponent(weightUrl.pathname) === `/${weights.releaseId}`;
+    if (!gitPinned && !releasePinned) fail(`${candidate.id}: pin the weight release`);
   });
   benchmarks.forEach((benchmark) => {
     unique(benchmark.taskIds, `${benchmark.id} task`);

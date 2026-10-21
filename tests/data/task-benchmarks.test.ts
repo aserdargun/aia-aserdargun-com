@@ -15,6 +15,7 @@ describe("published task benchmark evidence", () => {
     expect(taskBenchmarks.some((benchmark) => benchmark.resultDate?.startsWith("2026-10"))).toBe(true);
     expect(taskBenchmarks.some((benchmark) => benchmark.resultDate?.startsWith("2022"))).toBe(true);
     expect(taskBenchmarks.some((benchmark) => benchmark.resultDate === null)).toBe(true);
+    expect(taskBenchmarkReviews.filter((review) => benchmarkStatus(review.taskId, taskBenchmarks) === "gap").map((review) => review.taskId).sort()).toEqual(["classical-planning", "dimensionality-reduction"]);
   });
 
   it("uses each metric’s direction, preserves ties and never converts missing evidence to a zero", () => {
@@ -56,6 +57,16 @@ describe("published task benchmark evidence", () => {
     expect(() => validate(uncited)).toThrow(/missing benchmark citation/);
   });
 
+  it("requires a persistent publisher release identifier to remain bound to its source URL", () => {
+    const data = fixture();
+    const release = data.sources.find((source) => source.releaseId)!;
+    expect(release.releaseId).toBe("11234/1-6046");
+    release.url = "https://hdl.handle.net/11234/1-unrelated";
+    expect(() => validate(data)).toThrow(/pin the weight release/);
+    release.url = `https://example.com/${release.releaseId}`;
+    expect(() => validate(data)).toThrow(/pin the weight release/);
+  });
+
   it("requires finite values, bilingual limits and valid percentage ranges", () => {
     const infinite = fixture(); infinite.benchmarks[0].results[0].score = Number.POSITIVE_INFINITY;
     expect(() => validate(infinite)).toThrow();
@@ -68,11 +79,14 @@ describe("published task benchmark evidence", () => {
   it("keeps proxy metrics and incompatible diarization protocols in separate tables", () => {
     expect(taskBenchmarks.find((entry) => entry.id === "glm-toolathlon")?.scope).toBe("proxy");
     expect(taskBenchmarks.find((entry) => entry.id === "qwen-ocr")?.scope).toBe("proxy");
-    expect(taskBenchmarks.filter((entry) => entry.taskIds.includes("document-question-answering"))).toHaveLength(0);
+    expect(taskBenchmarks.filter((entry) => entry.taskIds.includes("document-question-answering")).map((entry) => entry.metric)).toEqual(["ANLS"]);
     const diarization = taskBenchmarks.filter((entry) => entry.taskIds.includes("speaker-diarization"));
     expect(diarization).toHaveLength(2);
     expect(diarization[0].protocol.en).toContain("no forgiveness collar");
     expect(diarization[1].protocol.en).toContain("0.25-second collar");
     expect(taskBenchmarkReviews.find((entry) => entry.taskId === "query-expansion")?.candidateIds).not.toContain("mqr");
+    expect(taskBenchmarks.find((entry) => entry.id === "autocpd-hasc-eval")?.scope).toBe("proxy");
+    expect(taskBenchmarks.find((entry) => entry.id === "hloc-aachen-night")?.scope).toBe("proxy");
+    expect(taskBenchmarks.filter((entry) => entry.taskIds.includes("code-translation")).every((entry) => entry.results.length === 1)).toBe(true);
   });
 });

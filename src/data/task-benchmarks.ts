@@ -352,6 +352,438 @@ export const benchmarkCandidates: BenchmarkCandidate[] = [
     "licenseSourceId": "bm-license-driftse-aux",
     "license": "MIT",
     "access": "public"
+  },
+  {
+    "id": "siglip2-giant",
+    "name": "SigLIP 2 g-opt/16 · 384",
+    "cardSourceId": "br2-siglip2-giant-card",
+    "weightsSourceId": "br2-siglip2-giant-weights",
+    "licenseSourceId": "br2-siglip2-giant-card",
+    "license": "apache-2.0",
+    "access": "public"
+  },
+  {
+    "id": "rfdetr-m",
+    "name": "RF-DETR Medium",
+    "cardSourceId": "br2-rfdetr-m-card",
+    "weightsSourceId": "br2-rfdetr-m-weights",
+    "licenseSourceId": "br2-rfdetr-m-card",
+    "license": "apache-2.0",
+    "access": "public"
+  },
+  {
+    "id": "rfdetr-l",
+    "name": "RF-DETR Large",
+    "cardSourceId": "br2-rfdetr-l-card",
+    "weightsSourceId": "br2-rfdetr-l-weights",
+    "licenseSourceId": "br2-rfdetr-l-card",
+    "license": "apache-2.0",
+    "access": "public"
+  },
+  {
+    "id": "rfdetr-seg-l",
+    "name": "RF-DETR Seg Large",
+    "cardSourceId": "br2-rfdetr-seg-l-card",
+    "weightsSourceId": "br2-rfdetr-seg-l-weights",
+    "licenseSourceId": "br2-rfdetr-seg-l-card",
+    "license": "apache-2.0",
+    "access": "public"
+  },
+  {
+    "id": "rfdetr-seg-2xl",
+    "name": "RF-DETR Seg 2XL",
+    "cardSourceId": "br2-rfdetr-seg-2xl-card",
+    "weightsSourceId": "br2-rfdetr-seg-2xl-weights",
+    "licenseSourceId": "br2-rfdetr-seg-2xl-card",
+    "license": "apache-2.0",
+    "access": "public"
+  },
+  {
+    "id": "florence-base-ft",
+    "name": "Florence-2 base-ft",
+    "cardSourceId": "br2-florence-base-ft-card",
+    "weightsSourceId": "br2-florence-base-ft-weights",
+    "licenseSourceId": "br2-florence-base-ft-card",
+    "license": "mit",
+    "access": "public"
+  },
+  {
+    "id": "florence-large-ft",
+    "name": "Florence-2 large-ft",
+    "cardSourceId": "br2-florence-large-ft-card",
+    "weightsSourceId": "br2-florence-large-ft-weights",
+    "licenseSourceId": "br2-florence-large-ft-card",
+    "license": "mit",
+    "access": "public"
+  },
+  {
+    "id": "qwen25vl72",
+    "name": "Qwen2.5-VL-72B-Instruct",
+    "cardSourceId": "br2-qwen25vl72-card",
+    "weightsSourceId": "br2-qwen25vl72-weights",
+    "licenseSourceId": "br2-qwen25vl72-card",
+    "license": "Qwen license",
+    "access": "public"
+  },
+  {
+    "id": "qwen2vl72",
+    "name": "Qwen2-VL-72B-Instruct",
+    "cardSourceId": "br2-qwen2vl72-card",
+    "weightsSourceId": "br2-qwen2vl72-weights",
+    "licenseSourceId": "br2-qwen2vl72-card",
+    "license": "Qwen license",
+    "access": "public"
+  },
+  {
+    "id": "ct-clone",
+    "name": "CodeT5-base · clone detection",
+    "cardSourceId": "br2-ct-clone-card",
+    "weightsSourceId": "br2-ct-clone-weights",
+    "licenseSourceId": "br2-ct-clone-card",
+    "license": "bsd-3-clause",
+    "access": "public"
+  },
+  {
+    "id": "ct-defect",
+    "name": "CodeT5-base · defect detection",
+    "cardSourceId": "br2-ct-defect-card",
+    "weightsSourceId": "br2-ct-defect-weights",
+    "licenseSourceId": "br2-ct-defect-card",
+    "license": "bsd-3-clause",
+    "access": "public"
+  },
+  {
+    "id": "ct-cs-java",
+    "name": "CodeT5-base · C# to Java",
+    "cardSourceId": "br2-ct-cs-java-card",
+    "weightsSourceId": "br2-ct-cs-java-weights",
+    "licenseSourceId": "br2-ct-cs-java-card",
+    "license": "bsd-3-clause",
+    "access": "public"
+  },
+  {
+    "id": "ct-java-cs",
+    "name": "CodeT5-base · Java to C#",
+    "cardSourceId": "br2-ct-java-cs-card",
+    "weightsSourceId": "br2-ct-java-cs-weights",
+    "licenseSourceId": "br2-ct-java-cs-card",
+    "license": "bsd-3-clause",
+    "access": "public"
+  },
+  {
+    "id": "ct-sum-py",
+    "name": "CodeT5-base · Python summarization",
+    "cardSourceId": "br2-ct-sum-py-card",
+    "weightsSourceId": "br2-ct-sum-py-weights",
+    "licenseSourceId": "br2-ct-sum-py-card",
+    "license": "bsd-3-clause",
+    "access": "public"
+  },
+  {
+    "id": "ct-multi-sum",
+    "name": "CodeT5-base · multi-language summarization",
+    "cardSourceId": "br2-ct-multi-sum-card",
+    "weightsSourceId": "br2-ct-multi-sum-weights",
+    "licenseSourceId": "br2-ct-multi-sum-card",
+    "license": "bsd-3-clause",
+    "access": "public"
+  },
+  {
+    "id": "wan22-t2v",
+    "name": "Wan2.2-T2V-A14B",
+    "cardSourceId": "br2-wan22-t2v-card",
+    "weightsSourceId": "br2-wan22-t2v-weights",
+    "licenseSourceId": "br2-wan22-t2v-card",
+    "license": "apache-2.0",
+    "access": "public"
+  },
+  {
+    "id": "wan21-t2v14",
+    "name": "Wan2.1-T2V-14B",
+    "cardSourceId": "br2-wan21-t2v14-card",
+    "weightsSourceId": "br2-wan21-t2v14-weights",
+    "licenseSourceId": "br2-wan21-t2v14-card",
+    "license": "apache-2.0",
+    "access": "public"
+  },
+  {
+    "id": "wan22-i2v",
+    "name": "Wan2.2-I2V-A14B",
+    "cardSourceId": "br2-wan22-i2v-card",
+    "weightsSourceId": "br2-wan22-i2v-weights",
+    "licenseSourceId": "br2-wan22-i2v-card",
+    "license": "apache-2.0",
+    "access": "public"
+  },
+  {
+    "id": "videomaev2-s",
+    "name": "VideoMAE V2 Small · MMAction2",
+    "cardSourceId": "br2-videomaev2",
+    "weightsSourceId": "br2-videomaev2-s-weights",
+    "licenseSourceId": "br2-mmaction-license",
+    "license": "Apache-2.0 (repository)",
+    "access": "public"
+  },
+  {
+    "id": "videomaev2-b",
+    "name": "VideoMAE V2 Base · MMAction2",
+    "cardSourceId": "br2-videomaev2",
+    "weightsSourceId": "br2-videomaev2-b-weights",
+    "licenseSourceId": "br2-mmaction-license",
+    "license": "Apache-2.0 (repository)",
+    "access": "public"
+  },
+  {
+    "id": "udpipe-ewt",
+    "name": "UDPipe 2 · English EWT 2.17-251125",
+    "cardSourceId": "br2-udpipe",
+    "weightsSourceId": "br2-udpipe-ewt-weights",
+    "licenseSourceId": "br2-udpipe",
+    "license": "CC-BY-NC-SA-4.0",
+    "access": "public"
+  },
+  {
+    "id": "compact-re05",
+    "name": "Qwen2.5-0.5B · RE GenTune 2-shot adapter",
+    "cardSourceId": "br2-compact-re05-card",
+    "weightsSourceId": "br2-compact-re05-weights",
+    "licenseSourceId": "br2-compact-re05-card",
+    "license": "mit",
+    "access": "public"
+  },
+  {
+    "id": "r1-qwen14",
+    "name": "DeepSeek-R1-Distill-Qwen-14B · ThinkQE",
+    "cardSourceId": "br2-r1-qwen14-card",
+    "weightsSourceId": "br2-r1-qwen14-weights",
+    "licenseSourceId": "br2-r1-qwen14-card",
+    "license": "mit",
+    "access": "public"
+  },
+  {
+    "id": "qwen25coder32base",
+    "name": "Qwen2.5-Coder-32B Base",
+    "cardSourceId": "br2-qwen25coder32base-card",
+    "weightsSourceId": "br2-qwen25coder32base-weights",
+    "licenseSourceId": "br2-qwen25coder32base-card",
+    "license": "apache-2.0",
+    "access": "public"
+  },
+  {
+    "id": "deepseekv3base",
+    "name": "DeepSeek-V3 Base",
+    "cardSourceId": "br2-deepseekv3base-card",
+    "weightsSourceId": "br2-deepseekv3base-weights",
+    "licenseSourceId": "br2-deepseekv3base-card",
+    "license": "DeepSeek Model License",
+    "access": "public"
+  },
+  {
+    "id": "segenc-spans",
+    "name": "SegEnc 406M · span-trained",
+    "cardSourceId": "br2-segenc-spans-card",
+    "weightsSourceId": "br2-segenc-spans-weights",
+    "licenseSourceId": "br2-segenc-spans-card",
+    "license": "bsd-3-clause",
+    "access": "public"
+  },
+  {
+    "id": "segenc-stock",
+    "name": "Socratic SegEnc 406M · ported inference",
+    "cardSourceId": "br2-segenc-stock-card",
+    "weightsSourceId": "br2-segenc-stock-weights",
+    "licenseSourceId": "br2-segenc-stock-card",
+    "license": "bsd-3-clause",
+    "access": "public"
+  },
+  {
+    "id": "sid-hubert",
+    "name": "HuBERT Base · SUPERB speaker ID",
+    "cardSourceId": "br2-sid-hubert-card",
+    "weightsSourceId": "br2-sid-hubert-weights",
+    "licenseSourceId": "br2-sid-hubert-card",
+    "license": "apache-2.0",
+    "access": "public"
+  },
+  {
+    "id": "sid-wav2vec",
+    "name": "wav2vec 2.0 Base · SUPERB speaker ID",
+    "cardSourceId": "br2-sid-wav2vec-card",
+    "weightsSourceId": "br2-sid-wav2vec-weights",
+    "licenseSourceId": "br2-sid-wav2vec-card",
+    "license": "apache-2.0",
+    "access": "public"
+  },
+  {
+    "id": "seamless-v1",
+    "name": "SeamlessM4T Large v1",
+    "cardSourceId": "br2-seamless-v1-card",
+    "weightsSourceId": "br2-seamless-v1-weights",
+    "licenseSourceId": "br2-seamless-v1-card",
+    "license": "cc-by-nc-4.0",
+    "access": "public"
+  },
+  {
+    "id": "seedvc-2024",
+    "name": "Seed-VC · 2024 Whisper-small checkpoint",
+    "cardSourceId": "br2-seed-eval-code",
+    "weightsSourceId": "br2-seedvc-2024-weights",
+    "licenseSourceId": "ow-voice",
+    "license": "gpl-3.0",
+    "access": "public"
+  },
+  {
+    "id": "tangoflux",
+    "name": "TangoFlux · CRPO",
+    "cardSourceId": "br2-tangoflux-card",
+    "weightsSourceId": "br2-tangoflux-weights",
+    "licenseSourceId": "br2-tangoflux-card",
+    "license": "Stability AI Community License + dataset restrictions",
+    "access": "public"
+  },
+  {
+    "id": "tango2",
+    "name": "Tango 2",
+    "cardSourceId": "br2-tango2-card",
+    "weightsSourceId": "br2-tango2-weights",
+    "licenseSourceId": "br2-tango2-card",
+    "license": "CC-BY-NC-SA-4.0",
+    "access": "public"
+  },
+  {
+    "id": "audioldm2-l",
+    "name": "AudioLDM 2 Large",
+    "cardSourceId": "br2-audioldm2-l-card",
+    "weightsSourceId": "br2-audioldm2-l-weights",
+    "licenseSourceId": "br2-audioldm2-l-card",
+    "license": "CC-BY-NC-SA-4.0",
+    "access": "public"
+  },
+  {
+    "id": "matrixformer",
+    "name": "MatrixFormer · general expert",
+    "cardSourceId": "br2-matrixformer-card",
+    "weightsSourceId": "br2-matrixformer-weights",
+    "licenseSourceId": "br2-matrixformer-card",
+    "license": "apache-2.0",
+    "access": "public"
+  },
+  {
+    "id": "matrixformer-recsys",
+    "name": "MatrixFormer · recommender specialist",
+    "cardSourceId": "br2-matrixformer-recsys-card",
+    "weightsSourceId": "br2-matrixformer-recsys-weights",
+    "licenseSourceId": "br2-matrixformer-recsys-card",
+    "license": "apache-2.0",
+    "access": "public"
+  },
+  {
+    "id": "matrixformer-plus",
+    "name": "MatrixFormer+ · two-expert blend",
+    "cardSourceId": "br2-matrixformer-plus-card",
+    "weightsSourceId": "br2-matrixformer-plus-weights",
+    "licenseSourceId": "br2-matrixformer-plus-card",
+    "license": "apache-2.0",
+    "access": "public"
+  },
+  {
+    "id": "graphany-cora",
+    "name": "GraphAny · Cora",
+    "cardSourceId": "br2-graphany",
+    "weightsSourceId": "br2-graphany-cora-weights",
+    "licenseSourceId": "ow-graphany-license",
+    "license": "MIT",
+    "access": "public"
+  },
+  {
+    "id": "graphany-product",
+    "name": "GraphAny · Product",
+    "cardSourceId": "br2-graphany",
+    "weightsSourceId": "br2-graphany-product-weights",
+    "licenseSourceId": "ow-graphany-license",
+    "license": "MIT",
+    "access": "public"
+  },
+  {
+    "id": "dgl-gcn-afp-tox21",
+    "name": "DGL-LifeSci · GCN attentivefp Tox21",
+    "cardSourceId": "br2-dgl-molecule",
+    "weightsSourceId": "br2-dgl-tox21-registry",
+    "licenseSourceId": "ow-dgl-lifesci-license",
+    "license": "Apache-2.0 (repository)",
+    "access": "public"
+  },
+  {
+    "id": "dgl-gin-edge-tox21",
+    "name": "DGL-LifeSci · GIN supervised edge prediction Tox21",
+    "cardSourceId": "br2-dgl-molecule",
+    "weightsSourceId": "br2-dgl-tox21-registry",
+    "licenseSourceId": "ow-dgl-lifesci-license",
+    "license": "Apache-2.0 (repository)",
+    "access": "public"
+  },
+  {
+    "id": "uva-flow-simple",
+    "name": "UvA MNISTFlow · simple",
+    "cardSourceId": "br2-uva-flow",
+    "weightsSourceId": "br2-uva-flow-simple-weights",
+    "licenseSourceId": "ow-uva-model-license",
+    "license": "MIT",
+    "access": "public"
+  },
+  {
+    "id": "uva-flow-vardeq",
+    "name": "UvA MNISTFlow · vardeq",
+    "cardSourceId": "br2-uva-flow",
+    "weightsSourceId": "br2-uva-flow-vardeq-weights",
+    "licenseSourceId": "ow-uva-model-license",
+    "license": "MIT",
+    "access": "public"
+  },
+  {
+    "id": "timeradar",
+    "name": "TimeRadar · pretrained 100-step model",
+    "cardSourceId": "br2-timeradar",
+    "weightsSourceId": "br2-timeradar-weights",
+    "licenseSourceId": "br2-timeradar",
+    "license": "Unresolved: README displays both MIT and Apache-2.0; no license file",
+    "access": "public"
+  },
+  {
+    "id": "blitz-boltz-k8",
+    "name": "Blitz-Boltz2 · K8",
+    "cardSourceId": "br2-blitz-boltz-k8-card",
+    "weightsSourceId": "br2-blitz-boltz-k8-weights",
+    "licenseSourceId": "br2-blitz-boltz-k8-card",
+    "license": "mit",
+    "access": "public"
+  },
+  {
+    "id": "blitz-boltz-k16",
+    "name": "Blitz-Boltz2 · K16",
+    "cardSourceId": "br2-blitz-boltz-k16-card",
+    "weightsSourceId": "br2-blitz-boltz-k16-weights",
+    "licenseSourceId": "br2-blitz-boltz-k16-card",
+    "license": "mit",
+    "access": "public"
+  },
+  {
+    "id": "eqr-sudoku",
+    "name": "EqR · Sudoku-Extreme",
+    "cardSourceId": "br2-eqr",
+    "weightsSourceId": "br2-eqr-sudoku-weights",
+    "licenseSourceId": "br2-eqr",
+    "license": "Apache-2.0 (repository)",
+    "access": "public"
+  },
+  {
+    "id": "neuralmp",
+    "name": "Neural Motion Planner · released policy",
+    "cardSourceId": "br2-neuralmp-card",
+    "weightsSourceId": "br2-neuralmp-weights",
+    "licenseSourceId": "br2-neuralmp-card",
+    "license": "mit",
+    "access": "public"
   }
 ];
 
@@ -2037,6 +2469,1415 @@ export const taskBenchmarks: TaskBenchmark[] = [
         "score": 87.5
       }
     ]
+  },
+  {
+    "id": "siglip2-imagenet",
+    "taskIds": [
+      "image-classification"
+    ],
+    "title": "SigLIP 2 · ImageNet zero-shot",
+    "dataset": "ImageNet-1k",
+    "metric": "Top-1 accuracy",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2025",
+    "sourceId": "br2-siglip",
+    "locator": "Model zoo · ImageNet 0-shot",
+    "protocol": {
+      "en": "Official zero-shot classifier evaluation at 384-pixel native resolution; no task-specific classification head is trained.",
+      "tr": "Resmî sıfır örnekli sınıflandırma değerlendirmesi; doğal çözünürlük 384 piksel, göreve özel sınıflandırma başlığı eğitilmez."
+    },
+    "limitation": {
+      "en": "Different model sizes and patch sizes; this does not establish a supervised-classification or Turkish-domain winner.",
+      "tr": "Model ve yama boyutları farklıdır; gözetimli sınıflandırma veya Türkçe alan verisi için liderlik göstermez."
+    },
+    "results": [
+      {
+        "candidateId": "siglip",
+        "score": 84.1
+      },
+      {
+        "candidateId": "siglip2-giant",
+        "score": 85.0
+      }
+    ]
+  },
+  {
+    "id": "rfdetr-coco-box",
+    "taskIds": [
+      "object-detection"
+    ],
+    "title": "RF-DETR · COCO box AP",
+    "dataset": "COCO validation",
+    "metric": "Box AP50:95",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": null,
+    "sourceId": "br2-rfdetr",
+    "locator": "Object Detection · RF-DETR-M / L",
+    "protocol": {
+      "en": "Published native-resolution COCO evaluation; compare box AP, not AP50 or latency.",
+      "tr": "Yayımlanan doğal çözünürlüklü COCO değerlendirmesi; kutu AP karşılaştırılır, AP50 veya gecikme değil."
+    },
+    "limitation": {
+      "en": "Resolution and capacity differ. This is a quality comparison of two verified Apache-2.0 releases; it does not claim the best model across the full leaderboard.",
+      "tr": "Çözünürlük ve kapasite farklıdır. Doğrulanmış iki Apache-2.0 sürümünün kalite karşılaştırmasıdır; tüm tabloda en iyi model olduğu iddia edilmez."
+    },
+    "results": [
+      {
+        "candidateId": "rfdetr-m",
+        "score": 54.7,
+        "configuration": {
+          "en": "576 px",
+          "tr": "576 piksel"
+        }
+      },
+      {
+        "candidateId": "rfdetr-l",
+        "score": 56.5,
+        "configuration": {
+          "en": "704 px",
+          "tr": "704 piksel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rfdetr-coco-mask",
+    "taskIds": [
+      "instance-segmentation"
+    ],
+    "title": "RF-DETR · COCO mask AP",
+    "dataset": "COCO validation",
+    "metric": "Mask AP50:95",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": null,
+    "sourceId": "br2-rfdetr",
+    "locator": "Instance Segmentation · L / 2XL",
+    "protocol": {
+      "en": "Task-specific instance-segmentation heads with each released model’s native input size.",
+      "tr": "Her yayımlanmış modelin doğal girdi boyutunda, göreve özel örnek segmentasyon başlıkları."
+    },
+    "limitation": {
+      "en": "Higher-resolution 2XL costs more compute. These mask-AP scores cannot rank SAM 3 promptable segmentation under a different protocol.",
+      "tr": "Yüksek çözünürlüklü 2XL daha fazla hesaplama ister. Bu maske AP skorları, farklı protokollü SAM 3 istemli segmentasyonunu sıralamaz."
+    },
+    "results": [
+      {
+        "candidateId": "rfdetr-seg-l",
+        "score": 47.1,
+        "configuration": {
+          "en": "504 px",
+          "tr": "504 piksel"
+        }
+      },
+      {
+        "candidateId": "rfdetr-seg-2xl",
+        "score": 49.9,
+        "configuration": {
+          "en": "768 px",
+          "tr": "768 piksel"
+        }
+      }
+    ]
+  },
+  {
+    "id": "florence-caption",
+    "taskIds": [
+      "image-captioning"
+    ],
+    "title": "Florence-2 · COCO captions",
+    "dataset": "COCO Karpathy test",
+    "metric": "CIDEr",
+    "unit": "score",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2024",
+    "sourceId": "br2-florence-base-ft-card",
+    "locator": "Fine-tuned models · COCO Caption",
+    "protocol": {
+      "en": "Fine-tuned captioning checkpoints on the same COCO Karpathy test split.",
+      "tr": "Aynı COCO Karpathy test bölümündeki ince ayarlı açıklama üretim ağırlıkları."
+    },
+    "limitation": {
+      "en": "CIDEr rewards reference-caption overlap; it is not factuality or safety. Pretrained zero-shot rows are deliberately excluded from this table.",
+      "tr": "CIDEr referans açıklamalarla örtüşmeyi ölçer; olgusal doğruluk veya güvenlik değildir. Ön eğitimli sıfır örnekli satırlar bu tabloya katılmaz."
+    },
+    "results": [
+      {
+        "candidateId": "florence-base-ft",
+        "score": 140.0
+      },
+      {
+        "candidateId": "florence-large-ft",
+        "score": 143.3
+      }
+    ]
+  },
+  {
+    "id": "qwen-docvqa",
+    "taskIds": [
+      "document-question-answering"
+    ],
+    "title": "Qwen-VL · DocVQA",
+    "dataset": "DocVQA validation",
+    "metric": "ANLS",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2025-01",
+    "sourceId": "br2-qwen25vl72-card",
+    "locator": "DocVQA_VAL row",
+    "protocol": {
+      "en": "Publisher-reported document question answering on the same validation benchmark, using the named 72B instruction releases.",
+      "tr": "Yayıncının aynı doğrulama benchmark’ında bildirdiği belge soru-cevap sonuçları; adları belirtilen 72B talimat sürümleri."
+    },
+    "limitation": {
+      "en": "The card does not expose a complete matched inference-budget recipe. The 0.3-point difference is not a significance claim; OCRBench is not substituted.",
+      "tr": "Kart tam ve eşit çıkarım bütçeli bir tarif sunmaz. 0,3 puanlık fark istatistiksel anlamlılık iddiası değildir; yerine OCRBench kullanılmaz."
+    },
+    "results": [
+      {
+        "candidateId": "qwen2vl72",
+        "score": 96.1
+      },
+      {
+        "candidateId": "qwen25vl72",
+        "score": 96.4
+      }
+    ]
+  },
+  {
+    "id": "ct-clone-bcb",
+    "taskIds": [
+      "code-clone-detection"
+    ],
+    "title": "CodeT5 · BigCloneBench",
+    "dataset": "BigCloneBench · CodeXGLUE test",
+    "metric": "Binary F1",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2021-11",
+    "sourceId": "br2-codet5-paper",
+    "locator": "Table 5 · CodeT5-base / Clone F1",
+    "protocol": {
+      "en": "CodeXGLUE BigCloneBench clone/non-clone evaluation with the released clone-detection head.",
+      "tr": "Yayımlanan klon tespiti başlığıyla CodeXGLUE BigCloneBench klon/klon değil değerlendirmesi."
+    },
+    "limitation": {
+      "en": "These are 2021 task-specific references. General CodeT5 pretraining weights and modern coding-agent scores cannot replace these trained heads or test protocols.",
+      "tr": "Bunlar 2021 görev ağırlıklarına ait referanslardır. Genel CodeT5 ön eğitim ağırlıkları ve modern kod ajanı skorları, eğitilmiş bu başlıkların veya test protokollerinin yerine geçmez."
+    },
+    "results": [
+      {
+        "candidateId": "ct-clone",
+        "score": 97.2
+      }
+    ]
+  },
+  {
+    "id": "ct-defect-devign",
+    "taskIds": [
+      "defect-detection"
+    ],
+    "title": "CodeT5 · Devign",
+    "dataset": "Devign · CodeXGLUE test",
+    "metric": "Accuracy",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2021-11",
+    "sourceId": "br2-codet5-paper",
+    "locator": "Table 5 · CodeT5-base / Defect Accuracy",
+    "protocol": {
+      "en": "CodeXGLUE Devign binary defect classification; test-set accuracy, not vulnerability-repair success.",
+      "tr": "CodeXGLUE Devign ikili hata sınıflandırması; test doğruluğudur, güvenlik açığı onarım başarısı değildir."
+    },
+    "limitation": {
+      "en": "These are 2021 task-specific references. General CodeT5 pretraining weights and modern coding-agent scores cannot replace these trained heads or test protocols.",
+      "tr": "Bunlar 2021 görev ağırlıklarına ait referanslardır. Genel CodeT5 ön eğitim ağırlıkları ve modern kod ajanı skorları, eğitilmiş bu başlıkların veya test protokollerinin yerine geçmez."
+    },
+    "results": [
+      {
+        "candidateId": "ct-defect",
+        "score": 65.78
+      }
+    ]
+  },
+  {
+    "id": "ct-translate-jcs",
+    "taskIds": [
+      "code-translation"
+    ],
+    "title": "CodeT5 · Java → C#",
+    "dataset": "CodeXGLUE paired Java / C# test",
+    "metric": "BLEU-4",
+    "unit": "score",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2021-11",
+    "sourceId": "br2-codet5-paper",
+    "locator": "Table 4 · CodeT5-base",
+    "protocol": {
+      "en": "The direction-specific fine-tuned checkpoint is evaluated on the paired translation test set.",
+      "tr": "Yönüne özel ince ayarlı ağırlıklar eşleştirilmiş çeviri test kümesinde değerlendirilir."
+    },
+    "limitation": {
+      "en": "Opposite directions are separate tasks; these scores are not ranked against each other. BLEU does not prove semantic equivalence or successful compilation.",
+      "tr": "Zıt yönler ayrı görevlerdir; bu skorlar birbirine karşı sıralanmaz. BLEU anlamsal eşdeğerliği veya derlenebilirliği kanıtlamaz."
+    },
+    "results": [
+      {
+        "candidateId": "ct-java-cs",
+        "score": 84.03
+      }
+    ]
+  },
+  {
+    "id": "ct-translate-csj",
+    "taskIds": [
+      "code-translation"
+    ],
+    "title": "CodeT5 · C# → Java",
+    "dataset": "CodeXGLUE paired Java / C# test",
+    "metric": "BLEU-4",
+    "unit": "score",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2021-11",
+    "sourceId": "br2-codet5-paper",
+    "locator": "Table 4 · CodeT5-base",
+    "protocol": {
+      "en": "The direction-specific fine-tuned checkpoint is evaluated on the paired translation test set.",
+      "tr": "Yönüne özel ince ayarlı ağırlıklar eşleştirilmiş çeviri test kümesinde değerlendirilir."
+    },
+    "limitation": {
+      "en": "Opposite directions are separate tasks; these scores are not ranked against each other. BLEU does not prove semantic equivalence or successful compilation.",
+      "tr": "Zıt yönler ayrı görevlerdir; bu skorlar birbirine karşı sıralanmaz. BLEU anlamsal eşdeğerliği veya derlenebilirliği kanıtlamaz."
+    },
+    "results": [
+      {
+        "candidateId": "ct-cs-java",
+        "score": 79.87
+      }
+    ]
+  },
+  {
+    "id": "ct-summary-python",
+    "taskIds": [
+      "code-summarization"
+    ],
+    "title": "CodeT5 · Python summaries",
+    "dataset": "CodeSearchNet Python · CodeXGLUE test",
+    "metric": "Smoothed BLEU-4",
+    "unit": "score",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2021",
+    "sourceId": "br2-ct-multi-sum-card",
+    "locator": "Released multi-sum model card · Python column",
+    "protocol": {
+      "en": "Compare the Python-specific checkpoint with the released single checkpoint shared across six languages. The multi-sum card explicitly distinguishes this release from the original paper’s per-language checkpoint selection.",
+      "tr": "Python’a özel ağırlıklar, altı dilde paylaşılan tek yayımlanmış ağırlıkla karşılaştırılır. Multi-sum kartı bu sürümü, özgün makalenin dile göre ağırlık seçiminden açıkça ayırır."
+    },
+    "limitation": {
+      "en": "A lexical metric on a fixed Python split, not documentation correctness. The 20.42 row is the release-card result, not the paper’s 20.36 multi-task row.",
+      "tr": "Sabit Python bölümü üzerindeki sözcüksel metriktir; dokümantasyon doğruluğu değildir. 20,42 değeri sürüm kartına aittir; makaledeki 20,36 çok görevli satır değildir."
+    },
+    "results": [
+      {
+        "candidateId": "ct-sum-py",
+        "score": 20.01
+      },
+      {
+        "candidateId": "ct-multi-sum",
+        "score": 20.42
+      }
+    ]
+  },
+  {
+    "id": "vbench-wan-t2v",
+    "taskIds": [
+      "text-to-video-generation"
+    ],
+    "title": "VBench · released Wan T2V",
+    "dataset": "VBench T2V",
+    "metric": "Total score",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "independent",
+    "resultDate": "2026-02-18",
+    "sourceId": "br2-vbench-live",
+    "locator": "T2V · Gold rows · Wan2.2 / Wan2.1-T2V-14B",
+    "protocol": {
+      "en": "Both rows are sampled and evaluated by VBench. The comparison is between published generation systems, including the listed prompt processing.",
+      "tr": "İki satırın videoları VBench tarafından üretilip değerlendirilmiştir. Karşılaştırma, belirtilen istem işlemesi dâhil yayımlanmış üretim sistemleri arasındadır."
+    },
+    "limitation": {
+      "en": "Prompt processing and native sampling differ. Wan2.2 without prompt optimization scores 82.61 on 2026-02-18, so the ordering is not a weight-only architectural claim. API-only Wan2.1 rows are excluded.",
+      "tr": "İstem işlemesi ve doğal örnekleme farklıdır. Wan2.2, 2026-02-18’de istem iyileştirmesi olmadan 82,61 alır; sıralama yalnızca ağırlıklara dayanan mimari üstünlük iddiası değildir. Yalnızca API ile sunulan Wan2.1 satırları dışarıda tutulur."
+    },
+    "results": [
+      {
+        "candidateId": "wan22-t2v",
+        "score": 84.23,
+        "configuration": {
+          "en": "Qwen prompt optimization · 2026-02-18",
+          "tr": "Qwen istem iyileştirmesi · 2026-02-18"
+        }
+      },
+      {
+        "candidateId": "wan21-t2v14",
+        "score": 83.69,
+        "configuration": {
+          "en": "VBench Gold row · 2025-07-25",
+          "tr": "VBench Gold satırı · 2025-07-25"
+        }
+      }
+    ]
+  },
+  {
+    "id": "vbench-wan-i2v",
+    "taskIds": [
+      "image-to-video-generation"
+    ],
+    "title": "VBench · Wan image-to-video",
+    "dataset": "VBench I2V",
+    "metric": "Total score",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "independent",
+    "resultDate": "2026-03-06",
+    "sourceId": "br2-vbench-live",
+    "locator": "I2V · Gold rows · TI2V-5B / I2V-A14B",
+    "protocol": {
+      "en": "VBench Team sampled and evaluated both published Qwen-prompt-optimized systems; their native generation settings are retained.",
+      "tr": "VBench ekibi yayımlanmış iki Qwen istem iyileştirmeli sistemi üretip değerlendirmiştir; doğal üretim ayarları korunur."
+    },
+    "limitation": {
+      "en": "A 0.12-point aggregate difference is not evidence of statistical significance. I2V consistency and quality have different rankings; larger weights are not automatically better on this aggregate.",
+      "tr": "Toplam skordaki 0,12 puan fark istatistiksel anlamlılık kanıtı değildir. I2V tutarlılığı ve kalite farklı sıralamalar verir; büyük ağırlıklar bu toplam metrikte otomatik olarak üstün değildir."
+    },
+    "results": [
+      {
+        "candidateId": "wan",
+        "score": 88.8,
+        "configuration": {
+          "en": "Qwen prompt optimization · 2026-02-12",
+          "tr": "Qwen istem iyileştirmesi · 2026-02-12"
+        }
+      },
+      {
+        "candidateId": "wan22-i2v",
+        "score": 88.68,
+        "configuration": {
+          "en": "Qwen prompt optimization · 2026-03-06",
+          "tr": "Qwen istem iyileştirmesi · 2026-03-06"
+        }
+      }
+    ]
+  },
+  {
+    "id": "videomaev2-k400",
+    "taskIds": [
+      "video-classification"
+    ],
+    "title": "VideoMAE V2 · MMAction2 K400",
+    "dataset": "Kinetics-400 validation · 19,796 videos",
+    "metric": "Top-1 accuracy",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2023-05",
+    "sourceId": "br2-videomaev2",
+    "locator": "Results and Models · top1 acc, not reference top1 acc",
+    "protocol": {
+      "en": "Both ported checkpoints: K710 distillation, 16×4 sampling, short side 320, five clips × three crops.",
+      "tr": "İki aktarılmış ağırlık: K710 damıtma, 16×4 örnekleme, kısa kenar 320, beş klip × üç kırpma."
+    },
+    "limitation": {
+      "en": "These are the tested MMAction2 artifacts, not the original paper’s slightly different Small result. Manifest pins identify the release links, not hashes of downloaded tensors.",
+      "tr": "Bunlar test edilen MMAction2 dosyalarıdır; özgün makalenin az farklı Small sonucu değildir. Sabitlenmiş manifest sürüm bağlantılarını tanımlar; indirilen tensörlerin özeti değildir."
+    },
+    "results": [
+      {
+        "candidateId": "videomaev2-s",
+        "score": 83.6
+      },
+      {
+        "candidateId": "videomaev2-b",
+        "score": 86.6
+      }
+    ]
+  },
+  {
+    "id": "shape-text3d",
+    "taskIds": [
+      "text-to-3d-generation"
+    ],
+    "title": "Shap-E · text-only 3D",
+    "dataset": "COCO evaluation prompts",
+    "metric": "CLIP ViT-L/14 R-Precision",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "proxy",
+    "provenance": "publisher",
+    "resultDate": "2023-05",
+    "sourceId": "br2-shape-paper",
+    "locator": "Table 2 · Shap-E (300M, text-only)",
+    "protocol": {
+      "en": "Render the text-generated 3D assets and evaluate prompt retrieval using CLIP ViT-L/14.",
+      "tr": "Metinden üretilen 3B varlıklar işlenir ve istem geri getirme CLIP ViT-L/14 ile değerlendirilir."
+    },
+    "limitation": {
+      "en": "A 2023 reference. CLIP alignment is not mesh usability or physical validity. Image-conditioned Shap-E and text-to-image-to-3D pipelines are different conditions.",
+      "tr": "2023 referansıdır. CLIP hizalaması, ağ kullanılabilirliği veya fiziksel geçerlilik değildir. Görüntü koşullu Shap-E ve metin→görüntü→3B hatları farklı koşullardır."
+    },
+    "results": [
+      {
+        "candidateId": "shape",
+        "score": 40.9,
+        "configuration": {
+          "en": "300M text-conditional model",
+          "tr": "300M metin koşullu model"
+        }
+      }
+    ]
+  },
+  {
+    "id": "udpipe-part-of-speech-tagging",
+    "taskIds": [
+      "part-of-speech-tagging"
+    ],
+    "title": "UDPipe 2 · English EWT raw text",
+    "dataset": "UD 2.17 English EWT test",
+    "metric": "UPOS F1",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2025-11-25",
+    "sourceId": "br2-udpipe",
+    "locator": "UD 2.17 · english-ewt-ud-2.17-251125 · Raw text",
+    "protocol": {
+      "en": "Official conll18_ud_eval F1 evaluation from raw text, including segmentation errors. Released model bundle 251125.",
+      "tr": "Ham metinden, bölümleme hataları dâhil resmî conll18_ud_eval F1 değerlendirmesi. Yayımlanan model paketi 251125."
+    },
+    "limitation": {
+      "en": "Gold-tokenization scores are different and excluded. English EWT cannot establish quality for every language/treebank; the persistent release identifier is not a tensor checksum.",
+      "tr": "Altın tokenizasyon skorları farklıdır ve dışarıda tutulur. English EWT tüm dil/ağaç kümeleri için kalite belirlemez; kalıcı sürüm kimliği tensör özeti değildir."
+    },
+    "results": [
+      {
+        "candidateId": "udpipe-ewt",
+        "score": 96.75
+      }
+    ]
+  },
+  {
+    "id": "udpipe-syntactic-parsing",
+    "taskIds": [
+      "syntactic-parsing"
+    ],
+    "title": "UDPipe 2 · English EWT raw text",
+    "dataset": "UD 2.17 English EWT test",
+    "metric": "LAS F1",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2025-11-25",
+    "sourceId": "br2-udpipe",
+    "locator": "UD 2.17 · english-ewt-ud-2.17-251125 · Raw text",
+    "protocol": {
+      "en": "Official conll18_ud_eval F1 evaluation from raw text, including segmentation errors. Released model bundle 251125.",
+      "tr": "Ham metinden, bölümleme hataları dâhil resmî conll18_ud_eval F1 değerlendirmesi. Yayımlanan model paketi 251125."
+    },
+    "limitation": {
+      "en": "Gold-tokenization scores are different and excluded. English EWT cannot establish quality for every language/treebank; the persistent release identifier is not a tensor checksum.",
+      "tr": "Altın tokenizasyon skorları farklıdır ve dışarıda tutulur. English EWT tüm dil/ağaç kümeleri için kalite belirlemez; kalıcı sürüm kimliği tensör özeti değildir."
+    },
+    "results": [
+      {
+        "candidateId": "udpipe-ewt",
+        "score": 89.91
+      }
+    ]
+  },
+  {
+    "id": "compact-re-general",
+    "taskIds": [
+      "relation-extraction"
+    ],
+    "title": "Compact RE · General average",
+    "dataset": "Seven general-domain RE benchmarks",
+    "metric": "Positive-class micro-F1 average",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2026-06",
+    "sourceId": "br2-compact-re",
+    "locator": "Headline result · best released sub-billion checkpoint",
+    "protocol": {
+      "en": "The paper’s rounded general-domain average; positive-class micro-F1 excludes the no-relation class. The adapter needs the named base model and task formatting.",
+      "tr": "Makalenin yuvarlanmış genel alan ortalaması; pozitif sınıf mikro F1, ilişki yok sınıfını dışlar. Adaptör, belirtilen taban modeli ve görev biçimlendirmesini gerektirir."
+    },
+    "limitation": {
+      "en": "Only the explicitly released best artifact is admitted. Unreleased tuned rows and closed frontier APIs are not open-weight comparison participants. Literary RE has different training and annotation conditions.",
+      "tr": "Yalnızca açıkça yayımlanmış en iyi dosya kabul edilir. Yayımlanmamış ince ayarlı satırlar ve kapalı API’ler açık ağırlık karşılaştırmasına alınmaz. Edebî ilişki çıkarımında eğitim ve anotasyon koşulları farklıdır."
+    },
+    "results": [
+      {
+        "candidateId": "compact-re05",
+        "score": 83.0,
+        "configuration": {
+          "en": "QLoRA adapter on Qwen2.5-0.5B-Instruct; 2-shot prompting",
+          "tr": "Qwen2.5-0.5B-Instruct üzerinde QLoRA adaptörü; 2 örnekli istem"
+        }
+      }
+    ]
+  },
+  {
+    "id": "thinkqe-bright",
+    "taskIds": [
+      "query-expansion"
+    ],
+    "title": "ThinkQE · retrieval with expansion",
+    "dataset": "BRIGHT · seven StackExchange domains",
+    "metric": "Mean nDCG@10",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "proxy",
+    "provenance": "publisher",
+    "resultDate": "2025-06",
+    "sourceId": "br2-thinkqe",
+    "locator": "BRIGHT comparison · ThinkQE-14B",
+    "protocol": {
+      "en": "R1-distilled Qwen-14B inside the iterative ThinkQE expansion-and-BM25 pipeline; seven natural-language domains only.",
+      "tr": "Yinelemeli ThinkQE genişletme ve BM25 hattında R1 damıtılmış Qwen-14B; yalnızca yedi doğal dil alanı."
+    },
+    "limitation": {
+      "en": "A retrieval-system score, not a standalone language-model score or all 12 BRIGHT tasks. MQR-A1 has no verified released weights and is excluded.",
+      "tr": "Bağımsız dil modeli skoru veya BRIGHT’ın 12 görevinin tamamı değil, geri getirme sistemi skorudur. MQR-A1’in yayımlanmış ağırlıkları doğrulanmadığı için dışarıda tutulur."
+    },
+    "results": [
+      {
+        "candidateId": "r1-qwen14",
+        "score": 34.9
+      }
+    ]
+  },
+  {
+    "id": "safim-fim-base",
+    "taskIds": [
+      "code-completion"
+    ],
+    "title": "SAFIM · native fill-in-the-middle",
+    "dataset": "SAFIM · Block / Block V2 / API / Control",
+    "metric": "Mean pass@1",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "independent",
+    "resultDate": "2026-01",
+    "sourceId": "br2-sri-paper",
+    "locator": "Execution-based evaluation · Base Models · FIM / Average",
+    "protocol": {
+      "en": "Native FIM results for both base models in the same 2026 paper. SRI instruction-formatted results are kept out of this FIM-only comparison.",
+      "tr": "Aynı 2026 makalesindeki iki taban modelin doğal FIM sonuçları. SRI talimat biçimli sonuçlar bu yalnızca FIM karşılaştırmasına katılmaz."
+    },
+    "limitation": {
+      "en": "Different model sizes and training data; no equal-compute or all-language claim. Full software-agent benchmarks do not measure completion in the same way.",
+      "tr": "Model boyutları ve eğitim verileri farklıdır; eşit hesaplama veya tüm diller iddiası yoktur. Tam yazılım ajanı benchmark’ları kod tamamlamayı aynı biçimde ölçmez."
+    },
+    "results": [
+      {
+        "candidateId": "qwen25coder32base",
+        "score": 70.0
+      },
+      {
+        "candidateId": "deepseekv3base",
+        "score": 79.6
+      }
+    ]
+  },
+  {
+    "id": "qmsum-segenc",
+    "taskIds": [
+      "text-summarization"
+    ],
+    "title": "QMSum · executable SegEnc comparison",
+    "dataset": "QMSum official test · 281 queries / 35 meetings",
+    "metric": "ROUGE-1",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2026-09",
+    "sourceId": "br2-qmsum",
+    "locator": "The full comparison · Span-trained / Socratic-SegEnc (our port)",
+    "protocol": {
+      "en": "Same frozen scorer, official split and greedy decoding. Published 0–1 ROUGE-1 values are multiplied by 100. Each system retains its documented input regime.",
+      "tr": "Aynı sabit puanlayıcı, resmî bölüm ve açgözlü çözümleme. Yayımlanan 0–1 ROUGE-1 değerleri 100 ile çarpılır. Her sistem belgelenen girdi düzenini korur."
+    },
+    "limitation": {
+      "en": "This measures training plus retrieval/input regimes, not weights under identical inputs. The 38.60 released-output row is not used as executable checkpoint performance. No significance claim follows from the point estimates alone.",
+      "tr": "Eğitim ve geri getirme/girdi düzenleri birlikte ölçülür; aynı girdilerde yalnızca ağırlıklar değildir. Yayımlanmış çıktılardan gelen 38,60 satırı çalıştırılabilir ağırlık performansı sayılmaz. Nokta tahminleri tek başına anlamlılık iddiası oluşturmaz."
+    },
+    "results": [
+      {
+        "candidateId": "segenc-spans",
+        "score": 36.33,
+        "configuration": {
+          "en": "2,000 retrieved words; span-trained checkpoint",
+          "tr": "2.000 geri getirilen sözcük; aralıklarla eğitilmiş ağırlık"
+        }
+      },
+      {
+        "candidateId": "segenc-stock",
+        "score": 35.3,
+        "configuration": {
+          "en": "Up to ~11,800 transcript words; publisher port",
+          "tr": "Yaklaşık 11.800 transkript sözcüğüne kadar; yayıncının aktarımı"
+        }
+      }
+    ]
+  },
+  {
+    "id": "superb-sid",
+    "taskIds": [
+      "speaker-identification"
+    ],
+    "title": "SUPERB · speaker identification",
+    "dataset": "VoxCeleb1 · SUPERB SID test",
+    "metric": "Accuracy",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2021",
+    "sourceId": "br2-sid-hubert-card",
+    "locator": "Evaluation results · Transformers column (companion wav2vec card cited below)",
+    "protocol": {
+      "en": "Both converted SUPERB classification heads, 16 kHz speech and a predefined closed set of speakers. Scores from each card’s Transformers column, multiplied by 100.",
+      "tr": "İki dönüştürülmüş SUPERB sınıflandırma başlığı, 16 kHz konuşma ve önceden tanımlı kapalı konuşmacı kümesi. Her kartın Transformers sütunundaki skorlar 100 ile çarpılır."
+    },
+    "limitation": {
+      "en": "Speaker identification accuracy is not verification EER. HuBERT’s original S3PRL 81.42 result is not assigned to its Transformers checkpoint.",
+      "tr": "Konuşmacı kimliği doğruluğu, konuşmacı doğrulama EER değeri değildir. HuBERT’in özgün S3PRL 81,42 sonucu Transformers ağırlığına atanmaz."
+    },
+    "results": [
+      {
+        "candidateId": "sid-hubert",
+        "score": 80.71
+      },
+      {
+        "candidateId": "sid-wav2vec",
+        "score": 75.18
+      }
+    ]
+  },
+  {
+    "id": "seamless-turkish",
+    "taskIds": [
+      "speech-translation"
+    ],
+    "title": "SeamlessM4T · Turkish speech to English",
+    "dataset": "FLEURS test · tur-eng speech-to-text translation",
+    "metric": "BLEU",
+    "unit": "score",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2023-11",
+    "sourceId": "br2-seamless-v2-metrics",
+    "locator": "s2tt_fleurs_test.csv · tur-eng (v1 bundle also cited)",
+    "protocol": {
+      "en": "Direct Turkish-speech to English-text evaluation from the two official release CSVs.",
+      "tr": "İki resmî sürüm CSV’sindeki doğrudan Türkçe konuşmadan İngilizce metne değerlendirme."
+    },
+    "limitation": {
+      "en": "One language direction on FLEURS, not an all-language average or speech-to-speech quality score. Different training data are part of the version change.",
+      "tr": "FLEURS üzerinde tek dil yönüdür; tüm dillerin ortalaması veya konuşmadan konuşmaya kalite skoru değildir. Eğitim verisi değişimi sürüm değişiminin parçasıdır."
+    },
+    "results": [
+      {
+        "candidateId": "seamless",
+        "score": 30.74
+      },
+      {
+        "candidateId": "seamless-v1",
+        "score": 25.81
+      }
+    ]
+  },
+  {
+    "id": "seedvc-libritts",
+    "taskIds": [
+      "voice-conversion"
+    ],
+    "title": "Seed-VC · zero-shot conversion",
+    "dataset": "LibriTTS test-clean · 100 source utterances / 12 reference voices",
+    "metric": "WER",
+    "unit": "%",
+    "direction": "lower",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2024-11",
+    "sourceId": "br2-seed-eval",
+    "locator": "Zero-shot voice conversion · Seed-VC row",
+    "protocol": {
+      "en": "Historical evaluation code identifies the Whisper-small / BigVGAN checkpoint; reference-conditioned conversion is evaluated with ASR WER.",
+      "tr": "Tarihsel değerlendirme kodu Whisper-small / BigVGAN ağırlığını tanımlar; referans ses koşullu dönüşüm ASR WER ile değerlendirilir."
+    },
+    "limitation": {
+      "en": "WER measures content preservation, not speaker similarity. The EVAL table predates the product called Seed-VC v2; its score is not transferred to that newer variant.",
+      "tr": "WER içerik korunmasını ölçer, konuşmacı benzerliğini değil. EVAL tablosu Seed-VC v2 adlı üründen öncedir; skoru bu yeni varyanta aktarılmaz."
+    },
+    "results": [
+      {
+        "candidateId": "seedvc-2024",
+        "score": 11.99
+      }
+    ]
+  },
+  {
+    "id": "tangoflux-fd",
+    "taskIds": [
+      "text-to-audio-generation"
+    ],
+    "title": "TangoFlux · FD (OpenL3)",
+    "dataset": "AudioCaps test · 886-sample split",
+    "metric": "FD (OpenL3)",
+    "unit": "score",
+    "direction": "lower",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2024-12",
+    "sourceId": "br2-tangoflux",
+    "locator": "Evaluation · TangoFlux / Tango 2 / AudioLDM 2 Large",
+    "protocol": {
+      "en": "Official common AudioCaps test comparison; generation lengths and sampling steps differ as disclosed in each row.",
+      "tr": "Resmî ortak AudioCaps test karşılaştırması; üretim süreleri ve örnekleme adımları her satırda belirtildiği gibi farklıdır."
+    },
+    "limitation": {
+      "en": "OpenL3 FD is not VGGish FAD. CLAP is machine-estimated alignment, not human preference. Tango 2 has the better reported KL metric, so there is no across-metric winner.",
+      "tr": "OpenL3 FD, VGGish FAD değildir. CLAP makineyle kestirilen hizalamadır, insan tercihi değildir. Bildirilen KL metriğinde Tango 2 daha iyidir; tüm metrikler için tek lider yoktur."
+    },
+    "results": [
+      {
+        "candidateId": "tangoflux",
+        "score": 75.1,
+        "configuration": {
+          "en": "50 steps / 30 s",
+          "tr": "50 steps / 30 s"
+        }
+      },
+      {
+        "candidateId": "tango2",
+        "score": 108.4,
+        "configuration": {
+          "en": "200 steps / 10 s",
+          "tr": "200 steps / 10 s"
+        }
+      },
+      {
+        "candidateId": "audioldm2-l",
+        "score": 108.3,
+        "configuration": {
+          "en": "200 steps / 10 s",
+          "tr": "200 steps / 10 s"
+        }
+      }
+    ]
+  },
+  {
+    "id": "tangoflux-clap",
+    "taskIds": [
+      "text-to-audio-generation"
+    ],
+    "title": "TangoFlux · CLAP score",
+    "dataset": "AudioCaps test · 886-sample split",
+    "metric": "CLAP score",
+    "unit": "score",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2024-12",
+    "sourceId": "br2-tangoflux",
+    "locator": "Evaluation · TangoFlux / Tango 2 / AudioLDM 2 Large",
+    "protocol": {
+      "en": "Official common AudioCaps test comparison; generation lengths and sampling steps differ as disclosed in each row.",
+      "tr": "Resmî ortak AudioCaps test karşılaştırması; üretim süreleri ve örnekleme adımları her satırda belirtildiği gibi farklıdır."
+    },
+    "limitation": {
+      "en": "OpenL3 FD is not VGGish FAD. CLAP is machine-estimated alignment, not human preference. Tango 2 has the better reported KL metric, so there is no across-metric winner.",
+      "tr": "OpenL3 FD, VGGish FAD değildir. CLAP makineyle kestirilen hizalamadır, insan tercihi değildir. Bildirilen KL metriğinde Tango 2 daha iyidir; tüm metrikler için tek lider yoktur."
+    },
+    "results": [
+      {
+        "candidateId": "tangoflux",
+        "score": 0.48,
+        "configuration": {
+          "en": "50 steps / 30 s",
+          "tr": "50 steps / 30 s"
+        }
+      },
+      {
+        "candidateId": "tango2",
+        "score": 0.447,
+        "configuration": {
+          "en": "200 steps / 10 s",
+          "tr": "200 steps / 10 s"
+        }
+      },
+      {
+        "candidateId": "audioldm2-l",
+        "score": 0.419,
+        "configuration": {
+          "en": "200 steps / 10 s",
+          "tr": "200 steps / 10 s"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ace15-songeval",
+    "taskIds": [
+      "conditional-music-generation"
+    ],
+    "title": "ACE-Step 1.5 · SongEval",
+    "dataset": "20 styles · Chinese / English structured prompts and lyrics",
+    "metric": "SongEval musicality",
+    "unit": "score",
+    "direction": "higher",
+    "scope": "proxy",
+    "provenance": "publisher",
+    "resultDate": "2026-02",
+    "sourceId": "br2-ace15-paper",
+    "locator": "Table 1 · Mus. column",
+    "protocol": {
+      "en": "The paper specifies the 1.7B language-model and distilled-DiT generation pipeline; musicality comes from the ASLP-lab SongEval evaluator.",
+      "tr": "Makale 1,7B dil modeli ve damıtılmış DiT üretim hattını belirtir; müzikalite ASLP-lab SongEval değerlendiricisinden gelir."
+    },
+    "limitation": {
+      "en": "A model-based quality estimate on author-generated bilingual prompts, not a blinded human score. Other model rows lack an equally explicit checkpoint recipe; style and lyric alignment use the authors’ own reward models.",
+      "tr": "Yazarların ürettiği iki dilli istemlerde model tabanlı kalite kestirimidir; kör insan değerlendirmesi değildir. Diğer model satırlarında aynı açıklıkta ağırlık tarifi yoktur; stil ve söz hizalaması yazarların kendi ödül modellerini kullanır."
+    },
+    "results": [
+      {
+        "candidateId": "ace",
+        "score": 4.67,
+        "configuration": {
+          "en": "1.7B LM + dynamic distilled DiT; no RL",
+          "tr": "1,7B LM + dinamik damıtılmış DiT; RL yok"
+        }
+      }
+    ]
+  },
+  {
+    "id": "p5-beauty-topk",
+    "taskIds": [
+      "top-k-recommendation"
+    ],
+    "title": "P5 · Beauty direct recommendation",
+    "dataset": "Amazon Beauty · P5 test",
+    "metric": "NDCG@10",
+    "unit": "score",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2022",
+    "sourceId": "br2-p5-eval",
+    "locator": "Direct recommendation · prompt 5-8 · recorded output",
+    "protocol": {
+      "en": "Published notebook: Beauty small checkpoint, prompt 5-8, direct candidate recommendation and the notebook’s ranking procedure.",
+      "tr": "Yayımlanan not defteri: Beauty small ağırlığı, 5-8 istemi, doğrudan aday önerisi ve not defterinin sıralama yöntemi."
+    },
+    "limitation": {
+      "en": "Prompt 2-13 is sequential recommendation with a different score; prompt 5-5 is another configuration, not another model. The original Drive tensor was not bit-compared to the author-linked HF distribution.",
+      "tr": "2-13 istemi farklı skorlu sıralı öneridir; 5-5 başka model değil başka ayardır. Özgün Drive tensörü, yazarın bağlantıladığı HF dağıtımıyla bit düzeyinde karşılaştırılmadı."
+    },
+    "results": [
+      {
+        "candidateId": "p5-beauty-small",
+        "score": 0.134
+      }
+    ]
+  },
+  {
+    "id": "matrixformer-missbench",
+    "taskIds": [
+      "missing-value-imputation"
+    ],
+    "title": "MatrixFormer · MissBench",
+    "dataset": "MissBench · 42 datasets / 11 patterns / 40% missing",
+    "metric": "Macro NRMSE",
+    "unit": "score",
+    "direction": "lower",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2026-10-04",
+    "sourceId": "br2-matrixformer",
+    "locator": "Overall tabular NRMSE · MissBench overall",
+    "protocol": {
+      "en": "462 cases; average cases within each dataset then weight datasets equally. Full-matrix context; no row train/test split. MatrixFormer+ fits a convex blend using observed entries only.",
+      "tr": "462 durum; önce veri kümesi içindeki durumlar ortalanır, sonra veri kümeleri eşit ağırlık alır. Tam matris bağlamı; satır bazında eğitim/test ayrımı yoktur. MatrixFormer+ yalnızca gözlenen girdilerden dışbükey karışım katsayısı uyarlar."
+    },
+    "limitation": {
+      "en": "Exploratory publisher campaign, not independent validation. Hidden targets are excluded from fitting, but observed reconstruction loss is in-sample. The blend worsens the MNAR pattern relative to the general expert.",
+      "tr": "Yayıncının keşif amaçlı çalışmasıdır; bağımsız doğrulama değildir. Gizli hedefler uyarlamaya katılmaz ancak gözlenen yeniden kurma kaybı örneklem içidir. Karışım MNAR örüntüsünde genel uzmandan kötüdür."
+    },
+    "results": [
+      {
+        "candidateId": "matrixformer",
+        "score": 1.674085
+      },
+      {
+        "candidateId": "matrixformer-recsys",
+        "score": 1.84499
+      },
+      {
+        "candidateId": "matrixformer-plus",
+        "score": 1.579644
+      }
+    ]
+  },
+  {
+    "id": "matrixformer-ratings",
+    "taskIds": [
+      "rating-prediction"
+    ],
+    "title": "MatrixFormer · MovieLens ratings",
+    "dataset": "MovieLens 100K · frozen outer splits",
+    "metric": "User-macro RMSE",
+    "unit": "score",
+    "direction": "lower",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2026-10-04",
+    "sourceId": "br2-matrixformer",
+    "locator": "Recommender systems · MovieLens 100K RMSE",
+    "protocol": {
+      "en": "Each expert uses its documented normalization, context and rating clipping; macro-average over test users in original rating units. The blend chooses specialist weight 1.0.",
+      "tr": "Her uzman belgelenmiş normalizasyon, bağlam ve puan kırpmasını kullanır; özgün puan birimlerinde test kullanıcılarının makro ortalaması alınır. Karışım uzman ağırlığını 1,0 seçer."
+    },
+    "limitation": {
+      "en": "Compared deployed recipes differ; this is not weights-only attribution. The equal specialist and blend scores are identical predictions, not independent confirmations.",
+      "tr": "Karşılaştırılan kullanım tarifleri farklıdır; kazanım yalnızca ağırlıklara atfedilemez. Eşit uzman ve karışım skorları aynı tahminlerdir, bağımsız doğrulamalar değildir."
+    },
+    "results": [
+      {
+        "candidateId": "matrixformer",
+        "score": 0.92016
+      },
+      {
+        "candidateId": "matrixformer-recsys",
+        "score": 0.887358
+      },
+      {
+        "candidateId": "matrixformer-plus",
+        "score": 0.887358
+      }
+    ]
+  },
+  {
+    "id": "graphany-overall",
+    "taskIds": [
+      "node-classification"
+    ],
+    "title": "GraphAny · seed-0 released models",
+    "dataset": "GraphAny · 31 graph datasets",
+    "metric": "Mean test accuracy",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2025",
+    "sourceId": "br2-graphany",
+    "locator": "Reproduce commands · saved seed-0 checkpoints",
+    "protocol": {
+      "en": "Same 31-dataset overall evaluation with the released seed-0 meta-models. Target graph features and labeled support nodes are still required.",
+      "tr": "Yayımlanan seed-0 meta-modelleriyle aynı 31 veri kümeli genel değerlendirme. Hedef graf özellikleri ve etiketli destek düğümleri yine gerekir."
+    },
+    "limitation": {
+      "en": "Overall includes the training graph; do not call it wholly out-of-domain. Training graph and model capacity differ, and one seed does not establish statistical significance.",
+      "tr": "Genel ortalama eğitim grafını da içerir; tamamı alan dışı sayılmaz. Eğitim grafı ve model kapasitesi farklıdır; tek tohum istatistiksel anlamlılık oluşturmaz."
+    },
+    "results": [
+      {
+        "candidateId": "graphany-cora",
+        "score": 66.98
+      },
+      {
+        "candidateId": "graphany-arxiv",
+        "score": 67.58
+      },
+      {
+        "candidateId": "graphany-product",
+        "score": 67.77
+      }
+    ]
+  },
+  {
+    "id": "dgl-tox21",
+    "taskIds": [
+      "graph-classification",
+      "molecular-property-prediction"
+    ],
+    "title": "DGL-LifeSci · Tox21",
+    "dataset": "MoleculeNet Tox21 · scaffold test split",
+    "metric": "ROC-AUC",
+    "unit": "score",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": null,
+    "sourceId": "br2-dgl-molecule",
+    "locator": "Tox21 · Test ROC-AUC",
+    "protocol": {
+      "en": "Released pretrained models; scaffold split and 32-trial Bayesian hyperparameter search with selection by validation performance. Matching featurizers and heads are required.",
+      "tr": "Yayımlanan ön eğitimli modeller; iskelet bazlı bölüm ve doğrulama performansıyla seçilen 32 denemeli Bayes hiperparametre araması. Eşleşen özellik çıkarıcılar ve başlıklar gerekir."
+    },
+    "limitation": {
+      "en": "Scores are rounded to two decimals. This is molecular graph toxicity classification across 12 assays, not all graph classification or all molecular properties; no clinical interpretation follows.",
+      "tr": "Skorlar iki ondalığa yuvarlanmıştır. Bu, 12 deneyde molekül grafı toksisite sınıflandırmasıdır; tüm graf sınıflandırma veya moleküler özellikleri kapsamaz; klinik yorum çıkarılamaz."
+    },
+    "results": [
+      {
+        "candidateId": "dgl-gcn-tox21",
+        "score": 0.77
+      },
+      {
+        "candidateId": "dgl-gcn-afp-tox21",
+        "score": 0.79
+      },
+      {
+        "candidateId": "dgl-gin-edge-tox21",
+        "score": 0.8
+      }
+    ]
+  },
+  {
+    "id": "chgnet-mptrj",
+    "taskIds": [
+      "graph-regression"
+    ],
+    "title": "CHGNet · crystal energy",
+    "dataset": "MPtrj test · CHGNet 0.3.0",
+    "metric": "Energy MAE (meV/atom)",
+    "unit": "score",
+    "direction": "lower",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2023",
+    "sourceId": "br2-chgnet",
+    "locator": "MPtrj · Test row / Energy",
+    "protocol": {
+      "en": "The released 0.3.0 crystal-graph potential’s held-out energy error, in meV per atom.",
+      "tr": "Yayımlanan 0.3.0 kristal grafı potansiyelinin ayrılmış testteki enerji hatası; atom başına meV."
+    },
+    "limitation": {
+      "en": "MPtrj-trained 0.3.0 is distinct from the newer MatPES potentials. Energy, force, stress and magnetic-moment errors have different units and cannot be pooled.",
+      "tr": "MPtrj ile eğitilen 0.3.0, daha yeni MatPES potansiyellerinden farklıdır. Enerji, kuvvet, gerilme ve manyetik moment hatalarının birimleri farklıdır; birleştirilemez."
+    },
+    "results": [
+      {
+        "candidateId": "chgnet",
+        "score": 29
+      }
+    ]
+  },
+  {
+    "id": "scan-cifar10-eval",
+    "taskIds": [
+      "clustering"
+    ],
+    "title": "SCAN · CIFAR-10 clustering",
+    "dataset": "CIFAR-10 · ten clusters",
+    "metric": "Clustering accuracy",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2020",
+    "sourceId": "br2-scan",
+    "locator": "Model zoo · CIFAR10 / SCAN",
+    "protocol": {
+      "en": "Published SCAN-loss checkpoint with cluster-to-label evaluation. The separately released self-labeling stage has a different checkpoint.",
+      "tr": "Yayımlanan SCAN-loss ağırlığı ve kümeden etikete değerlendirme. Ayrı yayımlanan self-labeling aşaması farklı ağırlıktır."
+    },
+    "limitation": {
+      "en": "A 2020 image-clustering reference. The self-labeling score 88.3 is not assigned to the SCAN-loss file, and ACC is not label-free internal cluster validity.",
+      "tr": "2020 görüntü kümeleme referansıdır. Self-labeling 88,3 skoru SCAN-loss dosyasına atanmaz; ACC, etiketsiz iç küme geçerliliği değildir."
+    },
+    "results": [
+      {
+        "candidateId": "scan-cifar10",
+        "score": 81.6
+      }
+    ]
+  },
+  {
+    "id": "uva-flow-mnist",
+    "taskIds": [
+      "density-estimation"
+    ],
+    "title": "UvA · MNIST density estimation",
+    "dataset": "MNIST test · discrete pixel likelihood",
+    "metric": "Bits per dimension",
+    "unit": "bits/dim",
+    "direction": "lower",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": null,
+    "sourceId": "br2-uva-flow",
+    "locator": "Recorded notebook output · Model / Test Bpd table",
+    "protocol": {
+      "en": "Released pretrained PyTorch flow checkpoints with the tutorial’s dequantization and test likelihood estimation.",
+      "tr": "Eğitim materyalinin dequantization ve test olabilirlik kestirimiyle yayımlanmış ön eğitimli PyTorch flow ağırlıkları."
+    },
+    "limitation": {
+      "en": "An educational, domain-specific likelihood comparison; parameter counts differ. Not anomaly-detection F1, not cross-dataset density quality, and not a current frontier claim.",
+      "tr": "Öğretici, alana özel olabilirlik karşılaştırması; parametre sayıları farklıdır. Anomali F1’i veya veri kümeleri arası yoğunluk kalitesi değildir; güncel en ileri model iddiası yoktur."
+    },
+    "results": [
+      {
+        "candidateId": "uva-flow-simple",
+        "score": 1.078
+      },
+      {
+        "candidateId": "uva-flow-vardeq",
+        "score": 1.043
+      },
+      {
+        "candidateId": "uva-mnist-flow",
+        "score": 1.02
+      }
+    ]
+  },
+  {
+    "id": "timeradar-zero-shot",
+    "taskIds": [
+      "anomaly-detection"
+    ],
+    "title": "TimeRadar · zero-shot anomaly detection",
+    "dataset": "Eight datasets · SMD/MSL/PSM/SWaT/SMAP/CICIDS/SWAN/Creditcard",
+    "metric": "Mean ROC-AUC",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2026-02",
+    "sourceId": "br2-timeradar-paper",
+    "locator": "Table 1 · Zero-shot / TimeRadar / AUC-R Avg.",
+    "protocol": {
+      "en": "Monash+ pretrained model without target-dataset fine-tuning. Average ROC-AUC across eight multivariate anomaly datasets; not point-adjusted F1.",
+      "tr": "Hedef veri kümesinde ince ayarsız Monash+ ön eğitimli model. Sekiz çok değişkenli anomali veri kümesinde ortalama ROC-AUC; nokta düzeltmeli F1 değildir."
+    },
+    "limitation": {
+      "en": "Publisher evaluation; baseline family names do not fully specify every released checkpoint, so only the identified TimeRadar artifact is scored here. Random inference masks need a seed for reproduction.",
+      "tr": "Yayıncı değerlendirmesidir; taban model aile adları her yayımlanmış ağırlığı tam belirtmediğinden burada yalnızca tanımlanan TimeRadar dosyası puanlanır. Yeniden üretim için rastgele çıkarım maskelerine tohum gerekir."
+    },
+    "results": [
+      {
+        "candidateId": "timeradar",
+        "score": 76.97
+      }
+    ]
+  },
+  {
+    "id": "autocpd-hasc-eval",
+    "taskIds": [
+      "change-point-detection"
+    ],
+    "title": "AutoCPD · HASC window classification",
+    "dataset": "HASC · 28 activity/change classes",
+    "metric": "Test classification accuracy",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "proxy",
+    "provenance": "publisher",
+    "resultDate": "2023-10",
+    "sourceId": "br2-autocpd-paper",
+    "locator": "Supplement · Figures 12–13 / test accuracy 0.9623",
+    "protocol": {
+      "en": "The 21-residual-block HASC classifier underlying the released Demo model is evaluated on segmented activity/change windows.",
+      "tr": "Yayımlanan Demo modelinin temelindeki 21 artık bloklu HASC sınıflandırıcısı, bölümlenmiş etkinlik/değişim pencerelerinde değerlendirilir."
+    },
+    "limitation": {
+      "en": "This is a classifier proxy, not continuous change-point localization F1 or delay. Postprocessing and windowing are needed; simulated-signal results are not assigned to the HASC checkpoint.",
+      "tr": "Bu bir sınıflandırıcı vekil metriğidir; sürekli değişim noktası yerelleştirme F1’i veya gecikmesi değildir. Son işleme ve pencereleme gerekir; benzetim sinyali sonuçları HASC ağırlığına atanmaz."
+    },
+    "results": [
+      {
+        "candidateId": "autocpd-hasc",
+        "score": 96.23
+      }
+    ]
+  },
+  {
+    "id": "blitz-boltz-structure",
+    "taskIds": [
+      "protein-structure-prediction"
+    ],
+    "title": "Blitz · Boltz-2 structure comparison",
+    "dataset": "Boltz benchmark · approximately 2,300 targets",
+    "metric": "Complex lDDT",
+    "unit": "score",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2026-10-16",
+    "sourceId": "br2-blitz-boltz-k16-card",
+    "locator": "Results · Boltz-2 teacher / Blitz K8 / Blitz K16",
+    "protocol": {
+      "en": "Same five-candidate reference-free reranker and target set. NFE counts denoiser evaluations; the teacher uses three recycle updates.",
+      "tr": "Aynı beş adaylı referanssız yeniden sıralayıcı ve hedef kümesi. NFE gürültü giderici değerlendirme sayısıdır; öğretmen üç geri çevrim güncellemesi kullanır."
+    },
+    "limitation": {
+      "en": "K16 improves this point estimate with far fewer denoiser calls, but RF-valid is lower than the teacher. Complex lDDT is structural accuracy, not binding affinity, clinical utility or guaranteed physical validity.",
+      "tr": "K16 çok daha az gürültü giderici çağrısıyla bu nokta tahminini iyileştirir ancak RF-valid öğretmenden düşüktür. Kompleks lDDT yapısal doğruluktur; bağlanma afinitesi, klinik yarar veya fiziksel geçerlilik garantisi değildir."
+    },
+    "results": [
+      {
+        "candidateId": "boltz",
+        "score": 0.8499,
+        "configuration": {
+          "en": "Teacher · 600 NFE",
+          "tr": "Öğretmen · 600 NFE"
+        }
+      },
+      {
+        "candidateId": "blitz-boltz-k8",
+        "score": 0.8492,
+        "configuration": {
+          "en": "Distilled · 8 NFE",
+          "tr": "Damıtılmış · 8 NFE"
+        }
+      },
+      {
+        "candidateId": "blitz-boltz-k16",
+        "score": 0.8533,
+        "configuration": {
+          "en": "Distilled · 16 NFE",
+          "tr": "Damıtılmış · 16 NFE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "eqr-sudoku-full",
+    "taskIds": [
+      "constraint-satisfaction"
+    ],
+    "title": "EqR · full Sudoku evaluation",
+    "dataset": "Sudoku-Extreme · 423,168 evaluated examples",
+    "metric": "Convergence top-k exact accuracy",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": null,
+    "sourceId": "br2-eqr",
+    "locator": "Full paper-scale run · convergence_top_k/exact_accuracy",
+    "protocol": {
+      "en": "Released Sudoku checkpoint; depth 64, breadth 128, convergence top-4 selection, Langevin noise 0.5 and latent reset 1.0.",
+      "tr": "Yayımlanan Sudoku ağırlığı; derinlik 64, genişlik 128, yakınsama top-4 seçimi, Langevin gürültüsü 0,5 ve gizil sıfırlama 1,0."
+    },
+    "limitation": {
+      "en": "Large test-time search budget on one constrained puzzle family. The 2,048-sample smoke run and cumulative any-correct metric are different results, and Sudoku does not imply arbitrary SAT/CSP solving.",
+      "tr": "Tek kısıtlı bulmaca ailesinde büyük test zamanı arama bütçesi. 2.048 örnekli kısa kontrol ve birikimli herhangi-biri-doğru metriği farklı sonuçlardır; Sudoku başarısı genel SAT/CSP çözümü anlamına gelmez."
+    },
+    "results": [
+      {
+        "candidateId": "eqr-sudoku",
+        "score": 99.557
+      }
+    ]
+  },
+  {
+    "id": "hloc-aachen-night",
+    "taskIds": [
+      "robot-localization"
+    ],
+    "title": "hloc · Aachen night camera localization",
+    "dataset": "Aachen Day-Night v1.0 · night",
+    "metric": "Recall at 0.25 m / 2°",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "proxy",
+    "provenance": "independent",
+    "resultDate": "2020-07-19",
+    "sourceId": "br2-hloc-aachen",
+    "locator": "Submission 10931 · night / first threshold",
+    "protocol": {
+      "en": "NetVLAD Pitts-30k top-50 retrieval, 4,096 SuperPoint keypoints, NMS 3, 1,024-pixel images and SuperGlue outdoor. Geometric pose recovery uses the reference map.",
+      "tr": "NetVLAD Pitts-30k top-50 geri getirme, 4.096 SuperPoint anahtar noktası, NMS 3, 1.024 piksellik görüntüler ve SuperGlue outdoor. Geometrik poz çıkarımı referans haritayı kullanır."
+    },
+    "limitation": {
+      "en": "Camera relocalization is a proxy for robot localization. Camera-to-robot calibration, map frame and online tracking are additional requirements; this is not robot trajectory or SLAM drift accuracy.",
+      "tr": "Kamera yeniden konumlandırması robot konumlandırması için vekildir. Kamera–robot kalibrasyonu, harita çerçevesi ve çevrim içi takip ek gereksinimlerdir; robot yörüngesi veya SLAM sürüklenme doğruluğu değildir."
+    },
+    "results": [
+      {
+        "candidateId": "hloc-superglue",
+        "score": 86.7
+      }
+    ]
+  },
+  {
+    "id": "neuralmp-real",
+    "taskIds": [
+      "robot-motion-planning"
+    ],
+    "title": "Neural Motion Planner · real world",
+    "dataset": "48 free-hand tasks · tabletop / shelf / articulated",
+    "metric": "Success rate",
+    "unit": "%",
+    "direction": "higher",
+    "scope": "direct",
+    "provenance": "publisher",
+    "resultDate": "2024-09",
+    "sourceId": "br2-neuralmp-paper",
+    "locator": "Table I · Ours / Avg",
+    "protocol": {
+      "en": "Published physical evaluation with the full planning and vision-based collision-checking pipeline. The provided release supports the test-time optimization mode.",
+      "tr": "Tam planlama ve görüntü tabanlı çarpışma denetimi hattıyla yayımlanmış fiziksel değerlendirme. Sunulan sürüm test zamanı optimizasyonu kipini destekler."
+    },
+    "limitation": {
+      "en": "Without test-time optimization the paper reports 66.67%, not 95.83%. These are the authors’ robot experiments; no robot was operated here and the score is not a safety guarantee.",
+      "tr": "Makale test zamanı optimizasyonu olmadan %95,83 değil %66,67 bildirir. Bunlar yazarların robot deneyleridir; burada robot çalıştırılmadı ve skor güvenlik garantisi değildir."
+    },
+    "results": [
+      {
+        "candidateId": "neuralmp",
+        "score": 95.83,
+        "configuration": {
+          "en": "Policy + test-time optimization",
+          "tr": "Politika + test zamanı optimizasyonu"
+        }
+      }
+    ]
   }
 ];
 
@@ -2132,21 +3973,25 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "candidateIds": [
       "gliner25",
       "gliner25multi",
-      "gliner2"
+      "gliner2",
+      "compact-re05"
     ],
     "summary": {
-      "en": "GLiNER2.5 adds a documented joint entity/relation extraction interface and is a current candidate alongside GLiNER2.",
-      "tr": "GLiNER2.5 belgelenmiş ortak varlık/ilişki çıkarımı sunuyor; GLiNER2 yanında güncel adaydır."
+      "en": "A June 2026 study releases its best small relation-extraction adapter and reports 0.83 General Avg positive-class micro-F1.",
+      "tr": "Haziran 2026 çalışması en iyi küçük ilişki çıkarım adaptörünü yayımlar ve General Avg pozitif sınıf mikro F1 değerini 0,83 olarak bildirir."
     },
     "limitation": {
-      "en": "The release’s NER and classification F1 tables do not measure relation extraction; no exact-checkpoint TACRED/DocRED comparison was verified.",
-      "tr": "Sürümün NER ve sınıflandırma F1 tabloları ilişki çıkarımını ölçmüyor; tam checkpoint’e bağlı TACRED/DocRED karşılaştırması doğrulanamadı."
+      "en": "The result is task-tuned and rounded. ReLiK NYT extraction, GLiNER entity extraction and the seven-dataset general average are not the same protocol.",
+      "tr": "Sonuç göreve ince ayarlıdır ve yuvarlanmıştır. ReLiK NYT çıkarımı, GLiNER varlık çıkarımı ve yedi veri kümeli genel ortalama aynı protokol değildir."
     },
     "sourceIds": [
       "bm-gliner25",
       "bm-card-gliner25",
       "bm-card-gliner25multi",
-      "ow-gliner2"
+      "ow-gliner2",
+      "br2-compact-paper",
+      "br2-compact-re",
+      "br2-compact-re05-card"
     ]
   },
   {
@@ -2174,38 +4019,44 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "taskId": "part-of-speech-tagging",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "stanza"
+      "stanza",
+      "udpipe-ewt"
     ],
     "summary": {
-      "en": "Stanza supplies language/treebank-specific POS weights and a reproducible linguistic pipeline.",
-      "tr": "Stanza dil ve ağaç bankasına özgü POS ağırlıkları ile tekrarlanabilir bir dil işleme hattı sağlar."
+      "en": "The currently listed UDPipe 2.17 English EWT release provides 96.75 UPOS F1 with an identifiable public weight bundle.",
+      "tr": "Listelenen UDPipe 2.17 English EWT sürümü, kimliği belli açık ağırlık paketiyle 96,75 UPOS F1 sunar."
     },
     "limitation": {
-      "en": "Universal Dependencies version, tokenization and treebank must match; the English package is not one universal POS model and has no verified current cross-model table here.",
-      "tr": "Universal Dependencies sürümü, sözcükleme ve ağaç bankası eşleşmeli; İngilizce paket tek bir evrensel POS modeli değil ve burada doğrulanmış güncel ortak tablo yok."
+      "en": "The latest UD treebank release and latest UDPipe model release are separate. Stanza’s older performance table is not assigned to its current package; no cross-version winner is claimed.",
+      "tr": "En yeni UD veri kümesi ile en yeni UDPipe model sürümü ayrıdır. Stanza’nın eski performans tablosu güncel paketine atanmaz; farklı sürümler arasında liderlik iddiası kurulmaz."
     },
     "sourceIds": [
       "ow-stanza",
-      "ow-stanza-docs"
+      "ow-stanza-docs",
+      "br2-stanza-performance",
+      "br2-udpipe"
     ]
   },
   {
     "taskId": "syntactic-parsing",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "stanza"
+      "stanza",
+      "udpipe-ewt"
     ],
     "summary": {
-      "en": "Stanza is a ready parser pipeline when the language, treebank and tokenization contract are fixed.",
-      "tr": "Dil, ağaç bankası ve sözcükleme kuralları sabitlendiğinde Stanza hazır bir ayrıştırıcı işlem hattıdır."
+      "en": "The currently listed UDPipe 2.17 English EWT release provides 89.91 LAS F1 with an identifiable public weight bundle.",
+      "tr": "Listelenen UDPipe 2.17 English EWT sürümü, kimliği belli açık ağırlık paketiyle 89,91 LAS F1 sunar."
     },
     "limitation": {
-      "en": "UAS/LAS with gold tokens and end-to-end raw-text scores are different; no matched current checkpoint comparison was established.",
-      "tr": "Doğru sözcük sınırları verilen UAS/LAS ile ham metinden uçtan uca puan farklıdır; güncel checkpoint’ler için eşleşen karşılaştırma kurulamadı."
+      "en": "The latest UD treebank release and latest UDPipe model release are separate. Stanza’s older performance table is not assigned to its current package; no cross-version winner is claimed.",
+      "tr": "En yeni UD veri kümesi ile en yeni UDPipe model sürümü ayrıdır. Stanza’nın eski performans tablosu güncel paketine atanmaz; farklı sürümler arasında liderlik iddiası kurulmaz."
     },
     "sourceIds": [
       "ow-stanza",
-      "ow-stanza-docs"
+      "ow-stanza-docs",
+      "br2-stanza-performance",
+      "br2-udpipe"
     ]
   },
   {
@@ -2265,20 +4116,25 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "candidateIds": [
       "qwen38",
       "deepseek41",
-      "bart"
+      "bart",
+      "segenc-spans",
+      "segenc-stock"
     ],
     "summary": {
-      "en": "BART CNN/DailyMail remains a reproducible news-summary specialist; current instruction models can also summarize with a suitable prompt.",
-      "tr": "BART CNN/DailyMail tekrarlanabilir bir haber özetleme uzmanıdır; güncel yönerge modelleri de uygun istemle özetleyebilir."
+      "en": "A September 2026 QMSum release supplies exact checkpoints, predictions and one scorer. Span-trained SegEnc scores 36.33 ROUGE-1; the stock-checkpoint port scores 35.30.",
+      "tr": "Eylül 2026 QMSum yayını tam ağırlıkları, tahminleri ve tek puanlayıcıyı sunar. Aralıklarla eğitilmiş SegEnc 36,33 ROUGE-1, özgün ağırlığın aktarımı 35,30 alır."
     },
     "limitation": {
-      "en": "News ROUGE, long-context fidelity and human preference are different targets. No shared current benchmark tied to these exact releases was verified.",
-      "tr": "Haber ROUGE puanı, uzun bağlamda sadakat ve insan tercihi farklı hedeflerdir. Bu tam sürümlere bağlı ortak güncel benchmark doğrulanamadı."
+      "en": "Query-focused English meeting summarization with different input regimes. The result does not establish a generic summarization winner or factuality guarantee.",
+      "tr": "Farklı girdi düzenleriyle sorgu odaklı İngilizce toplantı özetlemesidir. Genel özetleme liderliği veya olgusal doğruluk garantisi oluşturmaz."
     },
     "sourceIds": [
       "ow-qwen38",
       "ow-deepseek41",
-      "ow-bart"
+      "ow-bart",
+      "br2-qmsum",
+      "br2-segenc-spans-card",
+      "br2-segenc-stock-card"
     ]
   },
   {
@@ -2466,19 +4322,23 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "taskId": "query-expansion",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "qwen38"
+      "qwen38",
+      "r1-qwen14"
     ],
     "summary": {
-      "en": "Qwen3.8 can generate expansions, but its benefit must be measured together with the target retriever and corpus.",
-      "tr": "Qwen3.8 sorgu genişletmeleri üretebilir; yararı hedef getirici ve korpusla birlikte ölçülmelidir."
+      "en": "ThinkQE provides a reproducible published system-level reference: 34.9 mean nDCG@10 using an open R1-distilled Qwen-14B generator.",
+      "tr": "ThinkQE, açık R1 damıtılmış Qwen-14B üreticisiyle 34,9 ortalama nDCG@10 bildiren, yeniden üretilebilir yayımlanmış sistem referansı sunar."
     },
     "limitation": {
-      "en": "MQR-A1 reports strong BRIGHT pipeline scores, but the inspected repository revision contains no released weight files. It is excluded from the open-weight ranking; a rewrite score would not isolate expansion anyway.",
-      "tr": "MQR-A1 güçlü BRIGHT işlem hattı puanları bildiriyor; ancak incelenen depo sürümünde yayımlanmış ağırlık dosyası yok. Açık ağırlıklı sıralamaya alınmadı; yeniden yazma puanı da genişletmenin etkisini tek başına ayırmaz."
+      "en": "The retrieval index, iterative feedback, prompt recipe and domain subset are required. The verified v1 table is retained instead of attaching a later Phi-4 headline to unspecified settings.",
+      "tr": "Geri getirme indeksi, yinelemeli geribildirim, istem tarifi ve alan alt kümesi gerekir. Sonraki Phi-4 başlık skoru belirsiz ayarlara atanmak yerine doğrulanmış v1 tablosu korunur."
     },
     "sourceIds": [
       "bm-card-mqr",
-      "ow-qwen38"
+      "ow-qwen38",
+      "br2-thinkqe-code",
+      "br2-thinkqe",
+      "br2-r1-qwen14-card"
     ]
   },
   {
@@ -2488,39 +4348,47 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
       "p5-beauty-small"
     ],
     "summary": {
-      "en": "P5 Beauty Small is a downloadable recommendation checkpoint for the Beauty corpus and its prompt/task conventions.",
-      "tr": "P5 Beauty Small, Beauty korpusu ve onun istem/görev kuralları için indirilebilir bir öneri checkpoint’idir."
+      "en": "The official P5 notebook contains an exact recorded direct-recommendation output: Beauty small, prompt 5-8, NDCG@10 0.1340.",
+      "tr": "Resmî P5 not defterinde tam kayıtlı doğrudan öneri çıktısı var: Beauty small, 5-8 istemi, NDCG@10 0,1340."
     },
     "limitation": {
-      "en": "Top-k results depend on candidate sampling, temporal split, prompt and exact task checkpoint. Paper-wide P5 best scores cannot be assigned to this one artifact.",
-      "tr": "Top-k sonuçları aday örnekleme, zaman bölümü, istem ve tam görev checkpoint’ine bağlıdır. Makaledeki en iyi P5 puanları bu tek dosyaya atanamaz."
+      "en": "A catalogue-specific 2022 reference, not a zero-shot recommendation leaderboard. Candidate construction, user/item IDs and prompt changes alter the metric; modern rating RMSE does not rank top-k recommendations.",
+      "tr": "Kataloğa özel 2022 referansıdır; sıfır örnekli öneri liderlik tablosu değildir. Aday oluşturma, kullanıcı/ürün kimlikleri ve istem değişiklikleri metriği etkiler; güncel puan tahmini RMSE’si top-k öneriyi sıralamaz."
     },
     "sourceIds": [
       "ow-p5-beauty-small",
       "ow-p5-author-release",
       "ow-p5-beauty-evaluation",
-      "ow-p5-beauty-config"
+      "ow-p5-beauty-config",
+      "br2-p5-eval"
     ]
   },
   {
     "taskId": "rating-prediction",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "p5-beauty-small"
+      "p5-beauty-small",
+      "matrixformer",
+      "matrixformer-recsys",
+      "matrixformer-plus"
     ],
     "summary": {
-      "en": "P5 Beauty Small is an executable starting point for corpus-specific rating prediction.",
-      "tr": "P5 Beauty Small korpusa özgü puan tahmini için çalıştırılabilir bir başlangıç noktasıdır."
+      "en": "The current MovieLens 100K comparison favors the recommender specialist over the general MatrixFormer expert. MatrixFormer+ ties because it selects that specialist entirely.",
+      "tr": "Güncel MovieLens 100K karşılaştırmasında öneri uzmanı, genel MatrixFormer uzmanından daha iyi sonuç verir. MatrixFormer+ tamamen bu uzmanı seçtiği için aynı skoru alır."
     },
     "limitation": {
-      "en": "RMSE/MAE require the exact rating prompt and split. Recommendation hit-rate scores are not rating accuracy, and no current matched comparison was verified.",
-      "tr": "RMSE/MAE için tam puanlama istemi ve veri bölümü gerekir. Öneri isabet oranı puan tahmini doğruluğu değildir; güncel eşleşen karşılaştırma doğrulanamadı."
+      "en": "No cross-dataset averaging with P5 Beauty or top-k recommendation. The authors note that conventional MF/SVD/PMF remain stronger on their larger MovieLens datasets.",
+      "tr": "P5 Beauty veya top-k öneriyle veri kümeleri arası ortalama alınmaz. Yazarlar büyük MovieLens veri kümelerinde geleneksel MF/SVD/PMF yöntemlerinin daha güçlü kaldığını belirtir."
     },
     "sourceIds": [
       "ow-p5-beauty-small",
       "ow-p5-author-release",
       "ow-p5-beauty-evaluation",
-      "ow-p5-beauty-config"
+      "ow-p5-beauty-config",
+      "br2-matrixformer",
+      "br2-matrixformer-card",
+      "br2-matrixformer-recsys-card",
+      "br2-matrixformer-plus-card"
     ]
   },
   {
@@ -2530,22 +4398,25 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
       "siglip",
       "mlp-mixer",
       "resnet50-ssl",
-      "jem"
+      "jem",
+      "siglip2-giant"
     ],
     "summary": {
-      "en": "SigLIP 2 is a flexible image-text classifier; supervised ResNet and MLP-Mixer checkpoints are useful fixed-label alternatives.",
-      "tr": "SigLIP 2 esnek bir görüntü-metin sınıflandırıcısıdır; gözetimli ResNet ve MLP-Mixer checkpoint’leri sabit etiketli alternatiflerdir."
+      "en": "SigLIP 2 g-opt/16 scores 85.0 versus 84.1 for So400m/14 on the same published zero-shot ImageNet evaluation.",
+      "tr": "Aynı yayımlanmış sıfır örnekli ImageNet değerlendirmesinde SigLIP 2 g-opt/16, So400m/14 için 84,1 olan skora karşı 85,0 alır."
     },
     "limitation": {
-      "en": "Zero-shot prompt-ensemble accuracy and supervised ImageNet top-1 use different training and label access; no unified rank is assigned.",
-      "tr": "Sıfır örnekli çoklu istem doğruluğu ve gözetimli ImageNet top-1 farklı eğitim ve etiket erişimi kullanır; ortak sıra atanmaz."
+      "en": "A 2025 reference checked in 2026. The larger model’s higher score has a compute cost; no universal image classifier is established.",
+      "tr": "2026’da kontrol edilen 2025 referansıdır. Büyük modelin daha yüksek skoru ek hesaplama maliyeti taşır; evrensel bir görüntü sınıflandırma lideri belirlenmez."
     },
     "sourceIds": [
       "ow-siglip",
       "ow-mlp-mixer",
       "ow-resnet50-ssl",
       "ow-jem",
-      "ow-ssl-method"
+      "ow-ssl-method",
+      "br2-siglip",
+      "br2-siglip2-giant-card"
     ]
   },
   {
@@ -2553,19 +4424,24 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "checkedAt": "2026-10-21",
     "candidateIds": [
       "dino",
-      "sam3"
+      "sam3",
+      "rfdetr-m",
+      "rfdetr-l"
     ],
     "summary": {
-      "en": "Grounding DINO supports open-vocabulary boxes; SAM 3 supports prompted concepts and masks. They serve different detection contracts.",
-      "tr": "Grounding DINO açık sözlüklü kutuları; SAM 3 istemle belirtilen kavram ve maskeleri destekler. Farklı algılama koşullarına yöneliktirler."
+      "en": "RF-DETR Large has higher COCO box AP than Medium, at a larger input resolution and model size.",
+      "tr": "RF-DETR Large, daha büyük girdi çözünürlüğü ve model boyutuyla Medium’dan yüksek COCO kutu AP değerine ulaşır."
     },
     "limitation": {
-      "en": "Closed-label COCO AP, open-vocabulary grounding and prompted segmentation cannot be treated as the same task score; exact matched release evidence is missing.",
-      "tr": "Kapalı etiketli COCO AP, açık sözlüklü grounding ve istemli segmentasyon aynı görev puanı değildir; tam eşleşen sürüm kanıtı eksik."
+      "en": "The official table was rechecked on 2026-10-21 but does not date each measurement. Closed-set COCO detection is distinct from Grounding DINO open-vocabulary prompting.",
+      "tr": "Resmî tablo 2026-10-21’de yeniden kontrol edildi ancak her ölçümün tarihi belirtilmiyor. Kapalı sınıflı COCO algılama, Grounding DINO’nun açık sözlüklü istem kullanımından farklıdır."
     },
     "sourceIds": [
       "ow-dino",
-      "ow-sam3"
+      "ow-sam3",
+      "br2-rfdetr",
+      "br2-rfdetr-m-card",
+      "br2-rfdetr-l-card"
     ]
   },
   {
@@ -2593,18 +4469,23 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "taskId": "instance-segmentation",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "sam3"
+      "sam3",
+      "rfdetr-seg-l",
+      "rfdetr-seg-2xl"
     ],
     "summary": {
-      "en": "SAM 3 offers released promptable instance masks and concept segmentation.",
-      "tr": "SAM 3 yayımlanmış istemli nesne maskeleri ve kavram segmentasyonu sunar."
+      "en": "RF-DETR Seg 2XL leads the selected released COCO models with 49.9 mask AP; Seg Large has 47.1.",
+      "tr": "Seçili yayımlanmış COCO modellerinde RF-DETR Seg 2XL, 49,9 maske AP ile öndedir; Seg Large 47,1 alır."
     },
     "limitation": {
-      "en": "Prompted mask quality, concept recall and closed-set COCO instance AP are different measurements; no same-protocol current comparison was verified.",
-      "tr": "İstemli maske kalitesi, kavram yakalama oranı ve kapalı kümeli COCO nesne AP farklı ölçümlerdir; aynı protokolde güncel karşılaştırma doğrulanamadı."
+      "en": "Native resolutions differ and no matched-compute claim is made. The publisher’s current table has no per-result date.",
+      "tr": "Doğal çözünürlükler farklıdır; eşit hesaplama bütçesi iddiası yoktur. Yayıncının güncel tablosunda sonuç başına tarih bulunmaz."
     },
     "sourceIds": [
-      "ow-sam3"
+      "ow-sam3",
+      "br2-rfdetr",
+      "br2-rfdetr-seg-l-card",
+      "br2-rfdetr-seg-2xl-card"
     ]
   },
   {
@@ -2656,18 +4537,21 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "taskId": "video-classification",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "videomae"
+      "videomae",
+      "videomaev2-s",
+      "videomaev2-b"
     ],
     "summary": {
-      "en": "VideoMAE large is a released Kinetics-400 action classifier with task-specific fine-tuning.",
-      "tr": "VideoMAE large, göreve özgü ince ayarlı ve yayımlanmış bir Kinetics-400 eylem sınıflandırıcısıdır."
+      "en": "The exact MMAction2 VideoMAE V2 Base artifact reaches 86.6 top-1 versus 83.6 for Small with the same clip/crop protocol.",
+      "tr": "Tam MMAction2 VideoMAE V2 Base dosyası, aynı klip/kırpma protokolünde Small’un 83,6 skoruna karşı 86,6 top-1 alır."
     },
     "limitation": {
-      "en": "HF conversion and original model-zoo scores differ; frames, test views and checkpoint identity must be reconciled before ranking current video encoders.",
-      "tr": "HF dönüşümü ile özgün model koleksiyonu puanları farklı; güncel video kodlayıcılarını sıralamadan önce kareler, test görünümleri ve checkpoint kimliği eşleştirilmeli."
+      "en": "A 2023 action-recognition reference. Generic video chat or temporal-reasoning scores are not interchangeable with K400 classification.",
+      "tr": "2023 eylem tanıma referansıdır. Genel video sohbeti veya zamansal akıl yürütme skorları K400 sınıflandırmasının yerine geçmez."
     },
     "sourceIds": [
-      "ow-videomae"
+      "ow-videomae",
+      "br2-videomaev2"
     ]
   },
   {
@@ -2697,18 +4581,22 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "taskId": "image-captioning",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "qwen38"
+      "qwen38",
+      "florence-base-ft",
+      "florence-large-ft"
     ],
     "summary": {
-      "en": "Qwen3.8 can describe images through its documented visual-language interface.",
-      "tr": "Qwen3.8 belgelenmiş görsel-dil arayüzüyle görüntü açıklaması üretebilir."
+      "en": "The released Florence-2 large-ft checkpoint scores 143.3 CIDEr versus 140.0 for base-ft under the same fine-tuned COCO protocol.",
+      "tr": "Yayımlanmış Florence-2 large-ft ağırlıkları aynı ince ayarlı COCO protokolünde base-ft’nin 140,0 skoruna karşı 143,3 CIDEr alır."
     },
     "limitation": {
-      "en": "RealWorldQA and OmniDocBench do not measure caption quality. A matched CIDEr/SPICE or human-preference caption test was not verified for these releases.",
-      "tr": "RealWorldQA ve OmniDocBench açıklama kalitesini ölçmez. Bu sürümler için eşleşen CIDEr/SPICE veya insan tercihli açıklama testi doğrulanamadı."
+      "en": "This is a dated 2024 captioning reference, not proof against every 2026 VLM. General visual-QA scores do not substitute for caption evaluation.",
+      "tr": "Bu, 2024 tarihli açıklama üretim referansıdır; tüm 2026 VLM’lerine karşı kanıt değildir. Genel görsel soru-cevap skorları açıklama değerlendirmesi yerine geçmez."
     },
     "sourceIds": [
-      "ow-qwen38"
+      "ow-qwen38",
+      "br2-florence-base-ft-card",
+      "br2-florence-large-ft-card"
     ]
   },
   {
@@ -2736,18 +4624,22 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "taskId": "document-question-answering",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "qwen38"
+      "qwen38",
+      "qwen2vl72",
+      "qwen25vl72"
     ],
     "summary": {
-      "en": "Qwen3.8 supports document-image input and is a current multimodal candidate.",
-      "tr": "Qwen3.8 belge görüntüsü girdisini destekler ve güncel çok modlu adaydır."
+      "en": "Qwen2.5-VL-72B has a small published DocVQA advantage over Qwen2-VL-72B: 96.4 versus 96.1 ANLS.",
+      "tr": "Qwen2.5-VL-72B’nin Qwen2-VL-72B’ye göre yayımlanmış DocVQA üstünlüğü küçüktür: 96,4’e karşı 96,1 ANLS."
     },
     "limitation": {
-      "en": "OmniDocBench measures parsing, not question-answering ANLS. No exact current DocVQA/InfographicVQA comparison was verified; parsing scores are deliberately not reused.",
-      "tr": "OmniDocBench ayrıştırmayı ölçer, soru yanıtlama ANLS’yi değil. Güncel tam DocVQA/InfographicVQA karşılaştırması doğrulanamadı; ayrıştırma puanları yeniden kullanılmıyor."
+      "en": "A 2025 validation-set comparison. Newer OCR or document parsing results are different tasks and do not establish a 2026 DocVQA winner.",
+      "tr": "2025 doğrulama kümesi karşılaştırmasıdır. Daha yeni OCR veya belge ayrıştırma sonuçları farklı görevlerdir ve 2026 DocVQA lideri belirlemez."
     },
     "sourceIds": [
-      "ow-qwen38"
+      "ow-qwen38",
+      "br2-qwen25vl72-card",
+      "br2-qwen2vl72-card"
     ]
   },
   {
@@ -2830,19 +4722,24 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "checkedAt": "2026-10-21",
     "candidateIds": [
       "ltx23",
-      "wan"
+      "wan",
+      "wan22-t2v",
+      "wan21-t2v14"
     ],
     "summary": {
-      "en": "LTX-2.3 adds a released 22B video/audio generator alongside Wan2.2 TI2V-5B; hardware and output requirements differ.",
-      "tr": "LTX-2.3, Wan2.2 TI2V-5B yanına yayımlanmış 22B video/ses üreticisi ekliyor; donanım ve çıktı gereksinimleri farklı."
+      "en": "The current VBench Gold rows support a bounded comparison of released Wan checkpoints. Wan2.2 with Qwen prompt optimization scores 84.23; the earlier Wan2.1-T2V-14B system scores 83.69.",
+      "tr": "Güncel VBench Gold satırları yayımlanmış Wan ağırlıkları arasında sınırlı bir karşılaştırma sağlar. Qwen istem iyileştirmeli Wan2.2 84,23; önceki Wan2.1-T2V-14B sistemi 83,69 alır."
     },
     "limitation": {
-      "en": "The inspected LTX card gives no matched VBench score. Wan A14B results cannot be assigned to TI2V-5B; no numeric winner is declared.",
-      "tr": "İncelenen LTX kartı eşleşen VBench puanı vermiyor. Wan A14B sonuçları TI2V-5B’ye atanamaz; sayısal lider ilan edilmez."
+      "en": "The benefit depends on the full sampling pipeline: unoptimized Wan2.2 scores 82.61. Neither LTX-2 results nor closed Wan APIs are assigned to LTX-2.3 or open Wan weights.",
+      "tr": "Fayda tüm örnekleme hattına bağlıdır: iyileştirmesiz Wan2.2 82,61 alır. LTX-2 sonuçları LTX-2.3’e, kapalı Wan API sonuçları açık Wan ağırlıklarına aktarılmaz."
     },
     "sourceIds": [
       "bm-card-ltx23",
-      "ow-wan"
+      "ow-wan",
+      "br2-vbench-live",
+      "br2-wan22-t2v-card",
+      "br2-wan21-t2v14-card"
     ]
   },
   {
@@ -2850,19 +4747,22 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "checkedAt": "2026-10-21",
     "candidateIds": [
       "ltx23",
-      "wan"
+      "wan",
+      "wan22-i2v"
     ],
     "summary": {
-      "en": "LTX-2.3 and Wan2.2 TI2V-5B both provide released image-conditioned video generation paths.",
-      "tr": "LTX-2.3 ve Wan2.2 TI2V-5B yayımlanmış görüntü koşullu video üretim yolları sağlar."
+      "en": "Wan2.2-TI2V-5B slightly leads the selected Qwen-prompt-optimized I2V systems on the VBench total score, 88.80 versus 88.68.",
+      "tr": "Wan2.2-TI2V-5B, seçili Qwen istem iyileştirmeli I2V sistemlerinde VBench toplam skoruyla az farkla öndedir: 88,80’e karşı 88,68."
     },
     "limitation": {
-      "en": "T2V scores do not measure first-frame consistency or motion following in I2V. No matched I2V benchmark for these exact variants was verified.",
-      "tr": "T2V puanları I2V ilk kare tutarlılığını veya hareket takibini ölçmez. Bu tam sürümler için eşleşen I2V benchmark’ı doğrulanamadı."
+      "en": "This is a 2026 independent leaderboard result for named releases, not a universal quality or speed ranking. The margin is small and no uncertainty interval is supplied.",
+      "tr": "Adı belirtilen sürümler için 2026 bağımsız tablo sonucudur; evrensel kalite veya hız sıralaması değildir. Fark küçüktür ve belirsizlik aralığı verilmemiştir."
     },
     "sourceIds": [
       "bm-card-ltx23",
-      "ow-wan"
+      "ow-wan",
+      "br2-vbench-live",
+      "br2-wan22-i2v-card"
     ]
   },
   {
@@ -2872,15 +4772,17 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
       "shape"
     ],
     "summary": {
-      "en": "Shap-E remains a verifiable released text-to-implicit-3D checkpoint.",
-      "tr": "Shap-E doğrulanabilir, yayımlanmış bir metinden örtük 3B temsile üretim checkpoint’idir."
+      "en": "The original text-only Shap-E release has a published 40.9 CLIP R-Precision result.",
+      "tr": "Özgün yalnızca metin koşullu Shap-E sürümü için yayımlanmış 40,9 CLIP R-Precision sonucu bulundu."
     },
     "limitation": {
-      "en": "Many newer 3D releases are image-to-3D or generate CAD/Blender code. Their geometry, texture and code-success scores do not provide a matched text-to-3D ranking here.",
-      "tr": "Birçok yeni 3B sürüm görüntüden 3B üretir veya CAD/Blender kodu üretir. Geometri, doku ve kod başarısı puanları burada eşleşen metinden 3B sıralaması sağlamaz."
+      "en": "Newer HY3D-Bench and Hunyuan3D results often evaluate image-to-3D. Without a specified text-to-image front end they do not form a direct replacement comparison; this remains a historical single-model reference.",
+      "tr": "Daha yeni HY3D-Bench ve Hunyuan3D sonuçları çoğunlukla görüntüden 3B üretimi değerlendirir. Belirtilmiş bir metinden görüntü ön aşaması olmadan doğrudan karşılaştırma oluşturmazlar; bu, tek model için tarihsel referans olarak kalır."
     },
     "sourceIds": [
-      "ow-shape"
+      "ow-shape",
+      "br2-hy3d-bench",
+      "br2-shape-paper"
     ]
   },
   {
@@ -2912,18 +4814,22 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "taskId": "speech-translation",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "seamless"
+      "seamless",
+      "seamless-v1"
     ],
     "summary": {
-      "en": "SeamlessM4T v2 large is a released specialist for speech-to-text and speech-to-speech translation.",
-      "tr": "SeamlessM4T v2 large konuşmadan metne ve konuşmadan konuşmaya çeviri için yayımlanmış uzman modeldir."
+      "en": "Official per-language CSVs show SeamlessM4T v2 Large improving Turkish-to-English speech translation BLEU from 25.81 to 30.74.",
+      "tr": "Resmî dil bazlı CSV’ler, SeamlessM4T v2 Large’ın Türkçeden İngilizceye konuşma çevirisi BLEU değerini 25,81’den 30,74’e çıkardığını gösterir."
     },
     "limitation": {
-      "en": "ASR WER and text-only Hy-MT COMET cannot rank speech translation; language direction, transcription pipeline and BLEU/ASR-BLEU protocol must match.",
-      "tr": "ASR WER ve yalnız metinli Hy-MT COMET konuşma çevirisini sıralayamaz; dil yönü, transkripsiyon hattı ve BLEU/ASR-BLEU protokolü eşleşmeli."
+      "en": "This is a 2023 paired-release reference for Turkish speech to English text. Recognition WER, translated speech quality and other language directions remain separate.",
+      "tr": "Türkçe konuşmadan İngilizce metne 2023 sürüm karşılaştırmasıdır. Tanıma WER’i, çevrilmiş ses kalitesi ve diğer dil yönleri ayrı tutulur."
     },
     "sourceIds": [
-      "ow-seamless"
+      "ow-seamless",
+      "br2-seamless-v1-metrics",
+      "br2-seamless-v2-metrics",
+      "br2-seamless-v1-card"
     ]
   },
   {
@@ -2989,19 +4895,23 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "checkedAt": "2026-10-21",
     "candidateIds": [
       "redimnet",
-      "ecapa"
+      "ecapa",
+      "sid-hubert",
+      "sid-wav2vec"
     ],
     "summary": {
-      "en": "ECAPA and ReDimNet2+ embeddings can support enrolled-speaker identification with an explicit enrollment and scoring layer.",
-      "tr": "ECAPA ve ReDimNet2+ gömmeleri açık bir kayıt ve puanlama katmanıyla kayıtlı konuşmacı tanımayı destekleyebilir."
+      "en": "The exact SUPERB Transformers heads give HuBERT Base 80.71% and wav2vec 2.0 Base 75.18% speaker-identification accuracy.",
+      "tr": "Tam SUPERB Transformers başlıkları konuşmacı kimliğinde HuBERT Base için %80,71, wav2vec 2.0 Base için %75,18 doğruluk verir."
     },
     "limitation": {
-      "en": "Verification EER measures same/different pairs, not closed-set identification accuracy or unknown-speaker rejection. No matching identification benchmark was verified.",
-      "tr": "Doğrulama EER’si aynı/farklı çiftlerini ölçer; kapalı küme kimlik doğruluğunu veya bilinmeyen konuşmacı reddini değil. Eşleşen kimlik benchmark’ı doğrulanamadı."
+      "en": "A historical closed-set identification comparison. Modern verification embeddings, diarization DER and identification accuracy answer different questions.",
+      "tr": "Tarihsel kapalı küme kimlik karşılaştırmasıdır. Modern doğrulama gömmeleri, diarization DER ve kimlik doğruluğu farklı sorulara yanıt verir."
     },
     "sourceIds": [
       "bm-card-redimnet",
-      "ow-ecapa"
+      "ow-ecapa",
+      "br2-sid-wav2vec-card",
+      "br2-sid-hubert-card"
     ]
   },
   {
@@ -3113,40 +5023,51 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "checkedAt": "2026-10-21",
     "candidateIds": [
       "voice",
-      "knnvc"
+      "knnvc",
+      "seedvc-2024"
     ],
     "summary": {
-      "en": "Seed-VC v2 and kNN-VC provide released conversion pipelines with different generation and retrieval approaches.",
-      "tr": "Seed-VC v2 ve kNN-VC farklı üretim ve getirme yaklaşımlarıyla yayımlanmış dönüştürme hatları sağlar."
+      "en": "The older evaluation can be tied to its exact Whisper-small checkpoint through the historical evaluation code, giving 11.99 WER.",
+      "tr": "Eski değerlendirme tarihsel kod üzerinden tam Whisper-small ağırlığıyla eşleştirilebiliyor; WER değeri 11,99."
     },
     "limitation": {
-      "en": "Source/target speakers, reference duration, vocoder and speaker-similarity evaluator must match; no shared current table for these artifacts was verified.",
-      "tr": "Kaynak/hedef konuşmacılar, referans süresi, vokoder ve konuşmacı benzerliği ölçücüsü eşleşmeli; bu dosyalar için ortak güncel tablo doğrulanamadı."
+      "en": "Current Seed-VC v2 is kept separate. OpenVoice/CosyVoice rows lack equally precise release configuration in this table, so they are not ranked as exact checkpoint peers.",
+      "tr": "Güncel Seed-VC v2 ayrı tutulur. Bu tablodaki OpenVoice/CosyVoice satırlarında aynı kesinlikte sürüm ayarı bulunmadığından tam ağırlık eşleri olarak sıralanmazlar."
     },
     "sourceIds": [
       "ow-voice",
       "ow-knnvc",
       "ow-seed-docs",
       "ow-knnvc-loader",
-      "ow-knnvc-paper"
+      "ow-knnvc-paper",
+      "br2-seed-eval-code",
+      "br2-seed-eval"
     ]
   },
   {
     "taskId": "text-to-audio-generation",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "audiogen"
+      "audiogen",
+      "tangoflux",
+      "tango2",
+      "audioldm2-l"
     ],
     "summary": {
-      "en": "AudioGen medium is a released environmental-sound generation checkpoint with a defined audio tokenizer and sampling pipeline.",
-      "tr": "AudioGen medium belirli bir ses tokenizer’ı ve örnekleme hattıyla yayımlanmış çevresel ses üretim checkpoint’idir."
+      "en": "TangoFlux has the lowest OpenL3 FD and highest CLAP score among the three verified releases in the common AudioCaps comparison.",
+      "tr": "Ortak AudioCaps karşılaştırmasındaki üç doğrulanmış sürüm arasında TangoFlux en düşük OpenL3 FD ve en yüksek CLAP skoruna sahiptir."
     },
     "limitation": {
-      "en": "FAD depends on embedding model, reference audio, duration and sampling count. Incompatible newer FAD or TTS scores are not used to declare a winner.",
-      "tr": "FAD gömme modeline, referans sese, süreye ve örnek sayısına bağlıdır. Uyumsuz yeni FAD veya TTS puanları lider ilan etmek için kullanılmaz."
+      "en": "This result uses different durations/step counts and does not dominate every metric. Read the noncommercial and dataset-related license conditions before deployment.",
+      "tr": "Sonuç farklı süre/adım sayıları kullanır ve her metrikte üstün değildir. Kullanımdan önce ticari olmayan kullanım ve veri kümesiyle ilişkili lisans koşulları okunmalıdır."
     },
     "sourceIds": [
-      "ow-audiogen"
+      "ow-audiogen",
+      "br2-tangoflux-paper",
+      "br2-tangoflux",
+      "br2-tangoflux-card",
+      "br2-tango2-card",
+      "br2-audioldm2-l-card"
     ]
   },
   {
@@ -3157,16 +5078,17 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
       "musicgen"
     ],
     "summary": {
-      "en": "ACE-Step 1.5 offers newer text/lyric-controlled music generation; MusicGen large is a documented text-conditioned baseline.",
-      "tr": "ACE-Step 1.5 daha yeni metin/şarkı sözü kontrollü müzik üretimi sunar; MusicGen large belgelenmiş metin koşullu referanstır."
+      "en": "ACE-Step 1.5 has a numerical 2026 paper result: SongEval musicality 4.67 for the specified 1.7B LM plus distilled DiT pipeline.",
+      "tr": "ACE-Step 1.5 için sayısal 2026 makale sonucu bulundu: belirtilen 1,7B LM ve damıtılmış DiT hattında SongEval müzikalite 4,67."
     },
     "limitation": {
-      "en": "The ACE card’s qualitative quality labels are not numerical benchmarks. Vocal/song and instrumental tests, FAD encoders and conditioning differ; no matched rank is available.",
-      "tr": "ACE kartının nitel kalite etiketleri sayısal benchmark değildir. Vokalli/şarkı ve enstrümantal testler, FAD kodlayıcıları ve koşullandırma farklı; eşleşen sıra yok."
+      "en": "This is one identifiable system configuration. A family-level MusicGen or Yue label is insufficient for a fair head-to-head rank, and these automatic scores do not establish human musical preference.",
+      "tr": "Bu, tanımlanabilir tek sistem ayarıdır. Yalnızca MusicGen veya Yue aile adı adil karşılaştırma için yetersizdir; otomatik skorlar insan müzik tercihini belirlemez."
     },
     "sourceIds": [
       "ow-ace",
-      "ow-musicgen"
+      "ow-musicgen",
+      "br2-ace15-paper"
     ]
   },
   {
@@ -3199,19 +5121,24 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "checkedAt": "2026-10-21",
     "candidateIds": [
       "coder",
-      "codet5plus"
+      "codet5plus",
+      "qwen25coder32base",
+      "deepseekv3base"
     ],
     "summary": {
-      "en": "CodeT5+ 770M supports a released code-generation/completion interface; Qwen3-Coder-Next is a newer coding candidate.",
-      "tr": "CodeT5+ 770M yayımlanmış kod üretimi/tamamlama arayüzü sunar; Qwen3-Coder-Next daha yeni kodlama adayıdır."
+      "en": "In the 2026 SAFIM evaluation, DeepSeek-V3 Base has higher native-FIM mean pass@1 than Qwen2.5-Coder-32B: 79.6 versus 70.0.",
+      "tr": "2026 SAFIM değerlendirmesinde DeepSeek-V3 Base, doğal FIM ortalama pass@1 değerinde Qwen2.5-Coder-32B’den yüksektir: 79,6’ya karşı 70,0."
     },
     "limitation": {
-      "en": "Repository agent benchmarks do not measure fill-in-the-middle completion, edit latency or keystroke savings; no matched completion result was verified.",
-      "tr": "Depo ajanı benchmark’ları arayı doldurma tamamlamasını, düzenleme gecikmesini veya tuş tasarrufunu ölçmez; eşleşen tamamlama sonucu doğrulanamadı."
+      "en": "This compares released base models with their FIM protocol. It does not transfer SRI-Coder training gains to Qwen3-Coder-Next or claim that completion and repository repair are interchangeable.",
+      "tr": "Yayımlanmış taban modeller FIM protokolüyle karşılaştırılır. SRI-Coder eğitim kazanımları Qwen3-Coder-Next’e aktarılmaz; tamamlama ve depo onarımı eşdeğer sayılmaz."
     },
     "sourceIds": [
       "ow-coder",
-      "ow-codet5plus"
+      "ow-codet5plus",
+      "br2-sri-paper",
+      "br2-qwen25coder32base-card",
+      "br2-deepseekv3base-card"
     ]
   },
   {
@@ -3241,18 +5168,24 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "taskId": "code-translation",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "codet5"
+      "codet5",
+      "ct-java-cs",
+      "ct-cs-java"
     ],
     "summary": {
-      "en": "CodeT5 is a released starting backbone for translation between programming languages.",
-      "tr": "CodeT5 programlama dilleri arası çeviri için yayımlanmış bir başlangıç omurgasıdır."
+      "en": "Both translation directions now have exact fine-tuned CodeT5 releases and published BLEU-4 results.",
+      "tr": "Her iki çeviri yönü için de göreve özel CodeT5 sürümleri ve yayımlanmış BLEU-4 sonuçları bulundu."
     },
     "limitation": {
-      "en": "The base checkpoint is not the paper’s translation-fine-tuned checkpoint. CodeXGLUE BLEU without exact task weights and execution tests cannot justify a current winner.",
-      "tr": "Taban checkpoint makalenin çeviri için ince ayarlanmış checkpoint’i değildir. Tam görev ağırlıkları ve çalıştırma testleri olmadan CodeXGLUE BLEU güncel lideri doğrulamaz."
+      "en": "These are 2021 task-specific references. General CodeT5 pretraining weights and modern coding-agent scores cannot replace these trained heads or test protocols.",
+      "tr": "Bunlar 2021 görev ağırlıklarına ait referanslardır. Genel CodeT5 ön eğitim ağırlıkları ve modern kod ajanı skorları, eğitilmiş bu başlıkların veya test protokollerinin yerine geçmez."
     },
     "sourceIds": [
-      "ow-codet5"
+      "ow-codet5",
+      "br2-codet5-release",
+      "br2-codet5-paper",
+      "br2-ct-cs-java-card",
+      "br2-ct-java-cs-card"
     ]
   },
   {
@@ -3282,19 +5215,25 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "checkedAt": "2026-10-21",
     "candidateIds": [
       "coder",
-      "codet5"
+      "codet5",
+      "ct-sum-py",
+      "ct-multi-sum"
     ],
     "summary": {
-      "en": "CodeT5 can be fine-tuned for code-to-text summaries; current coding LLMs also accept summarization prompts.",
-      "tr": "CodeT5 koddan metne özetler için ince ayarlanabilir; güncel kodlama LLM’leri de özetleme istemi alabilir."
+      "en": "The released multi-sum checkpoint scores 20.42 Python BLEU-4 versus 20.01 for the Python-specific CodeT5 checkpoint.",
+      "tr": "Yayımlanan multi-sum ağırlığı Python BLEU-4’te 20,42; Python’a özel CodeT5 ağırlığı 20,01 alır."
     },
     "limitation": {
-      "en": "Code generation pass@1 is not summary quality. The exact released summarization head and language-specific CodeSearchNet evaluation were not verified for a current comparison.",
-      "tr": "Kod üretimi pass@1 özet kalitesi değildir. Güncel karşılaştırma için yayımlanmış tam özetleme başlığı ve dile özgü CodeSearchNet değerlendirmesi doğrulanamadı."
+      "en": "These are 2021 task-specific references. General CodeT5 pretraining weights and modern coding-agent scores cannot replace these trained heads or test protocols.",
+      "tr": "Bunlar 2021 görev ağırlıklarına ait referanslardır. Genel CodeT5 ön eğitim ağırlıkları ve modern kod ajanı skorları, eğitilmiş bu başlıkların veya test protokollerinin yerine geçmez."
     },
     "sourceIds": [
       "ow-coder",
-      "ow-codet5"
+      "ow-codet5",
+      "br2-codet5-release",
+      "br2-codet5-paper",
+      "br2-ct-multi-sum-card",
+      "br2-ct-sum-py-card"
     ]
   },
   {
@@ -3324,36 +5263,44 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "taskId": "code-clone-detection",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "codet5"
+      "codet5",
+      "ct-clone"
     ],
     "summary": {
-      "en": "CodeT5 is a transferable backbone, but the catalogue’s base release is not a ready BigCloneBench classifier.",
-      "tr": "CodeT5 aktarılabilir omurgadır; ancak katalogdaki taban sürüm hazır BigCloneBench sınıflandırıcısı değildir."
+      "en": "The released task-specific CodeT5 checkpoint has a traceable 97.2 Binary F1 result. It is a historical baseline, not a current winner.",
+      "tr": "Yayımlanan göreve özel CodeT5 ağırlıkları için izlenebilir 97,2 Binary F1 sonucu bulundu. Güncel lider değil, tarihsel referanstır."
     },
     "limitation": {
-      "en": "Clone F1 depends on negative-pair construction, split leakage and a trained classification head; paper task scores are not assigned to base weights.",
-      "tr": "Klon F1 negatif çift üretimine, bölümler arası sızıntıya ve eğitilmiş sınıflandırma başlığına bağlıdır; makalenin görev puanları taban ağırlıklara atanmaz."
+      "en": "These are 2021 task-specific references. General CodeT5 pretraining weights and modern coding-agent scores cannot replace these trained heads or test protocols.",
+      "tr": "Bunlar 2021 görev ağırlıklarına ait referanslardır. Genel CodeT5 ön eğitim ağırlıkları ve modern kod ajanı skorları, eğitilmiş bu başlıkların veya test protokollerinin yerine geçmez."
     },
     "sourceIds": [
-      "ow-codet5"
+      "ow-codet5",
+      "br2-codet5-release",
+      "br2-codet5-paper",
+      "br2-ct-clone-card"
     ]
   },
   {
     "taskId": "defect-detection",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "codet5"
+      "codet5",
+      "ct-defect"
     ],
     "summary": {
-      "en": "CodeT5 can initialize a defect classifier; a supervised defect head and a defined vulnerability/bug target are still needed.",
-      "tr": "CodeT5 hata sınıflandırıcısını başlatabilir; gözetimli hata başlığı ve tanımlı güvenlik açığı/hata hedefi gerekir."
+      "en": "The released task-specific CodeT5 checkpoint has a traceable 65.78 Accuracy result. It is a historical baseline, not a current winner.",
+      "tr": "Yayımlanan göreve özel CodeT5 ağırlıkları için izlenebilir 65,78 Accuracy sonucu bulundu. Güncel lider değil, tarihsel referanstır."
     },
     "limitation": {
-      "en": "Code repair success and Devign/BigVul classification are different tasks. No exact current released defect checkpoint comparison was verified.",
-      "tr": "Kod onarım başarısı ile Devign/BigVul sınıflandırması farklı görevlerdir. Güncel yayımlanmış tam hata checkpoint’i karşılaştırması doğrulanamadı."
+      "en": "These are 2021 task-specific references. General CodeT5 pretraining weights and modern coding-agent scores cannot replace these trained heads or test protocols.",
+      "tr": "Bunlar 2021 görev ağırlıklarına ait referanslardır. Genel CodeT5 ön eğitim ağırlıkları ve modern kod ajanı skorları, eğitilmiş bu başlıkların veya test protokollerinin yerine geçmez."
     },
     "sourceIds": [
-      "ow-codet5"
+      "ow-codet5",
+      "br2-codet5-release",
+      "br2-codet5-paper",
+      "br2-ct-defect-card"
     ]
   },
   {
@@ -3431,17 +5378,18 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
       "scan-cifar10"
     ],
     "summary": {
-      "en": "SCAN CIFAR-10 is an exact released clustering head; its labels are learned from a fixed image domain.",
-      "tr": "SCAN CIFAR-10 belirli görüntü alanından öğrenilmiş etiketlerle yayımlanmış tam kümeleme başlığıdır."
+      "en": "The SCAN model zoo links the existing SCAN-loss file to 81.6 clustering accuracy on CIFAR-10.",
+      "tr": "SCAN model tablosu, mevcut SCAN-loss dosyasını CIFAR-10 üzerinde 81,6 kümeleme doğruluğuna bağlar."
     },
     "limitation": {
-      "en": "SCAN-loss and subsequent self-labeling checkpoints are different. Their CIFAR scores cannot rank arbitrary-text or tabular clustering, or be interchanged.",
-      "tr": "SCAN-loss ve sonraki öz etiketleme checkpoint’leri farklıdır. CIFAR puanları rastgele metin veya tablosal kümelemeyi sıralayamaz ve birbirine atanamaz."
+      "en": "Its ten-cluster image domain and 2020 evaluation cannot rank arbitrary tabular clustering. The higher self-labeling result belongs to a different trained stage.",
+      "tr": "On kümeli görüntü alanı ve 2020 değerlendirmesi, genel tablo kümelemeyi sıralayamaz. Daha yüksek self-labeling sonucu başka eğitilmiş aşamaya aittir."
     },
     "sourceIds": [
       "ow-scan-cifar10",
       "ow-scan-cifar10-weights",
-      "ow-scan-license"
+      "ow-scan-license",
+      "br2-scan"
     ]
   },
   {
@@ -3451,17 +5399,18 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
       "uva-autoencoder128"
     ],
     "summary": {
-      "en": "The released UvA autoencoder provides a concrete CIFAR-10 128-dimensional latent representation.",
-      "tr": "Yayımlanmış UvA oto-kodlayıcı somut CIFAR-10 128 boyutlu gizil temsil sağlar."
+      "en": "A pretrained 128D CIFAR-10 encoder exists. The tutorial evaluates 64/128/256/384D reconstructions, but the inspected notebook retains a plotted curve rather than an exact numeric test-loss table tied to the 128D artifact.",
+      "tr": "Ön eğitimli 128D CIFAR-10 kodlayıcısı var. Eğitim materyali 64/128/256/384D yeniden kurmaları değerlendiriyor; ancak incelenen not defterinde 128D dosyasına bağlı tam sayısal test kaybı tablosu yerine çizilmiş eğri bulunuyor."
     },
     "limitation": {
-      "en": "Reconstruction distortion, neighborhood preservation and downstream classification measure different goals; no universal pretrained reduction model or common current rank was established.",
-      "tr": "Yeniden yapılandırma hatası, komşuluk koruma ve sonraki sınıflandırma farklı hedefleri ölçer; evrensel ön eğitimli indirgeme modeli veya ortak güncel sıra kurulamadı."
+      "en": "No number is digitized or guessed from that plot. Different bottleneck dimensions trade compression against reconstruction, while embedding retrieval benchmarks evaluate another objective. A common numeric protocol and artifact-linked outputs are still needed.",
+      "tr": "Grafikten sayı okunup tahmin edilmedi. Farklı darboğaz boyutları sıkıştırma ile yeniden kurma arasında tercih yaratır; gömme geri getirme benchmark’ları başka amaç ölçer. Ortak sayısal protokol ve dosyaya bağlı çıktılar hâlâ gerekiyor."
     },
     "sourceIds": [
       "ow-uva-saved-models",
       "ow-uva-autoencoder-method",
-      "ow-uva-autoencoder128-weights"
+      "ow-uva-autoencoder128-weights",
+      "br2-uva-ae"
     ]
   },
   {
@@ -3469,21 +5418,24 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "checkedAt": "2026-10-21",
     "candidateIds": [
       "jem",
-      "uva-mnist-flow"
+      "uva-mnist-flow",
+      "uva-flow-simple",
+      "uva-flow-vardeq"
     ],
     "summary": {
-      "en": "The released UvA multiscale MNIST flow is an inspectable likelihood model; JEM provides a different energy-based route.",
-      "tr": "Yayımlanmış UvA çok ölçekli MNIST akışı incelenebilir olabilirlik modelidir; JEM farklı enerji temelli yol sağlar."
+      "en": "The saved tutorial output links all three published flow checkpoints to test bits/dimension. Multiscale has the lowest value, 1.020.",
+      "tr": "Kayıtlı eğitim materyali çıktısı üç yayımlanmış flow ağırlığını test boyut başına bit değerine bağlar. Multiscale 1,020 ile en düşüktür."
     },
     "limitation": {
-      "en": "Bits/dimension depends on dequantization, preprocessing and held-out data. MNIST likelihoods cannot rank density estimation across arbitrary domains.",
-      "tr": "Bit/boyut dekuantizasyon, ön işleme ve ayrılmış test verisine bağlıdır. MNIST olabilirlikleri keyfi alanlarda yoğunluk kestirimini sıralayamaz."
+      "en": "A narrow MNIST reference with no dated evaluation in the source. It cannot select a universal density estimator for unseen feature spaces.",
+      "tr": "Kaynakta değerlendirme tarihi olmayan dar MNIST referansıdır. Görülmemiş özellik uzayları için evrensel yoğunluk tahmincisi seçemez."
     },
     "sourceIds": [
       "ow-jem",
       "ow-uva-saved-models",
       "ow-uva-flow-method",
-      "ow-uva-mnist-flow-weights"
+      "ow-uva-mnist-flow-weights",
+      "br2-uva-flow"
     ]
   },
   {
@@ -3491,20 +5443,23 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "checkedAt": "2026-10-21",
     "candidateIds": [
       "moment",
-      "jem"
+      "jem",
+      "timeradar"
     ],
     "summary": {
-      "en": "MOMENT is an adaptable time-series foundation encoder; JEM supplies an image-domain energy score.",
-      "tr": "MOMENT uyarlanabilir zaman serisi temel kodlayıcısıdır; JEM görüntü alanında enerji puanı sağlar."
+      "en": "A 2026 pretrained TimeRadar artifact and matching zero-shot evaluation are public: eight-dataset mean ROC-AUC 76.97.",
+      "tr": "2026 ön eğitimli TimeRadar dosyası ve eşleşen sıfır örnekli değerlendirme açıktır: sekiz veri kümesinde ortalama ROC-AUC 76,97."
     },
     "limitation": {
-      "en": "Neither one score nor point-adjusted time-series F1 establishes general anomaly leadership. Thresholding, event matching and training contamination require a shared protocol.",
-      "tr": "Tek bir puan veya nokta düzeltmeli zaman serisi F1 genel anomali liderliğini kurmaz. Eşikleme, olay eşleme ve eğitim bulaşması ortak protokol gerektirir."
+      "en": "Public weight files and numerical results are verified, but the README shows both MIT and Apache-2.0 badges with no license file; the usage license is unresolved. ROC-AUC, PR-AUC and affiliation/point-adjusted F1 remain separate metrics.",
+      "tr": "Açık ağırlık dosyaları ve sayısal sonuçlar doğrulandı; ancak README, lisans dosyası olmadan hem MIT hem Apache-2.0 rozeti gösteriyor; kullanım lisansı belirsiz. ROC-AUC, PR-AUC ve affiliation/nokta düzeltmeli F1 ayrı metrikler olarak tutulur."
     },
     "sourceIds": [
       "ow-moment",
       "ow-jem",
-      "ow-jem-paper"
+      "ow-jem-paper",
+      "br2-timeradar-paper",
+      "br2-timeradar"
     ]
   },
   {
@@ -3512,21 +5467,28 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "checkedAt": "2026-10-21",
     "candidateIds": [
       "moment",
-      "asia-bn"
+      "asia-bn",
+      "matrixformer",
+      "matrixformer-recsys",
+      "matrixformer-plus"
     ],
     "summary": {
-      "en": "MOMENT supports time-series reconstruction/imputation; the ASIA network supplies a small probabilistic conditional-inference example.",
-      "tr": "MOMENT zaman serisi yeniden yapılandırma/tamamlamayı destekler; ASIA ağı küçük olasılıksal koşullu çıkarım örneği sağlar."
+      "en": "The October 2026 MatrixFormer release provides exact experts and a frozen MissBench comparison. The two-expert blend reduces macro NRMSE from 1.674085 to 1.579644.",
+      "tr": "Ekim 2026 MatrixFormer yayını tam uzman ağırlıklarını ve sabit MissBench karşılaştırmasını sunar. İki uzmanlı karışım makro NRMSE’yi 1,674085’ten 1,579644’e düşürür."
     },
     "limitation": {
-      "en": "Random, block and missing-not-at-random masks differ. No matched released-checkpoint comparison on the same mask pattern was verified.",
-      "tr": "Rastgele, blok ve rastlantısal olmayan eksiklik maskeleri farklıdır. Aynı maske düzeninde yayımlanmış checkpoint karşılaştırması doğrulanamadı."
+      "en": "The benefit is not uniform: MNAR regresses. These numerical-matrix results do not establish the best time-series imputer, and MatrixFormer+ requires both expert inference passes.",
+      "tr": "Kazanç her örüntüde yoktur: MNAR kötüleşir. Sayısal matris sonuçları en iyi zaman serisi tamamlayıcısını belirlemez; MatrixFormer+ iki uzmanın da çıkarımını gerektirir."
     },
     "sourceIds": [
       "ow-moment",
       "ow-asia-bn",
       "ow-asia-description",
-      "ow-bn-prediction"
+      "ow-bn-prediction",
+      "br2-matrixformer",
+      "br2-matrixformer-card",
+      "br2-matrixformer-recsys-card",
+      "br2-matrixformer-plus-card"
     ]
   },
   {
@@ -3536,38 +5498,42 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
       "autocpd-hasc"
     ],
     "summary": {
-      "en": "AutoCPD supplies a verifiable HASC activity-transition classifier for six-channel windows.",
-      "tr": "AutoCPD altı kanallı pencereler için doğrulanabilir HASC etkinlik geçişi sınıflandırıcısı sağlar."
+      "en": "AutoCPD publishes a 96.23% test classification result for the HASC 21-block model behind its released Demo artifact.",
+      "tr": "AutoCPD, yayımlanan Demo dosyasının temelindeki HASC 21 bloklu model için %96,23 test sınıflandırma sonucu yayımlar."
     },
     "limitation": {
-      "en": "Its trained transition classes and window setup do not define a generic online change-point detector; synthetic benchmark scores cannot be assigned to this HASC artifact.",
-      "tr": "Eğitilmiş geçiş sınıfları ve pencere düzeni genel çevrimiçi değişim noktası algılayıcısı tanımlamaz; sentetik benchmark puanları HASC dosyasına atanamaz."
+      "en": "It supports window-level activity/change classification only. No exact published continuous-event F1 or delay comparison was verified for the packaged checkpoint, so this proxy is explicitly labeled.",
+      "tr": "Yalnızca pencere düzeyinde etkinlik/değişim sınıflandırmasını destekler. Paketlenmiş ağırlık için tam yayımlanmış sürekli olay F1 veya gecikme karşılaştırması doğrulanamadığından vekil metrik açıkça işaretlenir."
     },
     "sourceIds": [
       "ow-autocpd-hasc",
       "ow-autocpd-inference",
       "ow-autocpd-package",
-      "ow-autocpd-hasc-weights"
+      "ow-autocpd-hasc-weights",
+      "br2-autocpd-paper"
     ]
   },
   {
     "taskId": "node-classification",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "graphany-arxiv"
+      "graphany-arxiv",
+      "graphany-cora",
+      "graphany-product"
     ],
     "summary": {
-      "en": "GraphAny Arxiv is a released transferable node-classification component with explicit graph and label-support requirements.",
-      "tr": "GraphAny Arxiv açık graf ve destek etiketi gereksinimleri olan yayımlanmış aktarılabilir düğüm sınıflandırma bileşenidir."
+      "en": "The released GraphAny Product model has the highest selected seed-0 overall accuracy, 67.77, versus Arxiv 67.58 and Cora 66.98.",
+      "tr": "Yayımlanan GraphAny Product modeli, Arxiv 67,58 ve Cora 66,98’e karşı seçili seed-0 genel doğrulukta 67,77 ile öndedir."
     },
     "limitation": {
-      "en": "Inductive, transductive and cross-graph settings differ; no same-split, same-label-access current checkpoint table was verified.",
-      "tr": "Endüktif, transdüktif ve graflar arası düzenler farklıdır; aynı veri bölümü ve etiket erişimiyle güncel checkpoint tablosu doğrulanamadı."
+      "en": "These small differences are on 31 datasets including each model’s training graph. Cross-graph inference still consumes support labels; this is not label-free learning.",
+      "tr": "Küçük farklar, her modelin eğitim grafını da içeren 31 veri kümesindedir. Graflar arası çıkarım destek etiketlerini kullanır; etiketsiz öğrenme değildir."
     },
     "sourceIds": [
       "ow-graphany-arxiv",
       "ow-graphany-inputs",
-      "ow-graphany-arxiv-weights"
+      "ow-graphany-arxiv-weights",
+      "br2-graphany"
     ]
   },
   {
@@ -3597,20 +5563,24 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "taskId": "graph-classification",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "dgl-gcn-tox21"
+      "dgl-gcn-tox21",
+      "dgl-gcn-afp-tox21",
+      "dgl-gin-edge-tox21"
     ],
     "summary": {
-      "en": "DGL-LifeSci GCN Tox21 is a released whole-molecule multi-label classifier with 12 toxicity endpoints.",
-      "tr": "DGL-LifeSci GCN Tox21, 12 toksisite hedefi olan yayımlanmış tüm molekül düzeyinde çok etiketli sınıflandırıcıdır."
+      "en": "The official pretrained-model table and download registry now link three Tox21 heads to 0.77, 0.79 and 0.80 test ROC-AUC; the GIN edge-prediction release leads this selected set.",
+      "tr": "Resmî ön eğitimli model tablosu ve indirme kaydı, üç Tox21 başlığını 0,77, 0,79 ve 0,80 test ROC-AUC değerine bağlar; GIN kenar tahmini sürümü bu seçili kümede öndedir."
     },
     "limitation": {
-      "en": "Scaffold/random splits and missing-label treatment change ROC-AUC. A paper’s retrained GAT/GCN average cannot be assigned to this exact checkpoint.",
-      "tr": "İskelet/rastgele veri bölümleri ve eksik etiket işlemesi ROC-AUC’yi değiştirir. Makalede yeniden eğitilen GAT/GCN ortalaması bu tam checkpoint’e atanamaz."
+      "en": "A narrow MoleculeNet reference with rounded values and no per-result publication date. Gains do not transfer to unrelated graph labels, binding affinity or clinical toxicity decisions.",
+      "tr": "Yuvarlanmış değerli, sonuç başına yayın tarihi olmayan dar bir MoleculeNet referansıdır. Kazançlar ilgisiz graf etiketlerine, bağlanma afinitesine veya klinik toksisite kararlarına aktarılmaz."
     },
     "sourceIds": [
       "ow-dgl-gcn-tox21",
       "ow-dgl-gcn-readout",
-      "ow-dgl-gcn-tox21-weights"
+      "ow-dgl-gcn-tox21-weights",
+      "br2-dgl-tox21-registry",
+      "br2-dgl-molecule"
     ]
   },
   {
@@ -3620,54 +5590,65 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
       "chgnet"
     ],
     "summary": {
-      "en": "CHGNet 0.3.0 is a released atomistic graph potential for materials energies, forces and stresses.",
-      "tr": "CHGNet 0.3.0 malzeme enerjisi, kuvvet ve gerilmeleri için yayımlanmış atomistik graf potansiyelidir."
+      "en": "The exact CHGNet 0.3.0 release reports 29 meV/atom test energy MAE on MPtrj.",
+      "tr": "Tam CHGNet 0.3.0 sürümü MPtrj üzerinde atom başına 29 meV test enerji MAE bildirir."
     },
     "limitation": {
-      "en": "Matbench materials targets, molecular QM9 properties and MPtrj force errors have different units and splits; no universal graph-regression winner is inferred.",
-      "tr": "Matbench malzeme hedefleri, moleküler QM9 özellikleri ve MPtrj kuvvet hataları farklı birim ve bölümlere sahiptir; evrensel graf regresyon lideri çıkarılmaz."
+      "en": "One crystal-energy reference, not a universal regression leaderboard. New MatPES training sets and different test splits prevent a direct version ranking from the inspected table.",
+      "tr": "Tek kristal enerjisi referansıdır; evrensel regresyon tablosu değildir. Yeni MatPES eğitim kümeleri ve farklı test bölümleri, incelenen tablodan doğrudan sürüm sıralaması çıkarmayı engeller."
     },
     "sourceIds": [
       "ow-chgnet",
-      "ow-chgnet-usage"
+      "ow-chgnet-usage",
+      "br2-chgnet"
     ]
   },
   {
     "taskId": "molecular-property-prediction",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "boltz"
+      "boltz",
+      "dgl-gcn-tox21",
+      "dgl-gcn-afp-tox21",
+      "dgl-gin-edge-tox21"
     ],
     "summary": {
-      "en": "Boltz-2 is a released specialist for biomolecular structures and protein–ligand binding affinity.",
-      "tr": "Boltz-2 biyomoleküler yapılar ve protein–ligand bağlanma afinitesi için yayımlanmış uzman modeldir."
+      "en": "The official pretrained-model table and download registry now link three Tox21 heads to 0.77, 0.79 and 0.80 test ROC-AUC; the GIN edge-prediction release leads this selected set.",
+      "tr": "Resmî ön eğitimli model tablosu ve indirme kaydı, üç Tox21 başlığını 0,77, 0,79 ve 0,80 test ROC-AUC değerine bağlar; GIN kenar tahmini sürümü bu seçili kümede öndedir."
     },
     "limitation": {
-      "en": "Binding affinity is one property, not general ADMET or toxicity prediction. Target leakage, assay units and test splits prevent a single cross-property benchmark rank.",
-      "tr": "Bağlanma afinitesi tek bir özelliktir; genel ADMET veya toksisite tahmini değildir. Hedef sızıntısı, deney birimleri ve test bölümleri özellikler arası tek sıralamayı engeller."
+      "en": "A narrow MoleculeNet reference with rounded values and no per-result publication date. Gains do not transfer to unrelated graph labels, binding affinity or clinical toxicity decisions.",
+      "tr": "Yuvarlanmış değerli, sonuç başına yayın tarihi olmayan dar bir MoleculeNet referansıdır. Kazançlar ilgisiz graf etiketlerine, bağlanma afinitesine veya klinik toksisite kararlarına aktarılmaz."
     },
     "sourceIds": [
       "ow-boltz",
-      "ow-boltz-docs"
+      "ow-boltz-docs",
+      "br2-dgl-tox21-registry",
+      "br2-dgl-molecule"
     ]
   },
   {
     "taskId": "protein-structure-prediction",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "boltz"
+      "boltz",
+      "blitz-boltz-k8",
+      "blitz-boltz-k16"
     ],
     "summary": {
-      "en": "Boltz-2 has verifiable open weights for biomolecular complex prediction and is a strong task-specific candidate.",
-      "tr": "Boltz-2 biyomoleküler kompleks tahmini için doğrulanabilir açık ağırlıklara sahiptir ve göreve özgü güçlü adaydır."
+      "en": "The 16 October 2026 Blitz release compares exact open Boltz-2 variants on common targets. K16 reaches 0.8533 complex lDDT versus the teacher’s 0.8499 with fewer denoiser calls.",
+      "tr": "16 Ekim 2026 Blitz yayını tam açık Boltz-2 varyantlarını ortak hedeflerde karşılaştırır. K16 daha az gürültü giderici çağrısıyla öğretmenin 0,8499 değerine karşı 0,8533 kompleks lDDT’ye ulaşır."
     },
     "limitation": {
-      "en": "Monomer, multimer and ligand-complex metrics differ; MSA/template dates, sampling count and target overlap must match before a current global rank is credible.",
-      "tr": "Monomer, multimer ve ligand kompleks ölçüleri farklıdır; güncel genel sıralama için MSA/şablon tarihleri, örnek sayısı ve hedef örtüşmesi eşleşmelidir."
+      "en": "Different inference budgets are explicit. K16 does not win every physical-validity metric; the small structural-quality difference is not a significance claim.",
+      "tr": "Farklı çıkarım bütçeleri açıktır. K16 her fiziksel geçerlilik metriğinde üstün değildir; küçük yapısal kalite farkı anlamlılık iddiası değildir."
     },
     "sourceIds": [
       "ow-boltz",
-      "ow-boltz-docs"
+      "ow-boltz-docs",
+      "br2-blitz-paper",
+      "br2-blitz-boltz-k16-card",
+      "br2-blitz-boltz-k8-card"
     ]
   },
   {
@@ -3716,21 +5697,23 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
     "taskId": "constraint-satisfaction",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "hrm-sudoku"
+      "hrm-sudoku",
+      "eqr-sudoku"
     ],
     "summary": {
-      "en": "HRM Sudoku Extreme has verified released weights for a narrow constraint task.",
-      "tr": "HRM Sudoku Extreme dar bir kısıt görevi için doğrulanmış yayımlanmış ağırlıklara sahip."
+      "en": "EqR now provides a released Sudoku checkpoint and an explicit full evaluation: 99.557% convergence-selected exact accuracy.",
+      "tr": "EqR yayımlanmış Sudoku ağırlığı ve açık tam değerlendirme sunuyor: yakınsama seçimiyle %99,557 tam doğruluk."
     },
     "limitation": {
-      "en": "TRM training-code results do not establish a matching released Sudoku checkpoint. Sudoku accuracy cannot rank generic SAT/CSP solvers or other grid sizes.",
-      "tr": "TRM eğitim kodu sonuçları eşleşen yayımlanmış Sudoku checkpoint’ini kanıtlamaz. Sudoku doğruluğu genel SAT/CSP çözücüleri veya başka ızgara boyutlarını sıralayamaz."
+      "en": "The 2026 project’s README does not date this particular run. It requires depth/breadth search and cannot be compared to an HRM number with a different evaluation budget or generalized to all constraints.",
+      "tr": "2026 projesinin README’si bu özel koşunun tarihini belirtmiyor. Derinlik/genişlik araması gerekir; farklı değerlendirme bütçeli HRM skoru ile kıyaslanamaz veya tüm kısıtlara genellenemez."
     },
     "sourceIds": [
       "ow-hrm-sudoku",
       "ow-hrm-author-release",
       "ow-hrm-sudoku-weights",
-      "ow-hrm-repository-license"
+      "ow-hrm-repository-license",
+      "br2-eqr"
     ]
   },
   {
@@ -3740,18 +5723,21 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
       "goose-blocksworld"
     ],
     "summary": {
-      "en": "GOOSE Blocks World provides a released learned ranking heuristic used by a classical search planner.",
-      "tr": "GOOSE Blocks World klasik arama planlayıcısının kullandığı yayımlanmış öğrenilmiş sıralama sezgisini sağlar."
+      "en": "The public BlocksWorld RankSVM model is real: the release states WLPlan/GOOSE v2.0.0 and classic.toml for the IPC23 learning-domain models. It is a domain-trained heuristic used inside search.",
+      "tr": "Açık BlocksWorld RankSVM modeli gerçek: sürüm kaydı IPC23 öğrenme alanı modelleri için WLPlan/GOOSE v2.0.0 ve classic.toml belirtir. Arama içinde kullanılan alana özel eğitilmiş sezgiseldir."
     },
     "limitation": {
-      "en": "Solved-instance coverage belongs to the complete planner, domain, timeout and hardware. The 12 linear RankSVM parameters are not a universal pretrained planner or a GNN checkpoint.",
-      "tr": "Çözülen örnek kapsamı tüm planlayıcıya, alana, zaman sınırına ve donanıma aittir. 12 doğrusal RankSVM parametresi evrensel ön eğitimli planlayıcı veya GNN checkpoint’i değildir."
+      "en": "The inspected release does not bind an individual solved-count/cost/time result to this exact serialized model and search budget. IPC 2023 competition entrants and later ICAPS/NeurIPS 2024 GOOSE experiments are not interchangeable. Without that link, a modern LLM planning score or a competition aggregate would be misleading.",
+      "tr": "İncelenen sürüm, bu tam serileştirilmiş modele ve arama bütçesine tekil çözüm sayısı/maliyet/süre sonucu bağlamıyor. IPC 2023 yarışmacıları ile sonraki ICAPS/NeurIPS 2024 GOOSE deneyleri birbirinin yerine geçmez. Bu bağlantı olmadan güncel LLM planlama skoru veya yarışma toplamı yanıltıcı olur."
     },
     "sourceIds": [
       "ow-goose-blocksworld",
       "ow-goose-pretrained",
       "ow-goose-training-config",
-      "ow-goose-blocksworld-weights"
+      "ow-goose-blocksworld-weights",
+      "br2-goose-release",
+      "br2-goose-main",
+      "br2-ipc23"
     ]
   },
   {
@@ -3761,40 +5747,46 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
       "hloc-superglue"
     ],
     "summary": {
-      "en": "SuperPoint + SuperGlue outdoor is a released feature-matching component within hierarchical localization.",
-      "tr": "SuperPoint + SuperGlue outdoor hiyerarşik konumlandırma içinde yayımlanmış özellik eşleme bileşenidir."
+      "en": "The official Aachen submission identifies the exact SuperGlue outdoor pipeline and reports 86.7% night recall at the first localization threshold.",
+      "tr": "Resmî Aachen kaydı tam SuperGlue outdoor hattını tanımlar ve ilk konumlandırma eşiğinde %86,7 gece geri çağırma bildirir."
     },
     "limitation": {
-      "en": "Pose recall requires a reference map, retrieval, camera calibration and geometric verification. Matcher scores alone cannot rank complete robot-localization systems.",
-      "tr": "Poz yakalama oranı referans harita, getirme, kamera kalibrasyonu ve geometrik doğrulama gerektirir. Eşleyici puanları tek başına tüm robot konumlandırma sistemlerini sıralayamaz."
+      "en": "A 2020 camera-pose benchmark with fixed map and retrieval settings. It does not establish full robot localization performance or a current leader.",
+      "tr": "Sabit harita ve geri getirme ayarlarıyla 2020 kamera pozu benchmark’ıdır. Tam robot konumlandırma performansı veya güncel liderlik belirlemez."
     },
     "sourceIds": [
       "ow-hloc-superglue",
       "ow-hloc-pipeline",
       "ow-hloc-pose",
       "ow-hloc-matcher",
-      "ow-hloc-license"
+      "ow-hloc-license",
+      "br2-hloc-history",
+      "br2-hloc-aachen"
     ]
   },
   {
     "taskId": "robot-motion-planning",
     "checkedAt": "2026-10-21",
     "candidateIds": [
-      "mpinets-hybrid"
+      "mpinets-hybrid",
+      "neuralmp"
     ],
     "summary": {
-      "en": "MPiNets Hybrid Expert supplies released neural planning weights for the documented Franka Panda environment.",
-      "tr": "MPiNets Hybrid Expert belgelenmiş Franka Panda ortamı için yayımlanmış sinirsel planlama ağırlıkları sağlar."
+      "en": "The released Neural Motion Planner pipeline reports 95.83% success on 48 real-world free-hand tasks when test-time optimization is enabled.",
+      "tr": "Yayımlanan Neural Motion Planner hattı, test zamanı optimizasyonu açıkken 48 gerçek dünya serbest el görevinde %95,83 başarı bildirir."
     },
     "limitation": {
-      "en": "Success depends on obstacle distribution, collision checks, trajectory refinement and time budget. Simulation scores do not transfer to a different robot or establish physical acceptance.",
-      "tr": "Başarı engel dağılımı, çarpışma kontrolü, yörünge iyileştirmesi ve zaman bütçesine bağlıdır. Simülasyon puanları farklı robota aktarılmaz ve fiziksel kabul oluşturmaz."
+      "en": "The base policy alone scores 66.67%. The MPiNets baseline result is not assigned to the catalogue’s different hybrid checkpoint without an exact artifact match.",
+      "tr": "Taban politika tek başına %66,67 alır. MPiNets taban çizgi sonucu, tam dosya eşleşmesi olmadan katalogdaki farklı hybrid ağırlığına atanmaz."
     },
     "sourceIds": [
       "ow-mpinets-hybrid",
       "ow-mpinets-rollout",
       "ow-mpinets-zenodo",
-      "ow-mpinets-hybrid-weights"
+      "ow-mpinets-hybrid-weights",
+      "br2-neuralmp",
+      "br2-neuralmp-paper",
+      "br2-neuralmp-card"
     ]
   },
   {

@@ -4,7 +4,7 @@ export const schemaVersions = {
   vendor: 1, category: 1, capability: 1, vendorEntry: 1,
   assessment: 1, model: 3, plan: 1, source: 2, taxonomyMap: 1, taxonomySource: 1,
   taskModelSource: 3, openWeightModel: 2, taxonomyTask: 2, modelFamily: 2,
-  benchmarkSource: 1, benchmarkCandidate: 1, taskBenchmark: 1, taskBenchmarkReview: 1,
+  benchmarkSource: 2, benchmarkCandidate: 1, taskBenchmark: 1, taskBenchmarkReview: 1,
 } as const;
 
 // Ordered, editorial focus areas based on the model's cited evidence.
@@ -339,6 +339,8 @@ export const benchmarkSourceSchema = z.object({
   kind: z.enum(["benchmark", "paper", "model-card", "weights", "license", "documentation"]),
   observedAt: isoDateSchema,
   revision: z.string().regex(/^[a-f0-9]{40}$/).optional(),
+  // Persistent publisher release IDs (for example a LINDAT handle) are not Git hashes.
+  releaseId: z.string().regex(/^\d+(?:\.\d+)*\/[^\s?#]+$/).optional(),
 }).strict();
 
 // Additional comparison participants are separate from the task/family shortlist.
