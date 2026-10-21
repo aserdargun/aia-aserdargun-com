@@ -13,6 +13,10 @@ test("static preview serves deep links, HEAD and genuine 404s within the export"
   await writeFile(join(dir, "out", "index.html"), "Atlas");
   await writeFile(join(dir, "out", "learn", "llm.html"), "Concept");
   await writeFile(join(dir, "out", "404.html"), "Not found");
+  const policy = "default-src 'self'; script-src 'self'";
+  await writeFile(join(dir, "out", "staticwebapp.config.json"), JSON.stringify({
+    globalHeaders: { "Content-Security-Policy": policy, "X-Frame-Options": "DENY" },
+  }));
   await writeFile(join(dir, "private.txt"), "outside export");
   const child = spawn(process.execPath, [fileURLToPath(new URL("./serve-static.mjs", import.meta.url))], {
     cwd: dir, env: { ...process.env, PORT: "0" }, stdio: ["ignore", "pipe", "pipe"],
@@ -24,6 +28,8 @@ test("static preview serves deep links, HEAD and genuine 404s within the export"
     assert.equal(response.status, 200);
     assert.equal(await response.text(), "Concept");
     assert.match(response.headers.get("content-type"), /text\/html/);
+    assert.equal(response.headers.get("content-security-policy"), policy);
+    assert.equal(response.headers.get("x-frame-options"), "DENY");
     assert.equal((await fetch(url + "/learn/llm", { method: "HEAD" })).status, 200);
     assert.equal((await fetch(url + "/missing")).status, 404);
     assert.equal((await fetch(url + "/", { method: "POST" })).status, 405);

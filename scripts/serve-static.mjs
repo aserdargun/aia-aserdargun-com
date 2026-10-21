@@ -12,6 +12,7 @@ const mimeTypes = {
   ".png": "image/png", ".ico": "image/x-icon", ".woff2": "font/woff2",
 };
 await stat(resolve(root, "index.html"));
+const { globalHeaders } = JSON.parse(await readFile(resolve(root, "staticwebapp.config.json"), "utf8"));
 
 const server = createServer(async (request, response) => {
   if (request.method !== "GET" && request.method !== "HEAD") {
@@ -42,6 +43,7 @@ const server = createServer(async (request, response) => {
     const status = file ? 200 : 404;
     if (!file) { file = resolve(root, "404.html"); body = await readFile(file); }
     response.writeHead(status, {
+      ...globalHeaders,
       "Content-Type": mimeTypes[extname(file)] ?? "application/octet-stream",
       "Content-Length": body.length,
       "Cache-Control": "no-store",

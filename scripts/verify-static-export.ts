@@ -1,5 +1,6 @@
 import { constants } from "node:fs";
 import { access, readdir } from "node:fs/promises";
+import { prepareStaticCsp } from "./prepare-static-csp.mjs";
 
 async function requireReadablePath(path: string): Promise<void> {
   try {
@@ -21,6 +22,8 @@ const staticEntries = await readdir("out/_next/static");
 if (staticEntries.length === 0) {
   throw new Error("Static export contains no Next.js static assets.");
 }
+
+await prepareStaticCsp("out", { verify: true });
 
 console.log(
   `Static export verified: ${routes.length} pages, favicon, and ${staticEntries.length} asset group(s).`,

@@ -160,6 +160,16 @@ set `PLAYWRIGHT_PORT` to select another free port.
 `npm run validate:codex` runs this complete sequence; CI also checks the static
 export in Chromium before deployment.
 
+`npm run build` also generates CSP SHA-256 hashes for the inline scripts in the
+exported HTML, writing them only to `out/staticwebapp.config.json`. The source
+template stays restrictive. `verify:static` rejects stale hashes, and `npm start`
+serves the exported security headers so browser tests exercise the deployed policy.
+
+`npm run build`, dışa aktarılan HTML içindeki betiklerin SHA-256 özetlerini de
+üretir ve yalnızca `out/staticwebapp.config.json` dosyasına yazar. Kaynak şablonun
+kısıtlayıcı politikası korunur. `verify:static` eski özetleri reddeder; `npm start`
+aynı güvenlik başlıklarını sunarak tarayıcı testlerinin yayın politikasını sınamasını sağlar.
+
 Learning progress is stored only in this browser. Invalid saved cards are recovered
 individually, unknown concepts are discarded, and unavailable storage is reported.
 Cross-tab updates use the last saved snapshot; simultaneous edits are not merged.
