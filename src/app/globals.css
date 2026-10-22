@@ -3353,10 +3353,11 @@ a {
 .taxonomy-minimap__header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-left: 5px; font-size: 0.6875rem; font-weight: 650; }
 .taxonomy-minimap__header button { display: grid; place-items: center; width: 28px; height: 28px; padding: 0; border: 0; border-radius: 4px; background: transparent; color: var(--atlas-ink); cursor: pointer; font-size: 1rem; }
 .taxonomy-minimap__header button:hover { background: var(--atlas-surface-muted); }
-.taxonomy-minimap__surface { display: block; position: relative; width: 100%; padding: 0; border: 0; background: #fafaf7; cursor: crosshair; }
+.taxonomy-minimap__surface { display: block; position: relative; width: 100%; padding: 0; border: 0; background: #fafaf7; cursor: crosshair; touch-action: none; user-select: none; -webkit-user-select: none; }
 .taxonomy-minimap__surface img { display: block; width: 100%; height: auto; pointer-events: none; user-select: none; }
 .taxonomy-minimap__surface svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
-.taxonomy-minimap__area { fill: rgb(186 72 25 / 16%); stroke: #b6441c; stroke-width: 2; }
+.taxonomy-minimap__area { fill: rgb(186 72 25 / 16%); stroke: #b6441c; stroke-width: 2; pointer-events: all; cursor: grab; }
+.taxonomy-minimap__surface[data-dragging="true"], .taxonomy-minimap__surface[data-dragging="true"] * { cursor: grabbing; }
 .taxonomy-minimap__hint { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 @media (max-width: 900px) {
   .taxonomy-minimap { right: 12px; bottom: 12px; width: 144px; }

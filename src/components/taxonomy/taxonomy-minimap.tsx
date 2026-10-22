@@ -1,9 +1,19 @@
 import Image from "next/image";
-import { useEffect, useState, type KeyboardEvent, type MouseEvent, type RefObject } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent, type MouseEvent, type PointerEvent, type RefObject } from "react";
 import type { TaxonomyMap } from "@/data/schema";
 import { taxonomyLabels, type ModelLocale } from "@/lib/labels";
 
 type VisibleArea = { x: number; y: number; width: number; height: number };
+type FrameDrag = {
+  pointerId: number;
+  x: number;
+  y: number;
+  scrollLeft: number;
+  scrollTop: number;
+  scaleX: number;
+  scaleY: number;
+  moved: boolean;
+};
 
 export function TaxonomyMinimap({ map, viewport, locale }: {
   map: TaxonomyMap;
@@ -13,6 +23,8 @@ export function TaxonomyMinimap({ map, viewport, locale }: {
   const labels = taxonomyLabels[locale];
   const [expanded, setExpanded] = useState(true);
   const [area, setArea] = useState<VisibleArea | null>(null);
+  const drag = useRef<FrameDrag | null>(null);
+  const suppressClick = useRef(false);
   const contentId = `taxonomy-${map.id}-minimap`;
 
   useEffect(() => {
@@ -51,6 +63,13 @@ export function TaxonomyMinimap({ map, viewport, locale }: {
   }, [map.width, map.height, viewport]);
 
   function jumpTo(event: MouseEvent<HTMLButtonElement>) {
+    // Pointer release also generates a click. A completed drag must not recenter the map.
+    if (event.detail !== 0 && suppressClick.current) {
+      suppressClick.current = false;
+      event.preventDefault();
+      event.stopPropagation();
+      return;
+    }
     const element = viewport.current;
     const canvas = element?.querySelector<HTMLElement>(".taxonomy-canvas");
     if (!element || !canvas) return;
@@ -65,6 +84,53 @@ export function TaxonomyMinimap({ map, viewport, locale }: {
       top: (event.clientY - bounds.top) / bounds.height * map.height * scale - element.clientHeight / 2,
       behavior: "instant",
     });
+  }
+
+  function startDrag(event: PointerEvent<HTMLButtonElement>) {
+    if (!event.isPrimary || event.button !== 0 || drag.current) return;
+    suppressClick.current = false;
+    if (!(event.target instanceof Element) || !event.target.closest(".taxonomy-minimap__area")) return;
+    const element = viewport.current;
+    const canvas = element?.querySelector<HTMLElement>(".taxonomy-canvas");
+    if (!element || !canvas) return;
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const renderedMap = canvas.getBoundingClientRect();
+    if (bounds.width <= 0 || bounds.height <= 0) return;
+    // Keep the grab offset, including when the frame is held away from its centre.
+    drag.current = {
+      pointerId: event.pointerId, x: event.clientX, y: event.clientY,
+      scrollLeft: element.scrollLeft, scrollTop: element.scrollTop,
+      scaleX: renderedMap.width / bounds.width, scaleY: renderedMap.height / bounds.height,
+      moved: false,
+    };
+    event.currentTarget.setPointerCapture(event.pointerId);
+  }
+
+  function moveDrag(event: PointerEvent<HTMLButtonElement>) {
+    const current = drag.current;
+    const element = viewport.current;
+    if (!current || current.pointerId !== event.pointerId || !element) return;
+    const dx = event.clientX - current.x;
+    const dy = event.clientY - current.y;
+    if (!current.moved && Math.hypot(dx, dy) < 3) return;
+    current.moved = true;
+    suppressClick.current = true;
+    event.currentTarget.dataset.dragging = "true";
+    event.preventDefault();
+    element.scrollTo({
+      left: current.scrollLeft + dx * current.scaleX,
+      top: current.scrollTop + dy * current.scaleY,
+      behavior: "instant",
+    });
+  }
+
+  function endDrag(event: PointerEvent<HTMLButtonElement>) {
+    if (drag.current?.pointerId !== event.pointerId) return;
+    drag.current = null;
+    delete event.currentTarget.dataset.dragging;
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
   }
 
   function navigateByKeyboard(event: KeyboardEvent<HTMLButtonElement>) {
@@ -101,7 +167,9 @@ export function TaxonomyMinimap({ map, viewport, locale }: {
         <button type="button" className="taxonomy-minimap__surface" aria-label={labels.minimapNavigate}
           aria-describedby={`${contentId}-hint`} title={labels.minimapHint}
           aria-keyshortcuts="ArrowUp ArrowDown ArrowLeft ArrowRight Home End Enter Space"
-          onClick={jumpTo} onKeyDown={navigateByKeyboard}>
+          onClick={jumpTo} onKeyDown={navigateByKeyboard}
+          onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={endDrag}
+          onPointerCancel={endDrag} onLostPointerCapture={endDrag}>
           <Image src={map.assetPath} alt="" width={map.width} height={map.height} unoptimized loading="eager" draggable={false} />
           <svg viewBox={`0 0 ${map.width} ${map.height}`} aria-hidden="true" focusable="false">
             {area ? <rect className="taxonomy-minimap__area" x={area.x} y={area.y} width={area.width} height={area.height}
