@@ -3229,7 +3229,7 @@ a {
 }
 .site-header nav .site-nav__maps-menu a:hover { background: var(--atlas-surface-muted); }
 .taxonomy-page {
-  width: calc(100% - 48px);
+  width: min(100% - 104px, 1336px);
   margin-inline: auto;
   padding-block: 12px 32px;
 }

@@ -1,17 +1,19 @@
 import { useEffect, useRef, useState, type KeyboardEvent, type PointerEvent, type RefObject } from "react";
+import { MINIMAP_MIN_WIDTH, MINIMAP_MAX_WIDTH } from "@/lib/taxonomy-minimap-preferences";
 
-type ResizeGesture = { pointerId: number; x: number; y: number; width: number };
-const MIN_WIDTH = 144;
-const MAX_WIDTH = 480;
+type ResizeGesture = { pointerId: number; x: number; y: number; width: number; nextWidth: number | null };
 const KEY_STEP = 16;
 
-export function useMinimapResize({ minimap, viewport, aspectRatio }: {
+export function useMinimapResize({ minimap, viewport, aspectRatio, preferredWidth, onWidthChange }: {
   minimap: RefObject<HTMLDivElement | null>;
   viewport: RefObject<HTMLDivElement | null>;
   aspectRatio: number;
+  preferredWidth: number | null;
+  onWidthChange: (width: number) => void;
 }) {
-  const [width, setWidth] = useState<number | null>(null);
-  const [limits, setLimits] = useState({ min: MIN_WIDTH, max: MAX_WIDTH, defaultWidth: 196 });
+  const [draftWidth, setDraftWidth] = useState<number | null>(null);
+  const width = draftWidth ?? preferredWidth;
+  const [limits, setLimits] = useState({ min: MINIMAP_MIN_WIDTH, max: MINIMAP_MAX_WIDTH, defaultWidth: 196 });
   const gesture = useRef<ResizeGesture | null>(null);
   const clamp = (value: number) => Math.max(limits.min, Math.min(limits.max, value));
 
@@ -29,11 +31,11 @@ export function useMinimapResize({ minimap, viewport, aspectRatio }: {
       const verticalChrome = parseFloat(style.paddingTop) + parseFloat(style.paddingBottom) +
         parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth) + header.offsetHeight;
       // Include the header and frame when fitting the overview inside the main map.
-      const max = Math.max(1, Math.floor(Math.min(MAX_WIDTH,
+      const max = Math.max(1, Math.floor(Math.min(MINIMAP_MAX_WIDTH,
         mapViewport.clientWidth - 2 * parseFloat(style.right),
         (mapViewport.clientHeight - 2 * parseFloat(style.bottom) - verticalChrome) * aspectRatio + horizontalChrome,
       )));
-      const next = { min: Math.min(MIN_WIDTH, max), max, defaultWidth: parseFloat(style.getPropertyValue("--taxonomy-minimap-default-width")) };
+      const next = { min: Math.min(MINIMAP_MIN_WIDTH, max), max, defaultWidth: parseFloat(style.getPropertyValue("--taxonomy-minimap-default-width")) };
       setLimits((previous) => previous.min === next.min && previous.max === next.max &&
         previous.defaultWidth === next.defaultWidth ? previous : next);
     };
@@ -52,7 +54,7 @@ export function useMinimapResize({ minimap, viewport, aspectRatio }: {
     if (!event.isPrimary || event.button !== 0 || gesture.current || !minimap.current) return;
     event.preventDefault();
     event.currentTarget.focus({ preventScroll: true });
-    gesture.current = { pointerId: event.pointerId, x: event.clientX, y: event.clientY, width: minimap.current.getBoundingClientRect().width };
+    gesture.current = { pointerId: event.pointerId, x: event.clientX, y: event.clientY, width: minimap.current.getBoundingClientRect().width, nextWidth: null };
     event.currentTarget.setPointerCapture(event.pointerId);
     event.currentTarget.dataset.resizing = "true";
   }
@@ -64,24 +66,28 @@ export function useMinimapResize({ minimap, viewport, aspectRatio }: {
     // The bottom-right corner stays anchored. Either axis can drive proportional resizing.
     const dx = current.x - event.clientX;
     const dy = (current.y - event.clientY) * aspectRatio;
-    setWidth(clamp(current.width + (Math.abs(dx) >= Math.abs(dy) ? dx : dy)));
+    current.nextWidth = clamp(current.width + (Math.abs(dx) >= Math.abs(dy) ? dx : dy));
+    setDraftWidth(current.nextWidth);
   }
 
   function end(event: PointerEvent<HTMLDivElement>) {
-    if (gesture.current?.pointerId !== event.pointerId) return;
+    const current = gesture.current;
+    if (current?.pointerId !== event.pointerId) return;
     gesture.current = null;
+    if (current.nextWidth !== null) onWidthChange(current.nextWidth);
+    setDraftWidth(null);
     delete event.currentTarget.dataset.resizing;
     if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
   }
 
   function onKeyDown(event: KeyboardEvent<HTMLDivElement>) {
-    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || gesture.current) return;
     const current = minimap.current?.getBoundingClientRect().width;
     if (current === undefined) return;
     const steps: Record<string, number> = { ArrowRight: KEY_STEP, ArrowUp: KEY_STEP, ArrowLeft: -KEY_STEP, ArrowDown: -KEY_STEP };
     if (steps[event.key] || event.key === "Home" || event.key === "End") {
       event.preventDefault();
-      setWidth(event.key === "Home" ? limits.min : event.key === "End" ? limits.max : clamp(current + steps[event.key]));
+      onWidthChange(event.key === "Home" ? limits.min : event.key === "End" ? limits.max : clamp(current + steps[event.key]));
     }
   }
 

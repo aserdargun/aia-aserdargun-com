@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { useEffect, useRef, useState, type CSSProperties, type KeyboardEvent, type MouseEvent, type PointerEvent, type RefObject } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore, type CSSProperties, type KeyboardEvent, type MouseEvent, type PointerEvent, type RefObject } from "react";
 import type { TaxonomyMap } from "@/data/schema";
 import { taxonomyLabels, type ModelLocale } from "@/lib/labels";
+import { minimapPreferences } from "@/lib/taxonomy-minimap-preferences";
 import { useMinimapResize } from "./use-minimap-resize";
 
 type VisibleArea = { x: number; y: number; width: number; height: number };
@@ -22,12 +23,16 @@ export function TaxonomyMinimap({ map, viewport, locale }: {
   locale: ModelLocale;
 }) {
   const labels = taxonomyLabels[locale];
-  const [expanded, setExpanded] = useState(true);
+  const preferences = useSyncExternalStore(minimapPreferences.subscribe, minimapPreferences.getSnapshot, minimapPreferences.getServerSnapshot);
+  const { expanded } = preferences;
   const [area, setArea] = useState<VisibleArea | null>(null);
   const drag = useRef<FrameDrag | null>(null);
   const suppressClick = useRef(false);
   const minimap = useRef<HTMLDivElement>(null);
-  const size = useMinimapResize({ minimap, viewport, aspectRatio: map.width / map.height });
+  const size = useMinimapResize({
+    minimap, viewport, aspectRatio: map.width / map.height, preferredWidth: preferences.width,
+    onWidthChange: (width) => minimapPreferences.update({ width }),
+  });
   const contentId = `taxonomy-${map.id}-minimap`;
 
   useEffect(() => {
@@ -164,7 +169,7 @@ export function TaxonomyMinimap({ map, viewport, locale }: {
       <div className="taxonomy-minimap__header">
         <span>{labels.minimap}</span>
         <button type="button" aria-label={expanded ? labels.minimapHide : labels.minimapShow}
-          aria-expanded={expanded} aria-controls={contentId} onClick={() => setExpanded((value) => !value)}>
+          aria-expanded={expanded} aria-controls={contentId} onClick={() => minimapPreferences.update({ expanded: !expanded })}>
           {expanded ? "−" : "+"}
         </button>
       </div>
