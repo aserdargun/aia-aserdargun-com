@@ -9,9 +9,14 @@ const scenarios = [
 function handle(page: Page) { return page.getByRole("slider", { name: "Mini harita boyutu", exact: true }); }
 function mini(page: Page) { return page.getByRole("group", { name: "Mini harita", exact: true }); }
 function tab(page: Page, name: string) { return page.getByRole("navigation", { name: "Taksonomi haritaları" }).getByRole("link", { name, exact: true }); }
+async function switchMap(page: Page, name: string, map: string) {
+  await tab(page, name).click();
+  await expect(page).toHaveURL(new RegExp(`/taxonomy/${map}\\?lang=tr$`));
+  await expect(tab(page, name)).toHaveAttribute("aria-current", "page");
+}
 async function expectWidth(page: Page, width: number) {
   await expect(handle(page)).toHaveAttribute("aria-valuenow", String(width));
-  await expect.poll(async () => (await mini(page).boundingBox())!.width).toBeCloseTo(width, 0);
+  await expect.poll(async () => (await mini(page).boundingBox())?.width ?? 0).toBeCloseTo(width, 0);
 }
 
 for (const scenario of scenarios) {
@@ -33,15 +38,14 @@ for (const scenario of scenarios) {
     await page.reload();
     await expect(page.getByRole("button", { name: "Mini haritayı göster", exact: true })).toHaveAttribute("aria-expanded", "false");
     await expect(handle(page)).toBeHidden();
-    await tab(page, scenario.peerTab).click();
-    await expect(page).toHaveURL(new RegExp(`/taxonomy/${scenario.peer}\\?lang=tr$`));
+    await switchMap(page, scenario.peerTab, scenario.peer);
     await expect(page.getByRole("button", { name: "Mini haritayı göster", exact: true })).toBeVisible();
     await page.getByRole("button", { name: "Mini haritayı göster", exact: true }).click();
     await expectWidth(page, 316);
 
     await handle(page).press("ArrowRight");
     await expectWidth(page, 332);
-    await tab(page, scenario.tab).click();
+    await switchMap(page, scenario.tab, scenario.map);
     await expectWidth(page, 332);
     await page.reload();
     await expectWidth(page, 332);
@@ -58,7 +62,7 @@ for (const scenario of scenarios) {
     await page.getByRole("button", { name: "Mini haritayı gizle", exact: true }).click();
     await page.reload();
     await expect(page.getByRole("button", { name: "Mini haritayı göster", exact: true })).toBeVisible();
-    await tab(page, scenario.peerTab).click();
+    await switchMap(page, scenario.peerTab, scenario.peer);
     await page.getByRole("button", { name: "Mini haritayı göster", exact: true }).click();
     await expect.poll(() => page.evaluate(() => {
       const map = document.querySelector(".taxonomy-viewport")!.getBoundingClientRect();
@@ -112,7 +116,7 @@ for (const failure of ["unavailable", "quota"] as const) {
     const width = failure === "quota" ? 332 : 212;
     await expectWidth(page, width);
     await page.getByRole("button", { name: "Mini haritayı gizle", exact: true }).click();
-    await tab(page, "Model taksonomisi").click();
+    await switchMap(page, "Model taksonomisi", "models");
     await page.getByRole("button", { name: "Mini haritayı göster", exact: true }).click();
     await expectWidth(page, width);
     expect(errors).toEqual([]);
