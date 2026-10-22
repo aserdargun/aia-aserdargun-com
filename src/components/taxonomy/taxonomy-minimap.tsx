@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { useEffect, useRef, useState, type KeyboardEvent, type MouseEvent, type PointerEvent, type RefObject } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type KeyboardEvent, type MouseEvent, type PointerEvent, type RefObject } from "react";
 import type { TaxonomyMap } from "@/data/schema";
 import { taxonomyLabels, type ModelLocale } from "@/lib/labels";
+import { useMinimapResize } from "./use-minimap-resize";
 
 type VisibleArea = { x: number; y: number; width: number; height: number };
 type FrameDrag = {
@@ -25,6 +26,8 @@ export function TaxonomyMinimap({ map, viewport, locale }: {
   const [area, setArea] = useState<VisibleArea | null>(null);
   const drag = useRef<FrameDrag | null>(null);
   const suppressClick = useRef(false);
+  const minimap = useRef<HTMLDivElement>(null);
+  const size = useMinimapResize({ minimap, viewport, aspectRatio: map.width / map.height });
   const contentId = `taxonomy-${map.id}-minimap`;
 
   useEffect(() => {
@@ -155,7 +158,9 @@ export function TaxonomyMinimap({ map, viewport, locale }: {
   }
 
   return (
-    <div className={`taxonomy-minimap${expanded ? "" : " taxonomy-minimap--collapsed"}`} role="group" aria-label={labels.minimap}>
+    <div ref={minimap} className={`taxonomy-minimap${expanded ? "" : " taxonomy-minimap--collapsed"}`}
+      style={{ width: expanded ? size.width ?? undefined : undefined, "--taxonomy-minimap-max-width": `${size.max}px` } as CSSProperties}
+      role="group" aria-label={labels.minimap}>
       <div className="taxonomy-minimap__header">
         <span>{labels.minimap}</span>
         <button type="button" aria-label={expanded ? labels.minimapHide : labels.minimapShow}
@@ -177,6 +182,13 @@ export function TaxonomyMinimap({ map, viewport, locale }: {
           </svg>
         </button>
         <span id={`${contentId}-hint`} className="taxonomy-minimap__hint">{labels.minimapHint}</span>
+        <div className="taxonomy-minimap__resize" role="slider" tabIndex={0} aria-label={labels.minimapSize}
+          aria-orientation="horizontal" aria-valuemin={size.min} aria-valuemax={size.max} aria-valuenow={size.value}
+          aria-valuetext={`${size.value} px`} aria-describedby={`${contentId}-resize-hint`} title={labels.minimapResizeHint}
+          aria-keyshortcuts="ArrowUp ArrowDown ArrowLeft ArrowRight Home End" {...size.handlers}>
+          <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 12V5h7M5 5l10 10" /></svg>
+        </div>
+        <span id={`${contentId}-resize-hint`} className="taxonomy-minimap__hint">{labels.minimapResizeHint}</span>
       </div>
     </div>
   );

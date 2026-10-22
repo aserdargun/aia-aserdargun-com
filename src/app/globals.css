@@ -3337,12 +3337,13 @@ a {
 .taxonomy-hint { margin: 0; padding: 0 14px 12px; color: var(--atlas-ink-muted); font-size: 0.75rem; }
 .taxonomy-map-stage { display: flex; flex-direction: column; position: relative; min-width: 0; min-height: 0; }
 .taxonomy-minimap {
+  --taxonomy-minimap-default-width: 196px;
   position: absolute;
   z-index: 2;
   right: 16px;
   bottom: 16px;
-  width: 196px;
-  max-width: calc(100% - 32px);
+  width: var(--taxonomy-minimap-default-width);
+  max-width: min(var(--taxonomy-minimap-max-width, 480px), calc(100% - 32px));
   padding: 5px;
   border: 1px solid var(--atlas-border-strong);
   border-radius: 8px;
@@ -3350,7 +3351,8 @@ a {
   box-shadow: 0 3px 14px rgb(36 33 29 / 18%);
 }
 .taxonomy-minimap--collapsed { width: auto; }
-.taxonomy-minimap__header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-left: 5px; font-size: 0.6875rem; font-weight: 650; }
+.taxonomy-minimap__header { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-left: 24px; font-size: 0.6875rem; font-weight: 650; white-space: nowrap; }
+.taxonomy-minimap--collapsed .taxonomy-minimap__header { padding-left: 5px; }
 .taxonomy-minimap__header button { display: grid; place-items: center; width: 28px; height: 28px; padding: 0; border: 0; border-radius: 4px; background: transparent; color: var(--atlas-ink); cursor: pointer; font-size: 1rem; }
 .taxonomy-minimap__header button:hover { background: var(--atlas-surface-muted); }
 .taxonomy-minimap__surface { display: block; position: relative; width: 100%; padding: 0; border: 0; background: #fafaf7; cursor: crosshair; touch-action: none; user-select: none; -webkit-user-select: none; }
@@ -3358,11 +3360,16 @@ a {
 .taxonomy-minimap__surface svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .taxonomy-minimap__area { fill: rgb(186 72 25 / 16%); stroke: #b6441c; stroke-width: 2; pointer-events: all; cursor: grab; }
 .taxonomy-minimap__surface[data-dragging="true"], .taxonomy-minimap__surface[data-dragging="true"] * { cursor: grabbing; }
+.taxonomy-minimap__resize { position: absolute; top: 1px; left: 1px; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 6px; color: var(--atlas-ink-muted); cursor: nwse-resize; touch-action: none; user-select: none; -webkit-user-select: none; }
+.taxonomy-minimap__resize:hover, .taxonomy-minimap__resize:focus-visible, .taxonomy-minimap__resize[data-resizing="true"] { color: var(--atlas-accent-dark); background: var(--atlas-surface-muted); }
+.taxonomy-minimap__resize:focus-visible { outline: 2px solid var(--atlas-accent-dark); outline-offset: -2px; }
+.taxonomy-minimap__resize svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
 .taxonomy-minimap__hint { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 @media (max-width: 900px) {
-  .taxonomy-minimap { right: 12px; bottom: 12px; width: 144px; }
+  .taxonomy-minimap { --taxonomy-minimap-default-width: 144px; right: 12px; bottom: 12px; max-width: min(var(--taxonomy-minimap-max-width, 480px), calc(100% - 24px)); }
   .taxonomy-minimap--collapsed { width: auto; }
   .taxonomy-minimap__header button { width: 32px; height: 32px; }
+  .taxonomy-minimap__resize { width: 32px; height: 32px; }
 }
 .taxonomy-viewport {
   min-height: 0;
