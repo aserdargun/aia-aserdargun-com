@@ -12,13 +12,13 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 900 }, { name: "
     page.on("console", (message) => { if (message.type() === "error") errors.push(message.text()); });
     await page.setViewportSize(viewport);
     await page.goto("/");
-    await page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Models", exact: true }).click();
-    await expect(page).toHaveTitle("Models by task | AI Ecosystem Atlas");
-    await expect(page.getByRole("heading", { level: 1, name: "Models by task" })).toBeVisible();
+    await page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Frontier models", exact: true }).click();
+    await expect(page).toHaveTitle("Frontier models | AI Ecosystem Atlas");
+    await expect(page.getByRole("heading", { level: 1, name: "Frontier models by task" })).toBeVisible();
     await expect(page.getByRole("status")).toHaveText(`Unique models: ${visibleModelCount} · Task groups: 7`);
     await expect(page.locator(".model-record").first()).toBeInViewport();
     await page.getByRole("button", { name: "Türkçe", exact: true }).click();
-    await expect(page.getByRole("heading", { level: 1, name: "Göreve göre modeller" })).toBeVisible();
+    await expect(page.getByRole("heading", { level: 1, name: "Göreve göre frontier modeller" })).toBeVisible();
     await expect(page.locator(".model-record").first()).toBeInViewport();
     await page.getByRole("button", { name: /^Görsel üretimi/ }).click();
     await expect(page.getByRole("status")).toHaveText("Benzersiz model: 1 · Görev grupları: 1");

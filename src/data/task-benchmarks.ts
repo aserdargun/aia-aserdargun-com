@@ -3884,7 +3884,7 @@ export const taskBenchmarks: TaskBenchmark[] = [
 export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   {
     "taskId": "text-classification",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "gliner25multi",
       "gliner25",
@@ -3915,7 +3915,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "natural-language-inference",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "gliner25multi",
       "gliner25",
@@ -3942,7 +3942,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "named-entity-recognition",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "gliner25multi",
       "gliner25",
@@ -3969,7 +3969,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "relation-extraction",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "gliner25",
       "gliner25multi",
@@ -3996,7 +3996,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "coreference-resolution",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "e2e-coref",
       "coref"
@@ -4017,7 +4017,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "part-of-speech-tagging",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "stanza",
       "udpipe-ewt"
@@ -4039,7 +4039,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "syntactic-parsing",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "stanza",
       "udpipe-ewt"
@@ -4061,7 +4061,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "text-generation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "qwen38",
       "qwen36",
@@ -4087,7 +4087,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "machine-translation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "hymt7",
       "hymt30",
@@ -4112,7 +4112,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "text-summarization",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "qwen38",
       "deepseek41",
@@ -4139,7 +4139,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "multi-document-summarization",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "primeramulti",
       "primera",
@@ -4161,7 +4161,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "grammatical-error-correction",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "coeditxl",
       "coedit"
@@ -4182,7 +4182,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "question-answering",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "qwen38",
       "qwen36",
@@ -4205,7 +4205,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "dialogue-response-generation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "qwen38",
       "qwen36",
@@ -4232,7 +4232,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "semantic-textual-similarity",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "embedding",
       "emb4",
@@ -4257,7 +4257,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "document-retrieval",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "embedding",
       "emb4"
@@ -4278,7 +4278,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "passage-retrieval",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "embedding",
       "emb4"
@@ -4299,7 +4299,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "re-ranking",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "reranker",
       "rerank4"
@@ -4320,7 +4320,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "query-expansion",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "qwen38",
       "r1-qwen14"
@@ -4343,7 +4343,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "top-k-recommendation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "p5-beauty-small"
     ],
@@ -4365,7 +4365,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "rating-prediction",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "p5-beauty-small",
       "matrixformer",
@@ -4393,7 +4393,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "image-classification",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "siglip",
       "mlp-mixer",
@@ -4421,7 +4421,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "object-detection",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "dino",
       "sam3",
@@ -4446,7 +4446,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "semantic-segmentation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "mask2former",
       "mask2formertiny"
@@ -4467,7 +4467,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "instance-segmentation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "sam3",
       "rfdetr-seg-l",
@@ -4490,7 +4490,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "depth-estimation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "marigold2",
       "depth"
@@ -4511,7 +4511,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "keypoint-detection",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "pose",
       "posebase",
@@ -4535,7 +4535,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "video-classification",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "videomae",
       "videomaev2-s",
@@ -4556,7 +4556,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "optical-character-recognition",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "qwen38",
       "qwen36",
@@ -4579,7 +4579,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "image-captioning",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "qwen38",
       "florence-base-ft",
@@ -4601,7 +4601,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "visual-question-answering",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "qwen38",
       "qwen36"
@@ -4622,7 +4622,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "document-question-answering",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "qwen38",
       "qwen2vl72",
@@ -4644,7 +4644,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "text-to-image-generation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "fluxklein9",
       "fluxklein4",
@@ -4669,7 +4669,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "image-to-image-generation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "imageedit",
       "fluxklein9",
@@ -4698,7 +4698,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "image-inpainting",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "moebius",
       "fill"
@@ -4719,7 +4719,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "text-to-video-generation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "ltx23",
       "wan",
@@ -4744,7 +4744,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "image-to-video-generation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "ltx23",
       "wan",
@@ -4767,7 +4767,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "text-to-3d-generation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "shape"
     ],
@@ -4787,7 +4787,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "automatic-speech-recognition",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "asrhf",
       "asr06hf",
@@ -4812,7 +4812,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "speech-translation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "seamless",
       "seamless-v1"
@@ -4834,7 +4834,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "keyword-spotting",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "keyword"
     ],
@@ -4853,7 +4853,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "speech-emotion-recognition",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "emotion"
     ],
@@ -4872,7 +4872,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "audio-classification",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "audiomosaic",
       "ast"
@@ -4936,7 +4936,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "speaker-diarization",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "diarization",
       "pyannote31",
@@ -4959,7 +4959,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "text-to-speech",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "tts",
       "ttscv06"
@@ -5020,7 +5020,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "voice-conversion",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "voice",
       "knnvc",
@@ -5046,7 +5046,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "text-to-audio-generation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "audiogen",
       "tangoflux",
@@ -5072,7 +5072,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "conditional-music-generation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "ace",
       "musicgen"
@@ -5093,7 +5093,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "text-to-code-generation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "qwen38",
       "qwen36",
@@ -5118,7 +5118,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "code-completion",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "coder",
       "codet5plus",
@@ -5143,7 +5143,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "code-repair",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "deepseek41",
       "kimi3",
@@ -5166,7 +5166,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "code-translation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "codet5",
       "ct-java-cs",
@@ -5190,7 +5190,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "text-to-sql",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "xiyan",
       "xiyan7",
@@ -5212,7 +5212,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "code-summarization",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "coder",
       "codet5",
@@ -5238,7 +5238,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "code-search",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "reranker",
       "rerank4",
@@ -5261,7 +5261,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "code-clone-detection",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "codet5",
       "ct-clone"
@@ -5283,7 +5283,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "defect-detection",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "codet5",
       "ct-defect"
@@ -5305,7 +5305,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "classification",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "kumo",
       "tabpfn"
@@ -5326,7 +5326,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "regression",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "kumo",
       "tabpfn",
@@ -5351,7 +5351,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "time-series-forecasting",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "timestral",
       "timestral28",
@@ -5440,7 +5440,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "anomaly-detection",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "moment",
       "jem",
@@ -5464,7 +5464,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "missing-value-imputation",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "moment",
       "asia-bn",
@@ -5653,7 +5653,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "math-word-problem-solving",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "r1",
       "deepseek41"
@@ -5674,7 +5674,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "formal-theorem-proving",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "longcatprover",
       "prover"
@@ -5791,7 +5791,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "function-calling",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "kimi3",
       "glm53",
@@ -5816,7 +5816,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "web-task-execution",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "qwen38",
       "qwen36",
@@ -5839,7 +5839,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "desktop-task-execution",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-10-23",
     "candidateIds": [
       "qwen38",
       "qwen36",

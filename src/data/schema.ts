@@ -3,7 +3,7 @@ import { z } from "zod";
 export const schemaVersions = {
   vendor: 1, category: 1, capability: 1, vendorEntry: 1,
   assessment: 1, model: 3, plan: 1, source: 2, taxonomyMap: 1, taxonomySource: 1,
-  taskModelSource: 3, openWeightModel: 2, taxonomyTask: 2, modelFamily: 2,
+  taskModelSource: 4, openWeightModel: 3, taxonomyTask: 2, modelFamily: 2,
   benchmarkSource: 2, benchmarkCandidate: 1, taskBenchmark: 1, taskBenchmarkReview: 1,
 } as const;
 
@@ -267,6 +267,15 @@ export const taskModelSourceSchema = z.object({
     }).strict().refine((artifact) => Boolean(artifact.etag || artifact.publisherChecksum), "Publisher file needs an ETag or publisher checksum."),
     z.object({ type: z.literal("google-drive"), evidenceSourceId: z.string().regex(/^ow-[a-z0-9-]+$/), fileId: z.string().regex(/^[a-zA-Z0-9_-]+$/), fileName: z.string().min(1), sizeBytes: z.number().int().positive() }).strict(),
     z.object({ type: z.literal("release"), evidenceSourceId: z.string().regex(/^ow-[a-z0-9-]+$/), repositoryUrl: httpsUrlSchema, tag: z.string().min(1), files: z.array(z.object({ name: z.string().min(1), sizeBytes: z.number().int().positive() }).strict()).min(1) }).strict(),
+    // Hugging Face repository checkpoint: the publisher's own file listing at a revision.
+    z.object({
+      type: z.literal("hf-repository"),
+      repositoryUrl: httpsUrlSchema,
+      parameterCount: z.number().int().positive().optional(),
+      files: z.array(z.object({ name: z.string().min(1), sizeBytes: z.number().int().nonnegative() }).strict()).min(1),
+      totalBytes: z.number().int().nonnegative(),
+      gated: z.boolean(),
+    }).strict(),
   ]).optional(),
 }).strict();
 
@@ -281,6 +290,10 @@ export const openWeightModelSchema = z.object({
   role: z.enum(["shortlist", "reference"]),
   parameterKind: z.enum(["weights", "statistical", "rules", "pipeline"]).optional(),
   licenseScope: z.enum(["artifact", "repository"]).optional(),
+  // Publisher pipeline tag observed on the Hugging Face repository.
+  pipelineTag: z.string().min(1).optional(),
+  // "curated" (default) is editor-reviewed; "auto" was discovered by the tracker.
+  discovery: z.enum(["curated", "auto"]).optional(),
   context: bilingualTextSchema,
 }).strict();
 

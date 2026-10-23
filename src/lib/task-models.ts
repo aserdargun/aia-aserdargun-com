@@ -58,6 +58,20 @@ export function validateTaskModels(tasks: TaxonomyTask[], models: OpenWeightMode
         || weights.url !== `${artifact.repositoryUrl}/${artifact.entry}/${weights.revision}/${artifact.path}`) {
         throw new Error(`Git artifact must identify the observed checkpoint revision: ${model.id}`);
       }
+    } else if (artifact.type === "hf-repository") {
+      const repository = new URL(artifact.repositoryUrl);
+      if (repository.hostname !== "huggingface.co" || !/^\/[^/]+\/[^/]+$/.test(repository.pathname)
+        || !weights.revision || card.revision !== weights.revision
+        || card.url !== artifact.repositoryUrl
+        || weights.url !== `${artifact.repositoryUrl}/tree/${weights.revision}`) {
+        throw new Error(`Hugging Face artifact must identify the observed repository revision: ${model.id}`);
+      }
+      if (artifact.files.reduce((total, file) => total + file.sizeBytes, 0) !== artifact.totalBytes) {
+        throw new Error(`Hugging Face file sizes do not add up to the published total: ${model.id}`);
+      }
+      if (artifact.gated !== (model.access === "gated")) {
+        throw new Error(`Access state does not match the publisher repository: ${model.id}`);
+      }
     } else {
       const evidence = bySource.get(artifact.evidenceSourceId);
       if (!evidence || !["model-card", "documentation"].includes(evidence.kind) || weights.revision) {

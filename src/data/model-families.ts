@@ -126,7 +126,7 @@ export const modelFamilies = [
       }
     ],
     "review": {
-      "observedAt": "2026-10-21",
+      "observedAt": "2026-10-23",
       "summary": {
         "en": "fastText provides a released linear-classifier example for language identification. The feature vocabulary and class set are fixed; its weights are not a generic classifier for arbitrary tables.",
         "tr": "fastText, dil tanıma için yayımlanmış doğrusal sınıflandırıcı örneği sağlar. Özellik sözlüğü ve sınıflar sabittir; ağırlıkları keyfi tablolar için genel sınıflandırıcı değildir."
@@ -1192,7 +1192,7 @@ export const modelFamilies = [
       }
     ],
     "review": {
-      "observedAt": "2026-10-21",
+      "observedAt": "2026-10-23",
       "summary": {
         "en": "MLP-Mixer is an all-MLP vision architecture with an actual released classifier checkpoint. This avoids labeling every network that merely contains a dense layer as an MLP model.",
         "tr": "MLP-Mixer, gerçekten yayımlanmış sınıflandırıcı ağırlıkları olan tam MLP görsel mimarisidir. Yalnızca yoğun katman içeren her ağı MLP modeli sayma hatasından kaçınılır."
@@ -1280,6 +1280,50 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-autocpd-hasc",
           "ow-autocpd-inference"
+        ]
+      },
+      {
+        "modelId": "alodlm-8b",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Convolutional Networks. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Convolutional Networks ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-alodlm-8b"
+        ]
+      },
+      {
+        "modelId": "glide",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Convolutional Networks. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Convolutional Networks ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-glide"
+        ]
+      },
+      {
+        "modelId": "fastino-nemotron-3-5-lightning-finance",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Convolutional Networks. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Convolutional Networks ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-fastino-nemotron-3-5-lightning-finance"
+        ]
+      },
+      {
+        "modelId": "glm-ocr",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Convolutional Networks. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Convolutional Networks ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-glm-ocr"
         ]
       }
     ]
@@ -1806,6 +1850,127 @@ export const modelFamilies = [
           "ow-p5-beauty-small",
           "ow-p5-beauty-config"
         ]
+      },
+      {
+        "modelId": "acestep-v15-turbo-continuous",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Transformers. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Transformers ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-acestep-v15-turbo-continuous"
+        ]
+      },
+      {
+        "modelId": "acestep-v15-turbo-shift1",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Transformers. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Transformers ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-acestep-v15-turbo-shift1"
+        ]
+      },
+      {
+        "modelId": "acestep-v15-turbo-shift3",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Transformers. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Transformers ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-acestep-v15-turbo-shift3"
+        ]
+      },
+      {
+        "modelId": "facodec",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Transformers. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Transformers ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-facodec"
+        ]
+      },
+      {
+        "modelId": "da3-giant-1-1",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Transformers. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Transformers ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-da3-giant-1-1"
+        ]
+      },
+      {
+        "modelId": "boxer",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Transformers. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Transformers ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-boxer"
+        ]
+      },
+      {
+        "modelId": "timesfm-3-0-pytorch",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Transformers. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Transformers ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-timesfm-3-0-pytorch"
+        ]
+      },
+      {
+        "modelId": "tipsv1-g14",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Transformers. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Transformers ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-tipsv1-g14"
+        ]
+      },
+      {
+        "modelId": "tipsv1-so400m14",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Transformers. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Transformers ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-tipsv1-so400m14"
+        ]
+      },
+      {
+        "modelId": "tipsv2-so400m14-dpt",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Transformers. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Transformers ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-tipsv2-so400m14-dpt"
+        ]
+      },
+      {
+        "modelId": "tabfm-1-1-0-pytorch",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Transformers. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Transformers ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-tabfm-1-1-0-pytorch"
+        ]
       }
     ]
   },
@@ -1894,7 +2059,7 @@ export const modelFamilies = [
       }
     ],
     "review": {
-      "observedAt": "2026-10-21",
+      "observedAt": "2026-10-23",
       "summary": {
         "en": "The released Mamba2 2.7B base checkpoint is explicitly documented as an SSM architecture. Its evidence is separate from hybrid recurrent/attention models and does not establish assistant behavior.",
         "tr": "Yayımlanmış Mamba2 2.7B temel ağırlıkları açıkça SSM mimarisi olarak belgelenir. Kanıtı hibrit yinelemeli/dikkat modellerinden ayrıdır ve asistan davranışını kanıtlamaz."
@@ -2010,6 +2175,28 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-chronos",
           "ow-family-chronos-config"
+        ]
+      },
+      {
+        "modelId": "embeddinggemma-2",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Encoder-Only. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Encoder-Only ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-embeddinggemma-2"
+        ]
+      },
+      {
+        "modelId": "wespeaker-voxceleb-resnet34-lm",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Encoder-Only. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Encoder-Only ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-wespeaker-voxceleb-resnet34-lm"
         ]
       }
     ]
@@ -2188,6 +2375,61 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-llama31-rlhf"
         ]
+      },
+      {
+        "modelId": "acestep-captioner",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Decoder-Only. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Decoder-Only ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-acestep-captioner"
+        ]
+      },
+      {
+        "modelId": "acestep-transcriber",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Decoder-Only. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Decoder-Only ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-acestep-transcriber"
+        ]
+      },
+      {
+        "modelId": "alodlm-8b",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Decoder-Only. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Decoder-Only ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-alodlm-8b"
+        ]
+      },
+      {
+        "modelId": "glide",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Decoder-Only. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Decoder-Only ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-glide"
+        ]
+      },
+      {
+        "modelId": "fastino-nemotron-3-5-lightning-finance",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Decoder-Only. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Decoder-Only ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-fastino-nemotron-3-5-lightning-finance"
+        ]
       }
     ]
   },
@@ -2285,6 +2527,17 @@ export const modelFamilies = [
           "ow-p5-beauty-small",
           "ow-p5-beauty-config"
         ]
+      },
+      {
+        "modelId": "chronos-t5-large",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Encoder–Decoder. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Encoder–Decoder ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-chronos-t5-large"
+        ]
       }
     ]
   },
@@ -2345,6 +2598,17 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-prover",
           "ow-family-prover-config"
+        ]
+      },
+      {
+        "modelId": "fastino-nemotron-3-5-lightning-finance",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Mixture of Experts. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Mixture of Experts ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-fastino-nemotron-3-5-lightning-finance"
         ]
       }
     ]
@@ -2654,7 +2918,7 @@ export const modelFamilies = [
       }
     ],
     "review": {
-      "observedAt": "2026-10-21",
+      "observedAt": "2026-10-23",
       "summary": {
         "en": "Meta’s SSL release explicitly combines labeled-teacher supervision with unlabeled images. The selected timm artifact identifies this training recipe; generic pretraining plus fine-tuning alone was not used as evidence.",
         "tr": "Meta’nın SSL sürümü, etiketli öğretmen gözetimini etiketsiz görüntülerle açıkça birleştirir. Seçilen timm dosyası bu eğitim tarifini belirtir; yalnızca genel ön eğitim ve ince ayar kanıt sayılmamıştır."
@@ -3143,6 +3407,61 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-ace"
         ]
+      },
+      {
+        "modelId": "wan-dancer-14b",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Diffusion Models. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Diffusion Models ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-wan-dancer-14b"
+        ]
+      },
+      {
+        "modelId": "alodlm-8b",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Diffusion Models. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Diffusion Models ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-alodlm-8b"
+        ]
+      },
+      {
+        "modelId": "flux-3-image-klein",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Diffusion Models. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Diffusion Models ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-flux-3-image-klein"
+        ]
+      },
+      {
+        "modelId": "scail-2",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Diffusion Models. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Diffusion Models ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-scail-2"
+        ]
+      },
+      {
+        "modelId": "glm-image",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Diffusion Models. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Diffusion Models ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-glm-image"
+        ]
       }
     ]
   },
@@ -3275,6 +3594,17 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-imageedit",
           "ow-family-qwen-image-paper"
+        ]
+      },
+      {
+        "modelId": "glm-tts",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Flow Matching. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Flow Matching ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-glm-tts"
         ]
       }
     ]
@@ -4774,6 +5104,83 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-uitars"
         ]
+      },
+      {
+        "modelId": "acestep-captioner",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Multimodal Models. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Multimodal Models ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-acestep-captioner"
+        ]
+      },
+      {
+        "modelId": "acestep-transcriber",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Multimodal Models. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Multimodal Models ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-acestep-transcriber"
+        ]
+      },
+      {
+        "modelId": "chronos-t5-large",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Multimodal Models. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Multimodal Models ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-chronos-t5-large"
+        ]
+      },
+      {
+        "modelId": "glide",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Multimodal Models. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Multimodal Models ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-glide"
+        ]
+      },
+      {
+        "modelId": "embeddinggemma-2",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Multimodal Models. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Multimodal Models ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-embeddinggemma-2"
+        ]
+      },
+      {
+        "modelId": "glm-ocr",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Multimodal Models. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Multimodal Models ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-glm-ocr"
+        ]
+      },
+      {
+        "modelId": "glm-asr-nano-2512",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Multimodal Models. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Multimodal Models ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-glm-asr-nano-2512"
+        ]
       }
     ]
   },
@@ -5018,7 +5425,7 @@ export const modelFamilies = [
       }
     ],
     "review": {
-      "observedAt": "2026-10-21",
+      "observedAt": "2026-10-23",
       "summary": {
         "en": "Llama 3.1 Instruct’s own card explicitly names RLHF. This mapping does not infer human preference training from generic reinforcement learning, reward models or verifier feedback.",
         "tr": "Llama 3.1 Instruct’ın kendi kartı RLHF’yi açıkça adlandırır. Bu eşleştirme genel pekiştirmeli öğrenme, ödül modelleri veya doğrulayıcı geri bildiriminden insan tercihli eğitim çıkarmaz."
@@ -5052,7 +5459,7 @@ export const modelFamilies = [
       }
     ],
     "review": {
-      "observedAt": "2026-10-21",
+      "observedAt": "2026-10-23",
       "summary": {
         "en": "The named OLMo DPO-stage checkpoint documents direct preference training. Its later RLVR sibling is kept separate, including the evaluation claims.",
         "tr": "Adı verilen OLMo DPO aşaması ağırlıkları doğrudan tercih eğitimini belgeler. Sonraki RLVR kardeşi, değerlendirme iddiaları dahil ayrı tutulur."

@@ -6,8 +6,8 @@ import { atlasDataset } from "@/data/index";
 import { modelBrowserLabels } from "@/lib/labels";
 
 export const metadata = {
-  title: "Models by task | AI Ecosystem Atlas",
-  description: "Explore source-backed AI model groups for writing, reasoning, coding, agents, documents, vision, and image generation.",
+  title: "Frontier models | AI Ecosystem Atlas",
+  description: "Compare frontier AI models by task, context window, price and published specifications, with official sources for every claim.",
   alternates: { canonical: "/models" },
 };
 

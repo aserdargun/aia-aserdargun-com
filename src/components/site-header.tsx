@@ -22,7 +22,14 @@ export function SiteHeader() {
           <Link className="site-nav__atlas" href="/">
             Atlas
           </Link>
-          <Link href="/models">Models</Link>
+          <Link href="/models" aria-label="Frontier models">
+            <span className="site-nav__full">Frontier models</span>
+            <span className="site-nav__compact" aria-hidden="true">Frontier</span>
+          </Link>
+          <Link href="/open-weights" aria-label="Open weights">
+            <span className="site-nav__full">Open weights</span>
+            <span className="site-nav__compact" aria-hidden="true">Weights</span>
+          </Link>
           <TaxonomyNavigation />
           <Link href="/learn">Learn</Link>
           <a

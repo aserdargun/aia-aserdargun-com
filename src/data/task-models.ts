@@ -1133,6 +1133,473 @@ export const openWeightModels = [
       "en": "Released motion policy for the Franka arm. Its rollout uses the current joint configuration, target pose and point-cloud obstacle representation. Requires matching robot geometry and inference code; generated trajectories need collision and kinematic validation. The Zenodo artifact is CC-BY-4.0 although the code repository is MIT.",
       "tr": "Franka kolu için yayımlanmış hareket politikası. Yörünge üretimi, mevcut eklem durumu, hedef poz ve engel nokta bulutunu kullanır. Eşleşen robot geometrisi ve çıkarım kodu gerekir; üretilen yörüngeler çarpışma ve kinematik doğrulama ister. Kod deposu MIT olsa da Zenodo dosyası CC-BY-4.0 ile sunulur."
     }
+  },
+  {
+    "id": "acestep-v15-turbo-continuous",
+    "name": "acestep-v15-turbo-continuous",
+    "cardSourceId": "ow-acestep-v15-turbo-continuous",
+    "weightsSourceId": "ow-acestep-v15-turbo-continuous-weights",
+    "licenseSourceId": "ow-acestep-v15-turbo-continuous-license",
+    "license": "mit",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "text-to-audio",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag text-to-audio; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi text-to-audio; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "acestep-v15-turbo-shift1",
+    "name": "acestep-v15-turbo-shift1",
+    "cardSourceId": "ow-acestep-v15-turbo-shift1",
+    "weightsSourceId": "ow-acestep-v15-turbo-shift1-weights",
+    "licenseSourceId": "ow-acestep-v15-turbo-shift1-license",
+    "license": "mit",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "text-to-audio",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag text-to-audio; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi text-to-audio; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "acestep-captioner",
+    "name": "acestep-captioner",
+    "cardSourceId": "ow-acestep-captioner",
+    "weightsSourceId": "ow-acestep-captioner-weights",
+    "licenseSourceId": "ow-acestep-captioner-license",
+    "license": "mit",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "text-to-audio",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag text-to-audio; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi text-to-audio; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "acestep-transcriber",
+    "name": "acestep-transcriber",
+    "cardSourceId": "ow-acestep-transcriber",
+    "weightsSourceId": "ow-acestep-transcriber-weights",
+    "licenseSourceId": "ow-acestep-transcriber-license",
+    "license": "mit",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "audio-text-to-text",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag audio-text-to-text; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi audio-text-to-text; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "acestep-v15-turbo-shift3",
+    "name": "acestep-v15-turbo-shift3",
+    "cardSourceId": "ow-acestep-v15-turbo-shift3",
+    "weightsSourceId": "ow-acestep-v15-turbo-shift3-weights",
+    "licenseSourceId": "ow-acestep-v15-turbo-shift3-license",
+    "license": "mit",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "text-to-audio",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag text-to-audio; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi text-to-audio; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "facodec",
+    "name": "FAcodec",
+    "cardSourceId": "ow-facodec",
+    "weightsSourceId": "ow-facodec-weights",
+    "licenseSourceId": "ow-facodec-license",
+    "license": "mit",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "audio-to-audio",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag audio-to-audio; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi audio-to-audio; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "wan-dancer-14b",
+    "name": "Wan-Dancer-14B",
+    "cardSourceId": "ow-wan-dancer-14b",
+    "weightsSourceId": "ow-wan-dancer-14b-weights",
+    "licenseSourceId": "ow-wan-dancer-14b-license",
+    "license": "apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "image-to-video",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag image-to-video; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi image-to-video; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "alodlm-8b",
+    "name": "ALoDLM-8B",
+    "cardSourceId": "ow-alodlm-8b",
+    "weightsSourceId": "ow-alodlm-8b-weights",
+    "licenseSourceId": "ow-alodlm-8b-license",
+    "license": "cc-by-nc-4.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "text-generation",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag text-generation; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi text-generation; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "chronos-t5-large",
+    "name": "chronos-t5-large",
+    "cardSourceId": "ow-chronos-t5-large",
+    "weightsSourceId": "ow-chronos-t5-large-weights",
+    "licenseSourceId": "ow-chronos-t5-large-license",
+    "license": "apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "time-series-forecasting",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag time-series-forecasting; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi time-series-forecasting; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "flux-3-image-klein",
+    "name": "flux-3-image-klein",
+    "cardSourceId": "ow-flux-3-image-klein",
+    "weightsSourceId": "ow-flux-3-image-klein-weights",
+    "licenseSourceId": "ow-flux-3-image-klein-license",
+    "license": "other",
+    "access": "gated",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "image-to-image",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag image-to-image; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi image-to-image; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "da3-giant-1-1",
+    "name": "DA3-GIANT-1.1",
+    "cardSourceId": "ow-da3-giant-1-1",
+    "weightsSourceId": "ow-da3-giant-1-1-weights",
+    "licenseSourceId": "ow-da3-giant-1-1-license",
+    "license": "cc-by-nc-4.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "depth-estimation",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag depth-estimation; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi depth-estimation; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "boxer",
+    "name": "boxer",
+    "cardSourceId": "ow-boxer",
+    "weightsSourceId": "ow-boxer-weights",
+    "licenseSourceId": "ow-boxer-license",
+    "license": "cc-by-nc-4.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "object-detection",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag object-detection; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi object-detection; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "glide",
+    "name": "GLiDE",
+    "cardSourceId": "ow-glide",
+    "weightsSourceId": "ow-glide-weights",
+    "licenseSourceId": "ow-glide-license",
+    "license": "other",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "image-text-to-text",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag image-text-to-text; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi image-text-to-text; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "fastino-nemotron-3-5-lightning-finance",
+    "name": "Fastino-Nemotron-3.5-Lightning-Finance",
+    "cardSourceId": "ow-fastino-nemotron-3-5-lightning-finance",
+    "weightsSourceId": "ow-fastino-nemotron-3-5-lightning-finance-weights",
+    "licenseSourceId": "ow-fastino-nemotron-3-5-lightning-finance-license",
+    "license": "apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "text-generation",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag text-generation; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi text-generation; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "embeddinggemma-2",
+    "name": "embeddinggemma-2",
+    "cardSourceId": "ow-embeddinggemma-2",
+    "weightsSourceId": "ow-embeddinggemma-2-weights",
+    "licenseSourceId": "ow-embeddinggemma-2-license",
+    "license": "apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "feature-extraction",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag feature-extraction; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi feature-extraction; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "timesfm-3-0-pytorch",
+    "name": "timesfm-3.0-pytorch",
+    "cardSourceId": "ow-timesfm-3-0-pytorch",
+    "weightsSourceId": "ow-timesfm-3-0-pytorch-weights",
+    "licenseSourceId": "ow-timesfm-3-0-pytorch-license",
+    "license": "other",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "time-series-forecasting",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag time-series-forecasting; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi time-series-forecasting; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "tipsv1-g14",
+    "name": "tipsv1-g14",
+    "cardSourceId": "ow-tipsv1-g14",
+    "weightsSourceId": "ow-tipsv1-g14-weights",
+    "licenseSourceId": "ow-tipsv1-g14-license",
+    "license": "apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "zero-shot-image-classification",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag zero-shot-image-classification; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi zero-shot-image-classification; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "tipsv1-so400m14",
+    "name": "tipsv1-so400m14",
+    "cardSourceId": "ow-tipsv1-so400m14",
+    "weightsSourceId": "ow-tipsv1-so400m14-weights",
+    "licenseSourceId": "ow-tipsv1-so400m14-license",
+    "license": "apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "zero-shot-image-classification",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag zero-shot-image-classification; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi zero-shot-image-classification; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "tipsv2-so400m14-dpt",
+    "name": "tipsv2-so400m14-dpt",
+    "cardSourceId": "ow-tipsv2-so400m14-dpt",
+    "weightsSourceId": "ow-tipsv2-so400m14-dpt-weights",
+    "licenseSourceId": "ow-tipsv2-so400m14-dpt-license",
+    "license": "apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "depth-estimation",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag depth-estimation; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi depth-estimation; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "tabfm-1-1-0-pytorch",
+    "name": "tabfm-1.1.0-pytorch",
+    "cardSourceId": "ow-tabfm-1-1-0-pytorch",
+    "weightsSourceId": "ow-tabfm-1-1-0-pytorch-weights",
+    "licenseSourceId": "ow-tabfm-1-1-0-pytorch-license",
+    "license": "other",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "tabular-classification",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag tabular-classification; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi tabular-classification; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "wespeaker-voxceleb-resnet34-lm",
+    "name": "wespeaker-voxceleb-resnet34-LM",
+    "cardSourceId": "ow-wespeaker-voxceleb-resnet34-lm",
+    "weightsSourceId": "ow-wespeaker-voxceleb-resnet34-lm-weights",
+    "licenseSourceId": "ow-wespeaker-voxceleb-resnet34-lm-license",
+    "license": "cc-by-4.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag not stated; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi belirtilmemiş; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "glm-ocr",
+    "name": "GLM-OCR",
+    "cardSourceId": "ow-glm-ocr",
+    "weightsSourceId": "ow-glm-ocr-weights",
+    "licenseSourceId": "ow-glm-ocr-license",
+    "license": "mit",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "image-to-text",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag image-to-text; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi image-to-text; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "scail-2",
+    "name": "SCAIL-2",
+    "cardSourceId": "ow-scail-2",
+    "weightsSourceId": "ow-scail-2-weights",
+    "licenseSourceId": "ow-scail-2-license",
+    "license": "mit",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "image-to-video",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag image-to-video; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi image-to-video; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "glm-asr-nano-2512",
+    "name": "GLM-ASR-Nano-2512",
+    "cardSourceId": "ow-glm-asr-nano-2512",
+    "weightsSourceId": "ow-glm-asr-nano-2512-weights",
+    "licenseSourceId": "ow-glm-asr-nano-2512-license",
+    "license": "mit",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "automatic-speech-recognition",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag automatic-speech-recognition; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi automatic-speech-recognition; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "glm-image",
+    "name": "GLM-Image",
+    "cardSourceId": "ow-glm-image",
+    "weightsSourceId": "ow-glm-image-weights",
+    "licenseSourceId": "ow-glm-image-license",
+    "license": "mit",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "text-to-image",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag text-to-image; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi text-to-image; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "glm-tts",
+    "name": "GLM-TTS",
+    "cardSourceId": "ow-glm-tts",
+    "weightsSourceId": "ow-glm-tts-weights",
+    "licenseSourceId": "ow-glm-tts-license",
+    "license": "mit",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "text-to-speech",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag text-to-speech; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi text-to-speech; kontrol noktası elle incelenmedi."
+    }
   }
 ] satisfies OpenWeightModel[];
 
@@ -1373,6 +1840,39 @@ export const taxonomyTasks = [
           "ow-mamba2",
           "ow-mamba2-method"
         ]
+      },
+      {
+        "modelId": "alodlm-8b",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag text-generation, which maps to Text Generation. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu text-generation işlem hattı etiketini bildiriyor; bu etiket Text Generation görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-alodlm-8b"
+        ]
+      },
+      {
+        "modelId": "glide",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag image-text-to-text, which maps to Text Generation. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu image-text-to-text işlem hattı etiketini bildiriyor; bu etiket Text Generation görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-glide"
+        ]
+      },
+      {
+        "modelId": "fastino-nemotron-3-5-lightning-finance",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag text-generation, which maps to Text Generation. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu text-generation işlem hattı etiketini bildiriyor; bu etiket Text Generation görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-fastino-nemotron-3-5-lightning-finance"
+        ]
       }
     ]
   },
@@ -1609,6 +2109,39 @@ export const taxonomyTasks = [
           "ow-glove-method",
           "ow-glove-paper"
         ]
+      },
+      {
+        "modelId": "embeddinggemma-2",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag feature-extraction, which maps to Semantic Textual Similarity. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu feature-extraction işlem hattı etiketini bildiriyor; bu etiket Semantic Textual Similarity görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-embeddinggemma-2"
+        ]
+      },
+      {
+        "modelId": "tipsv1-g14",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag zero-shot-image-classification, which maps to Semantic Textual Similarity. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu zero-shot-image-classification işlem hattı etiketini bildiriyor; bu etiket Semantic Textual Similarity görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-tipsv1-g14"
+        ]
+      },
+      {
+        "modelId": "tipsv1-so400m14",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag zero-shot-image-classification, which maps to Semantic Textual Similarity. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu zero-shot-image-classification işlem hattı etiketini bildiriyor; bu etiket Semantic Textual Similarity görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-tipsv1-so400m14"
+        ]
       }
     ]
   },
@@ -1735,7 +2268,7 @@ export const taxonomyTasks = [
       }
     ],
     "review": {
-      "observedAt": "2026-10-21",
+      "observedAt": "2026-10-23",
       "outcome": "specialist",
       "summary": {
         "en": "A published recommender checkpoint is available for Amazon Beauty. It predicts identifiers from that catalogue, not arbitrary new products. Preserve the author’s user/item mapping, prompts, candidate validation and ranking protocol. New items or users outside the trained representation require adaptation; this release is a reproducible historical reference, not a current universal leader.",
@@ -1776,7 +2309,7 @@ export const taxonomyTasks = [
       }
     ],
     "review": {
-      "observedAt": "2026-10-21",
+      "observedAt": "2026-10-23",
       "outcome": "specialist",
       "summary": {
         "en": "This is an explicit rating-prediction checkpoint, rather than a generic language model asked to guess a score. Ratings depend on the Amazon Beauty user/item IDs, prompt and numerical postprocessing. A different rating scale or commercial catalogue needs new data and validation; generated scores are not calibrated probabilities.",
@@ -1880,6 +2413,17 @@ export const taxonomyTasks = [
         "sourceIds": [
           "ow-sam3"
         ]
+      },
+      {
+        "modelId": "boxer",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag object-detection, which maps to Object Detection. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu object-detection işlem hattı etiketini bildiriyor; bu etiket Object Detection görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-boxer"
+        ]
       }
     ]
   },
@@ -1951,6 +2495,28 @@ export const taxonomyTasks = [
         },
         "sourceIds": [
           "ow-depth"
+        ]
+      },
+      {
+        "modelId": "da3-giant-1-1",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag depth-estimation, which maps to Depth Estimation. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu depth-estimation işlem hattı etiketini bildiriyor; bu etiket Depth Estimation görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-da3-giant-1-1"
+        ]
+      },
+      {
+        "modelId": "tipsv2-so400m14-dpt",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag depth-estimation, which maps to Depth Estimation. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu depth-estimation işlem hattı etiketini bildiriyor; bu etiket Depth Estimation görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-tipsv2-so400m14-dpt"
         ]
       }
     ]
@@ -2071,6 +2637,17 @@ export const taxonomyTasks = [
         "sourceIds": [
           "ow-qwen38"
         ]
+      },
+      {
+        "modelId": "glm-ocr",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag image-to-text, which maps to Image Captioning. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu image-to-text işlem hattı etiketini bildiriyor; bu etiket Image Captioning görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-glm-ocr"
+        ]
       }
     ]
   },
@@ -2143,6 +2720,17 @@ export const taxonomyTasks = [
         "sourceIds": [
           "ow-image"
         ]
+      },
+      {
+        "modelId": "glm-image",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag text-to-image, which maps to Text-to-Image Generation. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu text-to-image işlem hattı etiketini bildiriyor; bu etiket Text-to-Image Generation görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-glm-image"
+        ]
       }
     ]
   },
@@ -2179,6 +2767,17 @@ export const taxonomyTasks = [
           "ow-glow",
           "ow-glow-download",
           "ow-glow-inference"
+        ]
+      },
+      {
+        "modelId": "flux-3-image-klein",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag image-to-image, which maps to Image-to-Image Generation. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu image-to-image işlem hattı etiketini bildiriyor; bu etiket Image-to-Image Generation görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-flux-3-image-klein"
         ]
       }
     ]
@@ -2252,6 +2851,28 @@ export const taxonomyTasks = [
         "sourceIds": [
           "ow-wan"
         ]
+      },
+      {
+        "modelId": "wan-dancer-14b",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag image-to-video, which maps to Image-to-Video Generation. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu image-to-video işlem hattı etiketini bildiriyor; bu etiket Image-to-Video Generation görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-wan-dancer-14b"
+        ]
+      },
+      {
+        "modelId": "scail-2",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag image-to-video, which maps to Image-to-Video Generation. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu image-to-video işlem hattı etiketini bildiriyor; bu etiket Image-to-Video Generation görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-scail-2"
+        ]
       }
     ]
   },
@@ -2311,6 +2932,17 @@ export const taxonomyTasks = [
         "sourceIds": [
           "ow-pocketsphinx",
           "ow-pocketsphinx-usage"
+        ]
+      },
+      {
+        "modelId": "glm-asr-nano-2512",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag automatic-speech-recognition, which maps to Automatic Speech Recognition. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu automatic-speech-recognition işlem hattı etiketini bildiriyor; bu etiket Automatic Speech Recognition görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-glm-asr-nano-2512"
         ]
       }
     ]
@@ -2432,6 +3064,17 @@ export const taxonomyTasks = [
         "sourceIds": [
           "ow-ecapa"
         ]
+      },
+      {
+        "modelId": "wespeaker-voxceleb-resnet34-lm",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag speaker-identification, which maps to Speaker Identification. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu speaker-identification işlem hattı etiketini bildiriyor; bu etiket Speaker Identification görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-wespeaker-voxceleb-resnet34-lm"
+        ]
       }
     ]
   },
@@ -2504,6 +3147,17 @@ export const taxonomyTasks = [
         "sourceIds": [
           "ow-tts"
         ]
+      },
+      {
+        "modelId": "glm-tts",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag text-to-speech, which maps to Text-to-Speech. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu text-to-speech işlem hattı etiketini bildiriyor; bu etiket Text-to-Speech görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-glm-tts"
+        ]
       }
     ]
   },
@@ -2527,6 +3181,17 @@ export const taxonomyTasks = [
         },
         "sourceIds": [
           "ow-enhancement"
+        ]
+      },
+      {
+        "modelId": "facodec",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag audio-to-audio, which maps to Speech Enhancement. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu audio-to-audio işlem hattı etiketini bildiriyor; bu etiket Speech Enhancement görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-facodec"
         ]
       }
     ]
@@ -2613,6 +3278,61 @@ export const taxonomyTasks = [
         },
         "sourceIds": [
           "ow-audiogen"
+        ]
+      },
+      {
+        "modelId": "acestep-v15-turbo-continuous",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag text-to-audio, which maps to Text-to-Audio Generation. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu text-to-audio işlem hattı etiketini bildiriyor; bu etiket Text-to-Audio Generation görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-acestep-v15-turbo-continuous"
+        ]
+      },
+      {
+        "modelId": "acestep-v15-turbo-shift1",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag text-to-audio, which maps to Text-to-Audio Generation. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu text-to-audio işlem hattı etiketini bildiriyor; bu etiket Text-to-Audio Generation görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-acestep-v15-turbo-shift1"
+        ]
+      },
+      {
+        "modelId": "acestep-captioner",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag text-to-audio, which maps to Text-to-Audio Generation. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu text-to-audio işlem hattı etiketini bildiriyor; bu etiket Text-to-Audio Generation görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-acestep-captioner"
+        ]
+      },
+      {
+        "modelId": "acestep-transcriber",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag audio-text-to-text, which maps to Text-to-Audio Generation. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu audio-text-to-text işlem hattı etiketini bildiriyor; bu etiket Text-to-Audio Generation görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-acestep-transcriber"
+        ]
+      },
+      {
+        "modelId": "acestep-v15-turbo-shift3",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag text-to-audio, which maps to Text-to-Audio Generation. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu text-to-audio işlem hattı etiketini bildiriyor; bu etiket Text-to-Audio Generation görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-acestep-v15-turbo-shift3"
         ]
       }
     ]
@@ -2922,6 +3642,17 @@ export const taxonomyTasks = [
         "sourceIds": [
           "ow-tabpfn"
         ]
+      },
+      {
+        "modelId": "tabfm-1-1-0-pytorch",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag tabular-classification, which maps to Classification. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu tabular-classification işlem hattı etiketini bildiriyor; bu etiket Classification görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-tabfm-1-1-0-pytorch"
+        ]
       }
     ]
   },
@@ -2982,6 +3713,28 @@ export const taxonomyTasks = [
         },
         "sourceIds": [
           "ow-chronos"
+        ]
+      },
+      {
+        "modelId": "chronos-t5-large",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag time-series-forecasting, which maps to Time-Series Forecasting. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu time-series-forecasting işlem hattı etiketini bildiriyor; bu etiket Time-Series Forecasting görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-chronos-t5-large"
+        ]
+      },
+      {
+        "modelId": "timesfm-3-0-pytorch",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag time-series-forecasting, which maps to Time-Series Forecasting. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu time-series-forecasting işlem hattı etiketini bildiriyor; bu etiket Time-Series Forecasting görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-timesfm-3-0-pytorch"
         ]
       }
     ]

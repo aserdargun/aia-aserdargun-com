@@ -1,0 +1,3035 @@
+{
+  "generatedAt": "2026-10-23T06:40:14.411Z",
+  "repositories": {
+    "checked": 59,
+    "updated": [
+      {
+        "repository": "ACE-Step/Ace-Step1.5",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "AutonLab/MOMENT-1-large",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "ByteDance-Seed/UI-TARS-1.5-7B",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "IDEA-Research/grounding-dino-base",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "MCG-NJU/videomae-large-finetuned-kinetics",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "MIT/ast-finetuned-audioset-10-10-0.4593",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "PaddlePaddle/PaddleOCR-VL-1.6",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "Plachta/Seed-VC",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "Prior-Labs/tabpfn_3_5",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "Qwen/Qwen-Image-2512",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "Qwen/Qwen-Image-Edit-2511",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "Qwen/Qwen3-ASR-1.7B",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "Qwen/Qwen3-Coder-Next",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "Qwen/Qwen3-Embedding-8B",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "Qwen/Qwen3-Reranker-8B",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "Qwen/Qwen3.8-27B",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "Salesforce/codet5-base",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "Salesforce/codet5p-770m",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "Wan-AI/Wan2.2-TI2V-5B",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "allenai/OLMo-2-1124-7B-DPO",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "amazon/chronos-2",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "biu-nlp/f-coref",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-Fill-dev",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "cross-encoder/nli-deberta-v3-large",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-Prover-V2-671B",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-R1-0528",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "defog/sqlcoder-70b-alpha",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "depth-anything/DA3-LARGE",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "facebook/audiogen-medium",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "facebook/bart-large-cnn",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "facebook/fasttext-language-identification",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "facebook/mask2former-swin-large-ade-semantic",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "facebook/musicgen-large",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "facebook/nllb-200-distilled-600M",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "facebook/sam3",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "facebook/seamless-m4t-v2-large",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "fastino/gliner2-large-v1",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "google/siglip2-so400m-patch14-384",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "grammarly/coedit-large",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "makitanikaze/P5_beauty_small",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "meta-llama/Llama-3.1-8B-Instruct",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "openai/shap-e",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "pyannote/speaker-diarization-community-1",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "stanfordnlp/stanza-en",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "state-spaces/mamba2-2.7b",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "superb/hubert-large-superb-er",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "superb/wav2vec2-base-superb-ks",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "timm/mixer_b16_224.goog_in21k_ft_in1k",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "timm/resnet50.fb_ssl_yfcc100m_ft_in1k",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "usyd-community/vitpose-plus-huge",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      },
+      {
+        "repository": "zai-org/GLM-5.3",
+        "changed": [
+          "artifact",
+          "observed",
+          "weights-observed"
+        ]
+      }
+    ],
+    "unchanged": 6,
+    "failed": []
+  },
+  "discovered": {
+    "added": [
+      {
+        "repository": "ACE-Step/acestep-v15-turbo-continuous",
+        "modelId": "acestep-v15-turbo-continuous",
+        "taskId": "text-to-audio-generation",
+        "families": [
+          "transformers"
+        ],
+        "license": "mit",
+        "parameterCount": 2393872518,
+        "totalBytes": 4791666819
+      },
+      {
+        "repository": "ACE-Step/acestep-v15-turbo-shift1",
+        "modelId": "acestep-v15-turbo-shift1",
+        "taskId": "text-to-audio-generation",
+        "families": [
+          "transformers"
+        ],
+        "license": "mit",
+        "parameterCount": 2393872518,
+        "totalBytes": 4791666819
+      },
+      {
+        "repository": "ACE-Step/acestep-captioner",
+        "modelId": "acestep-captioner",
+        "taskId": "text-to-audio-generation",
+        "families": [
+          "multimodal-models",
+          "decoder-only"
+        ],
+        "license": "mit",
+        "parameterCount": 10732225408,
+        "totalBytes": 22363120896
+      },
+      {
+        "repository": "ACE-Step/acestep-transcriber",
+        "modelId": "acestep-transcriber",
+        "taskId": "text-to-audio-generation",
+        "families": [
+          "multimodal-models",
+          "decoder-only"
+        ],
+        "license": "mit",
+        "parameterCount": 10732225408,
+        "totalBytes": 22363120896
+      },
+      {
+        "repository": "ACE-Step/acestep-v15-turbo-shift3",
+        "modelId": "acestep-v15-turbo-shift3",
+        "taskId": "text-to-audio-generation",
+        "families": [
+          "transformers"
+        ],
+        "license": "mit",
+        "parameterCount": 2393872518,
+        "totalBytes": 4791666819
+      },
+      {
+        "repository": "Plachta/FAcodec",
+        "modelId": "facodec",
+        "taskId": "speech-enhancement",
+        "families": [
+          "transformers"
+        ],
+        "license": "mit",
+        "parameterCount": null,
+        "totalBytes": 1498645002
+      },
+      {
+        "repository": "Wan-AI/Wan-Dancer-14B",
+        "modelId": "wan-dancer-14b",
+        "taskId": "image-to-video-generation",
+        "families": [
+          "diffusion-models"
+        ],
+        "license": "apache-2.0",
+        "parameterCount": null,
+        "totalBytes": 85622982833
+      },
+      {
+        "repository": "amazon/ALoDLM-8B",
+        "modelId": "alodlm-8b",
+        "taskId": "text-generation",
+        "families": [
+          "decoder-only",
+          "diffusion-models",
+          "convolutional-networks"
+        ],
+        "license": "cc-by-nc-4.0",
+        "parameterCount": 8190735360,
+        "totalBytes": 16381527179
+      },
+      {
+        "repository": "amazon/chronos-t5-large",
+        "modelId": "chronos-t5-large",
+        "taskId": "time-series-forecasting",
+        "families": [
+          "multimodal-models",
+          "encoder-decoder"
+        ],
+        "license": "apache-2.0",
+        "parameterCount": 708963328,
+        "totalBytes": 2835915592
+      },
+      {
+        "repository": "black-forest-labs/flux-3-image-klein",
+        "modelId": "flux-3-image-klein",
+        "taskId": "image-to-image-generation",
+        "families": [
+          "diffusion-models"
+        ],
+        "license": "other",
+        "parameterCount": 5548681984,
+        "totalBytes": 43291579408
+      },
+      {
+        "repository": "depth-anything/DA3-GIANT-1.1",
+        "modelId": "da3-giant-1-1",
+        "taskId": "depth-estimation",
+        "families": [
+          "transformers"
+        ],
+        "license": "cc-by-nc-4.0",
+        "parameterCount": 1355674125,
+        "totalBytes": 5422814644
+      },
+      {
+        "repository": "facebook/boxer",
+        "modelId": "boxer",
+        "taskId": "object-detection",
+        "families": [
+          "transformers"
+        ],
+        "license": "cc-by-nc-4.0",
+        "parameterCount": null,
+        "totalBytes": 857909746
+      },
+      {
+        "repository": "fastino/GLiDE",
+        "modelId": "glide",
+        "taskId": "text-generation",
+        "families": [
+          "multimodal-models",
+          "decoder-only",
+          "convolutional-networks"
+        ],
+        "license": "other",
+        "parameterCount": 26085330160,
+        "totalBytes": 52173420384
+      },
+      {
+        "repository": "fastino/Fastino-Nemotron-3.5-Lightning-Finance",
+        "modelId": "fastino-nemotron-3-5-lightning-finance",
+        "taskId": "text-generation",
+        "families": [
+          "decoder-only",
+          "mixture-of-experts",
+          "convolutional-networks"
+        ],
+        "license": "apache-2.0",
+        "parameterCount": 31577937344,
+        "totalBytes": 65827374264
+      },
+      {
+        "repository": "google/embeddinggemma-2",
+        "modelId": "embeddinggemma-2",
+        "taskId": "semantic-textual-similarity",
+        "families": [
+          "encoder-only",
+          "multimodal-models"
+        ],
+        "license": "apache-2.0",
+        "parameterCount": 744371512,
+        "totalBytes": 1488915288
+      },
+      {
+        "repository": "google/timesfm-3.0-pytorch",
+        "modelId": "timesfm-3-0-pytorch",
+        "taskId": "time-series-forecasting",
+        "families": [
+          "transformers"
+        ],
+        "license": "other",
+        "parameterCount": 330710976,
+        "totalBytes": 1322898824
+      },
+      {
+        "repository": "google/tipsv1-g14",
+        "modelId": "tipsv1-g14",
+        "taskId": "semantic-textual-similarity",
+        "families": [
+          "transformers"
+        ],
+        "license": "apache-2.0",
+        "parameterCount": 1525085696,
+        "totalBytes": 6100424304
+      },
+      {
+        "repository": "google/tipsv1-so400m14",
+        "modelId": "tipsv1-so400m14",
+        "taskId": "semantic-textual-similarity",
+        "families": [
+          "transformers"
+        ],
+        "license": "apache-2.0",
+        "parameterCount": 861726816,
+        "totalBytes": 3446991256
+      },
+      {
+        "repository": "google/tipsv2-so400m14-dpt",
+        "modelId": "tipsv2-so400m14-dpt",
+        "taskId": "depth-estimation",
+        "families": [
+          "transformers"
+        ],
+        "license": "apache-2.0",
+        "parameterCount": 532924265,
+        "totalBytes": 2131758580
+      },
+      {
+        "repository": "google/tabfm-1.1.0-pytorch",
+        "modelId": "tabfm-1-1-0-pytorch",
+        "taskId": "classification",
+        "families": [
+          "transformers"
+        ],
+        "license": "other",
+        "parameterCount": null,
+        "totalBytes": 1645246486
+      },
+      {
+        "repository": "pyannote/wespeaker-voxceleb-resnet34-LM",
+        "modelId": "wespeaker-voxceleb-resnet34-lm",
+        "taskId": "speaker-identification",
+        "families": [
+          "encoder-only"
+        ],
+        "license": "cc-by-4.0",
+        "parameterCount": null,
+        "totalBytes": 26645418
+      },
+      {
+        "repository": "zai-org/GLM-OCR",
+        "modelId": "glm-ocr",
+        "taskId": "image-captioning",
+        "families": [
+          "multimodal-models",
+          "convolutional-networks"
+        ],
+        "license": "mit",
+        "parameterCount": 1325258240,
+        "totalBytes": 2650579464
+      },
+      {
+        "repository": "zai-org/SCAIL-2",
+        "modelId": "scail-2",
+        "taskId": "image-to-video-generation",
+        "families": [
+          "diffusion-models"
+        ],
+        "license": "mit",
+        "parameterCount": null,
+        "totalBytes": 82435341424
+      },
+      {
+        "repository": "zai-org/GLM-ASR-Nano-2512",
+        "modelId": "glm-asr-nano-2512",
+        "taskId": "automatic-speech-recognition",
+        "families": [
+          "multimodal-models"
+        ],
+        "license": "mit",
+        "parameterCount": 2257843200,
+        "totalBytes": 4515776712
+      },
+      {
+        "repository": "zai-org/GLM-Image",
+        "modelId": "glm-image",
+        "taskId": "text-to-image-generation",
+        "families": [
+          "diffusion-models"
+        ],
+        "license": "mit",
+        "parameterCount": 6926882880,
+        "totalBytes": 35765307854
+      },
+      {
+        "repository": "zai-org/GLM-TTS",
+        "modelId": "glm-tts",
+        "taskId": "text-to-speech",
+        "families": [
+          "flow-matching"
+        ],
+        "license": "mit",
+        "parameterCount": null,
+        "totalBytes": 8820923544
+      }
+    ],
+    "skipped": [
+      {
+        "repository": "ACE-Step/acestep-v15-xl-sft-diffusers",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "ACE-Step/acestep-v15-xl-base-diffusers",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "ACE-Step/acestep-v15-xl-turbo-diffusers",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "ACE-Step/ace-step-v1.5-1d-vae-stable-audio-format",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "ACE-Step/acestep-v15-xl-turbo",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "ACE-Step/acestep-v15-xl-sft",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "ACE-Step/acestep-v15-xl-base",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "ACE-Step/acestep-v15-sft",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "ACE-Step/acestep-v15-base",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "ACE-Step/ACE-Step-v1.5-chinese-new-year-LoRA",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "ACE-Step/acestep-5Hz-lm-4B",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "ACE-Step/acestep-5Hz-lm-0.6B",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "ACE-Step/ACE-Step-v1-3.5B",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "ACE-Step/ACE-Step-v1-chinese-rap-LoRA",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "AutonLab/MOMENT-1-base",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "AutonLab/MOMENT-1-small",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "PaddlePaddle/PP-DocLayoutV3_safetensors",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-DocLayoutV3",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "PaddlePaddle/PaddleOCR-VL-1.5",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "PaddlePaddle/PaddleOCR-VL",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/HPD-Parsing",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/korean_PP-OCRv5_mobile_rec",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_small_rec_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_medium_rec_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_tiny_det_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_small_det_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_medium_det_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_tiny_rec",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_small_rec",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_medium_rec",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_tiny_rec_safetensors",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_small_rec_safetensors",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_medium_rec_safetensors",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_medium_det_safetensors",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_small_det_safetensors",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_tiny_det_safetensors",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_medium_det",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_small_det",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv6_tiny_det",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "PaddlePaddle/UVDoc_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv5_mobile_rec_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv5_server_rec_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv5_mobile_det_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-OCRv5_server_det_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/RT-DETR-L_wireless_table_cell_det_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/RT-DETR-L_wired_table_cell_det_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/SLANeXt_wireless_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/SLANeXt_wired_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-DocLayout_plus-L_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-DocBlockLayout_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-DocLayoutV3_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-DocLayoutV2_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-LCNet_x1_0_table_cls_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-LCNet_x1_0_textline_ori_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-LCNet_x1_0_doc_ori_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-LCNet_x0_25_textline_ori_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PaddleOCR-VL-1.6-GGUF",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PaddleOCR-VL-1.5-GGUF",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/SLANet_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/cyrillic_PP-OCRv5_mobile_rec_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/devanagari_PP-OCRv5_mobile_rec_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/ta_PP-OCRv5_mobile_rec_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/te_PP-OCRv5_mobile_rec_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/arabic_PP-OCRv5_mobile_rec_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/el_PP-OCRv5_mobile_rec_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/th_PP-OCRv5_mobile_rec_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/en_PP-OCRv5_mobile_rec_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/latin_PP-OCRv5_mobile_rec_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/korean_PP-OCRv5_mobile_rec_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/eslav_PP-OCRv5_mobile_rec_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/SLANet_plus_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-FormulaNet_plus-L_onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "PaddlePaddle/PP-FormulaNet-L_safetensors",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "PaddlePaddle/PP-FormulaNet_plus-L_safetensors",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "Plachta/StreamVoiceAnon",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "Plachta/ASTRAL-quantization",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "Plachta/JDCnet",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "Plachta/FAcodec-redecoder",
+        "reason": "variant of a cited checkpoint"
+      },
+      {
+        "repository": "Plachta/VALL-E-X",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "Prior-Labs/tabpfn_3",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "Prior-Labs/demo",
+        "reason": "no model card"
+      },
+      {
+        "repository": "Prior-Labs/TabPFN-v2-clf",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "Prior-Labs/tabpfn_2_6",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "Prior-Labs/tabpfn_2_5",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "Prior-Labs/TabPFN-v2-reg",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "Qwen/Qwen-Image-2.1-Turbo",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen-Image-2.1",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Qwen/Qwen3Guard-Stream-4B",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen3Guard-Stream-0.6B",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen3Guard-Stream-8B",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen-Image-2.1-PE-I2I",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "Qwen/Qwen-Image-2.1-PE-T2I",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Qwen/Qwen-Drive-1.0-4B",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen3.8-Flash-Next-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen3.8-Flash-Next",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Qwen/Qwen3.8-27B-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen3.8-2.4T-A95B",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Qwen/Qwen3.8-2.4T-A95B-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen3-ASR-0.6B-hf",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Qwen/Qwen3-ASR-1.7B-hf",
+        "reason": "variant of a cited checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen3-ForcedAligner-0.6B-hf",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Qwen/Qwen-AgentWorld-35B-A3B",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen-Image-Bench",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "Qwen/SAE-Res-Qwen3-8B-Base-W64K-L0_50",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "Qwen/SAE-Res-Qwen3-8B-Base-W64K-L0_100",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "Qwen/SAE-Res-Qwen3.5-9B-Base-W64K-L0_50",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "Qwen/SAE-Res-Qwen3.5-9B-Base-W64K-L0_100",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "Qwen/SAE-Res-Qwen3.5-35B-A3B-Base-W32K-L0_50",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "Qwen/SAE-Res-Qwen3.5-2B-Base-W32K-L0_50",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/SAE-Res-Qwen3.5-2B-Base-W32K-L0_100",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/SAE-Res-Qwen3.5-27B-W80K-L0_50",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/SAE-Res-Qwen3-30B-A3B-Base-W32K-L0_50",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/SAE-Res-Qwen3-30B-A3B-Base-W128K-L0_100",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/SAE-Res-Qwen3-1.7B-Base-W32K-L0_50",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/SAE-Res-Qwen3-1.7B-Base-W32K-L0_100",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/SAE-Res-Qwen3.5-27B-W80K-L0_100",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/SAE-Res-Qwen3.5-35B-A3B-Base-W128K-L0_100",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/WebWorld-14B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/WebWorld-32B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/WebWorld-8B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/Qwen3.5-122B-A10B-GPTQ-Int4",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen3.5-122B-A10B-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen3.5-397B-A17B-GPTQ-Int4",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen3.5-397B-A17B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/Qwen3.5-397B-A17B-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen3.5-122B-A10B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/Qwen3.5-27B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/Qwen3.6-35B-A3B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/Qwen3.6-35B-A3B-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen3.6-27B-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen3.6-27B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/Qwen3.5-35B-A3B-GPTQ-Int4",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen3.5-27B-GPTQ-Int4",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen3.5-35B-A3B-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen3.5-27B-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "Qwen/Qwen3.5-35B-A3B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/Qwen3.5-9B-Base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/Qwen3.5-35B-A3B-Base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/Qwen3.5-0.8B-Base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/Qwen3.5-2B-Base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/Qwen3.5-4B-Base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/Qwen3-Embedding-0.6B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Qwen/Qwen3-Reranker-4B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Wan-AI/Wan2.2-Animate-2-14B-Diffusers",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "Wan-AI/Wan2.2-Animate-2-14B",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "Wan-AI/Wan2.2-Animate-14B-Diffusers",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "Wan-AI/Wan2.2-Animate-14B",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "Wan-AI/Wan2.2-S2V-14B",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Wan-AI/Wan2.2-T2V-A14B-Diffusers",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Wan-AI/Wan2.2-I2V-A14B-Diffusers",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Wan-AI/Wan2.2-T2V-A14B",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Wan-AI/Wan2.2-I2V-A14B",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Wan-AI/Wan2.1-VACE-14B-diffusers",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Wan-AI/Wan2.1-VACE-1.3B-diffusers",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Wan-AI/Wan2.1-VACE-1.3B",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Wan-AI/Wan2.1-VACE-14B",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Wan-AI/Wan2.1-FLF2V-14B-720P-diffusers",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "Wan-AI/Wan2.1-FLF2V-14B-720P",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "Wan-AI/Wan2.1-T2V-1.3B-Diffusers",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Wan-AI/Wan2.1-T2V-14B-Diffusers",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "Wan-AI/Wan2.1-I2V-14B-480P-Diffusers",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Wan-AI/Wan2.1-I2V-14B-720P-Diffusers",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Wan-AI/Wan2.1-T2V-14B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Wan-AI/Wan2.1-T2V-1.3B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Wan-AI/Wan2.1-I2V-14B-720P",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "Wan-AI/Wan2.1-I2V-14B-480P",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "amazon/LAR-27B",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "amazon/LAR-9B",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "amazon/strands-decider-2B-qwen3.5-v1-2610",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "amazon/strands-decider-26B-A4B-gemma4-v1-2610",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "amazon/strands-decider-12B-gemma4-v1-2610",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "amazon/strands-decider-E4B-gemma4-v1-2610",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "amazon/strands-decider-E2B-gemma4-v1-2610",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "amazon/ALoDLM-1.7B",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "amazon/poiss-bge-m3-reranker",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "amazon/poiss-bge-m3-retriever",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "amazon/Mamba2-primed-HQwen3-8B-Instruct",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "amazon/GKA-primed-HQwen3-8B-Instruct",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "amazon/GKA-primed-HQwen3-32B-Instruct",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "amazon/GDN-primed-HQwen3-8B-Instruct",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "amazon/GDN-primed-HQwen3-32B-Instruct",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "amazon/BMOJOF-primed-HQwen3-8B-Instruct",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "amazon/Qwen3-Coder-30B-A3B-Instruct-P-EAGLE-long-context",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "amazon/gpt-oss-20b-p-eagle-long-context",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "amazon/gpt-oss-120b-p-eagle-long-context",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "amazon/gpt-oss-120b-p-eagle",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "amazon/GPT-OSS-20B-P-EAGLE",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "amazon/GKA-primed-HQwen3-32B-Reasoner",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "amazon/GDN-primed-HQwen3-8B-Reasoner",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "amazon/GKA-primed-HQwen3-8B-Reasoner",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "amazon/Qwen3-Coder-30B-A3B-Instruct-P-EAGLE",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "amazon/chronos-t5-base",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "amazon/chronos-t5-small",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "amazon/chronos-t5-mini",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "amazon/chronos-t5-tiny",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "amazon/chronos-bolt-tiny",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "amazon/chronos-bolt-mini",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "amazon/chronos-bolt-small",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "amazon/chronos-bolt-base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "amazon/bort",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "amazon/MistralLite-AWQ",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "amazon/MistralLite",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "amazon/Titan-text-embeddings-v2",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "amazon/FalconLite2",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "amazon/FalconLite",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "amazon/sm-hackathon-actionability-9-multi-outputs-setfit-all-distilroberta-model-v0.2",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "amazon/sm-hackathon-actionability-9-multi-outputs-setfit-all-distilroberta-model-v0.1",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "amazon/sm-hackathon-actionability-9-multi-outputs-setfit-all-roberta-large-model-v0.1",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "amazon/sm-hackathon-actionability-9-multi-outputs-setfit-model-v0.1",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "amazon/sm-hackathon-setfit-model",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "black-forest-labs/flux-3-image-klein-comfy",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "black-forest-labs/flux-3-image-klein-base",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "black-forest-labs/flux-3-image-klein-pup",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "black-forest-labs/flux-3-action-droid",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "black-forest-labs/flux-3-action-so101",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "black-forest-labs/flux-3-action-base",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.2-small-decoder",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.2-klein-9b-kv",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.2-klein-9b-kv-fp8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.2-klein-base-4b-fp8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.2-klein-4b-fp8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.2-klein-base-9b-fp8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.2-klein-9b-fp8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.2-klein-base-4b-nvfp4",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.2-klein-4b-nvfp4",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.2-klein-base-9b-nvfp4",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.2-klein-9b-nvfp4",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.2-klein-base-4B",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.2-klein-base-9B",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.2-klein-4B",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.2-klein-9B",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.2-dev",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.2-dev-NVFP4",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-dev-NVFP4",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-Kontext-dev-NVFP4",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-dev-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-Kontext-dev",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-Kontext-dev-onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-Krea-dev",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-Canny-dev-onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-Depth-dev-onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-dev-onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-Canny-dev-lora",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-Depth-dev-lora",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-Canny-dev",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-Depth-dev",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-Redux-dev",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-dev",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-schnell-onnx",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "black-forest-labs/FLUX.1-schnell",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "boltz-community/boltz-1",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V4.1-Flash",
+        "reason": "quantised copy"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+        "reason": "quantised copy"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V4-Pro-0813",
+        "reason": "quantised copy"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V4-Flash-0731",
+        "reason": "quantised copy"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V4-Flash-DSpark",
+        "reason": "quantised copy"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V4-Pro-DSpark",
+        "reason": "quantised copy"
+      },
+      {
+        "repository": "deepseek-ai/eagle3_gemma4_12b_ttt7",
+        "reason": "no model card"
+      },
+      {
+        "repository": "deepseek-ai/eagle3_qwen3_14b_ttt7",
+        "reason": "no model card"
+      },
+      {
+        "repository": "deepseek-ai/eagle3_qwen3_8b_ttt7",
+        "reason": "no model card"
+      },
+      {
+        "repository": "deepseek-ai/eagle3_qwen3_4b_ttt7",
+        "reason": "no model card"
+      },
+      {
+        "repository": "deepseek-ai/dflash_gemma4_12b_block7",
+        "reason": "no model card"
+      },
+      {
+        "repository": "deepseek-ai/dflash_qwen3_14b_block7",
+        "reason": "no model card"
+      },
+      {
+        "repository": "deepseek-ai/dflash_qwen3_8b_block7",
+        "reason": "no model card"
+      },
+      {
+        "repository": "deepseek-ai/dflash_qwen3_4b_block7",
+        "reason": "no model card"
+      },
+      {
+        "repository": "deepseek-ai/dspark_gemma4_12b_block7",
+        "reason": "no model card"
+      },
+      {
+        "repository": "deepseek-ai/dspark_qwen3_14b_block7",
+        "reason": "no model card"
+      },
+      {
+        "repository": "deepseek-ai/dspark_qwen3_8b_block7",
+        "reason": "no model card"
+      },
+      {
+        "repository": "deepseek-ai/dspark_qwen3_4b_block7",
+        "reason": "no model card"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V4-Pro",
+        "reason": "quantised copy"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V4-Flash",
+        "reason": "quantised copy"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V4-Flash-Base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V4-Pro-Base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-OCR-2",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V3.2-Speciale",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V3.2",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-Math-V2",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V3.2-Exp",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-OCR",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V3.2-Exp-Base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V3.1-Terminus",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V3.1",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V3.1-Base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-Prover-V2-7B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-R1-Zero",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-R1",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V3-0324",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V3",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V3-Base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/Janus-Pro-1B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/Janus-Pro-7B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/JanusFlow-1.3B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/Janus-1.3B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/deepseek-vl2",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/deepseek-vl2-small",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/deepseek-vl2-tiny",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V2.5",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-V2.5-1210",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-Coder-V2-Instruct-0724",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-Prover-V1.5-Base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "deepseek-ai/DeepSeek-Prover-V1.5-SFT",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "depth-anything/camera-depth-model-zed2i-quality",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "depth-anything/camera-depth-model-zed2i-neural",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "depth-anything/camera-depth-model-l515",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "depth-anything/camera-depth-model-base",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "depth-anything/DA3-LARGE-1.1",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "depth-anything/DA3NESTED-GIANT-LARGE-1.1",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "depth-anything/DA3-BASE",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "depth-anything/DA3MONO-LARGE",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "depth-anything/DA3METRIC-LARGE",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "depth-anything/DA3-SMALL",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "depth-anything/DA3-GIANT",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "depth-anything/DA3NESTED-GIANT-LARGE",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "depth-anything/trace-anything",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "depth-anything/camera-depth-model-kinect",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "depth-anything/camera-depth-model-d435",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "depth-anything/camera-depth-model-d405",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "depth-anything/Video-Depth-Anything-Base",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "depth-anything/Metric-Video-Depth-Anything-Base",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "depth-anything/Metric-Video-Depth-Anything-Small",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "depth-anything/Metric-Video-Depth-Anything-Large",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/prompt-depth-anything-vitl-hf",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/prompt-depth-anything-vits-transparent-hf",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/prompt-depth-anything-vits-hf",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/prompt-depth-anything-vits",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/prompt-depth-anything-vitl",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/prompt-depth-anything-vits-transparent",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Video-Depth-Anything-Large",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Video-Depth-Anything-Small",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Metric-Outdoor-Large-hf",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Metric-Indoor-Base-hf",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Metric-Outdoor-Base-hf",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Metric-Indoor-Small-hf",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Metric-Outdoor-Small-hf",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Metric-Indoor-Large-hf",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Large",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Small",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Small-hf",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Large-hf",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Base-hf",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Metric-Hypersim-Large",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Metric-VKITTI-Large",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Metric-Hypersim-Base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Metric-Hypersim-Small",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Metric-VKITTI-Small",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "depth-anything/Depth-Anything-V2-Metric-VKITTI-Base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/UMA",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "facebook/meta-encoder",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "facebook/VGGT-Omega",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "facebook/MobileMoE-L-QAT",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "facebook/MobileMoE-M-QAT",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "facebook/MobileMoE-S-QAT",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "facebook/MobileMoE-L-SFT",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "facebook/MobileMoE-M-SFT",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "facebook/MobileMoE-S-SFT",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "facebook/MobileMoE-L-Base",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "facebook/MobileMoE-M-Base",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "facebook/MobileMoE-S-Base",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "facebook/MoEViE-H14-448",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "facebook/MoEViE-B16-224",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "facebook/MoEViE-L16-384",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "facebook/tribev2-mini",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "facebook/OMC25",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "facebook/OMol25",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "facebook/autopartgen",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "facebook/LAMP",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "facebook/sapiens2-matting-1b",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "facebook/sapiens2-pointmap-5b",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "facebook/sapiens2-pointmap-1b",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "facebook/sapiens2-pointmap-0.8b",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "facebook/sapiens2-pointmap-0.4b",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "facebook/sapiens2-normal-5b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2-normal-1b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2-normal-0.8b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2-normal-0.4b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2-seg-5b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2-seg-1b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2-seg-0.8b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2-seg-0.4b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2-pose-5b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2-pose-0.8b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2-pose-0.4b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2-pretrain-5b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2-pretrain-1b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2-pretrain-0.8b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2-pretrain-0.4b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2-pretrain-0.1b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sam-3d-objects",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2-pose-1b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/meshflow",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/Large-Sparse-Reconstruction-Model",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/lagernvs_general_512",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/hyden-mogev2-surface-normal",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/hyden-mogev2-metric-point",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/tribev2-subcortical",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sapiens2-pretrain-1b-4k",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/hyden-da2-relative-depth",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/crv-8b-instruct-transcoders",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/sam3.1",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/tribev2",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/EUPE-ConvNeXt-S",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/EUPE-ConvNeXt-T",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/EUPE-ConvNeXt-B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "facebook/EUPE-ViT-T",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "fastino/Fastino-Nemotron-3.5-Super-VL-Finance",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "fastino/Fastino-Nemotron-3.5-Super-VL-Healthcare",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "fastino/Fastino-Nemotron-3.5-Lightning-Healthcare",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "fastino/GLiNER2.5-Decide",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "fastino/GLiNER2.5-multi-Decide",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "fastino/gliner2.5-multi-v1",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "fastino/gliner2.5-base-v1",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "fastino/gliner2.5-small-v1",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "fastino/GLiNER2.5-Decide-1B",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "fastino/gliner2-multi-v1",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "fastino/gliner2-base-v1",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "fastino/GLiNER2-Guardrails-PII-Multi",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "fastino/gliguard-LLMGuardrails-300M",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "fastino/gliner2-privacy-filter-PII-multi",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "google/gnm-v3",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "google/gemma-4-12B-it-assistant",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "google/tipsv1-g14-lowres",
+        "reason": "variant of a cited checkpoint"
+      },
+      {
+        "repository": "google/tipsv1-l14",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "google/tipsv1-s14",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "google/tipsv1-b14",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "google/tipsv2-so400m14",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "google/tipsv2-l14-dpt",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "google/tipsv2-l14",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "google/tipsv2-g14-dpt",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "google/tipsv2-g14",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "google/tipsv2-b14-dpt",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "google/tipsv2-b14",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "google/gemma-4-E4B-it-qat-mobile-ct",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-E2B-it-qat-mobile-ct",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-E4B-it-qat-mobile-transformers",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-E2B-it-qat-mobile-transformers",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-31B-it-qat-w4a16-ct",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-12B-it-qat-w4a16-ct",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-E4B-it-qat-w4a16-ct",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-E2B-it-qat-w4a16-ct",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-31B-it-qat-q4_0-unquantized-assistant",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-26B-A4B-it-qat-q4_0-unquantized-assistant",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-12B-it-qat-q4_0-unquantized-assistant",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-E4B-it-qat-q4_0-unquantized-assistant",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-E2B-it-qat-q4_0-unquantized-assistant",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-31B-it-qat-q4_0-unquantized",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-26B-A4B-it-qat-q4_0-unquantized",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-12B-it-qat-q4_0-unquantized",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-E4B-it-qat-q4_0-unquantized",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-E2B-it-qat-q4_0-unquantized",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-31B-it",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-26B-A4B-it",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "google/gemma-4-12B-it",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "google/gemma-4-E4B-it",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "google/gemma-4-E2B-it",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-31B-it-qat-q4_0-gguf",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-26B-A4B-it-qat-q4_0-gguf",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-12B-it-qat-q4_0-gguf",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-E4B-it-qat-q4_0-gguf",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-E2B-it-qat-q4_0-gguf",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/tapnet",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "google/gemma-4-31B-it-assistant",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "google/gemma-4-31B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "google/gemma-4-26B-A4B-it-assistant",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "google/gemma-4-26B-A4B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "google/gemma-4-12B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "google/gemma-4-E4B-it-assistant",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "google/gemma-4-E4B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "google/gemma-4-E2B-it-assistant",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/gemma-4-E2B",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "google/diffusiongemma-26B-A4B-it",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "google/tabfm-1.0.0-jax",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "google/tabfm-1.0.0-pytorch",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "pyannote/speaker-diarization-precision",
+        "reason": "no published license"
+      },
+      {
+        "repository": "pyannote/speaker-diarization-community-1-cloud",
+        "reason": "no published license"
+      },
+      {
+        "repository": "pyannote/ci-segmentation",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "pyannote/speech-separation-ami-1.0",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "pyannote/separation-ami-1.0",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "pyannote/speaker-diarization-3.1",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "pyannote/overlapped-speech-detection",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "pyannote/speaker-segmentation",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "pyannote/voice-activity-detection",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "pyannote/segmentation",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "pyannote/speaker-diarization",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "pyannote/speaker-diarization-3.0",
+        "reason": "no published weight files"
+      },
+      {
+        "repository": "pyannote/embedding",
+        "reason": "identifier already used"
+      },
+      {
+        "repository": "pyannote/segmentation-3.0",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "pyannote/brouhaha",
+        "reason": "no taxonomy task mapping"
+      },
+      {
+        "repository": "zai-org/GLM-5.3-Flash-BF16",
+        "reason": "variant of a cited checkpoint"
+      },
+      {
+        "repository": "zai-org/GLM-5.3-BF16",
+        "reason": "variant of a cited checkpoint"
+      },
+      {
+        "repository": "zai-org/GLM-5.3-Flash",
+        "reason": "quantised copy"
+      },
+      {
+        "repository": "zai-org/GLM-5.2-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "zai-org/GLM-5.2",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "zai-org/GLM-5",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "zai-org/GLM-4.1V-9B-Thinking",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "zai-org/GLM-5.1",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "zai-org/GLM-5.1-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "zai-org/GLM-5-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "zai-org/GLM-4.7-Flash",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "zai-org/GLM-4.7",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "zai-org/AutoGLM-Phone-9B-Multilingual",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "zai-org/AutoGLM-Phone-9B",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "zai-org/GLM-4.7-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "zai-org/SCAIL-Preview",
+        "reason": "training-stage or serving variant"
+      },
+      {
+        "repository": "zai-org/RealVideo",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "zai-org/Kaleido-14B-S2V",
+        "reason": "fine-tune of another checkpoint"
+      },
+      {
+        "repository": "zai-org/GLM-4.6V-Flash",
+        "reason": "not newer than the cited release"
+      },
+      {
+        "repository": "zai-org/GLM-4.6V-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "zai-org/GLM-4.6V",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/SSVAE",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/WebVIA-Agent",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/UI2Code_N",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/GLM-4.5V-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "zai-org/GLM-4.5V",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/GLM-4.1V-9B-Base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/Glyph",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/GLM-4.6-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "zai-org/GLM-4.6",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/GLM-4.5-Air-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "zai-org/GLM-4.5-FP8",
+        "reason": "not a base checkpoint"
+      },
+      {
+        "repository": "zai-org/GLM-4.5",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/GLM-4.5-Air",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/GLM-4.5-Air-Base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/GLM-4.5-Base",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/glm-4-9b-chat-1m",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/SWE-Dev-9B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/SWE-Dev-7B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/SWE-Dev-32B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/androidgen-llama-3-70b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/androidgen-glm-4-9b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/cogvlm2-llama3-caption",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/GLM-4-32B-0414",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/GLM-Z1-9B-0414",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/GLM-Z1-32B-0414",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/glm-4-9b",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/GLM-Z1-Rumination-32B-0414",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/GLM-4-32B-Base-0414",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/GLM-4-9B-0414",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/CogVideoX1.5-5B",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/CogVideoX1.5-5B-I2V",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/glm-4-9b-chat",
+        "reason": "candidate limit reached"
+      },
+      {
+        "repository": "zai-org/CogView4-6B",
+        "reason": "candidate limit reached"
+      }
+    ]
+  },
+  "github": [],
+  "licenseChanges": [
+    {
+      "modelId": "llama31-rlhf",
+      "recorded": "Llama 3.1 Community License",
+      "published": "llama3.1",
+      "repository": "meta-llama/Llama-3.1-8B-Instruct"
+    }
+  ],
+  "reviewsReread": [
+    "task:top-k-recommendation",
+    "task:rating-prediction",
+    "family:linear-logistic-models",
+    "family:multilayer-perceptrons",
+    "family:state-space-networks",
+    "family:semi-supervised-learning",
+    "family:rl-from-human-feedback",
+    "family:direct-preference-optimization",
+    "benchmark:text-classification",
+    "benchmark:natural-language-inference",
+    "benchmark:named-entity-recognition",
+    "benchmark:relation-extraction",
+    "benchmark:coreference-resolution",
+    "benchmark:part-of-speech-tagging",
+    "benchmark:syntactic-parsing",
+    "benchmark:text-generation",
+    "benchmark:machine-translation",
+    "benchmark:text-summarization",
+    "benchmark:multi-document-summarization",
+    "benchmark:grammatical-error-correction",
+    "benchmark:question-answering",
+    "benchmark:dialogue-response-generation",
+    "benchmark:semantic-textual-similarity",
+    "benchmark:document-retrieval",
+    "benchmark:passage-retrieval",
+    "benchmark:re-ranking",
+    "benchmark:query-expansion",
+    "benchmark:top-k-recommendation",
+    "benchmark:rating-prediction",
+    "benchmark:image-classification",
+    "benchmark:object-detection",
+    "benchmark:semantic-segmentation",
+    "benchmark:instance-segmentation",
+    "benchmark:depth-estimation",
+    "benchmark:keypoint-detection",
+    "benchmark:video-classification",
+    "benchmark:optical-character-recognition",
+    "benchmark:image-captioning",
+    "benchmark:visual-question-answering",
+    "benchmark:document-question-answering",
+    "benchmark:text-to-image-generation",
+    "benchmark:image-to-image-generation",
+    "benchmark:image-inpainting",
+    "benchmark:text-to-video-generation",
+    "benchmark:image-to-video-generation",
+    "benchmark:text-to-3d-generation",
+    "benchmark:automatic-speech-recognition",
+    "benchmark:speech-translation",
+    "benchmark:keyword-spotting",
+    "benchmark:speech-emotion-recognition",
+    "benchmark:audio-classification",
+    "benchmark:speaker-diarization",
+    "benchmark:text-to-speech",
+    "benchmark:voice-conversion",
+    "benchmark:text-to-audio-generation",
+    "benchmark:conditional-music-generation",
+    "benchmark:text-to-code-generation",
+    "benchmark:code-completion",
+    "benchmark:code-repair",
+    "benchmark:code-translation",
+    "benchmark:text-to-sql",
+    "benchmark:code-summarization",
+    "benchmark:code-search",
+    "benchmark:code-clone-detection",
+    "benchmark:defect-detection",
+    "benchmark:classification",
+    "benchmark:regression",
+    "benchmark:time-series-forecasting",
+    "benchmark:anomaly-detection",
+    "benchmark:missing-value-imputation",
+    "benchmark:math-word-problem-solving",
+    "benchmark:formal-theorem-proving",
+    "benchmark:function-calling",
+    "benchmark:web-task-execution",
+    "benchmark:desktop-task-execution"
+  ]
+}

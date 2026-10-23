@@ -24,12 +24,13 @@ Version 0.1 is deliberately source-first and static at the content layer. Adding
 - Validated, shareable URL state for filters, vendor order, and the active view.
 - Expandable evidence with official source titles, direct URLs, publishers, and exact verification dates.
 - Explorer and vendor-comparison views derived from the same records and active filters.
-- A bilingual `/models` browser groups the catalog by writing/chat, reasoning, coding, agents, document work, visual understanding, and image generation. Search, vendor and task filters, optional historical records, shareable URLs, and CSV/Excel exports use the same visible memberships.
+- A bilingual `/models` browser compares frontier models by writing/chat, reasoning, coding, agents, document work, visual understanding, and image generation, and states each model's modalities, context window, price per 1M tokens, status and evidence date. Search, vendor and task filters, optional historical records, shareable URLs, and CSV/Excel exports use the same visible memberships.
+- A bilingual `/open-weights` browser lists every open-weight model the taxonomy cites with its published weight files, license, access condition and a derived local-footprint band, filters by publisher, license, size, access, task and family, and links into both taxonomy maps.
 - Explicit `available`, `limited`, `not-available`, `not-documented`, and `unknown` states.
 - Runtime schema and relationship validation plus unit, component, lint, type, and production-build checks.
 - A data model intended to add vendors without introducing vendor-specific source columns.
 
-### Models by task / Göreve göre modeller
+### Frontier models by task / Göreve göre frontier modeller
 
 The interactive task taxonomy now includes a dated [benchmark evidence review](docs/audits/2026-10-21-task-benchmarks.md) for all 85 tasks. After the [41-task follow-up](docs/audits/2026-10-21-benchmark-gap-followup.md), its 88 numerical tables cover 55 tasks with comparisons and 28 with a single verified result; two tasks explain the remaining artifact-to-result gaps. There are 87 additional model releases and 266 primary observations. Each task shows what the evidence supports, dataset/metric, evaluation conditions, result publication date, source-check date, checkpoint and license links. Search and evidence-status filters help inspect the coverage. The benchmark source schema is version 2, supporting persistent publisher release IDs as well as Git revisions; candidate, result and review schemas remain version 1. Both taxonomy map pages use the available viewport width.
 
@@ -39,9 +40,9 @@ Highlighted leaders apply only within one table. Proxy tasks, prior-year referen
 
 İşaretlenen liderlik yalnızca tek tablo içinde geçerlidir. Dolaylı görev ölçümleri, önceki yıl referansları, eşit olmayan çıkarım bütçeleri ve eksik puanlar görünürdür; tek sonuçlu tablolarda lider yoktur. Yayıncı sonuçları incelenmiştir, bağımsız yeniden koşu yapılmamıştır. Benchmark katılımcıları model ailesi üyeliklerini sessizce genişletmeden görev panelini tamamlar. Veriler `src/data/task-benchmarks.ts`, gözlemler `src/data/sources.ts` içindeki `benchmarkSources`, doğrulama ve ölçüt yönü yardımcıları `src/lib/task-benchmarks.ts` içindedir.
 
-Model schema version 3 requires non-empty, unique `taskIds` from the ordered `modelTaskValues` taxonomy. These are editorial focus areas based on each model's cited records, not exhaustive capabilities or quality scores. A model may belong to several groups; totals count unique models. Legacy and retired records are hidden until explicitly included. Source links and original evidence dates remain visible; grouping does not advance verification dates or refresh the catalog. `/models?lang=tr` opens the Turkish controls and explanations; the default is English.
+Model schema version 3 requires non-empty, unique `taskIds` from the ordered `modelTaskValues` taxonomy. These are editorial focus areas based on each model's cited records, not exhaustive capabilities or quality scores. A model may belong to several groups; totals count unique models. Legacy and retired records are hidden until explicitly included. Source links and original evidence dates remain visible; grouping does not advance verification dates or refresh the catalog. `/models?lang=tr` opens the Turkish controls and explanations; the default is English. The same task groups now also carry the recorded price per 1M tokens, so the comparison criteria are modality, context window, price, status and evidence date.
 
-Model şeması sürüm 3, sıralı `modelTaskValues` sınıflandırmasından boş olmayan ve tekrarlanmayan `taskIds` alanını zorunlu kılar. Gruplar, her modelin kaynaklı kayıtlarına dayanan editoryal kullanım alanlarıdır; tüm yetenekleri veya kalite puanlarını temsil etmez. Bir model birden fazla gruba girebilir; toplamlar benzersiz modelleri sayar. Eski ve kullanımdan kaldırılmış kayıtlar kullanıcı dahil edene kadar gizlidir. Kaynak bağlantıları ve özgün doğrulama tarihleri görünür kalır; gruplandırma tarihleri ilerletmez veya kataloğu güncellemez. `/models?lang=tr` Türkçe kontrolleri ve açıklamaları açar; varsayılan dil İngilizcedir.
+Model şeması sürüm 3, sıralı `modelTaskValues` sınıflandırmasından boş olmayan ve tekrarlanmayan `taskIds` alanını zorunlu kılar. Gruplar, her modelin kaynaklı kayıtlarına dayanan editoryal kullanım alanlarıdır; tüm yetenekleri veya kalite puanlarını temsil etmez. Bir model birden fazla gruba girebilir; toplamlar benzersiz modelleri sayar. Eski ve kullanımdan kaldırılmış kayıtlar kullanıcı dahil edene kadar gizlidir. Kaynak bağlantıları ve özgün doğrulama tarihleri görünür kalır; gruplandırma tarihleri ilerletmez veya kataloğu güncellemez. `/models?lang=tr` Türkçe kontrolleri ve açıklamaları açar; varsayılan dil İngilizcedir. Aynı görev grupları artık 1M token başına kayıtlı fiyatı da taşır; karşılaştırma ölçütleri modalite, bağlam penceresi, fiyat, durum ve kanıt tarihidir.
 
 ### Taxonomy maps / Taksonomi haritaları
 
@@ -77,15 +78,31 @@ The 50 concept cards on `/taxonomy/models` open a family inspector with models, 
 
 `/taxonomy/models` üzerindeki 50 kavram kartı; modelleri, ağırlık dosyalarını, lisansları, üyelik kaynaklarını ve görev bağlantılarını içeren aile panelini açar. Gruplanmış seçici, aile içi arama, klavye etkileşimi ve tam ekran görünümü masaüstünde ve mobilde çalışır. `?family=transformers&lang=tr`, seçimi ve dili yenilemede ve tarayıcı geçmişinde korur. Özgün SVG ve eşlik eden görev ailesi bağlantıları korunur.
 
-The family catalogue shares all 77 entries and derives task support from the canonical task relationships. `src/data/model-families.ts` records 371 non-exclusive memberships across all 50 concepts. The 20 formerly empty concepts now have dated, source-backed research notes. They distinguish neural weights from statistical parameters, learned rule files and pipeline components, and explain why a narrow example is not a universal pretrained solution. `modelFamilySources` adds 35 architecture observations to the 224 shared sources. Source schema is version 3, task schema is version 2, and model/family schemas remain version 2. These examples are not a performance ranking.
+The family catalogue shares all 103 entries and derives task support from the canonical task relationships. `src/data/model-families.ts` records 408 non-exclusive memberships across all 50 concepts. The 20 formerly empty concepts now have dated, source-backed research notes. They distinguish neural weights from statistical parameters, learned rule files and pipeline components, and explain why a narrow example is not a universal pretrained solution. `modelFamilySources` adds 35 architecture observations to the 302 shared sources. Source schema is version 3, task schema is version 2, and model/family schemas remain version 2. These examples are not a performance ranking.
 
-Aile kataloğu 77 kaydın tamamını paylaşır ve görev desteğini kanonik görev ilişkilerinden türetir. `src/data/model-families.ts`, 50 kavramın tamamında birbirini dışlamayan 371 üyelik kaydeder. Önceden boş olan 20 kavram artık tarihli ve kaynaklı araştırma notlarına sahiptir. Sinir ağı ağırlıkları, istatistiksel parametreler, öğrenilmiş kural dosyaları ve işlem hattı bileşenleri ayrılır; dar kapsamlı örneğin neden evrensel ön eğitimli çözüm olmadığı açıklanır. `modelFamilySources`, ortak 224 kaynağa 35 mimari gözlemi ekler. Kaynak şeması sürüm 3, görev şeması sürüm 2; model ve aile şemaları sürüm 2’dir. Örnekler performans sıralaması değildir.
+Aile kataloğu 103 kaydın tamamını paylaşır ve görev desteğini kanonik görev ilişkilerinden türetir. `src/data/model-families.ts`, 50 kavramın tamamında birbirini dışlamayan 408 üyelik kaydeder. Önceden boş olan 20 kavram artık tarihli ve kaynaklı araştırma notlarına sahiptir. Sinir ağı ağırlıkları, istatistiksel parametreler, öğrenilmiş kural dosyaları ve işlem hattı bileşenleri ayrılır; dar kapsamlı örneğin neden evrensel ön eğitimli çözüm olmadığı açıklanır. `modelFamilySources`, ortak 302 kaynağa 35 mimari gözlemi ekler. Kaynak şeması sürüm 3, görev şeması sürüm 2; model ve aile şemaları sürüm 2’dir. Örnekler performans sıralaması değildir.
 
 The [twenty-concept research audit](docs/audits/2026-10-21-model-family-research.md) records exact releases, primary evidence and transfer limits. / [Yirmi kavram araştırma kaydı](docs/audits/2026-10-21-model-family-research.md), tam sürümleri, birincil kanıtları ve aktarım sınırlarını belgeler.
 
 Architecture, training, modality and capability remain separate properties. Component memberships are labelled: a VAE inside a video generator does not support all of the generator's tasks on its own. Causal embedding backbones are not labelled encoder-only; dense Wan2.2 TI2V-5B is not labelled MoE; reinforcement learning does not automatically imply RLHF. Task links preserve evaluated/documented/adaptation evidence, including CodeT5's need for task-specific tuning. Models were not executed to establish these memberships.
 
 Mimari, eğitim, veri türü ve yetenek ayrı özellikler olarak korunur. Bileşen üyelikleri etiketlidir: video üreticisinin içindeki VAE, üreticinin tüm görevlerini tek başına desteklemez. Nedensel vektör omurgaları yalnız kodlayıcı olarak; yoğun Wan2.2 TI2V-5B, MoE olarak etiketlenmez; pekiştirmeli öğrenme otomatik olarak RLHF sayılmaz. Görev bağlantıları CodeT5'in göreve özel ince ayar gereksinimi dahil değerlendirme/belgelenmiş destek/uyarlama kanıtlarını korur. Bu üyelikleri belirlemek için modeller çalıştırılmadı.
+
+### Open weight models / Açık ağırlıklı modeller
+
+`/open-weights` lists every open-weight model the task taxonomy cites in one place: the publisher's own weight files, parameter count, license, access condition and a derived local-footprint band, so a reader can see at a glance which checkpoints fit a given machine. Filters cover publisher, license, size band, access, task and family; the list groups by publisher, task or family; every model links into both taxonomy maps; the visible rows export as CSV or Excel. `/open-weights?lang=tr` opens the Turkish controls and explanations.
+
+`/open-weights`, görev taksonomisinin atıf yaptığı her açık ağırlıklı modeli tek yerde listeler: yayıncının kendi ağırlık dosyaları, parametre sayısı, lisans, erişim koşulu ve türetilmiş yerel footprint sınıfı; okuyucu hangi kontrol noktalarının hangi makinede çalışabileceğini tek bakışta görür. Filtreler yayıncı, lisans, boyut sınıfı, erişim, görev ve aileyi kapsar; liste yayıncı, görev veya aileye göre gruplanır; her model her iki taksonomi haritasına bağlanır; görünür satırlar CSV/Excel olarak dışa aktarılır. `/open-weights?lang=tr` Türkçe kontrolleri ve açıklamaları açar.
+
+The 4-bit and 8-bit columns are derived from the publisher's published file sizes: a 4-bit checkpoint needs roughly 0.55 bytes per parameter and an 8-bit checkpoint roughly 1.05, plus a 2 GB runtime allowance for activations, cache and framework. They are planning estimates, not measured runs. A model whose publisher publishes no file listing shows no size rather than a guess.
+
+4-bit ve 8-bit sütunları yayıncının yayımlanmış dosya boyutlarından türetilir: 4-bit bir kontrol noktası parametre başına yaklaşık 0,55 bayt, 8-bit kontrol noktası yaklaşık 1,05 bayt ister; ayrıca etkinlikler, önbellek ve çalışma ortamı için 2 GB çalışma payı eklenir. Bunlar planlama tahminidir, ölçülmüş çalıştırma değildir. Yayıncısı dosya listesi yayımlamayan modelde tahmin üretilmez, boyut boş bırakılır.
+
+### Tracking open-weight releases / Açık ağırlık sürümlerini izleme
+
+`scripts/track-open-weights.ts` re-reads every cited Hugging Face repository, refreshes the checkpoint revision, file listing, byte total, parameter count and access state, and can add a new checkpoint from a tracked publisher when it passes every rule: a published model card, a published license, published weight files, a pipeline tag that maps to a taxonomy task, an architecture that maps to a model family, no fine-tune base, no quantised copy, no serving variant, and a release newer than the cited one. Added models are marked `discovery: "auto"` and stay in the reference role, so the editorial shortlist is never widened by a script. GitHub release movements and license identifier changes are reported for a human decision, never rewritten silently. Every run writes `docs/audits/open-weights-<date>.json`.
+
+`scripts/track-open-weights.ts`, atıf yapılan her Hugging Face deposunu yeniden okur; kontrol noktası revizyonunu, dosya listesini, bayt toplamını, parametre sayısını ve erişim durumunu tazeler ve izlenen bir yayıncının yeni bir kontrol noktasını tüm kuralları geçtiğinde ekleyebilir: yayımlanmış model kartı, yayımlanmış lisans, yayımlanmış ağırlık dosyaları, taksonomi görevine eşlenen işlem hattı etiketi, model ailesine eşlenen mimari, fine-tune tabanı olmaması, kuantize kopya olmaması, sunum varyantı olmaması ve atıf yapılandan daha yeni bir sürüm. Eklenen modeller `discovery: "auto"` ile işaretlenir ve referans rolünde kalır; editoryal kısa liste hiçbir zaman bir betikle genişlemez. GitHub sürüm hareketleri ve lisans tanımlayıcı değişiklikleri insan kararı için raporlanır, sessizce yeniden yazılmaz. Her çalışma `docs/audits/open-weights-<tarih>.json` yazar.
 
 ### Category taxonomy
 
@@ -312,7 +329,7 @@ Important limitations:
 - Vendor documentation is first-party evidence, not independent performance evaluation.
 - The atlas records documented product scope and positioning; it does not benchmark quality, reliability, latency, safety, or real-world outcomes.
 - The seed covers Anthropic, OpenAI, Z.ai, MiniMax, DeepSeek, and Qwen. Architecture for more vendors is not the same as completed research for those vendors.
-- Research is maintained manually. There is no unattended scraper, automatic fact update, or ordinary-build network check, so an official page can change or disappear after verification.
+- Vendor research is maintained manually. There is no unattended scraper, automatic fact update, or ordinary-build network check, so an official page can change or disappear after verification. The open-weight catalogue is the one exception: `scripts/track-open-weights.ts` re-reads the cited Hugging Face repositories, refreshes the checkpoint revision, file listing, byte totals, parameter count and access state, and can add a new checkpoint from a tracked publisher. Fine-tunes, quantised copies, serving variants and superseded releases are rejected by rule, and every run leaves a dated audit record under `docs/audits/`.
 - `verifiedAt` records an evidence check, not a release or announcement date; older records should be rechecked before time-sensitive decisions.
 - `not-documented` means the reviewed official material did not establish a capability. It does not prove that the capability is technically impossible or commercially unavailable.
 - Pair assessments are transparent editorial summaries of cited facts. They are not quantitative scores, recommendations, or declarations of a winner.
@@ -329,13 +346,15 @@ Important limitations:
 │   └── atlas.spec.ts          # Chromium workflow, responsive, focus, and overflow coverage
 ├── scripts/
 │   ├── validate-data.ts       # Deterministic dataset validation entry point
+│   ├── track-open-weights.ts   # Scheduled open-weight refresh and discovery
 │   └── verify-static-export.ts # Static build artifact verification entry point
 ├── src/
 │   ├── app/                   # Next.js App Router shell and global styles
 │   ├── components/atlas/      # Research Console, table, evidence, filters, vendor view
+│   ├── components/open-weights/ # Open-weight browser, filters and footprint table
 │   ├── components/            # Shared site header and footer
 │   ├── data/                  # Canonical records, Zod schema, and relationship validation
-│   └── lib/                   # Pure comparison, search, freshness, label, and URL selectors
+│   └── lib/                   # Pure comparison, search, freshness, label, footprint and URL selectors
 ├── tests/
 │   ├── app/                   # Server-page rendering coverage
 │   ├── components/            # User-facing interaction and evidence coverage

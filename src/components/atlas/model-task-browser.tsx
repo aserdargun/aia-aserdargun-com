@@ -8,7 +8,7 @@ import {
   type ModelLocale,
 } from "@/lib/labels";
 import {
-  defaultModelBrowserState, modelTasksExport, parseModelBrowserState,
+  defaultModelBrowserState, formatModelPrice, modelTasksExport, parseModelBrowserState,
   selectModelTasks, serializeModelBrowserState,
   type ModelBrowserState, type ModelCatalog,
 } from "@/lib/model-tasks";
@@ -35,6 +35,7 @@ function ModelRecord({ model, vendor, sources, locale }: {
           <div><dt>{labels.input}</dt><dd>{model.inputModalities.map((value) => modalities[value] ?? value).join(", ")}</dd></div>
           <div><dt>{labels.output}</dt><dd>{model.outputModalities.map((value) => modalities[value] ?? value).join(", ")}</dd></div>
           <div><dt>{labels.context}</dt><dd>{model.contextWindowTokens === undefined ? labels.notListed : `${new Intl.NumberFormat(locale).format(model.contextWindowTokens)} ${labels.tokens}`}</dd></div>
+          <div><dt>{labels.price}</dt><dd>{formatModelPrice(model, locale) ?? labels.priceNotListed}</dd></div>
           <div><dt>{labels.status}</dt><dd>{modelLifecycleLabels[locale][model.lifecycle]}</dd></div>
           <div><dt>{labels.checked}</dt><dd><time dateTime={model.verifiedAt}>{model.verifiedAt}</time></dd></div>
         </dl>

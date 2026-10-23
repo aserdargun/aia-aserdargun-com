@@ -12,7 +12,7 @@ test("static CSP permits hydration and blocks an unlisted inline script", async 
   expect(scriptPolicy).not.toContain("'unsafe-inline'");
   expect(scriptPolicy).not.toContain("'unsafe-eval'");
   await page.getByRole("button", { name: "Türkçe", exact: true }).click();
-  await expect(page.getByRole("heading", { level: 1, name: "Göreve göre modeller" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: "Göreve göre frontier modeller" })).toBeVisible();
   expect(errors).toEqual([]);
   const probe = await page.evaluate(async () => {
     const violation = new Promise<string>((resolve) => {

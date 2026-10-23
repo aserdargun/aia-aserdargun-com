@@ -1468,7 +1468,7 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0"
   },
   {
@@ -1477,8 +1477,89 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen3.8-27B/tree/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0"
+    "observedAt": "2026-10-23",
+    "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "parameterCount": 27781427952,
+      "files": [
+        {
+          "name": "model-00001-of-00018.safetensors",
+          "sizeBytes": 3966730552
+        },
+        {
+          "name": "model-00002-of-00018.safetensors",
+          "sizeBytes": 3043080328
+        },
+        {
+          "name": "model-00003-of-00018.safetensors",
+          "sizeBytes": 2542796952
+        },
+        {
+          "name": "model-00004-of-00018.safetensors",
+          "sizeBytes": 3988973152
+        },
+        {
+          "name": "model-00005-of-00018.safetensors",
+          "sizeBytes": 2099339864
+        },
+        {
+          "name": "model-00006-of-00018.safetensors",
+          "sizeBytes": 3979553696
+        },
+        {
+          "name": "model-00007-of-00018.safetensors",
+          "sizeBytes": 2108759344
+        },
+        {
+          "name": "model-00008-of-00018.safetensors",
+          "sizeBytes": 3979553696
+        },
+        {
+          "name": "model-00009-of-00018.safetensors",
+          "sizeBytes": 2108759344
+        },
+        {
+          "name": "model-00010-of-00018.safetensors",
+          "sizeBytes": 3979553696
+        },
+        {
+          "name": "model-00011-of-00018.safetensors",
+          "sizeBytes": 2108759344
+        },
+        {
+          "name": "model-00012-of-00018.safetensors",
+          "sizeBytes": 3979553696
+        },
+        {
+          "name": "model-00013-of-00018.safetensors",
+          "sizeBytes": 2108759344
+        },
+        {
+          "name": "model-00014-of-00018.safetensors",
+          "sizeBytes": 3979553696
+        },
+        {
+          "name": "model-00015-of-00018.safetensors",
+          "sizeBytes": 2108759344
+        },
+        {
+          "name": "model-00016-of-00018.safetensors",
+          "sizeBytes": 3979564040
+        },
+        {
+          "name": "model-00017-of-00018.safetensors",
+          "sizeBytes": 2108759344
+        },
+        {
+          "name": "model-00018-of-00018.safetensors",
+          "sizeBytes": 3392197344
+        }
+      ],
+      "totalBytes": 55563006776,
+      "gated": false
+    }
   },
   {
     "id": "ow-deepseek41",
@@ -1486,7 +1567,7 @@ export const taskModelSources = [
     "publisher": "deepseek-ai",
     "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "1bae0e1088993b9b82de08f59de5be5a34e42170"
   },
   {
@@ -1495,8 +1576,209 @@ export const taskModelSources = [
     "publisher": "deepseek-ai",
     "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/tree/1bae0e1088993b9b82de08f59de5be5a34e42170",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "1bae0e1088993b9b82de08f59de5be5a34e42170"
+    "observedAt": "2026-10-23",
+    "revision": "1bae0e1088993b9b82de08f59de5be5a34e42170",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "parameterCount": 763205315794,
+      "files": [
+        {
+          "name": "model-00001-of-00048.safetensors",
+          "sizeBytes": 970533624
+        },
+        {
+          "name": "model-00002-of-00048.safetensors",
+          "sizeBytes": 1323858272
+        },
+        {
+          "name": "model-00003-of-00048.safetensors",
+          "sizeBytes": 7389759032
+        },
+        {
+          "name": "model-00004-of-00048.safetensors",
+          "sizeBytes": 7389759032
+        },
+        {
+          "name": "model-00005-of-00048.safetensors",
+          "sizeBytes": 7405953784
+        },
+        {
+          "name": "model-00006-of-00048.safetensors",
+          "sizeBytes": 7389759032
+        },
+        {
+          "name": "model-00007-of-00048.safetensors",
+          "sizeBytes": 7389759032
+        },
+        {
+          "name": "model-00008-of-00048.safetensors",
+          "sizeBytes": 7389759032
+        },
+        {
+          "name": "model-00009-of-00048.safetensors",
+          "sizeBytes": 7389759032
+        },
+        {
+          "name": "model-00010-of-00048.safetensors",
+          "sizeBytes": 7389759032
+        },
+        {
+          "name": "model-00011-of-00048.safetensors",
+          "sizeBytes": 7405953784
+        },
+        {
+          "name": "model-00012-of-00048.safetensors",
+          "sizeBytes": 7389759032
+        },
+        {
+          "name": "model-00013-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00014-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00015-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00016-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00017-of-00048.safetensors",
+          "sizeBytes": 7405956128
+        },
+        {
+          "name": "model-00018-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00019-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00020-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00021-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00022-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00023-of-00048.safetensors",
+          "sizeBytes": 7400713088
+        },
+        {
+          "name": "model-00024-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00025-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00026-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00027-of-00048.safetensors",
+          "sizeBytes": 7395337384
+        },
+        {
+          "name": "model-00028-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00029-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00030-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00031-of-00048.safetensors",
+          "sizeBytes": 7395337384
+        },
+        {
+          "name": "model-00032-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00033-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00034-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00035-of-00048.safetensors",
+          "sizeBytes": 7395337384
+        },
+        {
+          "name": "model-00036-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00037-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00038-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00039-of-00048.safetensors",
+          "sizeBytes": 7395337384
+        },
+        {
+          "name": "model-00040-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00041-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00042-of-00048.safetensors",
+          "sizeBytes": 7389761368
+        },
+        {
+          "name": "model-00043-of-00048.safetensors",
+          "sizeBytes": 1323837624
+        },
+        {
+          "name": "model-00044-of-00048.safetensors",
+          "sizeBytes": 2652728736
+        },
+        {
+          "name": "model-00045-of-00048.safetensors",
+          "sizeBytes": 2573998176
+        },
+        {
+          "name": "model-00046-of-00048.safetensors",
+          "sizeBytes": 2706402896
+        },
+        {
+          "name": "model-00047-of-00048.safetensors",
+          "sizeBytes": 101535150936
+        },
+        {
+          "name": "model-00048-of-00048.safetensors",
+          "sizeBytes": 101537926640
+        }
+      ],
+      "totalBytes": 510296708312,
+      "gated": false
+    }
   },
   {
     "id": "ow-glm53",
@@ -1504,7 +1786,7 @@ export const taskModelSources = [
     "publisher": "zai-org",
     "url": "https://huggingface.co/zai-org/GLM-5.3",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "ba32f8c19c8738e2c57c71798c601d477a7bf844"
   },
   {
@@ -1513,8 +1795,581 @@ export const taskModelSources = [
     "publisher": "zai-org",
     "url": "https://huggingface.co/zai-org/GLM-5.3/tree/ba32f8c19c8738e2c57c71798c601d477a7bf844",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "ba32f8c19c8738e2c57c71798c601d477a7bf844"
+    "observedAt": "2026-10-23",
+    "revision": "ba32f8c19c8738e2c57c71798c601d477a7bf844",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/zai-org/GLM-5.3",
+      "parameterCount": 753329940480,
+      "files": [
+        {
+          "name": "model-00001-of-00141.safetensors",
+          "sizeBytes": 5363940952
+        },
+        {
+          "name": "model-00002-of-00141.safetensors",
+          "sizeBytes": 5361736696
+        },
+        {
+          "name": "model-00003-of-00141.safetensors",
+          "sizeBytes": 5363339120
+        },
+        {
+          "name": "model-00004-of-00141.safetensors",
+          "sizeBytes": 5361736640
+        },
+        {
+          "name": "model-00005-of-00141.safetensors",
+          "sizeBytes": 5366353560
+        },
+        {
+          "name": "model-00006-of-00141.safetensors",
+          "sizeBytes": 5361736504
+        },
+        {
+          "name": "model-00007-of-00141.safetensors",
+          "sizeBytes": 5366353704
+        },
+        {
+          "name": "model-00008-of-00141.safetensors",
+          "sizeBytes": 5361736368
+        },
+        {
+          "name": "model-00009-of-00141.safetensors",
+          "sizeBytes": 5366353832
+        },
+        {
+          "name": "model-00010-of-00141.safetensors",
+          "sizeBytes": 5361736232
+        },
+        {
+          "name": "model-00011-of-00141.safetensors",
+          "sizeBytes": 5363339600
+        },
+        {
+          "name": "model-00012-of-00141.safetensors",
+          "sizeBytes": 5366353488
+        },
+        {
+          "name": "model-00013-of-00141.safetensors",
+          "sizeBytes": 5361736696
+        },
+        {
+          "name": "model-00014-of-00141.safetensors",
+          "sizeBytes": 5366353496
+        },
+        {
+          "name": "model-00015-of-00141.safetensors",
+          "sizeBytes": 5361736680
+        },
+        {
+          "name": "model-00016-of-00141.safetensors",
+          "sizeBytes": 5366353520
+        },
+        {
+          "name": "model-00017-of-00141.safetensors",
+          "sizeBytes": 5361736544
+        },
+        {
+          "name": "model-00018-of-00141.safetensors",
+          "sizeBytes": 5363339264
+        },
+        {
+          "name": "model-00019-of-00141.safetensors",
+          "sizeBytes": 5361736408
+        },
+        {
+          "name": "model-00020-of-00141.safetensors",
+          "sizeBytes": 5364805840
+        },
+        {
+          "name": "model-00021-of-00141.safetensors",
+          "sizeBytes": 5361736336
+        },
+        {
+          "name": "model-00022-of-00141.safetensors",
+          "sizeBytes": 5366353872
+        },
+        {
+          "name": "model-00023-of-00141.safetensors",
+          "sizeBytes": 5357948328
+        },
+        {
+          "name": "model-00024-of-00141.safetensors",
+          "sizeBytes": 5357555688
+        },
+        {
+          "name": "model-00025-of-00141.safetensors",
+          "sizeBytes": 5363339104
+        },
+        {
+          "name": "model-00026-of-00141.safetensors",
+          "sizeBytes": 5361736696
+        },
+        {
+          "name": "model-00027-of-00141.safetensors",
+          "sizeBytes": 5366353504
+        },
+        {
+          "name": "model-00028-of-00141.safetensors",
+          "sizeBytes": 5361736648
+        },
+        {
+          "name": "model-00029-of-00141.safetensors",
+          "sizeBytes": 5366353560
+        },
+        {
+          "name": "model-00030-of-00141.safetensors",
+          "sizeBytes": 5361736512
+        },
+        {
+          "name": "model-00031-of-00141.safetensors",
+          "sizeBytes": 5366353688
+        },
+        {
+          "name": "model-00032-of-00141.safetensors",
+          "sizeBytes": 5361736376
+        },
+        {
+          "name": "model-00033-of-00141.safetensors",
+          "sizeBytes": 5363339440
+        },
+        {
+          "name": "model-00034-of-00141.safetensors",
+          "sizeBytes": 5361736240
+        },
+        {
+          "name": "model-00035-of-00141.safetensors",
+          "sizeBytes": 5366353976
+        },
+        {
+          "name": "model-00036-of-00141.safetensors",
+          "sizeBytes": 5366353488
+        },
+        {
+          "name": "model-00037-of-00141.safetensors",
+          "sizeBytes": 5361736696
+        },
+        {
+          "name": "model-00038-of-00141.safetensors",
+          "sizeBytes": 5366353304
+        },
+        {
+          "name": "model-00039-of-00141.safetensors",
+          "sizeBytes": 5361735832
+        },
+        {
+          "name": "model-00040-of-00141.safetensors",
+          "sizeBytes": 5366353016
+        },
+        {
+          "name": "model-00041-of-00141.safetensors",
+          "sizeBytes": 5361736552
+        },
+        {
+          "name": "model-00042-of-00141.safetensors",
+          "sizeBytes": 5363339264
+        },
+        {
+          "name": "model-00043-of-00141.safetensors",
+          "sizeBytes": 5361736416
+        },
+        {
+          "name": "model-00044-of-00141.safetensors",
+          "sizeBytes": 5366353776
+        },
+        {
+          "name": "model-00045-of-00141.safetensors",
+          "sizeBytes": 5361736280
+        },
+        {
+          "name": "model-00046-of-00141.safetensors",
+          "sizeBytes": 5366353920
+        },
+        {
+          "name": "model-00047-of-00141.safetensors",
+          "sizeBytes": 5366353496
+        },
+        {
+          "name": "model-00048-of-00141.safetensors",
+          "sizeBytes": 5361736696
+        },
+        {
+          "name": "model-00049-of-00141.safetensors",
+          "sizeBytes": 5363339104
+        },
+        {
+          "name": "model-00050-of-00141.safetensors",
+          "sizeBytes": 5361736696
+        },
+        {
+          "name": "model-00051-of-00141.safetensors",
+          "sizeBytes": 5366353512
+        },
+        {
+          "name": "model-00052-of-00141.safetensors",
+          "sizeBytes": 5361736584
+        },
+        {
+          "name": "model-00053-of-00141.safetensors",
+          "sizeBytes": 5366353608
+        },
+        {
+          "name": "model-00054-of-00141.safetensors",
+          "sizeBytes": 5361736448
+        },
+        {
+          "name": "model-00055-of-00141.safetensors",
+          "sizeBytes": 5366353744
+        },
+        {
+          "name": "model-00056-of-00141.safetensors",
+          "sizeBytes": 5361736312
+        },
+        {
+          "name": "model-00057-of-00141.safetensors",
+          "sizeBytes": 5363339496
+        },
+        {
+          "name": "model-00058-of-00141.safetensors",
+          "sizeBytes": 5357950744
+        },
+        {
+          "name": "model-00059-of-00141.safetensors",
+          "sizeBytes": 5357552376
+        },
+        {
+          "name": "model-00060-of-00141.safetensors",
+          "sizeBytes": 5366352776
+        },
+        {
+          "name": "model-00061-of-00141.safetensors",
+          "sizeBytes": 5361736696
+        },
+        {
+          "name": "model-00062-of-00141.safetensors",
+          "sizeBytes": 5366353504
+        },
+        {
+          "name": "model-00063-of-00141.safetensors",
+          "sizeBytes": 5361736624
+        },
+        {
+          "name": "model-00064-of-00141.safetensors",
+          "sizeBytes": 5366353576
+        },
+        {
+          "name": "model-00065-of-00141.safetensors",
+          "sizeBytes": 5361736488
+        },
+        {
+          "name": "model-00066-of-00141.safetensors",
+          "sizeBytes": 5363339320
+        },
+        {
+          "name": "model-00067-of-00141.safetensors",
+          "sizeBytes": 5361736360
+        },
+        {
+          "name": "model-00068-of-00141.safetensors",
+          "sizeBytes": 5366353848
+        },
+        {
+          "name": "model-00069-of-00141.safetensors",
+          "sizeBytes": 5361736224
+        },
+        {
+          "name": "model-00070-of-00141.safetensors",
+          "sizeBytes": 5366353992
+        },
+        {
+          "name": "model-00071-of-00141.safetensors",
+          "sizeBytes": 5366353488
+        },
+        {
+          "name": "model-00072-of-00141.safetensors",
+          "sizeBytes": 5361736696
+        },
+        {
+          "name": "model-00073-of-00141.safetensors",
+          "sizeBytes": 5363339112
+        },
+        {
+          "name": "model-00074-of-00141.safetensors",
+          "sizeBytes": 5361736672
+        },
+        {
+          "name": "model-00075-of-00141.safetensors",
+          "sizeBytes": 5366353528
+        },
+        {
+          "name": "model-00076-of-00141.safetensors",
+          "sizeBytes": 5361736528
+        },
+        {
+          "name": "model-00077-of-00141.safetensors",
+          "sizeBytes": 5366353672
+        },
+        {
+          "name": "model-00078-of-00141.safetensors",
+          "sizeBytes": 5361736392
+        },
+        {
+          "name": "model-00079-of-00141.safetensors",
+          "sizeBytes": 5366353168
+        },
+        {
+          "name": "model-00080-of-00141.safetensors",
+          "sizeBytes": 5361735408
+        },
+        {
+          "name": "model-00081-of-00141.safetensors",
+          "sizeBytes": 5366353872
+        },
+        {
+          "name": "model-00082-of-00141.safetensors",
+          "sizeBytes": 5363339104
+        },
+        {
+          "name": "model-00083-of-00141.safetensors",
+          "sizeBytes": 5361736696
+        },
+        {
+          "name": "model-00084-of-00141.safetensors",
+          "sizeBytes": 5366353496
+        },
+        {
+          "name": "model-00085-of-00141.safetensors",
+          "sizeBytes": 5361736696
+        },
+        {
+          "name": "model-00086-of-00141.safetensors",
+          "sizeBytes": 5366353512
+        },
+        {
+          "name": "model-00087-of-00141.safetensors",
+          "sizeBytes": 5361736568
+        },
+        {
+          "name": "model-00088-of-00141.safetensors",
+          "sizeBytes": 5366353632
+        },
+        {
+          "name": "model-00089-of-00141.safetensors",
+          "sizeBytes": 5361736432
+        },
+        {
+          "name": "model-00090-of-00141.safetensors",
+          "sizeBytes": 5363339376
+        },
+        {
+          "name": "model-00091-of-00141.safetensors",
+          "sizeBytes": 5361736296
+        },
+        {
+          "name": "model-00092-of-00141.safetensors",
+          "sizeBytes": 5366353904
+        },
+        {
+          "name": "model-00093-of-00141.safetensors",
+          "sizeBytes": 5366353488
+        },
+        {
+          "name": "model-00094-of-00141.safetensors",
+          "sizeBytes": 5361736696
+        },
+        {
+          "name": "model-00095-of-00141.safetensors",
+          "sizeBytes": 5366353488
+        },
+        {
+          "name": "model-00096-of-00141.safetensors",
+          "sizeBytes": 5361736696
+        },
+        {
+          "name": "model-00097-of-00141.safetensors",
+          "sizeBytes": 5363339112
+        },
+        {
+          "name": "model-00098-of-00141.safetensors",
+          "sizeBytes": 5361736616
+        },
+        {
+          "name": "model-00099-of-00141.safetensors",
+          "sizeBytes": 5366353168
+        },
+        {
+          "name": "model-00100-of-00141.safetensors",
+          "sizeBytes": 5361735624
+        },
+        {
+          "name": "model-00101-of-00141.safetensors",
+          "sizeBytes": 5363339032
+        },
+        {
+          "name": "model-00102-of-00141.safetensors",
+          "sizeBytes": 5361736344
+        },
+        {
+          "name": "model-00103-of-00141.safetensors",
+          "sizeBytes": 5366353856
+        },
+        {
+          "name": "model-00104-of-00141.safetensors",
+          "sizeBytes": 5364883208
+        },
+        {
+          "name": "model-00105-of-00141.safetensors",
+          "sizeBytes": 5363207032
+        },
+        {
+          "name": "model-00106-of-00141.safetensors",
+          "sizeBytes": 5363339104
+        },
+        {
+          "name": "model-00107-of-00141.safetensors",
+          "sizeBytes": 5361736696
+        },
+        {
+          "name": "model-00108-of-00141.safetensors",
+          "sizeBytes": 5366353504
+        },
+        {
+          "name": "model-00109-of-00141.safetensors",
+          "sizeBytes": 5361736648
+        },
+        {
+          "name": "model-00110-of-00141.safetensors",
+          "sizeBytes": 5366353552
+        },
+        {
+          "name": "model-00111-of-00141.safetensors",
+          "sizeBytes": 5361736512
+        },
+        {
+          "name": "model-00112-of-00141.safetensors",
+          "sizeBytes": 5366353688
+        },
+        {
+          "name": "model-00113-of-00141.safetensors",
+          "sizeBytes": 5361736376
+        },
+        {
+          "name": "model-00114-of-00141.safetensors",
+          "sizeBytes": 5363339432
+        },
+        {
+          "name": "model-00115-of-00141.safetensors",
+          "sizeBytes": 5361736240
+        },
+        {
+          "name": "model-00116-of-00141.safetensors",
+          "sizeBytes": 5366353976
+        },
+        {
+          "name": "model-00117-of-00141.safetensors",
+          "sizeBytes": 5366353488
+        },
+        {
+          "name": "model-00118-of-00141.safetensors",
+          "sizeBytes": 5361736696
+        },
+        {
+          "name": "model-00119-of-00141.safetensors",
+          "sizeBytes": 5366353304
+        },
+        {
+          "name": "model-00120-of-00141.safetensors",
+          "sizeBytes": 5361735832
+        },
+        {
+          "name": "model-00121-of-00141.safetensors",
+          "sizeBytes": 5366353016
+        },
+        {
+          "name": "model-00122-of-00141.safetensors",
+          "sizeBytes": 5361736552
+        },
+        {
+          "name": "model-00123-of-00141.safetensors",
+          "sizeBytes": 5363339256
+        },
+        {
+          "name": "model-00124-of-00141.safetensors",
+          "sizeBytes": 5361736416
+        },
+        {
+          "name": "model-00125-of-00141.safetensors",
+          "sizeBytes": 5366353784
+        },
+        {
+          "name": "model-00126-of-00141.safetensors",
+          "sizeBytes": 5361736288
+        },
+        {
+          "name": "model-00127-of-00141.safetensors",
+          "sizeBytes": 5366353920
+        },
+        {
+          "name": "model-00128-of-00141.safetensors",
+          "sizeBytes": 5366353488
+        },
+        {
+          "name": "model-00129-of-00141.safetensors",
+          "sizeBytes": 5361736696
+        },
+        {
+          "name": "model-00130-of-00141.safetensors",
+          "sizeBytes": 5363339104
+        },
+        {
+          "name": "model-00131-of-00141.safetensors",
+          "sizeBytes": 5361736696
+        },
+        {
+          "name": "model-00132-of-00141.safetensors",
+          "sizeBytes": 5366353504
+        },
+        {
+          "name": "model-00133-of-00141.safetensors",
+          "sizeBytes": 5361736592
+        },
+        {
+          "name": "model-00134-of-00141.safetensors",
+          "sizeBytes": 5366353608
+        },
+        {
+          "name": "model-00135-of-00141.safetensors",
+          "sizeBytes": 5361736456
+        },
+        {
+          "name": "model-00136-of-00141.safetensors",
+          "sizeBytes": 5366338752
+        },
+        {
+          "name": "model-00137-of-00141.safetensors",
+          "sizeBytes": 5361736352
+        },
+        {
+          "name": "model-00138-of-00141.safetensors",
+          "sizeBytes": 5363351176
+        },
+        {
+          "name": "model-00139-of-00141.safetensors",
+          "sizeBytes": 5361735376
+        },
+        {
+          "name": "model-00140-of-00141.safetensors",
+          "sizeBytes": 5366353160
+        },
+        {
+          "name": "model-00141-of-00141.safetensors",
+          "sizeBytes": 4724454592
+        }
+      ],
+      "totalBytes": 755632050320,
+      "gated": false
+    }
   },
   {
     "id": "ow-gliner2",
@@ -1522,7 +2377,7 @@ export const taskModelSources = [
     "publisher": "fastino",
     "url": "https://huggingface.co/fastino/gliner2-large-v1",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "d7aa8a2850d175a9227ff80358ea380723d03ad2"
   },
   {
@@ -1531,8 +2386,21 @@ export const taskModelSources = [
     "publisher": "fastino",
     "url": "https://huggingface.co/fastino/gliner2-large-v1/tree/d7aa8a2850d175a9227ff80358ea380723d03ad2",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "d7aa8a2850d175a9227ff80358ea380723d03ad2"
+    "observedAt": "2026-10-23",
+    "revision": "d7aa8a2850d175a9227ff80358ea380723d03ad2",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/fastino/gliner2-large-v1",
+      "parameterCount": 486444053,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 1945828140
+        }
+      ],
+      "totalBytes": 1945828140,
+      "gated": false
+    }
   },
   {
     "id": "ow-nli",
@@ -1540,7 +2408,7 @@ export const taskModelSources = [
     "publisher": "cross-encoder",
     "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-large",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "bab4bc7178836f731dcfd18c06ca9def0a137712"
   },
   {
@@ -1549,8 +2417,25 @@ export const taskModelSources = [
     "publisher": "cross-encoder",
     "url": "https://huggingface.co/cross-encoder/nli-deberta-v3-large/tree/bab4bc7178836f731dcfd18c06ca9def0a137712",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "bab4bc7178836f731dcfd18c06ca9def0a137712"
+    "observedAt": "2026-10-23",
+    "revision": "bab4bc7178836f731dcfd18c06ca9def0a137712",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/cross-encoder/nli-deberta-v3-large",
+      "parameterCount": 435065347,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 1740312740
+        },
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 1740435986
+        }
+      ],
+      "totalBytes": 3480748726,
+      "gated": false
+    }
   },
   {
     "id": "ow-coref",
@@ -1558,7 +2443,7 @@ export const taskModelSources = [
     "publisher": "biu-nlp",
     "url": "https://huggingface.co/biu-nlp/f-coref",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "e91dfff12879495d882ba9460d0c5d5dd44ade59"
   },
   {
@@ -1567,8 +2452,20 @@ export const taskModelSources = [
     "publisher": "biu-nlp",
     "url": "https://huggingface.co/biu-nlp/f-coref/tree/e91dfff12879495d882ba9460d0c5d5dd44ade59",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "e91dfff12879495d882ba9460d0c5d5dd44ade59"
+    "observedAt": "2026-10-23",
+    "revision": "e91dfff12879495d882ba9460d0c5d5dd44ade59",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/biu-nlp/f-coref",
+      "files": [
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 362162101
+        }
+      ],
+      "totalBytes": 362162101,
+      "gated": false
+    }
   },
   {
     "id": "ow-stanza",
@@ -1576,7 +2473,7 @@ export const taskModelSources = [
     "publisher": "stanfordnlp",
     "url": "https://huggingface.co/stanfordnlp/stanza-en",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "810dca30ddb25c30582c019dbaeb3a3e040fb958"
   },
   {
@@ -1585,8 +2482,568 @@ export const taskModelSources = [
     "publisher": "stanfordnlp",
     "url": "https://huggingface.co/stanfordnlp/stanza-en/tree/810dca30ddb25c30582c019dbaeb3a3e040fb958",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "810dca30ddb25c30582c019dbaeb3a3e040fb958"
+    "observedAt": "2026-10-23",
+    "revision": "810dca30ddb25c30582c019dbaeb3a3e040fb958",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/stanfordnlp/stanza-en",
+      "files": [
+        {
+          "name": "models/backward_charlm/1billion.pt",
+          "sizeBytes": 22743430
+        },
+        {
+          "name": "models/backward_charlm/mimic.pt",
+          "sizeBytes": 18914851
+        },
+        {
+          "name": "models/backward_charlm/pubmed.pt",
+          "sizeBytes": 19719006
+        },
+        {
+          "name": "models/constituency/ptb3_charlm.pt",
+          "sizeBytes": 113974166
+        },
+        {
+          "name": "models/constituency/ptb3_electra-large.pt",
+          "sizeBytes": 231451891
+        },
+        {
+          "name": "models/constituency/ptb3-revised_charlm.pt",
+          "sizeBytes": 112234113
+        },
+        {
+          "name": "models/constituency/ptb3-revised_electra-large.pt",
+          "sizeBytes": 129011540
+        },
+        {
+          "name": "models/coref/gum-nospeakers_roberta-large-lora.pt",
+          "sizeBytes": 135852781
+        },
+        {
+          "name": "models/coref/gum-speakers_roberta-large-lora.pt",
+          "sizeBytes": 135928877
+        },
+        {
+          "name": "models/coref/ontonotes-singletons_roberta-large-lora.pt",
+          "sizeBytes": 135857584
+        },
+        {
+          "name": "models/coref/udcoref_xlm-roberta-lora.pt",
+          "sizeBytes": 135847428
+        },
+        {
+          "name": "models/depparse/atis_charlm.pt",
+          "sizeBytes": 130951276
+        },
+        {
+          "name": "models/depparse/atis_electra-large.pt",
+          "sizeBytes": 150646289
+        },
+        {
+          "name": "models/depparse/atis_nocharlm.pt",
+          "sizeBytes": 97457624
+        },
+        {
+          "name": "models/depparse/childes_charlm.pt",
+          "sizeBytes": 137506643
+        },
+        {
+          "name": "models/depparse/childes_electra-large.pt",
+          "sizeBytes": 157201781
+        },
+        {
+          "name": "models/depparse/childes_nocharlm.pt",
+          "sizeBytes": 104021676
+        },
+        {
+          "name": "models/depparse/combined_charlm.pt",
+          "sizeBytes": 142384846
+        },
+        {
+          "name": "models/depparse/combined_electra-large.pt",
+          "sizeBytes": 162079623
+        },
+        {
+          "name": "models/depparse/combined_nocharlm.pt",
+          "sizeBytes": 108966985
+        },
+        {
+          "name": "models/depparse/craft_nocharlm.pt",
+          "sizeBytes": 111281963
+        },
+        {
+          "name": "models/depparse/eslspok_charlm.pt",
+          "sizeBytes": 134685052
+        },
+        {
+          "name": "models/depparse/eslspok_electra-large.pt",
+          "sizeBytes": 154380152
+        },
+        {
+          "name": "models/depparse/eslspok_nocharlm.pt",
+          "sizeBytes": 101201785
+        },
+        {
+          "name": "models/depparse/ewt_charlm.pt",
+          "sizeBytes": 139631564
+        },
+        {
+          "name": "models/depparse/ewt_electra-large.pt",
+          "sizeBytes": 159326333
+        },
+        {
+          "name": "models/depparse/ewt_nocharlm.pt",
+          "sizeBytes": 106169083
+        },
+        {
+          "name": "models/depparse/genia_nocharlm.pt",
+          "sizeBytes": 110736063
+        },
+        {
+          "name": "models/depparse/gum_charlm.pt",
+          "sizeBytes": 139768274
+        },
+        {
+          "name": "models/depparse/gum_electra-large.pt",
+          "sizeBytes": 159463150
+        },
+        {
+          "name": "models/depparse/gum_nocharlm.pt",
+          "sizeBytes": 106344202
+        },
+        {
+          "name": "models/depparse/lines_charlm.pt",
+          "sizeBytes": 135239717
+        },
+        {
+          "name": "models/depparse/lines_electra-large.pt",
+          "sizeBytes": 154934485
+        },
+        {
+          "name": "models/depparse/lines_nocharlm.pt",
+          "sizeBytes": 101766376
+        },
+        {
+          "name": "models/depparse/mimic_charlm.pt",
+          "sizeBytes": 144769247
+        },
+        {
+          "name": "models/depparse/mimic_nocharlm.pt",
+          "sizeBytes": 111351864
+        },
+        {
+          "name": "models/depparse/partut_charlm.pt",
+          "sizeBytes": 133876748
+        },
+        {
+          "name": "models/depparse/partut_electra-large.pt",
+          "sizeBytes": 153572106
+        },
+        {
+          "name": "models/depparse/partut_nocharlm.pt",
+          "sizeBytes": 100410870
+        },
+        {
+          "name": "models/forward_charlm/1billion.pt",
+          "sizeBytes": 22743428
+        },
+        {
+          "name": "models/forward_charlm/mimic.pt",
+          "sizeBytes": 18914850
+        },
+        {
+          "name": "models/forward_charlm/pubmed.pt",
+          "sizeBytes": 19719005
+        },
+        {
+          "name": "models/lemma/atis_charlm.pt",
+          "sizeBytes": 8498547
+        },
+        {
+          "name": "models/lemma/atis_nocharlm.pt",
+          "sizeBytes": 1943848
+        },
+        {
+          "name": "models/lemma/childes_charlm.pt",
+          "sizeBytes": 8550565
+        },
+        {
+          "name": "models/lemma/childes_nocharlm.pt",
+          "sizeBytes": 1995864
+        },
+        {
+          "name": "models/lemma/combined_charlm.pt",
+          "sizeBytes": 30960607
+        },
+        {
+          "name": "models/lemma/combined_nocharlm.pt",
+          "sizeBytes": 2514642
+        },
+        {
+          "name": "models/lemma/craft_nocharlm.pt",
+          "sizeBytes": 2463789
+        },
+        {
+          "name": "models/lemma/ewt_charlm.pt",
+          "sizeBytes": 8772051
+        },
+        {
+          "name": "models/lemma/ewt_nocharlm.pt",
+          "sizeBytes": 2217356
+        },
+        {
+          "name": "models/lemma/genia_nocharlm.pt",
+          "sizeBytes": 2198346
+        },
+        {
+          "name": "models/lemma/gum_charlm.pt",
+          "sizeBytes": 8865286
+        },
+        {
+          "name": "models/lemma/gum_nocharlm.pt",
+          "sizeBytes": 2310589
+        },
+        {
+          "name": "models/lemma/lines_charlm.pt",
+          "sizeBytes": 8609937
+        },
+        {
+          "name": "models/lemma/lines_nocharlm.pt",
+          "sizeBytes": 2055222
+        },
+        {
+          "name": "models/lemma/mimic_nocharlm.pt",
+          "sizeBytes": 2356874
+        },
+        {
+          "name": "models/lemma/partut_charlm.pt",
+          "sizeBytes": 8610657
+        },
+        {
+          "name": "models/lemma/partut_nocharlm.pt",
+          "sizeBytes": 2055934
+        },
+        {
+          "name": "models/mwt/atis.pt",
+          "sizeBytes": 459279
+        },
+        {
+          "name": "models/mwt/childes.pt",
+          "sizeBytes": 478785
+        },
+        {
+          "name": "models/mwt/combined.pt",
+          "sizeBytes": 512405
+        },
+        {
+          "name": "models/mwt/ewt.pt",
+          "sizeBytes": 487533
+        },
+        {
+          "name": "models/mwt/gum.pt",
+          "sizeBytes": 493026
+        },
+        {
+          "name": "models/mwt/lines.pt",
+          "sizeBytes": 473638
+        },
+        {
+          "name": "models/mwt/partut.pt",
+          "sizeBytes": 579578
+        },
+        {
+          "name": "models/ner/anatem.pt",
+          "sizeBytes": 53084237
+        },
+        {
+          "name": "models/ner/bc4chemd.pt",
+          "sizeBytes": 65451670
+        },
+        {
+          "name": "models/ner/bc5cdr.pt",
+          "sizeBytes": 50722181
+        },
+        {
+          "name": "models/ner/bionlp13cg.pt",
+          "sizeBytes": 49044729
+        },
+        {
+          "name": "models/ner/combined_charlm.pt",
+          "sizeBytes": 69672778
+        },
+        {
+          "name": "models/ner/conll03_charlm.pt",
+          "sizeBytes": 53877899
+        },
+        {
+          "name": "models/ner/conll03_electra-large.pt",
+          "sizeBytes": 84090358
+        },
+        {
+          "name": "models/ner/i2b2.pt",
+          "sizeBytes": 49830818
+        },
+        {
+          "name": "models/ner/jnlpba.pt",
+          "sizeBytes": 54185498
+        },
+        {
+          "name": "models/ner/linnaeus.pt",
+          "sizeBytes": 54611068
+        },
+        {
+          "name": "models/ner/ncbi_disease.pt",
+          "sizeBytes": 49646881
+        },
+        {
+          "name": "models/ner/ontonotes_charlm.pt",
+          "sizeBytes": 90426468
+        },
+        {
+          "name": "models/ner/ontonotes_electra-large.pt",
+          "sizeBytes": 122277321
+        },
+        {
+          "name": "models/ner/ontonotes_nocharlm.pt",
+          "sizeBytes": 54907881
+        },
+        {
+          "name": "models/ner/ontonotes-ww-multi_charlm.pt",
+          "sizeBytes": 65726470
+        },
+        {
+          "name": "models/ner/ontonotes-ww-multi_electra-large.pt",
+          "sizeBytes": 95938650
+        },
+        {
+          "name": "models/ner/ontonotes-ww-multi_nocharlm.pt",
+          "sizeBytes": 33286100
+        },
+        {
+          "name": "models/ner/radiology.pt",
+          "sizeBytes": 45236049
+        },
+        {
+          "name": "models/ner/s800.pt",
+          "sizeBytes": 52460658
+        },
+        {
+          "name": "models/pos/atis_charlm.pt",
+          "sizeBytes": 31418005
+        },
+        {
+          "name": "models/pos/atis_electra-large.pt",
+          "sizeBytes": 41282600
+        },
+        {
+          "name": "models/pos/atis_nocharlm.pt",
+          "sizeBytes": 16385150
+        },
+        {
+          "name": "models/pos/childes_charlm.pt",
+          "sizeBytes": 34618996
+        },
+        {
+          "name": "models/pos/childes_electra-large.pt",
+          "sizeBytes": 44483467
+        },
+        {
+          "name": "models/pos/childes_nocharlm.pt",
+          "sizeBytes": 19594966
+        },
+        {
+          "name": "models/pos/combined_charlm.pt",
+          "sizeBytes": 38766335
+        },
+        {
+          "name": "models/pos/combined_electra-large.pt",
+          "sizeBytes": 48630981
+        },
+        {
+          "name": "models/pos/combined_nocharlm.pt",
+          "sizeBytes": 23809450
+        },
+        {
+          "name": "models/pos/craft_nocharlm.pt",
+          "sizeBytes": 21561426
+        },
+        {
+          "name": "models/pos/eslspok_charlm.pt",
+          "sizeBytes": 33274233
+        },
+        {
+          "name": "models/pos/eslspok_electra-large.pt",
+          "sizeBytes": 43138738
+        },
+        {
+          "name": "models/pos/eslspok_nocharlm.pt",
+          "sizeBytes": 18251787
+        },
+        {
+          "name": "models/pos/ewt_charlm.pt",
+          "sizeBytes": 37908319
+        },
+        {
+          "name": "models/pos/ewt_electra-large.pt",
+          "sizeBytes": 47772871
+        },
+        {
+          "name": "models/pos/ewt_nocharlm.pt",
+          "sizeBytes": 22906290
+        },
+        {
+          "name": "models/pos/genia_nocharlm.pt",
+          "sizeBytes": 19741285
+        },
+        {
+          "name": "models/pos/gum_charlm.pt",
+          "sizeBytes": 37729288
+        },
+        {
+          "name": "models/pos/gum_electra-large.pt",
+          "sizeBytes": 47593784
+        },
+        {
+          "name": "models/pos/gum_nocharlm.pt",
+          "sizeBytes": 22765637
+        },
+        {
+          "name": "models/pos/lines_charlm.pt",
+          "sizeBytes": 33948884
+        },
+        {
+          "name": "models/pos/lines_electra-large.pt",
+          "sizeBytes": 43813438
+        },
+        {
+          "name": "models/pos/lines_nocharlm.pt",
+          "sizeBytes": 18936457
+        },
+        {
+          "name": "models/pos/mimic_charlm.pt",
+          "sizeBytes": 39156316
+        },
+        {
+          "name": "models/pos/partut_charlm.pt",
+          "sizeBytes": 32628185
+        },
+        {
+          "name": "models/pos/partut_electra-large.pt",
+          "sizeBytes": 42492678
+        },
+        {
+          "name": "models/pos/partut_nocharlm.pt",
+          "sizeBytes": 17622932
+        },
+        {
+          "name": "models/pretrain/biomed.pt",
+          "sizeBytes": 82635104
+        },
+        {
+          "name": "models/pretrain/conll17.pt",
+          "sizeBytes": 106701210
+        },
+        {
+          "name": "models/pretrain/fasttextcrawl.pt",
+          "sizeBytes": 122564256
+        },
+        {
+          "name": "models/pretrain/glove.pt",
+          "sizeBytes": 42575224
+        },
+        {
+          "name": "models/pretrain/mimic.pt",
+          "sizeBytes": 82696384
+        },
+        {
+          "name": "models/sentiment/sstplus_charlm.pt",
+          "sizeBytes": 80440039
+        },
+        {
+          "name": "models/sentiment/sstplus_electra-large.pt",
+          "sizeBytes": 169908657
+        },
+        {
+          "name": "models/tokenize/atis_charlm.pt",
+          "sizeBytes": 2729356
+        },
+        {
+          "name": "models/tokenize/atis_nocharlm.pt",
+          "sizeBytes": 631671
+        },
+        {
+          "name": "models/tokenize/childes_charlm.pt",
+          "sizeBytes": 2732628
+        },
+        {
+          "name": "models/tokenize/childes_nocharlm.pt",
+          "sizeBytes": 634907
+        },
+        {
+          "name": "models/tokenize/combined_charlm.pt",
+          "sizeBytes": 2758483
+        },
+        {
+          "name": "models/tokenize/combined_nocharlm.pt",
+          "sizeBytes": 660797
+        },
+        {
+          "name": "models/tokenize/craft_nocharlm.pt",
+          "sizeBytes": 648917
+        },
+        {
+          "name": "models/tokenize/eslspok_charlm.pt",
+          "sizeBytes": 2731836
+        },
+        {
+          "name": "models/tokenize/eslspok_nocharlm.pt",
+          "sizeBytes": 634111
+        },
+        {
+          "name": "models/tokenize/ewt_charlm.pt",
+          "sizeBytes": 2741838
+        },
+        {
+          "name": "models/tokenize/ewt_nocharlm.pt",
+          "sizeBytes": 644162
+        },
+        {
+          "name": "models/tokenize/genia_nocharlm.pt",
+          "sizeBytes": 644936
+        },
+        {
+          "name": "models/tokenize/gum_charlm.pt",
+          "sizeBytes": 2755991
+        },
+        {
+          "name": "models/tokenize/gum_nocharlm.pt",
+          "sizeBytes": 658306
+        },
+        {
+          "name": "models/tokenize/lines_charlm.pt",
+          "sizeBytes": 2736976
+        },
+        {
+          "name": "models/tokenize/lines_nocharlm.pt",
+          "sizeBytes": 639306
+        },
+        {
+          "name": "models/tokenize/mimic_nocharlm.pt",
+          "sizeBytes": 645082
+        },
+        {
+          "name": "models/tokenize/partut_charlm.pt",
+          "sizeBytes": 2739491
+        },
+        {
+          "name": "models/tokenize/partut_nocharlm.pt",
+          "sizeBytes": 641826
+        }
+      ],
+      "totalBytes": 7802744791,
+      "gated": false
+    }
   },
   {
     "id": "ow-nllb",
@@ -1594,7 +3051,7 @@ export const taskModelSources = [
     "publisher": "facebook",
     "url": "https://huggingface.co/facebook/nllb-200-distilled-600M",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d"
   },
   {
@@ -1603,8 +3060,20 @@ export const taskModelSources = [
     "publisher": "facebook",
     "url": "https://huggingface.co/facebook/nllb-200-distilled-600M/tree/f8d333a098d19b4fd9a8b18f94170487ad3f821d",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d"
+    "observedAt": "2026-10-23",
+    "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/facebook/nllb-200-distilled-600M",
+      "files": [
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 2460457927
+        }
+      ],
+      "totalBytes": 2460457927,
+      "gated": false
+    }
   },
   {
     "id": "ow-coedit",
@@ -1612,7 +3081,7 @@ export const taskModelSources = [
     "publisher": "grammarly",
     "url": "https://huggingface.co/grammarly/coedit-large",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "5637bcdf9d8d4419f97c8cfea36f7d35c79232b6"
   },
   {
@@ -1621,8 +3090,29 @@ export const taskModelSources = [
     "publisher": "grammarly",
     "url": "https://huggingface.co/grammarly/coedit-large/tree/5637bcdf9d8d4419f97c8cfea36f7d35c79232b6",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "5637bcdf9d8d4419f97c8cfea36f7d35c79232b6"
+    "observedAt": "2026-10-23",
+    "revision": "5637bcdf9d8d4419f97c8cfea36f7d35c79232b6",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/grammarly/coedit-large",
+      "parameterCount": 783092736,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 3132439432
+        },
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 3132556293
+        },
+        {
+          "name": "training_args.bin",
+          "sizeBytes": 4859
+        }
+      ],
+      "totalBytes": 6265000584,
+      "gated": false
+    }
   },
   {
     "id": "ow-embedding",
@@ -1630,7 +3120,7 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen3-Embedding-8B",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "1d8ad4ca9b3dd8059ad90a75d4983776a23d44af"
   },
   {
@@ -1639,8 +3129,33 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen3-Embedding-8B/tree/1d8ad4ca9b3dd8059ad90a75d4983776a23d44af",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "1d8ad4ca9b3dd8059ad90a75d4983776a23d44af"
+    "observedAt": "2026-10-23",
+    "revision": "1d8ad4ca9b3dd8059ad90a75d4983776a23d44af",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/Qwen/Qwen3-Embedding-8B",
+      "parameterCount": 7567295488,
+      "files": [
+        {
+          "name": "model-00001-of-00004.safetensors",
+          "sizeBytes": 4900037024
+        },
+        {
+          "name": "model-00002-of-00004.safetensors",
+          "sizeBytes": 4915959512
+        },
+        {
+          "name": "model-00003-of-00004.safetensors",
+          "sizeBytes": 4983067656
+        },
+        {
+          "name": "model-00004-of-00004.safetensors",
+          "sizeBytes": 335570376
+        }
+      ],
+      "totalBytes": 15134634568,
+      "gated": false
+    }
   },
   {
     "id": "ow-reranker",
@@ -1648,7 +3163,7 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen3-Reranker-8B",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "77d193c791ed757ca307ee72715aa132723da912"
   },
   {
@@ -1657,8 +3172,37 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen3-Reranker-8B/tree/77d193c791ed757ca307ee72715aa132723da912",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "77d193c791ed757ca307ee72715aa132723da912"
+    "observedAt": "2026-10-23",
+    "revision": "77d193c791ed757ca307ee72715aa132723da912",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/Qwen/Qwen3-Reranker-8B",
+      "parameterCount": 8188548096,
+      "files": [
+        {
+          "name": "model-00001-of-00005.safetensors",
+          "sizeBytes": 4027618768
+        },
+        {
+          "name": "model-00002-of-00005.safetensors",
+          "sizeBytes": 4060268160
+        },
+        {
+          "name": "model-00003-of-00005.safetensors",
+          "sizeBytes": 4043508680
+        },
+        {
+          "name": "model-00004-of-00005.safetensors",
+          "sizeBytes": 3003274088
+        },
+        {
+          "name": "model-00005-of-00005.safetensors",
+          "sizeBytes": 1242472576
+        }
+      ],
+      "totalBytes": 16377142272,
+      "gated": false
+    }
   },
   {
     "id": "ow-siglip",
@@ -1666,7 +3210,7 @@ export const taskModelSources = [
     "publisher": "google",
     "url": "https://huggingface.co/google/siglip2-so400m-patch14-384",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "e8e487298228002f3d8a82e0cd5c8ea9c567f57f"
   },
   {
@@ -1675,8 +3219,21 @@ export const taskModelSources = [
     "publisher": "google",
     "url": "https://huggingface.co/google/siglip2-so400m-patch14-384/tree/e8e487298228002f3d8a82e0cd5c8ea9c567f57f",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "e8e487298228002f3d8a82e0cd5c8ea9c567f57f"
+    "observedAt": "2026-10-23",
+    "revision": "e8e487298228002f3d8a82e0cd5c8ea9c567f57f",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/google/siglip2-so400m-patch14-384",
+      "parameterCount": 1136008498,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 4544143072
+        }
+      ],
+      "totalBytes": 4544143072,
+      "gated": false
+    }
   },
   {
     "id": "ow-dino",
@@ -1684,7 +3241,7 @@ export const taskModelSources = [
     "publisher": "IDEA-Research",
     "url": "https://huggingface.co/IDEA-Research/grounding-dino-base",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "12bdfa3120f3e7ec7b434d90674b3396eccf88eb"
   },
   {
@@ -1693,8 +3250,25 @@ export const taskModelSources = [
     "publisher": "IDEA-Research",
     "url": "https://huggingface.co/IDEA-Research/grounding-dino-base/tree/12bdfa3120f3e7ec7b434d90674b3396eccf88eb",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "12bdfa3120f3e7ec7b434d90674b3396eccf88eb"
+    "observedAt": "2026-10-23",
+    "revision": "12bdfa3120f3e7ec7b434d90674b3396eccf88eb",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/IDEA-Research/grounding-dino-base",
+      "parameterCount": 232810880,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 933400872
+        },
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 936002005
+        }
+      ],
+      "totalBytes": 1869402877,
+      "gated": false
+    }
   },
   {
     "id": "ow-sam3",
@@ -1702,7 +3276,7 @@ export const taskModelSources = [
     "publisher": "facebook",
     "url": "https://huggingface.co/facebook/sam3",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "3c879f39826c281e95690f02c7821c4de09afae7"
   },
   {
@@ -1711,8 +3285,25 @@ export const taskModelSources = [
     "publisher": "facebook",
     "url": "https://huggingface.co/facebook/sam3/tree/3c879f39826c281e95690f02c7821c4de09afae7",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "3c879f39826c281e95690f02c7821c4de09afae7"
+    "observedAt": "2026-10-23",
+    "revision": "3c879f39826c281e95690f02c7821c4de09afae7",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/facebook/sam3",
+      "parameterCount": 859922360,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 3439938512
+        },
+        {
+          "name": "sam3.pt",
+          "sizeBytes": 3450062241
+        }
+      ],
+      "totalBytes": 6890000753,
+      "gated": true
+    }
   },
   {
     "id": "ow-mask2former",
@@ -1720,7 +3311,7 @@ export const taskModelSources = [
     "publisher": "facebook",
     "url": "https://huggingface.co/facebook/mask2former-swin-large-ade-semantic",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "aa25c92404a40599614215e76514c79b427c7527"
   },
   {
@@ -1729,8 +3320,25 @@ export const taskModelSources = [
     "publisher": "facebook",
     "url": "https://huggingface.co/facebook/mask2former-swin-large-ade-semantic/tree/aa25c92404a40599614215e76514c79b427c7527",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "aa25c92404a40599614215e76514c79b427c7527"
+    "observedAt": "2026-10-23",
+    "revision": "aa25c92404a40599614215e76514c79b427c7527",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/facebook/mask2former-swin-large-ade-semantic",
+      "parameterCount": 215986594,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 866052064
+        },
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 866216517
+        }
+      ],
+      "totalBytes": 1732268581,
+      "gated": false
+    }
   },
   {
     "id": "ow-depth",
@@ -1738,7 +3346,7 @@ export const taskModelSources = [
     "publisher": "depth-anything",
     "url": "https://huggingface.co/depth-anything/DA3-LARGE",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "c54c26b16ec04d218e8d584ecf4bce082a9fcc20"
   },
   {
@@ -1747,8 +3355,21 @@ export const taskModelSources = [
     "publisher": "depth-anything",
     "url": "https://huggingface.co/depth-anything/DA3-LARGE/tree/c54c26b16ec04d218e8d584ecf4bce082a9fcc20",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "c54c26b16ec04d218e8d584ecf4bce082a9fcc20"
+    "observedAt": "2026-10-23",
+    "revision": "c54c26b16ec04d218e8d584ecf4bce082a9fcc20",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/depth-anything/DA3-LARGE",
+      "parameterCount": 410941767,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 1643843860
+        }
+      ],
+      "totalBytes": 1643843860,
+      "gated": false
+    }
   },
   {
     "id": "ow-pose",
@@ -1756,7 +3377,7 @@ export const taskModelSources = [
     "publisher": "usyd-community",
     "url": "https://huggingface.co/usyd-community/vitpose-plus-huge",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "9f36d7aec1800d23e97f10c2e74393aee92aa53f"
   },
   {
@@ -1765,8 +3386,21 @@ export const taskModelSources = [
     "publisher": "usyd-community",
     "url": "https://huggingface.co/usyd-community/vitpose-plus-huge/tree/9f36d7aec1800d23e97f10c2e74393aee92aa53f",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "9f36d7aec1800d23e97f10c2e74393aee92aa53f"
+    "observedAt": "2026-10-23",
+    "revision": "9f36d7aec1800d23e97f10c2e74393aee92aa53f",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/usyd-community/vitpose-plus-huge",
+      "parameterCount": 899405073,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 3597730876
+        }
+      ],
+      "totalBytes": 3597730876,
+      "gated": false
+    }
   },
   {
     "id": "ow-videomae",
@@ -1774,7 +3408,7 @@ export const taskModelSources = [
     "publisher": "MCG-NJU",
     "url": "https://huggingface.co/MCG-NJU/videomae-large-finetuned-kinetics",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "0f6adcd5f6902900aa0281f9daacfe52bb3c4ad4"
   },
   {
@@ -1783,8 +3417,25 @@ export const taskModelSources = [
     "publisher": "MCG-NJU",
     "url": "https://huggingface.co/MCG-NJU/videomae-large-finetuned-kinetics/tree/0f6adcd5f6902900aa0281f9daacfe52bb3c4ad4",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "0f6adcd5f6902900aa0281f9daacfe52bb3c4ad4"
+    "observedAt": "2026-10-23",
+    "revision": "0f6adcd5f6902900aa0281f9daacfe52bb3c4ad4",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/MCG-NJU/videomae-large-finetuned-kinetics",
+      "parameterCount": 304270736,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 1217128032
+        },
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 1217201701
+        }
+      ],
+      "totalBytes": 2434329733,
+      "gated": false
+    }
   },
   {
     "id": "ow-ocr",
@@ -1792,7 +3443,7 @@ export const taskModelSources = [
     "publisher": "PaddlePaddle",
     "url": "https://huggingface.co/PaddlePaddle/PaddleOCR-VL-1.6",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "c5630abae1d940eafe0697512a0325494b02ab42"
   },
   {
@@ -1801,8 +3452,21 @@ export const taskModelSources = [
     "publisher": "PaddlePaddle",
     "url": "https://huggingface.co/PaddlePaddle/PaddleOCR-VL-1.6/tree/c5630abae1d940eafe0697512a0325494b02ab42",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "c5630abae1d940eafe0697512a0325494b02ab42"
+    "observedAt": "2026-10-23",
+    "revision": "c5630abae1d940eafe0697512a0325494b02ab42",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/PaddlePaddle/PaddleOCR-VL-1.6",
+      "parameterCount": 958588736,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 1917255968
+        }
+      ],
+      "totalBytes": 1917255968,
+      "gated": false
+    }
   },
   {
     "id": "ow-image",
@@ -1810,7 +3474,7 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen-Image-2512",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "25468b98e3276ca6700de15c6628e51b7de54a26"
   },
   {
@@ -1819,8 +3483,73 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen-Image-2512/tree/25468b98e3276ca6700de15c6628e51b7de54a26",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "25468b98e3276ca6700de15c6628e51b7de54a26"
+    "observedAt": "2026-10-23",
+    "revision": "25468b98e3276ca6700de15c6628e51b7de54a26",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/Qwen/Qwen-Image-2512",
+      "parameterCount": 20430401088,
+      "files": [
+        {
+          "name": "text_encoder/model-00001-of-00004.safetensors",
+          "sizeBytes": 4968243304
+        },
+        {
+          "name": "text_encoder/model-00002-of-00004.safetensors",
+          "sizeBytes": 4991495816
+        },
+        {
+          "name": "text_encoder/model-00003-of-00004.safetensors",
+          "sizeBytes": 4932751040
+        },
+        {
+          "name": "text_encoder/model-00004-of-00004.safetensors",
+          "sizeBytes": 1691924384
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00001-of-00009.safetensors",
+          "sizeBytes": 4989364312
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00002-of-00009.safetensors",
+          "sizeBytes": 4984214160
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00003-of-00009.safetensors",
+          "sizeBytes": 4946470000
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00004-of-00009.safetensors",
+          "sizeBytes": 4984213736
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00005-of-00009.safetensors",
+          "sizeBytes": 4946471896
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00006-of-00009.safetensors",
+          "sizeBytes": 4946451560
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00007-of-00009.safetensors",
+          "sizeBytes": 4908690520
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00008-of-00009.safetensors",
+          "sizeBytes": 4984232856
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00009-of-00009.safetensors",
+          "sizeBytes": 1170918840
+        },
+        {
+          "name": "vae/diffusion_pytorch_model.safetensors",
+          "sizeBytes": 253806966
+        }
+      ],
+      "totalBytes": 57699249390,
+      "gated": false
+    }
   },
   {
     "id": "ow-imageedit",
@@ -1828,7 +3557,7 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen-Image-Edit-2511",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9"
   },
   {
@@ -1837,8 +3566,57 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen-Image-Edit-2511/tree/6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9"
+    "observedAt": "2026-10-23",
+    "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/Qwen/Qwen-Image-Edit-2511",
+      "parameterCount": 20430401088,
+      "files": [
+        {
+          "name": "text_encoder/model-00001-of-00004.safetensors",
+          "sizeBytes": 4968243304
+        },
+        {
+          "name": "text_encoder/model-00002-of-00004.safetensors",
+          "sizeBytes": 4991495816
+        },
+        {
+          "name": "text_encoder/model-00003-of-00004.safetensors",
+          "sizeBytes": 4932751040
+        },
+        {
+          "name": "text_encoder/model-00004-of-00004.safetensors",
+          "sizeBytes": 1691924384
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00001-of-00005.safetensors",
+          "sizeBytes": 9973578592
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00002-of-00005.safetensors",
+          "sizeBytes": 9987326072
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00003-of-00005.safetensors",
+          "sizeBytes": 9987307440
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00004-of-00005.safetensors",
+          "sizeBytes": 9930685712
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00005-of-00005.safetensors",
+          "sizeBytes": 982130472
+        },
+        {
+          "name": "vae/diffusion_pytorch_model.safetensors",
+          "sizeBytes": 253806966
+        }
+      ],
+      "totalBytes": 57699249798,
+      "gated": false
+    }
   },
   {
     "id": "ow-fill",
@@ -1846,7 +3624,7 @@ export const taskModelSources = [
     "publisher": "black-forest-labs",
     "url": "https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "358293da0354175698b67ec8299acf928313a78a"
   },
   {
@@ -1855,8 +3633,53 @@ export const taskModelSources = [
     "publisher": "black-forest-labs",
     "url": "https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/tree/358293da0354175698b67ec8299acf928313a78a",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "358293da0354175698b67ec8299acf928313a78a"
+    "observedAt": "2026-10-23",
+    "revision": "358293da0354175698b67ec8299acf928313a78a",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev",
+      "parameterCount": 11902391360,
+      "files": [
+        {
+          "name": "ae.safetensors",
+          "sizeBytes": 335304388
+        },
+        {
+          "name": "flux1-fill-dev.safetensors",
+          "sizeBytes": 23804922408
+        },
+        {
+          "name": "text_encoder_2/model-00001-of-00002.safetensors",
+          "sizeBytes": 4994582224
+        },
+        {
+          "name": "text_encoder_2/model-00002-of-00002.safetensors",
+          "sizeBytes": 4530066360
+        },
+        {
+          "name": "text_encoder/model.safetensors",
+          "sizeBytes": 246144352
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+          "sizeBytes": 9985006384
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+          "sizeBytes": 9949328904
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+          "sizeBytes": 3870584832
+        },
+        {
+          "name": "vae/diffusion_pytorch_model.safetensors",
+          "sizeBytes": 335306212
+        }
+      ],
+      "totalBytes": 58051246064,
+      "gated": true
+    }
   },
   {
     "id": "ow-wan",
@@ -1864,7 +3687,7 @@ export const taskModelSources = [
     "publisher": "Wan-AI",
     "url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "921dbaf3f1674a56f47e83fb80a34bac8a8f203e"
   },
   {
@@ -1873,8 +3696,36 @@ export const taskModelSources = [
     "publisher": "Wan-AI",
     "url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/tree/921dbaf3f1674a56f47e83fb80a34bac8a8f203e",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "921dbaf3f1674a56f47e83fb80a34bac8a8f203e"
+    "observedAt": "2026-10-23",
+    "revision": "921dbaf3f1674a56f47e83fb80a34bac8a8f203e",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B",
+      "files": [
+        {
+          "name": "diffusion_pytorch_model-00001-of-00003.safetensors",
+          "sizeBytes": 9825014472
+        },
+        {
+          "name": "diffusion_pytorch_model-00002-of-00003.safetensors",
+          "sizeBytes": 9995661736
+        },
+        {
+          "name": "diffusion_pytorch_model-00003-of-00003.safetensors",
+          "sizeBytes": 178558176
+        },
+        {
+          "name": "models_t5_umt5-xxl-enc-bf16.pth",
+          "sizeBytes": 11361920418
+        },
+        {
+          "name": "Wan2.2_VAE.pth",
+          "sizeBytes": 2818839170
+        }
+      ],
+      "totalBytes": 34179993972,
+      "gated": false
+    }
   },
   {
     "id": "ow-shape",
@@ -1882,7 +3733,7 @@ export const taskModelSources = [
     "publisher": "openai",
     "url": "https://huggingface.co/openai/shap-e",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "7bd337afdea1c17842e1c3cc45c4e268356dba40"
   },
   {
@@ -1891,8 +3742,44 @@ export const taskModelSources = [
     "publisher": "openai",
     "url": "https://huggingface.co/openai/shap-e/tree/7bd337afdea1c17842e1c3cc45c4e268356dba40",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "7bd337afdea1c17842e1c3cc45c4e268356dba40"
+    "observedAt": "2026-10-23",
+    "revision": "7bd337afdea1c17842e1c3cc45c4e268356dba40",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/openai/shap-e",
+      "files": [
+        {
+          "name": "prior/diffusion_pytorch_model.bin",
+          "sizeBytes": 1262937295
+        },
+        {
+          "name": "prior/diffusion_pytorch_model.fp16.safetensors",
+          "sizeBytes": 631435880
+        },
+        {
+          "name": "renderer/diffusion_pytorch_model.bin",
+          "sizeBytes": 905200536
+        },
+        {
+          "name": "renderer/diffusion_pytorch_model.fp16.safetensors",
+          "sizeBytes": 452597858
+        },
+        {
+          "name": "shap_e_renderer/diffusion_pytorch_model.bin",
+          "sizeBytes": 905233202
+        },
+        {
+          "name": "text_encoder/model.fp16.safetensors",
+          "sizeBytes": 247324608
+        },
+        {
+          "name": "text_encoder/pytorch_model.bin",
+          "sizeBytes": 494664885
+        }
+      ],
+      "totalBytes": 4899394264,
+      "gated": false
+    }
   },
   {
     "id": "ow-asr",
@@ -1900,7 +3787,7 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen3-ASR-1.7B",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "7278e1e70fe206f11671096ffdd38061171dd6e5"
   },
   {
@@ -1909,8 +3796,25 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen3-ASR-1.7B/tree/7278e1e70fe206f11671096ffdd38061171dd6e5",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "7278e1e70fe206f11671096ffdd38061171dd6e5"
+    "observedAt": "2026-10-23",
+    "revision": "7278e1e70fe206f11671096ffdd38061171dd6e5",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/Qwen/Qwen3-ASR-1.7B",
+      "parameterCount": 2349217408,
+      "files": [
+        {
+          "name": "model-00001-of-00002.safetensors",
+          "sizeBytes": 4220320824
+        },
+        {
+          "name": "model-00002-of-00002.safetensors",
+          "sizeBytes": 478200688
+        }
+      ],
+      "totalBytes": 4698521512,
+      "gated": false
+    }
   },
   {
     "id": "ow-seamless",
@@ -1918,7 +3822,7 @@ export const taskModelSources = [
     "publisher": "facebook",
     "url": "https://huggingface.co/facebook/seamless-m4t-v2-large",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "5f8cc790b19fc3f67a61c105133b20b34e3dcb76"
   },
   {
@@ -1927,8 +3831,37 @@ export const taskModelSources = [
     "publisher": "facebook",
     "url": "https://huggingface.co/facebook/seamless-m4t-v2-large/tree/5f8cc790b19fc3f67a61c105133b20b34e3dcb76",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "5f8cc790b19fc3f67a61c105133b20b34e3dcb76"
+    "observedAt": "2026-10-23",
+    "revision": "5f8cc790b19fc3f67a61c105133b20b34e3dcb76",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/facebook/seamless-m4t-v2-large",
+      "parameterCount": 2309249669,
+      "files": [
+        {
+          "name": "m4t_v2_multitask_unity2.pt",
+          "sizeBytes": 11386771266
+        },
+        {
+          "name": "model-00001-of-00002.safetensors",
+          "sizeBytes": 4999163080
+        },
+        {
+          "name": "model-00002-of-00002.safetensors",
+          "sizeBytes": 4238114628
+        },
+        {
+          "name": "seamlessM4T_v2_large.pt",
+          "sizeBytes": 9070060243
+        },
+        {
+          "name": "vocoder_v2.pt",
+          "sizeBytes": 167785015
+        }
+      ],
+      "totalBytes": 29861894232,
+      "gated": false
+    }
   },
   {
     "id": "ow-keyword",
@@ -1936,7 +3869,7 @@ export const taskModelSources = [
     "publisher": "superb",
     "url": "https://huggingface.co/superb/wav2vec2-base-superb-ks",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "372e0486cd83e6f0c05c20a27262e9ca09450d24"
   },
   {
@@ -1945,8 +3878,20 @@ export const taskModelSources = [
     "publisher": "superb",
     "url": "https://huggingface.co/superb/wav2vec2-base-superb-ks/tree/372e0486cd83e6f0c05c20a27262e9ca09450d24",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "372e0486cd83e6f0c05c20a27262e9ca09450d24"
+    "observedAt": "2026-10-23",
+    "revision": "372e0486cd83e6f0c05c20a27262e9ca09450d24",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/superb/wav2vec2-base-superb-ks",
+      "files": [
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 378369297
+        }
+      ],
+      "totalBytes": 378369297,
+      "gated": false
+    }
   },
   {
     "id": "ow-emotion",
@@ -1954,7 +3899,7 @@ export const taskModelSources = [
     "publisher": "superb",
     "url": "https://huggingface.co/superb/hubert-large-superb-er",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "ef1a2ebfd7cfc424dc7f0fbcdc406e8b794d63bb"
   },
   {
@@ -1963,8 +3908,20 @@ export const taskModelSources = [
     "publisher": "superb",
     "url": "https://huggingface.co/superb/hubert-large-superb-er/tree/ef1a2ebfd7cfc424dc7f0fbcdc406e8b794d63bb",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "ef1a2ebfd7cfc424dc7f0fbcdc406e8b794d63bb"
+    "observedAt": "2026-10-23",
+    "revision": "ef1a2ebfd7cfc424dc7f0fbcdc406e8b794d63bb",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/superb/hubert-large-superb-er",
+      "files": [
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 1262970923
+        }
+      ],
+      "totalBytes": 1262970923,
+      "gated": false
+    }
   },
   {
     "id": "ow-ast",
@@ -1972,7 +3929,7 @@ export const taskModelSources = [
     "publisher": "MIT",
     "url": "https://huggingface.co/MIT/ast-finetuned-audioset-10-10-0.4593",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "f826b80d28226b62986cc218e5cec390b1096902"
   },
   {
@@ -1981,8 +3938,25 @@ export const taskModelSources = [
     "publisher": "MIT",
     "url": "https://huggingface.co/MIT/ast-finetuned-audioset-10-10-0.4593/tree/f826b80d28226b62986cc218e5cec390b1096902",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "f826b80d28226b62986cc218e5cec390b1096902"
+    "observedAt": "2026-10-23",
+    "revision": "f826b80d28226b62986cc218e5cec390b1096902",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/MIT/ast-finetuned-audioset-10-10-0.4593",
+      "parameterCount": 86594063,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 346404948
+        },
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 346445675
+        }
+      ],
+      "totalBytes": 692850623,
+      "gated": false
+    }
   },
   {
     "id": "ow-ecapa",
@@ -2008,7 +3982,7 @@ export const taskModelSources = [
     "publisher": "pyannote",
     "url": "https://huggingface.co/pyannote/speaker-diarization-community-1",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "3533c8cf8e369892e6b79ff1bf80f7b0286a54ee"
   },
   {
@@ -2017,8 +3991,24 @@ export const taskModelSources = [
     "publisher": "pyannote",
     "url": "https://huggingface.co/pyannote/speaker-diarization-community-1/tree/3533c8cf8e369892e6b79ff1bf80f7b0286a54ee",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "3533c8cf8e369892e6b79ff1bf80f7b0286a54ee"
+    "observedAt": "2026-10-23",
+    "revision": "3533c8cf8e369892e6b79ff1bf80f7b0286a54ee",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/pyannote/speaker-diarization-community-1",
+      "files": [
+        {
+          "name": "embedding/pytorch_model.bin",
+          "sizeBytes": 26646242
+        },
+        {
+          "name": "segmentation/pytorch_model.bin",
+          "sizeBytes": 5906507
+        }
+      ],
+      "totalBytes": 32552749,
+      "gated": true
+    }
   },
   {
     "id": "ow-tts",
@@ -2026,7 +4016,7 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "0c0e3051f131929182e2c023b9537f8b1c68adfe"
   },
   {
@@ -2035,8 +4025,25 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice/tree/0c0e3051f131929182e2c023b9537f8b1c68adfe",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "0c0e3051f131929182e2c023b9537f8b1c68adfe"
+    "observedAt": "2026-10-23",
+    "revision": "0c0e3051f131929182e2c023b9537f8b1c68adfe",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+      "parameterCount": 1916676352,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 3833402552
+        },
+        {
+          "name": "speech_tokenizer/model.safetensors",
+          "sizeBytes": 682293092
+        }
+      ],
+      "totalBytes": 4515695644,
+      "gated": false
+    }
   },
   {
     "id": "ow-separation",
@@ -2080,7 +4087,7 @@ export const taskModelSources = [
     "publisher": "Plachta",
     "url": "https://huggingface.co/Plachta/Seed-VC",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "257283f9f41585055e8f858fba4fd044e5caed6e"
   },
   {
@@ -2089,8 +4096,52 @@ export const taskModelSources = [
     "publisher": "Plachta",
     "url": "https://huggingface.co/Plachta/Seed-VC/tree/257283f9f41585055e8f858fba4fd044e5caed6e",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "257283f9f41585055e8f858fba4fd044e5caed6e"
+    "observedAt": "2026-10-23",
+    "revision": "257283f9f41585055e8f858fba4fd044e5caed6e",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/Plachta/Seed-VC",
+      "files": [
+        {
+          "name": "DiT_seed_v2_uvit_whisper_base_f0_44k_bigvgan_pruned_ema.pth",
+          "sizeBytes": 820863652
+        },
+        {
+          "name": "DiT_seed_v2_uvit_whisper_base_f0_44k_bigvgan_pruned_ft_ema_v2.pth",
+          "sizeBytes": 820865494
+        },
+        {
+          "name": "DiT_seed_v2_uvit_whisper_base_f0_44k_bigvgan_pruned_ft_ema.pth",
+          "sizeBytes": 820864573
+        },
+        {
+          "name": "DiT_seed_v2_uvit_whisper_small_wavenet_bigvgan_pruned.pth",
+          "sizeBytes": 440312082
+        },
+        {
+          "name": "DiT_uvit_tat_xlsr_ema.pth",
+          "sizeBytes": 142112203
+        },
+        {
+          "name": "hift.pt",
+          "sizeBytes": 81896716
+        },
+        {
+          "name": "se_db.pt",
+          "sizeBytes": 102405286
+        },
+        {
+          "name": "v2/ar_base.pth",
+          "sizeBytes": 358846893
+        },
+        {
+          "name": "v2/cfm_small.pth",
+          "sizeBytes": 353349694
+        }
+      ],
+      "totalBytes": 3941516593,
+      "gated": false
+    }
   },
   {
     "id": "ow-audiogen",
@@ -2098,7 +4149,7 @@ export const taskModelSources = [
     "publisher": "facebook",
     "url": "https://huggingface.co/facebook/audiogen-medium",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "1277dd7dfd8fa57a205a70acc5de0ee90804502f"
   },
   {
@@ -2107,8 +4158,24 @@ export const taskModelSources = [
     "publisher": "facebook",
     "url": "https://huggingface.co/facebook/audiogen-medium/tree/1277dd7dfd8fa57a205a70acc5de0ee90804502f",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "1277dd7dfd8fa57a205a70acc5de0ee90804502f"
+    "observedAt": "2026-10-23",
+    "revision": "1277dd7dfd8fa57a205a70acc5de0ee90804502f",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/facebook/audiogen-medium",
+      "files": [
+        {
+          "name": "compression_state_dict.bin",
+          "sizeBytes": 235740815
+        },
+        {
+          "name": "state_dict.bin",
+          "sizeBytes": 3678455287
+        }
+      ],
+      "totalBytes": 3914196102,
+      "gated": false
+    }
   },
   {
     "id": "ow-musicgen",
@@ -2116,7 +4183,7 @@ export const taskModelSources = [
     "publisher": "facebook",
     "url": "https://huggingface.co/facebook/musicgen-large",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "15ccdc92099879e47b6da12c350cdb71d4eab3ca"
   },
   {
@@ -2125,8 +4192,32 @@ export const taskModelSources = [
     "publisher": "facebook",
     "url": "https://huggingface.co/facebook/musicgen-large/tree/15ccdc92099879e47b6da12c350cdb71d4eab3ca",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "15ccdc92099879e47b6da12c350cdb71d4eab3ca"
+    "observedAt": "2026-10-23",
+    "revision": "15ccdc92099879e47b6da12c350cdb71d4eab3ca",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/facebook/musicgen-large",
+      "files": [
+        {
+          "name": "compression_state_dict.bin",
+          "sizeBytes": 236001935
+        },
+        {
+          "name": "pytorch_model-00001-of-00002.bin",
+          "sizeBytes": 9987827539
+        },
+        {
+          "name": "pytorch_model-00002-of-00002.bin",
+          "sizeBytes": 3731608779
+        },
+        {
+          "name": "state_dict.bin",
+          "sizeBytes": 6514108999
+        }
+      ],
+      "totalBytes": 20469547252,
+      "gated": false
+    }
   },
   {
     "id": "ow-ace",
@@ -2134,7 +4225,7 @@ export const taskModelSources = [
     "publisher": "ACE-Step",
     "url": "https://huggingface.co/ACE-Step/Ace-Step1.5",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "19671f406d603126926c1b7e2adc169acbcade22"
   },
   {
@@ -2143,8 +4234,36 @@ export const taskModelSources = [
     "publisher": "ACE-Step",
     "url": "https://huggingface.co/ACE-Step/Ace-Step1.5/tree/19671f406d603126926c1b7e2adc169acbcade22",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "19671f406d603126926c1b7e2adc169acbcade22"
+    "observedAt": "2026-10-23",
+    "revision": "19671f406d603126926c1b7e2adc169acbcade22",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/ACE-Step/Ace-Step1.5",
+      "files": [
+        {
+          "name": "acestep-5Hz-lm-1.7B/model.safetensors",
+          "sizeBytes": 3708521528
+        },
+        {
+          "name": "acestep-v15-turbo/model.safetensors",
+          "sizeBytes": 4787825604
+        },
+        {
+          "name": "acestep-v15-turbo/silence_latent.pt",
+          "sizeBytes": 3841215
+        },
+        {
+          "name": "Qwen3-Embedding-0.6B/model.safetensors",
+          "sizeBytes": 1191586416
+        },
+        {
+          "name": "vae/diffusion_pytorch_model.safetensors",
+          "sizeBytes": 337431388
+        }
+      ],
+      "totalBytes": 10029206151,
+      "gated": false
+    }
   },
   {
     "id": "ow-coder",
@@ -2152,7 +4271,7 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen3-Coder-Next",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "a7fbcb5c0e12d62a448eaa0e260346bf5dcc0feb"
   },
   {
@@ -2161,8 +4280,177 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen3-Coder-Next/tree/a7fbcb5c0e12d62a448eaa0e260346bf5dcc0feb",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "a7fbcb5c0e12d62a448eaa0e260346bf5dcc0feb"
+    "observedAt": "2026-10-23",
+    "revision": "a7fbcb5c0e12d62a448eaa0e260346bf5dcc0feb",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/Qwen/Qwen3-Coder-Next",
+      "parameterCount": 79674391296,
+      "files": [
+        {
+          "name": "model-00001-of-00040.safetensors",
+          "sizeBytes": 3999619288
+        },
+        {
+          "name": "model-00002-of-00040.safetensors",
+          "sizeBytes": 3999841816
+        },
+        {
+          "name": "model-00003-of-00040.safetensors",
+          "sizeBytes": 3999515608
+        },
+        {
+          "name": "model-00004-of-00040.safetensors",
+          "sizeBytes": 3999842032
+        },
+        {
+          "name": "model-00005-of-00040.safetensors",
+          "sizeBytes": 3999842240
+        },
+        {
+          "name": "model-00006-of-00040.safetensors",
+          "sizeBytes": 3999853248
+        },
+        {
+          "name": "model-00007-of-00040.safetensors",
+          "sizeBytes": 3999841944
+        },
+        {
+          "name": "model-00008-of-00040.safetensors",
+          "sizeBytes": 3999842032
+        },
+        {
+          "name": "model-00009-of-00040.safetensors",
+          "sizeBytes": 3999843224
+        },
+        {
+          "name": "model-00010-of-00040.safetensors",
+          "sizeBytes": 3999517840
+        },
+        {
+          "name": "model-00011-of-00040.safetensors",
+          "sizeBytes": 4000181328
+        },
+        {
+          "name": "model-00012-of-00040.safetensors",
+          "sizeBytes": 3999843912
+        },
+        {
+          "name": "model-00013-of-00040.safetensors",
+          "sizeBytes": 3999517504
+        },
+        {
+          "name": "model-00014-of-00040.safetensors",
+          "sizeBytes": 3999844016
+        },
+        {
+          "name": "model-00015-of-00040.safetensors",
+          "sizeBytes": 4000181768
+        },
+        {
+          "name": "model-00016-of-00040.safetensors",
+          "sizeBytes": 3999517280
+        },
+        {
+          "name": "model-00017-of-00040.safetensors",
+          "sizeBytes": 3999843912
+        },
+        {
+          "name": "model-00018-of-00040.safetensors",
+          "sizeBytes": 3999843912
+        },
+        {
+          "name": "model-00019-of-00040.safetensors",
+          "sizeBytes": 3999844120
+        },
+        {
+          "name": "model-00020-of-00040.safetensors",
+          "sizeBytes": 3999855064
+        },
+        {
+          "name": "model-00021-of-00040.safetensors",
+          "sizeBytes": 3999843824
+        },
+        {
+          "name": "model-00022-of-00040.safetensors",
+          "sizeBytes": 3999843912
+        },
+        {
+          "name": "model-00023-of-00040.safetensors",
+          "sizeBytes": 3999517496
+        },
+        {
+          "name": "model-00024-of-00040.safetensors",
+          "sizeBytes": 3999844296
+        },
+        {
+          "name": "model-00025-of-00040.safetensors",
+          "sizeBytes": 4000181328
+        },
+        {
+          "name": "model-00026-of-00040.safetensors",
+          "sizeBytes": 3999517504
+        },
+        {
+          "name": "model-00027-of-00040.safetensors",
+          "sizeBytes": 3999843912
+        },
+        {
+          "name": "model-00028-of-00040.safetensors",
+          "sizeBytes": 3999844016
+        },
+        {
+          "name": "model-00029-of-00040.safetensors",
+          "sizeBytes": 3999855352
+        },
+        {
+          "name": "model-00030-of-00040.safetensors",
+          "sizeBytes": 3999843704
+        },
+        {
+          "name": "model-00031-of-00040.safetensors",
+          "sizeBytes": 3999843912
+        },
+        {
+          "name": "model-00032-of-00040.safetensors",
+          "sizeBytes": 3999843912
+        },
+        {
+          "name": "model-00033-of-00040.safetensors",
+          "sizeBytes": 3999517720
+        },
+        {
+          "name": "model-00034-of-00040.safetensors",
+          "sizeBytes": 4000181528
+        },
+        {
+          "name": "model-00035-of-00040.safetensors",
+          "sizeBytes": 3999843824
+        },
+        {
+          "name": "model-00036-of-00040.safetensors",
+          "sizeBytes": 3999517504
+        },
+        {
+          "name": "model-00037-of-00040.safetensors",
+          "sizeBytes": 3999843904
+        },
+        {
+          "name": "model-00038-of-00040.safetensors",
+          "sizeBytes": 3999844296
+        },
+        {
+          "name": "model-00039-of-00040.safetensors",
+          "sizeBytes": 3999854920
+        },
+        {
+          "name": "model-00040-of-00040.safetensors",
+          "sizeBytes": 3365572528
+        }
+      ],
+      "totalBytes": 159358031480,
+      "gated": false
+    }
   },
   {
     "id": "ow-sql",
@@ -2170,7 +4458,7 @@ export const taskModelSources = [
     "publisher": "defog",
     "url": "https://huggingface.co/defog/sqlcoder-70b-alpha",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "8095a5ded3d3ed70fe27e9ed46b91f3e29a1b51a"
   },
   {
@@ -2179,8 +4467,133 @@ export const taskModelSources = [
     "publisher": "defog",
     "url": "https://huggingface.co/defog/sqlcoder-70b-alpha/tree/8095a5ded3d3ed70fe27e9ed46b91f3e29a1b51a",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "8095a5ded3d3ed70fe27e9ed46b91f3e29a1b51a"
+    "observedAt": "2026-10-23",
+    "revision": "8095a5ded3d3ed70fe27e9ed46b91f3e29a1b51a",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/defog/sqlcoder-70b-alpha",
+      "parameterCount": 68976910336,
+      "files": [
+        {
+          "name": "model-00001-of-00029.safetensors",
+          "sizeBytes": 4718922456
+        },
+        {
+          "name": "model-00002-of-00029.safetensors",
+          "sizeBytes": 4664167352
+        },
+        {
+          "name": "model-00003-of-00029.safetensors",
+          "sizeBytes": 4999711672
+        },
+        {
+          "name": "model-00004-of-00029.safetensors",
+          "sizeBytes": 4966157024
+        },
+        {
+          "name": "model-00005-of-00029.safetensors",
+          "sizeBytes": 4664134384
+        },
+        {
+          "name": "model-00006-of-00029.safetensors",
+          "sizeBytes": 4664167384
+        },
+        {
+          "name": "model-00007-of-00029.safetensors",
+          "sizeBytes": 4664167376
+        },
+        {
+          "name": "model-00008-of-00029.safetensors",
+          "sizeBytes": 4999711704
+        },
+        {
+          "name": "model-00009-of-00029.safetensors",
+          "sizeBytes": 4966157032
+        },
+        {
+          "name": "model-00010-of-00029.safetensors",
+          "sizeBytes": 4664134384
+        },
+        {
+          "name": "model-00011-of-00029.safetensors",
+          "sizeBytes": 4664167384
+        },
+        {
+          "name": "model-00012-of-00029.safetensors",
+          "sizeBytes": 4664167376
+        },
+        {
+          "name": "model-00013-of-00029.safetensors",
+          "sizeBytes": 4999711704
+        },
+        {
+          "name": "model-00014-of-00029.safetensors",
+          "sizeBytes": 4966157032
+        },
+        {
+          "name": "model-00015-of-00029.safetensors",
+          "sizeBytes": 4664134384
+        },
+        {
+          "name": "model-00016-of-00029.safetensors",
+          "sizeBytes": 4664167384
+        },
+        {
+          "name": "model-00017-of-00029.safetensors",
+          "sizeBytes": 4664167376
+        },
+        {
+          "name": "model-00018-of-00029.safetensors",
+          "sizeBytes": 4999711704
+        },
+        {
+          "name": "model-00019-of-00029.safetensors",
+          "sizeBytes": 4966157032
+        },
+        {
+          "name": "model-00020-of-00029.safetensors",
+          "sizeBytes": 4664134384
+        },
+        {
+          "name": "model-00021-of-00029.safetensors",
+          "sizeBytes": 4664167384
+        },
+        {
+          "name": "model-00022-of-00029.safetensors",
+          "sizeBytes": 4664167376
+        },
+        {
+          "name": "model-00023-of-00029.safetensors",
+          "sizeBytes": 4999711704
+        },
+        {
+          "name": "model-00024-of-00029.safetensors",
+          "sizeBytes": 4966157032
+        },
+        {
+          "name": "model-00025-of-00029.safetensors",
+          "sizeBytes": 4664134384
+        },
+        {
+          "name": "model-00026-of-00029.safetensors",
+          "sizeBytes": 4664167384
+        },
+        {
+          "name": "model-00027-of-00029.safetensors",
+          "sizeBytes": 4664167376
+        },
+        {
+          "name": "model-00028-of-00029.safetensors",
+          "sizeBytes": 4999711704
+        },
+        {
+          "name": "model-00029-of-00029.safetensors",
+          "sizeBytes": 3779413912
+        }
+      ],
+      "totalBytes": 137953904784,
+      "gated": false
+    }
   },
   {
     "id": "ow-codet5",
@@ -2188,7 +4601,7 @@ export const taskModelSources = [
     "publisher": "Salesforce",
     "url": "https://huggingface.co/Salesforce/codet5-base",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "02cd2d31bb7c6d0e4d91156167b2de044989c733"
   },
   {
@@ -2197,8 +4610,20 @@ export const taskModelSources = [
     "publisher": "Salesforce",
     "url": "https://huggingface.co/Salesforce/codet5-base/tree/02cd2d31bb7c6d0e4d91156167b2de044989c733",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "02cd2d31bb7c6d0e4d91156167b2de044989c733"
+    "observedAt": "2026-10-23",
+    "revision": "02cd2d31bb7c6d0e4d91156167b2de044989c733",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/Salesforce/codet5-base",
+      "files": [
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 891641279
+        }
+      ],
+      "totalBytes": 891641279,
+      "gated": false
+    }
   },
   {
     "id": "ow-codet5plus",
@@ -2206,7 +4631,7 @@ export const taskModelSources = [
     "publisher": "Salesforce",
     "url": "https://huggingface.co/Salesforce/codet5p-770m",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "3f7cc6e80aee6612f41253b5ee28f09f86faa35f"
   },
   {
@@ -2215,8 +4640,20 @@ export const taskModelSources = [
     "publisher": "Salesforce",
     "url": "https://huggingface.co/Salesforce/codet5p-770m/tree/3f7cc6e80aee6612f41253b5ee28f09f86faa35f",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "3f7cc6e80aee6612f41253b5ee28f09f86faa35f"
+    "observedAt": "2026-10-23",
+    "revision": "3f7cc6e80aee6612f41253b5ee28f09f86faa35f",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/Salesforce/codet5p-770m",
+      "files": [
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 1475351723
+        }
+      ],
+      "totalBytes": 1475351723,
+      "gated": false
+    }
   },
   {
     "id": "ow-bart",
@@ -2224,7 +4661,7 @@ export const taskModelSources = [
     "publisher": "facebook",
     "url": "https://huggingface.co/facebook/bart-large-cnn",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "37f520fa929c961707657b28798b30c003dd100b"
   },
   {
@@ -2233,8 +4670,25 @@ export const taskModelSources = [
     "publisher": "facebook",
     "url": "https://huggingface.co/facebook/bart-large-cnn/tree/37f520fa929c961707657b28798b30c003dd100b",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "37f520fa929c961707657b28798b30c003dd100b"
+    "observedAt": "2026-10-23",
+    "revision": "37f520fa929c961707657b28798b30c003dd100b",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/facebook/bart-large-cnn",
+      "parameterCount": 406290432,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 1625222120
+        },
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 1625270765
+        }
+      ],
+      "totalBytes": 3250492885,
+      "gated": false
+    }
   },
   {
     "id": "ow-tabpfn",
@@ -2242,7 +4696,7 @@ export const taskModelSources = [
     "publisher": "Prior-Labs",
     "url": "https://huggingface.co/Prior-Labs/tabpfn_3_5",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "06bf2ba35c80a92a3b9abb436b99cf49e7a0365e"
   },
   {
@@ -2251,8 +4705,28 @@ export const taskModelSources = [
     "publisher": "Prior-Labs",
     "url": "https://huggingface.co/Prior-Labs/tabpfn_3_5/tree/06bf2ba35c80a92a3b9abb436b99cf49e7a0365e",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "06bf2ba35c80a92a3b9abb436b99cf49e7a0365e"
+    "observedAt": "2026-10-23",
+    "revision": "06bf2ba35c80a92a3b9abb436b99cf49e7a0365e",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/Prior-Labs/tabpfn_3_5",
+      "files": [
+        {
+          "name": "tabpfn-v3.5-20260909_multiclass.safetensors",
+          "sizeBytes": 876028348
+        },
+        {
+          "name": "tabpfn-v3.5-20260909.safetensors",
+          "sizeBytes": 876027932
+        },
+        {
+          "name": "tabpfn-v3.5-fast-20260909.safetensors",
+          "sizeBytes": 334181708
+        }
+      ],
+      "totalBytes": 2086237988,
+      "gated": false
+    }
   },
   {
     "id": "ow-chronos",
@@ -2260,7 +4734,7 @@ export const taskModelSources = [
     "publisher": "amazon",
     "url": "https://huggingface.co/amazon/chronos-2",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "29ec3766d36d6f73f0696f85560a422f50e8498c"
   },
   {
@@ -2269,8 +4743,21 @@ export const taskModelSources = [
     "publisher": "amazon",
     "url": "https://huggingface.co/amazon/chronos-2/tree/29ec3766d36d6f73f0696f85560a422f50e8498c",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "29ec3766d36d6f73f0696f85560a422f50e8498c"
+    "observedAt": "2026-10-23",
+    "revision": "29ec3766d36d6f73f0696f85560a422f50e8498c",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/amazon/chronos-2",
+      "parameterCount": 119477664,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 477930472
+        }
+      ],
+      "totalBytes": 477930472,
+      "gated": false
+    }
   },
   {
     "id": "ow-moment",
@@ -2278,7 +4765,7 @@ export const taskModelSources = [
     "publisher": "AutonLab",
     "url": "https://huggingface.co/AutonLab/MOMENT-1-large",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "ca58581bc7bea2ebed4e80dc0a3e4b8b609c6ecc"
   },
   {
@@ -2287,8 +4774,25 @@ export const taskModelSources = [
     "publisher": "AutonLab",
     "url": "https://huggingface.co/AutonLab/MOMENT-1-large/tree/ca58581bc7bea2ebed4e80dc0a3e4b8b609c6ecc",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "ca58581bc7bea2ebed4e80dc0a3e4b8b609c6ecc"
+    "observedAt": "2026-10-23",
+    "revision": "ca58581bc7bea2ebed4e80dc0a3e4b8b609c6ecc",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/AutonLab/MOMENT-1-large",
+      "parameterCount": 346368520,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 1385501256
+        },
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 1385575757
+        }
+      ],
+      "totalBytes": 2771077013,
+      "gated": false
+    }
   },
   {
     "id": "ow-boltz",
@@ -2314,7 +4818,7 @@ export const taskModelSources = [
     "publisher": "deepseek-ai",
     "url": "https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-671B",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "a51f899d0599838aa934b21b45b4c1ae7fbce2d3"
   },
   {
@@ -2323,8 +4827,669 @@ export const taskModelSources = [
     "publisher": "deepseek-ai",
     "url": "https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-671B/tree/a51f899d0599838aa934b21b45b4c1ae7fbce2d3",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "a51f899d0599838aa934b21b45b4c1ae7fbce2d3"
+    "observedAt": "2026-10-23",
+    "revision": "a51f899d0599838aa934b21b45b4c1ae7fbce2d3",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-671B",
+      "parameterCount": 684489845504,
+      "files": [
+        {
+          "name": "model-00001-of-000163.safetensors",
+          "sizeBytes": 5234139343
+        },
+        {
+          "name": "model-00002-of-000163.safetensors",
+          "sizeBytes": 4302383966
+        },
+        {
+          "name": "model-00003-of-000163.safetensors",
+          "sizeBytes": 4302384375
+        },
+        {
+          "name": "model-00004-of-000163.safetensors",
+          "sizeBytes": 4302349996
+        },
+        {
+          "name": "model-00005-of-000163.safetensors",
+          "sizeBytes": 4302384154
+        },
+        {
+          "name": "model-00006-of-000163.safetensors",
+          "sizeBytes": 4372073602
+        },
+        {
+          "name": "model-00007-of-000163.safetensors",
+          "sizeBytes": 4306080097
+        },
+        {
+          "name": "model-00008-of-000163.safetensors",
+          "sizeBytes": 4302384356
+        },
+        {
+          "name": "model-00009-of-000163.safetensors",
+          "sizeBytes": 4302350190
+        },
+        {
+          "name": "model-00010-of-000163.safetensors",
+          "sizeBytes": 4302383960
+        },
+        {
+          "name": "model-00011-of-000163.safetensors",
+          "sizeBytes": 4302384375
+        },
+        {
+          "name": "model-00012-of-000163.safetensors",
+          "sizeBytes": 1321583941
+        },
+        {
+          "name": "model-00013-of-000163.safetensors",
+          "sizeBytes": 4302317244
+        },
+        {
+          "name": "model-00014-of-000163.safetensors",
+          "sizeBytes": 4302384328
+        },
+        {
+          "name": "model-00015-of-000163.safetensors",
+          "sizeBytes": 4302350218
+        },
+        {
+          "name": "model-00016-of-000163.safetensors",
+          "sizeBytes": 4302383932
+        },
+        {
+          "name": "model-00017-of-000163.safetensors",
+          "sizeBytes": 4302384377
+        },
+        {
+          "name": "model-00018-of-000163.safetensors",
+          "sizeBytes": 4302350026
+        },
+        {
+          "name": "model-00019-of-000163.safetensors",
+          "sizeBytes": 4302384124
+        },
+        {
+          "name": "model-00020-of-000163.safetensors",
+          "sizeBytes": 4302384377
+        },
+        {
+          "name": "model-00021-of-000163.safetensors",
+          "sizeBytes": 4302350413
+        },
+        {
+          "name": "model-00022-of-000163.safetensors",
+          "sizeBytes": 4302384900
+        },
+        {
+          "name": "model-00023-of-000163.safetensors",
+          "sizeBytes": 4302350808
+        },
+        {
+          "name": "model-00024-of-000163.safetensors",
+          "sizeBytes": 4302384504
+        },
+        {
+          "name": "model-00025-of-000163.safetensors",
+          "sizeBytes": 4302384961
+        },
+        {
+          "name": "model-00026-of-000163.safetensors",
+          "sizeBytes": 4302350620
+        },
+        {
+          "name": "model-00027-of-000163.safetensors",
+          "sizeBytes": 4302384692
+        },
+        {
+          "name": "model-00028-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00029-of-000163.safetensors",
+          "sizeBytes": 4302350448
+        },
+        {
+          "name": "model-00030-of-000163.safetensors",
+          "sizeBytes": 4302384884
+        },
+        {
+          "name": "model-00031-of-000163.safetensors",
+          "sizeBytes": 4302350824
+        },
+        {
+          "name": "model-00032-of-000163.safetensors",
+          "sizeBytes": 4302384488
+        },
+        {
+          "name": "model-00033-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00034-of-000163.safetensors",
+          "sizeBytes": 1747417474
+        },
+        {
+          "name": "model-00035-of-000163.safetensors",
+          "sizeBytes": 4302317817
+        },
+        {
+          "name": "model-00036-of-000163.safetensors",
+          "sizeBytes": 4302384914
+        },
+        {
+          "name": "model-00037-of-000163.safetensors",
+          "sizeBytes": 4302350794
+        },
+        {
+          "name": "model-00038-of-000163.safetensors",
+          "sizeBytes": 4302384518
+        },
+        {
+          "name": "model-00039-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00040-of-000163.safetensors",
+          "sizeBytes": 4302350602
+        },
+        {
+          "name": "model-00041-of-000163.safetensors",
+          "sizeBytes": 4302384710
+        },
+        {
+          "name": "model-00042-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00043-of-000163.safetensors",
+          "sizeBytes": 4302350432
+        },
+        {
+          "name": "model-00044-of-000163.safetensors",
+          "sizeBytes": 4302384900
+        },
+        {
+          "name": "model-00045-of-000163.safetensors",
+          "sizeBytes": 4302350808
+        },
+        {
+          "name": "model-00046-of-000163.safetensors",
+          "sizeBytes": 4302384504
+        },
+        {
+          "name": "model-00047-of-000163.safetensors",
+          "sizeBytes": 4302384961
+        },
+        {
+          "name": "model-00048-of-000163.safetensors",
+          "sizeBytes": 4302350620
+        },
+        {
+          "name": "model-00049-of-000163.safetensors",
+          "sizeBytes": 4302384692
+        },
+        {
+          "name": "model-00050-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00051-of-000163.safetensors",
+          "sizeBytes": 4302350448
+        },
+        {
+          "name": "model-00052-of-000163.safetensors",
+          "sizeBytes": 4302384884
+        },
+        {
+          "name": "model-00053-of-000163.safetensors",
+          "sizeBytes": 4302350824
+        },
+        {
+          "name": "model-00054-of-000163.safetensors",
+          "sizeBytes": 4302384488
+        },
+        {
+          "name": "model-00055-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00056-of-000163.safetensors",
+          "sizeBytes": 1747417474
+        },
+        {
+          "name": "model-00057-of-000163.safetensors",
+          "sizeBytes": 4302317817
+        },
+        {
+          "name": "model-00058-of-000163.safetensors",
+          "sizeBytes": 4302384914
+        },
+        {
+          "name": "model-00059-of-000163.safetensors",
+          "sizeBytes": 4302350794
+        },
+        {
+          "name": "model-00060-of-000163.safetensors",
+          "sizeBytes": 4302384518
+        },
+        {
+          "name": "model-00061-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00062-of-000163.safetensors",
+          "sizeBytes": 4302350602
+        },
+        {
+          "name": "model-00063-of-000163.safetensors",
+          "sizeBytes": 4302384710
+        },
+        {
+          "name": "model-00064-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00065-of-000163.safetensors",
+          "sizeBytes": 4302350432
+        },
+        {
+          "name": "model-00066-of-000163.safetensors",
+          "sizeBytes": 4302384900
+        },
+        {
+          "name": "model-00067-of-000163.safetensors",
+          "sizeBytes": 4302350808
+        },
+        {
+          "name": "model-00068-of-000163.safetensors",
+          "sizeBytes": 4302384504
+        },
+        {
+          "name": "model-00069-of-000163.safetensors",
+          "sizeBytes": 4302384961
+        },
+        {
+          "name": "model-00070-of-000163.safetensors",
+          "sizeBytes": 4302350620
+        },
+        {
+          "name": "model-00071-of-000163.safetensors",
+          "sizeBytes": 4302384692
+        },
+        {
+          "name": "model-00072-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00073-of-000163.safetensors",
+          "sizeBytes": 4302350448
+        },
+        {
+          "name": "model-00074-of-000163.safetensors",
+          "sizeBytes": 4302384884
+        },
+        {
+          "name": "model-00075-of-000163.safetensors",
+          "sizeBytes": 4302350824
+        },
+        {
+          "name": "model-00076-of-000163.safetensors",
+          "sizeBytes": 4302384488
+        },
+        {
+          "name": "model-00077-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00078-of-000163.safetensors",
+          "sizeBytes": 1747417474
+        },
+        {
+          "name": "model-00079-of-000163.safetensors",
+          "sizeBytes": 4302317817
+        },
+        {
+          "name": "model-00080-of-000163.safetensors",
+          "sizeBytes": 4302384914
+        },
+        {
+          "name": "model-00081-of-000163.safetensors",
+          "sizeBytes": 4302350794
+        },
+        {
+          "name": "model-00082-of-000163.safetensors",
+          "sizeBytes": 4302384518
+        },
+        {
+          "name": "model-00083-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00084-of-000163.safetensors",
+          "sizeBytes": 4302350602
+        },
+        {
+          "name": "model-00085-of-000163.safetensors",
+          "sizeBytes": 4302384710
+        },
+        {
+          "name": "model-00086-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00087-of-000163.safetensors",
+          "sizeBytes": 4302350432
+        },
+        {
+          "name": "model-00088-of-000163.safetensors",
+          "sizeBytes": 4302384900
+        },
+        {
+          "name": "model-00089-of-000163.safetensors",
+          "sizeBytes": 4302350808
+        },
+        {
+          "name": "model-00090-of-000163.safetensors",
+          "sizeBytes": 4302384504
+        },
+        {
+          "name": "model-00091-of-000163.safetensors",
+          "sizeBytes": 4302384961
+        },
+        {
+          "name": "model-00092-of-000163.safetensors",
+          "sizeBytes": 4302350620
+        },
+        {
+          "name": "model-00093-of-000163.safetensors",
+          "sizeBytes": 4302384692
+        },
+        {
+          "name": "model-00094-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00095-of-000163.safetensors",
+          "sizeBytes": 4302350448
+        },
+        {
+          "name": "model-00096-of-000163.safetensors",
+          "sizeBytes": 4302384884
+        },
+        {
+          "name": "model-00097-of-000163.safetensors",
+          "sizeBytes": 4302350824
+        },
+        {
+          "name": "model-00098-of-000163.safetensors",
+          "sizeBytes": 4302384488
+        },
+        {
+          "name": "model-00099-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00100-of-000163.safetensors",
+          "sizeBytes": 1747417474
+        },
+        {
+          "name": "model-00101-of-000163.safetensors",
+          "sizeBytes": 4302317817
+        },
+        {
+          "name": "model-00102-of-000163.safetensors",
+          "sizeBytes": 4302384914
+        },
+        {
+          "name": "model-00103-of-000163.safetensors",
+          "sizeBytes": 4302350794
+        },
+        {
+          "name": "model-00104-of-000163.safetensors",
+          "sizeBytes": 4302384518
+        },
+        {
+          "name": "model-00105-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00106-of-000163.safetensors",
+          "sizeBytes": 4302350602
+        },
+        {
+          "name": "model-00107-of-000163.safetensors",
+          "sizeBytes": 4302384710
+        },
+        {
+          "name": "model-00108-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00109-of-000163.safetensors",
+          "sizeBytes": 4302350432
+        },
+        {
+          "name": "model-00110-of-000163.safetensors",
+          "sizeBytes": 4302384900
+        },
+        {
+          "name": "model-00111-of-000163.safetensors",
+          "sizeBytes": 4302350808
+        },
+        {
+          "name": "model-00112-of-000163.safetensors",
+          "sizeBytes": 4302384504
+        },
+        {
+          "name": "model-00113-of-000163.safetensors",
+          "sizeBytes": 4302384961
+        },
+        {
+          "name": "model-00114-of-000163.safetensors",
+          "sizeBytes": 4302350620
+        },
+        {
+          "name": "model-00115-of-000163.safetensors",
+          "sizeBytes": 4302384692
+        },
+        {
+          "name": "model-00116-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00117-of-000163.safetensors",
+          "sizeBytes": 4302350448
+        },
+        {
+          "name": "model-00118-of-000163.safetensors",
+          "sizeBytes": 4302384884
+        },
+        {
+          "name": "model-00119-of-000163.safetensors",
+          "sizeBytes": 4302350824
+        },
+        {
+          "name": "model-00120-of-000163.safetensors",
+          "sizeBytes": 4302384488
+        },
+        {
+          "name": "model-00121-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00122-of-000163.safetensors",
+          "sizeBytes": 1747417474
+        },
+        {
+          "name": "model-00123-of-000163.safetensors",
+          "sizeBytes": 4302317817
+        },
+        {
+          "name": "model-00124-of-000163.safetensors",
+          "sizeBytes": 4302384914
+        },
+        {
+          "name": "model-00125-of-000163.safetensors",
+          "sizeBytes": 4302350794
+        },
+        {
+          "name": "model-00126-of-000163.safetensors",
+          "sizeBytes": 4302384518
+        },
+        {
+          "name": "model-00127-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00128-of-000163.safetensors",
+          "sizeBytes": 4302350602
+        },
+        {
+          "name": "model-00129-of-000163.safetensors",
+          "sizeBytes": 4302384710
+        },
+        {
+          "name": "model-00130-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00131-of-000163.safetensors",
+          "sizeBytes": 4302350432
+        },
+        {
+          "name": "model-00132-of-000163.safetensors",
+          "sizeBytes": 4302384900
+        },
+        {
+          "name": "model-00133-of-000163.safetensors",
+          "sizeBytes": 4302350808
+        },
+        {
+          "name": "model-00134-of-000163.safetensors",
+          "sizeBytes": 4302384504
+        },
+        {
+          "name": "model-00135-of-000163.safetensors",
+          "sizeBytes": 4302384961
+        },
+        {
+          "name": "model-00136-of-000163.safetensors",
+          "sizeBytes": 4302350620
+        },
+        {
+          "name": "model-00137-of-000163.safetensors",
+          "sizeBytes": 4302384692
+        },
+        {
+          "name": "model-00138-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00139-of-000163.safetensors",
+          "sizeBytes": 4302350448
+        },
+        {
+          "name": "model-00140-of-000163.safetensors",
+          "sizeBytes": 4302384884
+        },
+        {
+          "name": "model-00141-of-000163.safetensors",
+          "sizeBytes": 3142388798
+        },
+        {
+          "name": "model-00142-of-000163.safetensors",
+          "sizeBytes": 4302317817
+        },
+        {
+          "name": "model-00143-of-000163.safetensors",
+          "sizeBytes": 4302384914
+        },
+        {
+          "name": "model-00144-of-000163.safetensors",
+          "sizeBytes": 4302350794
+        },
+        {
+          "name": "model-00145-of-000163.safetensors",
+          "sizeBytes": 4302384518
+        },
+        {
+          "name": "model-00146-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00147-of-000163.safetensors",
+          "sizeBytes": 4302350602
+        },
+        {
+          "name": "model-00148-of-000163.safetensors",
+          "sizeBytes": 4302384710
+        },
+        {
+          "name": "model-00149-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00150-of-000163.safetensors",
+          "sizeBytes": 4302350432
+        },
+        {
+          "name": "model-00151-of-000163.safetensors",
+          "sizeBytes": 4302384900
+        },
+        {
+          "name": "model-00152-of-000163.safetensors",
+          "sizeBytes": 4302350808
+        },
+        {
+          "name": "model-00153-of-000163.safetensors",
+          "sizeBytes": 4302384504
+        },
+        {
+          "name": "model-00154-of-000163.safetensors",
+          "sizeBytes": 4302384961
+        },
+        {
+          "name": "model-00155-of-000163.safetensors",
+          "sizeBytes": 4302350620
+        },
+        {
+          "name": "model-00156-of-000163.safetensors",
+          "sizeBytes": 4302384692
+        },
+        {
+          "name": "model-00157-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00158-of-000163.safetensors",
+          "sizeBytes": 4302350448
+        },
+        {
+          "name": "model-00159-of-000163.safetensors",
+          "sizeBytes": 4302384884
+        },
+        {
+          "name": "model-00160-of-000163.safetensors",
+          "sizeBytes": 5230637362
+        },
+        {
+          "name": "model-00161-of-000163.safetensors",
+          "sizeBytes": 4302384321
+        },
+        {
+          "name": "model-00162-of-000163.safetensors",
+          "sizeBytes": 4302384948
+        },
+        {
+          "name": "model-00163-of-000163.safetensors",
+          "sizeBytes": 6584784447
+        }
+      ],
+      "totalBytes": 688586727753,
+      "gated": false
+    }
   },
   {
     "id": "ow-uitars",
@@ -2332,7 +5497,7 @@ export const taskModelSources = [
     "publisher": "ByteDance-Seed",
     "url": "https://huggingface.co/ByteDance-Seed/UI-TARS-1.5-7B",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "683d002dd99d8f95104d31e70391a39348857f4e"
   },
   {
@@ -2341,8 +5506,45 @@ export const taskModelSources = [
     "publisher": "ByteDance-Seed",
     "url": "https://huggingface.co/ByteDance-Seed/UI-TARS-1.5-7B/tree/683d002dd99d8f95104d31e70391a39348857f4e",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "683d002dd99d8f95104d31e70391a39348857f4e"
+    "observedAt": "2026-10-23",
+    "revision": "683d002dd99d8f95104d31e70391a39348857f4e",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/ByteDance-Seed/UI-TARS-1.5-7B",
+      "parameterCount": 8292166656,
+      "files": [
+        {
+          "name": "model-00001-of-00007.safetensors",
+          "sizeBytes": 4952311608
+        },
+        {
+          "name": "model-00002-of-00007.safetensors",
+          "sizeBytes": 4984124272
+        },
+        {
+          "name": "model-00003-of-00007.safetensors",
+          "sizeBytes": 4932743936
+        },
+        {
+          "name": "model-00004-of-00007.safetensors",
+          "sizeBytes": 4998852296
+        },
+        {
+          "name": "model-00005-of-00007.safetensors",
+          "sizeBytes": 4984124336
+        },
+        {
+          "name": "model-00006-of-00007.safetensors",
+          "sizeBytes": 4932743992
+        },
+        {
+          "name": "model-00007-of-00007.safetensors",
+          "sizeBytes": 3383846800
+        }
+      ],
+      "totalBytes": 33168747240,
+      "gated": false
+    }
   },
   {
     "id": "ow-sam-license",
@@ -2390,7 +5592,7 @@ export const taskModelSources = [
     "publisher": "deepseek-ai",
     "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "4236a6af538feda4548eca9ab308586007567f52"
   },
   {
@@ -2399,8 +5601,669 @@ export const taskModelSources = [
     "publisher": "deepseek-ai",
     "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528/tree/4236a6af538feda4548eca9ab308586007567f52",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "4236a6af538feda4548eca9ab308586007567f52"
+    "observedAt": "2026-10-23",
+    "revision": "4236a6af538feda4548eca9ab308586007567f52",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528",
+      "parameterCount": 684531386000,
+      "files": [
+        {
+          "name": "model-00001-of-000163.safetensors",
+          "sizeBytes": 5234139343
+        },
+        {
+          "name": "model-00002-of-000163.safetensors",
+          "sizeBytes": 4302383966
+        },
+        {
+          "name": "model-00003-of-000163.safetensors",
+          "sizeBytes": 4302384375
+        },
+        {
+          "name": "model-00004-of-000163.safetensors",
+          "sizeBytes": 4302349996
+        },
+        {
+          "name": "model-00005-of-000163.safetensors",
+          "sizeBytes": 4302384154
+        },
+        {
+          "name": "model-00006-of-000163.safetensors",
+          "sizeBytes": 4372073602
+        },
+        {
+          "name": "model-00007-of-000163.safetensors",
+          "sizeBytes": 4306080097
+        },
+        {
+          "name": "model-00008-of-000163.safetensors",
+          "sizeBytes": 4302384356
+        },
+        {
+          "name": "model-00009-of-000163.safetensors",
+          "sizeBytes": 4302350190
+        },
+        {
+          "name": "model-00010-of-000163.safetensors",
+          "sizeBytes": 4302383960
+        },
+        {
+          "name": "model-00011-of-000163.safetensors",
+          "sizeBytes": 4302384375
+        },
+        {
+          "name": "model-00012-of-000163.safetensors",
+          "sizeBytes": 1321583941
+        },
+        {
+          "name": "model-00013-of-000163.safetensors",
+          "sizeBytes": 4302317244
+        },
+        {
+          "name": "model-00014-of-000163.safetensors",
+          "sizeBytes": 4302384328
+        },
+        {
+          "name": "model-00015-of-000163.safetensors",
+          "sizeBytes": 4302350218
+        },
+        {
+          "name": "model-00016-of-000163.safetensors",
+          "sizeBytes": 4302383932
+        },
+        {
+          "name": "model-00017-of-000163.safetensors",
+          "sizeBytes": 4302384377
+        },
+        {
+          "name": "model-00018-of-000163.safetensors",
+          "sizeBytes": 4302350026
+        },
+        {
+          "name": "model-00019-of-000163.safetensors",
+          "sizeBytes": 4302384124
+        },
+        {
+          "name": "model-00020-of-000163.safetensors",
+          "sizeBytes": 4302384377
+        },
+        {
+          "name": "model-00021-of-000163.safetensors",
+          "sizeBytes": 4302350413
+        },
+        {
+          "name": "model-00022-of-000163.safetensors",
+          "sizeBytes": 4302384900
+        },
+        {
+          "name": "model-00023-of-000163.safetensors",
+          "sizeBytes": 4302350808
+        },
+        {
+          "name": "model-00024-of-000163.safetensors",
+          "sizeBytes": 4302384504
+        },
+        {
+          "name": "model-00025-of-000163.safetensors",
+          "sizeBytes": 4302384961
+        },
+        {
+          "name": "model-00026-of-000163.safetensors",
+          "sizeBytes": 4302350620
+        },
+        {
+          "name": "model-00027-of-000163.safetensors",
+          "sizeBytes": 4302384692
+        },
+        {
+          "name": "model-00028-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00029-of-000163.safetensors",
+          "sizeBytes": 4302350448
+        },
+        {
+          "name": "model-00030-of-000163.safetensors",
+          "sizeBytes": 4302384884
+        },
+        {
+          "name": "model-00031-of-000163.safetensors",
+          "sizeBytes": 4302350824
+        },
+        {
+          "name": "model-00032-of-000163.safetensors",
+          "sizeBytes": 4302384488
+        },
+        {
+          "name": "model-00033-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00034-of-000163.safetensors",
+          "sizeBytes": 1747417474
+        },
+        {
+          "name": "model-00035-of-000163.safetensors",
+          "sizeBytes": 4302317817
+        },
+        {
+          "name": "model-00036-of-000163.safetensors",
+          "sizeBytes": 4302384914
+        },
+        {
+          "name": "model-00037-of-000163.safetensors",
+          "sizeBytes": 4302350794
+        },
+        {
+          "name": "model-00038-of-000163.safetensors",
+          "sizeBytes": 4302384518
+        },
+        {
+          "name": "model-00039-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00040-of-000163.safetensors",
+          "sizeBytes": 4302350602
+        },
+        {
+          "name": "model-00041-of-000163.safetensors",
+          "sizeBytes": 4302384710
+        },
+        {
+          "name": "model-00042-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00043-of-000163.safetensors",
+          "sizeBytes": 4302350432
+        },
+        {
+          "name": "model-00044-of-000163.safetensors",
+          "sizeBytes": 4302384900
+        },
+        {
+          "name": "model-00045-of-000163.safetensors",
+          "sizeBytes": 4302350808
+        },
+        {
+          "name": "model-00046-of-000163.safetensors",
+          "sizeBytes": 4302384504
+        },
+        {
+          "name": "model-00047-of-000163.safetensors",
+          "sizeBytes": 4302384961
+        },
+        {
+          "name": "model-00048-of-000163.safetensors",
+          "sizeBytes": 4302350620
+        },
+        {
+          "name": "model-00049-of-000163.safetensors",
+          "sizeBytes": 4302384692
+        },
+        {
+          "name": "model-00050-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00051-of-000163.safetensors",
+          "sizeBytes": 4302350448
+        },
+        {
+          "name": "model-00052-of-000163.safetensors",
+          "sizeBytes": 4302384884
+        },
+        {
+          "name": "model-00053-of-000163.safetensors",
+          "sizeBytes": 4302350824
+        },
+        {
+          "name": "model-00054-of-000163.safetensors",
+          "sizeBytes": 4302384488
+        },
+        {
+          "name": "model-00055-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00056-of-000163.safetensors",
+          "sizeBytes": 1747417474
+        },
+        {
+          "name": "model-00057-of-000163.safetensors",
+          "sizeBytes": 4302317817
+        },
+        {
+          "name": "model-00058-of-000163.safetensors",
+          "sizeBytes": 4302384914
+        },
+        {
+          "name": "model-00059-of-000163.safetensors",
+          "sizeBytes": 4302350794
+        },
+        {
+          "name": "model-00060-of-000163.safetensors",
+          "sizeBytes": 4302384518
+        },
+        {
+          "name": "model-00061-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00062-of-000163.safetensors",
+          "sizeBytes": 4302350602
+        },
+        {
+          "name": "model-00063-of-000163.safetensors",
+          "sizeBytes": 4302384710
+        },
+        {
+          "name": "model-00064-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00065-of-000163.safetensors",
+          "sizeBytes": 4302350432
+        },
+        {
+          "name": "model-00066-of-000163.safetensors",
+          "sizeBytes": 4302384900
+        },
+        {
+          "name": "model-00067-of-000163.safetensors",
+          "sizeBytes": 4302350808
+        },
+        {
+          "name": "model-00068-of-000163.safetensors",
+          "sizeBytes": 4302384504
+        },
+        {
+          "name": "model-00069-of-000163.safetensors",
+          "sizeBytes": 4302384961
+        },
+        {
+          "name": "model-00070-of-000163.safetensors",
+          "sizeBytes": 4302350620
+        },
+        {
+          "name": "model-00071-of-000163.safetensors",
+          "sizeBytes": 4302384692
+        },
+        {
+          "name": "model-00072-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00073-of-000163.safetensors",
+          "sizeBytes": 4302350448
+        },
+        {
+          "name": "model-00074-of-000163.safetensors",
+          "sizeBytes": 4302384884
+        },
+        {
+          "name": "model-00075-of-000163.safetensors",
+          "sizeBytes": 4302350824
+        },
+        {
+          "name": "model-00076-of-000163.safetensors",
+          "sizeBytes": 4302384488
+        },
+        {
+          "name": "model-00077-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00078-of-000163.safetensors",
+          "sizeBytes": 1747417474
+        },
+        {
+          "name": "model-00079-of-000163.safetensors",
+          "sizeBytes": 4302317817
+        },
+        {
+          "name": "model-00080-of-000163.safetensors",
+          "sizeBytes": 4302384914
+        },
+        {
+          "name": "model-00081-of-000163.safetensors",
+          "sizeBytes": 4302350794
+        },
+        {
+          "name": "model-00082-of-000163.safetensors",
+          "sizeBytes": 4302384518
+        },
+        {
+          "name": "model-00083-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00084-of-000163.safetensors",
+          "sizeBytes": 4302350602
+        },
+        {
+          "name": "model-00085-of-000163.safetensors",
+          "sizeBytes": 4302384710
+        },
+        {
+          "name": "model-00086-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00087-of-000163.safetensors",
+          "sizeBytes": 4302350432
+        },
+        {
+          "name": "model-00088-of-000163.safetensors",
+          "sizeBytes": 4302384900
+        },
+        {
+          "name": "model-00089-of-000163.safetensors",
+          "sizeBytes": 4302350808
+        },
+        {
+          "name": "model-00090-of-000163.safetensors",
+          "sizeBytes": 4302384504
+        },
+        {
+          "name": "model-00091-of-000163.safetensors",
+          "sizeBytes": 4302384961
+        },
+        {
+          "name": "model-00092-of-000163.safetensors",
+          "sizeBytes": 4302350620
+        },
+        {
+          "name": "model-00093-of-000163.safetensors",
+          "sizeBytes": 4302384692
+        },
+        {
+          "name": "model-00094-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00095-of-000163.safetensors",
+          "sizeBytes": 4302350448
+        },
+        {
+          "name": "model-00096-of-000163.safetensors",
+          "sizeBytes": 4302384884
+        },
+        {
+          "name": "model-00097-of-000163.safetensors",
+          "sizeBytes": 4302350824
+        },
+        {
+          "name": "model-00098-of-000163.safetensors",
+          "sizeBytes": 4302384488
+        },
+        {
+          "name": "model-00099-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00100-of-000163.safetensors",
+          "sizeBytes": 1747417474
+        },
+        {
+          "name": "model-00101-of-000163.safetensors",
+          "sizeBytes": 4302317817
+        },
+        {
+          "name": "model-00102-of-000163.safetensors",
+          "sizeBytes": 4302384914
+        },
+        {
+          "name": "model-00103-of-000163.safetensors",
+          "sizeBytes": 4302350794
+        },
+        {
+          "name": "model-00104-of-000163.safetensors",
+          "sizeBytes": 4302384518
+        },
+        {
+          "name": "model-00105-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00106-of-000163.safetensors",
+          "sizeBytes": 4302350602
+        },
+        {
+          "name": "model-00107-of-000163.safetensors",
+          "sizeBytes": 4302384710
+        },
+        {
+          "name": "model-00108-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00109-of-000163.safetensors",
+          "sizeBytes": 4302350432
+        },
+        {
+          "name": "model-00110-of-000163.safetensors",
+          "sizeBytes": 4302384900
+        },
+        {
+          "name": "model-00111-of-000163.safetensors",
+          "sizeBytes": 4302350808
+        },
+        {
+          "name": "model-00112-of-000163.safetensors",
+          "sizeBytes": 4302384504
+        },
+        {
+          "name": "model-00113-of-000163.safetensors",
+          "sizeBytes": 4302384961
+        },
+        {
+          "name": "model-00114-of-000163.safetensors",
+          "sizeBytes": 4302350620
+        },
+        {
+          "name": "model-00115-of-000163.safetensors",
+          "sizeBytes": 4302384692
+        },
+        {
+          "name": "model-00116-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00117-of-000163.safetensors",
+          "sizeBytes": 4302350448
+        },
+        {
+          "name": "model-00118-of-000163.safetensors",
+          "sizeBytes": 4302384884
+        },
+        {
+          "name": "model-00119-of-000163.safetensors",
+          "sizeBytes": 4302350824
+        },
+        {
+          "name": "model-00120-of-000163.safetensors",
+          "sizeBytes": 4302384488
+        },
+        {
+          "name": "model-00121-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00122-of-000163.safetensors",
+          "sizeBytes": 1747417474
+        },
+        {
+          "name": "model-00123-of-000163.safetensors",
+          "sizeBytes": 4302317817
+        },
+        {
+          "name": "model-00124-of-000163.safetensors",
+          "sizeBytes": 4302384914
+        },
+        {
+          "name": "model-00125-of-000163.safetensors",
+          "sizeBytes": 4302350794
+        },
+        {
+          "name": "model-00126-of-000163.safetensors",
+          "sizeBytes": 4302384518
+        },
+        {
+          "name": "model-00127-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00128-of-000163.safetensors",
+          "sizeBytes": 4302350602
+        },
+        {
+          "name": "model-00129-of-000163.safetensors",
+          "sizeBytes": 4302384710
+        },
+        {
+          "name": "model-00130-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00131-of-000163.safetensors",
+          "sizeBytes": 4302350432
+        },
+        {
+          "name": "model-00132-of-000163.safetensors",
+          "sizeBytes": 4302384900
+        },
+        {
+          "name": "model-00133-of-000163.safetensors",
+          "sizeBytes": 4302350808
+        },
+        {
+          "name": "model-00134-of-000163.safetensors",
+          "sizeBytes": 4302384504
+        },
+        {
+          "name": "model-00135-of-000163.safetensors",
+          "sizeBytes": 4302384961
+        },
+        {
+          "name": "model-00136-of-000163.safetensors",
+          "sizeBytes": 4302350620
+        },
+        {
+          "name": "model-00137-of-000163.safetensors",
+          "sizeBytes": 4302384692
+        },
+        {
+          "name": "model-00138-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00139-of-000163.safetensors",
+          "sizeBytes": 4302350448
+        },
+        {
+          "name": "model-00140-of-000163.safetensors",
+          "sizeBytes": 4302384884
+        },
+        {
+          "name": "model-00141-of-000163.safetensors",
+          "sizeBytes": 3142388798
+        },
+        {
+          "name": "model-00142-of-000163.safetensors",
+          "sizeBytes": 4302317817
+        },
+        {
+          "name": "model-00143-of-000163.safetensors",
+          "sizeBytes": 4302384914
+        },
+        {
+          "name": "model-00144-of-000163.safetensors",
+          "sizeBytes": 4302350794
+        },
+        {
+          "name": "model-00145-of-000163.safetensors",
+          "sizeBytes": 4302384518
+        },
+        {
+          "name": "model-00146-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00147-of-000163.safetensors",
+          "sizeBytes": 4302350602
+        },
+        {
+          "name": "model-00148-of-000163.safetensors",
+          "sizeBytes": 4302384710
+        },
+        {
+          "name": "model-00149-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00150-of-000163.safetensors",
+          "sizeBytes": 4302350432
+        },
+        {
+          "name": "model-00151-of-000163.safetensors",
+          "sizeBytes": 4302384900
+        },
+        {
+          "name": "model-00152-of-000163.safetensors",
+          "sizeBytes": 4302350808
+        },
+        {
+          "name": "model-00153-of-000163.safetensors",
+          "sizeBytes": 4302384504
+        },
+        {
+          "name": "model-00154-of-000163.safetensors",
+          "sizeBytes": 4302384961
+        },
+        {
+          "name": "model-00155-of-000163.safetensors",
+          "sizeBytes": 4302350620
+        },
+        {
+          "name": "model-00156-of-000163.safetensors",
+          "sizeBytes": 4302384692
+        },
+        {
+          "name": "model-00157-of-000163.safetensors",
+          "sizeBytes": 4302384963
+        },
+        {
+          "name": "model-00158-of-000163.safetensors",
+          "sizeBytes": 4302350448
+        },
+        {
+          "name": "model-00159-of-000163.safetensors",
+          "sizeBytes": 4302384884
+        },
+        {
+          "name": "model-00160-of-000163.safetensors",
+          "sizeBytes": 5230637362
+        },
+        {
+          "name": "model-00161-of-000163.safetensors",
+          "sizeBytes": 4302384321
+        },
+        {
+          "name": "model-00162-of-000163.safetensors",
+          "sizeBytes": 4302384948
+        },
+        {
+          "name": "model-00163-of-000163.safetensors",
+          "sizeBytes": 6584784447
+        }
+      ],
+      "totalBytes": 688586727753,
+      "gated": false
+    }
   },
   {
     "id": "ow-fasttext-lid",
@@ -2408,7 +6271,7 @@ export const taskModelSources = [
     "publisher": "Meta",
     "url": "https://huggingface.co/facebook/fasttext-language-identification",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "3af127d4124fc58b75666f3594bb5143b9757e78"
   },
   {
@@ -2417,8 +6280,20 @@ export const taskModelSources = [
     "publisher": "Meta",
     "url": "https://huggingface.co/facebook/fasttext-language-identification/tree/3af127d4124fc58b75666f3594bb5143b9757e78",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "3af127d4124fc58b75666f3594bb5143b9757e78"
+    "observedAt": "2026-10-23",
+    "revision": "3af127d4124fc58b75666f3594bb5143b9757e78",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/facebook/fasttext-language-identification",
+      "files": [
+        {
+          "name": "model.bin",
+          "sizeBytes": 1176355829
+        }
+      ],
+      "totalBytes": 1176355829,
+      "gated": false
+    }
   },
   {
     "id": "ow-fasttext-lid-license",
@@ -2443,7 +6318,7 @@ export const taskModelSources = [
     "publisher": "State Spaces",
     "url": "https://huggingface.co/state-spaces/mamba2-2.7b",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "99b226cc377d131cccc610ed4346db564f381f1e"
   },
   {
@@ -2452,8 +6327,20 @@ export const taskModelSources = [
     "publisher": "State Spaces",
     "url": "https://huggingface.co/state-spaces/mamba2-2.7b/tree/99b226cc377d131cccc610ed4346db564f381f1e",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "99b226cc377d131cccc610ed4346db564f381f1e"
+    "observedAt": "2026-10-23",
+    "revision": "99b226cc377d131cccc610ed4346db564f381f1e",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/state-spaces/mamba2-2.7b",
+      "files": [
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 5405424282
+        }
+      ],
+      "totalBytes": 5405424282,
+      "gated": false
+    }
   },
   {
     "id": "ow-mamba2-license",
@@ -2479,7 +6366,7 @@ export const taskModelSources = [
     "publisher": "Ai2",
     "url": "https://huggingface.co/allenai/OLMo-2-1124-7B-DPO",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "e34ea60adff2e575f4fe7569eaffd1b28509b6fd"
   },
   {
@@ -2488,8 +6375,28 @@ export const taskModelSources = [
     "publisher": "Ai2",
     "url": "https://huggingface.co/allenai/OLMo-2-1124-7B-DPO/tree/e34ea60adff2e575f4fe7569eaffd1b28509b6fd",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "e34ea60adff2e575f4fe7569eaffd1b28509b6fd"
+    "observedAt": "2026-10-23",
+    "revision": "e34ea60adff2e575f4fe7569eaffd1b28509b6fd",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/allenai/OLMo-2-1124-7B-DPO",
+      "files": [
+        {
+          "name": "pytorch_model-00001-of-00003.bin",
+          "sizeBytes": 4970616924
+        },
+        {
+          "name": "pytorch_model-00002-of-00003.bin",
+          "sizeBytes": 4981192226
+        },
+        {
+          "name": "pytorch_model-00003-of-00003.bin",
+          "sizeBytes": 4645547125
+        }
+      ],
+      "totalBytes": 14597356275,
+      "gated": false
+    }
   },
   {
     "id": "ow-olmo2-dpo-license",
@@ -2506,7 +6413,7 @@ export const taskModelSources = [
     "publisher": "Meta",
     "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "0e9e39f249a16976918f6564b8830bc894c89659"
   },
   {
@@ -2515,8 +6422,37 @@ export const taskModelSources = [
     "publisher": "Meta",
     "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/tree/0e9e39f249a16976918f6564b8830bc894c89659",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "0e9e39f249a16976918f6564b8830bc894c89659"
+    "observedAt": "2026-10-23",
+    "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct",
+      "parameterCount": 8030261248,
+      "files": [
+        {
+          "name": "model-00001-of-00004.safetensors",
+          "sizeBytes": 4976698672
+        },
+        {
+          "name": "model-00002-of-00004.safetensors",
+          "sizeBytes": 4999802720
+        },
+        {
+          "name": "model-00003-of-00004.safetensors",
+          "sizeBytes": 4915916176
+        },
+        {
+          "name": "model-00004-of-00004.safetensors",
+          "sizeBytes": 1168138808
+        },
+        {
+          "name": "original/consolidated.00.pth",
+          "sizeBytes": 16060617592
+        }
+      ],
+      "totalBytes": 32121173968,
+      "gated": true
+    }
   },
   {
     "id": "ow-llama31-rlhf-license",
@@ -2533,7 +6469,7 @@ export const taskModelSources = [
     "publisher": "Google Research / timm",
     "url": "https://huggingface.co/timm/mixer_b16_224.goog_in21k_ft_in1k",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "0006300d604941f96f16cb7d229137363e1b2ac6"
   },
   {
@@ -2542,8 +6478,25 @@ export const taskModelSources = [
     "publisher": "Google Research / timm",
     "url": "https://huggingface.co/timm/mixer_b16_224.goog_in21k_ft_in1k/tree/0006300d604941f96f16cb7d229137363e1b2ac6",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "0006300d604941f96f16cb7d229137363e1b2ac6"
+    "observedAt": "2026-10-23",
+    "revision": "0006300d604941f96f16cb7d229137363e1b2ac6",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/timm/mixer_b16_224.goog_in21k_ft_in1k",
+      "parameterCount": 59880472,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 239536434
+        },
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 239577701
+        }
+      ],
+      "totalBytes": 479114135,
+      "gated": false
+    }
   },
   {
     "id": "ow-mlp-mixer-license",
@@ -2568,7 +6521,7 @@ export const taskModelSources = [
     "publisher": "Meta / timm",
     "url": "https://huggingface.co/timm/resnet50.fb_ssl_yfcc100m_ft_in1k",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "2bfbb0e194aa59bf9f8c88d3fd3719ed3b7420a5"
   },
   {
@@ -2577,8 +6530,25 @@ export const taskModelSources = [
     "publisher": "Meta / timm",
     "url": "https://huggingface.co/timm/resnet50.fb_ssl_yfcc100m_ft_in1k/tree/2bfbb0e194aa59bf9f8c88d3fd3719ed3b7420a5",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "2bfbb0e194aa59bf9f8c88d3fd3719ed3b7420a5"
+    "observedAt": "2026-10-23",
+    "revision": "2bfbb0e194aa59bf9f8c88d3fd3719ed3b7420a5",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/timm/resnet50.fb_ssl_yfcc100m_ft_in1k",
+      "parameterCount": 25610152,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 102469840
+        },
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 102545229
+        }
+      ],
+      "totalBytes": 205015069,
+      "gated": false
+    }
   },
   {
     "id": "ow-resnet50-ssl-license",
@@ -3108,7 +7078,7 @@ export const taskModelSources = [
     "publisher": "makitanikaze / linked by P5 authors",
     "url": "https://huggingface.co/makitanikaze/P5_beauty_small",
     "kind": "model-card",
-    "observedAt": "2026-10-21",
+    "observedAt": "2026-10-23",
     "revision": "8d67aef9aea18955cfb038bbbf48f764104ca09a"
   },
   {
@@ -3117,8 +7087,20 @@ export const taskModelSources = [
     "publisher": "makitanikaze",
     "url": "https://huggingface.co/makitanikaze/P5_beauty_small/tree/8d67aef9aea18955cfb038bbbf48f764104ca09a",
     "kind": "weights",
-    "observedAt": "2026-10-21",
-    "revision": "8d67aef9aea18955cfb038bbbf48f764104ca09a"
+    "observedAt": "2026-10-23",
+    "revision": "8d67aef9aea18955cfb038bbbf48f764104ca09a",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/makitanikaze/P5_beauty_small",
+      "files": [
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 243063197
+        }
+      ],
+      "totalBytes": 243063197,
+      "gated": false
+    }
   },
   {
     "id": "ow-p5-author-release",
@@ -3582,6 +7564,1307 @@ export const taskModelSources = [
         "value": "d2eb2da582f1934dea75ce9f4e5efbc9"
       }
     }
+  },
+  {
+    "id": "ow-acestep-v15-turbo-continuous",
+    "title": "acestep-v15-turbo-continuous — model card",
+    "publisher": "ACE-Step",
+    "url": "https://huggingface.co/ACE-Step/acestep-v15-turbo-continuous",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "f8e893768347fd42f5988e07d1d80675fc3e5718"
+  },
+  {
+    "id": "ow-acestep-v15-turbo-continuous-weights",
+    "title": "acestep-v15-turbo-continuous — checkpoint files",
+    "publisher": "ACE-Step",
+    "url": "https://huggingface.co/ACE-Step/acestep-v15-turbo-continuous/tree/f8e893768347fd42f5988e07d1d80675fc3e5718",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "f8e893768347fd42f5988e07d1d80675fc3e5718",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/ACE-Step/acestep-v15-turbo-continuous",
+      "parameterCount": 2393872518,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 4787825604
+        },
+        {
+          "name": "silence_latent.pt",
+          "sizeBytes": 3841215
+        }
+      ],
+      "totalBytes": 4791666819,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-acestep-v15-turbo-continuous-license",
+    "title": "acestep-v15-turbo-continuous — license",
+    "publisher": "ACE-Step",
+    "url": "https://huggingface.co/ACE-Step/acestep-v15-turbo-continuous",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "f8e893768347fd42f5988e07d1d80675fc3e5718"
+  },
+  {
+    "id": "ow-acestep-v15-turbo-shift1",
+    "title": "acestep-v15-turbo-shift1 — model card",
+    "publisher": "ACE-Step",
+    "url": "https://huggingface.co/ACE-Step/acestep-v15-turbo-shift1",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "5b86586cc1faecd5214281b05440c8903b6da20f"
+  },
+  {
+    "id": "ow-acestep-v15-turbo-shift1-weights",
+    "title": "acestep-v15-turbo-shift1 — checkpoint files",
+    "publisher": "ACE-Step",
+    "url": "https://huggingface.co/ACE-Step/acestep-v15-turbo-shift1/tree/5b86586cc1faecd5214281b05440c8903b6da20f",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "5b86586cc1faecd5214281b05440c8903b6da20f",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/ACE-Step/acestep-v15-turbo-shift1",
+      "parameterCount": 2393872518,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 4787825604
+        },
+        {
+          "name": "silence_latent.pt",
+          "sizeBytes": 3841215
+        }
+      ],
+      "totalBytes": 4791666819,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-acestep-v15-turbo-shift1-license",
+    "title": "acestep-v15-turbo-shift1 — license",
+    "publisher": "ACE-Step",
+    "url": "https://huggingface.co/ACE-Step/acestep-v15-turbo-shift1",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "5b86586cc1faecd5214281b05440c8903b6da20f"
+  },
+  {
+    "id": "ow-acestep-captioner",
+    "title": "acestep-captioner — model card",
+    "publisher": "ACE-Step",
+    "url": "https://huggingface.co/ACE-Step/acestep-captioner",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "7109e9af1c6cfe3371730310b3a5cb773145b11e"
+  },
+  {
+    "id": "ow-acestep-captioner-weights",
+    "title": "acestep-captioner — checkpoint files",
+    "publisher": "ACE-Step",
+    "url": "https://huggingface.co/ACE-Step/acestep-captioner/tree/7109e9af1c6cfe3371730310b3a5cb773145b11e",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "7109e9af1c6cfe3371730310b3a5cb773145b11e",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/ACE-Step/acestep-captioner",
+      "parameterCount": 10732225408,
+      "files": [
+        {
+          "name": "model-00001-of-00005.safetensors",
+          "sizeBytes": 4985055536
+        },
+        {
+          "name": "model-00002-of-00005.safetensors",
+          "sizeBytes": 4991496832
+        },
+        {
+          "name": "model-00003-of-00005.safetensors",
+          "sizeBytes": 4991496936
+        },
+        {
+          "name": "model-00004-of-00005.safetensors",
+          "sizeBytes": 4969489856
+        },
+        {
+          "name": "model-00005-of-00005.safetensors",
+          "sizeBytes": 2425322192
+        },
+        {
+          "name": "spk_dict.pt",
+          "sizeBytes": 259544
+        }
+      ],
+      "totalBytes": 22363120896,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-acestep-captioner-license",
+    "title": "acestep-captioner — license",
+    "publisher": "ACE-Step",
+    "url": "https://huggingface.co/ACE-Step/acestep-captioner",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "7109e9af1c6cfe3371730310b3a5cb773145b11e"
+  },
+  {
+    "id": "ow-acestep-transcriber",
+    "title": "acestep-transcriber — model card",
+    "publisher": "ACE-Step",
+    "url": "https://huggingface.co/ACE-Step/acestep-transcriber",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "53062cf7d0e09d463d7fc4c218ce2ecb71400f29"
+  },
+  {
+    "id": "ow-acestep-transcriber-weights",
+    "title": "acestep-transcriber — checkpoint files",
+    "publisher": "ACE-Step",
+    "url": "https://huggingface.co/ACE-Step/acestep-transcriber/tree/53062cf7d0e09d463d7fc4c218ce2ecb71400f29",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "53062cf7d0e09d463d7fc4c218ce2ecb71400f29",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/ACE-Step/acestep-transcriber",
+      "parameterCount": 10732225408,
+      "files": [
+        {
+          "name": "model-00001-of-00005.safetensors",
+          "sizeBytes": 4985055536
+        },
+        {
+          "name": "model-00002-of-00005.safetensors",
+          "sizeBytes": 4991496832
+        },
+        {
+          "name": "model-00003-of-00005.safetensors",
+          "sizeBytes": 4991496936
+        },
+        {
+          "name": "model-00004-of-00005.safetensors",
+          "sizeBytes": 4969489856
+        },
+        {
+          "name": "model-00005-of-00005.safetensors",
+          "sizeBytes": 2425322192
+        },
+        {
+          "name": "spk_dict.pt",
+          "sizeBytes": 259544
+        }
+      ],
+      "totalBytes": 22363120896,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-acestep-transcriber-license",
+    "title": "acestep-transcriber — license",
+    "publisher": "ACE-Step",
+    "url": "https://huggingface.co/ACE-Step/acestep-transcriber",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "53062cf7d0e09d463d7fc4c218ce2ecb71400f29"
+  },
+  {
+    "id": "ow-acestep-v15-turbo-shift3",
+    "title": "acestep-v15-turbo-shift3 — model card",
+    "publisher": "ACE-Step",
+    "url": "https://huggingface.co/ACE-Step/acestep-v15-turbo-shift3",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "625a282f7c8d882c930a5e500be4c82800f84fb4"
+  },
+  {
+    "id": "ow-acestep-v15-turbo-shift3-weights",
+    "title": "acestep-v15-turbo-shift3 — checkpoint files",
+    "publisher": "ACE-Step",
+    "url": "https://huggingface.co/ACE-Step/acestep-v15-turbo-shift3/tree/625a282f7c8d882c930a5e500be4c82800f84fb4",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "625a282f7c8d882c930a5e500be4c82800f84fb4",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/ACE-Step/acestep-v15-turbo-shift3",
+      "parameterCount": 2393872518,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 4787825604
+        },
+        {
+          "name": "silence_latent.pt",
+          "sizeBytes": 3841215
+        }
+      ],
+      "totalBytes": 4791666819,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-acestep-v15-turbo-shift3-license",
+    "title": "acestep-v15-turbo-shift3 — license",
+    "publisher": "ACE-Step",
+    "url": "https://huggingface.co/ACE-Step/acestep-v15-turbo-shift3",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "625a282f7c8d882c930a5e500be4c82800f84fb4"
+  },
+  {
+    "id": "ow-facodec",
+    "title": "FAcodec — model card",
+    "publisher": "Plachta",
+    "url": "https://huggingface.co/Plachta/FAcodec",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "a8e5a0a769c9f2da1d283e30ec3be9a21bad0b93"
+  },
+  {
+    "id": "ow-facodec-weights",
+    "title": "FAcodec — checkpoint files",
+    "publisher": "Plachta",
+    "url": "https://huggingface.co/Plachta/FAcodec/tree/a8e5a0a769c9f2da1d283e30ec3be9a21bad0b93",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "a8e5a0a769c9f2da1d283e30ec3be9a21bad0b93",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/Plachta/FAcodec",
+      "files": [
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 1498645002
+        }
+      ],
+      "totalBytes": 1498645002,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-facodec-license",
+    "title": "FAcodec — license",
+    "publisher": "Plachta",
+    "url": "https://huggingface.co/Plachta/FAcodec",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "a8e5a0a769c9f2da1d283e30ec3be9a21bad0b93"
+  },
+  {
+    "id": "ow-wan-dancer-14b",
+    "title": "Wan-Dancer-14B — model card",
+    "publisher": "Wan-AI",
+    "url": "https://huggingface.co/Wan-AI/Wan-Dancer-14B",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "85ce88dd8d025459dcf0fe93982d6da8b9002957"
+  },
+  {
+    "id": "ow-wan-dancer-14b-weights",
+    "title": "Wan-Dancer-14B — checkpoint files",
+    "publisher": "Wan-AI",
+    "url": "https://huggingface.co/Wan-AI/Wan-Dancer-14B/tree/85ce88dd8d025459dcf0fe93982d6da8b9002957",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "85ce88dd8d025459dcf0fe93982d6da8b9002957",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/Wan-AI/Wan-Dancer-14B",
+      "files": [
+        {
+          "name": "global_model.safetensors",
+          "sizeBytes": 34490546744
+        },
+        {
+          "name": "local_model.safetensors",
+          "sizeBytes": 34490546744
+        },
+        {
+          "name": "models_clip_open-clip-xlm-roberta-large-vit-huge-14.pth",
+          "sizeBytes": 4772359047
+        },
+        {
+          "name": "models_t5_umt5-xxl-enc-bf16.pth",
+          "sizeBytes": 11361920418
+        },
+        {
+          "name": "Wan2.1_VAE.pth",
+          "sizeBytes": 507609880
+        }
+      ],
+      "totalBytes": 85622982833,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-wan-dancer-14b-license",
+    "title": "Wan-Dancer-14B — license",
+    "publisher": "Wan-AI",
+    "url": "https://huggingface.co/Wan-AI/Wan-Dancer-14B",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "85ce88dd8d025459dcf0fe93982d6da8b9002957"
+  },
+  {
+    "id": "ow-alodlm-8b",
+    "title": "ALoDLM-8B — model card",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/ALoDLM-8B",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "2c4623d93e285bea86a940c2801eac4509862edd"
+  },
+  {
+    "id": "ow-alodlm-8b-weights",
+    "title": "ALoDLM-8B — checkpoint files",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/ALoDLM-8B/tree/2c4623d93e285bea86a940c2801eac4509862edd",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "2c4623d93e285bea86a940c2801eac4509862edd",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/amazon/ALoDLM-8B",
+      "parameterCount": 8190735360,
+      "files": [
+        {
+          "name": "exit_gate.pt",
+          "sizeBytes": 10355
+        },
+        {
+          "name": "model-00001-of-00004.safetensors",
+          "sizeBytes": 4902257696
+        },
+        {
+          "name": "model-00002-of-00004.safetensors",
+          "sizeBytes": 4915960368
+        },
+        {
+          "name": "model-00003-of-00004.safetensors",
+          "sizeBytes": 4983068496
+        },
+        {
+          "name": "model-00004-of-00004.safetensors",
+          "sizeBytes": 1580230264
+        }
+      ],
+      "totalBytes": 16381527179,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-alodlm-8b-license",
+    "title": "ALoDLM-8B — license",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/ALoDLM-8B/blob/2c4623d93e285bea86a940c2801eac4509862edd/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "2c4623d93e285bea86a940c2801eac4509862edd"
+  },
+  {
+    "id": "ow-chronos-t5-large",
+    "title": "chronos-t5-large — model card",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/chronos-t5-large",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "0e46c9c7e2e9f74b53db0617fdfcfe42a413e54a"
+  },
+  {
+    "id": "ow-chronos-t5-large-weights",
+    "title": "chronos-t5-large — checkpoint files",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/chronos-t5-large/tree/0e46c9c7e2e9f74b53db0617fdfcfe42a413e54a",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "0e46c9c7e2e9f74b53db0617fdfcfe42a413e54a",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/amazon/chronos-t5-large",
+      "parameterCount": 708963328,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 2835915592
+        }
+      ],
+      "totalBytes": 2835915592,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-chronos-t5-large-license",
+    "title": "chronos-t5-large — license",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/chronos-t5-large",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "0e46c9c7e2e9f74b53db0617fdfcfe42a413e54a"
+  },
+  {
+    "id": "ow-flux-3-image-klein",
+    "title": "flux-3-image-klein — model card",
+    "publisher": "black-forest-labs",
+    "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "337337621b8526e120f2275d250242f4a6bedd75"
+  },
+  {
+    "id": "ow-flux-3-image-klein-weights",
+    "title": "flux-3-image-klein — checkpoint files",
+    "publisher": "black-forest-labs",
+    "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein/tree/337337621b8526e120f2275d250242f4a6bedd75",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "337337621b8526e120f2275d250242f4a6bedd75",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/black-forest-labs/flux-3-image-klein",
+      "parameterCount": 5548681984,
+      "files": [
+        {
+          "name": "ae.safetensors",
+          "sizeBytes": 336211292
+        },
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 11097404512
+        },
+        {
+          "name": "text_encoder/model-00001-of-00002.safetensors",
+          "sizeBytes": 4967229296
+        },
+        {
+          "name": "text_encoder/model-00002-of-00002.safetensors",
+          "sizeBytes": 3908490048
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00001-of-00002.safetensors",
+          "sizeBytes": 9907529352
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00002-of-00002.safetensors",
+          "sizeBytes": 1189878064
+        },
+        {
+          "name": "vae/diffusion_pytorch_model.safetensors",
+          "sizeBytes": 336213556
+        },
+        {
+          "name": "variants/fp8r/model.safetensors",
+          "sizeBytes": 6270949144
+        },
+        {
+          "name": "variants/nvfp4/model.safetensors",
+          "sizeBytes": 5277674144
+        }
+      ],
+      "totalBytes": 43291579408,
+      "gated": true
+    }
+  },
+  {
+    "id": "ow-flux-3-image-klein-license",
+    "title": "flux-3-image-klein — license",
+    "publisher": "black-forest-labs",
+    "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "337337621b8526e120f2275d250242f4a6bedd75"
+  },
+  {
+    "id": "ow-da3-giant-1-1",
+    "title": "DA3-GIANT-1.1 — model card",
+    "publisher": "depth-anything",
+    "url": "https://huggingface.co/depth-anything/DA3-GIANT-1.1",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "72ee9f89ce4e50d704e9d55ee9c646ec8dc25a19"
+  },
+  {
+    "id": "ow-da3-giant-1-1-weights",
+    "title": "DA3-GIANT-1.1 — checkpoint files",
+    "publisher": "depth-anything",
+    "url": "https://huggingface.co/depth-anything/DA3-GIANT-1.1/tree/72ee9f89ce4e50d704e9d55ee9c646ec8dc25a19",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "72ee9f89ce4e50d704e9d55ee9c646ec8dc25a19",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/depth-anything/DA3-GIANT-1.1",
+      "parameterCount": 1355674125,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 5422814644
+        }
+      ],
+      "totalBytes": 5422814644,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-da3-giant-1-1-license",
+    "title": "DA3-GIANT-1.1 — license",
+    "publisher": "depth-anything",
+    "url": "https://huggingface.co/depth-anything/DA3-GIANT-1.1",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "72ee9f89ce4e50d704e9d55ee9c646ec8dc25a19"
+  },
+  {
+    "id": "ow-boxer",
+    "title": "boxer — model card",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/boxer",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "bfba91291fb3f137c18eb6e45362eeda827eac7b"
+  },
+  {
+    "id": "ow-boxer-weights",
+    "title": "boxer — checkpoint files",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/boxer/tree/bfba91291fb3f137c18eb6e45362eeda827eac7b",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "bfba91291fb3f137c18eb6e45362eeda827eac7b",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/facebook/boxer",
+      "files": [
+        {
+          "name": "dinov3_vits16plus_pretrain_lvd1689m-4057cbaa.pth",
+          "sizeBytes": 114924783
+        },
+        {
+          "name": "owlv2-base-patch16-ensemble.pt",
+          "sizeBytes": 742984963
+        }
+      ],
+      "totalBytes": 857909746,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-boxer-license",
+    "title": "boxer — license",
+    "publisher": "facebook",
+    "url": "https://huggingface.co/facebook/boxer",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "bfba91291fb3f137c18eb6e45362eeda827eac7b"
+  },
+  {
+    "id": "ow-glide",
+    "title": "GLiDE — model card",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/GLiDE",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "a7e45896be7c96ba3354891da790c5ec99c30b6c"
+  },
+  {
+    "id": "ow-glide-weights",
+    "title": "GLiDE — checkpoint files",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/GLiDE/tree/a7e45896be7c96ba3354891da790c5ec99c30b6c",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "a7e45896be7c96ba3354891da790c5ec99c30b6c",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/fastino/GLiDE",
+      "parameterCount": 26085330160,
+      "files": [
+        {
+          "name": "model-00001-of-00005.safetensors",
+          "sizeBytes": 10752475776
+        },
+        {
+          "name": "model-00002-of-00005.safetensors",
+          "sizeBytes": 10821787824
+        },
+        {
+          "name": "model-00003-of-00005.safetensors",
+          "sizeBytes": 10791416008
+        },
+        {
+          "name": "model-00004-of-00005.safetensors",
+          "sizeBytes": 10748470520
+        },
+        {
+          "name": "model-00005-of-00005.safetensors",
+          "sizeBytes": 8135161744
+        },
+        {
+          "name": "model-visual.safetensors",
+          "sizeBytes": 921497224
+        },
+        {
+          "name": "readout.safetensors",
+          "sizeBytes": 2611288
+        }
+      ],
+      "totalBytes": 52173420384,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-glide-license",
+    "title": "GLiDE — license",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/GLiDE/blob/a7e45896be7c96ba3354891da790c5ec99c30b6c/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "a7e45896be7c96ba3354891da790c5ec99c30b6c"
+  },
+  {
+    "id": "ow-fastino-nemotron-3-5-lightning-finance",
+    "title": "Fastino-Nemotron-3.5-Lightning-Finance — model card",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/Fastino-Nemotron-3.5-Lightning-Finance",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "a6e855cdcae681d4e101aa161e0ce8f6c686405e"
+  },
+  {
+    "id": "ow-fastino-nemotron-3-5-lightning-finance-weights",
+    "title": "Fastino-Nemotron-3.5-Lightning-Finance — checkpoint files",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/Fastino-Nemotron-3.5-Lightning-Finance/tree/a6e855cdcae681d4e101aa161e0ce8f6c686405e",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "a6e855cdcae681d4e101aa161e0ce8f6c686405e",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/fastino/Fastino-Nemotron-3.5-Lightning-Finance",
+      "parameterCount": 31577937344,
+      "files": [
+        {
+          "name": "model-00001-of-00014.safetensors",
+          "sizeBytes": 4991210024
+        },
+        {
+          "name": "model-00002-of-00014.safetensors",
+          "sizeBytes": 4992601016
+        },
+        {
+          "name": "model-00003-of-00014.safetensors",
+          "sizeBytes": 4992601368
+        },
+        {
+          "name": "model-00004-of-00014.safetensors",
+          "sizeBytes": 4995692800
+        },
+        {
+          "name": "model-00005-of-00014.safetensors",
+          "sizeBytes": 4980553832
+        },
+        {
+          "name": "model-00006-of-00014.safetensors",
+          "sizeBytes": 4989423536
+        },
+        {
+          "name": "model-00007-of-00014.safetensors",
+          "sizeBytes": 4992601488
+        },
+        {
+          "name": "model-00008-of-00014.safetensors",
+          "sizeBytes": 4992601520
+        },
+        {
+          "name": "model-00009-of-00014.safetensors",
+          "sizeBytes": 4995692800
+        },
+        {
+          "name": "model-00010-of-00014.safetensors",
+          "sizeBytes": 4992601520
+        },
+        {
+          "name": "model-00011-of-00014.safetensors",
+          "sizeBytes": 4995692800
+        },
+        {
+          "name": "model-00012-of-00014.safetensors",
+          "sizeBytes": 4995692816
+        },
+        {
+          "name": "model-00013-of-00014.safetensors",
+          "sizeBytes": 3249723504
+        },
+        {
+          "name": "model-00014-of-00014.safetensors",
+          "sizeBytes": 2670685240
+        }
+      ],
+      "totalBytes": 65827374264,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-fastino-nemotron-3-5-lightning-finance-license",
+    "title": "Fastino-Nemotron-3.5-Lightning-Finance — license",
+    "publisher": "fastino",
+    "url": "https://huggingface.co/fastino/Fastino-Nemotron-3.5-Lightning-Finance",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "a6e855cdcae681d4e101aa161e0ce8f6c686405e"
+  },
+  {
+    "id": "ow-embeddinggemma-2",
+    "title": "embeddinggemma-2 — model card",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/embeddinggemma-2",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b"
+  },
+  {
+    "id": "ow-embeddinggemma-2-weights",
+    "title": "embeddinggemma-2 — checkpoint files",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/embeddinggemma-2/tree/914f7f89142e33e77833254d9c9b90c3cef7303b",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/google/embeddinggemma-2",
+      "parameterCount": 744371512,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 1488915288
+        }
+      ],
+      "totalBytes": 1488915288,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-embeddinggemma-2-license",
+    "title": "embeddinggemma-2 — license",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/embeddinggemma-2",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b"
+  },
+  {
+    "id": "ow-timesfm-3-0-pytorch",
+    "title": "timesfm-3.0-pytorch — model card",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/timesfm-3.0-pytorch",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "43046b85ec22d584a13f8098c2ed39c889e129c2"
+  },
+  {
+    "id": "ow-timesfm-3-0-pytorch-weights",
+    "title": "timesfm-3.0-pytorch — checkpoint files",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/timesfm-3.0-pytorch/tree/43046b85ec22d584a13f8098c2ed39c889e129c2",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "43046b85ec22d584a13f8098c2ed39c889e129c2",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/google/timesfm-3.0-pytorch",
+      "parameterCount": 330710976,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 1322898824
+        }
+      ],
+      "totalBytes": 1322898824,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-timesfm-3-0-pytorch-license",
+    "title": "timesfm-3.0-pytorch — license",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/timesfm-3.0-pytorch/blob/43046b85ec22d584a13f8098c2ed39c889e129c2/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "43046b85ec22d584a13f8098c2ed39c889e129c2"
+  },
+  {
+    "id": "ow-tipsv1-g14",
+    "title": "tipsv1-g14 — model card",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/tipsv1-g14",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "79a0b1548c1d6da931ba4c9ef5fd9251744ca4b9"
+  },
+  {
+    "id": "ow-tipsv1-g14-weights",
+    "title": "tipsv1-g14 — checkpoint files",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/tipsv1-g14/tree/79a0b1548c1d6da931ba4c9ef5fd9251744ca4b9",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "79a0b1548c1d6da931ba4c9ef5fd9251744ca4b9",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/google/tipsv1-g14",
+      "parameterCount": 1525085696,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 6100424304
+        }
+      ],
+      "totalBytes": 6100424304,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-tipsv1-g14-license",
+    "title": "tipsv1-g14 — license",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/tipsv1-g14",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "79a0b1548c1d6da931ba4c9ef5fd9251744ca4b9"
+  },
+  {
+    "id": "ow-tipsv1-so400m14",
+    "title": "tipsv1-so400m14 — model card",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/tipsv1-so400m14",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "9bf0d1426d430e0ce9b19fc84692d9b3d74b3355"
+  },
+  {
+    "id": "ow-tipsv1-so400m14-weights",
+    "title": "tipsv1-so400m14 — checkpoint files",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/tipsv1-so400m14/tree/9bf0d1426d430e0ce9b19fc84692d9b3d74b3355",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "9bf0d1426d430e0ce9b19fc84692d9b3d74b3355",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/google/tipsv1-so400m14",
+      "parameterCount": 861726816,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 3446991256
+        }
+      ],
+      "totalBytes": 3446991256,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-tipsv1-so400m14-license",
+    "title": "tipsv1-so400m14 — license",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/tipsv1-so400m14",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "9bf0d1426d430e0ce9b19fc84692d9b3d74b3355"
+  },
+  {
+    "id": "ow-tipsv2-so400m14-dpt",
+    "title": "tipsv2-so400m14-dpt — model card",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/tipsv2-so400m14-dpt",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "545c26eaa6a4ce74a54d9ba287eee015635b94d4"
+  },
+  {
+    "id": "ow-tipsv2-so400m14-dpt-weights",
+    "title": "tipsv2-so400m14-dpt — checkpoint files",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/tipsv2-so400m14-dpt/tree/545c26eaa6a4ce74a54d9ba287eee015635b94d4",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "545c26eaa6a4ce74a54d9ba287eee015635b94d4",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/google/tipsv2-so400m14-dpt",
+      "parameterCount": 532924265,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 2131758580
+        }
+      ],
+      "totalBytes": 2131758580,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-tipsv2-so400m14-dpt-license",
+    "title": "tipsv2-so400m14-dpt — license",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/tipsv2-so400m14-dpt",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "545c26eaa6a4ce74a54d9ba287eee015635b94d4"
+  },
+  {
+    "id": "ow-tabfm-1-1-0-pytorch",
+    "title": "tabfm-1.1.0-pytorch — model card",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/tabfm-1.1.0-pytorch",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "d7cfd3b8d184d7c8fed4210aeba9e1c967d45f2a"
+  },
+  {
+    "id": "ow-tabfm-1-1-0-pytorch-weights",
+    "title": "tabfm-1.1.0-pytorch — checkpoint files",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/tabfm-1.1.0-pytorch/tree/d7cfd3b8d184d7c8fed4210aeba9e1c967d45f2a",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "d7cfd3b8d184d7c8fed4210aeba9e1c967d45f2a",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/google/tabfm-1.1.0-pytorch",
+      "files": [
+        {
+          "name": "classification/model.safetensors",
+          "sizeBytes": 820550772
+        },
+        {
+          "name": "regression/model.safetensors",
+          "sizeBytes": 824695714
+        }
+      ],
+      "totalBytes": 1645246486,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-tabfm-1-1-0-pytorch-license",
+    "title": "tabfm-1.1.0-pytorch — license",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/tabfm-1.1.0-pytorch/blob/d7cfd3b8d184d7c8fed4210aeba9e1c967d45f2a/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "d7cfd3b8d184d7c8fed4210aeba9e1c967d45f2a"
+  },
+  {
+    "id": "ow-wespeaker-voxceleb-resnet34-lm",
+    "title": "wespeaker-voxceleb-resnet34-LM — model card",
+    "publisher": "pyannote",
+    "url": "https://huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "837717ddb9ff5507820346191109dc79c958d614"
+  },
+  {
+    "id": "ow-wespeaker-voxceleb-resnet34-lm-weights",
+    "title": "wespeaker-voxceleb-resnet34-LM — checkpoint files",
+    "publisher": "pyannote",
+    "url": "https://huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM/tree/837717ddb9ff5507820346191109dc79c958d614",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "837717ddb9ff5507820346191109dc79c958d614",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM",
+      "files": [
+        {
+          "name": "pytorch_model.bin",
+          "sizeBytes": 26645418
+        }
+      ],
+      "totalBytes": 26645418,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-wespeaker-voxceleb-resnet34-lm-license",
+    "title": "wespeaker-voxceleb-resnet34-LM — license",
+    "publisher": "pyannote",
+    "url": "https://huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "837717ddb9ff5507820346191109dc79c958d614"
+  },
+  {
+    "id": "ow-glm-ocr",
+    "title": "GLM-OCR — model card",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/GLM-OCR",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "2e85a62840ccac27daa451df36c736c4636b8628"
+  },
+  {
+    "id": "ow-glm-ocr-weights",
+    "title": "GLM-OCR — checkpoint files",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/GLM-OCR/tree/2e85a62840ccac27daa451df36c736c4636b8628",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "2e85a62840ccac27daa451df36c736c4636b8628",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/zai-org/GLM-OCR",
+      "parameterCount": 1325258240,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 2650579464
+        }
+      ],
+      "totalBytes": 2650579464,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-glm-ocr-license",
+    "title": "GLM-OCR — license",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/GLM-OCR",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "2e85a62840ccac27daa451df36c736c4636b8628"
+  },
+  {
+    "id": "ow-scail-2",
+    "title": "SCAIL-2 — model card",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/SCAIL-2",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "150cc0ca4e98e50e60b9295dacde39442fdccab2"
+  },
+  {
+    "id": "ow-scail-2-weights",
+    "title": "SCAIL-2 — checkpoint files",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/SCAIL-2/tree/150cc0ca4e98e50e60b9295dacde39442fdccab2",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "150cc0ca4e98e50e60b9295dacde39442fdccab2",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/zai-org/SCAIL-2",
+      "files": [
+        {
+          "name": "model/1/fsdp2_rank_0000_checkpoint.pt",
+          "sizeBytes": 65582563395
+        },
+        {
+          "name": "model/bias-aware-dpo-lora.pt",
+          "sizeBytes": 1227381060
+        },
+        {
+          "name": "model/relighting-lora.pt",
+          "sizeBytes": 1227381060
+        },
+        {
+          "name": "models_clip_open-clip-xlm-roberta-large-vit-huge-14-onlyvisual.pth",
+          "sizeBytes": 2528485611
+        },
+        {
+          "name": "umt5-xxl/models_t5_umt5-xxl-enc-bf16.pth",
+          "sizeBytes": 11361920418
+        },
+        {
+          "name": "Wan2.1_VAE.pth",
+          "sizeBytes": 507609880
+        }
+      ],
+      "totalBytes": 82435341424,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-scail-2-license",
+    "title": "SCAIL-2 — license",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/SCAIL-2",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "150cc0ca4e98e50e60b9295dacde39442fdccab2"
+  },
+  {
+    "id": "ow-glm-asr-nano-2512",
+    "title": "GLM-ASR-Nano-2512 — model card",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/GLM-ASR-Nano-2512",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "61ba4e0b3309b6656edea3e93e419f7bd5c61957"
+  },
+  {
+    "id": "ow-glm-asr-nano-2512-weights",
+    "title": "GLM-ASR-Nano-2512 — checkpoint files",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/GLM-ASR-Nano-2512/tree/61ba4e0b3309b6656edea3e93e419f7bd5c61957",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "61ba4e0b3309b6656edea3e93e419f7bd5c61957",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/zai-org/GLM-ASR-Nano-2512",
+      "parameterCount": 2257843200,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 4515776712
+        }
+      ],
+      "totalBytes": 4515776712,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-glm-asr-nano-2512-license",
+    "title": "GLM-ASR-Nano-2512 — license",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/GLM-ASR-Nano-2512",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "61ba4e0b3309b6656edea3e93e419f7bd5c61957"
+  },
+  {
+    "id": "ow-glm-image",
+    "title": "GLM-Image — model card",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/GLM-Image",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "2c433cc0cbc293bde2ac8ca9624f279b5d23fcf4"
+  },
+  {
+    "id": "ow-glm-image-weights",
+    "title": "GLM-Image — checkpoint files",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/GLM-Image/tree/2c433cc0cbc293bde2ac8ca9624f279b5d23fcf4",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "2c433cc0cbc293bde2ac8ca9624f279b5d23fcf4",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/zai-org/GLM-Image",
+      "parameterCount": 6926882880,
+      "files": [
+        {
+          "name": "text_encoder/model.safetensors",
+          "sizeBytes": 870643240
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+          "sizeBytes": 4966398856
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+          "sizeBytes": 4984743304
+        },
+        {
+          "name": "transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+          "sizeBytes": 3902674480
+        },
+        {
+          "name": "vae/diffusion_pytorch_model.safetensors",
+          "sizeBytes": 812234342
+        },
+        {
+          "name": "vision_language_encoder/model-00001-of-00004.safetensors",
+          "sizeBytes": 5295710600
+        },
+        {
+          "name": "vision_language_encoder/model-00002-of-00004.safetensors",
+          "sizeBytes": 5303216664
+        },
+        {
+          "name": "vision_language_encoder/model-00003-of-00004.safetensors",
+          "sizeBytes": 5303216648
+        },
+        {
+          "name": "vision_language_encoder/model-00004-of-00004.safetensors",
+          "sizeBytes": 4326469720
+        }
+      ],
+      "totalBytes": 35765307854,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-glm-image-license",
+    "title": "GLM-Image — license",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/GLM-Image",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "2c433cc0cbc293bde2ac8ca9624f279b5d23fcf4"
+  },
+  {
+    "id": "ow-glm-tts",
+    "title": "GLM-TTS — model card",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/GLM-TTS",
+    "kind": "model-card",
+    "observedAt": "2026-10-23",
+    "revision": "b3feb691fa4cf590eec4418f6275f95220e58844"
+  },
+  {
+    "id": "ow-glm-tts-weights",
+    "title": "GLM-TTS — checkpoint files",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/GLM-TTS/tree/b3feb691fa4cf590eec4418f6275f95220e58844",
+    "kind": "weights",
+    "observedAt": "2026-10-23",
+    "revision": "b3feb691fa4cf590eec4418f6275f95220e58844",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/zai-org/GLM-TTS",
+      "files": [
+        {
+          "name": "flow/flow.pt",
+          "sizeBytes": 901331642
+        },
+        {
+          "name": "hift/hift.pt",
+          "sizeBytes": 83390254
+        },
+        {
+          "name": "llm/model-00001-of-00002.safetensors",
+          "sizeBytes": 4999976928
+        },
+        {
+          "name": "llm/model-00002-of-00002.safetensors",
+          "sizeBytes": 1208089016
+        },
+        {
+          "name": "speech_tokenizer/model.safetensors",
+          "sizeBytes": 1628135704
+        }
+      ],
+      "totalBytes": 8820923544,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-glm-tts-license",
+    "title": "GLM-TTS — license",
+    "publisher": "zai-org",
+    "url": "https://huggingface.co/zai-org/GLM-TTS",
+    "kind": "license",
+    "observedAt": "2026-10-23",
+    "revision": "b3feb691fa4cf590eec4418f6275f95220e58844"
   }
 ] satisfies TaskModelSource[];
 

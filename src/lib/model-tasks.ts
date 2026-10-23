@@ -55,6 +55,28 @@ export function selectModelTasks(catalog: ModelCatalog, state: ModelBrowserState
   return { models, groups, counts, totalCount: candidates.length };
 }
 
+export function formatModelPrice(model: Model, locale: ModelLocale): string | null {
+  const pricing = model.pricing;
+  if (!pricing) {
+    return null;
+  }
+  const format = (value: number) =>
+    new Intl.NumberFormat(locale, {
+      style: "currency",
+      currency: "USD",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 4,
+    }).format(value);
+  const parts: string[] = [];
+  if (pricing.inputPerMillionUsd !== undefined) {
+    parts.push(`${format(pricing.inputPerMillionUsd)} ${modelBrowserLabels[locale].input}`);
+  }
+  if (pricing.outputPerMillionUsd !== undefined) {
+    parts.push(`${format(pricing.outputPerMillionUsd)} ${modelBrowserLabels[locale].output}`);
+  }
+  return parts.length ? parts.join(" · ") : null;
+}
+
 export function modelTasksExport(catalog: ModelCatalog, state: ModelBrowserState): ExportTable {
   const labels = modelBrowserLabels[state.locale];
   const vendorById = new Map(catalog.vendors.map((vendor) => [vendor.id, vendor]));

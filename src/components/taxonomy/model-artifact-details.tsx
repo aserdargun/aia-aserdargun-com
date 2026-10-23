@@ -6,7 +6,7 @@ export function ModelArtifactDetails({ model, weights, sources, locale }: {
 }) {
   const labels = taskModelLabels[locale];
   const artifact = weights.artifact;
-  const releaseEvidence = artifact && artifact.type !== "git"
+  const releaseEvidence = artifact && artifact.type !== "git" && artifact.type !== "hf-repository"
     ? sources.find((source) => source.id === artifact.evidenceSourceId) : null;
   return <>
     {model.parameterKind && model.parameterKind !== "weights" ? <p className="task-model-note" data-parameter-kind={model.parameterKind}>{labels.parameterKinds[model.parameterKind]}</p> : null}
@@ -15,6 +15,14 @@ export function ModelArtifactDetails({ model, weights, sources, locale }: {
       <summary>{labels.artifactIdentity}</summary>
       {weights.revision ? <p>{labels.pinnedRevision}: <code>{weights.revision}</code></p> : <p>{labels.publisherArtifact}</p>}
       {artifact?.type === "git" ? <p><code>{artifact.path}</code></p> : null}
+      {artifact?.type === "hf-repository" ? <>
+        <dl>
+          <div><dt>{labels.repository}</dt><dd><code>{artifact.repositoryUrl}</code></dd></div>
+          <div><dt>{labels.bytes}</dt><dd>{artifact.totalBytes.toLocaleString(locale)}</dd></div>
+          {artifact.parameterCount ? <div><dt>{labels.parameters}</dt><dd>{artifact.parameterCount.toLocaleString(locale)}</dd></div> : null}
+        </dl>
+        <ul>{artifact.files.map((file) => <li key={file.name}><code>{file.name}</code> · {file.sizeBytes.toLocaleString(locale)} {labels.bytes}</li>)}</ul>
+      </> : null}
       {artifact?.type === "publisher-file" || artifact?.type === "google-drive" ? <dl>
         <div><dt>{labels.file}</dt><dd><code>{artifact.fileName}</code></dd></div>
         <div><dt>{labels.bytes}</dt><dd>{artifact.sizeBytes.toLocaleString(locale)}</dd></div>

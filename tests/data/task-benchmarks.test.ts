@@ -10,7 +10,11 @@ describe("published task benchmark evidence", () => {
   it("covers every task with bilingual research, exact releases and resolvable primary citations", () => {
     expect(() => validate()).not.toThrow();
     expect(taskBenchmarkReviews).toHaveLength(taxonomyTasks.length);
-    expect(taskBenchmarkReviews.every((review) => review.checkedAt === "2026-10-21")).toBe(true);
+    // A review never predates the evidence it cites and never runs ahead of today.
+    const bySource = new Map([...benchmarkSources, ...taskModelSources].map((source) => [source.id, source]));
+    const today = new Date().toISOString().slice(0, 10);
+    expect(taskBenchmarkReviews.every((review) => review.sourceIds.every((id) => bySource.get(id)!.observedAt <= review.checkedAt))).toBe(true);
+    expect(taskBenchmarkReviews.every((review) => review.checkedAt <= today)).toBe(true);
     expect(new Set(taskBenchmarkReviews.map((review) => review.taskId)).size).toBe(85);
     expect(taskBenchmarks.some((benchmark) => benchmark.resultDate?.startsWith("2026-10"))).toBe(true);
     expect(taskBenchmarks.some((benchmark) => benchmark.resultDate?.startsWith("2022"))).toBe(true);
