@@ -1,6 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
+import { useId, useMemo } from "react";
 import type { TaskModelSource } from "@/data/schema";
 import { downloadFile, toCsv, toExcelXml } from "@/lib/export";
 import { openWeightLabels, type ModelLocale } from "@/lib/labels";
@@ -8,9 +9,9 @@ import {
   defaultOpenWeightBrowserState, groupOpenWeightRows, openWeightLicenses,
   openWeightPublishers, openWeightsExport, parseOpenWeightBrowserState,
   selectOpenWeights, serializeOpenWeightBrowserState,
-  type OpenWeightBrowserState, type OpenWeightCatalog, type OpenWeightRow,
+  type OpenWeightBrowserState, type OpenWeightCatalog, type OpenWeightRow, type OpenWeightGroupBy,
 } from "@/lib/open-weight-browser";
-import { formatBytes, formatParameterCount, footprintBandValues } from "@/lib/open-weights";
+import { formatBytes, formatParameterCount, footprintBandValues, taxonomyCoverage, type FootprintBand } from "@/lib/open-weights";
 
 function taskHref(taskId: string, locale: ModelLocale) {
   return `/taxonomy/tasks?task=${taskId}${locale === "tr" ? "&lang=tr" : ""}`;
@@ -20,15 +21,16 @@ function familyHref(familyId: string, locale: ModelLocale) {
   return `/taxonomy/models?family=${familyId}${locale === "tr" ? "&lang=tr" : ""}`;
 }
 
-function OpenWeightCard({ row, locale, sources }: {
-  row: OpenWeightRow; locale: ModelLocale; sources: Map<string, TaskModelSource>;
+function OpenWeightCard({ row, locale, sources, anchorId }: {
+  row: OpenWeightRow; locale: ModelLocale; sources: Map<string, TaskModelSource>; anchorId: string;
 }) {
+  const headingId = useId();
   const labels = openWeightLabels[locale];
   const { model, footprint, publisher, tasks, families, evidence } = row;
   return (
-    <article className="open-weight-card" id={`model-${model.id}`} aria-labelledby={`open-weight-${model.id}`}>
+    <article className="open-weight-card" id={anchorId} aria-labelledby={headingId}>
       <header className="open-weight-card__head">
-        <h3 id={`open-weight-${model.id}`}>
+        <h3 id={headingId}>
           <a href={evidence.card.url} target="_blank" rel="noreferrer" lang="en">{model.name} ↗</a>
         </h3>
         <p className="open-weight-badges">
@@ -42,8 +44,8 @@ function OpenWeightCard({ row, locale, sources }: {
         <div><dt>{labels.publisher}</dt><dd>{publisher}</dd></div>
         <div><dt>{labels.parameters}</dt><dd>{formatParameterCount(footprint.parameters, locale)}</dd></div>
         <div><dt>{labels.weights}</dt><dd>{footprint.bytes === null ? labels.unknownSize : formatBytes(footprint.bytes, locale)}</dd></div>
-        <div><dt>{labels.vram4}</dt><dd>{footprint.vram4 === null ? "—" : `${footprint.vram4} GB`}</dd></div>
-        <div><dt>{labels.memory8}</dt><dd>{footprint.memory8 === null ? "—" : `${footprint.memory8} GB`}</dd></div>
+        <div><dt>{labels.vram4}</dt><dd title={footprint.vram4 === null ? labels.unknownMemory : labels.estimateHint}>{footprint.vram4 === null ? "—" : `≈ ${footprint.vram4} GiB`}</dd></div>
+        <div><dt>{labels.memory8}</dt><dd title={footprint.memory8 === null ? labels.unknownMemory : labels.estimateHint}>{footprint.memory8 === null ? "—" : `≈ ${footprint.memory8} GiB`}</dd></div>
         <div><dt>{labels.license}</dt><dd><a href={evidence.license.url} target="_blank" rel="noreferrer">{model.license} ↗</a></dd></div>
         <div><dt>{labels.checked}</dt><dd><time dateTime={evidence.card.observedAt}>{evidence.card.observedAt}</time></dd></div>
       </dl>
@@ -90,11 +92,15 @@ function OpenWeightCard({ row, locale, sources }: {
 
 export function OpenWeightBrowser({ catalog }: { catalog: OpenWeightCatalog }) {
   const params = useSearchParams();
-  const state = parseOpenWeightBrowserState(params, catalog);
+  const state = useMemo(() => parseOpenWeightBrowserState(params, catalog), [params, catalog]);
   const labels = openWeightLabels[state.locale];
-  const rows = selectOpenWeights(catalog, state);
-  const groups = groupOpenWeightRows(rows, state);
-  const sourceById = new Map(catalog.sources.map((source) => [source.id, source]));
+  const rows = useMemo(() => selectOpenWeights(catalog, state), [catalog, state]);
+  const groups = useMemo(() => groupOpenWeightRows(rows, state), [rows, state]);
+  const sourceById = useMemo(() => new Map(catalog.sources.map((source) => [source.id, source])), [catalog]);
+  const coverage = useMemo(() => taxonomyCoverage(catalog.tasks), [catalog]);
+  const publishers = useMemo(() => openWeightPublishers(catalog), [catalog]);
+  const licenses = useMemo(() => openWeightLicenses(catalog), [catalog]);
+  const advancedFilterCount = [state.license, state.access, state.taskId, state.familyId].filter(Boolean).length;
   const hasFilters = Boolean(
     state.query || state.publisher || state.license || state.band || state.access || state.taskId || state.familyId,
   );
@@ -108,7 +114,7 @@ export function OpenWeightBrowser({ catalog }: { catalog: OpenWeightCatalog }) {
   }
 
   function reset() {
-    updateState({ ...defaultOpenWeightBrowserState, locale: state.locale });
+    updateState({ ...defaultOpenWeightBrowserState, locale: state.locale, groupBy: state.groupBy });
   }
 
   function exportModels(format: "csv" | "xls") {
@@ -136,6 +142,21 @@ export function OpenWeightBrowser({ catalog }: { catalog: OpenWeightCatalog }) {
         </div>
       </header>
 
+      <details className="open-weight-coverage">
+        <summary>
+          <h2>{labels.coverage}</h2>
+          <span>{coverage.tasksWithModels}/{coverage.totalTasks} {labels.tasks} · {catalog.models.length} {labels.modelCount}</span>
+        </summary>
+        <p>{labels.coverageHint}</p>
+        <ul>
+          <li><strong>{coverage.totalTasks}</strong> <span>{labels.tasks}</span></li>
+          <li><strong>{coverage.tasksWithModels}</strong> <span>{labels.withModels}</span></li>
+          <li><strong>{coverage.specialist}</strong> <span>{labels.specialist}</span></li>
+          <li><strong>{coverage.pipeline}</strong> <span>{labels.pipeline}</span></li>
+          <li><strong>{coverage.withoutModels}</strong> <span>{labels.withoutModels}</span></li>
+        </ul>
+      </details>
+
       <div className="open-weight-controls">
         <label className="open-weight-controls__search">
           <span>{labels.search}</span>
@@ -146,53 +167,58 @@ export function OpenWeightBrowser({ catalog }: { catalog: OpenWeightCatalog }) {
           <span>{labels.publisher}</span>
           <select value={state.publisher ?? ""} onChange={(event) => updateState({ publisher: event.currentTarget.value || null })}>
             <option value="">{labels.allPublishers}</option>
-            {openWeightPublishers(catalog).map((publisher) => <option value={publisher} key={publisher}>{publisher}</option>)}
-          </select>
-        </label>
-        <label>
-          <span>{labels.license}</span>
-          <select value={state.license ?? ""} onChange={(event) => updateState({ license: event.currentTarget.value || null })}>
-            <option value="">{labels.allLicenses}</option>
-            {openWeightLicenses(catalog).map((license) => <option value={license} key={license}>{license}</option>)}
+            {publishers.map((publisher) => <option value={publisher} key={publisher}>{publisher}</option>)}
           </select>
         </label>
         <label>
           <span>{labels.size}</span>
-          <select value={state.band ?? ""} onChange={(event) => updateState({ band: (event.currentTarget.value || null) as never })}>
+          <select value={state.band ?? ""} onChange={(event) => updateState({ band: (event.currentTarget.value || null) as FootprintBand | null })}>
             <option value="">{labels.allSizes}</option>
-            {footprintBandValues.map((band) => <option value={band} key={band}>{labels.bands[band]}</option>)}
-          </select>
-        </label>
-        <label>
-          <span>{labels.access}</span>
-          <select value={state.access ?? ""} onChange={(event) => updateState({ access: (event.currentTarget.value || null) as never })}>
-            <option value="">{labels.allAccess}</option>
-            <option value="public">{labels.public}</option>
-            <option value="gated">{labels.gated}</option>
-          </select>
-        </label>
-        <label>
-          <span>{labels.task}</span>
-          <select value={state.taskId ?? ""} onChange={(event) => updateState({ taskId: event.currentTarget.value || null })}>
-            <option value="">{labels.allTasks}</option>
-            {catalog.tasks.map((task) => <option value={task.id} key={task.id}>{task.name}</option>)}
-          </select>
-        </label>
-        <label>
-          <span>{labels.family}</span>
-          <select value={state.familyId ?? ""} onChange={(event) => updateState({ familyId: event.currentTarget.value || null })}>
-            <option value="">{labels.allFamilies}</option>
-            {catalog.families.map((family) => <option value={family.id} key={family.id}>{family.name}</option>)}
+            {[...footprintBandValues, "unknown" as const].map((band) => <option value={band} key={band}>{labels.bands[band]}</option>)}
           </select>
         </label>
         <label>
           <span>{labels.groupBy}</span>
-          <select value={state.groupBy} onChange={(event) => updateState({ groupBy: event.currentTarget.value as never })}>
+          <select value={state.groupBy} onChange={(event) => updateState({ groupBy: event.currentTarget.value as OpenWeightGroupBy })}>
             {(["publisher", "task", "family"] as const).map((group) => (
               <option value={group} key={group}>{labels.groups[group]}</option>
             ))}
           </select>
         </label>
+        <details className="open-weight-controls__advanced" open={advancedFilterCount > 0}>
+          <summary>{labels.moreFilters}{advancedFilterCount ? ` · ${advancedFilterCount}` : ""}</summary>
+          <div>
+            <label>
+              <span>{labels.license}</span>
+              <select value={state.license ?? ""} onChange={(event) => updateState({ license: event.currentTarget.value || null })}>
+                <option value="">{labels.allLicenses}</option>
+                {licenses.map((license) => <option value={license} key={license}>{license}</option>)}
+              </select>
+            </label>
+            <label>
+              <span>{labels.access}</span>
+              <select value={state.access ?? ""} onChange={(event) => updateState({ access: (event.currentTarget.value || null) as OpenWeightBrowserState["access"] })}>
+                <option value="">{labels.allAccess}</option>
+                <option value="public">{labels.public}</option>
+                <option value="gated">{labels.gated}</option>
+              </select>
+            </label>
+            <label>
+              <span>{labels.task}</span>
+              <select value={state.taskId ?? ""} onChange={(event) => updateState({ taskId: event.currentTarget.value || null })}>
+                <option value="">{labels.allTasks}</option>
+                {catalog.tasks.map((task) => <option value={task.id} key={task.id}>{task.name}</option>)}
+              </select>
+            </label>
+            <label>
+              <span>{labels.family}</span>
+              <select value={state.familyId ?? ""} onChange={(event) => updateState({ familyId: event.currentTarget.value || null })}>
+                <option value="">{labels.allFamilies}</option>
+                {catalog.families.map((family) => <option value={family.id} key={family.id}>{family.name}</option>)}
+              </select>
+            </label>
+          </div>
+        </details>
       </div>
 
       <div className="model-results-bar">
@@ -203,19 +229,23 @@ export function OpenWeightBrowser({ catalog }: { catalog: OpenWeightCatalog }) {
           <button type="button" onClick={() => exportModels("xls")} disabled={!rows.length}>{labels.excel}</button>
         </div>
       </div>
-      <p className="open-weight-browser__scope">{labels.scope}</p>
+      <div className="open-weight-browser__scope">
+        <p>{labels.estimateHint}</p>
+        <details><summary>{labels.methodology}</summary><p>{labels.scope}</p></details>
+      </div>
 
       {groups.length ? (
         <div className="open-weight-groups">
           {groups.map((group) => (
-            <section className="open-weight-group" key={group.id} aria-labelledby={`group-${group.id}`}>
+            <section className="open-weight-group" key={group.id} aria-labelledby={`group-${encodeURIComponent(group.id)}`}>
               <header>
-                <h2 id={`group-${group.id}`}>{group.name}</h2>
-                <span className="open-weight-group__count">{group.rows.length} {labels.tasks}</span>
+                <h2 id={`group-${encodeURIComponent(group.id)}`}>{group.name}</h2>
+                <span className="open-weight-group__count">{group.rows.length} {labels.modelCount}</span>
               </header>
               <div className="open-weight-group__cards">
                 {group.rows.map((row) => (
-                  <OpenWeightCard key={`${group.id}-${row.model.id}`} row={row} locale={state.locale} sources={sourceById} />
+                  <OpenWeightCard key={`${group.id}-${row.model.id}`} row={row} locale={state.locale} sources={sourceById}
+                    anchorId={state.groupBy === "publisher" ? `model-${row.model.id}` : `model-${row.model.id}-${encodeURIComponent(group.id)}`} />
                 ))}
               </div>
             </section>

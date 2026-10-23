@@ -9,7 +9,6 @@ import { modelFamilySources, taskModelSources, taxonomySources } from "@/data/so
 import { openWeightModels, taxonomyTasks } from "@/data/task-models";
 import { openWeightLabels } from "@/lib/labels";
 import { validateModelFamilies } from "@/lib/model-families";
-import { taxonomyCoverage } from "@/lib/open-weights";
 import { validateTaskModels } from "@/lib/task-models";
 
 export const metadata = {
@@ -35,7 +34,6 @@ export default async function OpenWeightsPage() {
     await readFile(path.join(process.cwd(), "public", "assets", "taxonomy", "ai-model-taxonomy.svg"), "utf8"),
   );
 
-  const coverage = taxonomyCoverage(taxonomyTasks);
   const labels = openWeightLabels.en;
   const catalog = {
     models: openWeightModels,
@@ -48,17 +46,6 @@ export default async function OpenWeightsPage() {
     <>
       <SiteHeader />
       <main id="main-content" className="open-weight-page" tabIndex={-1}>
-        <section className="open-weight-coverage" aria-label={labels.coverage}>
-          <h2>{labels.coverage}</h2>
-          <p>{labels.coverageHint}</p>
-          <ul>
-            <li><strong>{coverage.totalTasks}</strong> <span>{labels.tasks}</span></li>
-            <li><strong>{coverage.tasksWithModels}</strong> <span>{labels.withModels}</span></li>
-            <li><strong>{coverage.specialist}</strong> <span>{labels.specialist}</span></li>
-            <li><strong>{coverage.pipeline}</strong> <span>{labels.pipeline}</span></li>
-            <li><strong>{coverage.withoutModels}</strong> <span>{labels.withoutModels}</span></li>
-          </ul>
-        </section>
         <Suspense fallback={<p>{labels.loading}</p>}>
           <OpenWeightBrowser catalog={catalog} />
         </Suspense>

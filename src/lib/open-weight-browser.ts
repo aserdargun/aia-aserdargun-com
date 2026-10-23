@@ -57,7 +57,7 @@ export function parseOpenWeightBrowserState(
     license: catalog.models.some((model) => model.license === params.get("license"))
       ? params.get("license")
       : null,
-    band: band !== null && (footprintBandValues as readonly string[]).includes(band)
+    band: band !== null && (band === "unknown" || (footprintBandValues as readonly string[]).includes(band))
       ? (band as FootprintBand)
       : null,
     access: access === "public" || access === "gated" ? access : null,
@@ -123,7 +123,11 @@ export function selectOpenWeights(catalog: OpenWeightCatalog, state: OpenWeightB
     const families = familyByModel.get(model.id) ?? [];
     if (state.publisher && publisher !== state.publisher) return [];
     if (state.license && model.license !== state.license) return [];
-    if (state.band && footprint.band !== state.band) return [];
+    if (state.band === "unknown" && footprint.known) return [];
+    if (state.band && state.band !== "unknown") {
+      if (footprint.vram4 === null) return [];
+      if (state.band === ">80" ? footprint.vram4 <= 80 : footprint.vram4 > Number(state.band.slice(1))) return [];
+    }
     if (state.access && model.access !== state.access) return [];
     if (state.taskId && !tasks.some((task) => task.id === state.taskId)) return [];
     if (state.familyId && !families.some((family) => family.id === state.familyId)) return [];
@@ -140,7 +144,7 @@ export function selectOpenWeights(catalog: OpenWeightCatalog, state: OpenWeightB
       tasks,
       families,
       evidence,
-      sourceIds: [model.cardSourceId, model.weightsSourceId, model.licenseSourceId],
+      sourceIds: [...new Set([model.cardSourceId, model.weightsSourceId, model.licenseSourceId])],
     }];
   });
 }

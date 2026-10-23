@@ -22,7 +22,7 @@ describe("open-weight footprint", () => {
     }
   });
 
-  it("derives local size only from published weight files", () => {
+  it("keeps published disk size separate from parameter-based memory estimates", () => {
     let withFiles = 0;
     for (const model of openWeightModels) {
       const bytes = weightBytes(model, sources);
@@ -33,12 +33,49 @@ describe("open-weight footprint", () => {
       withFiles += 1;
       expect(bytes).toBeGreaterThan(0);
       const footprint = footprintFor(model, sources);
+      if (footprint.parameters === null) {
+        expect(footprint.known).toBe(false);
+        expect(footprint.bytes).toBe(bytes);
+        expect(footprint.vram4).toBeNull();
+        expect(footprint.memory8).toBeNull();
+        continue;
+      }
       expect(footprint.known).toBe(true);
       expect(footprint.vram4).toBeGreaterThan(0);
       expect(footprint.memory8).toBeGreaterThanOrEqual(footprint.vram4);
       expect(footprint.band).toBe(footprintBand(footprint.vram4));
     }
     expect(withFiles).toBeGreaterThan(0);
+  });
+
+  it("does not mistake FP16 or FP32 checkpoint bytes for parameter counts", () => {
+    const model = openWeightModels.find((entry) => byId.get(entry.weightsSourceId)?.artifact?.type === "hf-repository")!;
+    const estimate = (bytesPerParameter: number, publishedCount = true) => {
+      const observations = structuredClone(sources);
+      const artifact = observations.find((source) => source.id === model.weightsSourceId)!.artifact!;
+      if (artifact.type !== "hf-repository") throw new Error("Expected an HF fixture");
+      artifact.parameterCount = publishedCount ? 8_000_000_000 : undefined;
+      artifact.files = [{ name: "model.safetensors", sizeBytes: 8_000_000_000 * bytesPerParameter }];
+      artifact.totalBytes = artifact.files[0].sizeBytes;
+      return footprintFor(model, observations);
+    };
+    const fp16 = estimate(2);
+    const fp32 = estimate(4);
+    expect(fp16.bytes).toBe(16_000_000_000);
+    expect(fp32.bytes).toBe(32_000_000_000);
+    expect(fp16.vram4).toBe(7);
+    expect(fp32.vram4).toBe(fp16.vram4);
+    expect(fp16.memory8).toBe(10);
+    expect(fp32.memory8).toBe(fp16.memory8);
+    expect(estimate(2, false)).toMatchObject({ bytes: 16_000_000_000, parameters: null, vram4: null, memory8: null, known: false });
+  });
+
+  it("retains published file sizes for Google Drive artifacts", () => {
+    const model = openWeightModels.find((entry) => byId.get(entry.weightsSourceId)?.artifact?.type === "google-drive")!;
+    const artifact = byId.get(model.weightsSourceId)!.artifact!;
+    if (artifact.type !== "google-drive") throw new Error("Expected a Google Drive artifact");
+    expect(weightBytes(model, sources)).toBe(artifact.sizeBytes);
+    expect(footprintFor(model, sources).vram4).toBeNull();
   });
 
   it("keeps the memory bands ordered and honest", () => {
@@ -60,8 +97,9 @@ describe("open-weight footprint", () => {
     expect(formatParameterCount(600_000_000, "en")).toBe("600M");
     expect(formatParameterCount(600_000_000, "tr")).toBe("600M");
     expect(formatBytes(null, "en")).toBe("—");
-    expect(formatBytes(55_586_114_863, "en")).toBe("51.8 GB");
-    expect(formatBytes(1024 ** 3, "en")).toBe("1 GB");
+    expect(formatBytes(55_586_114_863, "en")).toBe("51.8 GiB");
+    expect(formatBytes(1024 ** 3, "en")).toBe("1 GiB");
+    expect(formatBytes(1024 ** 2, "en")).toBe("1 MiB");
   });
 
   it("reports a parameter count only when the publisher published one", () => {

@@ -4,6 +4,8 @@ import Page from "@/app/page";
 
 vi.mock("next/navigation", () => ({
   useRouter: () => ({ replace: vi.fn() }),
+  usePathname: () => "/",
+  useSearchParams: () => new URLSearchParams(),
 }));
 
 it("identifies the statically renderable public application", () => {

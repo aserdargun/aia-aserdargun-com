@@ -140,7 +140,10 @@ export function ModelTaskBrowser({ catalog }: { catalog: ModelCatalog }) {
           <button type="button" onClick={() => exportModels("xls")} disabled={!models.length}>{labels.excel}</button>
         </div>
       </div>
-      <p className="model-browser__scope">{labels.scope}</p>
+      <details className="model-browser__scope">
+        <summary>{labels.scopeSummary}</summary>
+        <p>{labels.scope}</p>
+      </details>
 
       {groups.length ? (
         <div className={`model-groups${state.taskId ? " model-groups--single" : ""}`}>

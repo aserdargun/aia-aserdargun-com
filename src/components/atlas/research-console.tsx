@@ -184,6 +184,7 @@ export function ResearchConsole({ dataset }: { dataset: AtlasDataset }) {
 
   function writeUrl(state: AtlasState) {
     const params = serializeUrlState(state);
+    if (new URLSearchParams(window.location.search).get("lang") === "tr") params.set("lang", "tr");
     const suffix = params.toString();
     router.replace(suffix ? `/?${suffix}` : "/", { scroll: false });
   }

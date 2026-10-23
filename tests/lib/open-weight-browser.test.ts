@@ -88,6 +88,30 @@ describe("open-weight browser state", () => {
     expect(byFamily.length).toBeGreaterThan(0);
   });
 
+  it("includes smaller models in a memory ceiling and separates unknown estimates", () => {
+    const all = selectOpenWeights(catalog, state());
+    for (const limit of [8, 16, 24, 48, 80]) {
+      const band = `≤${limit}` as OpenWeightBrowserState["band"];
+      expect(selectOpenWeights(catalog, state({ band })).map((row) => row.model.id)).toEqual(
+        all.filter((row) => row.footprint.vram4 !== null && row.footprint.vram4 <= limit).map((row) => row.model.id),
+      );
+    }
+    const unknown = state({ band: "unknown" });
+    expect(parseOpenWeightBrowserState(new URLSearchParams(serializeOpenWeightBrowserState(unknown)), catalog)).toEqual(unknown);
+    const unknownRows = selectOpenWeights(catalog, unknown);
+    expect(unknownRows.length).toBeGreaterThan(0);
+    expect(unknownRows.every((row) => row.footprint.vram4 === null)).toBe(true);
+  });
+
+  it("lists a shared model-card and license citation only once", () => {
+    for (const row of selectOpenWeights(catalog, state())) {
+      expect(new Set(row.sourceIds).size).toBe(row.sourceIds.length);
+      expect(row.sourceIds).toContain(row.model.cardSourceId);
+      expect(row.sourceIds).toContain(row.model.weightsSourceId);
+      expect(row.sourceIds).toContain(row.model.licenseSourceId);
+    }
+  });
+
   it("exports the visible rows with their evidence", () => {
     const table = openWeightsExport(catalog, state());
     expect(table.headers.length).toBe(11);

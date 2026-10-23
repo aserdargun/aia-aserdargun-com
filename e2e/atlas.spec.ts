@@ -148,16 +148,19 @@ test("desktop: comparison table rules do not style unrelated semantic tables", a
   });
 });
 
-test("mobile: keeps the compact masthead actions on one line", async ({ page }) => {
+test("mobile: keeps masthead actions visible with touch-sized navigation", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
 
   await expect(page.getByRole("link", { name: "Learn", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "GitHub ↗", exact: true })).toBeVisible();
-  const headerHeight = await page.locator(".site-header").evaluate(
+  const headerHeight = await page.getByRole("banner").evaluate(
     (element) => element.getBoundingClientRect().height,
   );
-  expect(headerHeight).toBeLessThanOrEqual(60);
+  expect(headerHeight).toBeLessThanOrEqual(100);
+  const learn = await page.getByRole("link", { name: "Learn", exact: true }).boundingBox();
+  expect(learn?.height).toBeGreaterThanOrEqual(44);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
 
 test("desktop: reaches evidence through natural Tab order with visible focus", async ({

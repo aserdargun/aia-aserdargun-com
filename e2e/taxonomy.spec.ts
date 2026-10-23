@@ -51,7 +51,7 @@ for (const width of [1440, 390]) {
 
 test("both maps are reachable from navigation and preserve language across pages", async ({ page }) => {
   await page.goto("/");
-  const menu = page.locator(".site-nav__maps");
+  const menu = page.getByRole("banner").locator(".site-nav__maps");
   await menu.locator("summary").click();
   await menu.getByRole("link", { name: "Model taxonomy", exact: true }).click();
   await expect(page).toHaveURL(/\/taxonomy\/models$/);
@@ -63,8 +63,8 @@ test("both maps are reachable from navigation and preserve language across pages
   await expect(page).toHaveURL(/\/taxonomy\/models\?lang=tr$/);
   await expect(page.locator('.taxonomy-canvas a[href="/taxonomy/tasks?lang=tr#language-text"]')).toBeAttached();
   await menu.locator("summary").click();
-  await menu.getByRole("link", { name: "Task taxonomy", exact: true }).click();
-  await expect(page).toHaveURL(/\/taxonomy\/tasks$/);
+  await menu.getByRole("link", { name: "Görev taksonomisi", exact: true }).click();
+  await expect(page).toHaveURL(/\/taxonomy\/tasks\?lang=tr$/);
 });
 
 test("full screen can be entered and exited; task-family deep links render", async ({ page }) => {

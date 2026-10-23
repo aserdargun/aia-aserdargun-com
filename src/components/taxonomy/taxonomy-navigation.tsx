@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-import { taxonomyLabels } from "@/lib/labels";
+import { taxonomyLabels, type ModelLocale } from "@/lib/labels";
 
-export function TaxonomyNavigation() {
+export function TaxonomyNavigation({ locale = "en", pathname = "" }: { locale?: ModelLocale; pathname?: string }) {
   const menu = useRef<HTMLDetailsElement>(null);
-  const labels = taxonomyLabels.en;
+  const labels = taxonomyLabels[locale];
+  const href = (path: string) => `${path}${locale === "tr" ? "?lang=tr" : ""}`;
   useEffect(() => {
     const closeOutside = (event: PointerEvent) => {
       if (menu.current && !menu.current.contains(event.target as Node)) menu.current.open = false;
@@ -16,13 +17,15 @@ export function TaxonomyNavigation() {
   }, []);
   function close() { if (menu.current) menu.current.open = false; }
   return (
-    <details ref={menu} className="site-nav__maps" onKeyDown={(event) => {
+    <details ref={menu} className="site-nav__maps" data-active={pathname.startsWith("/taxonomy/") || undefined} onBlur={(event) => {
+      if (!event.currentTarget.contains(event.relatedTarget)) close();
+    }} onKeyDown={(event) => {
       if (event.key === "Escape") { close(); menu.current?.querySelector("summary")?.focus(); }
     }}>
       <summary>{labels.navigation}</summary>
       <div className="site-nav__maps-menu">
-        <Link href="/taxonomy/models" onClick={close}>{labels.modelNav}</Link>
-        <Link href="/taxonomy/tasks" onClick={close}>{labels.taskNav}</Link>
+        <Link href={href("/taxonomy/models")} aria-current={pathname === "/taxonomy/models" ? "page" : undefined} onClick={close}>{labels.modelNav}</Link>
+        <Link href={href("/taxonomy/tasks")} aria-current={pathname === "/taxonomy/tasks" ? "page" : undefined} onClick={close}>{labels.taskNav}</Link>
       </div>
     </details>
   );

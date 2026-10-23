@@ -5,14 +5,15 @@ import type { ModelLocale } from "@/lib/labels";
 /**
  * Local-footprint estimates for open-weight models.
  *
- * The only stored fact is the publisher's own file listing (bytes per weight
- * file). Everything below is a deterministic derivation of those bytes, kept in
- * the library so the data layer stays citation-only.
+ * Published file bytes describe disk size; published parameter counts drive
+ * the separate, hypothetical quantized-memory estimate. File bytes cannot stand
+ * in for parameters: checkpoints can store different dtypes or multiple variants.
  *
  * Method: 4-bit checkpoints store roughly 0.55 bytes per parameter including
  * block scales, 8-bit roughly 1.05 bytes per parameter. A fixed 2 GiB runtime
- * allowance covers activations, the KV cache and the serving framework. Sizes
- * use binary units (1 GiB = 1024^3 bytes), which is how memory is sold.
+ * allowance is a planning assumption, not a bound on cache or runtime memory.
+ * Quantization support and device fit require separate verification. Sizes use
+ * binary units (1 GiB = 1024^3 bytes).
  */
 const GIB = 1024 ** 3;
 const RUNTIME_ALLOWANCE_BYTES = 2 * GIB;
@@ -27,9 +28,9 @@ export type OpenWeightFootprint = {
   bytes: number | null;
   /** Parameter count reported by the publisher, when it is published. */
   parameters: number | null;
-  /** Minimum VRAM estimate at 4-bit, in GiB. */
+  /** Hypothetical 4-bit memory estimate, including a fixed allowance, in GiB. */
   vram4: number | null;
-  /** Minimum memory estimate at 8-bit, in GiB. */
+  /** Hypothetical 8-bit memory estimate, including a fixed allowance, in GiB. */
   memory8: number | null;
   band: FootprintBand;
   known: boolean;
@@ -65,7 +66,7 @@ export function weightBytes(model: OpenWeightModel, sources: TaskModelSource[]):
   if (artifact.type === "hf-repository" || artifact.type === "release") {
     return artifact.files.reduce((total, file) => total + file.sizeBytes, 0);
   }
-  if (artifact.type === "publisher-file") {
+  if (artifact.type === "publisher-file" || artifact.type === "google-drive") {
     return artifact.sizeBytes;
   }
   return null;
@@ -95,11 +96,11 @@ export function footprintBand(vram4: number | null): FootprintBand {
 export function footprintFor(model: OpenWeightModel, sources: TaskModelSource[]): OpenWeightFootprint {
   const bytes = weightBytes(model, sources);
   const parameters = parameterCount(model, sources);
-  if (bytes === null) {
-    return { bytes: null, parameters, vram4: null, memory8: null, band: "unknown", known: false };
+  if (parameters === null) {
+    return { bytes, parameters, vram4: null, memory8: null, band: "unknown", known: false };
   }
-  const vram4 = Math.ceil((bytes * FOUR_BIT_BYTES_PER_PARAMETER + RUNTIME_ALLOWANCE_BYTES) / GIB);
-  const memory8 = Math.ceil((bytes * EIGHT_BIT_BYTES_PER_PARAMETER + RUNTIME_ALLOWANCE_BYTES) / GIB);
+  const vram4 = Math.ceil((parameters * FOUR_BIT_BYTES_PER_PARAMETER + RUNTIME_ALLOWANCE_BYTES) / GIB);
+  const memory8 = Math.ceil((parameters * EIGHT_BIT_BYTES_PER_PARAMETER + RUNTIME_ALLOWANCE_BYTES) / GIB);
   return { bytes, parameters, vram4, memory8, band: footprintBand(vram4), known: true };
 }
 
@@ -130,10 +131,10 @@ export function formatBytes(bytes: number | null, locale: ModelLocale): string {
   if (bytes >= GIB) {
     const value = bytes / GIB;
     const digits = value >= 100 ? 0 : value >= 10 ? 1 : 2;
-    return `${new Intl.NumberFormat(locale, { maximumFractionDigits: digits }).format(value)} GB`;
+    return `${new Intl.NumberFormat(locale, { maximumFractionDigits: digits }).format(value)} GiB`;
   }
   const megabytes = bytes / 1024 ** 2;
-  return `${new Intl.NumberFormat(locale, { maximumFractionDigits: 1 }).format(megabytes)} MB`;
+  return `${new Intl.NumberFormat(locale, { maximumFractionDigits: 1 }).format(megabytes)} MiB`;
 }
 
 export function openWeightPublisher(model: OpenWeightModel, sources: TaskModelSource[]): string {
