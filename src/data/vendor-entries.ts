@@ -15,7 +15,7 @@ export const vendorEntries = [
     productNames: ["Claude"],
     availability: "available",
     sourceIds: ["anthropic-models", "anthropic-release-notes"],
-    verifiedAt: "2026-10-10",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "openai-frontier-model-lineup",
@@ -27,7 +27,7 @@ export const vendorEntries = [
     productNames: ["GPT-6 Astra", "GPT-6.1 Sol", "GPT-6 Luna"],
     availability: "available",
     sourceIds: ["openai-models", "openai-changelog"],
-    verifiedAt: "2026-10-04",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "anthropic-context-window",
@@ -39,7 +39,7 @@ export const vendorEntries = [
     productNames: ["Claude"],
     availability: "available",
     sourceIds: ["anthropic-models"],
-    verifiedAt: "2026-10-10",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "openai-context-window",
@@ -51,7 +51,7 @@ export const vendorEntries = [
     productNames: ["GPT-6 Astra", "GPT-6.1 Sol", "GPT-6"],
     availability: "available",
     sourceIds: ["openai-models", "openai-gpt-6-1-sol"],
-    verifiedAt: "2026-10-03",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "anthropic-multimodal-input",
@@ -1603,7 +1603,7 @@ export const vendorEntries = [
     productNames: ["GLM-5.3", "GLM-5.3-Flash", "GLM-5", "GLM-5-Turbo", "GLM-5V-Turbo"],
     availability: "available",
     sourceIds: ["zai-pricing", "zai-flash-docs", "zai-release-notes"],
-    verifiedAt: "2026-10-04",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "zai-context-window",
@@ -1615,7 +1615,7 @@ export const vendorEntries = [
     productNames: ["GLM-5.3", "GLM-5.3-Flash", "GLM-5", "GLM-5-Turbo"],
     availability: "available",
     sourceIds: ["zai-glm-5-3", "zai-glm-5-3-flash", "zai-glm-5", "zai-glm-5-turbo"],
-    verifiedAt: "2026-09-04",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "zai-multimodal-input",
@@ -1627,7 +1627,7 @@ export const vendorEntries = [
     productNames: ["GLM-5V-Turbo", "GLM-5.3-Flash"],
     availability: "available",
     sourceIds: ["zai-glm-5v-turbo", "zai-chat-completions", "zai-glm-5-3-flash"],
-    verifiedAt: "2026-09-04",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "zai-native-image-generation",
@@ -1646,12 +1646,12 @@ export const vendorEntries = [
     capabilityId: "conversational-chat",
     vendorId: "zai",
     title: "Z.ai chat",
-    summary: "Z.ai provides a first-party conversational assistant and agent at chat.z.ai, presented as powered by GLM-5.2.",
+    summary: "Z.ai provides a first-party conversational assistant and agent at chat.z.ai, presented as powered by GLM-5.3-Flash.",
     details: [],
     productNames: ["Z.ai chat"],
     availability: "available",
     sourceIds: ["zai-chat"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "zai-projects",
@@ -1699,7 +1699,7 @@ export const vendorEntries = [
     productNames: ["ZCode"],
     availability: "available",
     sourceIds: ["zai-zcode", "zai-zcode-docs"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "zai-terminal-cli",
@@ -2083,7 +2083,7 @@ export const vendorEntries = [
     productNames: ["GLM-5V-Turbo", "AutoGLM Phone"],
     availability: "available",
     sourceIds: ["zai-glm-5v-turbo", "zai-autoglm-phone"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "zai-browser-control",
@@ -2420,7 +2420,7 @@ export const vendorEntries = [
     productNames: ["MiniMax M3.1-Flash", "MiniMax M3", "MiniMax M2.7"],
     availability: "available",
     sourceIds: ["minimax-models", "minimax-m2-7", "minimax-model-catalog", "minimax-model-list"],
-    verifiedAt: "2026-10-19",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "minimax-native-image-generation",
@@ -3205,7 +3205,7 @@ export const vendorEntries = [
     productNames: ["DeepSeek-V4"],
     availability: "available",
     sourceIds: ["deepseek-models"],
-    verifiedAt: "2026-09-04",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "deepseek-multimodal-input",
@@ -3289,7 +3289,7 @@ export const vendorEntries = [
     productNames: ["DeepSeek Harness", "Deep Code"],
     availability: "available",
     sourceIds: ["deepseek-harness", "deepseek-deepcode"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "deepseek-terminal-cli",
@@ -3985,19 +3985,19 @@ export const vendorEntries = [
     productNames: ["Qwen3.8-Max", "Qwen3.8-Flash", "Qwen3.7-Plus", "Qwen3.7-Flash"],
     availability: "available",
     sourceIds: ["qwen-models", "qwen-model-card-flash", "qwen-model-selection", "qwen-text-models"],
-    verifiedAt: "2026-10-04",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "qwen-context-window",
     capabilityId: "context-window",
     vendorId: "qwen",
     title: "Qwen context limits",
-    summary: "Current Qwen3.8 and Qwen3.7 models document a 1,000,000-token context window, and qwen-long documents a 10,000,000-token window.",
+    summary: "Current Qwen3.8 and Qwen3.7 models document a 1,000,000-token context window for long documents and large codebases, while standard tasks are served with 128k-256k; qwen-long is no longer listed.",
     details: [],
     productNames: ["Qwen3.8-Max", "Qwen3.7", "qwen-long"],
     availability: "available",
     sourceIds: ["qwen-text-models"],
-    verifiedAt: "2026-08-31",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "qwen-multimodal-input",
@@ -4009,7 +4009,7 @@ export const vendorEntries = [
     productNames: ["Qwen3.8-Max", "Qwen3.8-Flash", "Qwen3.5-Omni-Plus"],
     availability: "available",
     sourceIds: ["qwen-model-card-max", "qwen-model-card-flash", "qwen-model-selection"],
-    verifiedAt: "2026-08-31",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "qwen-native-image-generation",
@@ -4393,7 +4393,7 @@ export const vendorEntries = [
     productNames: ["Qwen Code sandbox", "Qwen3.8-Max code interpreter"],
     availability: "available",
     sourceIds: ["qwen-code-sandbox", "qwen-model-card-max"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "qwen-web-search",
@@ -4405,7 +4405,7 @@ export const vendorEntries = [
     productNames: ["Qwen Studio", "Qwen3.8-Max"],
     availability: "available",
     sourceIds: ["qwen-app", "qwen-model-card-max"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "qwen-deep-research",
@@ -4441,7 +4441,7 @@ export const vendorEntries = [
     productNames: ["Qwen Code", "Qwen3.8-Max"],
     availability: "available",
     sourceIds: ["qwen-code", "qwen-model-card-max"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "qwen-computer-use-product",
@@ -4489,7 +4489,7 @@ export const vendorEntries = [
     productNames: ["Qwen3.5-Omni-Plus", "Qwen App"],
     availability: "limited",
     sourceIds: ["qwen-model-selection", "qwen-app-agentic"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "qwen-local-execution",
@@ -4657,7 +4657,7 @@ export const vendorEntries = [
     productNames: ["Qwen3.8-Max"],
     availability: "available",
     sourceIds: ["qwen-model-card-max"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "qwen-api-mcp",
@@ -4753,7 +4753,7 @@ export const vendorEntries = [
     productNames: ["QwenCloud Team Edition"],
     availability: "limited",
     sourceIds: ["qwen-token-plan"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: "2026-10-24",
   }),
   defineVendorEntry({
     id: "qwen-api-token-pricing",
@@ -4765,6 +4765,6 @@ export const vendorEntries = [
     productNames: ["QwenCloud API"],
     availability: "available",
     sourceIds: ["qwen-pricing", "qwen-model-card-max"],
-    verifiedAt: "2026-08-19",
+    verifiedAt: "2026-10-24",
   }),
 ] satisfies VendorEntry[];
