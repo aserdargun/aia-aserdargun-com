@@ -1600,6 +1600,42 @@ export const openWeightModels = [
       "en": "Discovered automatically on 2026-10-23 in the publisher's Hugging Face repository. Pipeline tag text-to-speech; the checkpoint was not reviewed by hand.",
       "tr": "2026-10-23 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi text-to-speech; kontrol noktası elle incelenmedi."
     }
+  },
+  {
+    "id": "chronos-bolt-tiny",
+    "name": "chronos-bolt-tiny",
+    "cardSourceId": "ow-chronos-bolt-tiny",
+    "weightsSourceId": "ow-chronos-bolt-tiny-weights",
+    "licenseSourceId": "ow-chronos-bolt-tiny-license",
+    "license": "apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "time-series-forecasting",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-24 in the publisher's Hugging Face repository. Pipeline tag time-series-forecasting; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-24 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi time-series-forecasting; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "gemma-4-31b",
+    "name": "gemma-4-31B",
+    "cardSourceId": "ow-gemma-4-31b",
+    "weightsSourceId": "ow-gemma-4-31b-weights",
+    "licenseSourceId": "ow-gemma-4-31b-license",
+    "license": "apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "image-text-to-text",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-24 in the publisher's Hugging Face repository. Pipeline tag image-text-to-text; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-24 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi image-text-to-text; kontrol noktası elle incelenmedi."
+    }
   }
 ] satisfies OpenWeightModel[];
 
@@ -1872,6 +1908,17 @@ export const taxonomyTasks = [
         },
         "sourceIds": [
           "ow-fastino-nemotron-3-5-lightning-finance"
+        ]
+      },
+      {
+        "modelId": "gemma-4-31b",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag image-text-to-text, which maps to Text Generation. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu image-text-to-text işlem hattı etiketini bildiriyor; bu etiket Text Generation görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-gemma-4-31b"
         ]
       }
     ]
@@ -3735,6 +3782,17 @@ export const taxonomyTasks = [
         },
         "sourceIds": [
           "ow-timesfm-3-0-pytorch"
+        ]
+      },
+      {
+        "modelId": "chronos-bolt-tiny",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag time-series-forecasting, which maps to Time-Series Forecasting. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu time-series-forecasting işlem hattı etiketini bildiriyor; bu etiket Time-Series Forecasting görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-chronos-bolt-tiny"
         ]
       }
     ]

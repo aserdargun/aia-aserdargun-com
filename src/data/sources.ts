@@ -8168,17 +8168,17 @@ export const taskModelSources = [
     "publisher": "fastino",
     "url": "https://huggingface.co/fastino/GLiDE",
     "kind": "model-card",
-    "observedAt": "2026-10-23",
-    "revision": "a7e45896be7c96ba3354891da790c5ec99c30b6c"
+    "observedAt": "2026-10-24",
+    "revision": "1a9a7ed94379c2ea6f324176c9bc22fb9b7b7d60"
   },
   {
     "id": "ow-glide-weights",
     "title": "GLiDE — checkpoint files",
     "publisher": "fastino",
-    "url": "https://huggingface.co/fastino/GLiDE/tree/a7e45896be7c96ba3354891da790c5ec99c30b6c",
+    "url": "https://huggingface.co/fastino/GLiDE/tree/1a9a7ed94379c2ea6f324176c9bc22fb9b7b7d60",
     "kind": "weights",
-    "observedAt": "2026-10-23",
-    "revision": "a7e45896be7c96ba3354891da790c5ec99c30b6c",
+    "observedAt": "2026-10-24",
+    "revision": "1a9a7ed94379c2ea6f324176c9bc22fb9b7b7d60",
     "artifact": {
       "type": "hf-repository",
       "repositoryUrl": "https://huggingface.co/fastino/GLiDE",
@@ -8865,6 +8865,90 @@ export const taskModelSources = [
     "kind": "license",
     "observedAt": "2026-10-23",
     "revision": "b3feb691fa4cf590eec4418f6275f95220e58844"
+  },
+  {
+    "id": "ow-chronos-bolt-tiny",
+    "title": "chronos-bolt-tiny — model card",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/chronos-bolt-tiny",
+    "kind": "model-card",
+    "observedAt": "2026-10-24",
+    "revision": "a0e552de83495b5c28c14c71c374f3e33280b340"
+  },
+  {
+    "id": "ow-chronos-bolt-tiny-weights",
+    "title": "chronos-bolt-tiny — checkpoint files",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/chronos-bolt-tiny/tree/a0e552de83495b5c28c14c71c374f3e33280b340",
+    "kind": "weights",
+    "observedAt": "2026-10-24",
+    "revision": "a0e552de83495b5c28c14c71c374f3e33280b340",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/amazon/chronos-bolt-tiny",
+      "parameterCount": 8652672,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 34622352
+        }
+      ],
+      "totalBytes": 34622352,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-chronos-bolt-tiny-license",
+    "title": "chronos-bolt-tiny — license",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/chronos-bolt-tiny",
+    "kind": "license",
+    "observedAt": "2026-10-24",
+    "revision": "a0e552de83495b5c28c14c71c374f3e33280b340"
+  },
+  {
+    "id": "ow-gemma-4-31b",
+    "title": "gemma-4-31B — model card",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/gemma-4-31B",
+    "kind": "model-card",
+    "observedAt": "2026-10-24",
+    "revision": "5bbc2fb1c1b2c611d06e3d9f23c170ba21659d89"
+  },
+  {
+    "id": "ow-gemma-4-31b-weights",
+    "title": "gemma-4-31B — checkpoint files",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/gemma-4-31B/tree/5bbc2fb1c1b2c611d06e3d9f23c170ba21659d89",
+    "kind": "weights",
+    "observedAt": "2026-10-24",
+    "revision": "5bbc2fb1c1b2c611d06e3d9f23c170ba21659d89",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/google/gemma-4-31B",
+      "parameterCount": 31273088876,
+      "files": [
+        {
+          "name": "model-00001-of-00002.safetensors",
+          "sizeBytes": 49784788364
+        },
+        {
+          "name": "model-00002-of-00002.safetensors",
+          "sizeBytes": 12761549884
+        }
+      ],
+      "totalBytes": 62546338248,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-gemma-4-31b-license",
+    "title": "gemma-4-31B — license",
+    "publisher": "google",
+    "url": "https://huggingface.co/google/gemma-4-31B",
+    "kind": "license",
+    "observedAt": "2026-10-24",
+    "revision": "5bbc2fb1c1b2c611d06e3d9f23c170ba21659d89"
   }
 ] satisfies TaskModelSource[];
 

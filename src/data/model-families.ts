@@ -2538,6 +2538,17 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-chronos-t5-large"
         ]
+      },
+      {
+        "modelId": "chronos-bolt-tiny",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Encoder–Decoder. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Encoder–Decoder ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-chronos-bolt-tiny"
+        ]
       }
     ]
   },
@@ -5180,6 +5191,17 @@ export const modelFamilies = [
         },
         "sourceIds": [
           "ow-glm-asr-nano-2512"
+        ]
+      },
+      {
+        "modelId": "gemma-4-31b",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Multimodal Models. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Multimodal Models ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-gemma-4-31b"
         ]
       }
     ]
