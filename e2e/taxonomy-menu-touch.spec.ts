@@ -45,6 +45,9 @@ for (const locale of ["en", "tr"] as const) {
         await page.getByRole("button", { name: locale === "tr" ? "%100" : "100%", exact: true }).tap();
         await expect(page.locator(".taxonomy-zoom output")).toHaveText(locale === "tr" ? "%100" : "100%");
         expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+        // Let route prefetches finish before the next full-document navigation.
+        // WebKit otherwise reports the interrupted request as an access error.
+        await page.waitForLoadState("networkidle");
       }
       expect(errors).toEqual([]);
     });
