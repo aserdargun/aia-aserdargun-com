@@ -2549,6 +2549,17 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-chronos-bolt-tiny"
         ]
+      },
+      {
+        "modelId": "chronos-bolt-mini",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Encoder–Decoder. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Encoder–Decoder ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-chronos-bolt-mini"
+        ]
       }
     ]
   },

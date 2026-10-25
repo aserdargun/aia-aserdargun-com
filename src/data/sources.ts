@@ -8168,17 +8168,17 @@ export const taskModelSources = [
     "publisher": "fastino",
     "url": "https://huggingface.co/fastino/GLiDE",
     "kind": "model-card",
-    "observedAt": "2026-10-24",
-    "revision": "1a9a7ed94379c2ea6f324176c9bc22fb9b7b7d60"
+    "observedAt": "2026-10-25",
+    "revision": "d199b6d7e04523d87986b8b68cd62272ed1cefc0"
   },
   {
     "id": "ow-glide-weights",
     "title": "GLiDE — checkpoint files",
     "publisher": "fastino",
-    "url": "https://huggingface.co/fastino/GLiDE/tree/1a9a7ed94379c2ea6f324176c9bc22fb9b7b7d60",
+    "url": "https://huggingface.co/fastino/GLiDE/tree/d199b6d7e04523d87986b8b68cd62272ed1cefc0",
     "kind": "weights",
-    "observedAt": "2026-10-24",
-    "revision": "1a9a7ed94379c2ea6f324176c9bc22fb9b7b7d60",
+    "observedAt": "2026-10-25",
+    "revision": "d199b6d7e04523d87986b8b68cd62272ed1cefc0",
     "artifact": {
       "type": "hf-repository",
       "repositoryUrl": "https://huggingface.co/fastino/GLiDE",
@@ -8949,6 +8949,46 @@ export const taskModelSources = [
     "kind": "license",
     "observedAt": "2026-10-24",
     "revision": "5bbc2fb1c1b2c611d06e3d9f23c170ba21659d89"
+  },
+  {
+    "id": "ow-chronos-bolt-mini",
+    "title": "chronos-bolt-mini — model card",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/chronos-bolt-mini",
+    "kind": "model-card",
+    "observedAt": "2026-10-25",
+    "revision": "251268337516a88e253628c43e1d26ec577b376b"
+  },
+  {
+    "id": "ow-chronos-bolt-mini-weights",
+    "title": "chronos-bolt-mini — checkpoint files",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/chronos-bolt-mini/tree/251268337516a88e253628c43e1d26ec577b376b",
+    "kind": "weights",
+    "observedAt": "2026-10-25",
+    "revision": "251268337516a88e253628c43e1d26ec577b376b",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/amazon/chronos-bolt-mini",
+      "parameterCount": 21236096,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 84956096
+        }
+      ],
+      "totalBytes": 84956096,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-chronos-bolt-mini-license",
+    "title": "chronos-bolt-mini — license",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/chronos-bolt-mini",
+    "kind": "license",
+    "observedAt": "2026-10-25",
+    "revision": "251268337516a88e253628c43e1d26ec577b376b"
   }
 ] satisfies TaskModelSource[];
 

@@ -1636,6 +1636,24 @@ export const openWeightModels = [
       "en": "Discovered automatically on 2026-10-24 in the publisher's Hugging Face repository. Pipeline tag image-text-to-text; the checkpoint was not reviewed by hand.",
       "tr": "2026-10-24 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi image-text-to-text; kontrol noktası elle incelenmedi."
     }
+  },
+  {
+    "id": "chronos-bolt-mini",
+    "name": "chronos-bolt-mini",
+    "cardSourceId": "ow-chronos-bolt-mini",
+    "weightsSourceId": "ow-chronos-bolt-mini-weights",
+    "licenseSourceId": "ow-chronos-bolt-mini-license",
+    "license": "apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "time-series-forecasting",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-25 in the publisher's Hugging Face repository. Pipeline tag time-series-forecasting; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-25 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi time-series-forecasting; kontrol noktası elle incelenmedi."
+    }
   }
 ] satisfies OpenWeightModel[];
 
@@ -3793,6 +3811,17 @@ export const taxonomyTasks = [
         },
         "sourceIds": [
           "ow-chronos-bolt-tiny"
+        ]
+      },
+      {
+        "modelId": "chronos-bolt-mini",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag time-series-forecasting, which maps to Time-Series Forecasting. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu time-series-forecasting işlem hattı etiketini bildiriyor; bu etiket Time-Series Forecasting görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-chronos-bolt-mini"
         ]
       }
     ]
