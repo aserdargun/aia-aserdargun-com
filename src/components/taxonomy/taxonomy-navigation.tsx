@@ -18,7 +18,9 @@ export function TaxonomyNavigation({ locale = "en", pathname = "" }: { locale?: 
   function close() { if (menu.current) menu.current.open = false; }
   return (
     <details ref={menu} className="site-nav__maps" data-active={pathname.startsWith("/taxonomy/") || undefined} onBlur={(event) => {
-      if (!event.currentTarget.contains(event.relatedTarget)) close();
+      // Safari taps blur the summary without focusing the link. Keep it open
+      // until its click fires; outside pointers and Escape still close the menu.
+      if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) close();
     }} onKeyDown={(event) => {
       if (event.key === "Escape") { close(); menu.current?.querySelector("summary")?.focus(); }
     }}>

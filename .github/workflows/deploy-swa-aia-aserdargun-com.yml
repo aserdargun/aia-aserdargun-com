@@ -52,8 +52,8 @@ jobs:
       - name: Verify static export
         run: npm run verify:static
 
-      - name: Install browser for release checks
-        run: npx playwright install --with-deps chromium
+      - name: Install browsers for release checks
+        run: npx playwright install --with-deps chromium webkit
 
       - name: Test production export in browser
         run: npm run test:e2e:static

@@ -19,6 +19,14 @@ export default defineConfig({
         baseURL: externalBaseURL ?? localBaseURL,
       },
     },
+    {
+      name: "webkit-touch",
+      testMatch: "taxonomy-menu-touch.spec.ts",
+      use: {
+        browserName: "webkit",
+        baseURL: externalBaseURL ?? localBaseURL,
+      },
+    },
   ],
   webServer: externalBaseURL
     ? undefined
