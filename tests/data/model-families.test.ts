@@ -10,9 +10,9 @@ const sources = [...taskModelSources, ...modelFamilySources];
 const validate = (families = modelFamilies, evidence = sources) => validateModelFamilies(families, openWeightModels, taxonomyTasks, evidence, taxonomySources, svg);
 
 describe("model-family evidence and task traversal", () => {
-  it("covers the 50 original concepts with independently sourced memberships and canonical tasks", () => {
+  it("covers the original concepts and four inference-behavior concepts with independently sourced memberships and canonical tasks", () => {
     expect(() => validate()).not.toThrow();
-    expect(modelFamilies).toHaveLength(50);
+    expect(modelFamilies).toHaveLength(54);
     expect(new Set(modelFamilies.flatMap((family) => family.models.map((entry) => entry.modelId))).size).toBe(openWeightModels.length);
     for (const model of openWeightModels) {
       const reversed = tasksForModel(model.id, taxonomyTasks);
@@ -73,7 +73,7 @@ describe("model-family evidence and task traversal", () => {
       const linked = linkModelFamilyCards(prepareTaxonomySvg(svg, locale), modelFamilies, locale, "transformers");
       const document = new DOMParser().parseFromString(linked, "image/svg+xml");
       expect(document.querySelector("parsererror")).toBeNull();
-      expect(document.querySelectorAll("a[data-family-id]")).toHaveLength(50);
+      expect(document.querySelectorAll("a[data-family-id]")).toHaveLength(54);
       expect(document.querySelectorAll('a[aria-current="true"]')).toHaveLength(1);
       expect(document.querySelectorAll('#task-families a[data-family-id]')).toHaveLength(0);
       expect(document.querySelector('#task-families a[href$="#speech-audio"]')).not.toBeNull();

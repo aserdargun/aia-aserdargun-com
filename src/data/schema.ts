@@ -3,7 +3,7 @@ import { z } from "zod";
 export const schemaVersions = {
   vendor: 1, category: 1, capability: 1, vendorEntry: 1,
   assessment: 1, model: 3, plan: 1, source: 2, taxonomyMap: 1, taxonomySource: 1,
-  taskModelSource: 4, openWeightModel: 3, taxonomyTask: 2, modelFamily: 2,
+  taskModelSource: 5, openWeightModel: 3, taxonomyTask: 3, modelFamily: 3, hostedModel: 1,
   benchmarkSource: 2, benchmarkCandidate: 1, taskBenchmark: 1, taskBenchmarkReview: 1,
 } as const;
 
@@ -254,6 +254,7 @@ export const taskModelSourceSchema = z.object({
   url: httpsUrlSchema,
   kind: z.enum(["model-card", "weights", "documentation", "license"]),
   observedAt: z.iso.date(),
+  serviceIdentity: z.object({ modelId: idSchema, version: z.string().min(1) }).strict().optional(),
   revision: z.string().regex(/^[a-f0-9]{40}$/).optional(),
   artifact: z.discriminatedUnion("type", [
     z.object({ type: z.literal("git"), repositoryUrl: httpsUrlSchema, path: z.string().min(1), entry: z.enum(["blob", "tree"]) }).strict(),
@@ -297,12 +298,35 @@ export const openWeightModelSchema = z.object({
   context: bilingualTextSchema,
 }).strict();
 
+export const hostedReferenceSchema = z.object({
+  modelId: idSchema,
+  rationale: bilingualTextSchema,
+  sourceIds: z.array(taskModelSourceSchema.shape.id).min(1),
+}).strict();
+
+/** A service reference has no implied weights, artifact license or local footprint. */
+export const hostedModelSchema = z.object({
+  id: idSchema,
+  name: z.string().min(1),
+  version: z.string().min(1),
+  provider: z.string().min(1),
+  access: z.literal("hosted-api"),
+  cardSourceId: taskModelSourceSchema.shape.id,
+  versionSourceId: taskModelSourceSchema.shape.id,
+  context: bilingualTextSchema,
+}).strict();
+export type HostedModel = z.infer<typeof hostedModelSchema>;
+export type HostedReference = z.infer<typeof hostedReferenceSchema>;
+
 export const taxonomyTaskSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
   name: z.string().min(1),
   family: z.string().min(1),
   definition: z.string().min(1),
   definitionSourceId: taxonomySourceSchema.shape.id,
+  localizedName: bilingualTextSchema.optional(),
+  localizedDefinition: bilingualTextSchema.optional(),
+  hostedReferences: z.array(hostedReferenceSchema).optional(),
   note: bilingualTextSchema,
   review: z.object({
     observedAt: z.iso.date(),
@@ -325,9 +349,13 @@ export type TaxonomyTask = z.infer<typeof taxonomyTaskSchema>;
 export const modelFamilySchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
   name: z.string().min(1),
-  axis: z.enum(["model-families", "neural-architectures", "learning-paradigms", "generative-formulations", "modalities-data", "training-adaptation"]),
+  axis: z.enum(["model-families", "neural-architectures", "learning-paradigms", "generative-formulations", "modalities-data", "training-adaptation", "inference-decision-behavior"]),
   definition: z.string().min(1),
   definitionSourceId: taxonomySourceSchema.shape.id,
+  localizedName: bilingualTextSchema.optional(),
+  localizedDefinition: bilingualTextSchema.optional(),
+  aliases: z.array(z.string().min(1)).optional(),
+  hostedReferences: z.array(hostedReferenceSchema).optional(),
   note: bilingualTextSchema,
   review: z.object({
     observedAt: z.iso.date(),

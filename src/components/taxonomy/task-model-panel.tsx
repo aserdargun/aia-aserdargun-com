@@ -4,6 +4,7 @@ import type { OpenWeightModel, TaxonomyTask, TaxonomySource, TaskModelSource } f
 import { taskModelLabels, type ModelLocale } from "@/lib/labels";
 import { ModelArtifactDetails } from "@/components/taxonomy/model-artifact-details";
 import { TaskBenchmarkPanel } from "@/components/taxonomy/task-benchmark-panel";
+import { HostedModelReferences } from "@/components/taxonomy/hosted-model-references";
 
 export function TaskModelPanel({ task, models, sources, definitions, locale, onClose }: {
   task: TaxonomyTask; models: OpenWeightModel[]; sources: TaskModelSource[];
@@ -16,10 +17,10 @@ export function TaskModelPanel({ task, models, sources, definitions, locale, onC
     <aside id="task-model-panel" className="task-model-panel" tabIndex={-1} aria-labelledby="task-model-title"
       onKeyDown={(event) => { if (event.key === "Escape") { event.stopPropagation(); onClose(); } }}>
       <header className="task-model-panel__heading">
-        <div><p>{labels.panel}</p><h2 id="task-model-title" lang="en">{task.name}</h2></div>
+        <div><p>{labels.panel}</p><h2 id="task-model-title" lang={task.localizedName ? locale : "en"}>{task.localizedName?.[locale] ?? task.name}</h2></div>
         <button type="button" onClick={onClose} aria-label={labels.close}>×</button>
       </header>
-      <p className="task-model-definition" lang="en">{task.definition}</p>
+      <p className="task-model-definition" lang={task.localizedDefinition ? locale : "en"}>{task.localizedDefinition?.[locale] ?? task.definition}</p>
       <a className="task-model-definition-link" href={definition.url} target="_blank" rel="noreferrer">{labels.definition} ↗</a>
       <p className="task-model-note">{task.note[locale]}</p>
       <TaskBenchmarkPanel key={task.id} taskId={task.id} models={models} sources={sources} locale={locale} />
@@ -65,6 +66,7 @@ export function TaskModelPanel({ task, models, sources, definitions, locale, onC
           </article>
         );
       })}
+      <HostedModelReferences references={task.hostedReferences} sources={sources} locale={locale} />
       <p className="task-model-note">{labels.notRun}</p>
     </aside>
   );

@@ -60,5 +60,5 @@ test("evidence filters and task search preserve a selected deep link and languag
   await expect(page.locator(".task-benchmarks")).toContainText("Kanıt neyi destekliyor?");
   await page.reload();
   await expect(page.getByRole("searchbox", { name: "Görev ara" })).toHaveValue("");
-  await expect(page.locator('#taxonomy-task-select option')).toHaveCount(86);
+  await expect(page.locator('#taxonomy-task-select option')).toHaveCount(88);
 });

@@ -1,12 +1,12 @@
 # Artificial intelligence: model and task taxonomy
 
-English reference maps, curated 21 October 2026.
+English reference maps, updated 25 October 2026.
 
 ## Scope and method
 
-The maps are an editorial synthesis of established concepts. No source is presented as endorsing this entire hierarchy. The main map uses seven complementary classification axes rather than treating every branch as a mutually exclusive model type. Each concept is linked to an author textbook, original research/benchmark publication, or official documentation. The selection is broad, not exhaustive.
+The maps are an editorial synthesis of established concepts. No source is presented as endorsing this entire hierarchy. The main map uses eight complementary classification axes rather than treating every branch as a mutually exclusive model type. Each concept is linked to an author textbook, original research/benchmark publication, or official documentation. The selection is broad, not exhaustive.
 
-The task map contains 85 selected entries grouped into eight navigation families. Each entry defines an input and an intended output. This operational definition does not guarantee that a model produces a correct result. Specialized scientific tasks are examples, not a complete scientific-domain taxonomy. General tasks and specializations may overlap.
+The task map contains 87 selected entries grouped into eight navigation families. Each entry defines an input and an intended output. This operational definition does not guarantee that a model produces a correct result. Specialized scientific tasks are examples, not a complete scientific-domain taxonomy. General tasks and specializations may overlap.
 
 The labels `system` identify end-to-end browser and desktop benchmarks. Their success depends on an agent/system and its environment, not on a standalone model alone. Function calling is shown as a request-to-function-and-arguments prediction task; it does not imply successful execution or authorization.
 
@@ -163,6 +163,22 @@ How is the model prepared and specialized?
 
 - **Knowledge Distillation:** Transfer behavior from teacher to student. [S38](#s38)
 
+### Inference & Decision Behavior
+
+Output contract and inference mode are independent of architecture, learning signal and task. These editorial navigation labels can overlap. System 1/System 2 are qualified analogies for processing behavior, not a universal binary model taxonomy or a guarantee of correctness.
+
+**Output contract**
+
+- **Structured Decision Models:** Declared answer spaces → typed decisions and probabilities. [S49](#s49)
+
+**Inference modes**
+
+- **Direct Inference (System 1-style):** Focused prediction without a separate deliberation or search stage. A small model, short answer or fast response alone does not establish this mode. [S50](#s50)
+- **Deliberative Inference (System 2-style):** Intermediate reasoning, search or verification during inference. Search can belong to the surrounding system, rather than the model weights. [S51](#s51)
+- **Hybrid / Adaptive Inference:** Documented mode switching or adaptive inference procedures. Record the exact release, requested mode and budget. [S52](#s52)
+
+Jev is a separately labeled hosted API reference; it has no weight-file or local-memory claim. Strands Decider is an open adapter/head release requiring its matching backbone. The original Qwen3-4B is a mode-switching reference. A structured output is not evidence of calibration or semantic correctness. RLCD remains TypeSafe's source-attributed training description; it does not identify Jev's architecture or other models' training.
+
 ### Task Families
 
 What output or outcome is evaluated?
@@ -309,6 +325,10 @@ What output or outcome is evaluated?
 | Function Calling | Request + tool schemas → function arguments | Model / algorithm | [S20](#s20) |
 | Web Task Execution | Goal + website state → completed task | System | [S18](#s18) |
 | Desktop Task Execution | Goal + desktop state → completed task | System | [S19](#s19) |
+| Action Selection | State + objective + allowed actions → selected next action | Model / algorithm | [S01](#s01) |
+| Rubric-Based Scoring | Item + ordered descriptive rubric → level distribution and score | Model / algorithm | [S53](#s53) |
+
+Action Selection predicts the next operation; execution and authorization stay outside this task. Rubric-Based Scoring evaluates descriptive levels rather than arbitrary numerical regression. Their placement in Reasoning, Planning & Action is editorial. Classification uses the existing classification tasks; Choice, Score and Noul are output primitives rather than separate universal task families. Model-generated scoring cannot replace AIA's human review decisions or primary citations.
 
 ## Source catalogue
 
@@ -553,3 +573,28 @@ Sources support the linked concepts, not the editorial branch boundaries. Versio
 ### S48 — MS2: Multi-Document Summarization
 
 [MS2: Multi-Document Summarization](https://aclanthology.org/2021.emnlp-main.594/) — Original benchmark paper; multi-document summarization of medical studies.
+
+<a id="s49"></a>
+### S49 — TypeSafe — System One
+
+[TypeSafe — System One](https://docs.typesafe.ai/concepts/system-one) — Official decision-model output contract and source-attributed System One terminology.
+
+<a id="s50"></a>
+### S50 — Thinking Fast and Slow in AI
+
+[Thinking Fast and Slow in AI](https://ojs.aaai.org/index.php/AAAI/article/view/17765) — Original AAAI research; fast and deliberative processing roles.
+
+<a id="s51"></a>
+### S51 — Tree of Thoughts
+
+[Tree of Thoughts](https://arxiv.org/abs/2305.10601) — Original inference framework; branching, evaluation and backtracking.
+
+<a id="s52"></a>
+### S52 — Qwen3 — hybrid thinking modes
+
+[Qwen3 — hybrid thinking modes](https://qwenlm.github.io/blog/qwen3/) — Official original-release documentation; thinking and non-thinking modes.
+
+<a id="s53"></a>
+### S53 — TypeSafe — Score
+
+[TypeSafe — Score](https://docs.typesafe.ai/primitives/score) — Official ordered descriptive rubric and score contract.

@@ -1,3 +1,5 @@
+import { hostedModels } from "@/data/hosted-models";
+import { validateHostedReferences } from "@/lib/hosted-models";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { Suspense } from "react";
@@ -17,6 +19,7 @@ import { validateTaskModels } from "@/lib/task-models";
 import { validateModelFamilies } from "@/lib/model-families";
 
 export async function TaxonomyPage({ id }: { id: TaxonomyMap["id"] }) {
+  validateHostedReferences(taxonomyTasks, modelFamilies, hostedModels, taskModelSources, openWeightModels);
   const map = taxonomyMaps.find((entry) => entry.id === id)!;
   const svg = await readFile(path.join(process.cwd(), "public", map.assetPath), "utf8");
   validateTaxonomyMap(map, svg, taxonomySources);

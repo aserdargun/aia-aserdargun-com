@@ -6,10 +6,10 @@ export const taxonomyMaps = [
     "id": "models",
     "title": "Artificial Intelligence Models",
     "assetPath": "/assets/taxonomy/ai-model-taxonomy.svg",
-    "width": 3544,
+    "width": 4036,
     "height": 2258,
-    "branchCount": 7,
-    "entryCount": 50,
+    "branchCount": 8,
+    "entryCount": 54,
     "sourceIds": [
       "S01",
       "S02",
@@ -37,7 +37,11 @@ export const taxonomyMaps = [
       "S37",
       "S38",
       "S44",
-      "S47"
+      "S47",
+      "S49",
+      "S50",
+      "S51",
+      "S52"
     ]
   },
   {
@@ -47,7 +51,7 @@ export const taxonomyMaps = [
     "width": 4036,
     "height": 2808,
     "branchCount": 8,
-    "entryCount": 85,
+    "entryCount": 87,
     "sourceIds": [
       "S01",
       "S02",
@@ -79,7 +83,8 @@ export const taxonomyMaps = [
       "S45",
       "S46",
       "S47",
-      "S48"
+      "S48",
+      "S53"
     ]
   }
 ] satisfies TaxonomyMap[];

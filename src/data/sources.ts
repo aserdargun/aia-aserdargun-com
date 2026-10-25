@@ -1457,6 +1457,31 @@ export const taxonomySources = [
     "id": "S48",
     "title": "MS2: Multi-Document Summarization",
     "url": "https://aclanthology.org/2021.emnlp-main.594/"
+  },
+  {
+    "id": "S49",
+    "title": "TypeSafe — System One",
+    "url": "https://docs.typesafe.ai/concepts/system-one"
+  },
+  {
+    "id": "S50",
+    "title": "Thinking Fast and Slow in AI",
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/17765"
+  },
+  {
+    "id": "S51",
+    "title": "Tree of Thoughts",
+    "url": "https://arxiv.org/abs/2305.10601"
+  },
+  {
+    "id": "S52",
+    "title": "Qwen3 — hybrid thinking modes",
+    "url": "https://qwenlm.github.io/blog/qwen3/"
+  },
+  {
+    "id": "S53",
+    "title": "TypeSafe — Score",
+    "url": "https://docs.typesafe.ai/primitives/score"
   }
 ] satisfies TaxonomySource[];
 
@@ -8989,6 +9014,380 @@ export const taskModelSources = [
     "kind": "license",
     "observedAt": "2026-10-25",
     "revision": "251268337516a88e253628c43e1d26ec577b376b"
+  },
+  {
+    "id": "ow-jev-system-one",
+    "title": "Jev — System One decision contract",
+    "publisher": "TypeSafe",
+    "url": "https://docs.typesafe.ai/concepts/system-one",
+    "kind": "model-card",
+    "observedAt": "2026-10-25"
+  },
+  {
+    "id": "ow-jev-models",
+    "title": "Jev — versioned models",
+    "publisher": "TypeSafe",
+    "url": "https://docs.typesafe.ai/models",
+    "kind": "documentation",
+    "observedAt": "2026-10-25",
+    "serviceIdentity": {
+      "modelId": "jev-1-14",
+      "version": "jev-1.14.0"
+    }
+  },
+  {
+    "id": "ow-jev-score",
+    "title": "Jev — ordered rubric scoring",
+    "publisher": "TypeSafe",
+    "url": "https://docs.typesafe.ai/primitives/score",
+    "kind": "documentation",
+    "observedAt": "2026-10-25"
+  },
+  {
+    "id": "ow-jev-choice",
+    "title": "Jev — choice and probabilities",
+    "publisher": "TypeSafe",
+    "url": "https://docs.typesafe.ai/primitives/choice",
+    "kind": "documentation",
+    "observedAt": "2026-10-25"
+  },
+  {
+    "id": "ow-jev-routing",
+    "title": "Jev — intent and handler routing",
+    "publisher": "TypeSafe",
+    "url": "https://docs.typesafe.ai/patterns/intent-routing",
+    "kind": "documentation",
+    "observedAt": "2026-10-25"
+  },
+  {
+    "id": "ow-jev-confidence",
+    "title": "Jev — confidence is distribution concentration",
+    "publisher": "TypeSafe",
+    "url": "https://docs.typesafe.ai/confidence",
+    "kind": "documentation",
+    "observedAt": "2026-10-25"
+  },
+  {
+    "id": "ow-jev-images",
+    "title": "Jev — experimental image support",
+    "publisher": "TypeSafe",
+    "url": "https://docs.typesafe.ai/images",
+    "kind": "documentation",
+    "observedAt": "2026-10-25"
+  },
+  {
+    "id": "ow-jev-rlcd",
+    "title": "Jev — vendor-described RLCD training",
+    "publisher": "TypeSafe",
+    "url": "https://docs.typesafe.ai/introduction/machine-learning-primer",
+    "kind": "documentation",
+    "observedAt": "2026-10-25"
+  },
+  {
+    "id": "ow-strands-architecture",
+    "title": "Strands Decider — architecture and readout",
+    "publisher": "Strands Labs",
+    "url": "https://github.com/strands-labs/strands-decider#model-architecture",
+    "kind": "documentation",
+    "observedAt": "2026-10-25"
+  },
+  {
+    "id": "ow-qwen3-hybrid-modes",
+    "title": "Qwen3 — thinking and non-thinking modes",
+    "publisher": "Qwen",
+    "url": "https://qwenlm.github.io/blog/qwen3/",
+    "kind": "documentation",
+    "observedAt": "2026-10-25"
+  },
+  {
+    "id": "ow-strands-decider-v21",
+    "title": "Strands Decider 2B · hobson-v21 — model card",
+    "publisher": "Strands Agents",
+    "url": "https://huggingface.co/StrandsAgents/strands-decider-2B-hobson-v21",
+    "kind": "model-card",
+    "observedAt": "2026-10-25",
+    "revision": "2b52a6235c1b8306bbfa30b00b9d4b74b63a39f5"
+  },
+  {
+    "id": "ow-strands-decider-v21-weights",
+    "title": "Strands Decider 2B · hobson-v21 — released files",
+    "publisher": "Strands Agents",
+    "url": "https://huggingface.co/StrandsAgents/strands-decider-2B-hobson-v21/tree/2b52a6235c1b8306bbfa30b00b9d4b74b63a39f5",
+    "kind": "weights",
+    "observedAt": "2026-10-25",
+    "revision": "2b52a6235c1b8306bbfa30b00b9d4b74b63a39f5"
+  },
+  {
+    "id": "ow-strands-decider-v21-license",
+    "title": "Strands Decider 2B · hobson-v21 — artifact license",
+    "publisher": "Strands Agents",
+    "url": "https://huggingface.co/StrandsAgents/strands-decider-2B-hobson-v21/blob/2b52a6235c1b8306bbfa30b00b9d4b74b63a39f5/LICENSE.md",
+    "kind": "license",
+    "observedAt": "2026-10-25",
+    "revision": "2b52a6235c1b8306bbfa30b00b9d4b74b63a39f5"
+  },
+  {
+    "id": "ow-qwen3-4b-hybrid",
+    "title": "Qwen3-4B · original hybrid release — model card",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-4B",
+    "kind": "model-card",
+    "observedAt": "2026-10-25",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+  },
+  {
+    "id": "ow-qwen3-4b-hybrid-weights",
+    "title": "Qwen3-4B · original hybrid release — released files",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-4B/tree/1cfa9a7208912126459214e8b04321603b3df60c",
+    "kind": "weights",
+    "observedAt": "2026-10-25",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+  },
+  {
+    "id": "ow-qwen3-4b-hybrid-license",
+    "title": "Qwen3-4B · original hybrid release — artifact license",
+    "publisher": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3-4B/blob/1cfa9a7208912126459214e8b04321603b3df60c/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-25",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+  },
+  {
+    "id": "ow-pplx-decider-v12",
+    "title": "Perplexity Decider v1.2 · 27B — model card and published evaluation",
+    "publisher": "Perplexity",
+    "url": "https://huggingface.co/perplexity-ai/pplx-decider-v1.2",
+    "kind": "model-card",
+    "observedAt": "2026-10-25",
+    "revision": "cce0f3f80033e9d89d80831d5281fd72124aacce"
+  },
+  {
+    "id": "ow-pplx-decider-v12-weights",
+    "title": "Perplexity Decider v1.2 · 27B — published weight files",
+    "publisher": "Perplexity",
+    "url": "https://huggingface.co/perplexity-ai/pplx-decider-v1.2/tree/cce0f3f80033e9d89d80831d5281fd72124aacce",
+    "kind": "weights",
+    "observedAt": "2026-10-25",
+    "revision": "cce0f3f80033e9d89d80831d5281fd72124aacce",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/perplexity-ai/pplx-decider-v1.2",
+      "parameterCount": 26085330160,
+      "files": [
+        {
+          "name": "model-00001-of-00011.safetensors",
+          "sizeBytes": 4842451656
+        },
+        {
+          "name": "model-00002-of-00011.safetensors",
+          "sizeBytes": 4965227416
+        },
+        {
+          "name": "model-00003-of-00011.safetensors",
+          "sizeBytes": 4912818744
+        },
+        {
+          "name": "model-00004-of-00011.safetensors",
+          "sizeBytes": 4986198024
+        },
+        {
+          "name": "model-00005-of-00011.safetensors",
+          "sizeBytes": 4912818800
+        },
+        {
+          "name": "model-00006-of-00011.safetensors",
+          "sizeBytes": 4932702808
+        },
+        {
+          "name": "model-00007-of-00011.safetensors",
+          "sizeBytes": 4966314000
+        },
+        {
+          "name": "model-00008-of-00011.safetensors",
+          "sizeBytes": 4964161752
+        },
+        {
+          "name": "model-00009-of-00011.safetensors",
+          "sizeBytes": 4933789312
+        },
+        {
+          "name": "model-00010-of-00011.safetensors",
+          "sizeBytes": 4965227504
+        },
+        {
+          "name": "model-00011-of-00011.safetensors",
+          "sizeBytes": 2789092720
+        },
+        {
+          "name": "readout.safetensors",
+          "sizeBytes": 2611312
+        }
+      ],
+      "totalBytes": 52173414048,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-pplx-decider-v12-license",
+    "title": "Perplexity Decider v1.2 · 27B — weight license",
+    "publisher": "Perplexity",
+    "url": "https://huggingface.co/perplexity-ai/pplx-decider-v1.2/blob/cce0f3f80033e9d89d80831d5281fd72124aacce/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-25",
+    "revision": "cce0f3f80033e9d89d80831d5281fd72124aacce"
+  },
+  {
+    "id": "ow-pplx-decider-flash-v12",
+    "title": "Perplexity Decider Flash v1.2 · 4B — model card and published evaluation",
+    "publisher": "Perplexity",
+    "url": "https://huggingface.co/perplexity-ai/pplx-decider-flash-v1.2",
+    "kind": "model-card",
+    "observedAt": "2026-10-25",
+    "revision": "9ff7cf9838e59df461c276b7699d56b244d2af58"
+  },
+  {
+    "id": "ow-pplx-decider-flash-v12-weights",
+    "title": "Perplexity Decider Flash v1.2 · 4B — published weight files",
+    "publisher": "Perplexity",
+    "url": "https://huggingface.co/perplexity-ai/pplx-decider-flash-v1.2/tree/9ff7cf9838e59df461c276b7699d56b244d2af58",
+    "kind": "weights",
+    "observedAt": "2026-10-25",
+    "revision": "9ff7cf9838e59df461c276b7699d56b244d2af58",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/perplexity-ai/pplx-decider-flash-v1.2",
+      "parameterCount": 4539265536,
+      "files": [
+        {
+          "name": "model-00001-of-00002.safetensors",
+          "sizeBytes": 4972946624
+        },
+        {
+          "name": "model-00002-of-00002.safetensors",
+          "sizeBytes": 4105669472
+        },
+        {
+          "name": "readout.safetensors",
+          "sizeBytes": 1305712
+        }
+      ],
+      "totalBytes": 9079921808,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-pplx-decider-flash-v12-license",
+    "title": "Perplexity Decider Flash v1.2 · 4B — weight license",
+    "publisher": "Perplexity",
+    "url": "https://huggingface.co/perplexity-ai/pplx-decider-flash-v1.2/blob/9ff7cf9838e59df461c276b7699d56b244d2af58/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-25",
+    "revision": "9ff7cf9838e59df461c276b7699d56b244d2af58"
+  },
+  {
+    "id": "ow-clef-27b",
+    "title": "Cloudflare Clef · 27B — model card and published evaluation",
+    "publisher": "Cloudflare",
+    "url": "https://huggingface.co/Cloudflare/clef",
+    "kind": "model-card",
+    "observedAt": "2026-10-25",
+    "revision": "a30162b99d68a481d8bd75d38df069a0cf83df40"
+  },
+  {
+    "id": "ow-clef-27b-weights",
+    "title": "Cloudflare Clef · 27B — published weight files",
+    "publisher": "Cloudflare",
+    "url": "https://huggingface.co/Cloudflare/clef/tree/a30162b99d68a481d8bd75d38df069a0cf83df40",
+    "kind": "weights",
+    "observedAt": "2026-10-25",
+    "revision": "a30162b99d68a481d8bd75d38df069a0cf83df40",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/Cloudflare/clef",
+      "parameterCount": 27356728560,
+      "files": [
+        {
+          "name": "joint_head.safetensors",
+          "sizeBytes": 256125024
+        },
+        {
+          "name": "model-00001-of-00012.safetensors",
+          "sizeBytes": 2542796928
+        },
+        {
+          "name": "model-00002-of-00012.safetensors",
+          "sizeBytes": 4842451920
+        },
+        {
+          "name": "model-00003-of-00012.safetensors",
+          "sizeBytes": 4965227944
+        },
+        {
+          "name": "model-00004-of-00012.safetensors",
+          "sizeBytes": 4912819264
+        },
+        {
+          "name": "model-00005-of-00012.safetensors",
+          "sizeBytes": 4986198544
+        },
+        {
+          "name": "model-00006-of-00012.safetensors",
+          "sizeBytes": 4912819320
+        },
+        {
+          "name": "model-00007-of-00012.safetensors",
+          "sizeBytes": 4932703272
+        },
+        {
+          "name": "model-00008-of-00012.safetensors",
+          "sizeBytes": 4966314576
+        },
+        {
+          "name": "model-00009-of-00012.safetensors",
+          "sizeBytes": 4964162248
+        },
+        {
+          "name": "model-00010-of-00012.safetensors",
+          "sizeBytes": 4933789824
+        },
+        {
+          "name": "model-00011-of-00012.safetensors",
+          "sizeBytes": 4965228032
+        },
+        {
+          "name": "model-00012-of-00012.safetensors",
+          "sizeBytes": 2789094896
+        }
+      ],
+      "totalBytes": 54969731792,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-clef-27b-license",
+    "title": "Cloudflare Clef · 27B — weight license",
+    "publisher": "Cloudflare",
+    "url": "https://huggingface.co/Cloudflare/clef/blob/a30162b99d68a481d8bd75d38df069a0cf83df40/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-25",
+    "revision": "a30162b99d68a481d8bd75d38df069a0cf83df40"
+  },
+  {
+    "id": "ow-decision-vitund-comparison",
+    "title": "Vitund — original comparison on held-out decision tasks",
+    "publisher": "Vitund",
+    "url": "https://vitund.ai/articles/decision-models-compared/",
+    "kind": "documentation",
+    "observedAt": "2026-10-25"
+  },
+  {
+    "id": "ow-decision-arize-comparison",
+    "title": "Arize — original decision-model routing and evaluator experiment",
+    "publisher": "Arize AI",
+    "url": "https://arize.com/blog/decision-model-benchmark/",
+    "kind": "documentation",
+    "observedAt": "2026-10-25"
   }
 ] satisfies TaskModelSource[];
 

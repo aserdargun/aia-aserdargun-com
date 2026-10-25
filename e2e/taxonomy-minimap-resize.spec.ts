@@ -47,13 +47,16 @@ for (const { map, query } of scenarios) {
     await expect(handle).toHaveAttribute("aria-valuenow", "196");
     const url = page.url();
     const beforeCamera = await camera(page);
+    const aspectRatio = await page.locator(".taxonomy-minimap__surface svg").evaluate((element) => {
+      const box = (element as SVGSVGElement).viewBox.baseVal; return box.width / box.height;
+    });
     const before = (await mini.boundingBox())!;
     const grip = (await handle.boundingBox())!;
     await page.mouse.move(grip.x + grip.width / 2, grip.y + grip.height / 2);
     await page.mouse.down();
     await page.mouse.move(grip.x + grip.width / 2 - 100, grip.y + grip.height / 2 - 60, { steps: 8 });
     await expect(handle).toHaveAttribute("data-resizing", "true");
-    await expect.poll(async () => (await mini.boundingBox())!.width).toBeCloseTo(before.width + 100, 0);
+    await expect.poll(async () => (await mini.boundingBox())!.width).toBeCloseTo(before.width + Math.max(100, 60 * aspectRatio), 0);
     await page.mouse.up();
     await expect(handle).not.toHaveAttribute("data-resizing");
     const enlarged = (await mini.boundingBox())!;

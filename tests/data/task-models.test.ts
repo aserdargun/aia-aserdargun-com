@@ -51,7 +51,7 @@ describe("task-level open-weight evidence", () => {
 
   it("covers every original task exactly and resolves model, license, revision and evidence references", () => {
     expect(() => validateTaskModels(taxonomyTasks, openWeightModels, taskModelSources, taxonomySources, svg)).not.toThrow();
-    expect(taxonomyTasks).toHaveLength(85);
+    expect(taxonomyTasks).toHaveLength(87);
     const original = new DOMParser().parseFromString(svg, "image/svg+xml");
     for (const task of taxonomyTasks) {
       const card = [...original.querySelectorAll("g[data-card]")].find((element) => element.getAttribute("data-card") === task.name)!;
@@ -75,7 +75,7 @@ describe("task-level open-weight evidence", () => {
     for (const locale of ["en", "tr"] as const) {
       const linked = new DOMParser().parseFromString(linkTaskCards(svg, taxonomyTasks, locale, "text-classification"), "image/svg+xml");
       expect(linked.querySelector("parsererror")).toBeNull();
-      expect(linked.querySelectorAll("a[data-task-id]")).toHaveLength(85);
+      expect(linked.querySelectorAll("a[data-task-id]")).toHaveLength(87);
       expect(linked.querySelectorAll('a[aria-current="true"]')).toHaveLength(1);
       for (const task of taxonomyTasks) {
         const link = linked.querySelector(`a[data-task-id="${task.id}"]`)!;

@@ -1654,6 +1654,81 @@ export const openWeightModels = [
       "en": "Discovered automatically on 2026-10-25 in the publisher's Hugging Face repository. Pipeline tag time-series-forecasting; the checkpoint was not reviewed by hand.",
       "tr": "2026-10-25 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi time-series-forecasting; kontrol noktası elle incelenmedi."
     }
+  },
+  {
+    "id": "strands-decider-v21",
+    "name": "Strands Decider 2B · hobson-v21",
+    "cardSourceId": "ow-strands-decider-v21",
+    "weightsSourceId": "ow-strands-decider-v21-weights",
+    "licenseSourceId": "ow-strands-decider-v21-license",
+    "license": "Apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "pipelineTag": "text-classification",
+    "context": {
+      "en": "Released LoRA adapter and pointer head; requires the matching Qwen3.5-2B-Base backbone and Strands inference code. This is not a standalone full checkpoint. Calibration depends on the task distribution; missing input can still produce confident errors. No inference or memory measurement was run here.",
+      "tr": "Yayımlanmış LoRA uyarlayıcısı ve işaretçi başlığı; eşleşen Qwen3.5-2B-Base tabanı ve Strands çıkarım kodu gerekir. Tek başına tam ağırlık değildir. Kalibrasyon görev dağılımına bağlıdır; eksik girdi de güvenli görünen yanlış sonuç üretebilir. Burada çıkarım veya bellek ölçümü yapılmadı."
+    }
+  },
+  {
+    "id": "qwen3-4b-hybrid",
+    "name": "Qwen3-4B · original hybrid release",
+    "cardSourceId": "ow-qwen3-4b-hybrid",
+    "weightsSourceId": "ow-qwen3-4b-hybrid-weights",
+    "licenseSourceId": "ow-qwen3-4b-hybrid-license",
+    "license": "Apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "pipelineTag": "text-generation",
+    "context": {
+      "en": "Original April 2025 Qwen3 release with documented thinking/non-thinking modes, not a later similarly named checkpoint. Used as a mode-switching reference, not a current leaderboard recommendation. The requested mode and reasoning budget must accompany evaluation.",
+      "tr": "Düşünme ve doğrudan yanıtlama kipleri belgelenmiş özgün Nisan 2025 Qwen3 sürümü; benzer adlı sonraki ağırlık değil. Güncel lider önerisi değil, kip geçişi referansı olarak kullanılır. Değerlendirme, istenen kipi ve akıl yürütme bütçesini içermelidir."
+    }
+  },
+  {
+    "id": "pplx-decider-v12",
+    "name": "Perplexity Decider v1.2 · 27B",
+    "cardSourceId": "ow-pplx-decider-v12",
+    "weightsSourceId": "ow-pplx-decider-v12-weights",
+    "licenseSourceId": "ow-pplx-decider-v12-license",
+    "license": "Apache-2.0",
+    "access": "public",
+    "role": "shortlist",
+    "pipelineTag": "text-classification",
+    "context": {
+      "en": "Larger quality shortlist: selected published decision evaluations support investigating this release. Native joint-decision readout, not chat generation; requires its custom serving code. Questions can influence one another, and public benchmark training splits affect comparisons. The card still mentions private access, but the observed Hub metadata and listing are public and ungated. File size is not runtime memory; no inference was run here.",
+      "tr": "Büyük kalite adayı: seçili yayımlanmış karar değerlendirmeleri bu sürümü incelemeyi destekliyor. Sohbet üretimi yerine yerel ortak karar başlığı kullanır; özel sunum kodu gerekir. Sorular birbirini etkileyebilir; açık benchmark eğitim bölümleri karşılaştırmayı etkiler. Kart hâlâ özel erişimden söz etse de gözlemlenen Hub üst verisi ve dosyalar herkese açık, koşulsuzdur. Dosya boyutu çalışma belleği değildir; burada çıkarım yapılmadı."
+    }
+  },
+  {
+    "id": "pplx-decider-flash-v12",
+    "name": "Perplexity Decider Flash v1.2 · 4B",
+    "cardSourceId": "ow-pplx-decider-flash-v12",
+    "weightsSourceId": "ow-pplx-decider-flash-v12-weights",
+    "licenseSourceId": "ow-pplx-decider-flash-v12-license",
+    "license": "Apache-2.0",
+    "access": "public",
+    "role": "shortlist",
+    "pipelineTag": "text-classification",
+    "context": {
+      "en": "Smaller quality/size shortlist, supported by the publisher and another model developer’s comparison. Qwen3.5-4B-based decision model distilled from larger decision models; supports text and images with custom readout code. Separate requests can improve candidate scoring. Hub access was public and ungated despite stale private-access wording in the card. No local latency or fit is claimed.",
+      "tr": "Yayıncı ve başka bir model geliştiricisinin karşılaştırmasıyla desteklenen küçük kalite/boyut adayı. Qwen3.5-4B tabanlı; büyük karar modellerinden damıtılmıştır, özel okuma koduyla metin ve görsel destekler. Ayrı istekler aday puanlamasını iyileştirebilir. Karttaki eski özel erişim ifadesine rağmen Hub erişimi herkese açık ve koşulsuz gözlendi. Yerel gecikme veya belleğe sığma iddiası yok."
+    }
+  },
+  {
+    "id": "clef-27b",
+    "name": "Cloudflare Clef · 27B",
+    "cardSourceId": "ow-clef-27b",
+    "weightsSourceId": "ow-clef-27b-weights",
+    "licenseSourceId": "ow-clef-27b-license",
+    "license": "Apache-2.0",
+    "access": "public",
+    "role": "shortlist",
+    "pipelineTag": "image-text-to-text",
+    "context": {
+      "en": "Alternative larger shortlist: a separate experiment reports strong routing and evaluator results for hosted Clef 27B. This does not reproduce the downloadable checkpoint. Qwen3.8-27B backbone plus joint schema head; requires the released loader and supports text, images and video frames. Publisher Decision Index 0.2.1 results are not comparable directly to Perplexity’s 0.3 aggregate. No local execution was performed.",
+      "tr": "Alternatif büyük aday: ayrı bir deney, barındırılan Clef 27B için güçlü yönlendirme ve değerlendirici sonuçları bildiriyor. Bu, indirilebilir ağırlığın yeniden değerlendirilmesi değildir. Qwen3.8-27B tabanı ve ortak şema başlığı; yayımlanan yükleyici gerekir, metin, görsel ve video karelerini destekler. Yayıncının Decision Index 0.2.1 sonuçları Perplexity’nin 0.3 toplamıyla doğrudan karşılaştırılmaz. Yerel çalıştırma yapılmadı."
+    }
   }
 ] satisfies OpenWeightModel[];
 
@@ -1668,7 +1743,68 @@ export const taxonomyTasks = [
       "en": "Selections are task-specific; compare the cited evaluation setting with your own data.",
       "tr": "Seçimler göreve özeldir; kaynakta belirtilen değerlendirme koşullarını kendi verinle karşılaştır."
     },
+    "hostedReferences": [
+      {
+        "modelId": "jev-1-14",
+        "rationale": {
+          "en": "Choice maps text to a supplied category with probabilities; no matched classification benchmark is asserted.",
+          "tr": "Choice, metni verilen kategoriye olasılıklarla eşler; ortak sınıflandırma benchmark iddiası yok."
+        },
+        "sourceIds": [
+          "ow-jev-system-one",
+          "ow-jev-models",
+          "ow-jev-choice"
+        ]
+      }
+    ],
     "recommendations": [
+      {
+        "modelId": "clef-27b",
+        "evidence": "documented",
+        "rationale": {
+          "en": "Declared category options are scored with probabilities; published selection evidence is not a matched score for every classification dataset.",
+          "tr": "Tanımlı kategori seçenekleri olasılıklarla puanlanır; seçim kanıtı her sınıflandırma verisi için ortak puan değildir."
+        },
+        "sourceIds": [
+          "ow-clef-27b",
+          "ow-decision-arize-comparison"
+        ]
+      },
+      {
+        "modelId": "pplx-decider-flash-v12",
+        "evidence": "documented",
+        "rationale": {
+          "en": "Declared category options are scored with probabilities; published selection evidence is not a matched score for every classification dataset.",
+          "tr": "Tanımlı kategori seçenekleri olasılıklarla puanlanır; seçim kanıtı her sınıflandırma verisi için ortak puan değildir."
+        },
+        "sourceIds": [
+          "ow-pplx-decider-flash-v12",
+          "ow-decision-vitund-comparison"
+        ]
+      },
+      {
+        "modelId": "pplx-decider-v12",
+        "evidence": "documented",
+        "rationale": {
+          "en": "Declared category options are scored with probabilities; published selection evidence is not a matched score for every classification dataset.",
+          "tr": "Tanımlı kategori seçenekleri olasılıklarla puanlanır; seçim kanıtı her sınıflandırma verisi için ortak puan değildir."
+        },
+        "sourceIds": [
+          "ow-pplx-decider-v12",
+          "ow-decision-vitund-comparison"
+        ]
+      },
+      {
+        "modelId": "strands-decider-v21",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The release supports Choice classification using request-defined labels; calibration transfer needs task-specific evaluation.",
+          "tr": "Sürüm, istekte tanımlanan etiketlerle Choice sınıflandırmasını destekler; kalibrasyon aktarımı göreve özel değerlendirme gerektirir."
+        },
+        "sourceIds": [
+          "ow-strands-decider-v21"
+        ]
+      },
       {
         "modelId": "gliner2",
         "evidence": "documented",
@@ -1861,6 +1997,18 @@ export const taxonomyTasks = [
       "tr": "Seçimler göreve özeldir; kaynakta belirtilen değerlendirme koşullarını kendi verinle karşılaştır."
     },
     "recommendations": [
+      {
+        "modelId": "qwen3-4b-hybrid",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The exact original model card documents text generation with optional thinking. This is a historical mode reference.",
+          "tr": "Tam özgün model kartı, isteğe bağlı düşünme ile metin üretimini belgeliyor. Bu, tarihsel kip referansıdır."
+        },
+        "sourceIds": [
+          "ow-qwen3-4b-hybrid",
+          "ow-qwen3-hybrid-modes"
+        ]
+      },
       {
         "modelId": "qwen38",
         "evidence": "documented",
@@ -4561,6 +4709,172 @@ export const taxonomyTasks = [
         },
         "sourceIds": [
           "ow-uitars"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "action-selection",
+    "name": "Action Selection",
+    "family": "Reasoning, Planning & Action",
+    "definition": "State + objective + allowed actions → selected next action",
+    "definitionSourceId": "S01",
+    "localizedName": {
+      "en": "Action Selection",
+      "tr": "Eylem Seçimi"
+    },
+    "localizedDefinition": {
+      "en": "State + objective + allowed actions → selected next action",
+      "tr": "Durum + amaç + izinli eylemler → seçilen sonraki eylem"
+    },
+    "note": {
+      "en": "Select a handler, model or tool from supplied options. Selection does not execute it, authorize it or produce a complete plan. Model-generated assessments remain observer outputs, never primary citations or human review decisions.",
+      "tr": "Verilen seçeneklerden işleyici, model veya araç seçer. Seçim, yürütme veya yetkilendirme değildir; tam plan da üretmez. Model değerlendirmeleri gözlemci çıktısı olarak kalır; birincil atıf veya insanın inceleme kararı olmaz."
+    },
+    "recommendations": [
+      {
+        "modelId": "clef-27b",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The typed-choice interface supports selecting the next handler or tool from supplied actions; execution and permissions remain outside the model.",
+          "tr": "Türü belirli seçim arayüzü verilen eylemlerden sonraki işleyici veya aracı seçmeyi destekler; yürütme ve izinler model dışında kalır."
+        },
+        "sourceIds": [
+          "ow-clef-27b",
+          "ow-decision-arize-comparison"
+        ]
+      },
+      {
+        "modelId": "pplx-decider-flash-v12",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The typed-choice interface supports selecting the next handler or tool from supplied actions; execution and permissions remain outside the model.",
+          "tr": "Türü belirli seçim arayüzü verilen eylemlerden sonraki işleyici veya aracı seçmeyi destekler; yürütme ve izinler model dışında kalır."
+        },
+        "sourceIds": [
+          "ow-pplx-decider-flash-v12",
+          "ow-decision-vitund-comparison"
+        ]
+      },
+      {
+        "modelId": "pplx-decider-v12",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The typed-choice interface supports selecting the next handler or tool from supplied actions; execution and permissions remain outside the model.",
+          "tr": "Türü belirli seçim arayüzü verilen eylemlerden sonraki işleyici veya aracı seçmeyi destekler; yürütme ve izinler model dışında kalır."
+        },
+        "sourceIds": [
+          "ow-pplx-decider-v12",
+          "ow-decision-vitund-comparison"
+        ]
+      },
+      {
+        "modelId": "strands-decider-v21",
+        "evidence": "documented",
+        "rationale": {
+          "en": "Select a handler, model or tool from supplied options. Selection does not execute it, authorize it or produce a complete plan.",
+          "tr": "Verilen seçeneklerden işleyici, model veya araç seçer. Seçim, yürütme veya yetkilendirme değildir; tam plan da üretmez."
+        },
+        "sourceIds": [
+          "ow-strands-decider-v21",
+          "ow-strands-architecture"
+        ]
+      }
+    ],
+    "hostedReferences": [
+      {
+        "modelId": "jev-1-14",
+        "rationale": {
+          "en": "Select a handler, model or tool from supplied options. Selection does not execute it, authorize it or produce a complete plan.",
+          "tr": "Verilen seçeneklerden işleyici, model veya araç seçer. Seçim, yürütme veya yetkilendirme değildir; tam plan da üretmez."
+        },
+        "sourceIds": [
+          "ow-jev-system-one",
+          "ow-jev-models",
+          "ow-jev-routing"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rubric-based-scoring",
+    "name": "Rubric-Based Scoring",
+    "family": "Reasoning, Planning & Action",
+    "definition": "Item + ordered descriptive rubric → level distribution and score",
+    "definitionSourceId": "S53",
+    "localizedName": {
+      "en": "Rubric-Based Scoring",
+      "tr": "Ölçütlere Göre Puanlama"
+    },
+    "localizedDefinition": {
+      "en": "Item + ordered descriptive rubric → level distribution and score",
+      "tr": "Öğe + sıralı açıklamalı ölçütler → düzey dağılımı ve puan"
+    },
+    "note": {
+      "en": "Score estimates ordered rubric levels and derives a score; it is not arbitrary numerical regression or a correctness guarantee. Model-generated assessments remain observer outputs, never primary citations or human review decisions.",
+      "tr": "Score sıralı ölçüt düzeylerini değerlendirip puan türetir; keyfi sayısal regresyon veya doğruluk garantisi değildir. Model değerlendirmeleri gözlemci çıktısı olarak kalır; birincil atıf veya insanın inceleme kararı olmaz."
+    },
+    "recommendations": [
+      {
+        "modelId": "clef-27b",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The released score interface evaluates ordered descriptive levels; validate rubric agreement and calibration on your own data.",
+          "tr": "Yayımlanmış puanlama arayüzü sıralı açıklamalı düzeyleri değerlendirir; ölçüt uyumunu ve kalibrasyonu kendi verinde doğrula."
+        },
+        "sourceIds": [
+          "ow-clef-27b",
+          "ow-decision-arize-comparison"
+        ]
+      },
+      {
+        "modelId": "pplx-decider-flash-v12",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The released score interface evaluates ordered descriptive levels; validate rubric agreement and calibration on your own data.",
+          "tr": "Yayımlanmış puanlama arayüzü sıralı açıklamalı düzeyleri değerlendirir; ölçüt uyumunu ve kalibrasyonu kendi verinde doğrula."
+        },
+        "sourceIds": [
+          "ow-pplx-decider-flash-v12",
+          "ow-decision-vitund-comparison"
+        ]
+      },
+      {
+        "modelId": "pplx-decider-v12",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The released score interface evaluates ordered descriptive levels; validate rubric agreement and calibration on your own data.",
+          "tr": "Yayımlanmış puanlama arayüzü sıralı açıklamalı düzeyleri değerlendirir; ölçüt uyumunu ve kalibrasyonu kendi verinde doğrula."
+        },
+        "sourceIds": [
+          "ow-pplx-decider-v12",
+          "ow-decision-vitund-comparison"
+        ]
+      },
+      {
+        "modelId": "strands-decider-v21",
+        "evidence": "documented",
+        "rationale": {
+          "en": "Score estimates ordered rubric levels and derives a score; it is not arbitrary numerical regression or a correctness guarantee.",
+          "tr": "Score sıralı ölçüt düzeylerini değerlendirip puan türetir; keyfi sayısal regresyon veya doğruluk garantisi değildir."
+        },
+        "sourceIds": [
+          "ow-strands-decider-v21",
+          "ow-strands-architecture"
+        ]
+      }
+    ],
+    "hostedReferences": [
+      {
+        "modelId": "jev-1-14",
+        "rationale": {
+          "en": "Score estimates ordered rubric levels and derives a score; it is not arbitrary numerical regression or a correctness guarantee.",
+          "tr": "Score sıralı ölçüt düzeylerini değerlendirip puan türetir; keyfi sayısal regresyon veya doğruluk garantisi değildir."
+        },
+        "sourceIds": [
+          "ow-jev-system-one",
+          "ow-jev-models",
+          "ow-jev-score"
         ]
       }
     ]

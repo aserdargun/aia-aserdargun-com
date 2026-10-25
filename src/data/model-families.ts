@@ -5547,5 +5547,273 @@ export const modelFamilies = [
         ]
       }
     ]
+  },
+  {
+    "id": "structured-decision-models",
+    "name": "Structured Decision Models",
+    "axis": "inference-decision-behavior",
+    "definition": "Declared answer spaces → typed decisions and probabilities",
+    "definitionSourceId": "S49",
+    "localizedName": {
+      "en": "Structured Decision Models",
+      "tr": "Yapılandırılmış Karar Modelleri"
+    },
+    "localizedDefinition": {
+      "en": "Declared answer spaces → typed decisions and probabilities",
+      "tr": "Tanımlı yanıt uzayları → türü belirli kararlar ve olasılıklar"
+    },
+    "aliases": [
+      "System One",
+      "decision models"
+    ],
+    "note": {
+      "en": "Output contract and inference mode are independent of architecture. System 1/System 2 are qualified analogies, not correctness rankings. Model modes and pipeline search must be distinguished; no inference was run here.",
+      "tr": "Çıktı sözleşmesi ve çıkarım kipi mimariden bağımsızdır. System 1/System 2 benzetmeleri doğruluk sıralaması değildir. Model kipleri ile akıştaki arama ayrılmalıdır; burada model çıkarımı yapılmadı."
+    },
+    "models": [
+      {
+        "modelId": "clef-27b",
+        "relation": "member",
+        "rationale": {
+          "en": "Native decision head scores supplied choices, rubric levels and propositions rather than free-form chat.",
+          "tr": "Yerel karar başlığı serbest sohbet yerine verilen seçenek, ölçüt düzeyi ve önermeleri puanlar."
+        },
+        "sourceIds": [
+          "ow-clef-27b"
+        ]
+      },
+      {
+        "modelId": "pplx-decider-flash-v12",
+        "relation": "member",
+        "rationale": {
+          "en": "Native decision head scores supplied choices, rubric levels and propositions rather than free-form chat.",
+          "tr": "Yerel karar başlığı serbest sohbet yerine verilen seçenek, ölçüt düzeyi ve önermeleri puanlar."
+        },
+        "sourceIds": [
+          "ow-pplx-decider-flash-v12"
+        ]
+      },
+      {
+        "modelId": "pplx-decider-v12",
+        "relation": "member",
+        "rationale": {
+          "en": "Native decision head scores supplied choices, rubric levels and propositions rather than free-form chat.",
+          "tr": "Yerel karar başlığı serbest sohbet yerine verilen seçenek, ölçüt düzeyi ve önermeleri puanlar."
+        },
+        "sourceIds": [
+          "ow-pplx-decider-v12"
+        ]
+      },
+      {
+        "modelId": "strands-decider-v21",
+        "rationale": {
+          "en": "The released adapter and pointer head score declared options instead of generating free text.",
+          "tr": "Yayımlanan uyarlayıcı ve işaretçi başlığı, serbest metin üretmek yerine tanımlı seçenekleri puanlar."
+        },
+        "sourceIds": [
+          "ow-strands-decider-v21",
+          "ow-strands-architecture"
+        ],
+        "relation": "member"
+      }
+    ],
+    "hostedReferences": [
+      {
+        "modelId": "jev-1-14",
+        "rationale": {
+          "en": "TypeSafe documents typed decisions and calls Jev System One. Its backbone is not inferred from that interface.",
+          "tr": "TypeSafe, türü belirli kararlar belgeliyor ve Jev için System One adını kullanıyor. Bu arayüzden temel mimari çıkarılmıyor."
+        },
+        "sourceIds": [
+          "ow-jev-system-one",
+          "ow-jev-models",
+          "ow-jev-score",
+          "ow-jev-images",
+          "ow-jev-rlcd"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "direct-inference",
+    "name": "Direct Inference (System 1-style)",
+    "axis": "inference-decision-behavior",
+    "definition": "Focused prediction without a separate deliberation or search stage",
+    "definitionSourceId": "S50",
+    "localizedName": {
+      "en": "Direct Inference (System 1-style)",
+      "tr": "Doğrudan Çıkarım (System 1 benzeri)"
+    },
+    "localizedDefinition": {
+      "en": "Focused prediction without a separate deliberation or search stage",
+      "tr": "Ayrı adımlı değerlendirme veya arama aşaması olmadan odaklı tahmin"
+    },
+    "aliases": [
+      "System 1",
+      "System One"
+    ],
+    "note": {
+      "en": "Output contract and inference mode are independent of architecture. System 1/System 2 are qualified analogies, not correctness rankings. Model modes and pipeline search must be distinguished; no inference was run here.",
+      "tr": "Çıktı sözleşmesi ve çıkarım kipi mimariden bağımsızdır. System 1/System 2 benzetmeleri doğruluk sıralaması değildir. Model kipleri ile akıştaki arama ayrılmalıdır; burada model çıkarımı yapılmadı."
+    },
+    "models": [
+      {
+        "modelId": "clef-27b",
+        "relation": "member",
+        "rationale": {
+          "en": "The documented joint readout predicts option scores without an autoregressive explanation or a search loop.",
+          "tr": "Belgelenmiş ortak okuma, otoregresif açıklama veya arama döngüsü olmadan seçenek puanları tahmin eder."
+        },
+        "sourceIds": [
+          "ow-clef-27b"
+        ]
+      },
+      {
+        "modelId": "pplx-decider-flash-v12",
+        "relation": "member",
+        "rationale": {
+          "en": "The documented joint readout predicts option scores without an autoregressive explanation or a search loop.",
+          "tr": "Belgelenmiş ortak okuma, otoregresif açıklama veya arama döngüsü olmadan seçenek puanları tahmin eder."
+        },
+        "sourceIds": [
+          "ow-pplx-decider-flash-v12"
+        ]
+      },
+      {
+        "modelId": "pplx-decider-v12",
+        "relation": "member",
+        "rationale": {
+          "en": "The documented joint readout predicts option scores without an autoregressive explanation or a search loop.",
+          "tr": "Belgelenmiş ortak okuma, otoregresif açıklama veya arama döngüsü olmadan seçenek puanları tahmin eder."
+        },
+        "sourceIds": [
+          "ow-pplx-decider-v12"
+        ]
+      },
+      {
+        "modelId": "strands-decider-v21",
+        "rationale": {
+          "en": "The documented readout evaluates options in one forward pass; no text decoding loop is used.",
+          "tr": "Belgelenmiş okuma başlığı seçenekleri tek ileri geçişte değerlendirir; metin çözümleme döngüsü kullanmaz."
+        },
+        "sourceIds": [
+          "ow-strands-decider-v21",
+          "ow-strands-architecture"
+        ],
+        "relation": "member"
+      },
+      {
+        "modelId": "qwen3-4b-hybrid",
+        "rationale": {
+          "en": "The original model supports non-thinking mode. This membership refers to that mode, not all uses of the checkpoint.",
+          "tr": "Özgün model doğrudan yanıtlama kipini destekler. Üyelik, ağırlığın tüm kullanımlarını değil bu kipi anlatır."
+        },
+        "sourceIds": [
+          "ow-qwen3-4b-hybrid",
+          "ow-qwen3-hybrid-modes"
+        ],
+        "relation": "member"
+      }
+    ],
+    "hostedReferences": [
+      {
+        "modelId": "jev-1-14",
+        "rationale": {
+          "en": "TypeSafe describes focused fast judgments; System One is its terminology, not an architecture disclosure.",
+          "tr": "TypeSafe odaklı hızlı değerlendirmeler tanımlıyor; System One sağlayıcının terimidir, mimari açıklaması değildir."
+        },
+        "sourceIds": [
+          "ow-jev-system-one",
+          "ow-jev-models",
+          "ow-jev-confidence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deliberative-inference",
+    "name": "Deliberative Inference (System 2-style)",
+    "axis": "inference-decision-behavior",
+    "definition": "Intermediate reasoning, search or verification during inference",
+    "definitionSourceId": "S51",
+    "localizedName": {
+      "en": "Deliberative Inference (System 2-style)",
+      "tr": "Adımlı Çıkarım (System 2 benzeri)"
+    },
+    "localizedDefinition": {
+      "en": "Intermediate reasoning, search or verification during inference",
+      "tr": "Çıkarım sırasında ara akıl yürütme, arama veya doğrulama"
+    },
+    "aliases": [
+      "System 2",
+      "System Two"
+    ],
+    "note": {
+      "en": "Output contract and inference mode are independent of architecture. System 1/System 2 are qualified analogies, not correctness rankings. Model modes and pipeline search must be distinguished; no inference was run here.",
+      "tr": "Çıktı sözleşmesi ve çıkarım kipi mimariden bağımsızdır. System 1/System 2 benzetmeleri doğruluk sıralaması değildir. Model kipleri ile akıştaki arama ayrılmalıdır; burada model çıkarımı yapılmadı."
+    },
+    "models": [
+      {
+        "modelId": "r1",
+        "rationale": {
+          "en": "The exact reasoning release documents extended reasoning; this does not guarantee correct conclusions or formal proof.",
+          "tr": "Tam akıl yürütme sürümü, genişletilmiş değerlendirmeyi belgeliyor; doğru sonuç veya biçimsel ispat garantisi değildir."
+        },
+        "sourceIds": [
+          "ow-r1"
+        ],
+        "relation": "member"
+      },
+      {
+        "modelId": "qwen3-4b-hybrid",
+        "rationale": {
+          "en": "Thinking mode produces intermediate reasoning before the answer. Search frameworks are separate system procedures.",
+          "tr": "Düşünme kipi, yanıttan önce ara akıl yürütme üretir. Arama çerçeveleri ayrı sistem yöntemleridir."
+        },
+        "sourceIds": [
+          "ow-qwen3-4b-hybrid",
+          "ow-qwen3-hybrid-modes"
+        ],
+        "relation": "member"
+      }
+    ],
+    "hostedReferences": []
+  },
+  {
+    "id": "hybrid-adaptive-inference",
+    "name": "Hybrid / Adaptive Inference",
+    "axis": "inference-decision-behavior",
+    "definition": "Documented mode switching or adaptive inference procedures",
+    "definitionSourceId": "S52",
+    "localizedName": {
+      "en": "Hybrid / Adaptive Inference",
+      "tr": "Hibrit / Uyarlanabilir Çıkarım"
+    },
+    "localizedDefinition": {
+      "en": "Documented mode switching or adaptive inference procedures",
+      "tr": "Belgelenmiş kip geçişi veya uyarlanabilir çıkarım yöntemleri"
+    },
+    "aliases": [
+      "hybrid thinking"
+    ],
+    "note": {
+      "en": "Output contract and inference mode are independent of architecture. System 1/System 2 are qualified analogies, not correctness rankings. Model modes and pipeline search must be distinguished; no inference was run here.",
+      "tr": "Çıktı sözleşmesi ve çıkarım kipi mimariden bağımsızdır. System 1/System 2 benzetmeleri doğruluk sıralaması değildir. Model kipleri ile akıştaki arama ayrılmalıdır; burada model çıkarımı yapılmadı."
+    },
+    "models": [
+      {
+        "modelId": "qwen3-4b-hybrid",
+        "rationale": {
+          "en": "The original Qwen3-4B card exposes enable_thinking. Record the mode and budget used in each evaluation.",
+          "tr": "Özgün Qwen3-4B kartı enable_thinking seçeneğini sunar. Her değerlendirmede kullanılan kipi ve bütçeyi kaydet."
+        },
+        "sourceIds": [
+          "ow-qwen3-4b-hybrid",
+          "ow-qwen3-hybrid-modes"
+        ],
+        "relation": "member"
+      }
+    ],
+    "hostedReferences": []
   }
 ] satisfies ModelFamily[];

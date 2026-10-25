@@ -39,7 +39,7 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
   const taskGroups = [...new Set(tasks.map((task) => task.family))];
   const filteredTasks = tasks.filter((task) => task.id === selectedTask?.id ||
     ((evidenceFilter === "all" || benchmarkStatus(task.id, taskBenchmarks) === evidenceFilter) &&
-      task.name.toLocaleLowerCase("en").includes(taskQuery.trim().toLocaleLowerCase("en"))));
+      [task.name, task.localizedName?.[locale] ?? ""].some((name) => name.toLocaleLowerCase(locale).includes(taskQuery.trim().toLocaleLowerCase(locale)))));
   const axes = [...new Set(families.map((family) => family.axis))];
   const viewer = useRef<HTMLElement>(null);
   const { viewport, zoom, scale, setScale, fitWidth, focusSelected, panHandlers } = useTaxonomyNavigation(map.width, selectedTask?.id ?? selectedFamily?.id ?? null);
@@ -155,7 +155,7 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
           <label htmlFor="taxonomy-task-select">{modelLabels.select}
             <select id="taxonomy-task-select" value={selectedTask?.id ?? ""} onChange={(event) => selectEntry(event.target.value || null)}>
               <option value="">{modelLabels.placeholder}</option>
-              {taskGroups.filter((family) => filteredTasks.some((task) => task.family === family)).map((family) => <optgroup key={family} label={family}>{filteredTasks.filter((task) => task.family === family).map((task) => <option value={task.id} key={task.id}>{task.name}</option>)}</optgroup>)}
+              {taskGroups.filter((family) => filteredTasks.some((task) => task.family === family)).map((family) => <optgroup key={family} label={family}>{filteredTasks.filter((task) => task.family === family).map((task) => <option value={task.id} key={task.id}>{task.localizedName?.[locale] ?? task.name}</option>)}</optgroup>)}
             </select>
           </label>
           <label htmlFor="taxonomy-task-search">{benchmarkLabels.search}<input id="taxonomy-task-search" type="search" value={taskQuery} onChange={(event) => setTaskQuery(event.target.value)} placeholder={benchmarkLabels.placeholder} /></label>
@@ -170,7 +170,7 @@ export function TaxonomyExplorer({ map, svg, sources, tasks, models, modelSource
           <label htmlFor="taxonomy-family-select">{familyLabels.select}
             <select id="taxonomy-family-select" value={selectedFamily?.id ?? ""} onChange={(event) => selectEntry(event.target.value || null)}>
               <option value="">{familyLabels.placeholder}</option>
-              {axes.map((axis) => <optgroup key={axis} label={familyLabels.axes[axis]}>{families.filter((family) => family.axis === axis).map((family) => <option value={family.id} key={family.id}>{family.name}</option>)}</optgroup>)}
+              {axes.map((axis) => <optgroup key={axis} label={familyLabels.axes[axis]}>{families.filter((family) => family.axis === axis).map((family) => <option value={family.id} key={family.id}>{family.localizedName?.[locale] ?? family.name}{family.aliases?.length ? ` · ${family.aliases.join(" / ")}` : ""}</option>)}</optgroup>)}
             </select>
           </label>
           {familyId && !selectedFamily ? <p role="status">{familyLabels.invalid}</p> : null}

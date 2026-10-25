@@ -1,3 +1,5 @@
+import { hostedModels } from "../src/data/hosted-models";
+import { validateHostedReferences } from "../src/lib/hosted-models";
 import { atlasDataset } from "../src/data/index";
 import { readFile } from "node:fs/promises";
 import { taxonomyMaps } from "../src/data/taxonomy";
@@ -9,6 +11,8 @@ import { validateModelFamilies } from "../src/lib/model-families";
 import { taxonomyTasks, openWeightModels } from "../src/data/task-models";
 import { validateTaskModels } from "../src/lib/task-models";
 import { validateTaxonomyMap } from "../src/lib/taxonomy";
+
+validateHostedReferences(taxonomyTasks, modelFamilies, hostedModels, taskModelSources, openWeightModels);
 
 for (const map of taxonomyMaps) {
   validateTaxonomyMap(map, await readFile(`public${map.assetPath}`, "utf8"), taxonomySources);

@@ -66,7 +66,7 @@ test("every task selects its own evidence or explicit coverage gap", async ({ pa
     await page.getByRole("combobox", { name: "Select a task" }).selectOption(task.id);
     const panel = page.getByRole("complementary", { name: task.name, exact: true });
     await expect(panel.getByRole("heading", { name: task.name, exact: true })).toBeVisible();
-    await expect(panel.locator(".task-model-card")).toHaveCount(task.recommendations.length);
+    await expect(panel.locator(".task-model-card")).toHaveCount(task.recommendations.length + ("hostedReferences" in task ? (task.hostedReferences?.length ?? 0) : 0));
     await expect(panel.locator('a[href^="https://"]')).not.toHaveCount(0);
   }
 });
@@ -99,7 +99,7 @@ for (const locale of ["en", "tr"] as const) {
     for (const task of researched) {
       await select.selectOption(task.id);
       await expect(panel.locator(".task-research-review")).toBeVisible();
-      await expect(panel.locator(".task-model-card")).toHaveCount(task.recommendations.length);
+      await expect(panel.locator(".task-model-card")).toHaveCount(task.recommendations.length + ("hostedReferences" in task ? (task.hostedReferences?.length ?? 0) : 0));
     }
   });
 }

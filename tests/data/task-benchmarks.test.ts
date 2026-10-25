@@ -15,11 +15,11 @@ describe("published task benchmark evidence", () => {
     const today = new Date().toISOString().slice(0, 10);
     expect(taskBenchmarkReviews.every((review) => review.sourceIds.every((id) => bySource.get(id)!.observedAt <= review.checkedAt))).toBe(true);
     expect(taskBenchmarkReviews.every((review) => review.checkedAt <= today)).toBe(true);
-    expect(new Set(taskBenchmarkReviews.map((review) => review.taskId)).size).toBe(85);
+    expect(new Set(taskBenchmarkReviews.map((review) => review.taskId)).size).toBe(87);
     expect(taskBenchmarks.some((benchmark) => benchmark.resultDate?.startsWith("2026-10"))).toBe(true);
     expect(taskBenchmarks.some((benchmark) => benchmark.resultDate?.startsWith("2022"))).toBe(true);
     expect(taskBenchmarks.some((benchmark) => benchmark.resultDate === null)).toBe(true);
-    expect(taskBenchmarkReviews.filter((review) => benchmarkStatus(review.taskId, taskBenchmarks) === "gap").map((review) => review.taskId).sort()).toEqual(["classical-planning", "dimensionality-reduction"]);
+    expect(taskBenchmarkReviews.filter((review) => benchmarkStatus(review.taskId, taskBenchmarks) === "gap").map((review) => review.taskId).sort()).toEqual(["action-selection", "classical-planning", "dimensionality-reduction", "rubric-based-scoring"]);
   });
 
   it("uses each metric’s direction, preserves ties and never converts missing evidence to a zero", () => {

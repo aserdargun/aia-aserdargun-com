@@ -5859,5 +5859,55 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
       "bm-card-qwen36",
       "ow-uitars"
     ]
+  },
+  {
+    "taskId": "action-selection",
+    "checkedAt": "2026-10-25",
+    "candidateIds": [
+      "strands-decider-v21",
+      "pplx-decider-v12",
+      "pplx-decider-flash-v12",
+      "clef-27b"
+    ],
+    "summary": {
+      "en": "Decision-model support is documented; no matched task-specific numeric comparison was verified for this entry.",
+      "tr": "Karar modeli desteği belgelenmiş; bu kayıt için aynı koşullarda göreve özel sayısal karşılaştırma doğrulanmadı."
+    },
+    "limitation": {
+      "en": "Broad Decision Index aggregates, evaluator suites and small routing experiments have different protocols. They are selection evidence, not a matched benchmark of these exact checkpoints on this task. Models were not run locally.",
+      "tr": "Geniş Decision Index toplamları, değerlendirici kümeleri ve küçük yönlendirme deneyleri farklı protokollere sahiptir. Bunlar seçim kanıtıdır; bu tam ağırlıkların aynı koşullarda görev karşılaştırması değildir. Modeller yerelde çalıştırılmadı."
+    },
+    "sourceIds": [
+      "ow-strands-decider-v21",
+      "ow-strands-architecture",
+      "ow-pplx-decider-v12",
+      "ow-pplx-decider-flash-v12",
+      "ow-clef-27b"
+    ]
+  },
+  {
+    "taskId": "rubric-based-scoring",
+    "checkedAt": "2026-10-25",
+    "candidateIds": [
+      "strands-decider-v21",
+      "pplx-decider-v12",
+      "pplx-decider-flash-v12",
+      "clef-27b"
+    ],
+    "summary": {
+      "en": "Decision-model support is documented; no matched task-specific numeric comparison was verified for this entry.",
+      "tr": "Karar modeli desteği belgelenmiş; bu kayıt için aynı koşullarda göreve özel sayısal karşılaştırma doğrulanmadı."
+    },
+    "limitation": {
+      "en": "Broad Decision Index aggregates, evaluator suites and small routing experiments have different protocols. They are selection evidence, not a matched benchmark of these exact checkpoints on this task. Models were not run locally.",
+      "tr": "Geniş Decision Index toplamları, değerlendirici kümeleri ve küçük yönlendirme deneyleri farklı protokollere sahiptir. Bunlar seçim kanıtıdır; bu tam ağırlıkların aynı koşullarda görev karşılaştırması değildir. Modeller yerelde çalıştırılmadı."
+    },
+    "sourceIds": [
+      "ow-strands-decider-v21",
+      "ow-strands-architecture",
+      "ow-pplx-decider-v12",
+      "ow-pplx-decider-flash-v12",
+      "ow-clef-27b"
+    ]
   }
 ];

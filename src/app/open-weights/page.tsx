@@ -1,3 +1,5 @@
+import { hostedModels } from "@/data/hosted-models";
+import { validateHostedReferences } from "@/lib/hosted-models";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { Suspense } from "react";
@@ -19,6 +21,7 @@ export const metadata = {
 };
 
 export default async function OpenWeightsPage() {
+  validateHostedReferences(taxonomyTasks, modelFamilies, hostedModels, taskModelSources, openWeightModels);
   // The catalogue stays honest at build time: every model needs task and family evidence.
   const svg = await readFile(
     path.join(process.cwd(), "public", "assets", "taxonomy", "ai-task-taxonomy.svg"),
