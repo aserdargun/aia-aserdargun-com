@@ -9105,7 +9105,7 @@ export const taskModelSources = [
     "publisher": "Strands Agents",
     "url": "https://huggingface.co/StrandsAgents/strands-decider-2B-hobson-v21",
     "kind": "model-card",
-    "observedAt": "2026-10-25",
+    "observedAt": "2026-10-27",
     "revision": "2b52a6235c1b8306bbfa30b00b9d4b74b63a39f5"
   },
   {
@@ -9114,8 +9114,24 @@ export const taskModelSources = [
     "publisher": "Strands Agents",
     "url": "https://huggingface.co/StrandsAgents/strands-decider-2B-hobson-v21/tree/2b52a6235c1b8306bbfa30b00b9d4b74b63a39f5",
     "kind": "weights",
-    "observedAt": "2026-10-25",
-    "revision": "2b52a6235c1b8306bbfa30b00b9d4b74b63a39f5"
+    "observedAt": "2026-10-27",
+    "revision": "2b52a6235c1b8306bbfa30b00b9d4b74b63a39f5",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/StrandsAgents/strands-decider-2B-hobson-v21",
+      "files": [
+        {
+          "name": "head.safetensors",
+          "sizeBytes": 4213224
+        },
+        {
+          "name": "lora/adapter_model.safetensors",
+          "sizeBytes": 67324872
+        }
+      ],
+      "totalBytes": 71538096,
+      "gated": false
+    }
   },
   {
     "id": "ow-strands-decider-v21-license",
@@ -9132,7 +9148,7 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen3-4B",
     "kind": "model-card",
-    "observedAt": "2026-10-25",
+    "observedAt": "2026-10-27",
     "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
   },
   {
@@ -9141,8 +9157,29 @@ export const taskModelSources = [
     "publisher": "Qwen",
     "url": "https://huggingface.co/Qwen/Qwen3-4B/tree/1cfa9a7208912126459214e8b04321603b3df60c",
     "kind": "weights",
-    "observedAt": "2026-10-25",
-    "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+    "observedAt": "2026-10-27",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/Qwen/Qwen3-4B",
+      "parameterCount": 4022468096,
+      "files": [
+        {
+          "name": "model-00001-of-00003.safetensors",
+          "sizeBytes": 3957900840
+        },
+        {
+          "name": "model-00002-of-00003.safetensors",
+          "sizeBytes": 3987450520
+        },
+        {
+          "name": "model-00003-of-00003.safetensors",
+          "sizeBytes": 99630640
+        }
+      ],
+      "totalBytes": 8044982000,
+      "gated": false
+    }
   },
   {
     "id": "ow-qwen3-4b-hybrid-license",
@@ -9388,6 +9425,174 @@ export const taskModelSources = [
     "url": "https://arize.com/blog/decision-model-benchmark/",
     "kind": "documentation",
     "observedAt": "2026-10-25"
+  },
+  {
+    "id": "ow-chronos-bolt-small",
+    "title": "chronos-bolt-small — model card",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/chronos-bolt-small",
+    "kind": "model-card",
+    "observedAt": "2026-10-27",
+    "revision": "772f3d25d38aec6d914c8949dab4462e2d46f5d8"
+  },
+  {
+    "id": "ow-chronos-bolt-small-weights",
+    "title": "chronos-bolt-small — checkpoint files",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/chronos-bolt-small/tree/772f3d25d38aec6d914c8949dab4462e2d46f5d8",
+    "kind": "weights",
+    "observedAt": "2026-10-27",
+    "revision": "772f3d25d38aec6d914c8949dab4462e2d46f5d8",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/amazon/chronos-bolt-small",
+      "parameterCount": 47718016,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 190888824
+        }
+      ],
+      "totalBytes": 190888824,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-chronos-bolt-small-license",
+    "title": "chronos-bolt-small — license",
+    "publisher": "amazon",
+    "url": "https://huggingface.co/amazon/chronos-bolt-small",
+    "kind": "license",
+    "observedAt": "2026-10-27",
+    "revision": "772f3d25d38aec6d914c8949dab4462e2d46f5d8"
+  },
+  {
+    "id": "ow-pplx-embed-v2-late-0-6b",
+    "title": "pplx-embed-v2-late-0.6b — model card",
+    "publisher": "perplexity-ai",
+    "url": "https://huggingface.co/perplexity-ai/pplx-embed-v2-late-0.6b",
+    "kind": "model-card",
+    "observedAt": "2026-10-27",
+    "revision": "7bba8e7cf2075dec747fa8557f41eb90e70361ed"
+  },
+  {
+    "id": "ow-pplx-embed-v2-late-0-6b-weights",
+    "title": "pplx-embed-v2-late-0.6b — checkpoint files",
+    "publisher": "perplexity-ai",
+    "url": "https://huggingface.co/perplexity-ai/pplx-embed-v2-late-0.6b/tree/7bba8e7cf2075dec747fa8557f41eb90e70361ed",
+    "kind": "weights",
+    "observedAt": "2026-10-27",
+    "revision": "7bba8e7cf2075dec747fa8557f41eb90e70361ed",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/perplexity-ai/pplx-embed-v2-late-0.6b",
+      "parameterCount": 594321600,
+      "files": [
+        {
+          "name": "1_Dense/model.safetensors",
+          "sizeBytes": 524376
+        },
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 2377321184
+        }
+      ],
+      "totalBytes": 2377845560,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-pplx-embed-v2-late-0-6b-license",
+    "title": "pplx-embed-v2-late-0.6b — license",
+    "publisher": "perplexity-ai",
+    "url": "https://huggingface.co/perplexity-ai/pplx-embed-v2-late-0.6b",
+    "kind": "license",
+    "observedAt": "2026-10-27",
+    "revision": "7bba8e7cf2075dec747fa8557f41eb90e70361ed"
+  },
+  {
+    "id": "ow-pplx-embed-v2-late-9b",
+    "title": "pplx-embed-v2-late-9b — model card",
+    "publisher": "perplexity-ai",
+    "url": "https://huggingface.co/perplexity-ai/pplx-embed-v2-late-9b",
+    "kind": "model-card",
+    "observedAt": "2026-10-27",
+    "revision": "e6f9fd05b69356dec68b9b15443d3e963f3d2c09"
+  },
+  {
+    "id": "ow-pplx-embed-v2-late-9b-weights",
+    "title": "pplx-embed-v2-late-9b — checkpoint files",
+    "publisher": "perplexity-ai",
+    "url": "https://huggingface.co/perplexity-ai/pplx-embed-v2-late-9b/tree/e6f9fd05b69356dec68b9b15443d3e963f3d2c09",
+    "kind": "weights",
+    "observedAt": "2026-10-27",
+    "revision": "e6f9fd05b69356dec68b9b15443d3e963f3d2c09",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/perplexity-ai/pplx-embed-v2-late-9b",
+      "parameterCount": 8392695024,
+      "files": [
+        {
+          "name": "1_Dense/model.safetensors",
+          "sizeBytes": 2097240
+        },
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 33570869768
+        }
+      ],
+      "totalBytes": 33572967008,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-pplx-embed-v2-late-9b-license",
+    "title": "pplx-embed-v2-late-9b — license",
+    "publisher": "perplexity-ai",
+    "url": "https://huggingface.co/perplexity-ai/pplx-embed-v2-late-9b",
+    "kind": "license",
+    "observedAt": "2026-10-27",
+    "revision": "e6f9fd05b69356dec68b9b15443d3e963f3d2c09"
+  },
+  {
+    "id": "ow-pii-tracer",
+    "title": "PII-Tracer — model card",
+    "publisher": "perplexity-ai",
+    "url": "https://huggingface.co/perplexity-ai/PII-Tracer",
+    "kind": "model-card",
+    "observedAt": "2026-10-27",
+    "revision": "d25c16f2e57e321f6d2527715c01df9112f956f5"
+  },
+  {
+    "id": "ow-pii-tracer-weights",
+    "title": "PII-Tracer — checkpoint files",
+    "publisher": "perplexity-ai",
+    "url": "https://huggingface.co/perplexity-ai/PII-Tracer/tree/d25c16f2e57e321f6d2527715c01df9112f956f5",
+    "kind": "weights",
+    "observedAt": "2026-10-27",
+    "revision": "d25c16f2e57e321f6d2527715c01df9112f956f5",
+    "artifact": {
+      "type": "hf-repository",
+      "repositoryUrl": "https://huggingface.co/perplexity-ai/PII-Tracer",
+      "parameterCount": 596090241,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "sizeBytes": 1192293777
+        }
+      ],
+      "totalBytes": 1192293777,
+      "gated": false
+    }
+  },
+  {
+    "id": "ow-pii-tracer-license",
+    "title": "PII-Tracer — license",
+    "publisher": "perplexity-ai",
+    "url": "https://huggingface.co/perplexity-ai/PII-Tracer/blob/d25c16f2e57e321f6d2527715c01df9112f956f5/LICENSE",
+    "kind": "license",
+    "observedAt": "2026-10-27",
+    "revision": "d25c16f2e57e321f6d2527715c01df9112f956f5"
   }
 ] satisfies TaskModelSource[];
 

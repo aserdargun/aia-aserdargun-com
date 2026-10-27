@@ -1729,6 +1729,78 @@ export const openWeightModels = [
       "en": "Alternative larger shortlist: a separate experiment reports strong routing and evaluator results for hosted Clef 27B. This does not reproduce the downloadable checkpoint. Qwen3.8-27B backbone plus joint schema head; requires the released loader and supports text, images and video frames. Publisher Decision Index 0.2.1 results are not comparable directly to Perplexity’s 0.3 aggregate. No local execution was performed.",
       "tr": "Alternatif büyük aday: ayrı bir deney, barındırılan Clef 27B için güçlü yönlendirme ve değerlendirici sonuçları bildiriyor. Bu, indirilebilir ağırlığın yeniden değerlendirilmesi değildir. Qwen3.8-27B tabanı ve ortak şema başlığı; yayımlanan yükleyici gerekir, metin, görsel ve video karelerini destekler. Yayıncının Decision Index 0.2.1 sonuçları Perplexity’nin 0.3 toplamıyla doğrudan karşılaştırılmaz. Yerel çalıştırma yapılmadı."
     }
+  },
+  {
+    "id": "chronos-bolt-small",
+    "name": "chronos-bolt-small",
+    "cardSourceId": "ow-chronos-bolt-small",
+    "weightsSourceId": "ow-chronos-bolt-small-weights",
+    "licenseSourceId": "ow-chronos-bolt-small-license",
+    "license": "apache-2.0",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "time-series-forecasting",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-27 in the publisher's Hugging Face repository. Pipeline tag time-series-forecasting; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-27 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi time-series-forecasting; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "pplx-embed-v2-late-0-6b",
+    "name": "pplx-embed-v2-late-0.6b",
+    "cardSourceId": "ow-pplx-embed-v2-late-0-6b",
+    "weightsSourceId": "ow-pplx-embed-v2-late-0-6b-weights",
+    "licenseSourceId": "ow-pplx-embed-v2-late-0-6b-license",
+    "license": "mit",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "feature-extraction",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-27 in the publisher's Hugging Face repository. Pipeline tag feature-extraction; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-27 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi feature-extraction; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "pplx-embed-v2-late-9b",
+    "name": "pplx-embed-v2-late-9b",
+    "cardSourceId": "ow-pplx-embed-v2-late-9b",
+    "weightsSourceId": "ow-pplx-embed-v2-late-9b-weights",
+    "licenseSourceId": "ow-pplx-embed-v2-late-9b-license",
+    "license": "mit",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "feature-extraction",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-27 in the publisher's Hugging Face repository. Pipeline tag feature-extraction; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-27 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi feature-extraction; kontrol noktası elle incelenmedi."
+    }
+  },
+  {
+    "id": "pii-tracer",
+    "name": "PII-Tracer",
+    "cardSourceId": "ow-pii-tracer",
+    "weightsSourceId": "ow-pii-tracer-weights",
+    "licenseSourceId": "ow-pii-tracer-license",
+    "license": "mit",
+    "access": "public",
+    "role": "reference",
+    "parameterKind": "weights",
+    "licenseScope": "repository",
+    "pipelineTag": "token-classification",
+    "discovery": "auto",
+    "context": {
+      "en": "Discovered automatically on 2026-10-27 in the publisher's Hugging Face repository. Pipeline tag token-classification; the checkpoint was not reviewed by hand.",
+      "tr": "2026-10-27 tarihinde yayıncının Hugging Face deposunda otomatik keşfedildi. İşlem hattı etiketi token-classification; kontrol noktası elle incelenmedi."
+    }
   }
 ] satisfies OpenWeightModel[];
 
@@ -1884,6 +1956,17 @@ export const taxonomyTasks = [
         },
         "sourceIds": [
           "ow-gliner2"
+        ]
+      },
+      {
+        "modelId": "pii-tracer",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag token-classification, which maps to Named Entity Recognition. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu token-classification işlem hattı etiketini bildiriyor; bu etiket Named Entity Recognition görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-pii-tracer"
         ]
       }
     ]
@@ -2354,6 +2437,28 @@ export const taxonomyTasks = [
         },
         "sourceIds": [
           "ow-tipsv1-so400m14"
+        ]
+      },
+      {
+        "modelId": "pplx-embed-v2-late-0-6b",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag feature-extraction, which maps to Semantic Textual Similarity. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu feature-extraction işlem hattı etiketini bildiriyor; bu etiket Semantic Textual Similarity görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-pplx-embed-v2-late-0-6b"
+        ]
+      },
+      {
+        "modelId": "pplx-embed-v2-late-9b",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag feature-extraction, which maps to Semantic Textual Similarity. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu feature-extraction işlem hattı etiketini bildiriyor; bu etiket Semantic Textual Similarity görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-pplx-embed-v2-late-9b"
         ]
       }
     ]
@@ -3970,6 +4075,17 @@ export const taxonomyTasks = [
         },
         "sourceIds": [
           "ow-chronos-bolt-mini"
+        ]
+      },
+      {
+        "modelId": "chronos-bolt-small",
+        "evidence": "documented",
+        "rationale": {
+          "en": "The publisher's repository declares the pipeline tag time-series-forecasting, which maps to Time-Series Forecasting. Automatic discovery from the release metadata.",
+          "tr": "Yayıncının deposu time-series-forecasting işlem hattı etiketini bildiriyor; bu etiket Time-Series Forecasting görevine eşleniyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-chronos-bolt-small"
         ]
       }
     ]

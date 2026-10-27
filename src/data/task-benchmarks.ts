@@ -5862,7 +5862,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "action-selection",
-    "checkedAt": "2026-10-25",
+    "checkedAt": "2026-10-27",
     "candidateIds": [
       "strands-decider-v21",
       "pplx-decider-v12",
@@ -5887,7 +5887,7 @@ export const taskBenchmarkReviews: TaskBenchmarkReview[] = [
   },
   {
     "taskId": "rubric-based-scoring",
-    "checkedAt": "2026-10-25",
+    "checkedAt": "2026-10-27",
     "candidateIds": [
       "strands-decider-v21",
       "pplx-decider-v12",

@@ -2198,6 +2198,28 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-wespeaker-voxceleb-resnet34-lm"
         ]
+      },
+      {
+        "modelId": "pplx-embed-v2-late-0-6b",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Encoder-Only. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Encoder-Only ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-pplx-embed-v2-late-0-6b"
+        ]
+      },
+      {
+        "modelId": "pplx-embed-v2-late-9b",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Encoder-Only. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Encoder-Only ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-pplx-embed-v2-late-9b"
+        ]
       }
     ]
   },
@@ -2430,6 +2452,39 @@ export const modelFamilies = [
         "sourceIds": [
           "ow-fastino-nemotron-3-5-lightning-finance"
         ]
+      },
+      {
+        "modelId": "pplx-embed-v2-late-0-6b",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Decoder-Only. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Decoder-Only ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-pplx-embed-v2-late-0-6b"
+        ]
+      },
+      {
+        "modelId": "pplx-embed-v2-late-9b",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Decoder-Only. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Decoder-Only ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-pplx-embed-v2-late-9b"
+        ]
+      },
+      {
+        "modelId": "pii-tracer",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Decoder-Only. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Decoder-Only ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-pii-tracer"
+        ]
       }
     ]
   },
@@ -2559,6 +2614,17 @@ export const modelFamilies = [
         },
         "sourceIds": [
           "ow-chronos-bolt-mini"
+        ]
+      },
+      {
+        "modelId": "chronos-bolt-small",
+        "relation": "member",
+        "rationale": {
+          "en": "The repository's architecture and library metadata place this checkpoint in Encoder–Decoder. Automatic discovery from the release metadata.",
+          "tr": "Deponun mimari ve kütüphane verileri bu kontrol noktasını Encoder–Decoder ailesine yerleştiriyor. Sürüm verilerinden otomatik keşif."
+        },
+        "sourceIds": [
+          "ow-chronos-bolt-small"
         ]
       }
     ]
