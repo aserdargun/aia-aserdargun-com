@@ -15,7 +15,7 @@ export const vendorEntries = [
     productNames: ["Claude"],
     availability: "available",
     sourceIds: ["anthropic-models", "anthropic-release-notes"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "openai-frontier-model-lineup",
@@ -27,7 +27,7 @@ export const vendorEntries = [
     productNames: ["GPT-6 Astra", "GPT-6.1 Sol", "GPT-6 Luna"],
     availability: "available",
     sourceIds: ["openai-models", "openai-changelog"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "anthropic-context-window",
@@ -39,7 +39,7 @@ export const vendorEntries = [
     productNames: ["Claude"],
     availability: "available",
     sourceIds: ["anthropic-models"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "openai-context-window",
@@ -51,7 +51,7 @@ export const vendorEntries = [
     productNames: ["GPT-6 Astra", "GPT-6.1 Sol", "GPT-6"],
     availability: "available",
     sourceIds: ["openai-models", "openai-gpt-6-1-sol"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "anthropic-multimodal-input",
@@ -1603,7 +1603,7 @@ export const vendorEntries = [
     productNames: ["GLM-5.3", "GLM-5.3-Flash", "GLM-5", "GLM-5-Turbo", "GLM-5V-Turbo"],
     availability: "available",
     sourceIds: ["zai-pricing", "zai-flash-docs", "zai-release-notes"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "zai-context-window",
@@ -1615,7 +1615,7 @@ export const vendorEntries = [
     productNames: ["GLM-5.3", "GLM-5.3-Flash", "GLM-5", "GLM-5-Turbo"],
     availability: "available",
     sourceIds: ["zai-glm-5-3", "zai-glm-5-3-flash", "zai-glm-5", "zai-glm-5-turbo"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "zai-multimodal-input",
@@ -1627,7 +1627,7 @@ export const vendorEntries = [
     productNames: ["GLM-5V-Turbo", "GLM-5.3-Flash"],
     availability: "available",
     sourceIds: ["zai-glm-5v-turbo", "zai-chat-completions", "zai-glm-5-3-flash"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "zai-native-image-generation",
@@ -1651,7 +1651,7 @@ export const vendorEntries = [
     productNames: ["Z.ai chat"],
     availability: "available",
     sourceIds: ["zai-chat"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "zai-projects",
@@ -1699,7 +1699,7 @@ export const vendorEntries = [
     productNames: ["ZCode"],
     availability: "available",
     sourceIds: ["zai-zcode", "zai-zcode-docs"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "zai-terminal-cli",
@@ -2083,7 +2083,7 @@ export const vendorEntries = [
     productNames: ["GLM-5V-Turbo", "AutoGLM Phone"],
     availability: "available",
     sourceIds: ["zai-glm-5v-turbo", "zai-autoglm-phone"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "zai-browser-control",
@@ -2395,7 +2395,7 @@ export const vendorEntries = [
     availability: "available",
     summary: "The current language-model catalog lists M3.1-Flash and M3; MiniMax has moved M2.7, M2.7-highspeed, M2.5, M2.5-highspeed, M2.1, M2.1-highspeed and M2 into a separate Legacy Models section.",
     sourceIds: ["minimax-model-catalog", "minimax-m3-1-flash", "minimax-release-notes", "minimax-model-list"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "minimax-context-window",
@@ -2408,7 +2408,7 @@ export const vendorEntries = [
     productNames: ["MiniMax M3", "MiniMax M2.7", "MiniMax M2.7 Highspeed"],
     availability: "available",
     sourceIds: ["minimax-models", "minimax-m2-7", "minimax-model-catalog", "minimax-model-list"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "minimax-multimodal-input",
@@ -2420,7 +2420,7 @@ export const vendorEntries = [
     productNames: ["MiniMax M3.1-Flash", "MiniMax M3", "MiniMax M2.7"],
     availability: "available",
     sourceIds: ["minimax-models", "minimax-m2-7", "minimax-model-catalog", "minimax-model-list"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "minimax-native-image-generation",
@@ -3047,7 +3047,7 @@ export const vendorEntries = [
     productNames: ["MiniMax API"],
     availability: "available",
     sourceIds: ["minimax-models", "minimax-m2-7", "minimax-model-catalog", "minimax-model-list"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "minimax-agent-sdk",
@@ -3181,7 +3181,7 @@ export const vendorEntries = [
     productNames: ["MiniMax API"],
     availability: "available",
     sourceIds: ["minimax-api-pricing", "minimax-models", "minimax-m2-7", "minimax-release-notes", "minimax-model-catalog"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "deepseek-frontier-model-lineup",
@@ -3205,7 +3205,7 @@ export const vendorEntries = [
     productNames: ["DeepSeek-V4"],
     availability: "available",
     sourceIds: ["deepseek-models"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "deepseek-multimodal-input",
@@ -3985,7 +3985,7 @@ export const vendorEntries = [
     productNames: ["Qwen3.8-Max", "Qwen3.8-Flash", "Qwen3.7-Plus", "Qwen3.7-Flash"],
     availability: "available",
     sourceIds: ["qwen-models", "qwen-model-card-flash", "qwen-model-selection", "qwen-text-models"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "qwen-context-window",
@@ -3997,7 +3997,7 @@ export const vendorEntries = [
     productNames: ["Qwen3.8-Max", "Qwen3.7", "qwen-long"],
     availability: "available",
     sourceIds: ["qwen-text-models"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "qwen-multimodal-input",
@@ -4009,7 +4009,7 @@ export const vendorEntries = [
     productNames: ["Qwen3.8-Max", "Qwen3.8-Flash", "Qwen3.5-Omni-Plus"],
     availability: "available",
     sourceIds: ["qwen-model-card-max", "qwen-model-card-flash", "qwen-model-selection"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "qwen-native-image-generation",
@@ -4393,7 +4393,7 @@ export const vendorEntries = [
     productNames: ["Qwen Code sandbox", "Qwen3.8-Max code interpreter"],
     availability: "available",
     sourceIds: ["qwen-code-sandbox", "qwen-model-card-max"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "qwen-web-search",
@@ -4441,7 +4441,7 @@ export const vendorEntries = [
     productNames: ["Qwen Code", "Qwen3.8-Max"],
     availability: "available",
     sourceIds: ["qwen-code", "qwen-model-card-max"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "qwen-computer-use-product",
@@ -4657,7 +4657,7 @@ export const vendorEntries = [
     productNames: ["Qwen3.8-Max"],
     availability: "available",
     sourceIds: ["qwen-model-card-max"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "qwen-api-mcp",
@@ -4753,7 +4753,7 @@ export const vendorEntries = [
     productNames: ["QwenCloud Team Edition"],
     availability: "limited",
     sourceIds: ["qwen-token-plan"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
   defineVendorEntry({
     id: "qwen-api-token-pricing",
@@ -4765,6 +4765,6 @@ export const vendorEntries = [
     productNames: ["QwenCloud API"],
     availability: "available",
     sourceIds: ["qwen-pricing", "qwen-model-card-max"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   }),
 ] satisfies VendorEntry[];

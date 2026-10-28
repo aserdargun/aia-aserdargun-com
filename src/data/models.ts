@@ -25,7 +25,7 @@ export const models = [
       outputPerMillionUsd: 20,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing", "anthropic-claude-opus-5-5", "anthropic-release-notes"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "claude-sonnet-5-5",
@@ -46,7 +46,7 @@ export const models = [
       outputPerMillionUsd: 10,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing", "anthropic-claude-sonnet-5-5", "anthropic-release-notes"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "claude-opus-5",
@@ -67,7 +67,7 @@ export const models = [
       outputPerMillionUsd: 25,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing", "anthropic-model-deprecations"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "claude-sonnet-5",
@@ -88,7 +88,7 @@ export const models = [
       outputPerMillionUsd: 10,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing", "anthropic-model-deprecations"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "gpt-6-1-sol",
@@ -110,7 +110,7 @@ export const models = [
     },
     pricingNote: "Standard tier for prompts up to 272K input tokens. Long-context rates double input and cache and raise output by 1.5x.",
     sourceIds: ["openai-gpt-6-1-sol", "openai-api-pricing", "openai-changelog"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "gpt-6-luna",
@@ -131,7 +131,7 @@ export const models = [
       outputPerMillionUsd: 0.5,
     },
     sourceIds: ["openai-gpt-6-luna", "openai-api-pricing", "openai-changelog"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "gpt-6-sol",
@@ -152,7 +152,7 @@ export const models = [
       outputPerMillionUsd: 10,
     },
     sourceIds: ["openai-gpt-6-sol", "openai-api-pricing", "openai-changelog"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "gpt-5-6-sol",
@@ -237,7 +237,7 @@ export const models = [
     pricingNote:
       "Pay-as-you-go rates per million tokens for MiniMax-M3.1-Flash: $0.15 input, $0.60 output and $0.015 prompt caching read. The pricing page lists no separate tier for this model.",
     sourceIds: ["minimax-m3-1-flash", "minimax-model-catalog", "minimax-model-list", "minimax-api-pricing"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "claude-fable-5-1",
@@ -258,7 +258,7 @@ export const models = [
       outputPerMillionUsd: 50,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing", "anthropic-model-deprecations"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "claude-haiku-5-5",
@@ -280,7 +280,7 @@ export const models = [
       outputPerMillionUsd: 0.5,
     },
     sourceIds: ["anthropic-models", "anthropic-api-pricing", "anthropic-release-notes"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "claude-haiku-4-5",
@@ -322,7 +322,7 @@ export const models = [
       outputPerMillionUsd: 50,
     },
     sourceIds: ["openai-gpt-6-astra", "openai-api-pricing"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "glm-5-3",
@@ -342,7 +342,7 @@ export const models = [
       outputPerMillionUsd: 4.4,
     },
     sourceIds: ["zai-glm-5-3", "zai-pricing", "zai-release-notes"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "glm-5-3-flash",
@@ -358,7 +358,7 @@ export const models = [
     pricing: {"inputPerMillionUsd": 0.15, "cachedInputPerMillionUsd": 0.03, "outputPerMillionUsd": 0.5},
     maxOutputTokens: 128000,
     sourceIds: ["zai-flash-docs", "zai-pricing", "zai-release-notes"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "glm-5",
@@ -378,7 +378,7 @@ export const models = [
       outputPerMillionUsd: 3.2,
     },
     sourceIds: ["zai-glm-5", "zai-pricing", "zai-release-notes"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "glm-5-turbo",
@@ -452,7 +452,7 @@ export const models = [
     },
     pricingNote: "Standard tier, up to 512k input tokens. Longer inputs cost $0.60 input / $0.12 cache read / $2.40 output per million; priority costs 1.5x standard.",
     sourceIds: ["minimax-models", "minimax-api-pricing", "minimax-release-notes", "minimax-model-catalog"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "minimax-m2-7",
@@ -511,7 +511,7 @@ export const models = [
     },
     pricingNote: "Off-peak USD per million tokens. Peak input/cache/output rates are $1.32 / $0.044 / $3.96. See the source for the UTC schedule.",
     sourceIds: ["deepseek-models", "deepseek-updates"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "deepseek-v4-flash",
@@ -561,7 +561,7 @@ export const models = [
       outputPerMillionUsd: 6,
     },
     sourceIds: ["qwen-model-card-max", "qwen-text-models", "qwen-models"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "qwen3-8-flash",
@@ -582,7 +582,7 @@ export const models = [
       outputPerMillionUsd: 0.47,
     },
     sourceIds: ["qwen-model-card-flash", "qwen-models"],
-    verifiedAt: "2026-10-25",
+    verifiedAt: "2026-10-28",
   },
   {
     id: "qwen3-7-plus",
@@ -641,7 +641,7 @@ export const models = [
       "deepseek-models",
       "deepseek-vision"
     ],
-    verifiedAt: "2026-10-25"
+    verifiedAt: "2026-10-28"
   },
   {
     id: "glm-5-2",
@@ -665,7 +665,7 @@ export const models = [
       outputPerMillionUsd: 4.4
     },
     sourceIds: ["zai-glm-5-2", "zai-pricing", "zai-release-notes"],
-    verifiedAt: "2026-10-25"
+    verifiedAt: "2026-10-28"
   },
   {
     id: "glm-5-3-flashx",

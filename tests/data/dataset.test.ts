@@ -236,11 +236,11 @@ describe("canonical Atlas dataset", () => {
     ).toBe(true);
     for (const record of [...atlasDataset.vendorEntries, ...atlasDataset.models, ...atlasDataset.plans]) {
       expect(record.verifiedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
-      expect(record.verifiedAt <= "2026-10-25").toBe(true);
+      expect(record.verifiedAt <= "2026-10-28").toBe(true);
     }
     // A blocked pricing page must not receive a cosmetic verification date.
     expect(atlasDataset.plans.find(({ id }) => id === "chatgpt-plus")?.verifiedAt).toBe("2026-08-11");
-    expect(atlasDataset.models.find(({ id }) => id === "deepseek-v4-1-flash")?.verifiedAt).toBe("2026-10-25");
+    expect(atlasDataset.models.find(({ id }) => id === "deepseek-v4-1-flash")?.verifiedAt).toBe("2026-10-28");
 
     for (const vendorId of expectedVendorIds) {
       expect(
@@ -284,7 +284,7 @@ describe("canonical Atlas dataset", () => {
         ],
         vendorEntries: [...atlasDataset.vendorEntries, googleEntry],
       },
-      new Date("2026-10-25T12:00:00Z"),
+      new Date("2026-10-28T12:00:00Z"),
     );
 
     expect(extended.vendorEntries.at(-1)).toEqual(googleEntry);
@@ -389,7 +389,7 @@ describe("canonical Atlas dataset", () => {
     expect(m31?.contextWindowTokens).toBe(1_000_000);
     expect(m31?.inputModalities).toEqual(["text", "image", "video"]);
     expect(m31?.positioning).toContain("effort");
-    expect(m31?.verifiedAt).toBe("2026-10-25");
+    expect(m31?.verifiedAt).toBe("2026-10-28");
 
     // The retirement schedule still stands and is now sourced from the model list page.
     expect(m27?.positioning).toContain("19 October 2026");
@@ -403,7 +403,7 @@ describe("canonical Atlas dataset", () => {
     );
     expect(lineup?.productNames).toEqual(["MiniMax M3.1-Flash", "MiniMax M3"]);
     expect(lineup?.summary).toContain("Legacy Models");
-    expect(lineup?.verifiedAt).toBe("2026-10-25");
+    expect(lineup?.verifiedAt).toBe("2026-10-28");
 
     // The retirement notice now lives on the model-list page, so the atlas cites it.
     const modelList = atlasDataset.sources.find(
@@ -428,7 +428,7 @@ describe("canonical Atlas dataset", () => {
     );
     expect(pricing?.summary).toContain("M3.1-Flash rate");
     expect(pricing?.summary).not.toContain("lists no separate M3.1-Flash rate");
-    expect(pricing?.verifiedAt).toBe("2026-10-25");
+    expect(pricing?.verifiedAt).toBe("2026-10-28");
   });
 
   it("describes Claude Max with source-supported usage multiples", () => {
