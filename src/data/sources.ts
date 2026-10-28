@@ -8349,17 +8349,17 @@ export const taskModelSources = [
     "publisher": "google",
     "url": "https://huggingface.co/google/embeddinggemma-2",
     "kind": "model-card",
-    "observedAt": "2026-10-23",
-    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b"
+    "observedAt": "2026-10-28",
+    "revision": "26711154b641697c443124e316f3d21587f9ff5d"
   },
   {
     "id": "ow-embeddinggemma-2-weights",
     "title": "embeddinggemma-2 — checkpoint files",
     "publisher": "google",
-    "url": "https://huggingface.co/google/embeddinggemma-2/tree/914f7f89142e33e77833254d9c9b90c3cef7303b",
+    "url": "https://huggingface.co/google/embeddinggemma-2/tree/26711154b641697c443124e316f3d21587f9ff5d",
     "kind": "weights",
-    "observedAt": "2026-10-23",
-    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+    "observedAt": "2026-10-28",
+    "revision": "26711154b641697c443124e316f3d21587f9ff5d",
     "artifact": {
       "type": "hf-repository",
       "repositoryUrl": "https://huggingface.co/google/embeddinggemma-2",
